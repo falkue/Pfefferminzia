@@ -1,0 +1,943 @@
+# Kennzahlen-Masterdatei Pfefferminzia. Erzeugt durch scripts/build_kennzahlen_master.py, nicht von Hand editieren.
+meta:
+  stichtag: '2025-12-31'
+  waehrung_gruppe: CHF
+  umrechnungskurs_eur_chf:
+    2021: 1.08
+    2022: 1.0
+    2023: 0.97
+    2024: 0.95
+    2025: 0.94
+  stichprobenfaktor_stufe_m: 0.05
+  stichprobe_hinweis: Stufe M des Datensatzes entspricht rund 5 Prozent des Realbestands (75'000 von rund 1.44 Mio. Vertraegen)
+  erzeugt_durch: scripts/build_kennzahlen_master.py
+  hinweis: Einzige Quelle aller Unternehmenszahlen. Kein Dokument erfindet eigene Zahlen (Konventionen §2).
+gesellschaften:
+  PHAG:
+    name: Pfefferminzia Holding AG
+    sitz: Olten
+    land: CH
+    aufsicht: FINMA (Gruppenaufsicht)
+    funktion: Konzernholding
+  PVAG:
+    name: Pfefferminzia Versicherung AG
+    sitz: Olten
+    land: CH
+    aufsicht: FINMA (SST)
+    funktion: Schadenversicherer Haftpflicht CH, fuehrt die Niederlassung Deutschland
+  PVAG-NL-DE:
+    name: Pfefferminzia Versicherung AG, Niederlassung Deutschland
+    sitz: Leipzig
+    land: DE
+    aufsicht: BaFin (Niederlassungsaufsicht)
+    funktion: Haftpflicht DE
+  PLAG:
+    name: Pfefferminzia Leben AG
+    sitz: Olten
+    land: CH
+    aufsicht: FINMA (SST)
+    funktion: Lebensversicherer CH
+  PLDAG:
+    name: Pfefferminzia Lebensversicherung Deutschland AG
+    sitz: Leipzig
+    land: DE
+    aufsicht: BaFin (Solvency II)
+    funktion: Lebensversicherer DE
+  MTG:
+    name: Minzia Technologies GmbH
+    sitz: Berlin
+    land: DE
+    aufsicht: keine Versicherungsaufsicht; gruppeninternes Outsourcing
+    funktion: IT- und KI-Dienstleisterin, Betreiberin MINT und Herbarium
+  PSAG:
+    name: Pfefferminzia Service AG
+    sitz: Olten
+    land: CH
+    aufsicht: keine
+    funktion: Shared Services HR, Finanzen, Einkauf
+jahre:
+  2021:
+    konsolidiert: false
+    hinweis: 2021 bis 2024 Pfefferminz-Gruppe, Minzia separat unter 'minzia'
+    gruppe:
+      bruttopraemien_chf_mio: 1867.7
+      vertragsbestand_tsd: 1291.5
+      kundenbeziehungen_tsd: 943.0
+      schadenanzahl_hp_tsd: 68.1
+      mitarbeiter_fte: 2180
+      mitarbeiter_fte_nach_herkunft:
+        pfefferminz: 2085
+        minzia: 95
+      beschwerden_anzahl: 1697
+      beschwerden_je_10000_kunden: 18.0
+      rating:
+        agentur: Nordstern Rating (fiktiv)
+        note: A-
+        ausblick: stabil
+      it_kosten_chf_mio: 76.6
+      ki_projekte_anzahl: 2
+      ki_modelle_produktiv: 1
+    solvenz:
+      PVAG_sst_quotient_pct: 212
+      PLAG_sst_quotient_pct: 178
+      PLDAG_solvency2_quote_pct: 264
+      hinweis: SST fuer CH-Gesellschaften, Solvency II fuer die DE-Lebenstochter; vereinfacht, zu verifizieren
+    segmente:
+      HP-PRIV-CH:
+        gesellschaft: PVAG
+        sparte: HP
+        produkte: HP-PRIV
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 189.0
+        vertragsbestand_tsd: 468.0
+        neugeschaeft_stueck_tsd: 42.1
+        storno_quote_pct: 6.0
+        vertriebskanal_anteile_pct: &id001
+          agentur: 45
+          makler: 10
+          direkt: 35
+          bank: 10
+        schadenanzahl_tsd: 30.4
+        durchschnittsschaden: 3888.0
+        schadenaufwand_mio: 118.3
+        schadenquote_pct: 62.6
+        kostenquote_pct: 33.0
+        combined_ratio_pct: 95.6
+      HP-BETR-CH:
+        gesellschaft: PVAG
+        sparte: HP
+        produkte: HP-BETR
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 171.0
+        vertragsbestand_tsd: 61.2
+        neugeschaeft_stueck_tsd: 6.9
+        storno_quote_pct: 10.0
+        vertriebskanal_anteile_pct: &id002
+          agentur: 40
+          makler: 55
+          direkt: 5
+          bank: 0
+        schadenanzahl_tsd: 7.3
+        durchschnittsschaden: 14580.0
+        schadenaufwand_mio: 107.1
+        schadenquote_pct: 62.6
+        kostenquote_pct: 38.0
+        combined_ratio_pct: 100.6
+      HP-PRIV-DE:
+        gesellschaft: PVAG-NL-DE
+        sparte: HP
+        produkte: HP-PRIV
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 148.5
+        vertragsbestand_tsd: 369.0
+        neugeschaeft_stueck_tsd: 43.2
+        storno_quote_pct: 11.0
+        vertriebskanal_anteile_pct: &id003
+          agentur: 0
+          makler: 30
+          direkt: 55
+          bank: 15
+        schadenanzahl_tsd: 25.8
+        durchschnittsschaden: 3780.0
+        schadenaufwand_mio: 97.6
+        schadenquote_pct: 65.7
+        kostenquote_pct: 32.5
+        combined_ratio_pct: 98.2
+      HP-BETR-DE:
+        gesellschaft: PVAG-NL-DE
+        sparte: HP
+        produkte: HP-BETR
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 108.0
+        vertragsbestand_tsd: 35.1
+        neugeschaeft_stueck_tsd: 3.9
+        storno_quote_pct: 10.0
+        vertriebskanal_anteile_pct: &id004
+          agentur: 0
+          makler: 75
+          direkt: 25
+          bank: 0
+        schadenanzahl_tsd: 4.6
+        durchschnittsschaden: 16200.0
+        schadenaufwand_mio: 73.9
+        schadenquote_pct: 68.4
+        kostenquote_pct: 35.0
+        combined_ratio_pct: 103.4
+      LV-RISK-CH:
+        gesellschaft: PLAG
+        sparte: LV
+        produkte: LV-RISK
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 216.0
+        vertragsbestand_tsd: 130.5
+        neugeschaeft_stueck_tsd: 10.6
+        storno_quote_pct: 4.3
+        vertriebskanal_anteile_pct: &id005
+          agentur: 50
+          makler: 25
+          direkt: 5
+          bank: 20
+        leistungsquote_pct: 50.0
+        kostenquote_pct: 18.0
+        neugeschaeftsmarge_pct: 2.7
+      LV-VORS-RENTE-CH:
+        gesellschaft: PLAG
+        sparte: LV
+        produkte: LV-VORS;LV-RENTE
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 621.0
+        vertragsbestand_tsd: 106.2
+        neugeschaeft_stueck_tsd: 4.3
+        storno_quote_pct: 3.0
+        vertriebskanal_anteile_pct: &id006
+          agentur: 55
+          makler: 15
+          direkt: 0
+          bank: 30
+        leistungsquote_pct: 73.0
+        kostenquote_pct: 9.5
+        neugeschaeftsmarge_pct: 1.4
+      LV-RISK-DE:
+        gesellschaft: PLDAG
+        sparte: LV
+        produkte: LV-RISK
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 85.5
+        vertragsbestand_tsd: 64.8
+        neugeschaeft_stueck_tsd: 6.4
+        storno_quote_pct: 5.8
+        vertriebskanal_anteile_pct: &id007
+          agentur: 0
+          makler: 50
+          direkt: 35
+          bank: 15
+        leistungsquote_pct: 54.0
+        kostenquote_pct: 21.0
+        neugeschaeftsmarge_pct: 2.0
+      LV-VORS-RENTE-DE:
+        gesellschaft: PLDAG
+        sparte: LV
+        produkte: LV-VORS;LV-RENTE
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 279.0
+        vertragsbestand_tsd: 56.7
+        neugeschaeft_stueck_tsd: 2.6
+        storno_quote_pct: 3.5
+        vertriebskanal_anteile_pct: &id008
+          agentur: 0
+          makler: 60
+          direkt: 5
+          bank: 35
+        leistungsquote_pct: 76.0
+        kostenquote_pct: 11.0
+        neugeschaeftsmarge_pct: 0.7
+    minzia:
+      vermittelte_praemien_eur_mio: 6.0
+      aktive_policen_tsd: 9
+      nutzerkonten_tsd: 14.0
+      mitarbeiter_fte: 95
+      hinweis: Assekuradeur ohne eigenes Risiko; Zahlen nicht in den Segmenten enthalten
+  2022:
+    konsolidiert: false
+    hinweis: 2021 bis 2024 Pfefferminz-Gruppe, Minzia separat unter 'minzia'
+    gruppe:
+      bruttopraemien_chf_mio: 1878.7
+      vertragsbestand_tsd: 1334.5
+      kundenbeziehungen_tsd: 974.0
+      schadenanzahl_hp_tsd: 70.4
+      mitarbeiter_fte: 2240
+      mitarbeiter_fte_nach_herkunft:
+        pfefferminz: 2110
+        minzia: 130
+      beschwerden_anzahl: 1753
+      beschwerden_je_10000_kunden: 18.0
+      rating:
+        agentur: Nordstern Rating (fiktiv)
+        note: A-
+        ausblick: stabil
+      it_kosten_chf_mio: 77.0
+      ki_projekte_anzahl: 3
+      ki_modelle_produktiv: 2
+    solvenz:
+      PVAG_sst_quotient_pct: 205
+      PLAG_sst_quotient_pct: 171
+      PLDAG_solvency2_quote_pct: 241
+      hinweis: SST fuer CH-Gesellschaften, Solvency II fuer die DE-Lebenstochter; vereinfacht, zu verifizieren
+    segmente:
+      HP-PRIV-CH:
+        gesellschaft: PVAG
+        sparte: HP
+        produkte: HP-PRIV
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 195.3
+        vertragsbestand_tsd: 483.6
+        neugeschaeft_stueck_tsd: 48.4
+        storno_quote_pct: 6.0
+        vertriebskanal_anteile_pct: *id001
+        schadenanzahl_tsd: 31.4
+        durchschnittsschaden: 3816.0
+        schadenaufwand_mio: 120.0
+        schadenquote_pct: 61.4
+        kostenquote_pct: 33.0
+        combined_ratio_pct: 94.4
+      HP-BETR-CH:
+        gesellschaft: PVAG
+        sparte: HP
+        produkte: HP-BETR
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 176.7
+        vertragsbestand_tsd: 63.2
+        neugeschaeft_stueck_tsd: 7.9
+        storno_quote_pct: 10.0
+        vertriebskanal_anteile_pct: *id002
+        schadenanzahl_tsd: 7.6
+        durchschnittsschaden: 14310.0
+        schadenaufwand_mio: 108.6
+        schadenquote_pct: 61.5
+        kostenquote_pct: 38.0
+        combined_ratio_pct: 99.5
+      HP-PRIV-DE:
+        gesellschaft: PVAG-NL-DE
+        sparte: HP
+        produkte: HP-PRIV
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 153.5
+        vertragsbestand_tsd: 381.3
+        neugeschaeft_stueck_tsd: 49.6
+        storno_quote_pct: 11.0
+        vertriebskanal_anteile_pct: *id003
+        schadenanzahl_tsd: 26.7
+        durchschnittsschaden: 3710.0
+        schadenaufwand_mio: 99.0
+        schadenquote_pct: 64.5
+        kostenquote_pct: 32.5
+        combined_ratio_pct: 97.0
+      HP-BETR-DE:
+        gesellschaft: PVAG-NL-DE
+        sparte: HP
+        produkte: HP-BETR
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 111.6
+        vertragsbestand_tsd: 36.3
+        neugeschaeft_stueck_tsd: 4.5
+        storno_quote_pct: 10.0
+        vertriebskanal_anteile_pct: *id004
+        schadenanzahl_tsd: 4.7
+        durchschnittsschaden: 15900.0
+        schadenaufwand_mio: 75.0
+        schadenquote_pct: 67.2
+        kostenquote_pct: 35.0
+        combined_ratio_pct: 102.2
+      LV-RISK-CH:
+        gesellschaft: PLAG
+        sparte: LV
+        produkte: LV-RISK
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 223.2
+        vertragsbestand_tsd: 134.8
+        neugeschaeft_stueck_tsd: 12.1
+        storno_quote_pct: 4.3
+        vertriebskanal_anteile_pct: *id005
+        leistungsquote_pct: 48.0
+        kostenquote_pct: 18.0
+        neugeschaeftsmarge_pct: 2.7
+      LV-VORS-RENTE-CH:
+        gesellschaft: PLAG
+        sparte: LV
+        produkte: LV-VORS;LV-RENTE
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 641.7
+        vertragsbestand_tsd: 109.7
+        neugeschaeft_stueck_tsd: 4.9
+        storno_quote_pct: 3.0
+        vertriebskanal_anteile_pct: *id006
+        leistungsquote_pct: 71.0
+        kostenquote_pct: 9.5
+        neugeschaeftsmarge_pct: 1.4
+      LV-RISK-DE:
+        gesellschaft: PLDAG
+        sparte: LV
+        produkte: LV-RISK
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 88.4
+        vertragsbestand_tsd: 67.0
+        neugeschaeft_stueck_tsd: 7.4
+        storno_quote_pct: 5.8
+        vertriebskanal_anteile_pct: *id007
+        leistungsquote_pct: 52.0
+        kostenquote_pct: 21.0
+        neugeschaeftsmarge_pct: 2.0
+      LV-VORS-RENTE-DE:
+        gesellschaft: PLDAG
+        sparte: LV
+        produkte: LV-VORS;LV-RENTE
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 288.3
+        vertragsbestand_tsd: 58.6
+        neugeschaeft_stueck_tsd: 2.9
+        storno_quote_pct: 3.5
+        vertriebskanal_anteile_pct: *id008
+        leistungsquote_pct: 74.0
+        kostenquote_pct: 11.0
+        neugeschaeftsmarge_pct: 0.7
+    minzia:
+      vermittelte_praemien_eur_mio: 14.0
+      aktive_policen_tsd: 21
+      nutzerkonten_tsd: 32.0
+      mitarbeiter_fte: 130
+      hinweis: Assekuradeur ohne eigenes Risiko; Zahlen nicht in den Segmenten enthalten
+  2023:
+    konsolidiert: false
+    hinweis: 2021 bis 2024 Pfefferminz-Gruppe, Minzia separat unter 'minzia'
+    gruppe:
+      bruttopraemien_chf_mio: 1899.3
+      vertragsbestand_tsd: 1363.2
+      kundenbeziehungen_tsd: 995.0
+      schadenanzahl_hp_tsd: 72.0
+      mitarbeiter_fte: 2290
+      mitarbeiter_fte_nach_herkunft:
+        pfefferminz: 2130
+        minzia: 160
+      beschwerden_anzahl: 1791
+      beschwerden_je_10000_kunden: 18.0
+      rating:
+        agentur: Nordstern Rating (fiktiv)
+        note: A-
+        ausblick: stabil
+      it_kosten_chf_mio: 77.9
+      ki_projekte_anzahl: 5
+      ki_modelle_produktiv: 3
+    solvenz:
+      PVAG_sst_quotient_pct: 198
+      PLAG_sst_quotient_pct: 169
+      PLDAG_solvency2_quote_pct: 233
+      hinweis: SST fuer CH-Gesellschaften, Solvency II fuer die DE-Lebenstochter; vereinfacht, zu verifizieren
+    segmente:
+      HP-PRIV-CH:
+        gesellschaft: PVAG
+        sparte: HP
+        produkte: HP-PRIV
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 199.5
+        vertragsbestand_tsd: 494.0
+        neugeschaeft_stueck_tsd: 49.4
+        storno_quote_pct: 6.0
+        vertriebskanal_anteile_pct: *id001
+        schadenanzahl_tsd: 32.1
+        durchschnittsschaden: 3744.0
+        schadenaufwand_mio: 120.2
+        schadenquote_pct: 60.3
+        kostenquote_pct: 33.0
+        combined_ratio_pct: 93.3
+      HP-BETR-CH:
+        gesellschaft: PVAG
+        sparte: HP
+        produkte: HP-BETR
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 180.5
+        vertragsbestand_tsd: 64.6
+        neugeschaeft_stueck_tsd: 8.1
+        storno_quote_pct: 10.0
+        vertriebskanal_anteile_pct: *id002
+        schadenanzahl_tsd: 7.8
+        durchschnittsschaden: 14040.0
+        schadenaufwand_mio: 108.8
+        schadenquote_pct: 60.3
+        kostenquote_pct: 38.0
+        combined_ratio_pct: 98.3
+      HP-PRIV-DE:
+        gesellschaft: PVAG-NL-DE
+        sparte: HP
+        produkte: HP-PRIV
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 156.8
+        vertragsbestand_tsd: 389.5
+        neugeschaeft_stueck_tsd: 50.6
+        storno_quote_pct: 11.0
+        vertriebskanal_anteile_pct: *id003
+        schadenanzahl_tsd: 27.3
+        durchschnittsschaden: 3640.0
+        schadenaufwand_mio: 99.2
+        schadenquote_pct: 63.3
+        kostenquote_pct: 32.5
+        combined_ratio_pct: 95.8
+      HP-BETR-DE:
+        gesellschaft: PVAG-NL-DE
+        sparte: HP
+        produkte: HP-BETR
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 114.0
+        vertragsbestand_tsd: 37.0
+        neugeschaeft_stueck_tsd: 4.6
+        storno_quote_pct: 10.0
+        vertriebskanal_anteile_pct: *id004
+        schadenanzahl_tsd: 4.8
+        durchschnittsschaden: 15600.0
+        schadenaufwand_mio: 75.1
+        schadenquote_pct: 65.9
+        kostenquote_pct: 35.0
+        combined_ratio_pct: 100.9
+      LV-RISK-CH:
+        gesellschaft: PLAG
+        sparte: LV
+        produkte: LV-RISK
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 228.0
+        vertragsbestand_tsd: 137.8
+        neugeschaeft_stueck_tsd: 12.4
+        storno_quote_pct: 4.3
+        vertriebskanal_anteile_pct: *id005
+        leistungsquote_pct: 48.0
+        kostenquote_pct: 18.0
+        neugeschaeftsmarge_pct: 2.7
+      LV-VORS-RENTE-CH:
+        gesellschaft: PLAG
+        sparte: LV
+        produkte: LV-VORS;LV-RENTE
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 655.5
+        vertragsbestand_tsd: 112.1
+        neugeschaeft_stueck_tsd: 5.0
+        storno_quote_pct: 3.0
+        vertriebskanal_anteile_pct: *id006
+        leistungsquote_pct: 71.0
+        kostenquote_pct: 9.5
+        neugeschaeftsmarge_pct: 1.4
+      LV-RISK-DE:
+        gesellschaft: PLDAG
+        sparte: LV
+        produkte: LV-RISK
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 90.2
+        vertragsbestand_tsd: 68.4
+        neugeschaeft_stueck_tsd: 7.5
+        storno_quote_pct: 5.8
+        vertriebskanal_anteile_pct: *id007
+        leistungsquote_pct: 52.0
+        kostenquote_pct: 21.0
+        neugeschaeftsmarge_pct: 2.0
+      LV-VORS-RENTE-DE:
+        gesellschaft: PLDAG
+        sparte: LV
+        produkte: LV-VORS;LV-RENTE
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 294.5
+        vertragsbestand_tsd: 59.8
+        neugeschaeft_stueck_tsd: 3.0
+        storno_quote_pct: 3.5
+        vertriebskanal_anteile_pct: *id008
+        leistungsquote_pct: 74.0
+        kostenquote_pct: 11.0
+        neugeschaeftsmarge_pct: 0.7
+    minzia:
+      vermittelte_praemien_eur_mio: 24.0
+      aktive_policen_tsd: 33
+      nutzerkonten_tsd: 50.0
+      mitarbeiter_fte: 160
+      hinweis: Assekuradeur ohne eigenes Risiko; Zahlen nicht in den Segmenten enthalten
+  2024:
+    konsolidiert: false
+    hinweis: 2021 bis 2024 Pfefferminz-Gruppe, Minzia separat unter 'minzia'
+    gruppe:
+      bruttopraemien_chf_mio: 1925.8
+      vertragsbestand_tsd: 1392.0
+      kundenbeziehungen_tsd: 1016.0
+      schadenanzahl_hp_tsd: 73.4
+      mitarbeiter_fte: 2335
+      mitarbeiter_fte_nach_herkunft:
+        pfefferminz: 2150
+        minzia: 185
+      beschwerden_anzahl: 1828
+      beschwerden_je_10000_kunden: 18.0
+      rating:
+        agentur: Nordstern Rating (fiktiv)
+        note: A-
+        ausblick: stabil
+      it_kosten_chf_mio: 79.0
+      ki_projekte_anzahl: 8
+      ki_modelle_produktiv: 5
+    solvenz:
+      PVAG_sst_quotient_pct: 191
+      PLAG_sst_quotient_pct: 174
+      PLDAG_solvency2_quote_pct: 246
+      hinweis: SST fuer CH-Gesellschaften, Solvency II fuer die DE-Lebenstochter; vereinfacht, zu verifizieren
+    segmente:
+      HP-PRIV-CH:
+        gesellschaft: PVAG
+        sparte: HP
+        produkte: HP-PRIV
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 203.7
+        vertragsbestand_tsd: 504.4
+        neugeschaeft_stueck_tsd: 50.4
+        storno_quote_pct: 6.0
+        vertriebskanal_anteile_pct: *id001
+        schadenanzahl_tsd: 32.8
+        durchschnittsschaden: 3672.0
+        schadenaufwand_mio: 120.4
+        schadenquote_pct: 59.1
+        kostenquote_pct: 33.0
+        combined_ratio_pct: 92.1
+      HP-BETR-CH:
+        gesellschaft: PVAG
+        sparte: HP
+        produkte: HP-BETR
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 184.3
+        vertragsbestand_tsd: 66.0
+        neugeschaeft_stueck_tsd: 8.2
+        storno_quote_pct: 10.0
+        vertriebskanal_anteile_pct: *id002
+        schadenanzahl_tsd: 7.9
+        durchschnittsschaden: 13770.0
+        schadenaufwand_mio: 109.0
+        schadenquote_pct: 59.1
+        kostenquote_pct: 38.0
+        combined_ratio_pct: 97.1
+      HP-PRIV-DE:
+        gesellschaft: PVAG-NL-DE
+        sparte: HP
+        produkte: HP-PRIV
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 160.0
+        vertragsbestand_tsd: 397.7
+        neugeschaeft_stueck_tsd: 51.7
+        storno_quote_pct: 11.0
+        vertriebskanal_anteile_pct: *id003
+        schadenanzahl_tsd: 27.8
+        durchschnittsschaden: 3570.0
+        schadenaufwand_mio: 99.4
+        schadenquote_pct: 62.1
+        kostenquote_pct: 32.5
+        combined_ratio_pct: 94.6
+      HP-BETR-DE:
+        gesellschaft: PVAG-NL-DE
+        sparte: HP
+        produkte: HP-BETR
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 116.4
+        vertragsbestand_tsd: 37.8
+        neugeschaeft_stueck_tsd: 4.7
+        storno_quote_pct: 10.0
+        vertriebskanal_anteile_pct: *id004
+        schadenanzahl_tsd: 4.9
+        durchschnittsschaden: 15300.0
+        schadenaufwand_mio: 75.2
+        schadenquote_pct: 64.6
+        kostenquote_pct: 35.0
+        combined_ratio_pct: 99.6
+      LV-RISK-CH:
+        gesellschaft: PLAG
+        sparte: LV
+        produkte: LV-RISK
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 232.8
+        vertragsbestand_tsd: 140.7
+        neugeschaeft_stueck_tsd: 12.7
+        storno_quote_pct: 4.3
+        vertriebskanal_anteile_pct: *id005
+        leistungsquote_pct: 48.0
+        kostenquote_pct: 18.0
+        neugeschaeftsmarge_pct: 3.1
+      LV-VORS-RENTE-CH:
+        gesellschaft: PLAG
+        sparte: LV
+        produkte: LV-VORS;LV-RENTE
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 669.3
+        vertragsbestand_tsd: 114.5
+        neugeschaeft_stueck_tsd: 5.2
+        storno_quote_pct: 3.0
+        vertriebskanal_anteile_pct: *id006
+        leistungsquote_pct: 71.0
+        kostenquote_pct: 9.5
+        neugeschaeftsmarge_pct: 1.8
+      LV-RISK-DE:
+        gesellschaft: PLDAG
+        sparte: LV
+        produkte: LV-RISK
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 92.1
+        vertragsbestand_tsd: 69.8
+        neugeschaeft_stueck_tsd: 7.7
+        storno_quote_pct: 5.8
+        vertriebskanal_anteile_pct: *id007
+        leistungsquote_pct: 52.0
+        kostenquote_pct: 21.0
+        neugeschaeftsmarge_pct: 2.4
+      LV-VORS-RENTE-DE:
+        gesellschaft: PLDAG
+        sparte: LV
+        produkte: LV-VORS;LV-RENTE
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 300.7
+        vertragsbestand_tsd: 61.1
+        neugeschaeft_stueck_tsd: 3.1
+        storno_quote_pct: 3.5
+        vertriebskanal_anteile_pct: *id008
+        leistungsquote_pct: 74.0
+        kostenquote_pct: 11.0
+        neugeschaeftsmarge_pct: 1.1
+    minzia:
+      vermittelte_praemien_eur_mio: 38.0
+      aktive_policen_tsd: 41
+      nutzerkonten_tsd: 62.0
+      mitarbeiter_fte: 185
+      hinweis: Assekuradeur ohne eigenes Risiko; Zahlen nicht in den Segmenten enthalten
+  2025:
+    konsolidiert: true
+    hinweis: Erstes konsolidiertes Jahr nach Closing 2025-01-01
+    gruppe:
+      bruttopraemien_chf_mio: 1978.6
+      vertragsbestand_tsd: 1435.0
+      kundenbeziehungen_tsd: 1048.0
+      schadenanzahl_hp_tsd: 75.8
+      mitarbeiter_fte: 2410
+      mitarbeiter_fte_nach_herkunft:
+        pfefferminz: 1972
+        minzia: 321
+        neu: 117
+      beschwerden_anzahl: 2410
+      beschwerden_je_10000_kunden: 23.0
+      rating:
+        agentur: Nordstern Rating (fiktiv)
+        note: A-
+        ausblick: stabil
+      it_kosten_chf_mio: 102.9
+      ki_projekte_anzahl: 14
+      ki_modelle_produktiv: 9
+      mitarbeiter_fte_nach_standort:
+        Olten:
+          pfefferminz: 985
+          minzia: 12
+          neu: 53
+        Leipzig:
+          pfefferminz: 590
+          minzia: 8
+          neu: 22
+        Berlin:
+          pfefferminz: 15
+          minzia: 228
+          neu: 17
+        Zuerich:
+          pfefferminz: 150
+          minzia: 28
+          neu: 12
+        Bern:
+          pfefferminz: 78
+          minzia: 0
+          neu: 2
+        St. Gallen:
+          pfefferminz: 76
+          minzia: 0
+          neu: 4
+        Lausanne:
+          pfefferminz: 58
+          minzia: 0
+          neu: 2
+        Remote:
+          pfefferminz: 20
+          minzia: 45
+          neu: 5
+    solvenz:
+      PVAG_sst_quotient_pct: 186
+      PLAG_sst_quotient_pct: 181
+      PLDAG_solvency2_quote_pct: 258
+      hinweis: SST fuer CH-Gesellschaften, Solvency II fuer die DE-Lebenstochter; vereinfacht, zu verifizieren
+    segmente:
+      HP-PRIV-CH:
+        gesellschaft: PVAG
+        sparte: HP
+        produkte: HP-PRIV
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 210.0
+        vertragsbestand_tsd: 520.0
+        neugeschaeft_stueck_tsd: 52.0
+        storno_quote_pct: 7.8
+        vertriebskanal_anteile_pct: *id001
+        schadenanzahl_tsd: 33.8
+        durchschnittsschaden: 3600.0
+        schadenaufwand_mio: 121.7
+        schadenquote_pct: 57.9
+        kostenquote_pct: 34.5
+        combined_ratio_pct: 92.4
+      HP-BETR-CH:
+        gesellschaft: PVAG
+        sparte: HP
+        produkte: HP-BETR
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 190.0
+        vertragsbestand_tsd: 68.0
+        neugeschaeft_stueck_tsd: 8.5
+        storno_quote_pct: 13.0
+        vertriebskanal_anteile_pct: *id002
+        schadenanzahl_tsd: 8.2
+        durchschnittsschaden: 13500.0
+        schadenaufwand_mio: 110.2
+        schadenquote_pct: 58.0
+        kostenquote_pct: 39.5
+        combined_ratio_pct: 97.5
+      HP-PRIV-DE:
+        gesellschaft: PVAG-NL-DE
+        sparte: HP
+        produkte: HP-PRIV
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 165.0
+        vertragsbestand_tsd: 410.0
+        neugeschaeft_stueck_tsd: 53.3
+        storno_quote_pct: 12.6
+        vertriebskanal_anteile_pct: *id003
+        schadenanzahl_tsd: 28.7
+        durchschnittsschaden: 3500.0
+        schadenaufwand_mio: 100.5
+        schadenquote_pct: 60.9
+        kostenquote_pct: 34.0
+        combined_ratio_pct: 94.9
+      HP-BETR-DE:
+        gesellschaft: PVAG-NL-DE
+        sparte: HP
+        produkte: HP-BETR
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 120.0
+        vertragsbestand_tsd: 39.0
+        neugeschaeft_stueck_tsd: 4.9
+        storno_quote_pct: 11.5
+        vertriebskanal_anteile_pct: *id004
+        schadenanzahl_tsd: 5.1
+        durchschnittsschaden: 15000.0
+        schadenaufwand_mio: 76.0
+        schadenquote_pct: 63.4
+        kostenquote_pct: 36.5
+        combined_ratio_pct: 99.9
+      LV-RISK-CH:
+        gesellschaft: PLAG
+        sparte: LV
+        produkte: LV-RISK
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 240.0
+        vertragsbestand_tsd: 145.0
+        neugeschaeft_stueck_tsd: 13.1
+        storno_quote_pct: 5.6
+        vertriebskanal_anteile_pct: *id005
+        leistungsquote_pct: 48.0
+        kostenquote_pct: 18.0
+        neugeschaeftsmarge_pct: 3.1
+      LV-VORS-RENTE-CH:
+        gesellschaft: PLAG
+        sparte: LV
+        produkte: LV-VORS;LV-RENTE
+        markt: CH
+        waehrung: CHF
+        bruttopraemien_mio: 690.0
+        vertragsbestand_tsd: 118.0
+        neugeschaeft_stueck_tsd: 5.3
+        storno_quote_pct: 3.9
+        vertriebskanal_anteile_pct: *id006
+        leistungsquote_pct: 71.0
+        kostenquote_pct: 9.5
+        neugeschaeftsmarge_pct: 1.8
+      LV-RISK-DE:
+        gesellschaft: PLDAG
+        sparte: LV
+        produkte: LV-RISK
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 95.0
+        vertragsbestand_tsd: 72.0
+        neugeschaeft_stueck_tsd: 7.9
+        storno_quote_pct: 6.7
+        vertriebskanal_anteile_pct: *id007
+        leistungsquote_pct: 52.0
+        kostenquote_pct: 21.0
+        neugeschaeftsmarge_pct: 2.4
+      LV-VORS-RENTE-DE:
+        gesellschaft: PLDAG
+        sparte: LV
+        produkte: LV-VORS;LV-RENTE
+        markt: DE
+        waehrung: EUR
+        bruttopraemien_mio: 310.0
+        vertragsbestand_tsd: 63.0
+        neugeschaeft_stueck_tsd: 3.1
+        storno_quote_pct: 4.0
+        vertriebskanal_anteile_pct: *id008
+        leistungsquote_pct: 74.0
+        kostenquote_pct: 11.0
+        neugeschaeftsmarge_pct: 1.1
+    minzia:
+      hinweis: Ab 2025 konsolidiert; Minzia-Policen in HP-PRIV-DE enthalten
+    kulturumfrage_2025:
+      teilnehmer: 1830
+      ruecklauf_pct: 76.0
+      zustimmung_ki_hilft_meiner_arbeit_pct:
+        pfefferminz: 41
+        minzia: 88
+        neu: 67
+        gesamt: 49
+      vertrauen_in_ki_entscheidungen_pct:
+        pfefferminz: 28
+        minzia: 71
+        neu: 52
+        gesamt: 35
+      zugehoerigkeit_neue_firma_pct:
+        pfefferminz: 54
+        minzia: 63
+        neu: 79
+        agenturen_extern: 38
+      freitextkommentare: 200
+    vertrieb:
+      agenturen_ch: 96
+      agenturen_de: 38
+      aktive_makler_ch: 400
+      aktive_makler_de: 1200
+      app_nutzerkonten_tsd: 118
+      bancassurance_partner:
+      - Aare-Bank AG (fiktiv)
+      - Saechsische Genossenschaftskasse eG (fiktiv)
+    migration:
+      hp_de_neugeschaeft_auf_mint_pct: 100
+      hp_ch_neugeschaeft_auf_mint_pct: 60
+      hp_bestand_migriert_pct: 100
+      lv_bestand_migriert_pct: 100
+      migrationswellen:
+        HP: 2025-Q2
+        LV: 2025-Q4
+      vertraege_mit_migrationsartefakten: 214
+      hinweis: Zahl 214 bezieht sich auf den Fall Pieper (Bausteincode nicht uebernommen)
