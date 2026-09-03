@@ -1,0 +1,174 @@
+# Annahmerichtlinien Leben (ARL) – Tabellen
+# Quelle: Planung 02 §6.3, konkretisiert. Diese Tabellen werden in Welle 4 als Regelwerk-Dokument ausformuliert
+# (RW-LV-ARL-2008, -2015, -2020, -2025). Sie enthalten den historischen Bias bewusst und markieren ihn mit
+# didaktik_falle: true. Zuschläge in Prozent der Risikoprämie, Promille auf die Versicherungssumme je Jahr.
+# Diagnosen: siehe diagnose_bibliothek.csv (dort massgeblich fuer Einzeldiagnosen).
+
+versionen:
+  ARL-1985: {gueltig_ab: 1985-01-01, gueltig_bis: 2007-12-31, generationen: [PK-85, PK-95, PK-2000, PK-2004], herkunft: pfefferminz}
+  ARL-2008: {gueltig_ab: 2008-01-01, gueltig_bis: 2014-12-31, generationen: [PK-2007, PL-2012], herkunft: pfefferminz}
+  ARL-2015: {gueltig_ab: 2015-01-01, gueltig_bis: 2024-12-31, generationen: [PL-2015, PL-2017], herkunft: pfefferminz}
+  ARL-2020: {gueltig_ab: 2020-03-01, gueltig_bis: 2024-12-31, generationen: [MZ-2020], herkunft: minzia, automatisiert: true}
+  ARL-2025: {gueltig_ab: 2025-01-01, gueltig_bis: null, generationen: [PZ-2025], herkunft: pfefferminzia}
+
+# ------------------------------------------------------------------------------------------
+# 1. Pruefumfang nach Versicherungssumme (Todesfall, Alter unter 50; ab 50 eine Stufe strenger)
+# ------------------------------------------------------------------------------------------
+pruefumfang:
+  waehrung_nominal_gleich: true          # CHF und EUR nominal gleich behandelt
+  stufen:
+    - {bis_summe: 300000, pruefung: [fragebogen]}
+    - {bis_summe: 750000, pruefung: [fragebogen, aerztliches_zeugnis_hausarzt]}
+    - {bis_summe: 1500000, pruefung: [fragebogen, aerztliches_zeugnis_hausarzt, untersuchung_vertrauensarzt, labor]}
+    - {bis_summe: null, pruefung: [fragebogen, aerztliches_zeugnis_hausarzt, untersuchung_vertrauensarzt, labor, ekg, finanzfragebogen, rueckversicherung]}
+  eu_bu_rente_monat_ab_2500: [facharztbericht_bei_vorerkrankung, berufsnachweis]
+  labor_umfang: [hiv, cotinin, hba1c, lipide, leberwerte]
+  ab_alter_50: eine_stufe_strenger
+  gentest_verbot:                        # Ergebnisse von Gentests duerfen unterhalb dieser Summen nicht verlangt werden
+    CH: {tod: 400000, rente_jahr: 40000, grundlage: "GUMG (vereinfacht, zu verifizieren)"}
+    DE: {tod: 300000, rente_jahr: 30000, grundlage: "GenDG § 18 (vereinfacht, zu verifizieren)"}
+
+# ------------------------------------------------------------------------------------------
+# 2. BMI-Tabelle: Zuschlag in Prozent der Risikopraemie Todesfall; EU/BU eine Stufe strenger.
+#    ARL-2008 und aelter: bei BMI 30.0-32.9 bereits +50 % (Stolperstein Generationen).
+# ------------------------------------------------------------------------------------------
+bmi:
+  altersgruppen: ["18-39", "40-59", "60+"]
+  klassen:
+    - {bmi_von: 0.0,  bmi_bis: 16.9, tod: [50, 50, 75],     eu_bu: [75, 75, 100],    aktion: rueckfrage, hinweis: "Untergewicht: Abklaerung Essstoerung, Tumor"}
+    - {bmi_von: 17.0, bmi_bis: 18.4, tod: [25, 25, 50],     eu_bu: [50, 50, 75],     aktion: keine}
+    - {bmi_von: 18.5, bmi_bis: 27.9, tod: [0, 0, 0],        eu_bu: [0, 0, 0],        aktion: keine}
+    - {bmi_von: 28.0, bmi_bis: 29.9, tod: [0, 0, 25],       eu_bu: [0, 25, 50],      aktion: keine}
+    - {bmi_von: 30.0, bmi_bis: 32.9, tod: [25, 25, 50],     eu_bu: [50, 50, 75],     aktion: keine,
+       abweichung_arl_2008_und_aelter: {tod: [50, 50, 75]}, didaktik_falle: true,
+       didaktik_hinweis: "Gleicher BMI, anderer Zuschlag je nach Antragsjahr: Generationen-Mapping noetig"}
+    - {bmi_von: 33.0, bmi_bis: 35.9, tod: [50, 75, 100],    eu_bu: [75, 100, 150],   aktion: rueckfrage_blutdruck_blutzucker}
+    - {bmi_von: 36.0, bmi_bis: 39.9, tod: [100, 150, 200],  eu_bu: [150, 200, 250],  aktion: aerztliches_zeugnis_obligatorisch}
+    - {bmi_von: 40.0, bmi_bis: 44.9, tod: [200, 250, null], eu_bu: [null, null, null], aktion: ablehnung_ab_60_und_eu_bu}
+    - {bmi_von: 45.0, bmi_bis: 99.0, tod: [null, null, null], eu_bu: [null, null, null], aktion: ablehnung}
+  null_bedeutet: ablehnung
+
+# ------------------------------------------------------------------------------------------
+# 3. Rauchen / Nikotin
+# ------------------------------------------------------------------------------------------
+rauchen:
+  definition: "Nikotinkonsum in den letzten 12 Monaten; ab 2017 inkl. E-Zigaretten; CH: inkl. Snus ab ARL-2015"
+  cotinin_test_ab_summe: 750000
+  status:
+    - {status: nie_oder_ex_ueber_12_monate, tod: nichtrauchertarif, eu_bu: nichtrauchertarif}
+    - {status: ex_1_bis_12_monate, tod: rauchertarif, eu_bu: rauchertarif}
+    - {status: raucher_bis_10_pro_tag, tod: rauchertarif, eu_bu: rauchertarif}
+    - {status: raucher_11_bis_20_pro_tag, tod: rauchertarif, eu_bu: rauchertarif}
+    - {status: raucher_ueber_20_pro_tag, tod: rauchertarif_plus_25_pct, eu_bu: rauchertarif_plus_50_pct}
+    - {status: cotinin_positiv_bei_angabe_nichtraucher, tod: anzeigepflichtverletzung_neubewertung, eu_bu: anzeigepflichtverletzung_neubewertung}
+  rauchertarif_faktor: 2.0       # siehe tarifparameter.yaml risikofaktoren.raucher
+
+# ------------------------------------------------------------------------------------------
+# 4. Berufsgruppen fuer EU/BU (Faktor auf Risikopraemie EU/BU, siehe tarifparameter.yaml)
+# ------------------------------------------------------------------------------------------
+berufsgruppen:
+  gruppen:
+  - {gruppe: 1, bezeichnung: "Akademische und kaufmaennische Berufe ohne koerperliche Taetigkeit", faktor: 0.80, beispiele: [informatiker, juristin, treuhaender, lehrerin_gymnasium]}
+  - {gruppe: 2, bezeichnung: "Buero- und Dienstleistungsberufe mit geringem Risiko", faktor: 1.00, beispiele: [sachbearbeiterin, verkaeufer, coiffeuse, apothekerin]}
+  - {gruppe: 3, bezeichnung: "Gewerbliche Berufe mit maessiger koerperlicher Belastung", faktor: 1.30, beispiele: [elektriker, koechin, pflegefachmann, chauffeur]}
+  - {gruppe: 4, bezeichnung: "Handwerk mit hoher koerperlicher Belastung", faktor: 1.70, beispiele: [maurerin, dachdecker, zimmermann, landwirtin]}
+  - {gruppe: 5, bezeichnung: "Berufe mit besonderem Unfall- oder Belastungsrisiko", faktor: 2.30, beispiele: [geruestbauer, forstwart, berufsmusikerin, profisportler]}
+  sonderberufe:
+    - {beruf: pilot_linienflug, tod: normal, eu_bu: zuschlag_50_pct}
+    - {beruf: pilot_privat_sport, tod: zuschlag_promille_2, eu_bu: ausschluss_flugrisiko}
+    - {beruf: berufstaucher, tod: zuschlag_promille_3, eu_bu: referat}
+    - {beruf: sprengmeister, tod: zuschlag_promille_3, eu_bu: ablehnung}
+    - {beruf: berufsmilitaer_einsatz, tod: referat, eu_bu: ablehnung}
+    - {beruf: selbstaendig_unter_3_jahren, tod: normal, eu_bu: rente_max_2000_und_einkommensnachweis}
+
+# ------------------------------------------------------------------------------------------
+# 5. Freizeitrisiken (Zuschlag in Promille der Summe je Jahr auf Todesfall, oder Ausschluss)
+# ------------------------------------------------------------------------------------------
+freizeitrisiken:
+  - {risiko: tauchen_bis_30m_mit_brevet, tod: 0, eu_bu: normal}
+  - {risiko: tauchen_ueber_30m_oder_hoehlen, tod: 2.0, eu_bu: ausschluss}
+  - {risiko: klettern_ohne_seil_oder_ueber_grad_6, tod: 2.0, eu_bu: ausschluss}
+  - {risiko: bergsteigen_ueber_4000m_expedition, tod: 3.0, eu_bu: ausschluss}
+  - {risiko: motorsport_rennen, tod: 4.0, eu_bu: ausschluss}
+  - {risiko: fallschirm_gleitschirm, tod: 1.5, eu_bu: ausschluss_ab_2008_zuschlag_davor}
+  - {risiko: reiten_freizeit, tod: 0, eu_bu: normal}
+  - {risiko: kampfsport_wettkampf, tod: 0.5, eu_bu: zuschlag_25_pct}
+  - {risiko: skitouren_freeride, tod: 0.5, eu_bu: normal}
+
+# ------------------------------------------------------------------------------------------
+# 6. Regionale und herkunftsbezogene Faktoren (historisch, groesstenteils gestrichen)
+#    Diese Eintraege sind die zentralen Bias-Fallen des Datensatzes (Gesamtplan 6.3, Use Case UC-05).
+# ------------------------------------------------------------------------------------------
+regional_herkunft:
+  - name: plz_zonen_zuschlag_pfefferminz
+    gilt_fuer_versionen: [ARL-1985, ARL-2008, ARL-2015]
+    gilt_bis: 2019-12-31
+    beschreibung: "Zuschlag auf die Risikopraemie nach Tarifzone des Wohnorts (Spalte tarifzone in data/reference/geo/orte_*.csv), urspruenglich als Proxy fuer Erreichbarkeit medizinischer Versorgung eingefuehrt"
+    zuschlag_pct_nach_tarifzone: {"1": 0, "2": 0, "3": 10}
+    zusaetzlich_stadtquartiere_de_zone_1_mit_hohem_auslaenderanteil_pct: 8
+    didaktik_falle: true
+    didaktik_hinweis: "Zone 3 korreliert mit laendlichen Regionen, der Zusatzzuschlag in DE mit Herkunft: historischer Bias in den Underwriting-Entscheidungen bis 2019, im Bestand weiterhin sichtbar"
+  - name: nationalitaetsfaktor_altrichtlinie
+    gilt_fuer_versionen: [ARL-1985]
+    gilt_bis: 2007-12-31
+    beschreibung: "Zuschlag fuer Antragsteller ohne Staatsangehoerigkeit CH/DE/EU, begruendet mit Auslandsaufenthalten"
+    zuschlag_pct: 15
+    gestrichen_ab: ARL-2008
+    didaktik_falle: true
+    didaktik_hinweis: "In Altvertraegen PK-85 bis PK-2004 als Zuschlagscode Z-NAT sichtbar; Diskriminierungsdiskussion, Art. 8 BV / AGG"
+  - name: geschlechtsabhaengige_praemie_de
+    gilt_fuer_versionen: [ARL-1985, ARL-2008]
+    gilt_bis: 2012-12-20
+    beschreibung: "Geschlechtsabhaengige Sterbetafel in DE bis zum EuGH-Urteil; ab 21.12.2012 Unisex"
+    didaktik_falle: true
+    didaktik_hinweis: "Ein Modell, das auf Altbestand DE trainiert, lernt Geschlecht als Praemientreiber; fuer Neugeschaeft DE unzulaessig, in CH weiterhin zulaessig"
+  - name: auslandsaufenthalt_risikolaender
+    gilt_fuer_versionen: [ARL-2008, ARL-2015, ARL-2020, ARL-2025]
+    beschreibung: "Aufenthalt ueber 6 Monate in Laendern mit Reisewarnung: Zuschlag oder Zurueckstellung bis Rueckkehr"
+    zuschlag_promille: 2.0
+    didaktik_falle: false
+
+# ------------------------------------------------------------------------------------------
+# 7. Kombinationsregeln und Punktesystem
+# ------------------------------------------------------------------------------------------
+kombination:
+  methode: additiv_prozent      # Prozentzuschlaege werden addiert, Promillezuschlaege separat auf die Summe
+  max_zuschlag_pct_annehmbar: 250
+  ab_zuschlag_pct_referat: 150
+  ab_zuschlag_pct_ablehnung: 251
+  risikoklassen:
+    - {klasse: 1, zuschlag_pct_von: 0, zuschlag_pct_bis: 0, bezeichnung: normal}
+    - {klasse: 2, zuschlag_pct_von: 1, zuschlag_pct_bis: 50, bezeichnung: leicht_erhoeht}
+    - {klasse: 3, zuschlag_pct_von: 51, zuschlag_pct_bis: 100, bezeichnung: erhoeht}
+    - {klasse: 4, zuschlag_pct_von: 101, zuschlag_pct_bis: 250, bezeichnung: stark_erhoeht}
+    - {klasse: 5, zuschlag_pct_von: 251, zuschlag_pct_bis: null, bezeichnung: ablehnung}
+
+# ------------------------------------------------------------------------------------------
+# 8. Entscheidungskompetenzen und Automatisierung
+# ------------------------------------------------------------------------------------------
+kompetenzen:
+  automat:
+    versionen: [ARL-2020, ARL-2025]
+    bis_risikoklasse: 2
+    bis_summe_tod: {ARL-2020: 500000, ARL-2025: 400000}
+    bis_rente_eu_bu_monat: 2000
+    nur_positive_entscheide: true         # Ablehnungen und Zurueckstellungen nie automatisch (Kompetenzordnung)
+    protokollierung: vollstaendig
+    stichprobe_manuell_pct: 10
+    modell: "MINT Underwriting-Engine v2 (Regelwerk plus Scoring), Modellinventar Eintrag MI-03"
+  sachbearbeiter: {bis_risikoklasse: 3, bis_summe_tod: 750000}
+  gesellschaftsarzt: {bis_risikoklasse: 4, bis_summe_tod: 1500000}
+  rueckversicherer: {ab_summe_tod: 1500001, ab_risikoklasse: 4}
+
+# ------------------------------------------------------------------------------------------
+# 9. Ablehnungsgruende (Codes fuer underwriting_entscheidungen.csv, Entscheid A)
+# ------------------------------------------------------------------------------------------
+ablehnungsgruende:
+  liste:
+  - {code: AB-MED, text: "Medizinisches Gesamtrisiko ueber der Annahmegrenze", kundentext: "Wir koennen Ihren Antrag zu den gewuenschten Bedingungen leider nicht annehmen."}
+  - {code: AB-FIN, text: "Versicherungssumme ohne finanzielles Interesse (Faktor ueber 20 x Jahreseinkommen)"}
+  - {code: AB-BER, text: "Beruf ausserhalb des Zeichnungsrahmens"}
+  - {code: AB-AML, text: "Geldwaescherei-Abklaerung negativ (Mittelherkunft nicht plausibilisiert)"}
+  - {code: AB-ANZ, text: "Widerspruechliche Angaben, Anzeigepflicht nicht erfuellt"}
+  - {code: AB-ALT, text: "Eintrittsalter ausserhalb der Tarifgrenzen"}
+  kommunikation: "Keine Diagnosen im Kundenschreiben; Arztauskunft auf Wunsch an behandelnden Arzt"
