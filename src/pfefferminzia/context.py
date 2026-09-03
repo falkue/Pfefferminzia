@@ -109,6 +109,7 @@ class RunContext:
             "truth": self.pfade.truth,
             "sample": self.pfade.sample,
             "reference": self.pfade.reference,
+            "partner": self.pfade.sample,
         }[layer]
         return basis / self.stufe
 
