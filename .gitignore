@@ -1,0 +1,26 @@
+# Betriebssystem / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Umgebungen und Secrets
+.env
+.env.*
+!.env.example
+
+# Build- und Abhängigkeitsordner
+node_modules/
+dist/
+build/
+target/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs und Temporäres
+*.log
+tmp/
