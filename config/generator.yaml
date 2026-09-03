@@ -1,0 +1,180 @@
+# Pfefferminzia – Generator-Konfiguration
+# Verbindliche Eckdaten: docs/konventionen.md, docs/entscheidungen.md, docs/planung/00-gesamtplan.md §2,
+# docs/planung/03-datenarchitektur.md Kap. 3. Kennzahlen kommen ausschliesslich aus
+# data/reference/kennzahlen_master.yaml (wird hier nicht dupliziert).
+
+version: "0.1.0"          # Version dieser Konfiguration (SemVer, wandert ins Manifest)
+schema_version: "0.1.0"   # Schema-Version des erzeugten Datensatzes
+
+seed:
+  master: 20250101        # Closing-Datum (Konventionen §7); abgeleitete Seeds per SHA-256
+
+zeit:
+  stichtag: 2025-12-31            # "heute" im Datensatz
+  closing: 2025-01-01             # Legal Day 1, neue Marke
+  altsystem_snapshot: 2024-12-31  # letzter VERA/HAPO/SILAS-Extrakt
+  bewegungsdaten_von: 2016-01-01
+  bewegungsdaten_bis: 2025-12-31
+  finanzhistorie_von: 2019-01-01
+  vertragsbeginn_leben_ab: 1985-01-01
+  vertragsbeginn_haftpflicht_ab: 2001-01-01
+  minzia_ab: 2019-01-01
+  geburtsjahr_von: 1930
+  geburtsjahr_bis: 2007
+
+markt:
+  anteil_ch: 0.47         # Gesamtplan 2.3 / Datenarchitektur 3.2
+  anteil_de: 0.53
+  # Sprachverteilung innerhalb CH (nach PLZ-Sprachregion gezogen; Werte als Fallback)
+  sprache_ch: { de: 0.70, fr: 0.23, it: 0.07 }
+  # Anteil FR/IT in CH-Kundendokumenten Haftpflicht (E07)
+  dokumente_hp_ch: { fr: 0.15, it: 0.05 }
+  anteil_korrespondenz_en: 0.03
+
+# Groessenstufen. Stufe S ist ein echter Teilbaum von M, M von L (gleiche IDs, gleiche Wahrheit).
+# Mengen aus Gesamtplan 2.3 und Datenarchitektur Kap. 3.2–3.5. Stufe L = M x 5.
+stufen:
+  S:
+    faktor: 0.02
+    dokumente_rendern: alle        # alle | stichprobe | keine
+    formate: [parquet, csv, sqlite]
+    mengen:
+      partner: 1000
+      versicherungsnehmer: 850
+      vertraege: 1500
+      vertraege_hp_privat: 760
+      vertraege_hp_betrieb: 140
+      vertraege_lv_risiko: 220
+      vertraege_lv_kapital: 240
+      vertraege_lv_rente: 140
+      schaeden: 540
+      betrugsfaelle: 13
+      agenturen: 12
+      vermittler: 40
+      mitarbeiter: 60
+      org_einheiten: 40
+      dokumente_metadaten: 3700
+      dokumente_gerendert: 3700
+      interaktionen_metadaten: 6000
+      interaktionen_gerendert: 6000
+      beschwerden: 48
+  M:
+    faktor: 1.0
+    dokumente_rendern: stichprobe
+    formate: [parquet, csv, sqlite, xlsx]
+    mengen:
+      partner: 50000
+      versicherungsnehmer: 42000
+      vertraege: 75000
+      vertraege_hp_privat: 38000
+      vertraege_hp_betrieb: 7000
+      vertraege_lv_risiko: 11000
+      vertraege_lv_kapital: 12000
+      vertraege_lv_rente: 7000
+      schaeden: 27000
+      betrugsfaelle: 660
+      agenturen: 90
+      vermittler: 650
+      mitarbeiter: 450
+      org_einheiten: 40
+      dokumente_metadaten: 185000
+      dokumente_gerendert: 6500
+      interaktionen_metadaten: 300000
+      interaktionen_gerendert: 13000
+      beschwerden: 2400
+  L:
+    faktor: 5.0
+    dokumente_rendern: keine
+    formate: [parquet, sqlite]
+    mengen:
+      partner: 250000
+      versicherungsnehmer: 210000
+      vertraege: 375000
+      vertraege_hp_privat: 190000
+      vertraege_hp_betrieb: 35000
+      vertraege_lv_risiko: 55000
+      vertraege_lv_kapital: 60000
+      vertraege_lv_rente: 35000
+      schaeden: 135000
+      betrugsfaelle: 3300
+      agenturen: 90
+      vermittler: 650
+      mitarbeiter: 450
+      org_einheiten: 40
+      dokumente_metadaten: 925000
+      dokumente_gerendert: 0
+      interaktionen_metadaten: 1200000   # gedeckelt (P6: groesste Tabelle <= 1.2 Mio Zeilen)
+      interaktionen_gerendert: 0
+      beschwerden: 12000
+
+pfade:
+  reference: data/reference
+  raw: data/raw
+  curated: data/curated
+  truth: data/truth
+  sample: data/sample
+  documents: data/documents
+  communications: data/communications
+  llm_cache: data/cache/llm
+  manifest: data/manifest.json
+  templates: templates
+  prompts: prompts
+
+# Didaktische Fallen: Schalter (bool) und Staerkeparameter (0–1). Ground Truth protokolliert die Anwendung.
+fallen:
+  underwriting_bias: 0.6      # Staerke der Korrelation Zuschlag ~ PLZ/Herkunft/Geschlecht (pre-Unisex)
+  leakage: true               # Kuendigungsgrund/Rueckkaufsdatum als Feature sichtbar
+  avb_versionskonflikt: true  # gleiche Frage, vier Generationen, vier Antworten
+  gesundheitsdaten_freitext: 0.15   # Anteil E-Mails mit Diagnose im Betreff/Body
+  drift: true                 # Tarifwechsel 2021 und Fusion 2025 verschieben Verteilungen
+  prompt_injection: 0.01      # Anteil Kundenmails mit Anweisungen an den Assistenten
+  survivorship_bias: true     # Reserven nur fuer abgeschlossene Faelle
+  rueckschlussrisiko: true    # Interview-Anonymisierung scheitert an Rollenkombination
+  mandatsueberschreitung: 0.015   # Anteil Schadenzahlungen ueber Vollmachtsstufe
+  legitime_betrugsmuster: true    # Dezember-2004-Welle, Serienschaeden Handwerker
+  tarifabweichung: 0.04       # Anteil Vertraege, deren Praemie vom Tarifhandbuch abweicht
+  chatbot_nur_minzia_avb: true
+  betrugsflag_sichtbar_bis: 2022-12-31   # betrugsverdacht_sichtbar nur fuer Faelle mit Abschluss davor
+  saubere_variante: false     # true = Kontrollgruppe ohne Fallen
+
+# Datenqualitaets-Injektion (Raten je Regel DQ-01..DQ-28, Datenarchitektur 2.2). Nur Abweichungen
+# vom Dokument werden hier gefuehrt; fehlende Eintraege nutzen den Dokumentwert im Modul legacyify.
+dq:
+  aktiv: true
+  raten:
+    DQ-01: 0.35
+    DQ-02: 0.03
+    DQ-03_mojibake: 0.04
+    DQ-04: 0.06
+    DQ-05_geburtsdatum: 0.05
+    DQ-06_email: 0.55
+    DQ-06_telefon: 0.20
+    DQ-08: 0.08
+    DQ-09: 0.01
+    DQ-10: 0.02
+    DQ-11: 0.07
+    DQ-13_verrutscht: 0.10
+    DQ-14_nullen: 0.30
+    DQ-15: 0.005
+    DQ-17: 0.10
+    DQ-18: 0.04
+    DQ-19: 0.003
+    DQ-20: 0.15
+    DQ-21: 0.60
+    DQ-22: 0.05
+    DQ-26_verstorben: 0.005
+    DQ-26_anrede: 0.01
+    DQ-27: 0.02
+
+llm:
+  modus: cached               # cached | refresh | template   (cached = nur Cache, kein API-Zugriff)
+  modell: "platzhalter"       # wird bei Stufe text gesetzt; Teil des Prompt-Hashes
+  prompt_version: "0.1"
+  temperatur: 0.7
+  cache_pfad: data/cache/llm
+
+export:
+  csv_bom: true
+  csv_zeilenende: "\n"
+  parquet_kompression: snappy
+  parquet_ohne_zeitstempel: true   # Byte-Identitaet (Datenarchitektur 5.3)

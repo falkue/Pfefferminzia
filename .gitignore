@@ -24,3 +24,13 @@ venv/
 # Logs und Temporäres
 *.log
 tmp/
+
+# Python-Tooling (uv.lock wird bewusst versioniert)
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+!uv.lock
+
+# LLM-Cache-Inhalte werden als Release-Asset verteilt, nicht im Git-Baum
+data/cache/llm/*
+!data/cache/llm/.gitkeep
