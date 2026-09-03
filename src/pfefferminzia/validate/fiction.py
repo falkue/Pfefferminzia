@@ -99,7 +99,7 @@ def domains_telefon(ctx: RunContext, erg: CheckErgebnis) -> None:
             continue
         for spalte in df.columns:
             s = df[spalte]
-            if not (s.dtype == object or str(s.dtype) == "string"):
+            if not (pd.api.types.is_string_dtype(s) or pd.api.types.is_object_dtype(s)):
                 continue
             werte = s.dropna().astype(str)
             if werte.empty:

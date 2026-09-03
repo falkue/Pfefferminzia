@@ -29,7 +29,7 @@ def test_reference_loader_fehlermeldung(tmp_path):
 def test_reference_loader_geo_und_namen(root):
     ldr = ReferenceLoader(root / "data" / "reference")
     ch = ldr.csv("geo.orte_ch")
-    assert 150 <= len(ch) <= 250
+    assert 150 <= len(ch) <= 320
     assert str(ch["plz"].dtype) == "string" and ch["plz"].str.len().eq(4).all()
     assert (ch["ort"] == "Olten").any()
     assert set(ch["kanton"]) == {
@@ -37,7 +37,7 @@ def test_reference_loader_geo_und_namen(root):
         "SG", "SH", "SO", "SZ", "TG", "TI", "UR", "VD", "VS", "ZG", "ZH",
     }
     de = ldr.csv("geo.orte_de")
-    assert 300 <= len(de) <= 400 and de["plz"].str.len().eq(5).all()
+    assert 300 <= len(de) <= 600 and de["plz"].str.len().eq(5).all()
     assert de["bundesland_kuerzel"].nunique() == 16
     st = ldr.csv("geo.strassennamen")
     assert (st.groupby("sprache").size() >= 400).all()

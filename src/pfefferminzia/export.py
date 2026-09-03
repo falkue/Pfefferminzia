@@ -49,7 +49,7 @@ def _csv_frame(df: pd.DataFrame) -> pd.DataFrame:
                 nur_datum = bool(((s.dropna().dt.normalize() == s.dropna())).all())
                 fmt = "%Y-%m-%d" if nur_datum else "%Y-%m-%dT%H:%M:%SZ"
                 out[spalte] = s.dt.strftime(fmt)
-        elif dtype == object:
+        elif pd.api.types.is_object_dtype(dtype):
             out[spalte] = s.map(
                 lambda v: v.isoformat() if hasattr(v, "isoformat") and not isinstance(v, str) else v
             )
