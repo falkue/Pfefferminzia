@@ -1,0 +1,34 @@
+{
+  "dataset": "pfefferminzia",
+  "version": "0.1.0",
+  "schema_version": "0.1.0",
+  "scale": "S",
+  "stichtag": "2025-12-31",
+  "generated_at": "2026-09-03T14:30:55Z",
+  "generator": {
+    "repo": "Pfefferminzia",
+    "package": "pfefferminzia",
+    "master_seed": 20250101,
+    "config_version": "0.1.0"
+  },
+  "license": "CC-BY-4.0",
+  "code_license": "MIT",
+  "tables": [
+    {
+      "name": "partner_personen",
+      "layer": "partner",
+      "rows": 500,
+      "columns": 8,
+      "files": {
+        "csv": "data/sample/S/csv/partner_personen.csv",
+        "parquet": "data/sample/S/parquet/partner_personen.parquet"
+      },
+      "sha256": {
+        "csv": "5aadc0af31f350282857bbe3322b27cb8955f34246c95ad701dd821e1c07114c",
+        "parquet": "2e470efae4a0af436f83b0507a58ba1e0b456d851692037baa8e34e33415c790"
+      }
+    }
+  ],
+  "files": {},
+  "disclaimer": "Fiktives Lehrbeispiel. Alle Daten synthetisch. Keine Verbindung zu realen Personen, Unternehmen oder Marken."
+}
