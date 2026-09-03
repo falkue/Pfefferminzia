@@ -19,7 +19,8 @@ class PartnerStage(Stage):
         # Lade Referenzdaten für Namen und Adressen
         vornamen = ctx.reference.load("namen.vornamen")
         nachnamen = ctx.reference.load("namen.nachnamen")
-        name_synth = NameSynth(vornamen, nachnamen, blocklist=ctx.blocklist)
+        from pfefferminzia.validate.fiction import lade_blocklist
+        name_synth = NameSynth(vornamen, nachnamen, blocklist=lade_blocklist(ctx))
         
         # Adressen (vereinfacht für den Stub/Initialisierung)
         # In einer echten Implementierung würde AddressSynth genutzt werden
