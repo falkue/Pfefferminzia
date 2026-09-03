@@ -37,7 +37,7 @@ def test_teilbaum_validierung():
         "stufen": {
             "S": {"faktor": 0.02, "mengen": {"partner": 1000}},
             "M": {"faktor": 1.0, "mengen": {"partner": 500}},
-            "L": {"faktor": 5.0, "mengen": {"partner": 2500}},
+            "L": {"faktor": 5.0, "mengen": {"partner": 250000}},
         }
     }
     with pytest.raises(ValidationError):
