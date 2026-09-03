@@ -102,7 +102,7 @@ class OrganisationStage(Stage):
         self.stub(ctx)
 
 
-from pfefferminzia.synth.partner import PartnerStage
+from pfefferminzia.synth.partner import PartnerStage  # noqa: E402,F401  (Registrierung; von TaskMe-Session eingefuegt)
 
 
 @register
