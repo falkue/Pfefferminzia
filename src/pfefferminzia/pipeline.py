@@ -102,13 +102,7 @@ class OrganisationStage(Stage):
         self.stub(ctx)
 
 
-@register
-class PartnerStage(Stage):
-    name, nummer, welle = "partner", 30, 1
-    beschreibung = "Partner, Adressen, Kontakte, Beziehungen, latente Kundenmerkmale"
-
-    def run(self, ctx: RunContext) -> None:
-        self.stub(ctx)
+from pfefferminzia.synth.partner import PartnerStage
 
 
 @register
