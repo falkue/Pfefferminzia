@@ -1,6 +1,6 @@
 # Pfefferminzia – Gesamtplan für den synthetischen Lehr-Datensatz
 
-**Stand:** 2026-09-03 · **Status:** Entwurf zur Entscheidung · **Version:** 0.1
+**Stand:** 2026-09-03 · **Status:** Entschieden, Welle 0 in Umsetzung · **Version:** 1.0
 
 Dieses Dokument fasst die fünf Teilplanungen (Haftpflicht, Leben, Datenarchitektur, Use Cases, Regelwerke/Unternehmen) zu einem konsistenten Gesamtbild zusammen. Es benennt zuerst die Entscheidungen, die vor dem Bau getroffen werden müssen, dann die vollständige Artefakt-Landkarte, das Datenmodell, die Didaktik und den Umsetzungsplan. Die Teilplanungen enthalten die Detailtiefe (Feldlisten, Verteilungen, Paragraphenstruktur) und sind in Abschnitt 10 verlinkt.
 
@@ -22,9 +22,9 @@ Das Merger-Narrativ ist nicht Dekoration, sondern **Datenrealität**: zwei Kunde
 
 ---
 
-## 2. Entscheidungsbedarf vor dem Bau
+## 2. Getroffene Entscheidungen (2026-09-03)
 
-Die Teilplanungen sind an einigen Stellen bewusst unabhängig voneinander entstanden und widersprechen sich. Die folgenden Punkte müssen festgelegt werden, bevor Daten erzeugt werden. Je Punkt ist eine Empfehlung angegeben.
+Die Teilplanungen sind an einigen Stellen bewusst unabhängig voneinander entstanden und widersprechen sich. Die folgenden Punkte wurden am 2026-09-03 entschieden. **Verbindlich sind jeweils die Empfehlungen**, sofern nicht anders vermerkt. Das Entscheidungsprotokoll liegt in [../entscheidungen.md](../entscheidungen.md).
 
 ### 2.1 Name des Unternehmens (kritisch)
 
@@ -35,7 +35,7 @@ Die Namensprüfung hat ergeben: **„Pfefferminzia" existiert real.** Es ist sei
 | **A. Umbenennen** (z. B. „Menthalis Versicherungen", „Piperita Gruppe", „Krauseminz Versicherung") | Kollision entfällt, Minz-Metapher bleibt. Empfohlen, wenn der Name im Kurs noch nicht fest eingeführt ist. |
 | **B. Beibehalten mit Abgrenzung** | Ausdrücklicher Disclaimer in jedem Artefakt, keine .de/.ch-Domains, nur `pfefferminzia.example`, Markenregisterprüfung (DPMA, Swissreg, EUIPO). Mindestlösung, falls der Name bereits gesetzt ist. |
 
-**Empfehlung:** Option A prüfen, bevor die ersten Dokumente entstehen. Alle Teilplanungen sind namensneutral formuliert; ein späterer Austausch ist per Suchen-und-Ersetzen möglich, wird aber mit jedem erzeugten Dokument teurer.
+**Entschieden: Option B.** Der Name Pfefferminzia bleibt. Jedes Artefakt trägt den Abgrenzungs-Disclaimer, es werden ausschließlich `.example`-Domains verwendet, keine Bezugnahme auf das reale Medium.
 
 ### 2.2 Kanonische Zeitachse
 
