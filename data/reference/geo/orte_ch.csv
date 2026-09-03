@@ -12,6 +12,8 @@ plz,ort,kanton,sprachregion,einwohner,gewicht,tarifzone,urbanitaet
 1180,Rolle,VD,fr,6000,6.0,2,LAND
 1196,Gland,VD,fr,13000,13.0,2,AGGLO
 1201,Genève,GE,fr,200000,200.0,1,STADT
+1205,Genève,GE,fr,30000,30.0,1,STADT
+1207,Genève,GE,fr,25000,25.0,1,STADT
 1212,Grand-Lancy,GE,fr,33000,33.0,1,AGGLO
 1213,Onex,GE,fr,19000,19.0,1,AGGLO
 1214,Vernier,GE,fr,35000,35.0,1,AGGLO
@@ -72,6 +74,8 @@ plz,ort,kanton,sprachregion,einwohner,gewicht,tarifzone,urbanitaet
 2900,Porrentruy,JU,fr,7000,7.0,3,LAND
 2926,Boncourt,JU,fr,1200,1.2,3,LAND
 3000,Bern,BE,de,135000,135.0,1,STADT
+3012,Bern,BE,de,25000,25.0,1,STADT
+3014,Bern,BE,de,20000,20.0,1,STADT
 3053,Münchenbuchsee,BE,de,10000,10.0,2,AGGLO
 3072,Ostermundigen,BE,de,18000,18.0,2,AGGLO
 3098,Köniz,BE,de,42000,42.0,2,AGGLO
@@ -101,6 +105,8 @@ plz,ort,kanton,sprachregion,einwohner,gewicht,tarifzone,urbanitaet
 3954,Leukerbad,VS,de,1500,1.5,3,LAND
 3960,Sierre,VS,fr,17000,17.0,3,AGGLO
 4051,Basel,BS,de,175000,175.0,1,STADT
+4053,Basel,BS,de,30000,30.0,1,STADT
+4058,Basel,BS,de,25000,25.0,1,STADT
 4102,Binningen,BL,de,16000,16.0,2,AGGLO
 4104,Oberwil BL,BL,de,11000,11.0,2,AGGLO
 4123,Allschwil,BL,de,21000,21.0,2,AGGLO
@@ -173,6 +179,8 @@ plz,ort,kanton,sprachregion,einwohner,gewicht,tarifzone,urbanitaet
 5722,Gränichen,AG,de,8000,8.0,2,LAND
 5734,Reinach AG,AG,de,9000,9.0,2,LAND
 6003,Luzern,LU,de,82000,82.0,1,STADT
+6004,Luzern,LU,de,20000,20.0,1,STADT
+6005,Luzern,LU,de,15000,15.0,1,STADT
 6010,Kriens,LU,de,28000,28.0,2,AGGLO
 6020,Emmenbrücke,LU,de,32000,32.0,2,AGGLO
 6030,Ebikon,LU,de,14000,14.0,2,AGGLO
@@ -230,6 +238,11 @@ plz,ort,kanton,sprachregion,einwohner,gewicht,tarifzone,urbanitaet
 7550,Scuol,GR,de,5000,5.0,3,LAND
 7742,Poschiavo,GR,it,3000,3.0,3,LAND
 8001,Zürich,ZH,de,420000,420.0,1,STADT
+8004,Zürich,ZH,de,30000,30.0,1,STADT
+8005,Zürich,ZH,de,15000,15.0,1,STADT
+8032,Zürich,ZH,de,20000,20.0,1,STADT
+8050,Zürich,ZH,de,35000,35.0,1,STADT
+8057,Zürich,ZH,de,25000,25.0,1,STADT
 8105,Regensdorf,ZH,de,18000,18.0,2,AGGLO
 8134,Adliswil,ZH,de,19000,19.0,2,AGGLO
 8153,Rümlang,ZH,de,8000,8.0,2,LAND
@@ -248,6 +261,7 @@ plz,ort,kanton,sprachregion,einwohner,gewicht,tarifzone,urbanitaet
 8355,Aadorf,TG,de,9000,9.0,2,LAND
 8360,Eschlikon,TG,de,4000,4.0,2,LAND
 8400,Winterthur,ZH,de,115000,115.0,1,STADT
+8408,Winterthur,ZH,de,20000,20.0,1,STADT
 8500,Frauenfeld,TG,de,26000,26.0,2,AGGLO
 8570,Weinfelden,TG,de,11000,11.0,2,AGGLO
 8580,Amriswil,TG,de,14000,14.0,2,AGGLO

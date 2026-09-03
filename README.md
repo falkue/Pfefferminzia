@@ -9,9 +9,28 @@ Pfefferminzia ist ein Lehr-Datensatz für einen Executive-Kurs, in dem Führungs
 ## Struktur
 
 - `docs/planung/` – Planung des Datensatzes. Einstieg: [00-gesamtplan.md](docs/planung/00-gesamtplan.md), darunter fünf Teilplanungen (Haftpflicht, Leben, Datenarchitektur, Use Cases, Regelwerke/Unternehmen)
-- `docs/` – weitere Konzepte, Produkte, Prozesse (folgt)
-- `src/` – Generator und Tooling (folgt)
-- `data/` – erzeugter Datensatz (folgt)
+- [docs/entscheidungen.md](docs/entscheidungen.md) – verbindliches Entscheidungsprotokoll
+- [docs/konventionen.md](docs/konventionen.md) – Regeln für alle Artefakte (Fiktionalität, Sprache, IDs, Formate, Metadaten)
+- `docs/unternehmen/` – Unternehmensprofil, Geschichte, Zeitachse, Organisation, IT-Landschaft, Standorte
+- `docs/personas/` – 14 Mitarbeiter- und 10 Kunden-Personas mit Storylines
+- `docs/stammdaten/` – Dozentenerläuterungen zu den Stammdaten Haftpflicht und Leben
+- `data/reference/` – Stammdaten und Referenzen: Kennzahlen-Masterdatei, Organisation, Standorte, Systeme, Personas, Geo- und Namenslisten, `hp/` und `lv/` mit je einem Data Dictionary
+- `src/pfefferminzia/` – Generator (Python, `uv`), siehe [src/README.md](src/README.md)
+- `scripts/` – Erzeugungsskripte für Referenzdaten
+- `tests/` – Testsuite (`uv run pytest`)
+- `data/raw`, `data/curated`, `data/truth`, `data/sample` – erzeugter Datensatz (ab Welle 1)
+
+## Stand
+
+Welle 0 (Fundament) ist abgeschlossen: Entscheidungen, Konventionen, Unternehmenskontext, Personas, Stammdaten beider Sparten, Generator-Skelett mit Referenz-Loader, Seeds, IDs, Validierung. Nächster Schritt ist Welle 1: Kundenstamm und Verträge in `curated`, dann `raw` mit den beiden Quellsystemwelten.
+
+## Einrichtung
+
+```bash
+uv sync
+uv run pytest
+uv run pfefferminzia reference check
+```
 
 ## Hinweis
 
