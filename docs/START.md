@@ -7,10 +7,12 @@ Willkommen bei Pfefferminzia, einem frei erfundenen Versicherer, an dem du Arbei
 1. **Repository holen**
 
    ```bash
-   git clone https://github.com/falkue/Pfefferminzia
+   git clone -b teilnehmer https://github.com/falkue/Pfefferminzia
    cd Pfefferminzia
    uv sync
    ```
+
+   Der Zweig `teilnehmer` enthält den Datensatz ohne Lösungen.
 
 2. **Claude Code starten** im Ordner `Pfefferminzia` mit `claude`. Claude liest die Datei `CLAUDE.md` und kennt damit den Datensatz.
 
@@ -30,6 +32,8 @@ Die Pfefferminz Versicherung, 1924 in Olten gegründet, hat am 1. Januar 2025 da
 | `docs/datensatz/` | Data Dictionary und interaktive Datenschau |
 | `docs/personas/` | Die Menschen hinter den Daten: Mitarbeitende und Kunden mit ihren Geschichten |
 | `docs/unternehmen/` | Wer Pfefferminzia ist: Profil, Geschichte, Organisation, Systeme |
+| `docs/regelwerke/` | Annahmerichtlinie Leben, Kompetenzordnung, Beschwerderichtlinie |
+| `data/documents/S/personas/` | Die Fallakten der Kunden-Personas: Briefe, E-Mails, Notizen, Berichte |
 
 Der Ordner `data/truth/` enthält die Lösungen der Übungen. Er ist für die Dozenten gedacht; die Übungen funktionieren nur, wenn du ihn nicht benutzt.
 
