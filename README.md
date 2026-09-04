@@ -31,6 +31,7 @@ Pfefferminzia ist ein Lehr-Datensatz für einen Executive-Kurs, in dem Führungs
   - `data/raw/S/mint/` – Rohextrakt der Minzia-Plattform MINT (JSON Lines, Schema-Versionen v1 bis v3)
   - `data/migration/S/` – Kreuzreferenzen, Feldmapping, Migrationslog
   - `data/documents/S/personas/` – die Fallakten der zehn Kunden-Personas als Briefe, E-Mails, Notizen und Berichte (Markdown und EML)
+  - `data/documents/S/tarife/` – 28 Tarifblätter aus den Referenztabellen für Haftpflicht und Leben (Markdown und PDF)
   - `data/truth/S/` – latente Wahrheit, Labels und Protokoll der Datenqualitäts-Injektionen (nur Dozenten, nicht Teil der Teilnehmer-Releases)
 - **Teilnehmer-Zweig:** Der Zweig `teilnehmer` enthält denselben Datensatz ohne Lösungen. Teilnehmende klonen mit `git clone -b teilnehmer https://github.com/falkue/Pfefferminzia`. Der Zweig wird mit `scripts/build_teilnehmer_branch.sh` aus `main` neu erzeugt.
 - Nächster Schritt ist Welle 2 (Bewegungsdaten: Rechnungen, Buchungen, Mahnungen, Interaktionen, Beschwerden, Churn-Labels) und danach Welle 3 (Underwriting-Akten Leben).

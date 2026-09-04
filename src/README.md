@@ -50,6 +50,7 @@ Alle Pfade sind relativ zur Projektwurzel (Ordner mit `pyproject.toml`, übersch
 | `synth/identifiers.py` | Prüfziffernvalide, fiktive IBAN CH (Clearing 99999) / DE (BLZ 99999999), AHV-Nummer (EAN-13), Steuer-ID (ISO 7064 MOD 11,10 inkl. Mehrfachziffer-Regel), CH-UID (`CHE-499.xxx.xxx`, Modulo 11), Telefonnummern der Fiktionsbereiche, `.example`-E-Mails, fiktive Kennzeichen. |
 | `synth/names.py` | `NameSynth` (Vorname nach Geschlecht/Sprachraum/Dekade, Nachname nach Sprachraum, Blocklist-Neuziehung), `firmenname()` aus Bausteinen. |
 | `synth/addresses.py` | `AddressSynth` (Ort nach Gewicht/Sprachregion/Region, generierte Strasse, Hausnummer 1–180), `geo_versatz()`. |
+| `tarifblaetter.py` | Rendert die Tarifgenerationen aus den HP-/LV-Referenztabellen als reproduzierbare Markdown- und PDF-Tarifblätter. |
 | `cli.py` | typer-App. |
 
 ## Eine Stufe implementieren

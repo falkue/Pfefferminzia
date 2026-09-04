@@ -5,6 +5,7 @@ import json
 import pandas as pd
 import pytest
 
+from pfefferminzia.manifest import sha256_datei
 from pfefferminzia.pipeline import run_pipeline
 from pfefferminzia.validate import run_checks
 
@@ -46,6 +47,26 @@ def test_checks_gruen(lauf):
     bericht = run_checks(ctx)
     fehler = [(e.name, b.meldung) for e in bericht.ergebnisse for b in e.befunde if b.schwere == "FEHLER"]
     assert not fehler, fehler
+
+
+def test_tarifblaetter(lauf):
+    ctx, _, tmp = lauf
+    ordner = tmp / "documents" / "S" / "tarife"
+    pdfs = sorted(ordner.glob("*.pdf"))
+    markdown = sorted(ordner.glob("*.md"))
+    assert len(pdfs) == 28
+    assert len(markdown) == 28
+    assert all(pfad.read_bytes().startswith(b"%PDF") for pfad in pdfs)
+    assert all(pfad.read_bytes().count(b"/Type /Page\n") == 2 for pfad in pdfs)
+    text = (ordner / "RW-LV-AVB-CH-MZ-2020.md").read_text(encoding="utf-8")
+    assert "# Tarifblatt LV – Minzia RisikoLeben digital" in text
+    assert not {"Falk", "Workshop", "MCP"}.intersection(text.split())
+    vorher = {pfad.name: sha256_datei(pfad) for pfad in pdfs + markdown}
+    from pfefferminzia.tarifblaetter import render_tarifblaetter
+
+    render_tarifblaetter(ctx)
+    nachher = {pfad.name: sha256_datei(pfad) for pfad in pdfs + markdown}
+    assert vorher == nachher
 
 
 def test_rohdaten_und_migration(lauf):

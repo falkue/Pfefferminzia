@@ -21,6 +21,7 @@ from pfefferminzia.manifest import sha256_datei
 from pfefferminzia.pipeline import Stage, register
 from pfefferminzia.synth.akten_inhalte import AKTEN
 from pfefferminzia.synth.akten_inhalte_2 import AKTEN_2
+from pfefferminzia.tarifblaetter import render_tarifblaetter
 
 ALLE_AKTEN = {**AKTEN, **AKTEN_2}
 DISCLAIMER = "Fiktives Lehrbeispiel. Alle Daten synthetisch. Keine Verbindung zu realen Personen, Unternehmen oder Marken."
@@ -205,16 +206,21 @@ class ProzessStage(Stage):
 @register
 class RenderStage(Stage):
     name, nummer, welle = "render", 85, 1
-    beschreibung = "Persona-Akten als Markdown und EML unter data/documents"
+    beschreibung = "Persona-Akten und Tarifblaetter unter data/documents"
 
     def run(self, ctx: RunContext) -> None:
-        if not (ctx.tabellen.has("dokument") and ctx.tabellen.has("interaktion")):
-            self.stub(ctx)
-            return
         if ctx.stufe_config.dokumente_rendern == "keine":
             ctx.ereignis(self.name, "Rendering fuer diese Stufe deaktiviert")
+            return
+        tarifpfade = render_tarifblaetter(ctx)
+        if not (ctx.tabellen.has("dokument") and ctx.tabellen.has("interaktion")):
+            ctx.ereignis(self.name, f"{len(tarifpfade) // 2} Tarifblaetter als Markdown und PDF gerendert")
             return
         dok, inter = render(ctx, ctx.tabellen.get("dokument"), ctx.tabellen.get("interaktion"))
         ctx.tabellen.register("dokument", dok, ersetzen=True)
         ctx.tabellen.register("interaktion", inter, ersetzen=True)
-        ctx.ereignis(self.name, f"{int(dok['ist_gerendert'].sum())} Dokumente und {inter['datei_pfad'].notna().sum()} Interaktionen gerendert")
+        ctx.ereignis(
+            self.name,
+            f"{int(dok['ist_gerendert'].sum())} Dokumente, {inter['datei_pfad'].notna().sum()} Interaktionen "
+            f"und {len(tarifpfade) // 2} Tarifblaetter gerendert",
+        )
