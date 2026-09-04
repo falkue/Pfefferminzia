@@ -41,6 +41,12 @@ uv run pytest
 uv run pfefferminzia reference check
 ```
 
+## Lizenz
+
+Code (`src/`, `scripts/`, `tests/`): MIT, siehe [LICENSE](LICENSE). Daten und Dokumente (`data/`, `docs/`): CC BY 4.0, siehe [LICENSE-DATA.md](LICENSE-DATA.md).
+
 ## Hinweis
 
-Pfefferminzia ist frei erfunden. Ähnlichkeiten mit real existierenden Unternehmen sind nicht beabsichtigt.
+Pfefferminzia ist ein frei erfundenes Unternehmen für Lehrzwecke. Alle Personen, Firmen, Adressen, Verträge, Schäden, Kennzahlen und Ereignisse sind synthetisch erzeugt. Ähnlichkeiten mit real existierenden Personen, Unternehmen oder Marken, insbesondere mit gleichnamigen Medien oder Dienstleistern, sind unbeabsichtigt und nicht intendiert. Rechtliche und regulatorische Aussagen sind vereinfacht, Stand 2026, und ersetzen keine Rechtsberatung. Teile dieses Materials wurden mit Unterstützung von KI erzeugt.
+
+Der Ordner `data/truth/` enthält die Lösungen (latente Wahrheit, Labels, Protokoll der eingebauten Datenfehler). Er ist für Dozenten gedacht; Seminarteilnehmer sollten mit den Release-Paketen ohne diesen Ordner arbeiten.
