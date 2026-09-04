@@ -11,6 +11,8 @@ Schichten: `curated` (harmonisiert, fuer Teilnehmer), `truth` (latente Wahrheit 
 | curated/agentur | 12 | 11 | Vertriebsorganisationen: Exklusivagenturen, Makler, Banken, Portale, Direkt |
 | curated/antrag | 1610 | 17 | Antraege inkl. abgelehnter und zurueckgezogener; Underwriting-Entscheid, Angaben zu BMI und Rauchen |
 | curated/deckung | 2208 | 9 | Deckungen je Vertrag: Hauptdeckung, Bausteine, Zusatzversicherungen |
+| curated/dokument | 37 | 20 |  |
+| curated/interaktion | 62 | 18 |  |
 | curated/mitarbeiter | 60 | 20 | Mitarbeitende inkl. der 14 Personas; Herkunft Pfefferminz/Minzia/neu/extern |
 | curated/org_einheit | 69 | 10 | Organisationseinheiten der Gruppe (drei Ebenen) |
 | curated/partner | 1000 | 30 | Partner: natuerliche und juristische Personen (Kunden, Mitversicherte, Beguenstigte, Inhaber) |
@@ -20,6 +22,8 @@ Schichten: `curated` (harmonisiert, fuer Teilnehmer), `truth` (latente Wahrheit 
 | curated/partner_kontakt | 1876 | 5 | Kontaktkanaele (E-Mail, Telefon, Mobil), nur Fiktionsbereiche |
 | curated/produkt | 7 | 5 | Produktkatalog beider Sparten |
 | curated/risiko_objekt | 1481 | 19 | Risikoobjekt je Vertrag: Haushalt, Betrieb, Beruf oder versicherte Person |
+| curated/schaden | 16 | 29 |  |
+| curated/schaden_position | 58 | 8 |  |
 | curated/tarifgeneration | 14 | 9 | Bedingungs- und Tarifgenerationen mit Gueltigkeit |
 | curated/vermittler | 40 | 14 | Vermittlerpersonen mit Agenturzuordnung, Alt- und Neunummer |
 | curated/vertrag | 1481 | 35 | Vertraege beider Sparten mit Status, Praemie, Kanal, Quellsystem, Migrationsdatum |
@@ -30,6 +34,7 @@ Schichten: `curated` (harmonisiert, fuer Teilnehmer), `truth` (latente Wahrheit 
 | migration/vertrag_xref | 2304 | 8 | Kreuzreferenz Vertraege: curated-ID zu Quell-IDs |
 | truth/dq_injektionen | 1223 | 7 | Protokoll aller injizierten Datenqualitaetsprobleme mit Originalwert (nur Dozenten) |
 | truth/partner_latent | 1000 | 10 | Latente Wahrheit je Partner: Kuendigungsneigung, Betrugsneigung, BMI, Raucher, Todesdatum (nur Dozenten) |
+| truth/schaden_latent | 16 | 4 |  |
 | truth/vertrag_latent | 1481 | 11 | Latente Wahrheit je Vertrag: Tarifpraemie, Abweichung, Kuendigung in 12 Monaten, Bias-Anwendung (nur Dozenten) |
 
 ### curated/agentur
@@ -89,6 +94,60 @@ Deckungen je Vertrag: Hauptdeckung, Bausteine, Zusatzversicherungen
 | selbstbehalt_typ | str | fix | 1298 |
 | gueltig_von | object | 2016-03-01 | 0 |
 | gueltig_bis | object | 2021-03-24 | 1545 |
+
+### curated/dokument
+
+
+
+| Spalte | Typ | Beispiel | Nullwerte |
+|---|---|---|---|
+| dokument_id | str | DOK-00000101 | 0 |
+| dokument_typ | str | BERATUNGSPROTOKOLL | 0 |
+| richtung | str | INTERN | 0 |
+| format | str | MD | 0 |
+| ist_gerendert | bool | True | 0 |
+| ocr_qualitaet | str | GUT | 0 |
+| seiten | int64 | 2 | 0 |
+| titel | str | Beratungsdokumentation Risikoleben Ehepa | 0 |
+| absender | str | Generalagentur Luzern | 0 |
+| empfaenger | str | Akte | 0 |
+| partner_id | str | PTR-00000001 | 0 |
+| vertrag_id | str | VTR-00000102 | 23 |
+| schaden_id | str | SCH-00000118 | 22 |
+| antrag_id | str | ANT-00000602 | 29 |
+| interaktion_id | object |  | 37 |
+| erstellt_am | object | 2018-05-14 | 0 |
+| quellsystem | str | DOKU | 0 |
+| datei_pfad | str | data/documents/S/personas/PTR-00000001/D | 0 |
+| text_body | str | Anlass: Geplante Hypothekaraufnahme fuer | 0 |
+| ist_persona_fall | bool | True | 0 |
+
+### curated/interaktion
+
+
+
+| Spalte | Typ | Beispiel | Nullwerte |
+|---|---|---|---|
+| interaktion_id | str | INT-00000412 | 0 |
+| kanal | str | APP | 0 |
+| richtung | str | EINGEHEND | 0 |
+| zeitpunkt | datetime64[us] | 2025-05-18 09:14:00 | 0 |
+| dauer_sekunden | object |  | 62 |
+| partner_id | str | PTR-00000001 | 0 |
+| mitarbeiter_id | str | MIT-00013 | 17 |
+| vermittler_id | str | VRM-00017 | 45 |
+| bezug_typ | str | SCHADEN | 0 |
+| bezug_id | str | SCH-00000118 | 4 |
+| thread_id | str | TH-00000118 | 0 |
+| betreff | str | Schadenmeldung E-Bike Nachbar | 0 |
+| zusammenfassung | object |  | 62 |
+| sprache | str | de | 0 |
+| sentiment_agent | str | neutral | 26 |
+| datei_pfad | str | data/documents/S/personas/PTR-00000001/I | 0 |
+| text_body | str | Guten Tag
+
+Gestern Nachmittag hat unser  | 0 |
+| ist_persona_fall | bool | True | 0 |
 
 ### curated/mitarbeiter
 
@@ -264,6 +323,57 @@ Risikoobjekt je Vertrag: Haushalt, Betrieb, Beruf oder versicherte Person
 | raucher_angabe | object | False | 910 |
 | bmi_angabe | float64 | 22.0 | 910 |
 | summenverlauf | object |  | 1481 |
+
+### curated/schaden
+
+
+
+| Spalte | Typ | Beispiel | Nullwerte |
+|---|---|---|---|
+| schaden_id | str | SCH-00000110 | 0 |
+| schadennummer_anzeige | str | S2019/001001 | 0 |
+| vertrag_id | str | VTR-00000101 | 0 |
+| partner_id | str | PTR-00000001 | 0 |
+| sparte | str | HP | 0 |
+| art | str | HP_PERSONEN | 0 |
+| ursache_code | str | SKI_KOLLISION | 0 |
+| schadendatum | object | 2019-02-16 | 0 |
+| meldedatum | object | 2019-02-18 | 0 |
+| erfassungsdatum | object | 2019-02-18 | 0 |
+| meldekanal | str | VERMITTLER | 0 |
+| schadenort_plz | str | 3818 | 0 |
+| schadenort_land | str | CH | 0 |
+| beschreibung_kurz | str | Reto Niederberger kollidiert auf der Pis | 0 |
+| status | str | GESCHLOSSEN | 0 |
+| status_seit | object | 2019-06-04 | 0 |
+| reserve_aktuell | float64 | 0.0 | 0 |
+| bezahlt_total | float64 | 4180.0 | 0 |
+| regress_total | float64 | 0.0 | 0 |
+| waehrung | str | CHF | 0 |
+| deckung_geprueft | bool | True | 0 |
+| deckung_ergebnis | str | GEDECKT | 0 |
+| ablehnungsgrund_code | str | ARGLIST | 15 |
+| sachbearbeiter_id | str | MIT-00008 | 4 |
+| org_einheit_id | str | ORG-042 | 4 |
+| geschaedigter_text | str | Dritte (Skifahrerin, Bern) | 1 |
+| betrugsverdacht_sichtbar | str | KEIN | 0 |
+| quellsystem | str | SILAS | 0 |
+| ist_persona_fall | bool | True | 0 |
+
+### curated/schaden_position
+
+
+
+| Spalte | Typ | Beispiel | Nullwerte |
+|---|---|---|---|
+| position_id | str | SCH-00000110-01 | 0 |
+| schaden_id | str | SCH-00000110 | 0 |
+| art | str | RESERVE | 0 |
+| betrag | float64 | 5000.0 | 0 |
+| waehrung | str | CHF | 0 |
+| datum | object | 2019-02-19 | 0 |
+| empfaenger | str | Geschaedigte | 34 |
+| beschreibung | str | Erstreserve Personenschaden leicht | 0 |
 
 ### curated/tarifgeneration
 
@@ -447,6 +557,17 @@ Latente Wahrheit je Partner: Kuendigungsneigung, Betrugsneigung, BMI, Raucher, T
 | todesdatum | object | 2019-02-14 | 998 |
 | hund | bool | False | 0 |
 
+### truth/schaden_latent
+
+
+
+| Spalte | Typ | Beispiel | Nullwerte |
+|---|---|---|---|
+| schaden_id | str | SCH-00000110 | 0 |
+| betrug_wahr | bool | False | 0 |
+| betrugsmuster | str | F7/F1/F2 | 12 |
+| bemerkung | str | Persona-Fall, siehe docs/personas/kunden | 0 |
+
 ### truth/vertrag_latent
 
 Latente Wahrheit je Vertrag: Tarifpraemie, Abweichung, Kuendigung in 12 Monaten, Bias-Anwendung (nur Dozenten)
@@ -469,6 +590,105 @@ Latente Wahrheit je Vertrag: Tarifpraemie, Abweichung, Kuendigung in 12 Monaten,
 
 | Datei | Beschreibung |
 |---|---|
+| data/documents/S/personas/PTR-00000001/DOK-00000101_beratungsprotokoll.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000001/DOK-00000102_beratungsprotokoll.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000001/DOK-00000103_kostenvoranschlag.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000001/DOK-00000104_schadenmeldung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000001/INT-00000412_app.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000001/INT-00000413_chat.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000001/INT-00000414_chat.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000001/INT-00000415_app.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000001/INT-00000517_app.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000001/INT-00000518_app.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000002/DOK-00000201_antrag.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000002/DOK-00000202_rechnung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000002/INT-00000201_chat.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000002/INT-00000202.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000002/INT-00000203.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000002/INT-00000230_chat.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000002/INT-00000241_chat.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000002/INT-00000255_chat.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000002/INT-00000262_chat.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000003/DOK-00000301_gutachten.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000003/DOK-00000302_korrespondenz.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000003/DOK-00000303_vergleich.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000003/DOK-00000304_aktennotiz.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000003/INT-00000318.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000003/INT-00000319_telefon.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000003/INT-00000325.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000003/INT-00000326.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000003/INT-00000340.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000004/DOK-00000401_betriebsbeschreibung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000004/DOK-00000402_beratungsprotokoll.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000004/DOK-00000403_nachtrag.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000004/DOK-00000404_umsatzmeldung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000004/INT-00000419.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000004/INT-00000420.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000004/INT-00000431_telefon.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000005/DOK-00000501_standmitteilung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000005/DOK-00000502_ablaufabrechnung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000005/DOK-00000503_offerte.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000005/DOK-00000504_schadenmeldung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000005/INT-00000501_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000005/INT-00000502_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000005/INT-00000505_telefon.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000005/INT-00000512_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000005/INT-00000513_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000006/DOK-00000601_antrag.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000006/DOK-00000602_arztbericht.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000006/DOK-00000603_gegenofferte.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000006/DOK-00000604_erklaerungsschreiben.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000006/INT-00000631.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000006/INT-00000632.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000006/INT-00000633.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000006/INT-00000640.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000006/INT-00000641.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000007/DOK-00000701_beratungsprotokoll.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000007/DOK-00000702_kuendigungsbestaetigung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000007/INT-00000701_chat.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000007/INT-00000705_chat.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000007/INT-00000706_telefon.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000007/INT-00000709_app.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000007/INT-00000714.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000007/INT-00000715.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000007/INT-00000720_app.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000007/INT-00000721_chat.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/DOK-00000801_nachtrag.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/DOK-00000802_beratungsprotokoll.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/DOK-00000803_arztrechnung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/DOK-00000804_memo.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/DOK-00000805_aufsichtskorrespondenz.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000801_telefon.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000802_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000803_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000804.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000805_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000806.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000807.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000808_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000809_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000811_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000823_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000008/INT-00000824_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000009/DOK-00000901_rechnung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000009/DOK-00000902_rechnung.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000009/DOK-00000903_foto.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000009/DOK-00000904_betrugspruefungsbericht.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000009/INT-00000918_portal.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000009/INT-00000919.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000009/INT-00000925_telefon.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000009/INT-00000930_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000009/INT-00000931_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000009/INT-00000932_brief.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000010/DOK-00001001_formular_mittelherkunft.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000010/DOK-00001002_aktennotiz.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000010/DOK-00001003_beratungsprotokoll.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000010/DOK-00001004_rueckkaufstabelle.md | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000010/INT-00001001.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000010/INT-00001004.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000010/INT-00001005.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000010/INT-00001010.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/personas/PTR-00000010/INT-00001012.eml | ; JSON Lines, UTF-8 |
 | data/raw/S/mint/customers.jsonl | MINT-Kunden als JSON Lines (Schema v1 bis v3); JSON Lines, UTF-8 |
 | data/raw/S/mint/policies.jsonl | MINT-Policen als JSON Lines; JSON Lines, UTF-8 |
 | data/raw/S/pvs/HAPO_PARTNER.csv | Partnerstamm Haftpflicht-Altsystem HAPO; Semikolon-CSV, ISO-8859-1, Datum DD.MM.YY |

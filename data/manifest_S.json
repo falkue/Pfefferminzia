@@ -4,7 +4,7 @@
   "schema_version": "0.1.0",
   "scale": "S",
   "stichtag": "2025-12-31",
-  "generated_at": "2026-09-04T05:48:41Z",
+  "generated_at": "2026-09-04T12:28:49Z",
   "generator": {
     "repo": "Pfefferminzia",
     "package": "pfefferminzia",
@@ -54,6 +54,34 @@
       "sha256": {
         "csv": "d101cba9492a75c4de1d8a593a970277c90c3dd71ede4c5c3d3caa5436fd56b9",
         "parquet": "2a223533c2c763561d91200e14caf4a796250f0c0d13659f4d1848ffab329322"
+      }
+    },
+    {
+      "name": "dokument",
+      "layer": "curated",
+      "rows": 37,
+      "columns": 20,
+      "files": {
+        "csv": "data/curated/S/csv/dokument.csv",
+        "parquet": "data/curated/S/parquet/dokument.parquet"
+      },
+      "sha256": {
+        "csv": "2107b70875cd551e9271caa56bd7b1ea60df08dfe1487b38b5dd66bb9b1b81ed",
+        "parquet": "85c09b7599447c0196f1e1ce5aaba4a1e8d9ed421f096dc970e87e11f6e2d4da"
+      }
+    },
+    {
+      "name": "interaktion",
+      "layer": "curated",
+      "rows": 62,
+      "columns": 18,
+      "files": {
+        "csv": "data/curated/S/csv/interaktion.csv",
+        "parquet": "data/curated/S/parquet/interaktion.parquet"
+      },
+      "sha256": {
+        "csv": "cab62cef97f2ff6bb9f86d7bd5ce40d7dfef3ea9ea343425929c2244c2f2c6cf",
+        "parquet": "c44040e2863c53d4354b0ebb12c197c8e5c4a39c409d099081319ccf64d8a31b"
       }
     },
     {
@@ -180,6 +208,34 @@
       "sha256": {
         "csv": "abaf65b3cf0a3447ce23fc63d5c8353d9047e50b43a74f28be686149519c6517",
         "parquet": "66b1322d73723b5a2b4d237360f599ab4971a956c8713a50f7e8b1ea4010f184"
+      }
+    },
+    {
+      "name": "schaden",
+      "layer": "curated",
+      "rows": 16,
+      "columns": 29,
+      "files": {
+        "csv": "data/curated/S/csv/schaden.csv",
+        "parquet": "data/curated/S/parquet/schaden.parquet"
+      },
+      "sha256": {
+        "csv": "3550c481741a1504a5f32e42e00de484bf1cb0b172114b49d0de994968bfa9a9",
+        "parquet": "ff78f31b0855cff344f2de1ebe94da7f93746ca8a1289fd083e8ace9247ffcb2"
+      }
+    },
+    {
+      "name": "schaden_position",
+      "layer": "curated",
+      "rows": 58,
+      "columns": 8,
+      "files": {
+        "csv": "data/curated/S/csv/schaden_position.csv",
+        "parquet": "data/curated/S/parquet/schaden_position.parquet"
+      },
+      "sha256": {
+        "csv": "ae7b3d8ce163cdf19e2e599f2814038a1ef751e23968046749fe6a8c5dd25428",
+        "parquet": "dfede2b36b922f7b9a9b17cfbfe0c2ea36663b358288a6c8517bec0aba813eb7"
       }
     },
     {
@@ -323,6 +379,20 @@
       }
     },
     {
+      "name": "schaden_latent",
+      "layer": "truth",
+      "rows": 16,
+      "columns": 4,
+      "files": {
+        "csv": "data/truth/S/csv/schaden_latent.csv",
+        "parquet": "data/truth/S/parquet/schaden_latent.parquet"
+      },
+      "sha256": {
+        "csv": "92f77fec212730d2d6f929ecb89c35fbca519f999fe9d335ed7016b5e7de1d44",
+        "parquet": "e48a600c5f364ff3d4115b7537ddf0f54f9595fd691987015561629088e5e839"
+      }
+    },
+    {
       "name": "vertrag_latent",
       "layer": "truth",
       "rows": 1481,
@@ -338,6 +408,105 @@
     }
   ],
   "files": {
+    "data/documents/S/personas/PTR-00000001/DOK-00000101_beratungsprotokoll.md": "ebb06040088c2405ed9e44db5b283213e6cd89a541c5403930d5fa771b3398cb",
+    "data/documents/S/personas/PTR-00000001/DOK-00000102_beratungsprotokoll.md": "b1779033fee4269735ab1c3069a2fb1ca50e5da0d0e7a01db832ba765084c749",
+    "data/documents/S/personas/PTR-00000001/DOK-00000103_kostenvoranschlag.md": "06eb87e7b7bbf9c2006a80637892205d42a35f8f634fccf968e2347378d835f1",
+    "data/documents/S/personas/PTR-00000001/DOK-00000104_schadenmeldung.md": "d948e0a02610f7b0f64629813dbfae10e93a33026277227c80aa7c2b8ce37bbe",
+    "data/documents/S/personas/PTR-00000001/INT-00000412_app.md": "81c20d96515fd614e98037b59a93999612c297614865eb4de1e5c1510263cd35",
+    "data/documents/S/personas/PTR-00000001/INT-00000413_chat.md": "c14b97715f24f4a411d25b4e978e371547b40a2b93545bf2a63461c8f57c256a",
+    "data/documents/S/personas/PTR-00000001/INT-00000414_chat.md": "54f29f546f40b6e797526c7705e70e7f8109c44597df3235b6798e3eeaa5cf12",
+    "data/documents/S/personas/PTR-00000001/INT-00000415_app.md": "39075f7c727f87aaa83319a9f7fa2e8dd835a0252b2e938f540a359692d8c317",
+    "data/documents/S/personas/PTR-00000001/INT-00000517_app.md": "cec71c95ab3efd0f346e3d7d72c8378ca54b6e750f263406e082d7258cd636f2",
+    "data/documents/S/personas/PTR-00000001/INT-00000518_app.md": "26d95df4c2fbd9707ccb5aab430ea5f2a832ce29c164ce1fa4c8cff3b9dbd627",
+    "data/documents/S/personas/PTR-00000002/DOK-00000201_antrag.md": "d0acbdb5ead603a10e19cc0393ca9ec2852f203d665e6b7161e4eeedd16d9767",
+    "data/documents/S/personas/PTR-00000002/DOK-00000202_rechnung.md": "0b1c7ba1b2774311140c8204318cd2cc84266a33d604242a39717f34afe2f276",
+    "data/documents/S/personas/PTR-00000002/INT-00000201_chat.md": "06e90892b4196f453bc34e4306182539c5bc5ee636854bfe6caa26086528220b",
+    "data/documents/S/personas/PTR-00000002/INT-00000202.eml": "33224257aa9b26ef164127804df3225a41cdec88bfd39d59c8e6201cc1537174",
+    "data/documents/S/personas/PTR-00000002/INT-00000203.eml": "8042db429e9ff9c332e552b9d6c56e29b35ca2515424392cd612be41f137dd39",
+    "data/documents/S/personas/PTR-00000002/INT-00000230_chat.md": "aab1a9daf5f053512307e177e49052a91a7a3bb1c5e92bbbc5e9e8dd7675f25a",
+    "data/documents/S/personas/PTR-00000002/INT-00000241_chat.md": "db9cc4e5cd6f87f1a4d075600436d20c737c1f35909f6f8cbcb1a7baa61022d1",
+    "data/documents/S/personas/PTR-00000002/INT-00000255_chat.md": "9be55bba18d550e99c8fab51e21fcc8f5ef6d7a26cd005e833e09f868d14ced5",
+    "data/documents/S/personas/PTR-00000002/INT-00000262_chat.md": "fedeef72d8801d17f6b0c09d04bdf36a937b5826b4e490da105e0d50ac94c6ce",
+    "data/documents/S/personas/PTR-00000003/DOK-00000301_gutachten.md": "074e7eff33716c3d8764a144934d411f704d6e1e6d075a5c9efb0b69ab8937fe",
+    "data/documents/S/personas/PTR-00000003/DOK-00000302_korrespondenz.md": "8dfe443391ed24b47d26321c0396f0c14a9d5bf60d84af59927ec5cf241207c4",
+    "data/documents/S/personas/PTR-00000003/DOK-00000303_vergleich.md": "d28fab83f78a73878a11978145f7178b25bc635bf317f070075fcf6edb2fa83b",
+    "data/documents/S/personas/PTR-00000003/DOK-00000304_aktennotiz.md": "e6764b92cc3afd01e5c44c14f48b67f5fe43154809c32d3545944d96fbaab0e5",
+    "data/documents/S/personas/PTR-00000003/INT-00000318.eml": "0ee158f86d79ecd1be5f355d804b4e7f9138ad635ab31ba91a4af9db267cb7a5",
+    "data/documents/S/personas/PTR-00000003/INT-00000319_telefon.md": "91c1fd483ecaeb554243651578361071262acdaf6859ccd0e16a12ae4c968cdc",
+    "data/documents/S/personas/PTR-00000003/INT-00000325.eml": "d78a9eb3e2c607137d26db1f5310a230abfb4aa2242e71ddebaca1797104ccc6",
+    "data/documents/S/personas/PTR-00000003/INT-00000326.eml": "9a4d8bb846b4af6574e76ba73c039d47e921ef9d3fbca54d007e21f3d311c33a",
+    "data/documents/S/personas/PTR-00000003/INT-00000340.eml": "138e6d3aa5f189b9eade5ec135a798f48a5e0ef88b9997d5f54d83239800fdc9",
+    "data/documents/S/personas/PTR-00000004/DOK-00000401_betriebsbeschreibung.md": "790320ddfdf07ea674fdb1ebc281b452094ca15690370e1218ef73113f774105",
+    "data/documents/S/personas/PTR-00000004/DOK-00000402_beratungsprotokoll.md": "be97a33a478722c246c663d2a90a38a86154e0c6adccabcf28fa6fcc3961fd6e",
+    "data/documents/S/personas/PTR-00000004/DOK-00000403_nachtrag.md": "0240649b70994d98f85edd6f89b28ebe3441d8c037396eeff0c769e69c3b0e3f",
+    "data/documents/S/personas/PTR-00000004/DOK-00000404_umsatzmeldung.md": "bac5af83e290bf5d9600490a06bdc871cc438552aa3d78234d3b4918cda6f02a",
+    "data/documents/S/personas/PTR-00000004/INT-00000419.eml": "eb2298f418a45b1f1c0f4e9ca80e105e248a70a5d088b97639c7b11689459774",
+    "data/documents/S/personas/PTR-00000004/INT-00000420.eml": "240c5e06eb8fc6a3c883b3d0b63045a0253f22046b820b1548efed9cb06d2c6d",
+    "data/documents/S/personas/PTR-00000004/INT-00000431_telefon.md": "4e840e948764c09aef57c4046ca2916b0d2e625f512ddcd3e9006ff1ad53f8ab",
+    "data/documents/S/personas/PTR-00000005/DOK-00000501_standmitteilung.md": "1fb7f5059a76656dbb14fd80f6c78b2d6d64a189c9b50561975ec29790ca9126",
+    "data/documents/S/personas/PTR-00000005/DOK-00000502_ablaufabrechnung.md": "785ebeeaf3e294ffa216f838c0304600375213bead1adc14cc30a1975f650296",
+    "data/documents/S/personas/PTR-00000005/DOK-00000503_offerte.md": "acadac9be38e0f36e4751f76db69e133705525bf324bb67b412dceefea442121",
+    "data/documents/S/personas/PTR-00000005/DOK-00000504_schadenmeldung.md": "a8f0837dd795842e523445510f507da1b3240e4245f30dafb6f2f02a82d1ab38",
+    "data/documents/S/personas/PTR-00000005/INT-00000501_brief.md": "33be10bce5821adba8ccf6c4aa09aee01ae6988442e73c2c9ba8a31f94540b45",
+    "data/documents/S/personas/PTR-00000005/INT-00000502_brief.md": "babea574438745901ad6c3693de210075a19531ebb63f7278451f148ea83e746",
+    "data/documents/S/personas/PTR-00000005/INT-00000505_telefon.md": "4d5d58c737d25012e4f11af3f415944aff213e139abd131e850645b194dc4872",
+    "data/documents/S/personas/PTR-00000005/INT-00000512_brief.md": "48cb7f2402a144a9ee7f3ca401718ca454e88b5f8b8ae5d62e18de09ef30cf79",
+    "data/documents/S/personas/PTR-00000005/INT-00000513_brief.md": "bc195c2706b0f152cdf46bf9eae1e23c0105fab28544bae4a59be629b6f4345c",
+    "data/documents/S/personas/PTR-00000006/DOK-00000601_antrag.md": "68bb8fba645cbb104484676a971e73b34bfb0e055feaf660a2056cb4772e6aa6",
+    "data/documents/S/personas/PTR-00000006/DOK-00000602_arztbericht.md": "7d4709618b99e57bc6e88df1cc6419c1348faad23fa83ee0fb022bf9c53bb5ea",
+    "data/documents/S/personas/PTR-00000006/DOK-00000603_gegenofferte.md": "beca906edd85eabda890b77566b22e9019e765e4d54d645f6be377a9f353a7d7",
+    "data/documents/S/personas/PTR-00000006/DOK-00000604_erklaerungsschreiben.md": "e11dd0d037e6cd4c38c00898d28abadffbcf4066440b7a496a61c384577f213b",
+    "data/documents/S/personas/PTR-00000006/INT-00000631.eml": "2a8e0d3d3ee1a03fa4ece4385d5c9e78855d3fbf3198b340e6791abe5e0a8507",
+    "data/documents/S/personas/PTR-00000006/INT-00000632.eml": "a636b893747d192abdf9a92ab776efbc5a3b4a6ac10fae2f947d5489b1757d8c",
+    "data/documents/S/personas/PTR-00000006/INT-00000633.eml": "b1800a366f09b679c2b53b2238db99e91de1325cbcae153a9c9f8b3afb8089c3",
+    "data/documents/S/personas/PTR-00000006/INT-00000640.eml": "0f378a8289ff8bada3e355d706136973244ea49d49d7c87f06d17ab6064911f4",
+    "data/documents/S/personas/PTR-00000006/INT-00000641.eml": "86bcad1d4e6c7abc2a7dfdb9d158dd81a3b142b023a686b01e85fcbb5ad3a475",
+    "data/documents/S/personas/PTR-00000007/DOK-00000701_beratungsprotokoll.md": "14997b846ded51a46e9b5ece60c3f497330bfedb782bef29f4ac589589ccf5b4",
+    "data/documents/S/personas/PTR-00000007/DOK-00000702_kuendigungsbestaetigung.md": "8bc9e8a9d7f0a72470122a688db4d9cb2e9ec76a28a338776a0088d63401659e",
+    "data/documents/S/personas/PTR-00000007/INT-00000701_chat.md": "33022a37c7e29e0d02aef654708235b84be3d5b840ee13ecb4ea728e6e4cccb8",
+    "data/documents/S/personas/PTR-00000007/INT-00000705_chat.md": "efb2d3824a976c9623db8113e2fcccbf416d9d1be509919abe28439e5e3aff21",
+    "data/documents/S/personas/PTR-00000007/INT-00000706_telefon.md": "2e79d3840ad9df5178c189a8f4692c529f96ee9b2a2841d81b705aa77c7ad196",
+    "data/documents/S/personas/PTR-00000007/INT-00000709_app.md": "28fa81c55a436753f7f653d019a723c281062a5be8934f723f43eb908bd2f266",
+    "data/documents/S/personas/PTR-00000007/INT-00000714.eml": "2a3bc29ec5b3e5e1f2be17d5b576bb2af13a638a14c5fb91a9634e8332f955d4",
+    "data/documents/S/personas/PTR-00000007/INT-00000715.eml": "bb846c6b2c6163a2b8c1b6cc1b75dba4d797a08527e2f000d0684499668f3e49",
+    "data/documents/S/personas/PTR-00000007/INT-00000720_app.md": "ca4c527140e89c28821ed09023bbdec6cbc0e3d65fca69f339566412855674de",
+    "data/documents/S/personas/PTR-00000007/INT-00000721_chat.md": "b5a647769b8ea0c1171fddd798e665e5190ecc9452c2daf6840db5ae1dcc7367",
+    "data/documents/S/personas/PTR-00000008/DOK-00000801_nachtrag.md": "84acd047921c124f855e9794be08a510ddc3e7807faf3245cb23594941193cbc",
+    "data/documents/S/personas/PTR-00000008/DOK-00000802_beratungsprotokoll.md": "115aceb05c330be5b6dca5bfe0a1bd6753d2f23260a94496d5a583b8194954c3",
+    "data/documents/S/personas/PTR-00000008/DOK-00000803_arztrechnung.md": "53a58cc56ac5ff14f457df8915c05bf97c7115dcd25f1ff4d276f3632ef536b7",
+    "data/documents/S/personas/PTR-00000008/DOK-00000804_memo.md": "fd82bb25b44c116d21919aaf9d7391a6aa183fd9fb92c782cdfec0aab78a5cee",
+    "data/documents/S/personas/PTR-00000008/DOK-00000805_aufsichtskorrespondenz.md": "651709305834c2e5651f1407a28a0fb8f1bbfc73a60274e27802952fb685b955",
+    "data/documents/S/personas/PTR-00000008/INT-00000801_telefon.md": "44ed64081bb44a26b39e54f775760f21475fdd0c6a2e1b62474854672858597f",
+    "data/documents/S/personas/PTR-00000008/INT-00000802_brief.md": "31bb7c1e765d309245b8aecb694356d3ea75e995e3c1a59c46972ea2601badfc",
+    "data/documents/S/personas/PTR-00000008/INT-00000803_brief.md": "182a902bd7af569ae85c8b62e2ed5fa7fcf2fbabeb043210d211de34f0d89899",
+    "data/documents/S/personas/PTR-00000008/INT-00000804.eml": "9cd200a5d69ae7cfb6fbf93b06c92577748c187c52e1c46163e2afb3e8f52658",
+    "data/documents/S/personas/PTR-00000008/INT-00000805_brief.md": "abc18e601e706171f18608056f8f2756aa1f14568f37cb23dd25791fc9d053c5",
+    "data/documents/S/personas/PTR-00000008/INT-00000806.eml": "b805e42e57e62b98e41b4d23b1f379e32eed5123e3a71b892b6a0509b601942e",
+    "data/documents/S/personas/PTR-00000008/INT-00000807.eml": "ef0ea5280f54a59fa9ebca10fb5115758f36e9ea15448904fd1ca8b3c4b79d23",
+    "data/documents/S/personas/PTR-00000008/INT-00000808_brief.md": "1e166ae4d116a18505a8d2ac879a5b7d22a920427c07ab77f19a09a8dfb0a7af",
+    "data/documents/S/personas/PTR-00000008/INT-00000809_brief.md": "dbc20fb88af55f13b00d76b362ccf68b43ed6a5534dfea68511bd974edea28ca",
+    "data/documents/S/personas/PTR-00000008/INT-00000811_brief.md": "e01af137547aa9d91acfe3991fe61d273a4505f2967b6c83ac5b0570c541fc25",
+    "data/documents/S/personas/PTR-00000008/INT-00000823_brief.md": "392d2daf51168fb94c5786abca6d58ff645db9705c7da96f9a87a69df5267ca8",
+    "data/documents/S/personas/PTR-00000008/INT-00000824_brief.md": "d6da959224621dfb494306ffc298f1dec46f4e63eb7c6d49973f01931c8bd303",
+    "data/documents/S/personas/PTR-00000009/DOK-00000901_rechnung.md": "09f9777a7bd25b131cef36d23fc9636761dec17e6d485fc08db80ade847f40c7",
+    "data/documents/S/personas/PTR-00000009/DOK-00000902_rechnung.md": "55e0358411d8974be0bad9cafa18f8ed7cec4f396a0ea3a97ee5375ab0f0d38d",
+    "data/documents/S/personas/PTR-00000009/DOK-00000903_foto.md": "d9b7db49ab3f8ab687ef77e721fce8824610869b170e8d4aa4cd2882e9dfe0b1",
+    "data/documents/S/personas/PTR-00000009/DOK-00000904_betrugspruefungsbericht.md": "b6363bbda49d3f4ddcb7edf6f918c29968e6fed2f9e57bfbc5eb4fce4c84f8c3",
+    "data/documents/S/personas/PTR-00000009/INT-00000918_portal.md": "6d92b7fb9ca7fb3056ac0795c7a404b628cbba559081d8e9977ec2744663a618",
+    "data/documents/S/personas/PTR-00000009/INT-00000919.eml": "4791a8561a3b57778fee51444d46c106677f2fb51c51baa965159bb33dee92d1",
+    "data/documents/S/personas/PTR-00000009/INT-00000925_telefon.md": "cdb40edc6d689098a45503429542937d6953a6e3276dad9279f1c687b12efc3b",
+    "data/documents/S/personas/PTR-00000009/INT-00000930_brief.md": "88aeab55ca4fc34820d9df4a73d2f357cdfcd95e2267b84300260f6e6dd54bcd",
+    "data/documents/S/personas/PTR-00000009/INT-00000931_brief.md": "58d9e6700692a02d78ee8403d71d95a0e7e2440d20edc2bbcd1b7d745a0cb360",
+    "data/documents/S/personas/PTR-00000009/INT-00000932_brief.md": "ab51c76af211668e3a2f3c69addf3fc40ce0938e34b7c30a5016f237a1fddc4d",
+    "data/documents/S/personas/PTR-00000010/DOK-00001001_formular_mittelherkunft.md": "b04f7249869010d2ccbe879ebfe9ab8d90247c9e360d190d164662821a45aa5b",
+    "data/documents/S/personas/PTR-00000010/DOK-00001002_aktennotiz.md": "ddff87d22b62e6473e401ef7f8228f9bb00d71d6bf6313d1e5c847ad84cd126b",
+    "data/documents/S/personas/PTR-00000010/DOK-00001003_beratungsprotokoll.md": "d14c1245e879f0c49d18e3279d8c0de6b3f9f88a57790229eaf122a70caeaf61",
+    "data/documents/S/personas/PTR-00000010/DOK-00001004_rueckkaufstabelle.md": "dcffcdb532a09af96edd721555621f9c1cab2012585d03c11bed6e01deffe193",
+    "data/documents/S/personas/PTR-00000010/INT-00001001.eml": "a6fcf633aa1deb7943d243461cafbab24f51bc7a0c4cf92d6e8e26c4601a6a33",
+    "data/documents/S/personas/PTR-00000010/INT-00001004.eml": "89c5d90244d5bfcb4a508fe2b78294774315e3d0ee8ebe874c5624d1bbb4fc78",
+    "data/documents/S/personas/PTR-00000010/INT-00001005.eml": "0110034fec5957ff607d7cd69e08bbec37b3b591d387a9adf60ef932ca1b1fc1",
+    "data/documents/S/personas/PTR-00000010/INT-00001010.eml": "fbd2bf9880a965994b0b08efcfb37e10442648ed4e12e44f63b8cf47e64a8908",
+    "data/documents/S/personas/PTR-00000010/INT-00001012.eml": "fbe98df30eeb5f2f4780bfa256ad20e44c664725c47c5d8da54e4d6dcf6bd6ad",
     "data/raw/S/mint/customers.jsonl": "5761f6cec709dd87d908f2b5f98318e2f2083ef820dd37863af38ecdc6564e19",
     "data/raw/S/mint/policies.jsonl": "9be6dad61169157d1e512011a02aef9e94e1fb9ff0a33e944574a5aeaee70dbf",
     "data/raw/S/pvs/HAPO_PARTNER.csv": "d7fc0ccc7c10ac777085ad1499dd38dec1fcc04d3043015376d29795bf01d23e",

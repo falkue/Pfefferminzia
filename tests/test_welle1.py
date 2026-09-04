@@ -16,7 +16,7 @@ def lauf(tmp_path_factory):
 
     tmp = tmp_path_factory.mktemp("welle1")
     ctx = RunContext.erstellen(stufe="S", root=ROOT)
-    for k in ("curated", "truth", "raw", "sample", "migration"):
+    for k in ("curated", "truth", "raw", "sample", "migration", "documents"):
         setattr(ctx.config.pfade, k, tmp / k)
     ctx.config.pfade.manifest = tmp / "manifest.json"
     ergebnisse = run_pipeline(ctx)
@@ -79,7 +79,7 @@ def test_reproduzierbar(lauf):
 
     ctx, _, tmp = lauf
     ctx2 = RunContext.erstellen(stufe="S", root=ROOT)
-    for k in ("curated", "truth", "raw", "sample", "migration"):
+    for k in ("curated", "truth", "raw", "sample", "migration", "documents"):
         setattr(ctx2.config.pfade, k, tmp / "zweiter" / k)
     ctx2.config.pfade.manifest = tmp / "zweiter" / "manifest.json"
     run_pipeline(ctx2, bis="vertrag")

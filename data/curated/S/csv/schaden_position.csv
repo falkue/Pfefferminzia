@@ -1,0 +1,59 @@
+﻿position_id,schaden_id,art,betrag,waehrung,datum,empfaenger,beschreibung
+SCH-00000110-01,SCH-00000110,RESERVE,5000.00,CHF,2019-02-19,,Erstreserve Personenschaden leicht
+SCH-00000110-02,SCH-00000110,ZAHLUNG,2980.00,CHF,2019-04-12,Geschaedigte,Arztkosten und Selbstbehalt Krankenkasse
+SCH-00000110-03,SCH-00000110,ZAHLUNG,1200.00,CHF,2019-05-28,Geschaedigte,Skiausruestung Zeitwert
+SCH-00000110-04,SCH-00000110,RESERVE,0.00,CHF,2019-06-04,,"Reserve aufgeloest, Fall geschlossen"
+SCH-00000118-01,SCH-00000118,RESERVE,2500.00,CHF,2025-05-18,,Erstreserve automatisch (MINT Triage v3)
+SCH-00000118-02,SCH-00000118,ZAHLUNG,2340.00,CHF,2025-05-21,Nachbar,"Fast-Track-Zahlung nach Kostenvoranschlag, unter CHF 5'000"
+SCH-00000118-03,SCH-00000118,RESERVE,0.00,CHF,2025-05-21,,Automatisch geschlossen
+SCH-00000210-01,SCH-00000210,RESERVE,800.00,EUR,2023-02-07,,Erstreserve automatisch
+SCH-00000210-02,SCH-00000210,ZAHLUNG,780.00,EUR,2023-02-09,Hausverwaltung,"Rechnung Schliesszylinder, Baustein Schluesselverlust"
+SCH-00000210-03,SCH-00000210,RESERVE,0.00,EUR,2023-02-09,,Automatisch geschlossen
+SCH-00000310-01,SCH-00000310,RESERVE,2500.00,CHF,2018-11-08,,Erstreserve Bearbeitungsschaden
+SCH-00000310-02,SCH-00000310,ZAHLUNG,1900.00,CHF,2018-12-18,Geschaedigte,"Rechnung Bodenleger abzueglich Selbstbehalt CHF 500, SB vom VN eingefordert"
+SCH-00000310-03,SCH-00000310,RESERVE,0.00,CHF,2018-12-20,,geschlossen
+SCH-00000318-01,SCH-00000318,RESERVE,120000.00,CHF,2024-03-20,,"Erstreserve nach Besichtigung, Gutachter beauftragt"
+SCH-00000318-02,SCH-00000318,KOSTEN,6800.00,CHF,2024-05-14,Gutachter,Bauschadengutachten
+SCH-00000318-03,SCH-00000318,RESERVE,180000.00,CHF,2024-05-15,,Reserve nach Gutachten auf Ultimate 180'000 erhoeht
+SCH-00000318-04,SCH-00000318,ZAHLUNG,95000.00,CHF,2024-09-02,STWEG Aarepark,"Teilzahlung Bauschaden, Freigabe Teamleitung Schaden CH"
+SCH-00000318-05,SCH-00000318,ZAHLUNG,48600.00,CHF,2025-01-20,STWEG Aarepark,Mobiliar und Mietausfall Wohnungen 2 und 3
+SCH-00000318-06,SCH-00000318,ZAHLUNG,22000.00,CHF,2025-03-10,STWEG Aarepark,Restzahlung Bauschaden nach Schlussrechnung
+SCH-00000318-07,SCH-00000318,RESERVE,0.00,CHF,2025-03-18,,"Fall geschlossen, Gesamtaufwand 172'400 inkl. Kosten"
+SCH-00000318-08,SCH-00000318,REGRESS,-40000.00,CHF,2025-07-08,Armaturenlieferant,"Regressvergleich Produktfehler Armatur, Eingang"
+SCH-00000410-01,SCH-00000410,RESERVE,7000.00,EUR,2017-08-25,,Erstreserve
+SCH-00000410-02,SCH-00000410,ZAHLUNG,6400.00,EUR,2017-10-30,Geschaedigter,"Reparaturrechnung Heizungsbauer und Estrich, SB 500 vom VN eingefordert"
+SCH-00000410-03,SCH-00000410,RESERVE,0.00,EUR,2017-11-02,,geschlossen
+SCH-00000414-01,SCH-00000414,RESERVE,40000.00,EUR,2020-12-07,,Erstreserve nach Bericht Sanierungsfirma
+SCH-00000414-02,SCH-00000414,ZAHLUNG,38200.00,EUR,2021-05-06,WEG Pirna,"Sanierungsrechnungen, Haftung 100 Prozent"
+SCH-00000414-03,SCH-00000414,RESERVE,0.00,EUR,2021-05-11,,geschlossen
+SCH-00000419-01,SCH-00000419,RESERVE,30000.00,EUR,2024-09-19,,Erstreserve
+SCH-00000419-02,SCH-00000419,ZAHLUNG,27500.00,EUR,2024-10-28,Geschaedigter,"Dachdecker- und Malerrechnungen, SB 500; reguliert mit Hinweis auf Anzeigepflicht"
+SCH-00000419-03,SCH-00000419,RESERVE,0.00,EUR,2024-11-05,,geschlossen
+SCH-00000501-01,SCH-00000501,ZAHLUNG,120000.00,CHF,2019-06-12,Versicherungsnehmerin,Garantierte Erlebensfallsumme
+SCH-00000501-02,SCH-00000501,ZAHLUNG,41300.00,CHF,2019-06-12,Versicherungsnehmerin,"Laufende Ueberschussanteile, verzinslich angesammelt"
+SCH-00000501-03,SCH-00000501,ZAHLUNG,7120.00,CHF,2019-06-12,Versicherungsnehmerin,Schlussueberschuss
+SCH-00000510-01,SCH-00000510,RESERVE,1500.00,CHF,2022-09-06,,Erstreserve Personenschaden leicht
+SCH-00000510-02,SCH-00000510,ZAHLUNG,640.00,CHF,2022-09-26,Nachbar,"Arztrechnung Notfallstation, kein Selbstbehalt Altvertrag"
+SCH-00000510-03,SCH-00000510,RESERVE,0.00,CHF,2022-09-27,,geschlossen
+SCH-00000810-01,SCH-00000810,RESERVE,1500.00,EUR,2025-03-21,,Erstreserve automatisch
+SCH-00000810-02,SCH-00000810,RESERVE,0.00,EUR,2025-03-24,,Reserve aufgeloest: automatische Ablehnung 'kein Tierhalterbaustein' (MINT Triage v3)
+SCH-00000810-03,SCH-00000810,RESERVE,1500.00,EUR,2025-04-17,,"Wiedereroeffnung nach Beschwerde, Baustein in HAPO nachgewiesen"
+SCH-00000810-04,SCH-00000810,ZAHLUNG,1240.00,EUR,2025-04-17,Radfahrer,"Arztkosten und Hose, ohne Selbstbehalt"
+SCH-00000810-05,SCH-00000810,ZAHLUNG,100.00,EUR,2025-04-17,Versicherungsnehmer,Kulanz fuer Aufwand und Verzoegerung
+SCH-00000810-06,SCH-00000810,RESERVE,0.00,EUR,2025-04-24,,geschlossen
+SCH-00000910-01,SCH-00000910,RESERVE,900.00,EUR,2022-09-06,,Erstreserve automatisch
+SCH-00000910-02,SCH-00000910,ZAHLUNG,890.00,EUR,2022-09-08,Kunde,"Fast-Track unter EUR 1'000, Rechnung TV-Welt Wildau"
+SCH-00000910-03,SCH-00000910,RESERVE,0.00,EUR,2022-09-08,,automatisch geschlossen
+SCH-00000912-01,SCH-00000912,RESERVE,1500.00,EUR,2023-03-15,,Erstreserve
+SCH-00000912-02,SCH-00000912,ZAHLUNG,1450.00,EUR,2023-03-31,Kunde,"Nach Kostenvoranschlag, Sachbearbeiterpruefung"
+SCH-00000912-03,SCH-00000912,RESERVE,0.00,EUR,2023-04-03,,geschlossen
+SCH-00000914-01,SCH-00000914,RESERVE,1200.00,EUR,2023-11-21,,Erstreserve automatisch
+SCH-00000914-02,SCH-00000914,ZAHLUNG,1180.00,EUR,2023-12-01,Bekannter,Zeitwert Laptop nach Kaufbeleg
+SCH-00000914-03,SCH-00000914,RESERVE,0.00,EUR,2023-12-04,,automatisch geschlossen
+SCH-00000916-01,SCH-00000916,RESERVE,2500.00,EUR,2024-04-09,,Erstreserve
+SCH-00000916-02,SCH-00000916,ZAHLUNG,2300.00,EUR,2024-05-10,Kunde,Rechnung Moebel Spreewald
+SCH-00000916-03,SCH-00000916,RESERVE,0.00,EUR,2024-05-14,,geschlossen
+SCH-00000918-01,SCH-00000918,RESERVE,7000.00,EUR,2024-09-02,,Erstreserve
+SCH-00000918-02,SCH-00000918,RESERVE,7000.00,EUR,2024-09-03,,"Zahlung zurueckgestellt, Betrugsscore 0.87, Fall an SIU"
+SCH-00000918-03,SCH-00000918,KOSTEN,1850.00,EUR,2024-12-12,Ermittlungsbuero,Recherchen und Befragungen SIU (extern)
+SCH-00000918-04,SCH-00000918,RESERVE,0.00,EUR,2025-01-15,,"Ablehnung Arglist, Rueckforderung SCH-00000910 und SCH-00000916 eingeleitet"

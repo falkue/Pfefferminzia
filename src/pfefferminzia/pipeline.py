@@ -94,15 +94,6 @@ class ReferenceStage(Stage):
 
 
 @register
-class SchadenStage(Stage):
-    name, nummer, welle = "schaden", 50, 5
-    beschreibung = "Schaeden/Leistungsfaelle, Positionen, Beteiligte, Statusverlauf, Betrugswahrheit"
-
-    def run(self, ctx: RunContext) -> None:
-        self.stub(ctx)
-
-
-@register
 class FinanzStage(Stage):
     name, nummer, welle = "finanz", 60, 2
     beschreibung = "Rechnungen, Buchungen, Mahnungen, vertrag_jahr, Wechselkurse"
@@ -112,27 +103,9 @@ class FinanzStage(Stage):
 
 
 @register
-class ProzessStage(Stage):
-    name, nummer, welle = "prozess", 70, 2
-    beschreibung = "Aufgaben, Interaktions-Skelette, Beschwerden, Dokument-Skelette"
-
-    def run(self, ctx: RunContext) -> None:
-        self.stub(ctx)
-
-
-@register
 class TextStage(Stage):
     name, nummer, welle = "text", 80, 6
     beschreibung = "Freitexte (LLM mit Cache, Template-Fallback)"
-
-    def run(self, ctx: RunContext) -> None:
-        self.stub(ctx)
-
-
-@register
-class RenderStage(Stage):
-    name, nummer, welle = "render", 85, 6
-    beschreibung = "PDF/DOCX/PNG/EML, Scan-Simulation"
 
     def run(self, ctx: RunContext) -> None:
         self.stub(ctx)
@@ -188,6 +161,7 @@ from pfefferminzia.legacy import legacyify as _legacyify  # noqa: E402, F401
 from pfefferminzia.legacy import mintify as _mintify  # noqa: E402, F401
 from pfefferminzia.synth import organisation as _organisation  # noqa: E402, F401
 from pfefferminzia.synth import partner as _partner  # noqa: E402, F401
+from pfefferminzia.synth import persona_akten as _persona_akten  # noqa: E402, F401
 from pfefferminzia.synth import vertrag as _vertrag  # noqa: E402, F401
 
 # ---------------------------------------------------------------------------
