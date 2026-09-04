@@ -8,6 +8,7 @@ Dieses Repository enthält einen **synthetischen Lehr-Datensatz** eines fiktiven
 - `data/raw/S/pvs/` – Rohextrakte der Altsysteme HAPO (Haftpflicht) und VERA (Leben): Fixed-width-Text mit Satzartbeschreibung (`*_SATZART.txt`) und Semikolon-CSV, Zeichensatz ISO-8859-1.
 - `data/raw/S/mint/` – Rohextrakt der Plattform MINT als JSON Lines (Schema-Versionen v1 bis v3).
 - `data/migration/S/csv/` – Kreuzreferenzen Quell-ID zu curated-ID, Feldmapping, Migrationslog.
+- `data/documents/S/personas/` – Fallakten der zehn Kunden-Personas (Markdown, EML); `data/documents/S/tarife/` – 28 Tarifblätter je Tarifgeneration und Markt (Markdown und PDF).
 - `data/truth/S/` – Lösungen (latente Wahrheit, Labels, Protokoll der eingebauten Datenfehler). Nur für Dozenten.
 - `data/reference/` – Stammdaten und Referenzen (Produkte, Tarife, Regelwerkstabellen, Personas, Geo- und Namenslisten) mit Data Dictionaries in den README-Dateien.
 - `docs/datensatz/data-dictionary-S.md` – Beschreibung aller Tabellen und Spalten.

@@ -34,6 +34,7 @@ Die Pfefferminz Versicherung, 1924 in Olten gegründet, hat am 1. Januar 2025 da
 | `docs/unternehmen/` | Wer Pfefferminzia ist: Profil, Geschichte, Organisation, Systeme |
 | `docs/regelwerke/` | Annahmerichtlinie Leben, Kompetenzordnung, Beschwerderichtlinie |
 | `data/documents/S/personas/` | Die Fallakten der Kunden-Personas: Briefe, E-Mails, Notizen, Berichte |
+| `data/documents/S/tarife/` | Tarifblätter je Tarifgeneration und Markt als Markdown und PDF |
 
 Der Ordner `data/truth/` enthält die Lösungen der Übungen. Er ist für die Dozenten gedacht; die Übungen funktionieren nur, wenn du ihn nicht benutzt.
 
