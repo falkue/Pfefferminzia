@@ -222,7 +222,7 @@ class Legacy:
                 zusatz1 = "HUND" if "BS-TIER-HUND" in bausteine else ""
                 if zusatz1 and rng.random() < 0.6:
                     zusatz1 = str(rng.choice(["HUND", "HUND LABRAD", "HUND MISCHL", "HUND 2X", "hund"]))
-                zusatz2 = ";".join(b.replace("BS-", "")[:3] for b in bausteine if b != "BS-TIER-HUND")[:10]
+                zusatz2 = "/".join(b.replace("BS-", "")[:3] for b in bausteine if b != "BS-TIER-HUND")[:10]
             else:
                 sparte = VERA_PRODUKT.get(str(r["produkt_id"]), "K") + "1"
                 tarif = VERA_TARIFCODE.get(str(r["tarifgeneration_id"]), "L17")
