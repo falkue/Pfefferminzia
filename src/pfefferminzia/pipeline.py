@@ -94,27 +94,6 @@ class ReferenceStage(Stage):
 
 
 @register
-class OrganisationStage(Stage):
-    name, nummer, welle = "organisation", 20, 1
-    beschreibung = "Org-Einheiten, Mitarbeiter, Agenturen, Vermittler, Produkte, Tarifgenerationen"
-
-    def run(self, ctx: RunContext) -> None:
-        self.stub(ctx)
-
-
-from pfefferminzia.synth.partner import PartnerStage  # noqa: E402,F401  (Registrierung; von TaskMe-Session eingefuegt)
-
-
-@register
-class VertragStage(Stage):
-    name, nummer, welle = "vertrag", 40, 1
-    beschreibung = "Antraege, Underwriting, Vertraege, Versionen, Deckungen, Risikoobjekte"
-
-    def run(self, ctx: RunContext) -> None:
-        self.stub(ctx)
-
-
-@register
 class SchadenStage(Stage):
     name, nummer, welle = "schaden", 50, 5
     beschreibung = "Schaeden/Leistungsfaelle, Positionen, Beteiligte, Statusverlauf, Betrugswahrheit"
@@ -160,24 +139,6 @@ class RenderStage(Stage):
 
 
 @register
-class LegacyifyStage(Stage):
-    name, nummer, welle = "legacyify", 90, 1
-    beschreibung = "raw VERA/HAPO/SILAS/DOKU mit DQ-Injektion, Migrationslog, xref"
-
-    def run(self, ctx: RunContext) -> None:
-        self.stub(ctx)
-
-
-@register
-class MintifyStage(Stage):
-    name, nummer, welle = "mintify", 91, 1
-    beschreibung = "raw MINT (JSONL, Schema-Drift, Migrationsartefakte)"
-
-    def run(self, ctx: RunContext) -> None:
-        self.stub(ctx)
-
-
-@register
 class ExportStage(Stage):
     name, nummer, welle = "export", 95, 0
     beschreibung = "Registrierte Tabellen als Parquet + CSV schreiben, Manifest fuellen"
@@ -186,6 +147,10 @@ class ExportStage(Stage):
         from pfefferminzia.export import exportiere_tabelle
 
         formate = tuple(f for f in ctx.stufe_config.formate if f in ("parquet", "csv"))
+        if ctx.tabellen.has("partner_xref", "migration") and not ctx.tabellen.has("feld_mapping", "migration"):
+            from pfefferminzia.legacy.mapping import feld_mapping
+
+            ctx.tabellen.register("feld_mapping", feld_mapping(), layer="migration")
         anzahl = 0
         for key, df in ctx.tabellen.alle().items():
             layer, name = key.split("/", 1)
@@ -215,6 +180,15 @@ class ValidateStage(Stage):
             pfad = ctx.manifest.write(ctx.pfade.manifest.with_name(f"manifest_{ctx.stufe}.json"))
             ctx.ereignis(self.name, f"Manifest geschrieben: {pfad}")
 
+
+# ---------------------------------------------------------------------------
+# Fachstufen in eigenen Modulen (Registrierung durch Import; Reihenfolge ueber ``nummer``)
+# ---------------------------------------------------------------------------
+from pfefferminzia.legacy import legacyify as _legacyify  # noqa: E402, F401
+from pfefferminzia.legacy import mintify as _mintify  # noqa: E402, F401
+from pfefferminzia.synth import organisation as _organisation  # noqa: E402, F401
+from pfefferminzia.synth import partner as _partner  # noqa: E402, F401
+from pfefferminzia.synth import vertrag as _vertrag  # noqa: E402, F401
 
 # ---------------------------------------------------------------------------
 # Ausfuehrung

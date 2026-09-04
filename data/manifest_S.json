@@ -4,7 +4,7 @@
   "schema_version": "0.1.0",
   "scale": "S",
   "stichtag": "2025-12-31",
-  "generated_at": "2026-09-03T14:30:55Z",
+  "generated_at": "2026-09-04T05:48:41Z",
   "generator": {
     "repo": "Pfefferminzia",
     "package": "pfefferminzia",
@@ -15,20 +15,343 @@
   "code_license": "MIT",
   "tables": [
     {
-      "name": "partner_personen",
-      "layer": "partner",
-      "rows": 500,
-      "columns": 8,
+      "name": "agentur",
+      "layer": "curated",
+      "rows": 12,
+      "columns": 11,
       "files": {
-        "csv": "data/sample/S/csv/partner_personen.csv",
-        "parquet": "data/sample/S/parquet/partner_personen.parquet"
+        "csv": "data/curated/S/csv/agentur.csv",
+        "parquet": "data/curated/S/parquet/agentur.parquet"
       },
       "sha256": {
-        "csv": "5aadc0af31f350282857bbe3322b27cb8955f34246c95ad701dd821e1c07114c",
-        "parquet": "2e470efae4a0af436f83b0507a58ba1e0b456d851692037baa8e34e33415c790"
+        "csv": "073c55cc8e346868b28430666e2b7eaf9c67ada852b8a05434d608cee7f07447",
+        "parquet": "54144d9f2b0637c383e6f6d537a80b54df3fe8e5c93eae37288c4618a64f99fe"
+      }
+    },
+    {
+      "name": "antrag",
+      "layer": "curated",
+      "rows": 1610,
+      "columns": 17,
+      "files": {
+        "csv": "data/curated/S/csv/antrag.csv",
+        "parquet": "data/curated/S/parquet/antrag.parquet"
+      },
+      "sha256": {
+        "csv": "20c9cc479de7c8c8e7d67c606e9b6b8fd002ff09c32a27cb68586ff9d377eac8",
+        "parquet": "34b06c36be1095c81a5485a9f6cc11e85781b21e86d9c6a48a9727b88ca5ab53"
+      }
+    },
+    {
+      "name": "deckung",
+      "layer": "curated",
+      "rows": 2208,
+      "columns": 9,
+      "files": {
+        "csv": "data/curated/S/csv/deckung.csv",
+        "parquet": "data/curated/S/parquet/deckung.parquet"
+      },
+      "sha256": {
+        "csv": "d101cba9492a75c4de1d8a593a970277c90c3dd71ede4c5c3d3caa5436fd56b9",
+        "parquet": "2a223533c2c763561d91200e14caf4a796250f0c0d13659f4d1848ffab329322"
+      }
+    },
+    {
+      "name": "mitarbeiter",
+      "layer": "curated",
+      "rows": 60,
+      "columns": 20,
+      "files": {
+        "csv": "data/curated/S/csv/mitarbeiter.csv",
+        "parquet": "data/curated/S/parquet/mitarbeiter.parquet"
+      },
+      "sha256": {
+        "csv": "db6343f6309f9eb8d809e7ddf7142c6e955412c3a97fda4cf2262df861a562f1",
+        "parquet": "e9e720383bbed44d66aa26823ababfb85eb882248e52c746f8395d22b9bb9ad0"
+      }
+    },
+    {
+      "name": "org_einheit",
+      "layer": "curated",
+      "rows": 69,
+      "columns": 10,
+      "files": {
+        "csv": "data/curated/S/csv/org_einheit.csv",
+        "parquet": "data/curated/S/parquet/org_einheit.parquet"
+      },
+      "sha256": {
+        "csv": "ec8fb0410adb18ff2555431d8991014302fda30f6fabb7b041e9289af522d980",
+        "parquet": "611d217001b2cbaa2b617c27ca267de72cd53a909a554940d24ede36f15a7e89"
+      }
+    },
+    {
+      "name": "partner",
+      "layer": "curated",
+      "rows": 1000,
+      "columns": 30,
+      "files": {
+        "csv": "data/curated/S/csv/partner.csv",
+        "parquet": "data/curated/S/parquet/partner.parquet"
+      },
+      "sha256": {
+        "csv": "9a5ecae1834c22b44c4e52a55e60b4e41072528b8b849a76e4eb4a9083c5d939",
+        "parquet": "49e764030802b634eb6223ac3a8846da25207fa7974182f3845d166acd7e97ad"
+      }
+    },
+    {
+      "name": "partner_adresse",
+      "layer": "curated",
+      "rows": 1250,
+      "columns": 13,
+      "files": {
+        "csv": "data/curated/S/csv/partner_adresse.csv",
+        "parquet": "data/curated/S/parquet/partner_adresse.parquet"
+      },
+      "sha256": {
+        "csv": "b0e25438c5a322ec059738299c98ea407680d149e8516234aa0ce1f4ec223e7f",
+        "parquet": "72f9a740bd63a17b9e662ca4061a5dd50e5c61dd50a715abfbbad8fa5bf72811"
+      }
+    },
+    {
+      "name": "partner_beziehung",
+      "layer": "curated",
+      "rows": 458,
+      "columns": 4,
+      "files": {
+        "csv": "data/curated/S/csv/partner_beziehung.csv",
+        "parquet": "data/curated/S/parquet/partner_beziehung.parquet"
+      },
+      "sha256": {
+        "csv": "adf01e24850717c5091379bf8ad150657a70fc0bd92dfdd1cf24e2166a3c9c98",
+        "parquet": "59fa1b53426224760e5b1fc978b42b57beb26f04984b514fbe3422b2f0633b15"
+      }
+    },
+    {
+      "name": "partner_firma",
+      "layer": "curated",
+      "rows": 62,
+      "columns": 6,
+      "files": {
+        "csv": "data/curated/S/csv/partner_firma.csv",
+        "parquet": "data/curated/S/parquet/partner_firma.parquet"
+      },
+      "sha256": {
+        "csv": "49b79759145c648b99204eabb390855f617aec913e6a13bb7cbebcb995da8f03",
+        "parquet": "32321e59c70261ef7c3aca1b92ffc0bb66ca543be729cef1da2f35c79d6b5e9f"
+      }
+    },
+    {
+      "name": "partner_kontakt",
+      "layer": "curated",
+      "rows": 1876,
+      "columns": 5,
+      "files": {
+        "csv": "data/curated/S/csv/partner_kontakt.csv",
+        "parquet": "data/curated/S/parquet/partner_kontakt.parquet"
+      },
+      "sha256": {
+        "csv": "e9b9219e7d22e282ceda9f5f4f8cf725685fea2c241ccfc30af5c008839d1f9d",
+        "parquet": "79801d037aa10701ecaf79ffb282f2fbb7c94f5312507380be1682716ffe93f1"
+      }
+    },
+    {
+      "name": "produkt",
+      "layer": "curated",
+      "rows": 7,
+      "columns": 5,
+      "files": {
+        "csv": "data/curated/S/csv/produkt.csv",
+        "parquet": "data/curated/S/parquet/produkt.parquet"
+      },
+      "sha256": {
+        "csv": "e09ee65eb9aa2f9d33ed8d775b339c80b1c5d04b34870ef7629a7f7a46f2f040",
+        "parquet": "224613afdb02ae0b2aef1844855d61e07cd7294e820e28d3d9772eae67b4b8eb"
+      }
+    },
+    {
+      "name": "risiko_objekt",
+      "layer": "curated",
+      "rows": 1481,
+      "columns": 19,
+      "files": {
+        "csv": "data/curated/S/csv/risiko_objekt.csv",
+        "parquet": "data/curated/S/parquet/risiko_objekt.parquet"
+      },
+      "sha256": {
+        "csv": "abaf65b3cf0a3447ce23fc63d5c8353d9047e50b43a74f28be686149519c6517",
+        "parquet": "66b1322d73723b5a2b4d237360f599ab4971a956c8713a50f7e8b1ea4010f184"
+      }
+    },
+    {
+      "name": "tarifgeneration",
+      "layer": "curated",
+      "rows": 14,
+      "columns": 9,
+      "files": {
+        "csv": "data/curated/S/csv/tarifgeneration.csv",
+        "parquet": "data/curated/S/parquet/tarifgeneration.parquet"
+      },
+      "sha256": {
+        "csv": "63f6082b9fe6f095467a75313bd836ec2058ac881acaf8f0237e37d93c5d3351",
+        "parquet": "ebb484e2a52d6f87680cc48fb3bbd6ff725f0fc971c7daa7f6871c845478f9aa"
+      }
+    },
+    {
+      "name": "vermittler",
+      "layer": "curated",
+      "rows": 40,
+      "columns": 14,
+      "files": {
+        "csv": "data/curated/S/csv/vermittler.csv",
+        "parquet": "data/curated/S/parquet/vermittler.parquet"
+      },
+      "sha256": {
+        "csv": "d6a5a7c07048ce93783028095b17f0b437509ea1365527f2e26a08f2edad728a",
+        "parquet": "4a05fc53dc6797aa093cc8229c027c3604ab723b33f736170fe8fdecebb9f2f5"
+      }
+    },
+    {
+      "name": "vertrag",
+      "layer": "curated",
+      "rows": 1481,
+      "columns": 35,
+      "files": {
+        "csv": "data/curated/S/csv/vertrag.csv",
+        "parquet": "data/curated/S/parquet/vertrag.parquet"
+      },
+      "sha256": {
+        "csv": "baacc05ab325baf8ee88f59e50049134f3dc1ab60a01af750b97b24aa7bb0165",
+        "parquet": "867b4e0e8b707acbb4016d3c80e8c4da4f3689da1cc9608689e448f39552abbd"
+      }
+    },
+    {
+      "name": "vertrag_partner_rolle",
+      "layer": "curated",
+      "rows": 3425,
+      "columns": 4,
+      "files": {
+        "csv": "data/curated/S/csv/vertrag_partner_rolle.csv",
+        "parquet": "data/curated/S/parquet/vertrag_partner_rolle.parquet"
+      },
+      "sha256": {
+        "csv": "17d54c1c3861f07b579f8f80ff157b98ce41daf9932886a6cb1e55f8f84cfec0",
+        "parquet": "c7134222872db1754da00e5bc22b4f18699993050cc1ced00b52e41ceb2bf482"
+      }
+    },
+    {
+      "name": "feld_mapping",
+      "layer": "migration",
+      "rows": 42,
+      "columns": 9,
+      "files": {
+        "csv": "data/migration/S/csv/feld_mapping.csv",
+        "parquet": "data/migration/S/parquet/feld_mapping.parquet"
+      },
+      "sha256": {
+        "csv": "f33963436f0b1a4c69f1e35f14714380219cc9d3629419750c49260f1267b7a2",
+        "parquet": "0484bbd680832e990a9c527675c8d5635f4cb22da451c28cdf183e730676b631"
+      }
+    },
+    {
+      "name": "migrationslog",
+      "layer": "migration",
+      "rows": 1821,
+      "columns": 8,
+      "files": {
+        "csv": "data/migration/S/csv/migrationslog.csv",
+        "parquet": "data/migration/S/parquet/migrationslog.parquet"
+      },
+      "sha256": {
+        "csv": "2514ddf6ee13c5c4843bd21406b9971c75d27833616e9a1ebb96aa4175ac6362",
+        "parquet": "d03ed4b1e88eab2c234a5c824385fdcc3912b3ab29647d8f0c079ee12445ee86"
+      }
+    },
+    {
+      "name": "partner_xref",
+      "layer": "migration",
+      "rows": 1766,
+      "columns": 8,
+      "files": {
+        "csv": "data/migration/S/csv/partner_xref.csv",
+        "parquet": "data/migration/S/parquet/partner_xref.parquet"
+      },
+      "sha256": {
+        "csv": "8377c29ff723dd9e8652a3a1b3371e75dc65bb0e5d99218c9ba8520ac5896c5e",
+        "parquet": "4483ec46129ff3bd70776192b2b260764e44a51c797758f84b7bbc86f798c719"
+      }
+    },
+    {
+      "name": "vertrag_xref",
+      "layer": "migration",
+      "rows": 2304,
+      "columns": 8,
+      "files": {
+        "csv": "data/migration/S/csv/vertrag_xref.csv",
+        "parquet": "data/migration/S/parquet/vertrag_xref.parquet"
+      },
+      "sha256": {
+        "csv": "ab62779f9f2dcbf160cbbcb725a5b0279f2e8595ea368c363fd8688ce5c1e945",
+        "parquet": "ce08d27c190f31e886dec57a3e2684b23968180670d3eb8991871aa275b31303"
+      }
+    },
+    {
+      "name": "dq_injektionen",
+      "layer": "truth",
+      "rows": 1223,
+      "columns": 7,
+      "files": {
+        "csv": "data/truth/S/csv/dq_injektionen.csv",
+        "parquet": "data/truth/S/parquet/dq_injektionen.parquet"
+      },
+      "sha256": {
+        "csv": "8a4491775dec982e15710a8e4f8fbadd58a2dc666de6fea545c76e137928a2e9",
+        "parquet": "dafdffee07fddfd9d76da39ae90cb076fae3ce248719ffdf93b63c40c7c9a313"
+      }
+    },
+    {
+      "name": "partner_latent",
+      "layer": "truth",
+      "rows": 1000,
+      "columns": 10,
+      "files": {
+        "csv": "data/truth/S/csv/partner_latent.csv",
+        "parquet": "data/truth/S/parquet/partner_latent.parquet"
+      },
+      "sha256": {
+        "csv": "c8cdfc226e119746dc4e10a6326d4ab025706c19cd8e733d564492fc6e6f8d81",
+        "parquet": "b408f227e1f3e1005ca3a2f64984ff6f8425fb779354e69408fe5eefde882786"
+      }
+    },
+    {
+      "name": "vertrag_latent",
+      "layer": "truth",
+      "rows": 1481,
+      "columns": 11,
+      "files": {
+        "csv": "data/truth/S/csv/vertrag_latent.csv",
+        "parquet": "data/truth/S/parquet/vertrag_latent.parquet"
+      },
+      "sha256": {
+        "csv": "9d75d96904ea6125ca2fd0156b37c7f98ff49b201e544974f1e3ca7f7e15e2f9",
+        "parquet": "127545fe04a7565996431b7daae8426b34206d23c3322d5c11394f2ba5b1cf0b"
       }
     }
   ],
-  "files": {},
+  "files": {
+    "data/raw/S/mint/customers.jsonl": "5761f6cec709dd87d908f2b5f98318e2f2083ef820dd37863af38ecdc6564e19",
+    "data/raw/S/mint/policies.jsonl": "9be6dad61169157d1e512011a02aef9e94e1fb9ff0a33e944574a5aeaee70dbf",
+    "data/raw/S/pvs/HAPO_PARTNER.csv": "d7fc0ccc7c10ac777085ad1499dd38dec1fcc04d3043015376d29795bf01d23e",
+    "data/raw/S/pvs/HAPO_PARTNER.txt": "5bf7b33a680ad5265d62b08436b51ef6cd6a74421a29063915d562c70a79c173",
+    "data/raw/S/pvs/HAPO_PARTNER_SATZART.txt": "71b7c3256182774a1799c2457b9037895f8f71c1fc90b47b0e2155c6d161d884",
+    "data/raw/S/pvs/HAPO_VERTRAG.csv": "c8557a357e76896b4a0d5095e46e002754af887bd441a14bdac9d9d08851e5e6",
+    "data/raw/S/pvs/HAPO_VERTRAG.txt": "3ec8e247192003308f19f9175dc2ba2b1a233730b1bd5e87929ec28f4f966074",
+    "data/raw/S/pvs/HAPO_VERTRAG_SATZART.txt": "e0845ee400d64875a922e87759135ed32e12b6d3b6c58550d268cc92e8951696",
+    "data/raw/S/pvs/VERA_PARTNER.csv": "888be86f6a0e5fb66cbd7b02d945b539cd2ffa477635cfbd03c82fd4a740a719",
+    "data/raw/S/pvs/VERA_PARTNER.txt": "47851caac30ff5891b06a816659ae137eae1600eaf0463557da388c5517f5004",
+    "data/raw/S/pvs/VERA_PARTNER_SATZART.txt": "a27882be2734c56a088d9d5b7ebd152c1d69ed9f3f36e95f3c193834f48e5ac6",
+    "data/raw/S/pvs/VERA_VERTRAG.csv": "b702a7cfd2436c96802b3acc8344547d34d43602be8cefe23134e19472952f77",
+    "data/raw/S/pvs/VERA_VERTRAG.txt": "eed0fa7fb2ba3d314f6ceaccc8584ea44d9de836b84c169dc65d1746c6f19721",
+    "data/raw/S/pvs/VERA_VERTRAG_SATZART.txt": "b2f394461b79400a53fe2d0a6bf06981769edf6b99c85ff797f48758153d87b4"
+  },
   "disclaimer": "Fiktives Lehrbeispiel. Alle Daten synthetisch. Keine Verbindung zu realen Personen, Unternehmen oder Marken."
 }

@@ -101,6 +101,7 @@ class PfadeConfig(BaseModel):
     curated: Path = Path("data/curated")
     truth: Path = Path("data/truth")
     sample: Path = Path("data/sample")
+    migration: Path = Path("data/migration")
     documents: Path = Path("data/documents")
     communications: Path = Path("data/communications")
     llm_cache: Path = Path("data/cache/llm")

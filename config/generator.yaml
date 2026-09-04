@@ -113,6 +113,7 @@ pfade:
   curated: data/curated
   truth: data/truth
   sample: data/sample
+  migration: data/migration
   documents: data/documents
   communications: data/communications
   llm_cache: data/cache/llm

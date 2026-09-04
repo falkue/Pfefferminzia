@@ -1,0 +1,8 @@
+﻿produkt_id,marktname,sparte,maerkte,status
+HP-PRIV,PrivatPlus,HP,CH;DE,aktiv
+HP-BETR,BusinessProtect,HP,CH;DE,aktiv
+HP-BERUF,ProfessionalShield,HP,CH;DE,aktiv
+LV-EU,Zusatzbaustein Erwerbsunfaehigkeit,LV,CH;DE,AKTIV
+LV-RENTE,RentePlus,LV,CH;DE,AKTIV
+LV-RISK,RisikoLeben,LV,CH;DE,AKTIV
+LV-VORS,Vorsorge,LV,CH;DE,AKTIV

@@ -5,7 +5,7 @@ Schema-Check (pandera), Referenzintegritaet, Fiktionalitaets-Blocklist.
 """
 
 # Registrierung der Basis-Checks durch Import
-from pfefferminzia.validate import fiction, integrity, schema  # noqa: E402, F401
+from pfefferminzia.validate import fiction, integrity, schema, zeit  # noqa: E402, F401
 from pfefferminzia.validate.registry import (
     Befund,
     Bericht,

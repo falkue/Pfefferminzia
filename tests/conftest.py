@@ -27,5 +27,6 @@ def ctx(tmp_path, monkeypatch):
     c.config.pfade.truth = tmp_path / "truth"
     c.config.pfade.raw = tmp_path / "raw"
     c.config.pfade.sample = tmp_path / "sample"
+    c.config.pfade.migration = tmp_path / "migration"
     c.config.pfade.manifest = tmp_path / "manifest.json"
     return c

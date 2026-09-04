@@ -34,6 +34,22 @@ FK_BEZIEHUNGEN: list[FkBeziehung] = [
     FkBeziehung("curated/mitarbeiter", "org_einheit_id", "curated/org_einheit", "org_einheit_id"),
     FkBeziehung("curated/interaktion", "partner_id", "curated/partner", "partner_id"),
     FkBeziehung("curated/dokument", "partner_id", "curated/partner", "partner_id"),
+    FkBeziehung("curated/partner_kontakt", "partner_id", "curated/partner", "partner_id", optional=False),
+    FkBeziehung("curated/partner_beziehung", "partner_id_von", "curated/partner", "partner_id", optional=False),
+    FkBeziehung("curated/partner_beziehung", "partner_id_zu", "curated/partner", "partner_id", optional=False),
+    FkBeziehung("curated/partner_firma", "partner_id", "curated/partner", "partner_id", optional=False),
+    FkBeziehung("curated/vertrag", "sachbearbeiter_id", "curated/mitarbeiter", "mitarbeiter_id"),
+    FkBeziehung("curated/vertrag", "produkt_id", "curated/produkt", "produkt_id", optional=False),
+    FkBeziehung("curated/vertrag", "tarifgeneration_id", "curated/tarifgeneration", "tarifgeneration_id", optional=False),
+    FkBeziehung("curated/antrag", "antragsteller_id", "curated/partner", "partner_id", optional=False),
+    FkBeziehung("curated/antrag", "vertrag_id", "curated/vertrag", "vertrag_id"),
+    FkBeziehung("curated/deckung", "vertrag_id", "curated/vertrag", "vertrag_id", optional=False),
+    FkBeziehung("curated/risiko_objekt", "vertrag_id", "curated/vertrag", "vertrag_id", optional=False),
+    FkBeziehung("curated/vertrag_partner_rolle", "vertrag_id", "curated/vertrag", "vertrag_id", optional=False),
+    FkBeziehung("curated/vertrag_partner_rolle", "partner_id", "curated/partner", "partner_id"),
+    FkBeziehung("curated/mitarbeiter", "org_einheit_id", "curated/org_einheit", "org_einheit_id"),
+    FkBeziehung("migration/partner_xref", "curated_id", "curated/partner", "partner_id", optional=False),
+    FkBeziehung("migration/vertrag_xref", "curated_id", "curated/vertrag", "vertrag_id", optional=False),
 ]
 
 
