@@ -1,8 +1,3 @@
-<!doctype html>
-<html lang="de">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pfefferminzia Datenschau S</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -55,8 +50,6 @@ details { margin-bottom:10px; } summary { cursor:pointer; font-weight:600; }
 .muted { color:var(--muted); }
 .fuss { padding:16px 24px; color:var(--muted); font-size:12px; border-top:1px solid var(--line); }
 </style>
-</head>
-<body>
 <div class="kopf"><h1>Pfefferminzia – Datenschau Stufe S</h1>
 <div class="meta">Stichtag 2025-12-31 · Master-Seed 20250101 · Version 0.1.0 · erzeugt 2026-09-04T05:48:41Z</div></div>
 <nav>
@@ -165,5 +158,3 @@ $('#raw').innerHTML = D.raw.map(r => `<details ${r.datei.includes('PARTNER.txt')
 $('#pers').innerHTML = D.personas.map(p => `<div class="card"><h3>${esc(p.partner_id)} – ${esc(p.name)} <span class="muted">${p.land}</span></h3>` +
   (p.vertraege.length ? '<ul>' + p.vertraege.map(v => `<li>${esc(v)}</li>`).join('') + '</ul>' : '<p class="muted">keine eigenen Verträge (Bezugsperson)</p>') + '</div>').join('');
 </script>
-</body>
-</html>
