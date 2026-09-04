@@ -8,6 +8,7 @@ Pfefferminzia ist ein Lehr-Datensatz für einen Executive-Kurs, in dem Führungs
 
 ## Struktur
 
+- [docs/START.md](docs/START.md) – Einstieg für Teilnehmende; `CLAUDE.md` – Orientierung für Claude Code
 - `docs/planung/` – Planung des Datensatzes. Einstieg: [00-gesamtplan.md](docs/planung/00-gesamtplan.md), darunter fünf Teilplanungen (Haftpflicht, Leben, Datenarchitektur, Use Cases, Regelwerke/Unternehmen)
 - [docs/entscheidungen.md](docs/entscheidungen.md) – verbindliches Entscheidungsprotokoll
 - [docs/konventionen.md](docs/konventionen.md) – Regeln für alle Artefakte (Fiktionalität, Sprache, IDs, Formate, Metadaten)
