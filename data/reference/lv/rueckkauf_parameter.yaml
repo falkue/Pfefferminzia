@@ -1,0 +1,88 @@
+# Rückkaufparameter Leben Pfefferminzia
+# Quelle: Planung 02 §1.2 (Rückkauf), §6.2 Kap. 8, tarifgenerationen.csv (Spalten rueckkauf_methode, zillmerung).
+
+rechtsrahmen:
+  CH: "Art. 90 VVG: Anspruch auf Rückkauf oder Umwandlung nach drei Jahren Prämienzahlung (vereinfacht, zu verifizieren); Säule 3a nur bei gesetzlichen Vorbezugsgründen"
+  DE: "§ 169 VVG: Rückkaufswert mindestens Deckungskapital nach anerkannten Regeln, Stornoabzug nur wenn vereinbart und angemessen; Abschlusskosten bei Verträgen ab 2008 auf fünf Jahre verteilt (vereinfacht, zu verifizieren)"
+
+mindestlaufzeit_rueckkauf_jahre: {CH: 3, DE: 0}
+
+# Formel (Methode FORMEL): Rueckkaufswert = Deckungskapital × (1 − stornoabzug_pct/100) − stueckkosten_rueckkauf
+# Deckungskapital vereinfacht: Summe der Sparprämien aufgezinst mit Rechnungszins abzüglich noch nicht
+# getilgter Abschlusskosten (Zillmerung).
+# Methode TABELLE (PK-85 bis PK-2004): Rueckkaufswert = Versicherungssumme × tabellenwert_pct / 100, je abgelaufenem Jahr.
+
+generationen:
+  PK-85:
+    methode: TABELLE
+    zillmerung: VOLL_JAHR1
+    stornoabzug_pct: 0            # im Tabellenwert enthalten
+    tabelle_pct_der_summe:        # abgelaufene Jahre: Prozent der Versicherungssumme (Laufzeit 25 Jahre)
+      1: 0.0
+      2: 0.5
+      3: 2.5
+      5: 8.0
+      10: 24.0
+      15: 43.0
+      20: 66.0
+      25: 100.0
+    hinweis: "Rückkaufswert in den ersten zwei Jahren null (Zillmerung); Stolperstein S02"
+  PK-95:
+    methode: TABELLE
+    zillmerung: VOLL_JAHR1
+    stornoabzug_pct: 0
+    tabelle_pct_der_summe: {1: 0.0, 2: 1.0, 3: 3.5, 5: 10.0, 10: 27.0, 15: 46.0, 20: 68.0, 25: 100.0}
+  PK-2000:
+    methode: TABELLE
+    zillmerung: VOLL_JAHR1
+    stornoabzug_pct: 0
+    tabelle_pct_der_summe: {1: 0.0, 2: 1.5, 3: 4.0, 5: 11.0, 10: 28.0, 15: 47.0, 20: 69.0, 25: 100.0}
+  PK-2004:
+    methode: TABELLE
+    zillmerung: VOLL_JAHR1
+    stornoabzug_pct: 0
+    tabelle_pct_der_summe: {1: 0.5, 2: 2.0, 3: 5.0, 5: 12.0, 10: 29.0, 15: 48.0, 20: 70.0, 25: 100.0}
+  PK-2007:
+    methode: FORMEL
+    zillmerung: VERTEILT_5J
+    stornoabzug_pct: 5.0
+    stornoabzug_max: {CH: 1500, DE: 1000}
+    stueckkosten_rueckkauf: {CH: 100, DE: 50}
+  PL-2012:
+    methode: FORMEL
+    zillmerung: VERTEILT_5J
+    stornoabzug_pct: 4.0
+    stornoabzug_max: {CH: 1500, DE: 1000}
+    stueckkosten_rueckkauf: {CH: 100, DE: 50}
+  PL-2015:
+    methode: FORMEL
+    zillmerung: VERTEILT_5J
+    stornoabzug_pct: 3.0
+    stornoabzug_max: {CH: 1000, DE: 750}
+    stueckkosten_rueckkauf: {CH: 80, DE: 50}
+  PL-2017:
+    methode: FORMEL
+    zillmerung: VERTEILT_5J
+    stornoabzug_pct: 3.0
+    stornoabzug_max: {CH: 1000, DE: 750}
+    stueckkosten_rueckkauf: {CH: 80, DE: 50}
+  MZ-2020:
+    methode: ENTFAELLT          # nur Risikoleben, kein Deckungskapital
+    zillmerung: KEINE
+  PZ-2025:
+    methode: FORMEL
+    zillmerung: VERTEILT_5J
+    stornoabzug_pct: 2.0
+    stornoabzug_max: {CH: 800, DE: 500}
+    stueckkosten_rueckkauf: {CH: 60, DE: 40}
+
+sonderregeln:
+  saeule_3a_ch:
+    vorbezugsgruende: [wohneigentum, selbstaendigkeit, auswanderung, pensionskasseneinkauf, iv_rente, pensionierung_ab_60]
+    kein_freier_rueckkauf: true
+  beitragsfreistellung:
+    mindest_deckungskapital: {CH: 5000, DE: 2500}
+    beitragsfreie_summe_methode: aequivalenz    # Summe so, dass Deckungskapital ausreicht
+  umwandlung_in_rente_ch:
+    ab_alter: 60
+    rentenfaktor_verweis: tarifparameter.yaml#LV-RENTE.rentenfaktor_pro_10000

@@ -1,0 +1,121 @@
+entscheid_code,bezeichnung,vera_code,mint_code,generation_code,markt,zielanteil_pct,automatisierungsquote_pct,beschreibung,bemerkung
+N,Normale Annahme,1,ACCEPT,PK-85,CH,86,0,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PK-85,CH,6,0,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PK-85,CH,1,0,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PK-85,CH,2,0,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PK-85,CH,5,0,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,Hoehere Ablehnungsquote u. a. durch HIV-Ablehnung bis ARL-2008 und Diabetes Typ 1 (Stolperstein Altbestand)
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PK-85,CH,1,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PK-85,DE,86,0,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PK-85,DE,6,0,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PK-85,DE,1,0,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PK-85,DE,2,0,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PK-85,DE,5,0,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,Hoehere Ablehnungsquote u. a. durch HIV-Ablehnung bis ARL-2008 und Diabetes Typ 1 (Stolperstein Altbestand)
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PK-85,DE,1,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PK-95,CH,84,0,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PK-95,CH,7,0,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PK-95,CH,2,0,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PK-95,CH,2,0,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PK-95,CH,5,0,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,Hoehere Ablehnungsquote u. a. durch HIV-Ablehnung bis ARL-2008 und Diabetes Typ 1 (Stolperstein Altbestand)
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PK-95,CH,1,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PK-95,DE,84,0,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PK-95,DE,7,0,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PK-95,DE,2,0,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PK-95,DE,2,0,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PK-95,DE,5,0,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,Hoehere Ablehnungsquote u. a. durch HIV-Ablehnung bis ARL-2008 und Diabetes Typ 1 (Stolperstein Altbestand)
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PK-95,DE,1,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PK-2000,CH,82,0,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PK-2000,CH,8,0,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PK-2000,CH,3,0,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PK-2000,CH,3,0,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PK-2000,CH,4,0,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,Hoehere Ablehnungsquote u. a. durch HIV-Ablehnung bis ARL-2008 und Diabetes Typ 1 (Stolperstein Altbestand)
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PK-2000,CH,1,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PK-2000,DE,82,0,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PK-2000,DE,8,0,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PK-2000,DE,3,0,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PK-2000,DE,3,0,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PK-2000,DE,4,0,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,Hoehere Ablehnungsquote u. a. durch HIV-Ablehnung bis ARL-2008 und Diabetes Typ 1 (Stolperstein Altbestand)
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PK-2000,DE,1,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PK-2004,CH,81,0,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PK-2004,CH,9,0,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PK-2004,CH,3,0,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PK-2004,CH,3,0,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PK-2004,CH,4,0,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,Hoehere Ablehnungsquote u. a. durch HIV-Ablehnung bis ARL-2008 und Diabetes Typ 1 (Stolperstein Altbestand)
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PK-2004,CH,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PK-2004,DE,81,0,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PK-2004,DE,9,0,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PK-2004,DE,3,0,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PK-2004,DE,3,0,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PK-2004,DE,4,0,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,Hoehere Ablehnungsquote u. a. durch HIV-Ablehnung bis ARL-2008 und Diabetes Typ 1 (Stolperstein Altbestand)
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PK-2004,DE,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PK-2007,CH,80,5,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PK-2007,CH,9,5,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PK-2007,CH,4,5,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PK-2007,CH,3,5,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PK-2007,CH,4,5,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,Hoehere Ablehnungsquote u. a. durch HIV-Ablehnung bis ARL-2008 und Diabetes Typ 1 (Stolperstein Altbestand)
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PK-2007,CH,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PK-2007,DE,80,5,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PK-2007,DE,9,5,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PK-2007,DE,4,5,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PK-2007,DE,3,5,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PK-2007,DE,4,5,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,Hoehere Ablehnungsquote u. a. durch HIV-Ablehnung bis ARL-2008 und Diabetes Typ 1 (Stolperstein Altbestand)
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PK-2007,DE,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PL-2012,CH,78,10,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PL-2012,CH,10,10,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PL-2012,CH,4,10,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PL-2012,CH,3,10,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PL-2012,CH,5,10,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PL-2012,CH,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PL-2012,DE,74,10,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PL-2012,DE,15,10,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,Bias-Falle F1: Team UW-Nord 2012-2018 erhoeht Zuschlagsquote fuer Nationalitaetengruppe X und PLZ-Zone 4 auf ca. Faktor 2 (28 % vs. 13 %); siehe annahmerichtlinie_tabellen.yaml
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PL-2012,DE,4,10,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PL-2012,DE,3,10,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PL-2012,DE,4,10,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PL-2012,DE,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PL-2015,CH,78,15,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PL-2015,CH,10,15,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PL-2015,CH,4,15,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PL-2015,CH,3,15,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PL-2015,CH,5,15,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PL-2015,CH,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PL-2015,DE,74,15,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PL-2015,DE,15,15,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,Bias-Falle F1: Team UW-Nord 2012-2018 erhoeht Zuschlagsquote fuer Nationalitaetengruppe X und PLZ-Zone 4 auf ca. Faktor 2 (28 % vs. 13 %); siehe annahmerichtlinie_tabellen.yaml
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PL-2015,DE,4,15,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PL-2015,DE,3,15,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PL-2015,DE,4,15,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PL-2015,DE,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PL-2017,CH,78,20,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PL-2017,CH,10,20,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PL-2017,CH,4,20,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PL-2017,CH,3,20,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PL-2017,CH,5,20,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PL-2017,CH,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PL-2017,DE,76,20,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PL-2017,DE,13,20,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,Bias-Falle F1: Team UW-Nord 2012-2018 erhoeht Zuschlagsquote fuer Nationalitaetengruppe X und PLZ-Zone 4 auf ca. Faktor 2 (28 % vs. 13 %); siehe annahmerichtlinie_tabellen.yaml
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PL-2017,DE,4,20,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PL-2017,DE,3,20,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PL-2017,DE,4,20,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PL-2017,DE,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,MZ-2020,CH,82,70,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,MZ-2020,CH,9,70,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,MZ-2020,CH,4,70,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,MZ-2020,CH,3,70,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,MZ-2020,CH,2,70,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,MZ-2020,CH,1,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,MZ-2020,DE,82,70,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,MZ-2020,DE,9,70,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,MZ-2020,DE,4,70,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,MZ-2020,DE,3,70,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,MZ-2020,DE,2,70,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,MZ-2020,DE,1,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PZ-2025,CH,80,45,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PZ-2025,CH,10,45,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PZ-2025,CH,4,45,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PZ-2025,CH,3,45,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PZ-2025,CH,3,45,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PZ-2025,CH,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"
+N,Normale Annahme,1,ACCEPT,PZ-2025,DE,80,45,Antrag zu Tarifbedingungen,
+Z,Annahme mit Zuschlag,2,ACCEPT_LOADING,PZ-2025,DE,10,45,Risikozuschlag in % der Risikopraemie (25-300) oder Promille der Summe,
+A,Annahme mit Ausschluss,3,ACCEPT_EXCLUSION,PZ-2025,DE,4,45,"Ausschlussklausel, vor allem LV-EU; bei Todesfall nur Extremsport",
+R,Zurueckstellung,4,POSTPONE,PZ-2025,DE,3,45,Entscheidung um 6-24 Monate vertagt,
+X,Ablehnung,5,DECLINE,PZ-2025,DE,3,45,Kein Versicherungsschutz; Ablehnungsschreiben ohne Diagnose,
+RV,Rueckversicherung fakultativ,6,REINSURANCE_REFERRAL,PZ-2025,DE,2,0,Ueberlappend zu N/Z/A; Summe ueber Selbstbehalt,"Ueberlappend, nicht Teil der 100 %; Summe > 1 Mio CHF/EUR"

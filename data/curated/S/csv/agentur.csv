@@ -1,0 +1,13 @@
+﻿agentur_id,name,typ,kanal,land,plz,ort,region,agenturnummer,seit,herkunft
+AGT-0001,Aare-Bank AG,BANK,bank,CH,1066,Epalinges,VD,0001,2016-01-01,pfefferminz
+AGT-0002,Sächsische Genossenschaftskasse eG,BANK,bank,DE,79098,Freiburg im Breisgau,BW,0002,1992-01-01,pfefferminz
+AGT-0003,Pfefferminzia Direkt,DIREKT,direkt,CH,8600,Dübendorf,ZH,0003,2021-01-01,pfefferminz
+AGT-0004,Pfefferminzia App (ehemals minzia.direct),DIREKT,direkt,DE,65929,Frankfurt am Main,HE,0004,2021-01-01,minzia
+AGT-0005,Generalagentur Main Petrov,EXKLUSIVAGENTUR,agentur,DE,38640,Goslar,NI,0005,2015-01-01,pfefferminz
+AGT-0006,Generalagentur Wasserfallen Müller,EXKLUSIVAGENTUR,agentur,CH,1950,Sion,VS,0006,2011-01-01,pfefferminz
+AGT-0007,TarifKompass (Portal),PORTAL,direkt,DE,93047,Regensburg,BY,0007,1996-01-01,minzia
+AGT-0008,Generalagentur Thur Aebi,EXKLUSIVAGENTUR,agentur,CH,1227,Carouge GE,GE,0008,2013-01-01,pfefferminz
+AGT-0009,Generalagentur Bantiger Schwab,EXKLUSIVAGENTUR,agentur,CH,2013,Colombier NE,NE,0009,1998-01-01,pfefferminz
+AGT-0010,Generalagentur Thur Peter,EXKLUSIVAGENTUR,agentur,CH,1201,Genève,GE,0010,2020-01-01,pfefferminz
+AGT-0011,Ivanov & Partner Versicherungsmakler GmbH,MAKLER,makler,DE,72070,Tübingen,BW,0011,2014-01-01,pfefferminz
+AGT-0012,Generalagentur Bantiger Lüthi,EXKLUSIVAGENTUR,agentur,CH,1201,Genève,GE,0012,1999-01-01,pfefferminz

@@ -1,0 +1,47 @@
+schadenart_id,bezeichnung,produkt,markt,anteil_pct,waehrung,lognormal_mu,lognormal_sigma,nullschaden_anteil_pct,abwehrquote_pct,abwicklungsdauer_median_tage,abwicklungsdauer_p90_tage,saison_jan,saison_feb,saison_mar,saison_apr,saison_mai,saison_jun,saison_jul,saison_aug,saison_sep,saison_okt,saison_nov,saison_dez
+SA-SACH-BEW,Sachschaden Dritter an beweglichen Sachen,HP-PRIV,CH,55,CHF,6.1,0.9,20,15,35,120,0.85,0.85,0.95,1.05,1.1,1.15,1.2,1.2,1.05,0.95,0.85,0.8
+SA-SACH-BEW,Sachschaden Dritter an beweglichen Sachen,HP-PRIV,DE,52,EUR,6.1,0.9,20,15,35,120,0.85,0.85,0.95,1.05,1.1,1.15,1.2,1.2,1.05,0.95,0.85,0.8
+SA-SACH-BEW,Sachschaden Dritter an beweglichen Sachen,HP-BETR,CH,30,CHF,6.1,0.9,20,15,35,120,0.85,0.85,0.95,1.05,1.1,1.15,1.2,1.2,1.05,0.95,0.85,0.8
+SA-SACH-BEW,Sachschaden Dritter an beweglichen Sachen,HP-BETR,DE,30,EUR,6.1,0.9,20,15,35,120,0.85,0.85,0.95,1.05,1.1,1.15,1.2,1.2,1.05,0.95,0.85,0.8
+SA-SACH-BEW,Sachschaden Dritter an beweglichen Sachen,HP-BERUF,CH,2,CHF,6.1,0.9,20,15,35,120,0.85,0.85,0.95,1.05,1.1,1.15,1.2,1.2,1.05,0.95,0.85,0.8
+SA-SACH-BEW,Sachschaden Dritter an beweglichen Sachen,HP-BERUF,DE,2,EUR,6.1,0.9,20,15,35,120,0.85,0.85,0.95,1.05,1.1,1.15,1.2,1.2,1.05,0.95,0.85,0.8
+SA-SACH-IMMO,"Sachschaden an Immobilie / Mietsache (Wasser, Brand, Parkett)",HP-PRIV,CH,18,CHF,7.5,1.0,15,15,60,240,1.2,1.1,0.95,0.85,0.8,0.8,0.8,0.85,1.05,1.25,1.25,1.1
+SA-SACH-IMMO,"Sachschaden an Immobilie / Mietsache (Wasser, Brand, Parkett)",HP-PRIV,DE,20,EUR,7.5,1.0,15,15,60,240,1.2,1.1,0.95,0.85,0.8,0.8,0.8,0.85,1.05,1.25,1.25,1.1
+SA-SACH-IMMO,"Sachschaden an Immobilie / Mietsache (Wasser, Brand, Parkett)",HP-BETR,CH,15,CHF,7.5,1.0,15,15,60,240,1.2,1.1,0.95,0.85,0.8,0.8,0.8,0.85,1.05,1.25,1.25,1.1
+SA-SACH-IMMO,"Sachschaden an Immobilie / Mietsache (Wasser, Brand, Parkett)",HP-BETR,DE,15,EUR,7.5,1.0,15,15,60,240,1.2,1.1,0.95,0.85,0.8,0.8,0.8,0.85,1.05,1.25,1.25,1.1
+SA-SACH-IMMO,"Sachschaden an Immobilie / Mietsache (Wasser, Brand, Parkett)",HP-BERUF,CH,1,CHF,7.5,1.0,15,15,60,240,1.2,1.1,0.95,0.85,0.8,0.8,0.8,0.85,1.05,1.25,1.25,1.1
+SA-SACH-IMMO,"Sachschaden an Immobilie / Mietsache (Wasser, Brand, Parkett)",HP-BERUF,DE,1,EUR,7.5,1.0,15,15,60,240,1.2,1.1,0.95,0.85,0.8,0.8,0.8,0.85,1.05,1.25,1.25,1.1
+SA-BEARB,Bearbeitungs- / Obhutsschaden (Tätigkeitsschaden),HP-BETR,CH,25,CHF,7.7,1.0,15,20,90,300,0.7,0.75,0.95,1.1,1.2,1.2,1.15,1.15,1.15,1.05,0.85,0.75
+SA-BEARB,Bearbeitungs- / Obhutsschaden (Tätigkeitsschaden),HP-BETR,DE,25,EUR,7.7,1.0,15,20,90,300,0.7,0.75,0.95,1.1,1.2,1.2,1.15,1.15,1.15,1.05,0.85,0.75
+SA-PERS-LEICHT,"Personenschaden leicht (ambulant, unter 30 Tage Arbeitsunfähigkeit)",HP-PRIV,CH,12,CHF,7.1,1.0,25,15,120,400,1.35,1.3,1.15,0.85,0.8,0.85,0.9,0.9,0.9,0.95,1.0,1.05
+SA-PERS-LEICHT,"Personenschaden leicht (ambulant, unter 30 Tage Arbeitsunfähigkeit)",HP-PRIV,DE,12,EUR,7.1,1.0,25,15,120,400,1.35,1.3,1.15,0.85,0.8,0.85,0.9,0.9,0.9,0.95,1.0,1.05
+SA-PERS-LEICHT,"Personenschaden leicht (ambulant, unter 30 Tage Arbeitsunfähigkeit)",HP-BETR,CH,12,CHF,7.1,1.0,25,15,120,400,1.35,1.3,1.15,0.85,0.8,0.85,0.9,0.9,0.9,0.95,1.0,1.05
+SA-PERS-LEICHT,"Personenschaden leicht (ambulant, unter 30 Tage Arbeitsunfähigkeit)",HP-BETR,DE,12,EUR,7.1,1.0,25,15,120,400,1.35,1.3,1.15,0.85,0.8,0.85,0.9,0.9,0.9,0.95,1.0,1.05
+SA-PERS-SCHWER,"Personenschaden schwer (stationär, Dauerschaden)",HP-PRIV,CH,2,CHF,10.7,1.3,10,15,1500,2900,1.35,1.3,1.15,0.85,0.8,0.85,0.9,0.9,0.9,0.95,1.0,1.05
+SA-PERS-SCHWER,"Personenschaden schwer (stationär, Dauerschaden)",HP-PRIV,DE,2,EUR,10.7,1.3,10,15,1500,2900,1.35,1.3,1.15,0.85,0.8,0.85,0.9,0.9,0.9,0.95,1.0,1.05
+SA-PERS-SCHWER,"Personenschaden schwer (stationär, Dauerschaden)",HP-BETR,CH,3,CHF,10.7,1.3,10,15,1500,2900,1.35,1.3,1.15,0.85,0.8,0.85,0.9,0.9,0.9,0.95,1.0,1.05
+SA-PERS-SCHWER,"Personenschaden schwer (stationär, Dauerschaden)",HP-BETR,DE,3,EUR,10.7,1.3,10,15,1500,2900,1.35,1.3,1.15,0.85,0.8,0.85,0.9,0.9,0.9,0.95,1.0,1.05
+SA-VERM,Reiner Vermögensschaden,HP-PRIV,CH,3,CHF,6.8,1.2,40,20,90,365,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+SA-VERM,Reiner Vermögensschaden,HP-PRIV,DE,4,EUR,6.8,1.2,40,20,90,365,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+SA-VERM,Reiner Vermögensschaden,HP-BETR,CH,8,CHF,6.8,1.2,40,20,90,365,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+SA-VERM,Reiner Vermögensschaden,HP-BETR,DE,8,EUR,6.8,1.2,40,20,90,365,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+SA-VERM-ARCH,Vermögensschaden Planungsfehler (Architekten / Ingenieure),HP-BERUF,CH,37,CHF,9.8,1.2,45,45,420,1400,0.85,0.85,0.9,0.95,0.95,1.0,0.95,0.9,1.05,1.15,1.3,1.45
+SA-VERM-ARCH,Vermögensschaden Planungsfehler (Architekten / Ingenieure),HP-BERUF,DE,36,EUR,9.8,1.2,45,45,420,1400,0.85,0.85,0.9,0.95,0.95,1.0,0.95,0.9,1.05,1.15,1.3,1.45
+SA-VERM-TREU,Vermögensschaden Treuhand / Steuerberatung,HP-BERUF,CH,27,CHF,9.1,1.2,40,45,400,1200,0.85,0.85,0.9,0.95,0.95,1.0,0.95,0.9,1.05,1.15,1.3,1.45
+SA-VERM-TREU,Vermögensschaden Treuhand / Steuerberatung,HP-BERUF,DE,30,EUR,9.1,1.2,40,45,400,1200,0.85,0.85,0.9,0.95,0.95,1.0,0.95,0.9,1.05,1.15,1.3,1.45
+SA-VERM-IT,Vermögensschaden IT-Dienstleistung / Software,HP-BERUF,CH,21,CHF,9.6,1.3,50,45,380,1100,0.85,0.85,0.9,0.95,0.95,1.0,0.95,0.9,1.05,1.15,1.3,1.45
+SA-VERM-IT,Vermögensschaden IT-Dienstleistung / Software,HP-BERUF,DE,21,EUR,9.6,1.3,50,45,380,1100,0.85,0.85,0.9,0.95,0.95,1.0,0.95,0.9,1.05,1.15,1.3,1.45
+SA-VERM-BER,Vermögensschaden Unternehmensberatung,HP-BERUF,CH,12,CHF,9.4,1.2,55,45,400,1300,0.85,0.85,0.9,0.95,0.95,1.0,0.95,0.9,1.05,1.15,1.3,1.45
+SA-VERM-BER,Vermögensschaden Unternehmensberatung,HP-BERUF,DE,10,EUR,9.4,1.2,55,45,400,1300,0.85,0.85,0.9,0.95,0.95,1.0,0.95,0.9,1.05,1.15,1.3,1.45
+SA-PRODUKT,Produkthaftpflichtschaden,HP-BETR,CH,5,CHF,8.3,1.4,30,20,180,700,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+SA-PRODUKT,Produkthaftpflichtschaden,HP-BETR,DE,5,EUR,8.3,1.4,30,20,180,700,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+SA-UMWELT,Umwelt- / Gewässerschaden,HP-PRIV,CH,1,CHF,9.4,1.1,25,20,240,900,1.2,1.1,0.95,0.85,0.8,0.8,0.8,0.85,1.05,1.25,1.25,1.1
+SA-UMWELT,Umwelt- / Gewässerschaden,HP-PRIV,DE,1,EUR,9.4,1.1,25,20,240,900,1.2,1.1,0.95,0.85,0.8,0.8,0.8,0.85,1.05,1.25,1.25,1.1
+SA-UMWELT,Umwelt- / Gewässerschaden,HP-BETR,CH,2,CHF,9.4,1.1,25,20,240,900,1.2,1.1,0.95,0.85,0.8,0.8,0.8,0.85,1.05,1.25,1.25,1.1
+SA-UMWELT,Umwelt- / Gewässerschaden,HP-BETR,DE,2,EUR,9.4,1.1,25,20,240,900,1.2,1.1,0.95,0.85,0.8,0.8,0.8,0.85,1.05,1.25,1.25,1.1
+SA-TIER,"Tierhalterschaden (Hund, Pferd)",HP-PRIV,CH,9,CHF,6.4,1.2,20,15,45,200,0.85,0.85,0.95,1.05,1.1,1.15,1.2,1.2,1.05,0.95,0.85,0.8
+SA-TIER,"Tierhalterschaden (Hund, Pferd)",HP-PRIV,DE,9,EUR,6.4,1.2,20,15,45,200,0.85,0.85,0.95,1.05,1.1,1.15,1.2,1.2,1.05,0.95,0.85,0.8
+SA-SCHLUESSEL,Schlüsselverlust (Sublimit),HP-PRIV,CH,0,CHF,6.9,0.7,10,10,30,90,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+SA-SCHLUESSEL,Schlüsselverlust (Sublimit),HP-PRIV,DE,0,EUR,6.9,0.7,10,10,30,90,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+SA-SCHLUESSEL,Schlüsselverlust (Sublimit),HP-BETR,CH,0,CHF,6.9,0.7,10,10,30,90,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+SA-SCHLUESSEL,Schlüsselverlust (Sublimit),HP-BETR,DE,0,EUR,6.9,0.7,10,10,30,90,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0

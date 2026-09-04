@@ -1,0 +1,104 @@
+# Tarifparameter Leben Pfefferminzia
+# Quelle: Planung 02 §1.2, §1.3, §6.2, konkretisiert. Formel siehe tarifformel.md.
+# Vereinfachte, in Excel nachrechenbare Kalkulation. Rechnungszins und Sterbetafel je Generation
+# stehen in tarifgenerationen.csv (Spalten rechnungszins_*, sterbetafel_vereinfacht) und sterbetafel.csv.
+
+meta:
+  version: "TB-2025"
+  gueltig_ab: 2025-01-01
+  waehrung: {CH: CHF, DE: EUR}
+  rundung: {CH: 0.05, DE: 0.01}
+  steuer:
+    CH:
+      laufende_praemie: {name: keine Stempelabgabe, satz: 0.0}
+      einmalpraemie_3b: {name: Stempelabgabe auf Einmalprämien Säule 3b, satz: 0.025}
+      einmalpraemie_3a: {name: keine Stempelabgabe (gebundene Vorsorge), satz: 0.0}
+    DE:
+      laufende_praemie: {name: versicherungsteuerfrei (§ 4 Nr. 5 VersStG), satz: 0.0}
+      einmalpraemie: {name: versicherungsteuerfrei, satz: 0.0}
+  zahlweise_zuschlag:            # Zuschlag auf die Jahresprämie
+    jaehrlich: 0.00
+    halbjaehrlich: 0.02
+    vierteljaehrlich: 0.03
+    monatlich: 0.05
+  mindestpraemie_jahr:
+    LV-RISK: {CH: 240.00, DE: 120.00}
+    LV-VORS: {CH: 1200.00, DE: 600.00}
+    LV-RENTE: {CH: 0.00, DE: 600.00}     # CH nur Einmalprämie
+    LV-EU: {CH: 300.00, DE: 180.00}
+
+# Kostenparameter je Generation (Planung 02 §6.2 Kap. 1 und 8). alpha: Abschlusskosten in Promille der
+# Versicherungssumme (Risiko, Vorsorge) bzw. der Beitragssumme (Rente), einmalig, ueber die Verteilzeit verrechnet.
+# beta: Verwaltungskosten in Prozent der Bruttopraemie. stueck: Stückkosten je Jahr in Landeswährung.
+kosten:
+  PK-85:   {alpha_promille: 40, alpha_verteilung_jahre: 1, beta_pct: 6.0, stueck: {CH: 60, DE: 36}}
+  PK-95:   {alpha_promille: 40, alpha_verteilung_jahre: 1, beta_pct: 6.0, stueck: {CH: 60, DE: 36}}
+  PK-2000: {alpha_promille: 40, alpha_verteilung_jahre: 1, beta_pct: 5.5, stueck: {CH: 60, DE: 36}}
+  PK-2004: {alpha_promille: 40, alpha_verteilung_jahre: 1, beta_pct: 5.5, stueck: {CH: 60, DE: 36}}
+  PK-2007: {alpha_promille: 40, alpha_verteilung_jahre: 5, beta_pct: 5.0, stueck: {CH: 48, DE: 30}}
+  PL-2012: {alpha_promille: 30, alpha_verteilung_jahre: 5, beta_pct: 4.5, stueck: {CH: 48, DE: 30}}
+  PL-2015: {alpha_promille: 25, alpha_verteilung_jahre: 5, beta_pct: 4.0, stueck: {CH: 48, DE: 30}}
+  PL-2017: {alpha_promille: 25, alpha_verteilung_jahre: 5, beta_pct: 4.0, stueck: {CH: 48, DE: 30}}
+  MZ-2020: {alpha_promille: 8,  alpha_verteilung_jahre: 5, beta_pct: 2.5, stueck: {CH: 24, DE: 18}}   # Direktvertrieb
+  PZ-2025: {alpha_promille: 20, alpha_verteilung_jahre: 5, beta_pct: 3.5, stueck: {CH: 36, DE: 24}}
+
+# Risikofaktoren (multiplikativ auf die Risikoprämie)
+risikofaktoren:
+  raucher:                        # Definition: Nikotinkonsum in den letzten 12 Monaten (ab 2017 inkl. E-Zigarette)
+    nichtraucher: 1.00
+    raucher: 2.00
+    raucher_ueber_20_pro_tag: 2.50
+  geschlecht:                     # Nur wenn Tafel geschlechtsabhängig angewendet wird (siehe unisex)
+    M: 1.00
+    W: 1.00                       # Der Geschlechtsunterschied steckt bereits in qx_m / qx_w
+  unisex:                         # Welche qx-Spalte gilt
+    CH: {alle_generationen: geschlechtsabhaengig}     # CH: kein Unisex-Zwang, aber Minzia rechnet unisex
+    DE:
+      bis_2012-12-20: geschlechtsabhaengig
+      ab_2012-12-21: unisex
+    MZ-2020: unisex               # Minzia: unisex in beiden Märkten (Produktentscheid)
+  berufsgruppe_eu_bu:             # Faktor auf EU/BU-Risikoprämie, siehe annahmerichtlinie_tabellen.yaml
+    1: 0.80
+    2: 1.00
+    3: 1.30
+    4: 1.70
+    5: 2.30
+  summenrabatt:                   # Faktor auf Kostenanteil, nicht auf Risiko
+    LV-RISK: {bis_250000: 1.00, ab_250000: 0.97, ab_500000: 0.94, ab_1000000: 0.90}
+
+# Produktspezifische Parameter
+LV-RISK:
+  risikopraemie_methode: mittleres_alter    # qx am Alter (Eintrittsalter + Laufzeit/2), siehe tarifformel.md
+  summenverlauf_faktor: {KONSTANT: 1.00, LINEAR_FALLEND: 0.55, ANNUITAET: 0.70}
+  ueberschussverwendung_standard: {CH: praemienrabatt, DE: beitragsverrechnung}
+  nachversicherungsgarantie:                # nur ab MZ-2020 / PZ-2025 (tarifgenerationen.csv)
+    ereignisse: [heirat, geburt, hauskauf, selbstaendigkeit]
+    max_erhoehung_pct: 50
+    max_summe: {CH: 250000, DE: 150000}
+
+LV-VORS:
+  sparpraemie_methode: annuitaetisch          # Sparprämie = S × i / ((1+i)^n − 1), i = Rechnungszins
+  todesfallschutz_pct_der_erlebenssumme: 100  # klassisch gemischt; DE Altbestand vor 2009 teils 60 %
+  risikopraemie_auf_differenz: true           # Risikoprämie nur auf (Todesfallsumme − Deckungskapital)
+  saeule_3a_max_praemie_ch: {2025: 7258.00, ohne_pensionskasse_2025: 36288.00}
+
+LV-RENTE:
+  aufschub_methode: annuitaetisch
+  rentenfaktor_pro_10000:                      # garantierte Monatsrente je 10'000 Kapital bei Rentenbeginn 65
+    PK-2000: 42.50
+    PK-2004: 38.00
+    PK-2007: 34.50
+    PL-2012: 30.00
+    PL-2015: 27.50
+    PL-2017: 25.00
+    PZ-2025: 26.50
+  rentengarantiezeit_jahre_standard: {CH: 10, DE: 10}
+  beitragsrueckgewaehr_vor_rentenbeginn: true
+
+LV-EU:
+  praemie_pct_der_jahresrente:                  # Grundsatz je Berufsgruppe 2 (Planung: 2 bis 5 Prozent)
+    CH: 3.2
+    DE: 3.5
+  wartefrist_faktor_ch: {3: 1.15, 6: 1.05, 12: 1.00, 24: 0.85}
+  endalter_faktor: {60: 0.85, 63: 0.93, 65: 1.00, 67: 1.10}
+  leistungsursachen_anteil_pct: {psychisch: 35, bewegungsapparat: 25, krebs: 15, herz_kreislauf: 8, unfall: 8, sonstige: 9}

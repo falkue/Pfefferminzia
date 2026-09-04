@@ -1,0 +1,4295 @@
+strasse,sprache,typ,generisch
+Ahornstrasse,de-CH,Strasse,false
+Ahornweg,de-CH,Weg,false
+Ahorngasse,de-CH,Gasse,false
+Ahornplatz,de-CH,Platz,false
+Ahornrain,de-CH,Rain,false
+Ahornhalde,de-CH,Halde,false
+Ahornmatte,de-CH,Matte,false
+Ahornacker,de-CH,Acker,false
+Ahornhof,de-CH,Hof,false
+Ahornring,de-CH,Ring,false
+Ahornsteig,de-CH,Steig,false
+Birkenstrasse,de-CH,Strasse,false
+Birkenweg,de-CH,Weg,false
+Birkengasse,de-CH,Gasse,false
+Birkenplatz,de-CH,Platz,false
+Birkenrain,de-CH,Rain,false
+Birkenhalde,de-CH,Halde,false
+Birkenmatte,de-CH,Matte,false
+Birkenacker,de-CH,Acker,false
+Birkenhof,de-CH,Hof,false
+Birkenring,de-CH,Ring,false
+Birkensteig,de-CH,Steig,false
+Lindenstrasse,de-CH,Strasse,false
+Lindenweg,de-CH,Weg,false
+Lindengasse,de-CH,Gasse,false
+Lindenplatz,de-CH,Platz,false
+Lindenrain,de-CH,Rain,false
+Lindenhalde,de-CH,Halde,false
+Lindenmatte,de-CH,Matte,false
+Lindenacker,de-CH,Acker,false
+Lindenhof,de-CH,Hof,false
+Lindenring,de-CH,Ring,false
+Lindensteig,de-CH,Steig,false
+Rosenstrasse,de-CH,Strasse,false
+Rosenweg,de-CH,Weg,false
+Rosengasse,de-CH,Gasse,false
+Rosenplatz,de-CH,Platz,false
+Rosenrain,de-CH,Rain,false
+Rosenhalde,de-CH,Halde,false
+Rosenmatte,de-CH,Matte,false
+Rosenacker,de-CH,Acker,false
+Rosenhof,de-CH,Hof,false
+Rosenring,de-CH,Ring,false
+Rosensteig,de-CH,Steig,false
+Tannenstrasse,de-CH,Strasse,false
+Tannenweg,de-CH,Weg,false
+Tannengasse,de-CH,Gasse,false
+Tannenplatz,de-CH,Platz,false
+Tannenrain,de-CH,Rain,false
+Tannenhalde,de-CH,Halde,false
+Tannenmatte,de-CH,Matte,false
+Tannenacker,de-CH,Acker,false
+Tannenhof,de-CH,Hof,false
+Tannenring,de-CH,Ring,false
+Tannensteig,de-CH,Steig,false
+Buchenstrasse,de-CH,Strasse,false
+Buchenweg,de-CH,Weg,false
+Buchengasse,de-CH,Gasse,false
+Buchenplatz,de-CH,Platz,false
+Buchenrain,de-CH,Rain,false
+Buchenhalde,de-CH,Halde,false
+Buchenmatte,de-CH,Matte,false
+Buchenacker,de-CH,Acker,false
+Buchenhof,de-CH,Hof,false
+Buchenring,de-CH,Ring,false
+Buchensteig,de-CH,Steig,false
+Eichenstrasse,de-CH,Strasse,false
+Eichenweg,de-CH,Weg,false
+Eichengasse,de-CH,Gasse,false
+Eichenplatz,de-CH,Platz,false
+Eichenrain,de-CH,Rain,false
+Eichenhalde,de-CH,Halde,false
+Eichenmatte,de-CH,Matte,false
+Eichenacker,de-CH,Acker,false
+Eichenhof,de-CH,Hof,false
+Eichenring,de-CH,Ring,false
+Eichensteig,de-CH,Steig,false
+Erlenstrasse,de-CH,Strasse,false
+Erlenweg,de-CH,Weg,false
+Erlengasse,de-CH,Gasse,false
+Erlenplatz,de-CH,Platz,false
+Erlenrain,de-CH,Rain,false
+Erlenhalde,de-CH,Halde,false
+Erlenmatte,de-CH,Matte,false
+Erlenacker,de-CH,Acker,false
+Erlenhof,de-CH,Hof,false
+Erlenring,de-CH,Ring,false
+Erlensteig,de-CH,Steig,false
+Eschenstrasse,de-CH,Strasse,false
+Eschenweg,de-CH,Weg,false
+Eschengasse,de-CH,Gasse,false
+Eschenplatz,de-CH,Platz,false
+Eschenrain,de-CH,Rain,false
+Eschenhalde,de-CH,Halde,false
+Eschenmatte,de-CH,Matte,false
+Eschenacker,de-CH,Acker,false
+Eschenhof,de-CH,Hof,false
+Eschenring,de-CH,Ring,false
+Eschensteig,de-CH,Steig,false
+Fichtenstrasse,de-CH,Strasse,false
+Fichtenweg,de-CH,Weg,false
+Fichtengasse,de-CH,Gasse,false
+Fichtenplatz,de-CH,Platz,false
+Fichtenrain,de-CH,Rain,false
+Fichtenhalde,de-CH,Halde,false
+Fichtenmatte,de-CH,Matte,false
+Fichtenacker,de-CH,Acker,false
+Fichtenhof,de-CH,Hof,false
+Fichtenring,de-CH,Ring,false
+Fichtensteig,de-CH,Steig,false
+Föhrenstrasse,de-CH,Strasse,false
+Föhrenweg,de-CH,Weg,false
+Föhrengasse,de-CH,Gasse,false
+Föhrenplatz,de-CH,Platz,false
+Föhrenrain,de-CH,Rain,false
+Föhrenhalde,de-CH,Halde,false
+Föhrenmatte,de-CH,Matte,false
+Föhrenacker,de-CH,Acker,false
+Föhrenhof,de-CH,Hof,false
+Föhrenring,de-CH,Ring,false
+Föhrensteig,de-CH,Steig,false
+Kastanienstrasse,de-CH,Strasse,false
+Kastanienweg,de-CH,Weg,false
+Kastaniengasse,de-CH,Gasse,false
+Kastanienplatz,de-CH,Platz,false
+Kastanienrain,de-CH,Rain,false
+Kastanienhalde,de-CH,Halde,false
+Kastanienmatte,de-CH,Matte,false
+Kastanienacker,de-CH,Acker,false
+Kastanienhof,de-CH,Hof,false
+Kastanienring,de-CH,Ring,false
+Kastaniensteig,de-CH,Steig,false
+Pappelstrasse,de-CH,Strasse,false
+Pappelweg,de-CH,Weg,false
+Pappelgasse,de-CH,Gasse,false
+Pappelplatz,de-CH,Platz,false
+Pappelrain,de-CH,Rain,false
+Pappelhalde,de-CH,Halde,false
+Pappelmatte,de-CH,Matte,false
+Pappelacker,de-CH,Acker,false
+Pappelhof,de-CH,Hof,false
+Pappelring,de-CH,Ring,false
+Pappelsteig,de-CH,Steig,false
+Ulmenstrasse,de-CH,Strasse,false
+Ulmenweg,de-CH,Weg,false
+Ulmengasse,de-CH,Gasse,false
+Ulmenplatz,de-CH,Platz,false
+Ulmenrain,de-CH,Rain,false
+Ulmenhalde,de-CH,Halde,false
+Ulmenmatte,de-CH,Matte,false
+Ulmenacker,de-CH,Acker,false
+Ulmenhof,de-CH,Hof,false
+Ulmenring,de-CH,Ring,false
+Ulmensteig,de-CH,Steig,false
+Weidenstrasse,de-CH,Strasse,false
+Weidenweg,de-CH,Weg,false
+Weidengasse,de-CH,Gasse,false
+Weidenplatz,de-CH,Platz,false
+Weidenrain,de-CH,Rain,false
+Weidenhalde,de-CH,Halde,false
+Weidenmatte,de-CH,Matte,false
+Weidenacker,de-CH,Acker,false
+Weidenhof,de-CH,Hof,false
+Weidenring,de-CH,Ring,false
+Weidensteig,de-CH,Steig,false
+Kirschstrasse,de-CH,Strasse,false
+Kirschweg,de-CH,Weg,false
+Kirschgasse,de-CH,Gasse,false
+Kirschplatz,de-CH,Platz,false
+Kirschrain,de-CH,Rain,false
+Kirschhalde,de-CH,Halde,false
+Kirschmatte,de-CH,Matte,false
+Kirschacker,de-CH,Acker,false
+Kirschhof,de-CH,Hof,false
+Kirschring,de-CH,Ring,false
+Kirschsteig,de-CH,Steig,false
+Apfelstrasse,de-CH,Strasse,false
+Apfelweg,de-CH,Weg,false
+Apfelgasse,de-CH,Gasse,false
+Apfelplatz,de-CH,Platz,false
+Apfelrain,de-CH,Rain,false
+Apfelhalde,de-CH,Halde,false
+Apfelmatte,de-CH,Matte,false
+Apfelacker,de-CH,Acker,false
+Apfelhof,de-CH,Hof,false
+Apfelring,de-CH,Ring,false
+Apfelsteig,de-CH,Steig,false
+Nussstrasse,de-CH,Strasse,false
+Nussweg,de-CH,Weg,false
+Nussgasse,de-CH,Gasse,false
+Nussplatz,de-CH,Platz,false
+Nussrain,de-CH,Rain,false
+Nusshalde,de-CH,Halde,false
+Nussmatte,de-CH,Matte,false
+Nussacker,de-CH,Acker,false
+Nusshof,de-CH,Hof,false
+Nussring,de-CH,Ring,false
+Nusssteig,de-CH,Steig,false
+Holunderstrasse,de-CH,Strasse,false
+Holunderweg,de-CH,Weg,false
+Holundergasse,de-CH,Gasse,false
+Holunderplatz,de-CH,Platz,false
+Holunderrain,de-CH,Rain,false
+Holunderhalde,de-CH,Halde,false
+Holundermatte,de-CH,Matte,false
+Holunderacker,de-CH,Acker,false
+Holunderhof,de-CH,Hof,false
+Holunderring,de-CH,Ring,false
+Holundersteig,de-CH,Steig,false
+Fliederstrasse,de-CH,Strasse,false
+Fliederweg,de-CH,Weg,false
+Fliedergasse,de-CH,Gasse,false
+Fliederplatz,de-CH,Platz,false
+Fliederrain,de-CH,Rain,false
+Fliederhalde,de-CH,Halde,false
+Fliedermatte,de-CH,Matte,false
+Fliederacker,de-CH,Acker,false
+Fliederhof,de-CH,Hof,false
+Fliederring,de-CH,Ring,false
+Fliedersteig,de-CH,Steig,false
+Tulpenstrasse,de-CH,Strasse,false
+Tulpenweg,de-CH,Weg,false
+Tulpengasse,de-CH,Gasse,false
+Tulpenplatz,de-CH,Platz,false
+Tulpenrain,de-CH,Rain,false
+Tulpenhalde,de-CH,Halde,false
+Tulpenmatte,de-CH,Matte,false
+Tulpenacker,de-CH,Acker,false
+Tulpenhof,de-CH,Hof,false
+Tulpenring,de-CH,Ring,false
+Tulpensteig,de-CH,Steig,false
+Nelkenstrasse,de-CH,Strasse,false
+Nelkenweg,de-CH,Weg,false
+Nelkengasse,de-CH,Gasse,false
+Nelkenplatz,de-CH,Platz,false
+Nelkenrain,de-CH,Rain,false
+Nelkenhalde,de-CH,Halde,false
+Nelkenmatte,de-CH,Matte,false
+Nelkenacker,de-CH,Acker,false
+Nelkenhof,de-CH,Hof,false
+Nelkenring,de-CH,Ring,false
+Nelkensteig,de-CH,Steig,false
+Veilchenstrasse,de-CH,Strasse,false
+Veilchenweg,de-CH,Weg,false
+Veilchengasse,de-CH,Gasse,false
+Veilchenplatz,de-CH,Platz,false
+Veilchenrain,de-CH,Rain,false
+Veilchenhalde,de-CH,Halde,false
+Veilchenmatte,de-CH,Matte,false
+Veilchenacker,de-CH,Acker,false
+Veilchenhof,de-CH,Hof,false
+Veilchenring,de-CH,Ring,false
+Veilchensteig,de-CH,Steig,false
+Enzianstrasse,de-CH,Strasse,false
+Enzianweg,de-CH,Weg,false
+Enziangasse,de-CH,Gasse,false
+Enzianplatz,de-CH,Platz,false
+Enzianrain,de-CH,Rain,false
+Enzianhalde,de-CH,Halde,false
+Enzianmatte,de-CH,Matte,false
+Enzianacker,de-CH,Acker,false
+Enzianhof,de-CH,Hof,false
+Enzianring,de-CH,Ring,false
+Enziansteig,de-CH,Steig,false
+Edelweissstrasse,de-CH,Strasse,false
+Edelweissweg,de-CH,Weg,false
+Edelweissgasse,de-CH,Gasse,false
+Edelweissplatz,de-CH,Platz,false
+Edelweissrain,de-CH,Rain,false
+Edelweisshalde,de-CH,Halde,false
+Edelweissmatte,de-CH,Matte,false
+Edelweissacker,de-CH,Acker,false
+Edelweisshof,de-CH,Hof,false
+Edelweissring,de-CH,Ring,false
+Edelweisssteig,de-CH,Steig,false
+Alpenrosenstrasse,de-CH,Strasse,false
+Alpenrosenweg,de-CH,Weg,false
+Alpenrosengasse,de-CH,Gasse,false
+Alpenrosenplatz,de-CH,Platz,false
+Alpenrosenrain,de-CH,Rain,false
+Alpenrosenhalde,de-CH,Halde,false
+Alpenrosenmatte,de-CH,Matte,false
+Alpenrosenacker,de-CH,Acker,false
+Alpenrosenhof,de-CH,Hof,false
+Alpenrosenring,de-CH,Ring,false
+Alpenrosensteig,de-CH,Steig,false
+Farnstrasse,de-CH,Strasse,false
+Farnweg,de-CH,Weg,false
+Farngasse,de-CH,Gasse,false
+Farnplatz,de-CH,Platz,false
+Farnrain,de-CH,Rain,false
+Farnhalde,de-CH,Halde,false
+Farnmatte,de-CH,Matte,false
+Farnacker,de-CH,Acker,false
+Farnhof,de-CH,Hof,false
+Farnring,de-CH,Ring,false
+Farnsteig,de-CH,Steig,false
+Moosstrasse,de-CH,Strasse,false
+Moosweg,de-CH,Weg,false
+Moosgasse,de-CH,Gasse,false
+Moosplatz,de-CH,Platz,false
+Moosrain,de-CH,Rain,false
+Mooshalde,de-CH,Halde,false
+Moosmatte,de-CH,Matte,false
+Moosacker,de-CH,Acker,false
+Mooshof,de-CH,Hof,false
+Moosring,de-CH,Ring,false
+Moossteig,de-CH,Steig,false
+Heidestrasse,de-CH,Strasse,false
+Heideweg,de-CH,Weg,false
+Heidegasse,de-CH,Gasse,false
+Heideplatz,de-CH,Platz,false
+Heiderain,de-CH,Rain,false
+Heidehalde,de-CH,Halde,false
+Heidematte,de-CH,Matte,false
+Heideacker,de-CH,Acker,false
+Heidehof,de-CH,Hof,false
+Heidering,de-CH,Ring,false
+Heidesteig,de-CH,Steig,false
+Wiesenstrasse,de-CH,Strasse,false
+Wiesenweg,de-CH,Weg,false
+Wiesengasse,de-CH,Gasse,false
+Wiesenplatz,de-CH,Platz,false
+Wiesenrain,de-CH,Rain,false
+Wiesenhalde,de-CH,Halde,false
+Wiesenmatte,de-CH,Matte,false
+Wiesenacker,de-CH,Acker,false
+Wiesenhof,de-CH,Hof,false
+Wiesenring,de-CH,Ring,false
+Wiesensteig,de-CH,Steig,false
+Feldstrasse,de-CH,Strasse,false
+Feldweg,de-CH,Weg,false
+Feldgasse,de-CH,Gasse,false
+Feldplatz,de-CH,Platz,false
+Feldrain,de-CH,Rain,false
+Feldhalde,de-CH,Halde,false
+Feldmatte,de-CH,Matte,false
+Feldacker,de-CH,Acker,false
+Feldhof,de-CH,Hof,false
+Feldring,de-CH,Ring,false
+Feldsteig,de-CH,Steig,false
+Ackerstrasse,de-CH,Strasse,false
+Ackerweg,de-CH,Weg,false
+Ackergasse,de-CH,Gasse,false
+Ackerplatz,de-CH,Platz,false
+Ackerrain,de-CH,Rain,false
+Ackerhalde,de-CH,Halde,false
+Ackermatte,de-CH,Matte,false
+Ackeracker,de-CH,Acker,false
+Ackerhof,de-CH,Hof,false
+Ackerring,de-CH,Ring,false
+Ackersteig,de-CH,Steig,false
+Gartenstrasse,de-CH,Strasse,false
+Gartenweg,de-CH,Weg,false
+Gartengasse,de-CH,Gasse,false
+Gartenplatz,de-CH,Platz,false
+Gartenrain,de-CH,Rain,false
+Gartenhalde,de-CH,Halde,false
+Gartenmatte,de-CH,Matte,false
+Gartenacker,de-CH,Acker,false
+Gartenhof,de-CH,Hof,false
+Gartenring,de-CH,Ring,false
+Gartensteig,de-CH,Steig,false
+Mühlestrasse,de-CH,Strasse,false
+Mühleweg,de-CH,Weg,false
+Mühlegasse,de-CH,Gasse,false
+Mühleplatz,de-CH,Platz,false
+Mühlerain,de-CH,Rain,false
+Mühlehalde,de-CH,Halde,false
+Mühlematte,de-CH,Matte,false
+Mühleacker,de-CH,Acker,false
+Mühlehof,de-CH,Hof,false
+Mühlering,de-CH,Ring,false
+Mühlesteig,de-CH,Steig,false
+Mühlenstrasse,de-CH,Strasse,false
+Mühlenweg,de-CH,Weg,false
+Mühlengasse,de-CH,Gasse,false
+Mühlenplatz,de-CH,Platz,false
+Mühlenrain,de-CH,Rain,false
+Mühlenhalde,de-CH,Halde,false
+Mühlenmatte,de-CH,Matte,false
+Mühlenacker,de-CH,Acker,false
+Mühlenhof,de-CH,Hof,false
+Mühlenring,de-CH,Ring,false
+Mühlensteig,de-CH,Steig,false
+Brunnenstrasse,de-CH,Strasse,false
+Brunnenweg,de-CH,Weg,false
+Brunnengasse,de-CH,Gasse,false
+Brunnenplatz,de-CH,Platz,false
+Brunnenrain,de-CH,Rain,false
+Brunnenhalde,de-CH,Halde,false
+Brunnenmatte,de-CH,Matte,false
+Brunnenacker,de-CH,Acker,false
+Brunnenhof,de-CH,Hof,false
+Brunnenring,de-CH,Ring,false
+Brunnensteig,de-CH,Steig,false
+Quellstrasse,de-CH,Strasse,false
+Quellweg,de-CH,Weg,false
+Quellgasse,de-CH,Gasse,false
+Quellplatz,de-CH,Platz,false
+Quellrain,de-CH,Rain,false
+Quellhalde,de-CH,Halde,false
+Quellmatte,de-CH,Matte,false
+Quellacker,de-CH,Acker,false
+Quellhof,de-CH,Hof,false
+Quellring,de-CH,Ring,false
+Quellsteig,de-CH,Steig,false
+Bachstrasse,de-CH,Strasse,false
+Bachweg,de-CH,Weg,false
+Bachgasse,de-CH,Gasse,false
+Bachplatz,de-CH,Platz,false
+Bachrain,de-CH,Rain,false
+Bachhalde,de-CH,Halde,false
+Bachmatte,de-CH,Matte,false
+Bachacker,de-CH,Acker,false
+Bachhof,de-CH,Hof,false
+Bachring,de-CH,Ring,false
+Bachsteig,de-CH,Steig,false
+Flussstrasse,de-CH,Strasse,false
+Flussweg,de-CH,Weg,false
+Flussgasse,de-CH,Gasse,false
+Flussplatz,de-CH,Platz,false
+Flussrain,de-CH,Rain,false
+Flusshalde,de-CH,Halde,false
+Flussmatte,de-CH,Matte,false
+Flussacker,de-CH,Acker,false
+Flusshof,de-CH,Hof,false
+Flussring,de-CH,Ring,false
+Flusssteig,de-CH,Steig,false
+Teichstrasse,de-CH,Strasse,false
+Teichweg,de-CH,Weg,false
+Teichgasse,de-CH,Gasse,false
+Teichplatz,de-CH,Platz,false
+Teichrain,de-CH,Rain,false
+Teichhalde,de-CH,Halde,false
+Teichmatte,de-CH,Matte,false
+Teichacker,de-CH,Acker,false
+Teichhof,de-CH,Hof,false
+Teichring,de-CH,Ring,false
+Teichsteig,de-CH,Steig,false
+Weiherstrasse,de-CH,Strasse,false
+Weiherweg,de-CH,Weg,false
+Weihergasse,de-CH,Gasse,false
+Weiherplatz,de-CH,Platz,false
+Weiherrain,de-CH,Rain,false
+Weiherhalde,de-CH,Halde,false
+Weihermatte,de-CH,Matte,false
+Weiheracker,de-CH,Acker,false
+Weiherhof,de-CH,Hof,false
+Weiherring,de-CH,Ring,false
+Weihersteig,de-CH,Steig,false
+Seestrasse,de-CH,Strasse,false
+Seeweg,de-CH,Weg,false
+Seegasse,de-CH,Gasse,false
+Seeplatz,de-CH,Platz,false
+Seerain,de-CH,Rain,false
+Seehalde,de-CH,Halde,false
+Seematte,de-CH,Matte,false
+Seeacker,de-CH,Acker,false
+Seehof,de-CH,Hof,false
+Seering,de-CH,Ring,false
+Seesteig,de-CH,Steig,false
+Uferstrasse,de-CH,Strasse,false
+Uferweg,de-CH,Weg,false
+Ufergasse,de-CH,Gasse,false
+Uferplatz,de-CH,Platz,false
+Uferrain,de-CH,Rain,false
+Uferhalde,de-CH,Halde,false
+Ufermatte,de-CH,Matte,false
+Uferacker,de-CH,Acker,false
+Uferhof,de-CH,Hof,false
+Uferring,de-CH,Ring,false
+Ufersteig,de-CH,Steig,false
+Inselstrasse,de-CH,Strasse,false
+Inselweg,de-CH,Weg,false
+Inselgasse,de-CH,Gasse,false
+Inselplatz,de-CH,Platz,false
+Inselrain,de-CH,Rain,false
+Inselhalde,de-CH,Halde,false
+Inselmatte,de-CH,Matte,false
+Inselacker,de-CH,Acker,false
+Inselhof,de-CH,Hof,false
+Inselring,de-CH,Ring,false
+Inselsteig,de-CH,Steig,false
+Brückenstrasse,de-CH,Strasse,false
+Brückenweg,de-CH,Weg,false
+Brückengasse,de-CH,Gasse,false
+Brückenplatz,de-CH,Platz,false
+Brückenrain,de-CH,Rain,false
+Brückenhalde,de-CH,Halde,false
+Brückenmatte,de-CH,Matte,false
+Brückenacker,de-CH,Acker,false
+Brückenhof,de-CH,Hof,false
+Brückenring,de-CH,Ring,false
+Brückensteig,de-CH,Steig,false
+Stegstrasse,de-CH,Strasse,false
+Stegweg,de-CH,Weg,false
+Steggasse,de-CH,Gasse,false
+Stegplatz,de-CH,Platz,false
+Stegrain,de-CH,Rain,false
+Steghalde,de-CH,Halde,false
+Stegmatte,de-CH,Matte,false
+Stegacker,de-CH,Acker,false
+Steghof,de-CH,Hof,false
+Stegring,de-CH,Ring,false
+Stegsteig,de-CH,Steig,false
+Bergstrasse,de-CH,Strasse,false
+Bergweg,de-CH,Weg,false
+Berggasse,de-CH,Gasse,false
+Bergplatz,de-CH,Platz,false
+Bergrain,de-CH,Rain,false
+Berghalde,de-CH,Halde,false
+Bergmatte,de-CH,Matte,false
+Bergacker,de-CH,Acker,false
+Berghof,de-CH,Hof,false
+Bergring,de-CH,Ring,false
+Bergsteig,de-CH,Steig,false
+Hügelstrasse,de-CH,Strasse,false
+Hügelweg,de-CH,Weg,false
+Hügelgasse,de-CH,Gasse,false
+Hügelplatz,de-CH,Platz,false
+Hügelrain,de-CH,Rain,false
+Hügelhalde,de-CH,Halde,false
+Hügelmatte,de-CH,Matte,false
+Hügelacker,de-CH,Acker,false
+Hügelhof,de-CH,Hof,false
+Hügelring,de-CH,Ring,false
+Hügelsteig,de-CH,Steig,false
+Talstrasse,de-CH,Strasse,false
+Talweg,de-CH,Weg,false
+Talgasse,de-CH,Gasse,false
+Talplatz,de-CH,Platz,false
+Talrain,de-CH,Rain,false
+Talhalde,de-CH,Halde,false
+Talmatte,de-CH,Matte,false
+Talacker,de-CH,Acker,false
+Talhof,de-CH,Hof,false
+Talring,de-CH,Ring,false
+Talsteig,de-CH,Steig,false
+Höhenstrasse,de-CH,Strasse,false
+Höhenweg,de-CH,Weg,false
+Höhengasse,de-CH,Gasse,false
+Höhenplatz,de-CH,Platz,false
+Höhenrain,de-CH,Rain,false
+Höhenhalde,de-CH,Halde,false
+Höhenmatte,de-CH,Matte,false
+Höhenacker,de-CH,Acker,false
+Höhenhof,de-CH,Hof,false
+Höhenring,de-CH,Ring,false
+Höhensteig,de-CH,Steig,false
+Hangstrasse,de-CH,Strasse,false
+Hangweg,de-CH,Weg,false
+Hanggasse,de-CH,Gasse,false
+Hangplatz,de-CH,Platz,false
+Hangrain,de-CH,Rain,false
+Hanghalde,de-CH,Halde,false
+Hangmatte,de-CH,Matte,false
+Hangacker,de-CH,Acker,false
+Hanghof,de-CH,Hof,false
+Hangring,de-CH,Ring,false
+Hangsteig,de-CH,Steig,false
+Haldenstrasse,de-CH,Strasse,false
+Haldenweg,de-CH,Weg,false
+Haldengasse,de-CH,Gasse,false
+Haldenplatz,de-CH,Platz,false
+Haldenrain,de-CH,Rain,false
+Haldenhalde,de-CH,Halde,false
+Haldenmatte,de-CH,Matte,false
+Haldenacker,de-CH,Acker,false
+Haldenhof,de-CH,Hof,false
+Haldenring,de-CH,Ring,false
+Haldensteig,de-CH,Steig,false
+Felsstrasse,de-CH,Strasse,false
+Felsweg,de-CH,Weg,false
+Felsgasse,de-CH,Gasse,false
+Felsplatz,de-CH,Platz,false
+Felsrain,de-CH,Rain,false
+Felshalde,de-CH,Halde,false
+Felsmatte,de-CH,Matte,false
+Felsacker,de-CH,Acker,false
+Felshof,de-CH,Hof,false
+Felsring,de-CH,Ring,false
+Felssteig,de-CH,Steig,false
+Steinstrasse,de-CH,Strasse,false
+Steinweg,de-CH,Weg,false
+Steingasse,de-CH,Gasse,false
+Steinplatz,de-CH,Platz,false
+Steinrain,de-CH,Rain,false
+Steinhalde,de-CH,Halde,false
+Steinmatte,de-CH,Matte,false
+Steinacker,de-CH,Acker,false
+Steinhof,de-CH,Hof,false
+Steinring,de-CH,Ring,false
+Steinsteig,de-CH,Steig,false
+Kiesstrasse,de-CH,Strasse,false
+Kiesweg,de-CH,Weg,false
+Kiesgasse,de-CH,Gasse,false
+Kiesplatz,de-CH,Platz,false
+Kiesrain,de-CH,Rain,false
+Kieshalde,de-CH,Halde,false
+Kiesmatte,de-CH,Matte,false
+Kiesacker,de-CH,Acker,false
+Kieshof,de-CH,Hof,false
+Kiesring,de-CH,Ring,false
+Kiessteig,de-CH,Steig,false
+Sandstrasse,de-CH,Strasse,false
+Sandweg,de-CH,Weg,false
+Sandgasse,de-CH,Gasse,false
+Sandplatz,de-CH,Platz,false
+Sandrain,de-CH,Rain,false
+Sandhalde,de-CH,Halde,false
+Sandmatte,de-CH,Matte,false
+Sandacker,de-CH,Acker,false
+Sandhof,de-CH,Hof,false
+Sandring,de-CH,Ring,false
+Sandsteig,de-CH,Steig,false
+Lehmstrasse,de-CH,Strasse,false
+Lehmweg,de-CH,Weg,false
+Lehmgasse,de-CH,Gasse,false
+Lehmplatz,de-CH,Platz,false
+Lehmrain,de-CH,Rain,false
+Lehmhalde,de-CH,Halde,false
+Lehmmatte,de-CH,Matte,false
+Lehmacker,de-CH,Acker,false
+Lehmhof,de-CH,Hof,false
+Lehmring,de-CH,Ring,false
+Lehmsteig,de-CH,Steig,false
+Tonstrasse,de-CH,Strasse,false
+Tonweg,de-CH,Weg,false
+Tongasse,de-CH,Gasse,false
+Tonplatz,de-CH,Platz,false
+Tonrain,de-CH,Rain,false
+Tonhalde,de-CH,Halde,false
+Tonmatte,de-CH,Matte,false
+Tonacker,de-CH,Acker,false
+Tonhof,de-CH,Hof,false
+Tonring,de-CH,Ring,false
+Tonsteig,de-CH,Steig,false
+Sonnenstrasse,de-CH,Strasse,false
+Sonnenweg,de-CH,Weg,false
+Sonnengasse,de-CH,Gasse,false
+Sonnenplatz,de-CH,Platz,false
+Sonnenrain,de-CH,Rain,false
+Sonnenhalde,de-CH,Halde,false
+Sonnenmatte,de-CH,Matte,false
+Sonnenacker,de-CH,Acker,false
+Sonnenhof,de-CH,Hof,false
+Sonnenring,de-CH,Ring,false
+Sonnensteig,de-CH,Steig,false
+Mondstrasse,de-CH,Strasse,false
+Mondweg,de-CH,Weg,false
+Mondgasse,de-CH,Gasse,false
+Mondplatz,de-CH,Platz,false
+Mondrain,de-CH,Rain,false
+Mondhalde,de-CH,Halde,false
+Mondmatte,de-CH,Matte,false
+Mondacker,de-CH,Acker,false
+Mondhof,de-CH,Hof,false
+Mondring,de-CH,Ring,false
+Mondsteig,de-CH,Steig,false
+Sternenstrasse,de-CH,Strasse,false
+Sternenweg,de-CH,Weg,false
+Sternengasse,de-CH,Gasse,false
+Sternenplatz,de-CH,Platz,false
+Sternenrain,de-CH,Rain,false
+Sternenhalde,de-CH,Halde,false
+Sternenmatte,de-CH,Matte,false
+Sternenacker,de-CH,Acker,false
+Sternenhof,de-CH,Hof,false
+Sternenring,de-CH,Ring,false
+Sternensteig,de-CH,Steig,false
+Morgenstrasse,de-CH,Strasse,false
+Morgenweg,de-CH,Weg,false
+Morgengasse,de-CH,Gasse,false
+Morgenplatz,de-CH,Platz,false
+Morgenrain,de-CH,Rain,false
+Morgenhalde,de-CH,Halde,false
+Morgenmatte,de-CH,Matte,false
+Morgenacker,de-CH,Acker,false
+Morgenhof,de-CH,Hof,false
+Morgenring,de-CH,Ring,false
+Morgensteig,de-CH,Steig,false
+Abendstrasse,de-CH,Strasse,false
+Abendweg,de-CH,Weg,false
+Abendgasse,de-CH,Gasse,false
+Abendplatz,de-CH,Platz,false
+Abendrain,de-CH,Rain,false
+Abendhalde,de-CH,Halde,false
+Abendmatte,de-CH,Matte,false
+Abendacker,de-CH,Acker,false
+Abendhof,de-CH,Hof,false
+Abendring,de-CH,Ring,false
+Abendsteig,de-CH,Steig,false
+Winterstrasse,de-CH,Strasse,false
+Winterweg,de-CH,Weg,false
+Wintergasse,de-CH,Gasse,false
+Winterplatz,de-CH,Platz,false
+Winterrain,de-CH,Rain,false
+Winterhalde,de-CH,Halde,false
+Wintermatte,de-CH,Matte,false
+Winteracker,de-CH,Acker,false
+Winterhof,de-CH,Hof,false
+Winterring,de-CH,Ring,false
+Wintersteig,de-CH,Steig,false
+Sommerstrasse,de-CH,Strasse,false
+Sommerweg,de-CH,Weg,false
+Sommergasse,de-CH,Gasse,false
+Sommerplatz,de-CH,Platz,false
+Sommerrain,de-CH,Rain,false
+Sommerhalde,de-CH,Halde,false
+Sommermatte,de-CH,Matte,false
+Sommeracker,de-CH,Acker,false
+Sommerhof,de-CH,Hof,false
+Sommerring,de-CH,Ring,false
+Sommersteig,de-CH,Steig,false
+Frühlingsstrasse,de-CH,Strasse,false
+Frühlingsweg,de-CH,Weg,false
+Frühlingsgasse,de-CH,Gasse,false
+Frühlingsplatz,de-CH,Platz,false
+Frühlingsrain,de-CH,Rain,false
+Frühlingshalde,de-CH,Halde,false
+Frühlingsmatte,de-CH,Matte,false
+Frühlingsacker,de-CH,Acker,false
+Frühlingshof,de-CH,Hof,false
+Frühlingsring,de-CH,Ring,false
+Frühlingssteig,de-CH,Steig,false
+Herbststrasse,de-CH,Strasse,false
+Herbstweg,de-CH,Weg,false
+Herbstgasse,de-CH,Gasse,false
+Herbstplatz,de-CH,Platz,false
+Herbstrain,de-CH,Rain,false
+Herbsthalde,de-CH,Halde,false
+Herbstmatte,de-CH,Matte,false
+Herbstacker,de-CH,Acker,false
+Herbsthof,de-CH,Hof,false
+Herbstring,de-CH,Ring,false
+Herbststeig,de-CH,Steig,false
+Nordstrasse,de-CH,Strasse,false
+Nordweg,de-CH,Weg,false
+Nordgasse,de-CH,Gasse,false
+Nordplatz,de-CH,Platz,false
+Nordrain,de-CH,Rain,false
+Nordhalde,de-CH,Halde,false
+Nordmatte,de-CH,Matte,false
+Nordacker,de-CH,Acker,false
+Nordhof,de-CH,Hof,false
+Nordring,de-CH,Ring,false
+Nordsteig,de-CH,Steig,false
+Südstrasse,de-CH,Strasse,false
+Südweg,de-CH,Weg,false
+Südgasse,de-CH,Gasse,false
+Südplatz,de-CH,Platz,false
+Südrain,de-CH,Rain,false
+Südhalde,de-CH,Halde,false
+Südmatte,de-CH,Matte,false
+Südacker,de-CH,Acker,false
+Südhof,de-CH,Hof,false
+Südring,de-CH,Ring,false
+Südsteig,de-CH,Steig,false
+Oststrasse,de-CH,Strasse,false
+Ostweg,de-CH,Weg,false
+Ostgasse,de-CH,Gasse,false
+Ostplatz,de-CH,Platz,false
+Ostrain,de-CH,Rain,false
+Osthalde,de-CH,Halde,false
+Ostmatte,de-CH,Matte,false
+Ostacker,de-CH,Acker,false
+Osthof,de-CH,Hof,false
+Ostring,de-CH,Ring,false
+Oststeig,de-CH,Steig,false
+Weststrasse,de-CH,Strasse,false
+Westweg,de-CH,Weg,false
+Westgasse,de-CH,Gasse,false
+Westplatz,de-CH,Platz,false
+Westrain,de-CH,Rain,false
+Westhalde,de-CH,Halde,false
+Westmatte,de-CH,Matte,false
+Westacker,de-CH,Acker,false
+Westhof,de-CH,Hof,false
+Westring,de-CH,Ring,false
+Weststeig,de-CH,Steig,false
+Kirchstrasse,de-CH,Strasse,false
+Kirchweg,de-CH,Weg,false
+Kirchgasse,de-CH,Gasse,true
+Kirchplatz,de-CH,Platz,false
+Kirchrain,de-CH,Rain,false
+Kirchhalde,de-CH,Halde,false
+Kirchmatte,de-CH,Matte,false
+Kirchacker,de-CH,Acker,false
+Kirchhof,de-CH,Hof,false
+Kirchring,de-CH,Ring,false
+Kirchsteig,de-CH,Steig,false
+Kapellenstrasse,de-CH,Strasse,false
+Kapellenweg,de-CH,Weg,false
+Kapellengasse,de-CH,Gasse,false
+Kapellenplatz,de-CH,Platz,false
+Kapellenrain,de-CH,Rain,false
+Kapellenhalde,de-CH,Halde,false
+Kapellenmatte,de-CH,Matte,false
+Kapellenacker,de-CH,Acker,false
+Kapellenhof,de-CH,Hof,false
+Kapellenring,de-CH,Ring,false
+Kapellensteig,de-CH,Steig,false
+Klosterstrasse,de-CH,Strasse,false
+Klosterweg,de-CH,Weg,false
+Klostergasse,de-CH,Gasse,false
+Klosterplatz,de-CH,Platz,false
+Klosterrain,de-CH,Rain,false
+Klosterhalde,de-CH,Halde,false
+Klostermatte,de-CH,Matte,false
+Klosteracker,de-CH,Acker,false
+Klosterhof,de-CH,Hof,false
+Klosterring,de-CH,Ring,false
+Klostersteig,de-CH,Steig,false
+Schulstrasse,de-CH,Strasse,true
+Schulweg,de-CH,Weg,false
+Schulgasse,de-CH,Gasse,false
+Schulplatz,de-CH,Platz,false
+Schulrain,de-CH,Rain,false
+Schulhalde,de-CH,Halde,false
+Schulmatte,de-CH,Matte,false
+Schulacker,de-CH,Acker,false
+Schulhof,de-CH,Hof,false
+Schulring,de-CH,Ring,false
+Schulsteig,de-CH,Steig,false
+Bahnstrasse,de-CH,Strasse,false
+Bahnweg,de-CH,Weg,false
+Bahngasse,de-CH,Gasse,false
+Bahnplatz,de-CH,Platz,false
+Bahnrain,de-CH,Rain,false
+Bahnhalde,de-CH,Halde,false
+Bahnmatte,de-CH,Matte,false
+Bahnacker,de-CH,Acker,false
+Bahnhof,de-CH,Hof,false
+Bahnring,de-CH,Ring,false
+Bahnsteig,de-CH,Steig,false
+Poststrasse,de-CH,Strasse,false
+Postweg,de-CH,Weg,false
+Postgasse,de-CH,Gasse,false
+Postplatz,de-CH,Platz,false
+Postrain,de-CH,Rain,false
+Posthalde,de-CH,Halde,false
+Postmatte,de-CH,Matte,false
+Postacker,de-CH,Acker,false
+Posthof,de-CH,Hof,false
+Postring,de-CH,Ring,false
+Poststeig,de-CH,Steig,false
+Marktstrasse,de-CH,Strasse,false
+Marktweg,de-CH,Weg,false
+Marktgasse,de-CH,Gasse,false
+Marktplatz,de-CH,Platz,false
+Marktrain,de-CH,Rain,false
+Markthalde,de-CH,Halde,false
+Marktmatte,de-CH,Matte,false
+Marktacker,de-CH,Acker,false
+Markthof,de-CH,Hof,false
+Marktring,de-CH,Ring,false
+Marktsteig,de-CH,Steig,false
+Rathausstrasse,de-CH,Strasse,false
+Rathausweg,de-CH,Weg,false
+Rathausgasse,de-CH,Gasse,false
+Rathausplatz,de-CH,Platz,false
+Rathausrain,de-CH,Rain,false
+Rathaushalde,de-CH,Halde,false
+Rathausmatte,de-CH,Matte,false
+Rathausacker,de-CH,Acker,false
+Rathaushof,de-CH,Hof,false
+Rathausring,de-CH,Ring,false
+Rathaussteig,de-CH,Steig,false
+Zunftstrasse,de-CH,Strasse,false
+Zunftweg,de-CH,Weg,false
+Zunftgasse,de-CH,Gasse,false
+Zunftplatz,de-CH,Platz,false
+Zunftrain,de-CH,Rain,false
+Zunfthalde,de-CH,Halde,false
+Zunftmatte,de-CH,Matte,false
+Zunftacker,de-CH,Acker,false
+Zunfthof,de-CH,Hof,false
+Zunftring,de-CH,Ring,false
+Zunftsteig,de-CH,Steig,false
+Schmiedestrasse,de-CH,Strasse,false
+Schmiedeweg,de-CH,Weg,false
+Schmiedegasse,de-CH,Gasse,false
+Schmiedeplatz,de-CH,Platz,false
+Schmiederain,de-CH,Rain,false
+Schmiedehalde,de-CH,Halde,false
+Schmiedematte,de-CH,Matte,false
+Schmiedeacker,de-CH,Acker,false
+Schmiedehof,de-CH,Hof,false
+Schmiedering,de-CH,Ring,false
+Schmiedesteig,de-CH,Steig,false
+Weberstrasse,de-CH,Strasse,false
+Weberweg,de-CH,Weg,false
+Webergasse,de-CH,Gasse,false
+Weberplatz,de-CH,Platz,false
+Weberrain,de-CH,Rain,false
+Weberhalde,de-CH,Halde,false
+Webermatte,de-CH,Matte,false
+Weberacker,de-CH,Acker,false
+Weberhof,de-CH,Hof,false
+Weberring,de-CH,Ring,false
+Webersteig,de-CH,Steig,false
+Müllerstrasse,de-CH,Strasse,false
+Müllerweg,de-CH,Weg,false
+Müllergasse,de-CH,Gasse,false
+Müllerplatz,de-CH,Platz,false
+Müllerrain,de-CH,Rain,false
+Müllerhalde,de-CH,Halde,false
+Müllermatte,de-CH,Matte,false
+Mülleracker,de-CH,Acker,false
+Müllerhof,de-CH,Hof,false
+Müllerring,de-CH,Ring,false
+Müllersteig,de-CH,Steig,false
+Gerberstrasse,de-CH,Strasse,false
+Gerberweg,de-CH,Weg,false
+Gerbergasse,de-CH,Gasse,false
+Gerberplatz,de-CH,Platz,false
+Gerberrain,de-CH,Rain,false
+Gerberhalde,de-CH,Halde,false
+Gerbermatte,de-CH,Matte,false
+Gerberacker,de-CH,Acker,false
+Gerberhof,de-CH,Hof,false
+Gerberring,de-CH,Ring,false
+Gerbersteig,de-CH,Steig,false
+Färberstrasse,de-CH,Strasse,false
+Färberweg,de-CH,Weg,false
+Färbergasse,de-CH,Gasse,false
+Färberplatz,de-CH,Platz,false
+Färberrain,de-CH,Rain,false
+Färberhalde,de-CH,Halde,false
+Färbermatte,de-CH,Matte,false
+Färberacker,de-CH,Acker,false
+Färberhof,de-CH,Hof,false
+Färberring,de-CH,Ring,false
+Färbersteig,de-CH,Steig,false
+Bäckerstrasse,de-CH,Strasse,false
+Bäckerweg,de-CH,Weg,false
+Bäckergasse,de-CH,Gasse,false
+Bäckerplatz,de-CH,Platz,false
+Bäckerrain,de-CH,Rain,false
+Bäckerhalde,de-CH,Halde,false
+Bäckermatte,de-CH,Matte,false
+Bäckeracker,de-CH,Acker,false
+Bäckerhof,de-CH,Hof,false
+Bäckerring,de-CH,Ring,false
+Bäckersteig,de-CH,Steig,false
+Metzgerstrasse,de-CH,Strasse,false
+Metzgerweg,de-CH,Weg,false
+Metzgergasse,de-CH,Gasse,false
+Metzgerplatz,de-CH,Platz,false
+Metzgerrain,de-CH,Rain,false
+Metzgerhalde,de-CH,Halde,false
+Metzgermatte,de-CH,Matte,false
+Metzgeracker,de-CH,Acker,false
+Metzgerhof,de-CH,Hof,false
+Metzgerring,de-CH,Ring,false
+Metzgersteig,de-CH,Steig,false
+Sattlerstrasse,de-CH,Strasse,false
+Sattlerweg,de-CH,Weg,false
+Sattlergasse,de-CH,Gasse,false
+Sattlerplatz,de-CH,Platz,false
+Sattlerrain,de-CH,Rain,false
+Sattlerhalde,de-CH,Halde,false
+Sattlermatte,de-CH,Matte,false
+Sattleracker,de-CH,Acker,false
+Sattlerhof,de-CH,Hof,false
+Sattlerring,de-CH,Ring,false
+Sattlersteig,de-CH,Steig,false
+Wagnerstrasse,de-CH,Strasse,false
+Wagnerweg,de-CH,Weg,false
+Wagnergasse,de-CH,Gasse,false
+Wagnerplatz,de-CH,Platz,false
+Wagnerrain,de-CH,Rain,false
+Wagnerhalde,de-CH,Halde,false
+Wagnermatte,de-CH,Matte,false
+Wagneracker,de-CH,Acker,false
+Wagnerhof,de-CH,Hof,false
+Wagnerring,de-CH,Ring,false
+Wagnersteig,de-CH,Steig,false
+Ziegelstrasse,de-CH,Strasse,false
+Ziegelweg,de-CH,Weg,false
+Ziegelgasse,de-CH,Gasse,false
+Ziegelplatz,de-CH,Platz,false
+Ziegelrain,de-CH,Rain,false
+Ziegelhalde,de-CH,Halde,false
+Ziegelmatte,de-CH,Matte,false
+Ziegelacker,de-CH,Acker,false
+Ziegelhof,de-CH,Hof,false
+Ziegelring,de-CH,Ring,false
+Ziegelsteig,de-CH,Steig,false
+Kalkstrasse,de-CH,Strasse,false
+Kalkweg,de-CH,Weg,false
+Kalkgasse,de-CH,Gasse,false
+Kalkplatz,de-CH,Platz,false
+Kalkrain,de-CH,Rain,false
+Kalkhalde,de-CH,Halde,false
+Kalkmatte,de-CH,Matte,false
+Kalkacker,de-CH,Acker,false
+Kalkhof,de-CH,Hof,false
+Kalkring,de-CH,Ring,false
+Kalksteig,de-CH,Steig,false
+Salzstrasse,de-CH,Strasse,false
+Salzweg,de-CH,Weg,false
+Salzgasse,de-CH,Gasse,false
+Salzplatz,de-CH,Platz,false
+Salzrain,de-CH,Rain,false
+Salzhalde,de-CH,Halde,false
+Salzmatte,de-CH,Matte,false
+Salzacker,de-CH,Acker,false
+Salzhof,de-CH,Hof,false
+Salzring,de-CH,Ring,false
+Salzsteig,de-CH,Steig,false
+Eisenstrasse,de-CH,Strasse,false
+Eisenweg,de-CH,Weg,false
+Eisengasse,de-CH,Gasse,false
+Eisenplatz,de-CH,Platz,false
+Eisenrain,de-CH,Rain,false
+Eisenhalde,de-CH,Halde,false
+Eisenmatte,de-CH,Matte,false
+Eisenacker,de-CH,Acker,false
+Eisenhof,de-CH,Hof,false
+Eisenring,de-CH,Ring,false
+Eisensteig,de-CH,Steig,false
+Kupferstrasse,de-CH,Strasse,false
+Kupferweg,de-CH,Weg,false
+Kupfergasse,de-CH,Gasse,false
+Kupferplatz,de-CH,Platz,false
+Kupferrain,de-CH,Rain,false
+Kupferhalde,de-CH,Halde,false
+Kupfermatte,de-CH,Matte,false
+Kupferacker,de-CH,Acker,false
+Kupferhof,de-CH,Hof,false
+Kupferring,de-CH,Ring,false
+Kupfersteig,de-CH,Steig,false
+Silberstrasse,de-CH,Strasse,false
+Silberweg,de-CH,Weg,false
+Silbergasse,de-CH,Gasse,false
+Silberplatz,de-CH,Platz,false
+Silberrain,de-CH,Rain,false
+Silberhalde,de-CH,Halde,false
+Silbermatte,de-CH,Matte,false
+Silberacker,de-CH,Acker,false
+Silberhof,de-CH,Hof,false
+Silberring,de-CH,Ring,false
+Silbersteig,de-CH,Steig,false
+Goldstrasse,de-CH,Strasse,false
+Goldweg,de-CH,Weg,false
+Goldgasse,de-CH,Gasse,false
+Goldplatz,de-CH,Platz,false
+Goldrain,de-CH,Rain,false
+Goldhalde,de-CH,Halde,false
+Goldmatte,de-CH,Matte,false
+Goldacker,de-CH,Acker,false
+Goldhof,de-CH,Hof,false
+Goldring,de-CH,Ring,false
+Goldsteig,de-CH,Steig,false
+Bärenstrasse,de-CH,Strasse,false
+Bärenweg,de-CH,Weg,false
+Bärengasse,de-CH,Gasse,false
+Bärenplatz,de-CH,Platz,false
+Bärenrain,de-CH,Rain,false
+Bärenhalde,de-CH,Halde,false
+Bärenmatte,de-CH,Matte,false
+Bärenacker,de-CH,Acker,false
+Bärenhof,de-CH,Hof,false
+Bärenring,de-CH,Ring,false
+Bärensteig,de-CH,Steig,false
+Hirschstrasse,de-CH,Strasse,false
+Hirschweg,de-CH,Weg,false
+Hirschgasse,de-CH,Gasse,false
+Hirschplatz,de-CH,Platz,false
+Hirschrain,de-CH,Rain,false
+Hirschhalde,de-CH,Halde,false
+Hirschmatte,de-CH,Matte,false
+Hirschacker,de-CH,Acker,false
+Hirschhof,de-CH,Hof,false
+Hirschring,de-CH,Ring,false
+Hirschsteig,de-CH,Steig,false
+Rehstrasse,de-CH,Strasse,false
+Rehweg,de-CH,Weg,false
+Rehgasse,de-CH,Gasse,false
+Rehplatz,de-CH,Platz,false
+Rehrain,de-CH,Rain,false
+Rehhalde,de-CH,Halde,false
+Rehmatte,de-CH,Matte,false
+Rehacker,de-CH,Acker,false
+Rehhof,de-CH,Hof,false
+Rehring,de-CH,Ring,false
+Rehsteig,de-CH,Steig,false
+Fuchsstrasse,de-CH,Strasse,false
+Fuchsweg,de-CH,Weg,false
+Fuchsgasse,de-CH,Gasse,false
+Fuchsplatz,de-CH,Platz,false
+Fuchsrain,de-CH,Rain,false
+Fuchshalde,de-CH,Halde,false
+Fuchsmatte,de-CH,Matte,false
+Fuchsacker,de-CH,Acker,false
+Fuchshof,de-CH,Hof,false
+Fuchsring,de-CH,Ring,false
+Fuchssteig,de-CH,Steig,false
+Hasenstrasse,de-CH,Strasse,false
+Hasenweg,de-CH,Weg,false
+Hasengasse,de-CH,Gasse,false
+Hasenplatz,de-CH,Platz,false
+Hasenrain,de-CH,Rain,false
+Hasenhalde,de-CH,Halde,false
+Hasenmatte,de-CH,Matte,false
+Hasenacker,de-CH,Acker,false
+Hasenhof,de-CH,Hof,false
+Hasenring,de-CH,Ring,false
+Hasensteig,de-CH,Steig,false
+Adlerstrasse,de-CH,Strasse,false
+Adlerweg,de-CH,Weg,false
+Adlergasse,de-CH,Gasse,false
+Adlerplatz,de-CH,Platz,false
+Adlerrain,de-CH,Rain,false
+Adlerhalde,de-CH,Halde,false
+Adlermatte,de-CH,Matte,false
+Adleracker,de-CH,Acker,false
+Adlerhof,de-CH,Hof,false
+Adlerring,de-CH,Ring,false
+Adlersteig,de-CH,Steig,false
+Falkenstrasse,de-CH,Strasse,false
+Falkenweg,de-CH,Weg,false
+Falkengasse,de-CH,Gasse,false
+Falkenplatz,de-CH,Platz,false
+Falkenrain,de-CH,Rain,false
+Falkenhalde,de-CH,Halde,false
+Falkenmatte,de-CH,Matte,false
+Falkenacker,de-CH,Acker,false
+Falkenhof,de-CH,Hof,false
+Falkenring,de-CH,Ring,false
+Falkensteig,de-CH,Steig,false
+Lerchenstrasse,de-CH,Strasse,false
+Lerchenweg,de-CH,Weg,false
+Lerchengasse,de-CH,Gasse,false
+Lerchenplatz,de-CH,Platz,false
+Lerchenrain,de-CH,Rain,false
+Lerchenhalde,de-CH,Halde,false
+Lerchenmatte,de-CH,Matte,false
+Lerchenacker,de-CH,Acker,false
+Lerchenhof,de-CH,Hof,false
+Lerchenring,de-CH,Ring,false
+Lerchensteig,de-CH,Steig,false
+Amselstrasse,de-CH,Strasse,false
+Amselweg,de-CH,Weg,false
+Amselgasse,de-CH,Gasse,false
+Amselplatz,de-CH,Platz,false
+Amselrain,de-CH,Rain,false
+Amselhalde,de-CH,Halde,false
+Amselmatte,de-CH,Matte,false
+Amselacker,de-CH,Acker,false
+Amselhof,de-CH,Hof,false
+Amselring,de-CH,Ring,false
+Amselsteig,de-CH,Steig,false
+Drosselstrasse,de-CH,Strasse,false
+Drosselweg,de-CH,Weg,false
+Drosselgasse,de-CH,Gasse,false
+Drosselplatz,de-CH,Platz,false
+Drosselrain,de-CH,Rain,false
+Drosselhalde,de-CH,Halde,false
+Drosselmatte,de-CH,Matte,false
+Drosselacker,de-CH,Acker,false
+Drosselhof,de-CH,Hof,false
+Drosselring,de-CH,Ring,false
+Drosselsteig,de-CH,Steig,false
+Finkenstrasse,de-CH,Strasse,false
+Finkenweg,de-CH,Weg,false
+Finkengasse,de-CH,Gasse,false
+Finkenplatz,de-CH,Platz,false
+Finkenrain,de-CH,Rain,false
+Finkenhalde,de-CH,Halde,false
+Finkenmatte,de-CH,Matte,false
+Finkenacker,de-CH,Acker,false
+Finkenhof,de-CH,Hof,false
+Finkenring,de-CH,Ring,false
+Finkensteig,de-CH,Steig,false
+Meisenstrasse,de-CH,Strasse,false
+Meisenweg,de-CH,Weg,false
+Meisengasse,de-CH,Gasse,false
+Meisenplatz,de-CH,Platz,false
+Meisenrain,de-CH,Rain,false
+Meisenhalde,de-CH,Halde,false
+Meisenmatte,de-CH,Matte,false
+Meisenacker,de-CH,Acker,false
+Meisenhof,de-CH,Hof,false
+Meisenring,de-CH,Ring,false
+Meisensteig,de-CH,Steig,false
+Schwalbenstrasse,de-CH,Strasse,false
+Schwalbenweg,de-CH,Weg,false
+Schwalbengasse,de-CH,Gasse,false
+Schwalbenplatz,de-CH,Platz,false
+Schwalbenrain,de-CH,Rain,false
+Schwalbenhalde,de-CH,Halde,false
+Schwalbenmatte,de-CH,Matte,false
+Schwalbenacker,de-CH,Acker,false
+Schwalbenhof,de-CH,Hof,false
+Schwalbenring,de-CH,Ring,false
+Schwalbensteig,de-CH,Steig,false
+Storchenstrasse,de-CH,Strasse,false
+Storchenweg,de-CH,Weg,false
+Storchengasse,de-CH,Gasse,false
+Storchenplatz,de-CH,Platz,false
+Storchenrain,de-CH,Rain,false
+Storchenhalde,de-CH,Halde,false
+Storchenmatte,de-CH,Matte,false
+Storchenacker,de-CH,Acker,false
+Storchenhof,de-CH,Hof,false
+Storchenring,de-CH,Ring,false
+Storchensteig,de-CH,Steig,false
+Reiherstrasse,de-CH,Strasse,false
+Reiherweg,de-CH,Weg,false
+Reihergasse,de-CH,Gasse,false
+Reiherplatz,de-CH,Platz,false
+Reiherrain,de-CH,Rain,false
+Reiherhalde,de-CH,Halde,false
+Reihermatte,de-CH,Matte,false
+Reiheracker,de-CH,Acker,false
+Reiherhof,de-CH,Hof,false
+Reiherring,de-CH,Ring,false
+Reihersteig,de-CH,Steig,false
+Schwanenstrasse,de-CH,Strasse,false
+Schwanenweg,de-CH,Weg,false
+Schwanengasse,de-CH,Gasse,false
+Schwanenplatz,de-CH,Platz,false
+Schwanenrain,de-CH,Rain,false
+Schwanenhalde,de-CH,Halde,false
+Schwanenmatte,de-CH,Matte,false
+Schwanenacker,de-CH,Acker,false
+Schwanenhof,de-CH,Hof,false
+Schwanenring,de-CH,Ring,false
+Schwanensteig,de-CH,Steig,false
+Entenstrasse,de-CH,Strasse,false
+Entenweg,de-CH,Weg,false
+Entengasse,de-CH,Gasse,false
+Entenplatz,de-CH,Platz,false
+Entenrain,de-CH,Rain,false
+Entenhalde,de-CH,Halde,false
+Entenmatte,de-CH,Matte,false
+Entenacker,de-CH,Acker,false
+Entenhof,de-CH,Hof,false
+Entenring,de-CH,Ring,false
+Entensteig,de-CH,Steig,false
+Forellenstrasse,de-CH,Strasse,false
+Forellenweg,de-CH,Weg,false
+Forellengasse,de-CH,Gasse,false
+Forellenplatz,de-CH,Platz,false
+Forellenrain,de-CH,Rain,false
+Forellenhalde,de-CH,Halde,false
+Forellenmatte,de-CH,Matte,false
+Forellenacker,de-CH,Acker,false
+Forellenhof,de-CH,Hof,false
+Forellenring,de-CH,Ring,false
+Forellensteig,de-CH,Steig,false
+Hechtstrasse,de-CH,Strasse,false
+Hechtweg,de-CH,Weg,false
+Hechtgasse,de-CH,Gasse,false
+Hechtplatz,de-CH,Platz,false
+Hechtrain,de-CH,Rain,false
+Hechthalde,de-CH,Halde,false
+Hechtmatte,de-CH,Matte,false
+Hechtacker,de-CH,Acker,false
+Hechthof,de-CH,Hof,false
+Hechtring,de-CH,Ring,false
+Hechtsteig,de-CH,Steig,false
+Bienenstrasse,de-CH,Strasse,false
+Bienenweg,de-CH,Weg,false
+Bienengasse,de-CH,Gasse,false
+Bienenplatz,de-CH,Platz,false
+Bienenrain,de-CH,Rain,false
+Bienenhalde,de-CH,Halde,false
+Bienenmatte,de-CH,Matte,false
+Bienenacker,de-CH,Acker,false
+Bienenhof,de-CH,Hof,false
+Bienenring,de-CH,Ring,false
+Bienensteig,de-CH,Steig,false
+Schmetterlingsstrasse,de-CH,Strasse,false
+Schmetterlingsweg,de-CH,Weg,false
+Schmetterlingsgasse,de-CH,Gasse,false
+Schmetterlingsplatz,de-CH,Platz,false
+Schmetterlingsrain,de-CH,Rain,false
+Schmetterlingshalde,de-CH,Halde,false
+Schmetterlingsmatte,de-CH,Matte,false
+Schmetterlingsacker,de-CH,Acker,false
+Schmetterlingshof,de-CH,Hof,false
+Schmetterlingsring,de-CH,Ring,false
+Schmetterlingssteig,de-CH,Steig,false
+Rebstockstrasse,de-CH,Strasse,false
+Rebstockweg,de-CH,Weg,false
+Rebstockgasse,de-CH,Gasse,false
+Rebstockplatz,de-CH,Platz,false
+Rebstockrain,de-CH,Rain,false
+Rebstockhalde,de-CH,Halde,false
+Rebstockmatte,de-CH,Matte,false
+Rebstockacker,de-CH,Acker,false
+Rebstockhof,de-CH,Hof,false
+Rebstockring,de-CH,Ring,false
+Rebstocksteig,de-CH,Steig,false
+Rebenstrasse,de-CH,Strasse,false
+Rebenweg,de-CH,Weg,false
+Rebengasse,de-CH,Gasse,false
+Rebenplatz,de-CH,Platz,false
+Rebenrain,de-CH,Rain,false
+Rebenhalde,de-CH,Halde,false
+Rebenmatte,de-CH,Matte,false
+Rebenacker,de-CH,Acker,false
+Rebenhof,de-CH,Hof,false
+Rebenring,de-CH,Ring,false
+Rebensteig,de-CH,Steig,false
+Traubenstrasse,de-CH,Strasse,false
+Traubenweg,de-CH,Weg,false
+Traubengasse,de-CH,Gasse,false
+Traubenplatz,de-CH,Platz,false
+Traubenrain,de-CH,Rain,false
+Traubenhalde,de-CH,Halde,false
+Traubenmatte,de-CH,Matte,false
+Traubenacker,de-CH,Acker,false
+Traubenhof,de-CH,Hof,false
+Traubenring,de-CH,Ring,false
+Traubensteig,de-CH,Steig,false
+Hopfenstrasse,de-CH,Strasse,false
+Hopfenweg,de-CH,Weg,false
+Hopfengasse,de-CH,Gasse,false
+Hopfenplatz,de-CH,Platz,false
+Hopfenrain,de-CH,Rain,false
+Hopfenhalde,de-CH,Halde,false
+Hopfenmatte,de-CH,Matte,false
+Hopfenacker,de-CH,Acker,false
+Hopfenhof,de-CH,Hof,false
+Hopfenring,de-CH,Ring,false
+Hopfensteig,de-CH,Steig,false
+Kornstrasse,de-CH,Strasse,false
+Kornweg,de-CH,Weg,false
+Korngasse,de-CH,Gasse,false
+Kornplatz,de-CH,Platz,false
+Kornrain,de-CH,Rain,false
+Kornhalde,de-CH,Halde,false
+Kornmatte,de-CH,Matte,false
+Kornacker,de-CH,Acker,false
+Kornhof,de-CH,Hof,false
+Kornring,de-CH,Ring,false
+Kornsteig,de-CH,Steig,false
+Roggenstrasse,de-CH,Strasse,false
+Roggenweg,de-CH,Weg,false
+Roggengasse,de-CH,Gasse,false
+Roggenplatz,de-CH,Platz,false
+Roggenrain,de-CH,Rain,false
+Roggenhalde,de-CH,Halde,false
+Roggenmatte,de-CH,Matte,false
+Roggenacker,de-CH,Acker,false
+Roggenhof,de-CH,Hof,false
+Roggenring,de-CH,Ring,false
+Roggensteig,de-CH,Steig,false
+Haferstrasse,de-CH,Strasse,false
+Haferweg,de-CH,Weg,false
+Hafergasse,de-CH,Gasse,false
+Haferplatz,de-CH,Platz,false
+Haferrain,de-CH,Rain,false
+Haferhalde,de-CH,Halde,false
+Hafermatte,de-CH,Matte,false
+Haferacker,de-CH,Acker,false
+Haferhof,de-CH,Hof,false
+Haferring,de-CH,Ring,false
+Hafersteig,de-CH,Steig,false
+Gerstenstrasse,de-CH,Strasse,false
+Gerstenweg,de-CH,Weg,false
+Gerstengasse,de-CH,Gasse,false
+Gerstenplatz,de-CH,Platz,false
+Gerstenrain,de-CH,Rain,false
+Gerstenhalde,de-CH,Halde,false
+Gerstenmatte,de-CH,Matte,false
+Gerstenacker,de-CH,Acker,false
+Gerstenhof,de-CH,Hof,false
+Gerstenring,de-CH,Ring,false
+Gerstensteig,de-CH,Steig,false
+Flachsstrasse,de-CH,Strasse,false
+Flachsweg,de-CH,Weg,false
+Flachsgasse,de-CH,Gasse,false
+Flachsplatz,de-CH,Platz,false
+Flachsrain,de-CH,Rain,false
+Flachshalde,de-CH,Halde,false
+Flachsmatte,de-CH,Matte,false
+Flachsacker,de-CH,Acker,false
+Flachshof,de-CH,Hof,false
+Flachsring,de-CH,Ring,false
+Flachssteig,de-CH,Steig,false
+Ahornstraße,de-DE,Straße,false
+Ahornweg,de-DE,Weg,false
+Ahorngasse,de-DE,Gasse,false
+Ahornplatz,de-DE,Platz,false
+Ahornallee,de-DE,Allee,false
+Ahornring,de-DE,Ring,false
+Ahorndamm,de-DE,Damm,false
+Ahornsteig,de-DE,Steig,false
+Ahornpfad,de-DE,Pfad,false
+Ahornhof,de-DE,Hof,false
+Ahornkamp,de-DE,Kamp,false
+Birkenstraße,de-DE,Straße,false
+Birkenweg,de-DE,Weg,false
+Birkengasse,de-DE,Gasse,false
+Birkenplatz,de-DE,Platz,false
+Birkenallee,de-DE,Allee,false
+Birkenring,de-DE,Ring,false
+Birkendamm,de-DE,Damm,false
+Birkensteig,de-DE,Steig,false
+Birkenpfad,de-DE,Pfad,false
+Birkenhof,de-DE,Hof,false
+Birkenkamp,de-DE,Kamp,false
+Lindenstraße,de-DE,Straße,false
+Lindenweg,de-DE,Weg,false
+Lindengasse,de-DE,Gasse,false
+Lindenplatz,de-DE,Platz,false
+Lindenallee,de-DE,Allee,false
+Lindenring,de-DE,Ring,false
+Lindendamm,de-DE,Damm,false
+Lindensteig,de-DE,Steig,false
+Lindenpfad,de-DE,Pfad,false
+Lindenhof,de-DE,Hof,false
+Lindenkamp,de-DE,Kamp,false
+Rosenstraße,de-DE,Straße,false
+Rosenweg,de-DE,Weg,false
+Rosengasse,de-DE,Gasse,false
+Rosenplatz,de-DE,Platz,false
+Rosenallee,de-DE,Allee,false
+Rosenring,de-DE,Ring,false
+Rosendamm,de-DE,Damm,false
+Rosensteig,de-DE,Steig,false
+Rosenpfad,de-DE,Pfad,false
+Rosenhof,de-DE,Hof,false
+Rosenkamp,de-DE,Kamp,false
+Tannenstraße,de-DE,Straße,false
+Tannenweg,de-DE,Weg,false
+Tannengasse,de-DE,Gasse,false
+Tannenplatz,de-DE,Platz,false
+Tannenallee,de-DE,Allee,false
+Tannenring,de-DE,Ring,false
+Tannendamm,de-DE,Damm,false
+Tannensteig,de-DE,Steig,false
+Tannenpfad,de-DE,Pfad,false
+Tannenhof,de-DE,Hof,false
+Tannenkamp,de-DE,Kamp,false
+Buchenstraße,de-DE,Straße,false
+Buchenweg,de-DE,Weg,false
+Buchengasse,de-DE,Gasse,false
+Buchenplatz,de-DE,Platz,false
+Buchenallee,de-DE,Allee,false
+Buchenring,de-DE,Ring,false
+Buchendamm,de-DE,Damm,false
+Buchensteig,de-DE,Steig,false
+Buchenpfad,de-DE,Pfad,false
+Buchenhof,de-DE,Hof,false
+Buchenkamp,de-DE,Kamp,false
+Eichenstraße,de-DE,Straße,false
+Eichenweg,de-DE,Weg,false
+Eichengasse,de-DE,Gasse,false
+Eichenplatz,de-DE,Platz,false
+Eichenallee,de-DE,Allee,false
+Eichenring,de-DE,Ring,false
+Eichendamm,de-DE,Damm,false
+Eichensteig,de-DE,Steig,false
+Eichenpfad,de-DE,Pfad,false
+Eichenhof,de-DE,Hof,false
+Eichenkamp,de-DE,Kamp,false
+Erlenstraße,de-DE,Straße,false
+Erlenweg,de-DE,Weg,false
+Erlengasse,de-DE,Gasse,false
+Erlenplatz,de-DE,Platz,false
+Erlenallee,de-DE,Allee,false
+Erlenring,de-DE,Ring,false
+Erlendamm,de-DE,Damm,false
+Erlensteig,de-DE,Steig,false
+Erlenpfad,de-DE,Pfad,false
+Erlenhof,de-DE,Hof,false
+Erlenkamp,de-DE,Kamp,false
+Eschenstraße,de-DE,Straße,false
+Eschenweg,de-DE,Weg,false
+Eschengasse,de-DE,Gasse,false
+Eschenplatz,de-DE,Platz,false
+Eschenallee,de-DE,Allee,false
+Eschenring,de-DE,Ring,false
+Eschendamm,de-DE,Damm,false
+Eschensteig,de-DE,Steig,false
+Eschenpfad,de-DE,Pfad,false
+Eschenhof,de-DE,Hof,false
+Eschenkamp,de-DE,Kamp,false
+Fichtenstraße,de-DE,Straße,false
+Fichtenweg,de-DE,Weg,false
+Fichtengasse,de-DE,Gasse,false
+Fichtenplatz,de-DE,Platz,false
+Fichtenallee,de-DE,Allee,false
+Fichtenring,de-DE,Ring,false
+Fichtendamm,de-DE,Damm,false
+Fichtensteig,de-DE,Steig,false
+Fichtenpfad,de-DE,Pfad,false
+Fichtenhof,de-DE,Hof,false
+Fichtenkamp,de-DE,Kamp,false
+Föhrenstraße,de-DE,Straße,false
+Föhrenweg,de-DE,Weg,false
+Föhrengasse,de-DE,Gasse,false
+Föhrenplatz,de-DE,Platz,false
+Föhrenallee,de-DE,Allee,false
+Föhrenring,de-DE,Ring,false
+Föhrendamm,de-DE,Damm,false
+Föhrensteig,de-DE,Steig,false
+Föhrenpfad,de-DE,Pfad,false
+Föhrenhof,de-DE,Hof,false
+Föhrenkamp,de-DE,Kamp,false
+Kastanienstraße,de-DE,Straße,false
+Kastanienweg,de-DE,Weg,false
+Kastaniengasse,de-DE,Gasse,false
+Kastanienplatz,de-DE,Platz,false
+Kastanienallee,de-DE,Allee,false
+Kastanienring,de-DE,Ring,false
+Kastaniendamm,de-DE,Damm,false
+Kastaniensteig,de-DE,Steig,false
+Kastanienpfad,de-DE,Pfad,false
+Kastanienhof,de-DE,Hof,false
+Kastanienkamp,de-DE,Kamp,false
+Pappelstraße,de-DE,Straße,false
+Pappelweg,de-DE,Weg,false
+Pappelgasse,de-DE,Gasse,false
+Pappelplatz,de-DE,Platz,false
+Pappelallee,de-DE,Allee,false
+Pappelring,de-DE,Ring,false
+Pappeldamm,de-DE,Damm,false
+Pappelsteig,de-DE,Steig,false
+Pappelpfad,de-DE,Pfad,false
+Pappelhof,de-DE,Hof,false
+Pappelkamp,de-DE,Kamp,false
+Ulmenstraße,de-DE,Straße,false
+Ulmenweg,de-DE,Weg,false
+Ulmengasse,de-DE,Gasse,false
+Ulmenplatz,de-DE,Platz,false
+Ulmenallee,de-DE,Allee,false
+Ulmenring,de-DE,Ring,false
+Ulmendamm,de-DE,Damm,false
+Ulmensteig,de-DE,Steig,false
+Ulmenpfad,de-DE,Pfad,false
+Ulmenhof,de-DE,Hof,false
+Ulmenkamp,de-DE,Kamp,false
+Weidenstraße,de-DE,Straße,false
+Weidenweg,de-DE,Weg,false
+Weidengasse,de-DE,Gasse,false
+Weidenplatz,de-DE,Platz,false
+Weidenallee,de-DE,Allee,false
+Weidenring,de-DE,Ring,false
+Weidendamm,de-DE,Damm,false
+Weidensteig,de-DE,Steig,false
+Weidenpfad,de-DE,Pfad,false
+Weidenhof,de-DE,Hof,false
+Weidenkamp,de-DE,Kamp,false
+Kirschstraße,de-DE,Straße,false
+Kirschweg,de-DE,Weg,false
+Kirschgasse,de-DE,Gasse,false
+Kirschplatz,de-DE,Platz,false
+Kirschallee,de-DE,Allee,false
+Kirschring,de-DE,Ring,false
+Kirschdamm,de-DE,Damm,false
+Kirschsteig,de-DE,Steig,false
+Kirschpfad,de-DE,Pfad,false
+Kirschhof,de-DE,Hof,false
+Kirschkamp,de-DE,Kamp,false
+Apfelstraße,de-DE,Straße,false
+Apfelweg,de-DE,Weg,false
+Apfelgasse,de-DE,Gasse,false
+Apfelplatz,de-DE,Platz,false
+Apfelallee,de-DE,Allee,false
+Apfelring,de-DE,Ring,false
+Apfeldamm,de-DE,Damm,false
+Apfelsteig,de-DE,Steig,false
+Apfelpfad,de-DE,Pfad,false
+Apfelhof,de-DE,Hof,false
+Apfelkamp,de-DE,Kamp,false
+Nussstraße,de-DE,Straße,false
+Nussweg,de-DE,Weg,false
+Nussgasse,de-DE,Gasse,false
+Nussplatz,de-DE,Platz,false
+Nussallee,de-DE,Allee,false
+Nussring,de-DE,Ring,false
+Nussdamm,de-DE,Damm,false
+Nusssteig,de-DE,Steig,false
+Nusspfad,de-DE,Pfad,false
+Nusshof,de-DE,Hof,false
+Nusskamp,de-DE,Kamp,false
+Holunderstraße,de-DE,Straße,false
+Holunderweg,de-DE,Weg,false
+Holundergasse,de-DE,Gasse,false
+Holunderplatz,de-DE,Platz,false
+Holunderallee,de-DE,Allee,false
+Holunderring,de-DE,Ring,false
+Holunderdamm,de-DE,Damm,false
+Holundersteig,de-DE,Steig,false
+Holunderpfad,de-DE,Pfad,false
+Holunderhof,de-DE,Hof,false
+Holunderkamp,de-DE,Kamp,false
+Fliederstraße,de-DE,Straße,false
+Fliederweg,de-DE,Weg,false
+Fliedergasse,de-DE,Gasse,false
+Fliederplatz,de-DE,Platz,false
+Fliederallee,de-DE,Allee,false
+Fliederring,de-DE,Ring,false
+Fliederdamm,de-DE,Damm,false
+Fliedersteig,de-DE,Steig,false
+Fliederpfad,de-DE,Pfad,false
+Fliederhof,de-DE,Hof,false
+Fliederkamp,de-DE,Kamp,false
+Tulpenstraße,de-DE,Straße,false
+Tulpenweg,de-DE,Weg,false
+Tulpengasse,de-DE,Gasse,false
+Tulpenplatz,de-DE,Platz,false
+Tulpenallee,de-DE,Allee,false
+Tulpenring,de-DE,Ring,false
+Tulpendamm,de-DE,Damm,false
+Tulpensteig,de-DE,Steig,false
+Tulpenpfad,de-DE,Pfad,false
+Tulpenhof,de-DE,Hof,false
+Tulpenkamp,de-DE,Kamp,false
+Nelkenstraße,de-DE,Straße,false
+Nelkenweg,de-DE,Weg,false
+Nelkengasse,de-DE,Gasse,false
+Nelkenplatz,de-DE,Platz,false
+Nelkenallee,de-DE,Allee,false
+Nelkenring,de-DE,Ring,false
+Nelkendamm,de-DE,Damm,false
+Nelkensteig,de-DE,Steig,false
+Nelkenpfad,de-DE,Pfad,false
+Nelkenhof,de-DE,Hof,false
+Nelkenkamp,de-DE,Kamp,false
+Veilchenstraße,de-DE,Straße,false
+Veilchenweg,de-DE,Weg,false
+Veilchengasse,de-DE,Gasse,false
+Veilchenplatz,de-DE,Platz,false
+Veilchenallee,de-DE,Allee,false
+Veilchenring,de-DE,Ring,false
+Veilchendamm,de-DE,Damm,false
+Veilchensteig,de-DE,Steig,false
+Veilchenpfad,de-DE,Pfad,false
+Veilchenhof,de-DE,Hof,false
+Veilchenkamp,de-DE,Kamp,false
+Enzianstraße,de-DE,Straße,false
+Enzianweg,de-DE,Weg,false
+Enziangasse,de-DE,Gasse,false
+Enzianplatz,de-DE,Platz,false
+Enzianallee,de-DE,Allee,false
+Enzianring,de-DE,Ring,false
+Enziandamm,de-DE,Damm,false
+Enziansteig,de-DE,Steig,false
+Enzianpfad,de-DE,Pfad,false
+Enzianhof,de-DE,Hof,false
+Enziankamp,de-DE,Kamp,false
+Edelweissstraße,de-DE,Straße,false
+Edelweissweg,de-DE,Weg,false
+Edelweissgasse,de-DE,Gasse,false
+Edelweissplatz,de-DE,Platz,false
+Edelweissallee,de-DE,Allee,false
+Edelweissring,de-DE,Ring,false
+Edelweissdamm,de-DE,Damm,false
+Edelweisssteig,de-DE,Steig,false
+Edelweisspfad,de-DE,Pfad,false
+Edelweisshof,de-DE,Hof,false
+Edelweisskamp,de-DE,Kamp,false
+Alpenrosenstraße,de-DE,Straße,false
+Alpenrosenweg,de-DE,Weg,false
+Alpenrosengasse,de-DE,Gasse,false
+Alpenrosenplatz,de-DE,Platz,false
+Alpenrosenallee,de-DE,Allee,false
+Alpenrosenring,de-DE,Ring,false
+Alpenrosendamm,de-DE,Damm,false
+Alpenrosensteig,de-DE,Steig,false
+Alpenrosenpfad,de-DE,Pfad,false
+Alpenrosenhof,de-DE,Hof,false
+Alpenrosenkamp,de-DE,Kamp,false
+Farnstraße,de-DE,Straße,false
+Farnweg,de-DE,Weg,false
+Farngasse,de-DE,Gasse,false
+Farnplatz,de-DE,Platz,false
+Farnallee,de-DE,Allee,false
+Farnring,de-DE,Ring,false
+Farndamm,de-DE,Damm,false
+Farnsteig,de-DE,Steig,false
+Farnpfad,de-DE,Pfad,false
+Farnhof,de-DE,Hof,false
+Farnkamp,de-DE,Kamp,false
+Moosstraße,de-DE,Straße,false
+Moosweg,de-DE,Weg,false
+Moosgasse,de-DE,Gasse,false
+Moosplatz,de-DE,Platz,false
+Moosallee,de-DE,Allee,false
+Moosring,de-DE,Ring,false
+Moosdamm,de-DE,Damm,false
+Moossteig,de-DE,Steig,false
+Moospfad,de-DE,Pfad,false
+Mooshof,de-DE,Hof,false
+Mooskamp,de-DE,Kamp,false
+Heidestraße,de-DE,Straße,false
+Heideweg,de-DE,Weg,false
+Heidegasse,de-DE,Gasse,false
+Heideplatz,de-DE,Platz,false
+Heideallee,de-DE,Allee,false
+Heidering,de-DE,Ring,false
+Heidedamm,de-DE,Damm,false
+Heidesteig,de-DE,Steig,false
+Heidepfad,de-DE,Pfad,false
+Heidehof,de-DE,Hof,false
+Heidekamp,de-DE,Kamp,false
+Wiesenstraße,de-DE,Straße,false
+Wiesenweg,de-DE,Weg,false
+Wiesengasse,de-DE,Gasse,false
+Wiesenplatz,de-DE,Platz,false
+Wiesenallee,de-DE,Allee,false
+Wiesenring,de-DE,Ring,false
+Wiesendamm,de-DE,Damm,false
+Wiesensteig,de-DE,Steig,false
+Wiesenpfad,de-DE,Pfad,false
+Wiesenhof,de-DE,Hof,false
+Wiesenkamp,de-DE,Kamp,false
+Feldstraße,de-DE,Straße,false
+Feldweg,de-DE,Weg,false
+Feldgasse,de-DE,Gasse,false
+Feldplatz,de-DE,Platz,false
+Feldallee,de-DE,Allee,false
+Feldring,de-DE,Ring,false
+Felddamm,de-DE,Damm,false
+Feldsteig,de-DE,Steig,false
+Feldpfad,de-DE,Pfad,false
+Feldhof,de-DE,Hof,false
+Feldkamp,de-DE,Kamp,false
+Ackerstraße,de-DE,Straße,false
+Ackerweg,de-DE,Weg,false
+Ackergasse,de-DE,Gasse,false
+Ackerplatz,de-DE,Platz,false
+Ackerallee,de-DE,Allee,false
+Ackerring,de-DE,Ring,false
+Ackerdamm,de-DE,Damm,false
+Ackersteig,de-DE,Steig,false
+Ackerpfad,de-DE,Pfad,false
+Ackerhof,de-DE,Hof,false
+Ackerkamp,de-DE,Kamp,false
+Gartenstraße,de-DE,Straße,false
+Gartenweg,de-DE,Weg,false
+Gartengasse,de-DE,Gasse,false
+Gartenplatz,de-DE,Platz,false
+Gartenallee,de-DE,Allee,false
+Gartenring,de-DE,Ring,false
+Gartendamm,de-DE,Damm,false
+Gartensteig,de-DE,Steig,false
+Gartenpfad,de-DE,Pfad,false
+Gartenhof,de-DE,Hof,false
+Gartenkamp,de-DE,Kamp,false
+Mühlestraße,de-DE,Straße,false
+Mühleweg,de-DE,Weg,false
+Mühlegasse,de-DE,Gasse,false
+Mühleplatz,de-DE,Platz,false
+Mühleallee,de-DE,Allee,false
+Mühlering,de-DE,Ring,false
+Mühledamm,de-DE,Damm,false
+Mühlesteig,de-DE,Steig,false
+Mühlepfad,de-DE,Pfad,false
+Mühlehof,de-DE,Hof,false
+Mühlekamp,de-DE,Kamp,false
+Mühlenstraße,de-DE,Straße,false
+Mühlenweg,de-DE,Weg,false
+Mühlengasse,de-DE,Gasse,false
+Mühlenplatz,de-DE,Platz,false
+Mühlenallee,de-DE,Allee,false
+Mühlenring,de-DE,Ring,false
+Mühlendamm,de-DE,Damm,false
+Mühlensteig,de-DE,Steig,false
+Mühlenpfad,de-DE,Pfad,false
+Mühlenhof,de-DE,Hof,false
+Mühlenkamp,de-DE,Kamp,false
+Brunnenstraße,de-DE,Straße,false
+Brunnenweg,de-DE,Weg,false
+Brunnengasse,de-DE,Gasse,false
+Brunnenplatz,de-DE,Platz,false
+Brunnenallee,de-DE,Allee,false
+Brunnenring,de-DE,Ring,false
+Brunnendamm,de-DE,Damm,false
+Brunnensteig,de-DE,Steig,false
+Brunnenpfad,de-DE,Pfad,false
+Brunnenhof,de-DE,Hof,false
+Brunnenkamp,de-DE,Kamp,false
+Quellstraße,de-DE,Straße,false
+Quellweg,de-DE,Weg,false
+Quellgasse,de-DE,Gasse,false
+Quellplatz,de-DE,Platz,false
+Quellallee,de-DE,Allee,false
+Quellring,de-DE,Ring,false
+Quelldamm,de-DE,Damm,false
+Quellsteig,de-DE,Steig,false
+Quellpfad,de-DE,Pfad,false
+Quellhof,de-DE,Hof,false
+Quellkamp,de-DE,Kamp,false
+Bachstraße,de-DE,Straße,false
+Bachweg,de-DE,Weg,false
+Bachgasse,de-DE,Gasse,false
+Bachplatz,de-DE,Platz,false
+Bachallee,de-DE,Allee,false
+Bachring,de-DE,Ring,false
+Bachdamm,de-DE,Damm,false
+Bachsteig,de-DE,Steig,false
+Bachpfad,de-DE,Pfad,false
+Bachhof,de-DE,Hof,false
+Bachkamp,de-DE,Kamp,false
+Flussstraße,de-DE,Straße,false
+Flussweg,de-DE,Weg,false
+Flussgasse,de-DE,Gasse,false
+Flussplatz,de-DE,Platz,false
+Flussallee,de-DE,Allee,false
+Flussring,de-DE,Ring,false
+Flussdamm,de-DE,Damm,false
+Flusssteig,de-DE,Steig,false
+Flusspfad,de-DE,Pfad,false
+Flusshof,de-DE,Hof,false
+Flusskamp,de-DE,Kamp,false
+Teichstraße,de-DE,Straße,false
+Teichweg,de-DE,Weg,false
+Teichgasse,de-DE,Gasse,false
+Teichplatz,de-DE,Platz,false
+Teichallee,de-DE,Allee,false
+Teichring,de-DE,Ring,false
+Teichdamm,de-DE,Damm,false
+Teichsteig,de-DE,Steig,false
+Teichpfad,de-DE,Pfad,false
+Teichhof,de-DE,Hof,false
+Teichkamp,de-DE,Kamp,false
+Weiherstraße,de-DE,Straße,false
+Weiherweg,de-DE,Weg,false
+Weihergasse,de-DE,Gasse,false
+Weiherplatz,de-DE,Platz,false
+Weiherallee,de-DE,Allee,false
+Weiherring,de-DE,Ring,false
+Weiherdamm,de-DE,Damm,false
+Weihersteig,de-DE,Steig,false
+Weiherpfad,de-DE,Pfad,false
+Weiherhof,de-DE,Hof,false
+Weiherkamp,de-DE,Kamp,false
+Seestraße,de-DE,Straße,false
+Seeweg,de-DE,Weg,false
+Seegasse,de-DE,Gasse,false
+Seeplatz,de-DE,Platz,false
+Seeallee,de-DE,Allee,false
+Seering,de-DE,Ring,false
+Seedamm,de-DE,Damm,false
+Seesteig,de-DE,Steig,false
+Seepfad,de-DE,Pfad,false
+Seehof,de-DE,Hof,false
+Seekamp,de-DE,Kamp,false
+Uferstraße,de-DE,Straße,false
+Uferweg,de-DE,Weg,false
+Ufergasse,de-DE,Gasse,false
+Uferplatz,de-DE,Platz,false
+Uferallee,de-DE,Allee,false
+Uferring,de-DE,Ring,false
+Uferdamm,de-DE,Damm,false
+Ufersteig,de-DE,Steig,false
+Uferpfad,de-DE,Pfad,false
+Uferhof,de-DE,Hof,false
+Uferkamp,de-DE,Kamp,false
+Inselstraße,de-DE,Straße,false
+Inselweg,de-DE,Weg,false
+Inselgasse,de-DE,Gasse,false
+Inselplatz,de-DE,Platz,false
+Inselallee,de-DE,Allee,false
+Inselring,de-DE,Ring,false
+Inseldamm,de-DE,Damm,false
+Inselsteig,de-DE,Steig,false
+Inselpfad,de-DE,Pfad,false
+Inselhof,de-DE,Hof,false
+Inselkamp,de-DE,Kamp,false
+Brückenstraße,de-DE,Straße,false
+Brückenweg,de-DE,Weg,false
+Brückengasse,de-DE,Gasse,false
+Brückenplatz,de-DE,Platz,false
+Brückenallee,de-DE,Allee,false
+Brückenring,de-DE,Ring,false
+Brückendamm,de-DE,Damm,false
+Brückensteig,de-DE,Steig,false
+Brückenpfad,de-DE,Pfad,false
+Brückenhof,de-DE,Hof,false
+Brückenkamp,de-DE,Kamp,false
+Stegstraße,de-DE,Straße,false
+Stegweg,de-DE,Weg,false
+Steggasse,de-DE,Gasse,false
+Stegplatz,de-DE,Platz,false
+Stegallee,de-DE,Allee,false
+Stegring,de-DE,Ring,false
+Stegdamm,de-DE,Damm,false
+Stegsteig,de-DE,Steig,false
+Stegpfad,de-DE,Pfad,false
+Steghof,de-DE,Hof,false
+Stegkamp,de-DE,Kamp,false
+Bergstraße,de-DE,Straße,false
+Bergweg,de-DE,Weg,false
+Berggasse,de-DE,Gasse,false
+Bergplatz,de-DE,Platz,false
+Bergallee,de-DE,Allee,false
+Bergring,de-DE,Ring,false
+Bergdamm,de-DE,Damm,false
+Bergsteig,de-DE,Steig,false
+Bergpfad,de-DE,Pfad,false
+Berghof,de-DE,Hof,false
+Bergkamp,de-DE,Kamp,false
+Hügelstraße,de-DE,Straße,false
+Hügelweg,de-DE,Weg,false
+Hügelgasse,de-DE,Gasse,false
+Hügelplatz,de-DE,Platz,false
+Hügelallee,de-DE,Allee,false
+Hügelring,de-DE,Ring,false
+Hügeldamm,de-DE,Damm,false
+Hügelsteig,de-DE,Steig,false
+Hügelpfad,de-DE,Pfad,false
+Hügelhof,de-DE,Hof,false
+Hügelkamp,de-DE,Kamp,false
+Talstraße,de-DE,Straße,false
+Talweg,de-DE,Weg,false
+Talgasse,de-DE,Gasse,false
+Talplatz,de-DE,Platz,false
+Talallee,de-DE,Allee,false
+Talring,de-DE,Ring,false
+Taldamm,de-DE,Damm,false
+Talsteig,de-DE,Steig,false
+Talpfad,de-DE,Pfad,false
+Talhof,de-DE,Hof,false
+Talkamp,de-DE,Kamp,false
+Höhenstraße,de-DE,Straße,false
+Höhenweg,de-DE,Weg,false
+Höhengasse,de-DE,Gasse,false
+Höhenplatz,de-DE,Platz,false
+Höhenallee,de-DE,Allee,false
+Höhenring,de-DE,Ring,false
+Höhendamm,de-DE,Damm,false
+Höhensteig,de-DE,Steig,false
+Höhenpfad,de-DE,Pfad,false
+Höhenhof,de-DE,Hof,false
+Höhenkamp,de-DE,Kamp,false
+Hangstraße,de-DE,Straße,false
+Hangweg,de-DE,Weg,false
+Hanggasse,de-DE,Gasse,false
+Hangplatz,de-DE,Platz,false
+Hangallee,de-DE,Allee,false
+Hangring,de-DE,Ring,false
+Hangdamm,de-DE,Damm,false
+Hangsteig,de-DE,Steig,false
+Hangpfad,de-DE,Pfad,false
+Hanghof,de-DE,Hof,false
+Hangkamp,de-DE,Kamp,false
+Haldenstraße,de-DE,Straße,false
+Haldenweg,de-DE,Weg,false
+Haldengasse,de-DE,Gasse,false
+Haldenplatz,de-DE,Platz,false
+Haldenallee,de-DE,Allee,false
+Haldenring,de-DE,Ring,false
+Haldendamm,de-DE,Damm,false
+Haldensteig,de-DE,Steig,false
+Haldenpfad,de-DE,Pfad,false
+Haldenhof,de-DE,Hof,false
+Haldenkamp,de-DE,Kamp,false
+Felsstraße,de-DE,Straße,false
+Felsweg,de-DE,Weg,false
+Felsgasse,de-DE,Gasse,false
+Felsplatz,de-DE,Platz,false
+Felsallee,de-DE,Allee,false
+Felsring,de-DE,Ring,false
+Felsdamm,de-DE,Damm,false
+Felssteig,de-DE,Steig,false
+Felspfad,de-DE,Pfad,false
+Felshof,de-DE,Hof,false
+Felskamp,de-DE,Kamp,false
+Steinstraße,de-DE,Straße,false
+Steinweg,de-DE,Weg,false
+Steingasse,de-DE,Gasse,false
+Steinplatz,de-DE,Platz,false
+Steinallee,de-DE,Allee,false
+Steinring,de-DE,Ring,false
+Steindamm,de-DE,Damm,false
+Steinsteig,de-DE,Steig,false
+Steinpfad,de-DE,Pfad,false
+Steinhof,de-DE,Hof,false
+Steinkamp,de-DE,Kamp,false
+Kiesstraße,de-DE,Straße,false
+Kiesweg,de-DE,Weg,false
+Kiesgasse,de-DE,Gasse,false
+Kiesplatz,de-DE,Platz,false
+Kiesallee,de-DE,Allee,false
+Kiesring,de-DE,Ring,false
+Kiesdamm,de-DE,Damm,false
+Kiessteig,de-DE,Steig,false
+Kiespfad,de-DE,Pfad,false
+Kieshof,de-DE,Hof,false
+Kieskamp,de-DE,Kamp,false
+Sandstraße,de-DE,Straße,false
+Sandweg,de-DE,Weg,false
+Sandgasse,de-DE,Gasse,false
+Sandplatz,de-DE,Platz,false
+Sandallee,de-DE,Allee,false
+Sandring,de-DE,Ring,false
+Sanddamm,de-DE,Damm,false
+Sandsteig,de-DE,Steig,false
+Sandpfad,de-DE,Pfad,false
+Sandhof,de-DE,Hof,false
+Sandkamp,de-DE,Kamp,false
+Lehmstraße,de-DE,Straße,false
+Lehmweg,de-DE,Weg,false
+Lehmgasse,de-DE,Gasse,false
+Lehmplatz,de-DE,Platz,false
+Lehmallee,de-DE,Allee,false
+Lehmring,de-DE,Ring,false
+Lehmdamm,de-DE,Damm,false
+Lehmsteig,de-DE,Steig,false
+Lehmpfad,de-DE,Pfad,false
+Lehmhof,de-DE,Hof,false
+Lehmkamp,de-DE,Kamp,false
+Tonstraße,de-DE,Straße,false
+Tonweg,de-DE,Weg,false
+Tongasse,de-DE,Gasse,false
+Tonplatz,de-DE,Platz,false
+Tonallee,de-DE,Allee,false
+Tonring,de-DE,Ring,false
+Tondamm,de-DE,Damm,false
+Tonsteig,de-DE,Steig,false
+Tonpfad,de-DE,Pfad,false
+Tonhof,de-DE,Hof,false
+Tonkamp,de-DE,Kamp,false
+Sonnenstraße,de-DE,Straße,false
+Sonnenweg,de-DE,Weg,false
+Sonnengasse,de-DE,Gasse,false
+Sonnenplatz,de-DE,Platz,false
+Sonnenallee,de-DE,Allee,false
+Sonnenring,de-DE,Ring,false
+Sonnendamm,de-DE,Damm,false
+Sonnensteig,de-DE,Steig,false
+Sonnenpfad,de-DE,Pfad,false
+Sonnenhof,de-DE,Hof,false
+Sonnenkamp,de-DE,Kamp,false
+Mondstraße,de-DE,Straße,false
+Mondweg,de-DE,Weg,false
+Mondgasse,de-DE,Gasse,false
+Mondplatz,de-DE,Platz,false
+Mondallee,de-DE,Allee,false
+Mondring,de-DE,Ring,false
+Monddamm,de-DE,Damm,false
+Mondsteig,de-DE,Steig,false
+Mondpfad,de-DE,Pfad,false
+Mondhof,de-DE,Hof,false
+Mondkamp,de-DE,Kamp,false
+Sternenstraße,de-DE,Straße,false
+Sternenweg,de-DE,Weg,false
+Sternengasse,de-DE,Gasse,false
+Sternenplatz,de-DE,Platz,false
+Sternenallee,de-DE,Allee,false
+Sternenring,de-DE,Ring,false
+Sternendamm,de-DE,Damm,false
+Sternensteig,de-DE,Steig,false
+Sternenpfad,de-DE,Pfad,false
+Sternenhof,de-DE,Hof,false
+Sternenkamp,de-DE,Kamp,false
+Morgenstraße,de-DE,Straße,false
+Morgenweg,de-DE,Weg,false
+Morgengasse,de-DE,Gasse,false
+Morgenplatz,de-DE,Platz,false
+Morgenallee,de-DE,Allee,false
+Morgenring,de-DE,Ring,false
+Morgendamm,de-DE,Damm,false
+Morgensteig,de-DE,Steig,false
+Morgenpfad,de-DE,Pfad,false
+Morgenhof,de-DE,Hof,false
+Morgenkamp,de-DE,Kamp,false
+Abendstraße,de-DE,Straße,false
+Abendweg,de-DE,Weg,false
+Abendgasse,de-DE,Gasse,false
+Abendplatz,de-DE,Platz,false
+Abendallee,de-DE,Allee,false
+Abendring,de-DE,Ring,false
+Abenddamm,de-DE,Damm,false
+Abendsteig,de-DE,Steig,false
+Abendpfad,de-DE,Pfad,false
+Abendhof,de-DE,Hof,false
+Abendkamp,de-DE,Kamp,false
+Winterstraße,de-DE,Straße,false
+Winterweg,de-DE,Weg,false
+Wintergasse,de-DE,Gasse,false
+Winterplatz,de-DE,Platz,false
+Winterallee,de-DE,Allee,false
+Winterring,de-DE,Ring,false
+Winterdamm,de-DE,Damm,false
+Wintersteig,de-DE,Steig,false
+Winterpfad,de-DE,Pfad,false
+Winterhof,de-DE,Hof,false
+Winterkamp,de-DE,Kamp,false
+Sommerstraße,de-DE,Straße,false
+Sommerweg,de-DE,Weg,false
+Sommergasse,de-DE,Gasse,false
+Sommerplatz,de-DE,Platz,false
+Sommerallee,de-DE,Allee,false
+Sommerring,de-DE,Ring,false
+Sommerdamm,de-DE,Damm,false
+Sommersteig,de-DE,Steig,false
+Sommerpfad,de-DE,Pfad,false
+Sommerhof,de-DE,Hof,false
+Sommerkamp,de-DE,Kamp,false
+Frühlingsstraße,de-DE,Straße,false
+Frühlingsweg,de-DE,Weg,false
+Frühlingsgasse,de-DE,Gasse,false
+Frühlingsplatz,de-DE,Platz,false
+Frühlingsallee,de-DE,Allee,false
+Frühlingsring,de-DE,Ring,false
+Frühlingsdamm,de-DE,Damm,false
+Frühlingssteig,de-DE,Steig,false
+Frühlingspfad,de-DE,Pfad,false
+Frühlingshof,de-DE,Hof,false
+Frühlingskamp,de-DE,Kamp,false
+Herbststraße,de-DE,Straße,false
+Herbstweg,de-DE,Weg,false
+Herbstgasse,de-DE,Gasse,false
+Herbstplatz,de-DE,Platz,false
+Herbstallee,de-DE,Allee,false
+Herbstring,de-DE,Ring,false
+Herbstdamm,de-DE,Damm,false
+Herbststeig,de-DE,Steig,false
+Herbstpfad,de-DE,Pfad,false
+Herbsthof,de-DE,Hof,false
+Herbstkamp,de-DE,Kamp,false
+Nordstraße,de-DE,Straße,false
+Nordweg,de-DE,Weg,false
+Nordgasse,de-DE,Gasse,false
+Nordplatz,de-DE,Platz,false
+Nordallee,de-DE,Allee,false
+Nordring,de-DE,Ring,false
+Norddamm,de-DE,Damm,false
+Nordsteig,de-DE,Steig,false
+Nordpfad,de-DE,Pfad,false
+Nordhof,de-DE,Hof,false
+Nordkamp,de-DE,Kamp,false
+Südstraße,de-DE,Straße,false
+Südweg,de-DE,Weg,false
+Südgasse,de-DE,Gasse,false
+Südplatz,de-DE,Platz,false
+Südallee,de-DE,Allee,false
+Südring,de-DE,Ring,false
+Süddamm,de-DE,Damm,false
+Südsteig,de-DE,Steig,false
+Südpfad,de-DE,Pfad,false
+Südhof,de-DE,Hof,false
+Südkamp,de-DE,Kamp,false
+Oststraße,de-DE,Straße,false
+Ostweg,de-DE,Weg,false
+Ostgasse,de-DE,Gasse,false
+Ostplatz,de-DE,Platz,false
+Ostallee,de-DE,Allee,false
+Ostring,de-DE,Ring,false
+Ostdamm,de-DE,Damm,false
+Oststeig,de-DE,Steig,false
+Ostpfad,de-DE,Pfad,false
+Osthof,de-DE,Hof,false
+Ostkamp,de-DE,Kamp,false
+Weststraße,de-DE,Straße,false
+Westweg,de-DE,Weg,false
+Westgasse,de-DE,Gasse,false
+Westplatz,de-DE,Platz,false
+Westallee,de-DE,Allee,false
+Westring,de-DE,Ring,false
+Westdamm,de-DE,Damm,false
+Weststeig,de-DE,Steig,false
+Westpfad,de-DE,Pfad,false
+Westhof,de-DE,Hof,false
+Westkamp,de-DE,Kamp,false
+Kirchstraße,de-DE,Straße,true
+Kirchweg,de-DE,Weg,false
+Kirchgasse,de-DE,Gasse,true
+Kirchplatz,de-DE,Platz,false
+Kirchallee,de-DE,Allee,false
+Kirchring,de-DE,Ring,false
+Kirchdamm,de-DE,Damm,false
+Kirchsteig,de-DE,Steig,false
+Kirchpfad,de-DE,Pfad,false
+Kirchhof,de-DE,Hof,false
+Kirchkamp,de-DE,Kamp,false
+Kapellenstraße,de-DE,Straße,false
+Kapellenweg,de-DE,Weg,false
+Kapellengasse,de-DE,Gasse,false
+Kapellenplatz,de-DE,Platz,false
+Kapellenallee,de-DE,Allee,false
+Kapellenring,de-DE,Ring,false
+Kapellendamm,de-DE,Damm,false
+Kapellensteig,de-DE,Steig,false
+Kapellenpfad,de-DE,Pfad,false
+Kapellenhof,de-DE,Hof,false
+Kapellenkamp,de-DE,Kamp,false
+Klosterstraße,de-DE,Straße,false
+Klosterweg,de-DE,Weg,false
+Klostergasse,de-DE,Gasse,false
+Klosterplatz,de-DE,Platz,false
+Klosterallee,de-DE,Allee,false
+Klosterring,de-DE,Ring,false
+Klosterdamm,de-DE,Damm,false
+Klostersteig,de-DE,Steig,false
+Klosterpfad,de-DE,Pfad,false
+Klosterhof,de-DE,Hof,false
+Klosterkamp,de-DE,Kamp,false
+Schulstraße,de-DE,Straße,true
+Schulweg,de-DE,Weg,false
+Schulgasse,de-DE,Gasse,false
+Schulplatz,de-DE,Platz,false
+Schulallee,de-DE,Allee,false
+Schulring,de-DE,Ring,false
+Schuldamm,de-DE,Damm,false
+Schulsteig,de-DE,Steig,false
+Schulpfad,de-DE,Pfad,false
+Schulhof,de-DE,Hof,false
+Schulkamp,de-DE,Kamp,false
+Bahnstraße,de-DE,Straße,false
+Bahnweg,de-DE,Weg,false
+Bahngasse,de-DE,Gasse,false
+Bahnplatz,de-DE,Platz,false
+Bahnallee,de-DE,Allee,false
+Bahnring,de-DE,Ring,false
+Bahndamm,de-DE,Damm,false
+Bahnsteig,de-DE,Steig,false
+Bahnpfad,de-DE,Pfad,false
+Bahnhof,de-DE,Hof,false
+Bahnkamp,de-DE,Kamp,false
+Poststraße,de-DE,Straße,false
+Postweg,de-DE,Weg,false
+Postgasse,de-DE,Gasse,false
+Postplatz,de-DE,Platz,false
+Postallee,de-DE,Allee,false
+Postring,de-DE,Ring,false
+Postdamm,de-DE,Damm,false
+Poststeig,de-DE,Steig,false
+Postpfad,de-DE,Pfad,false
+Posthof,de-DE,Hof,false
+Postkamp,de-DE,Kamp,false
+Marktstraße,de-DE,Straße,false
+Marktweg,de-DE,Weg,false
+Marktgasse,de-DE,Gasse,false
+Marktplatz,de-DE,Platz,false
+Marktallee,de-DE,Allee,false
+Marktring,de-DE,Ring,false
+Marktdamm,de-DE,Damm,false
+Marktsteig,de-DE,Steig,false
+Marktpfad,de-DE,Pfad,false
+Markthof,de-DE,Hof,false
+Marktkamp,de-DE,Kamp,false
+Rathausstraße,de-DE,Straße,false
+Rathausweg,de-DE,Weg,false
+Rathausgasse,de-DE,Gasse,false
+Rathausplatz,de-DE,Platz,false
+Rathausallee,de-DE,Allee,false
+Rathausring,de-DE,Ring,false
+Rathausdamm,de-DE,Damm,false
+Rathaussteig,de-DE,Steig,false
+Rathauspfad,de-DE,Pfad,false
+Rathaushof,de-DE,Hof,false
+Rathauskamp,de-DE,Kamp,false
+Zunftstraße,de-DE,Straße,false
+Zunftweg,de-DE,Weg,false
+Zunftgasse,de-DE,Gasse,false
+Zunftplatz,de-DE,Platz,false
+Zunftallee,de-DE,Allee,false
+Zunftring,de-DE,Ring,false
+Zunftdamm,de-DE,Damm,false
+Zunftsteig,de-DE,Steig,false
+Zunftpfad,de-DE,Pfad,false
+Zunfthof,de-DE,Hof,false
+Zunftkamp,de-DE,Kamp,false
+Schmiedestraße,de-DE,Straße,false
+Schmiedeweg,de-DE,Weg,false
+Schmiedegasse,de-DE,Gasse,false
+Schmiedeplatz,de-DE,Platz,false
+Schmiedeallee,de-DE,Allee,false
+Schmiedering,de-DE,Ring,false
+Schmiededamm,de-DE,Damm,false
+Schmiedesteig,de-DE,Steig,false
+Schmiedepfad,de-DE,Pfad,false
+Schmiedehof,de-DE,Hof,false
+Schmiedekamp,de-DE,Kamp,false
+Weberstraße,de-DE,Straße,false
+Weberweg,de-DE,Weg,false
+Webergasse,de-DE,Gasse,false
+Weberplatz,de-DE,Platz,false
+Weberallee,de-DE,Allee,false
+Weberring,de-DE,Ring,false
+Weberdamm,de-DE,Damm,false
+Webersteig,de-DE,Steig,false
+Weberpfad,de-DE,Pfad,false
+Weberhof,de-DE,Hof,false
+Weberkamp,de-DE,Kamp,false
+Müllerstraße,de-DE,Straße,false
+Müllerweg,de-DE,Weg,false
+Müllergasse,de-DE,Gasse,false
+Müllerplatz,de-DE,Platz,false
+Müllerallee,de-DE,Allee,false
+Müllerring,de-DE,Ring,false
+Müllerdamm,de-DE,Damm,false
+Müllersteig,de-DE,Steig,false
+Müllerpfad,de-DE,Pfad,false
+Müllerhof,de-DE,Hof,false
+Müllerkamp,de-DE,Kamp,false
+Gerberstraße,de-DE,Straße,false
+Gerberweg,de-DE,Weg,false
+Gerbergasse,de-DE,Gasse,false
+Gerberplatz,de-DE,Platz,false
+Gerberallee,de-DE,Allee,false
+Gerberring,de-DE,Ring,false
+Gerberdamm,de-DE,Damm,false
+Gerbersteig,de-DE,Steig,false
+Gerberpfad,de-DE,Pfad,false
+Gerberhof,de-DE,Hof,false
+Gerberkamp,de-DE,Kamp,false
+Färberstraße,de-DE,Straße,false
+Färberweg,de-DE,Weg,false
+Färbergasse,de-DE,Gasse,false
+Färberplatz,de-DE,Platz,false
+Färberallee,de-DE,Allee,false
+Färberring,de-DE,Ring,false
+Färberdamm,de-DE,Damm,false
+Färbersteig,de-DE,Steig,false
+Färberpfad,de-DE,Pfad,false
+Färberhof,de-DE,Hof,false
+Färberkamp,de-DE,Kamp,false
+Bäckerstraße,de-DE,Straße,false
+Bäckerweg,de-DE,Weg,false
+Bäckergasse,de-DE,Gasse,false
+Bäckerplatz,de-DE,Platz,false
+Bäckerallee,de-DE,Allee,false
+Bäckerring,de-DE,Ring,false
+Bäckerdamm,de-DE,Damm,false
+Bäckersteig,de-DE,Steig,false
+Bäckerpfad,de-DE,Pfad,false
+Bäckerhof,de-DE,Hof,false
+Bäckerkamp,de-DE,Kamp,false
+Metzgerstraße,de-DE,Straße,false
+Metzgerweg,de-DE,Weg,false
+Metzgergasse,de-DE,Gasse,false
+Metzgerplatz,de-DE,Platz,false
+Metzgerallee,de-DE,Allee,false
+Metzgerring,de-DE,Ring,false
+Metzgerdamm,de-DE,Damm,false
+Metzgersteig,de-DE,Steig,false
+Metzgerpfad,de-DE,Pfad,false
+Metzgerhof,de-DE,Hof,false
+Metzgerkamp,de-DE,Kamp,false
+Sattlerstraße,de-DE,Straße,false
+Sattlerweg,de-DE,Weg,false
+Sattlergasse,de-DE,Gasse,false
+Sattlerplatz,de-DE,Platz,false
+Sattlerallee,de-DE,Allee,false
+Sattlerring,de-DE,Ring,false
+Sattlerdamm,de-DE,Damm,false
+Sattlersteig,de-DE,Steig,false
+Sattlerpfad,de-DE,Pfad,false
+Sattlerhof,de-DE,Hof,false
+Sattlerkamp,de-DE,Kamp,false
+Wagnerstraße,de-DE,Straße,false
+Wagnerweg,de-DE,Weg,false
+Wagnergasse,de-DE,Gasse,false
+Wagnerplatz,de-DE,Platz,false
+Wagnerallee,de-DE,Allee,false
+Wagnerring,de-DE,Ring,false
+Wagnerdamm,de-DE,Damm,false
+Wagnersteig,de-DE,Steig,false
+Wagnerpfad,de-DE,Pfad,false
+Wagnerhof,de-DE,Hof,false
+Wagnerkamp,de-DE,Kamp,false
+Ziegelstraße,de-DE,Straße,false
+Ziegelweg,de-DE,Weg,false
+Ziegelgasse,de-DE,Gasse,false
+Ziegelplatz,de-DE,Platz,false
+Ziegelallee,de-DE,Allee,false
+Ziegelring,de-DE,Ring,false
+Ziegeldamm,de-DE,Damm,false
+Ziegelsteig,de-DE,Steig,false
+Ziegelpfad,de-DE,Pfad,false
+Ziegelhof,de-DE,Hof,false
+Ziegelkamp,de-DE,Kamp,false
+Kalkstraße,de-DE,Straße,false
+Kalkweg,de-DE,Weg,false
+Kalkgasse,de-DE,Gasse,false
+Kalkplatz,de-DE,Platz,false
+Kalkallee,de-DE,Allee,false
+Kalkring,de-DE,Ring,false
+Kalkdamm,de-DE,Damm,false
+Kalksteig,de-DE,Steig,false
+Kalkpfad,de-DE,Pfad,false
+Kalkhof,de-DE,Hof,false
+Kalkkamp,de-DE,Kamp,false
+Salzstraße,de-DE,Straße,false
+Salzweg,de-DE,Weg,false
+Salzgasse,de-DE,Gasse,false
+Salzplatz,de-DE,Platz,false
+Salzallee,de-DE,Allee,false
+Salzring,de-DE,Ring,false
+Salzdamm,de-DE,Damm,false
+Salzsteig,de-DE,Steig,false
+Salzpfad,de-DE,Pfad,false
+Salzhof,de-DE,Hof,false
+Salzkamp,de-DE,Kamp,false
+Eisenstraße,de-DE,Straße,false
+Eisenweg,de-DE,Weg,false
+Eisengasse,de-DE,Gasse,false
+Eisenplatz,de-DE,Platz,false
+Eisenallee,de-DE,Allee,false
+Eisenring,de-DE,Ring,false
+Eisendamm,de-DE,Damm,false
+Eisensteig,de-DE,Steig,false
+Eisenpfad,de-DE,Pfad,false
+Eisenhof,de-DE,Hof,false
+Eisenkamp,de-DE,Kamp,false
+Kupferstraße,de-DE,Straße,false
+Kupferweg,de-DE,Weg,false
+Kupfergasse,de-DE,Gasse,false
+Kupferplatz,de-DE,Platz,false
+Kupferallee,de-DE,Allee,false
+Kupferring,de-DE,Ring,false
+Kupferdamm,de-DE,Damm,false
+Kupfersteig,de-DE,Steig,false
+Kupferpfad,de-DE,Pfad,false
+Kupferhof,de-DE,Hof,false
+Kupferkamp,de-DE,Kamp,false
+Silberstraße,de-DE,Straße,false
+Silberweg,de-DE,Weg,false
+Silbergasse,de-DE,Gasse,false
+Silberplatz,de-DE,Platz,false
+Silberallee,de-DE,Allee,false
+Silberring,de-DE,Ring,false
+Silberdamm,de-DE,Damm,false
+Silbersteig,de-DE,Steig,false
+Silberpfad,de-DE,Pfad,false
+Silberhof,de-DE,Hof,false
+Silberkamp,de-DE,Kamp,false
+Goldstraße,de-DE,Straße,false
+Goldweg,de-DE,Weg,false
+Goldgasse,de-DE,Gasse,false
+Goldplatz,de-DE,Platz,false
+Goldallee,de-DE,Allee,false
+Goldring,de-DE,Ring,false
+Golddamm,de-DE,Damm,false
+Goldsteig,de-DE,Steig,false
+Goldpfad,de-DE,Pfad,false
+Goldhof,de-DE,Hof,false
+Goldkamp,de-DE,Kamp,false
+Bärenstraße,de-DE,Straße,false
+Bärenweg,de-DE,Weg,false
+Bärengasse,de-DE,Gasse,false
+Bärenplatz,de-DE,Platz,false
+Bärenallee,de-DE,Allee,false
+Bärenring,de-DE,Ring,false
+Bärendamm,de-DE,Damm,false
+Bärensteig,de-DE,Steig,false
+Bärenpfad,de-DE,Pfad,false
+Bärenhof,de-DE,Hof,false
+Bärenkamp,de-DE,Kamp,false
+Hirschstraße,de-DE,Straße,false
+Hirschweg,de-DE,Weg,false
+Hirschgasse,de-DE,Gasse,false
+Hirschplatz,de-DE,Platz,false
+Hirschallee,de-DE,Allee,false
+Hirschring,de-DE,Ring,false
+Hirschdamm,de-DE,Damm,false
+Hirschsteig,de-DE,Steig,false
+Hirschpfad,de-DE,Pfad,false
+Hirschhof,de-DE,Hof,false
+Hirschkamp,de-DE,Kamp,false
+Rehstraße,de-DE,Straße,false
+Rehweg,de-DE,Weg,false
+Rehgasse,de-DE,Gasse,false
+Rehplatz,de-DE,Platz,false
+Rehallee,de-DE,Allee,false
+Rehring,de-DE,Ring,false
+Rehdamm,de-DE,Damm,false
+Rehsteig,de-DE,Steig,false
+Rehpfad,de-DE,Pfad,false
+Rehhof,de-DE,Hof,false
+Rehkamp,de-DE,Kamp,false
+Fuchsstraße,de-DE,Straße,false
+Fuchsweg,de-DE,Weg,false
+Fuchsgasse,de-DE,Gasse,false
+Fuchsplatz,de-DE,Platz,false
+Fuchsallee,de-DE,Allee,false
+Fuchsring,de-DE,Ring,false
+Fuchsdamm,de-DE,Damm,false
+Fuchssteig,de-DE,Steig,false
+Fuchspfad,de-DE,Pfad,false
+Fuchshof,de-DE,Hof,false
+Fuchskamp,de-DE,Kamp,false
+Hasenstraße,de-DE,Straße,false
+Hasenweg,de-DE,Weg,false
+Hasengasse,de-DE,Gasse,false
+Hasenplatz,de-DE,Platz,false
+Hasenallee,de-DE,Allee,false
+Hasenring,de-DE,Ring,false
+Hasendamm,de-DE,Damm,false
+Hasensteig,de-DE,Steig,false
+Hasenpfad,de-DE,Pfad,false
+Hasenhof,de-DE,Hof,false
+Hasenkamp,de-DE,Kamp,false
+Adlerstraße,de-DE,Straße,false
+Adlerweg,de-DE,Weg,false
+Adlergasse,de-DE,Gasse,false
+Adlerplatz,de-DE,Platz,false
+Adlerallee,de-DE,Allee,false
+Adlerring,de-DE,Ring,false
+Adlerdamm,de-DE,Damm,false
+Adlersteig,de-DE,Steig,false
+Adlerpfad,de-DE,Pfad,false
+Adlerhof,de-DE,Hof,false
+Adlerkamp,de-DE,Kamp,false
+Falkenstraße,de-DE,Straße,false
+Falkenweg,de-DE,Weg,false
+Falkengasse,de-DE,Gasse,false
+Falkenplatz,de-DE,Platz,false
+Falkenallee,de-DE,Allee,false
+Falkenring,de-DE,Ring,false
+Falkendamm,de-DE,Damm,false
+Falkensteig,de-DE,Steig,false
+Falkenpfad,de-DE,Pfad,false
+Falkenhof,de-DE,Hof,false
+Falkenkamp,de-DE,Kamp,false
+Lerchenstraße,de-DE,Straße,false
+Lerchenweg,de-DE,Weg,false
+Lerchengasse,de-DE,Gasse,false
+Lerchenplatz,de-DE,Platz,false
+Lerchenallee,de-DE,Allee,false
+Lerchenring,de-DE,Ring,false
+Lerchendamm,de-DE,Damm,false
+Lerchensteig,de-DE,Steig,false
+Lerchenpfad,de-DE,Pfad,false
+Lerchenhof,de-DE,Hof,false
+Lerchenkamp,de-DE,Kamp,false
+Amselstraße,de-DE,Straße,false
+Amselweg,de-DE,Weg,false
+Amselgasse,de-DE,Gasse,false
+Amselplatz,de-DE,Platz,false
+Amselallee,de-DE,Allee,false
+Amselring,de-DE,Ring,false
+Amseldamm,de-DE,Damm,false
+Amselsteig,de-DE,Steig,false
+Amselpfad,de-DE,Pfad,false
+Amselhof,de-DE,Hof,false
+Amselkamp,de-DE,Kamp,false
+Drosselstraße,de-DE,Straße,false
+Drosselweg,de-DE,Weg,false
+Drosselgasse,de-DE,Gasse,false
+Drosselplatz,de-DE,Platz,false
+Drosselallee,de-DE,Allee,false
+Drosselring,de-DE,Ring,false
+Drosseldamm,de-DE,Damm,false
+Drosselsteig,de-DE,Steig,false
+Drosselpfad,de-DE,Pfad,false
+Drosselhof,de-DE,Hof,false
+Drosselkamp,de-DE,Kamp,false
+Finkenstraße,de-DE,Straße,false
+Finkenweg,de-DE,Weg,false
+Finkengasse,de-DE,Gasse,false
+Finkenplatz,de-DE,Platz,false
+Finkenallee,de-DE,Allee,false
+Finkenring,de-DE,Ring,false
+Finkendamm,de-DE,Damm,false
+Finkensteig,de-DE,Steig,false
+Finkenpfad,de-DE,Pfad,false
+Finkenhof,de-DE,Hof,false
+Finkenkamp,de-DE,Kamp,false
+Meisenstraße,de-DE,Straße,false
+Meisenweg,de-DE,Weg,false
+Meisengasse,de-DE,Gasse,false
+Meisenplatz,de-DE,Platz,false
+Meisenallee,de-DE,Allee,false
+Meisenring,de-DE,Ring,false
+Meisendamm,de-DE,Damm,false
+Meisensteig,de-DE,Steig,false
+Meisenpfad,de-DE,Pfad,false
+Meisenhof,de-DE,Hof,false
+Meisenkamp,de-DE,Kamp,false
+Schwalbenstraße,de-DE,Straße,false
+Schwalbenweg,de-DE,Weg,false
+Schwalbengasse,de-DE,Gasse,false
+Schwalbenplatz,de-DE,Platz,false
+Schwalbenallee,de-DE,Allee,false
+Schwalbenring,de-DE,Ring,false
+Schwalbendamm,de-DE,Damm,false
+Schwalbensteig,de-DE,Steig,false
+Schwalbenpfad,de-DE,Pfad,false
+Schwalbenhof,de-DE,Hof,false
+Schwalbenkamp,de-DE,Kamp,false
+Storchenstraße,de-DE,Straße,false
+Storchenweg,de-DE,Weg,false
+Storchengasse,de-DE,Gasse,false
+Storchenplatz,de-DE,Platz,false
+Storchenallee,de-DE,Allee,false
+Storchenring,de-DE,Ring,false
+Storchendamm,de-DE,Damm,false
+Storchensteig,de-DE,Steig,false
+Storchenpfad,de-DE,Pfad,false
+Storchenhof,de-DE,Hof,false
+Storchenkamp,de-DE,Kamp,false
+Reiherstraße,de-DE,Straße,false
+Reiherweg,de-DE,Weg,false
+Reihergasse,de-DE,Gasse,false
+Reiherplatz,de-DE,Platz,false
+Reiherallee,de-DE,Allee,false
+Reiherring,de-DE,Ring,false
+Reiherdamm,de-DE,Damm,false
+Reihersteig,de-DE,Steig,false
+Reiherpfad,de-DE,Pfad,false
+Reiherhof,de-DE,Hof,false
+Reiherkamp,de-DE,Kamp,false
+Schwanenstraße,de-DE,Straße,false
+Schwanenweg,de-DE,Weg,false
+Schwanengasse,de-DE,Gasse,false
+Schwanenplatz,de-DE,Platz,false
+Schwanenallee,de-DE,Allee,false
+Schwanenring,de-DE,Ring,false
+Schwanendamm,de-DE,Damm,false
+Schwanensteig,de-DE,Steig,false
+Schwanenpfad,de-DE,Pfad,false
+Schwanenhof,de-DE,Hof,false
+Schwanenkamp,de-DE,Kamp,false
+Entenstraße,de-DE,Straße,false
+Entenweg,de-DE,Weg,false
+Entengasse,de-DE,Gasse,false
+Entenplatz,de-DE,Platz,false
+Entenallee,de-DE,Allee,false
+Entenring,de-DE,Ring,false
+Entendamm,de-DE,Damm,false
+Entensteig,de-DE,Steig,false
+Entenpfad,de-DE,Pfad,false
+Entenhof,de-DE,Hof,false
+Entenkamp,de-DE,Kamp,false
+Forellenstraße,de-DE,Straße,false
+Forellenweg,de-DE,Weg,false
+Forellengasse,de-DE,Gasse,false
+Forellenplatz,de-DE,Platz,false
+Forellenallee,de-DE,Allee,false
+Forellenring,de-DE,Ring,false
+Forellendamm,de-DE,Damm,false
+Forellensteig,de-DE,Steig,false
+Forellenpfad,de-DE,Pfad,false
+Forellenhof,de-DE,Hof,false
+Forellenkamp,de-DE,Kamp,false
+Hechtstraße,de-DE,Straße,false
+Hechtweg,de-DE,Weg,false
+Hechtgasse,de-DE,Gasse,false
+Hechtplatz,de-DE,Platz,false
+Hechtallee,de-DE,Allee,false
+Hechtring,de-DE,Ring,false
+Hechtdamm,de-DE,Damm,false
+Hechtsteig,de-DE,Steig,false
+Hechtpfad,de-DE,Pfad,false
+Hechthof,de-DE,Hof,false
+Hechtkamp,de-DE,Kamp,false
+Bienenstraße,de-DE,Straße,false
+Bienenweg,de-DE,Weg,false
+Bienengasse,de-DE,Gasse,false
+Bienenplatz,de-DE,Platz,false
+Bienenallee,de-DE,Allee,false
+Bienenring,de-DE,Ring,false
+Bienendamm,de-DE,Damm,false
+Bienensteig,de-DE,Steig,false
+Bienenpfad,de-DE,Pfad,false
+Bienenhof,de-DE,Hof,false
+Bienenkamp,de-DE,Kamp,false
+Schmetterlingsstraße,de-DE,Straße,false
+Schmetterlingsweg,de-DE,Weg,false
+Schmetterlingsgasse,de-DE,Gasse,false
+Schmetterlingsplatz,de-DE,Platz,false
+Schmetterlingsallee,de-DE,Allee,false
+Schmetterlingsring,de-DE,Ring,false
+Schmetterlingsdamm,de-DE,Damm,false
+Schmetterlingssteig,de-DE,Steig,false
+Schmetterlingspfad,de-DE,Pfad,false
+Schmetterlingshof,de-DE,Hof,false
+Schmetterlingskamp,de-DE,Kamp,false
+Rebstockstraße,de-DE,Straße,false
+Rebstockweg,de-DE,Weg,false
+Rebstockgasse,de-DE,Gasse,false
+Rebstockplatz,de-DE,Platz,false
+Rebstockallee,de-DE,Allee,false
+Rebstockring,de-DE,Ring,false
+Rebstockdamm,de-DE,Damm,false
+Rebstocksteig,de-DE,Steig,false
+Rebstockpfad,de-DE,Pfad,false
+Rebstockhof,de-DE,Hof,false
+Rebstockkamp,de-DE,Kamp,false
+Rebenstraße,de-DE,Straße,false
+Rebenweg,de-DE,Weg,false
+Rebengasse,de-DE,Gasse,false
+Rebenplatz,de-DE,Platz,false
+Rebenallee,de-DE,Allee,false
+Rebenring,de-DE,Ring,false
+Rebendamm,de-DE,Damm,false
+Rebensteig,de-DE,Steig,false
+Rebenpfad,de-DE,Pfad,false
+Rebenhof,de-DE,Hof,false
+Rebenkamp,de-DE,Kamp,false
+Traubenstraße,de-DE,Straße,false
+Traubenweg,de-DE,Weg,false
+Traubengasse,de-DE,Gasse,false
+Traubenplatz,de-DE,Platz,false
+Traubenallee,de-DE,Allee,false
+Traubenring,de-DE,Ring,false
+Traubendamm,de-DE,Damm,false
+Traubensteig,de-DE,Steig,false
+Traubenpfad,de-DE,Pfad,false
+Traubenhof,de-DE,Hof,false
+Traubenkamp,de-DE,Kamp,false
+Hopfenstraße,de-DE,Straße,false
+Hopfenweg,de-DE,Weg,false
+Hopfengasse,de-DE,Gasse,false
+Hopfenplatz,de-DE,Platz,false
+Hopfenallee,de-DE,Allee,false
+Hopfenring,de-DE,Ring,false
+Hopfendamm,de-DE,Damm,false
+Hopfensteig,de-DE,Steig,false
+Hopfenpfad,de-DE,Pfad,false
+Hopfenhof,de-DE,Hof,false
+Hopfenkamp,de-DE,Kamp,false
+Kornstraße,de-DE,Straße,false
+Kornweg,de-DE,Weg,false
+Korngasse,de-DE,Gasse,false
+Kornplatz,de-DE,Platz,false
+Kornallee,de-DE,Allee,false
+Kornring,de-DE,Ring,false
+Korndamm,de-DE,Damm,false
+Kornsteig,de-DE,Steig,false
+Kornpfad,de-DE,Pfad,false
+Kornhof,de-DE,Hof,false
+Kornkamp,de-DE,Kamp,false
+Roggenstraße,de-DE,Straße,false
+Roggenweg,de-DE,Weg,false
+Roggengasse,de-DE,Gasse,false
+Roggenplatz,de-DE,Platz,false
+Roggenallee,de-DE,Allee,false
+Roggenring,de-DE,Ring,false
+Roggendamm,de-DE,Damm,false
+Roggensteig,de-DE,Steig,false
+Roggenpfad,de-DE,Pfad,false
+Roggenhof,de-DE,Hof,false
+Roggenkamp,de-DE,Kamp,false
+Haferstraße,de-DE,Straße,false
+Haferweg,de-DE,Weg,false
+Hafergasse,de-DE,Gasse,false
+Haferplatz,de-DE,Platz,false
+Haferallee,de-DE,Allee,false
+Haferring,de-DE,Ring,false
+Haferdamm,de-DE,Damm,false
+Hafersteig,de-DE,Steig,false
+Haferpfad,de-DE,Pfad,false
+Haferhof,de-DE,Hof,false
+Haferkamp,de-DE,Kamp,false
+Gerstenstraße,de-DE,Straße,false
+Gerstenweg,de-DE,Weg,false
+Gerstengasse,de-DE,Gasse,false
+Gerstenplatz,de-DE,Platz,false
+Gerstenallee,de-DE,Allee,false
+Gerstenring,de-DE,Ring,false
+Gerstendamm,de-DE,Damm,false
+Gerstensteig,de-DE,Steig,false
+Gerstenpfad,de-DE,Pfad,false
+Gerstenhof,de-DE,Hof,false
+Gerstenkamp,de-DE,Kamp,false
+Flachsstraße,de-DE,Straße,false
+Flachsweg,de-DE,Weg,false
+Flachsgasse,de-DE,Gasse,false
+Flachsplatz,de-DE,Platz,false
+Flachsallee,de-DE,Allee,false
+Flachsring,de-DE,Ring,false
+Flachsdamm,de-DE,Damm,false
+Flachssteig,de-DE,Steig,false
+Flachspfad,de-DE,Pfad,false
+Flachshof,de-DE,Hof,false
+Flachskamp,de-DE,Kamp,false
+Rue des Tilleuls,fr,Rue,false
+Chemin des Tilleuls,fr,Chemin,false
+Avenue des Tilleuls,fr,Avenue,false
+Route des Tilleuls,fr,Route,false
+Impasse des Tilleuls,fr,Impasse,false
+Sentier des Tilleuls,fr,Sentier,false
+Allée des Tilleuls,fr,Allée,false
+Place des Tilleuls,fr,Place,false
+Promenade des Tilleuls,fr,Promenade,false
+Rue des Bouleaux,fr,Rue,false
+Chemin des Bouleaux,fr,Chemin,false
+Avenue des Bouleaux,fr,Avenue,false
+Route des Bouleaux,fr,Route,false
+Impasse des Bouleaux,fr,Impasse,false
+Sentier des Bouleaux,fr,Sentier,false
+Allée des Bouleaux,fr,Allée,false
+Place des Bouleaux,fr,Place,false
+Promenade des Bouleaux,fr,Promenade,false
+Rue des Chênes,fr,Rue,false
+Chemin des Chênes,fr,Chemin,false
+Avenue des Chênes,fr,Avenue,false
+Route des Chênes,fr,Route,false
+Impasse des Chênes,fr,Impasse,false
+Sentier des Chênes,fr,Sentier,false
+Allée des Chênes,fr,Allée,false
+Place des Chênes,fr,Place,false
+Promenade des Chênes,fr,Promenade,false
+Rue des Érables,fr,Rue,false
+Chemin des Érables,fr,Chemin,false
+Avenue des Érables,fr,Avenue,false
+Route des Érables,fr,Route,false
+Impasse des Érables,fr,Impasse,false
+Sentier des Érables,fr,Sentier,false
+Allée des Érables,fr,Allée,false
+Place des Érables,fr,Place,false
+Promenade des Érables,fr,Promenade,false
+Rue des Sapins,fr,Rue,false
+Chemin des Sapins,fr,Chemin,false
+Avenue des Sapins,fr,Avenue,false
+Route des Sapins,fr,Route,false
+Impasse des Sapins,fr,Impasse,false
+Sentier des Sapins,fr,Sentier,false
+Allée des Sapins,fr,Allée,false
+Place des Sapins,fr,Place,false
+Promenade des Sapins,fr,Promenade,false
+Rue des Mélèzes,fr,Rue,false
+Chemin des Mélèzes,fr,Chemin,false
+Avenue des Mélèzes,fr,Avenue,false
+Route des Mélèzes,fr,Route,false
+Impasse des Mélèzes,fr,Impasse,false
+Sentier des Mélèzes,fr,Sentier,false
+Allée des Mélèzes,fr,Allée,false
+Place des Mélèzes,fr,Place,false
+Promenade des Mélèzes,fr,Promenade,false
+Rue des Peupliers,fr,Rue,false
+Chemin des Peupliers,fr,Chemin,false
+Avenue des Peupliers,fr,Avenue,false
+Route des Peupliers,fr,Route,false
+Impasse des Peupliers,fr,Impasse,false
+Sentier des Peupliers,fr,Sentier,false
+Allée des Peupliers,fr,Allée,false
+Place des Peupliers,fr,Place,false
+Promenade des Peupliers,fr,Promenade,false
+Rue des Saules,fr,Rue,false
+Chemin des Saules,fr,Chemin,false
+Avenue des Saules,fr,Avenue,false
+Route des Saules,fr,Route,false
+Impasse des Saules,fr,Impasse,false
+Sentier des Saules,fr,Sentier,false
+Allée des Saules,fr,Allée,false
+Place des Saules,fr,Place,false
+Promenade des Saules,fr,Promenade,false
+Rue des Noyers,fr,Rue,false
+Chemin des Noyers,fr,Chemin,false
+Avenue des Noyers,fr,Avenue,false
+Route des Noyers,fr,Route,false
+Impasse des Noyers,fr,Impasse,false
+Sentier des Noyers,fr,Sentier,false
+Allée des Noyers,fr,Allée,false
+Place des Noyers,fr,Place,false
+Promenade des Noyers,fr,Promenade,false
+Rue des Cerisiers,fr,Rue,false
+Chemin des Cerisiers,fr,Chemin,false
+Avenue des Cerisiers,fr,Avenue,false
+Route des Cerisiers,fr,Route,false
+Impasse des Cerisiers,fr,Impasse,false
+Sentier des Cerisiers,fr,Sentier,false
+Allée des Cerisiers,fr,Allée,false
+Place des Cerisiers,fr,Place,false
+Promenade des Cerisiers,fr,Promenade,false
+Rue des Pommiers,fr,Rue,false
+Chemin des Pommiers,fr,Chemin,false
+Avenue des Pommiers,fr,Avenue,false
+Route des Pommiers,fr,Route,false
+Impasse des Pommiers,fr,Impasse,false
+Sentier des Pommiers,fr,Sentier,false
+Allée des Pommiers,fr,Allée,false
+Place des Pommiers,fr,Place,false
+Promenade des Pommiers,fr,Promenade,false
+Rue des Vignes,fr,Rue,false
+Chemin des Vignes,fr,Chemin,false
+Avenue des Vignes,fr,Avenue,false
+Route des Vignes,fr,Route,false
+Impasse des Vignes,fr,Impasse,false
+Sentier des Vignes,fr,Sentier,false
+Allée des Vignes,fr,Allée,false
+Place des Vignes,fr,Place,false
+Promenade des Vignes,fr,Promenade,false
+Rue des Roses,fr,Rue,false
+Chemin des Roses,fr,Chemin,false
+Avenue des Roses,fr,Avenue,false
+Route des Roses,fr,Route,false
+Impasse des Roses,fr,Impasse,false
+Sentier des Roses,fr,Sentier,false
+Allée des Roses,fr,Allée,false
+Place des Roses,fr,Place,false
+Promenade des Roses,fr,Promenade,false
+Rue des Lilas,fr,Rue,false
+Chemin des Lilas,fr,Chemin,false
+Avenue des Lilas,fr,Avenue,false
+Route des Lilas,fr,Route,false
+Impasse des Lilas,fr,Impasse,false
+Sentier des Lilas,fr,Sentier,false
+Allée des Lilas,fr,Allée,false
+Place des Lilas,fr,Place,false
+Promenade des Lilas,fr,Promenade,false
+Rue des Tulipes,fr,Rue,false
+Chemin des Tulipes,fr,Chemin,false
+Avenue des Tulipes,fr,Avenue,false
+Route des Tulipes,fr,Route,false
+Impasse des Tulipes,fr,Impasse,false
+Sentier des Tulipes,fr,Sentier,false
+Allée des Tulipes,fr,Allée,false
+Place des Tulipes,fr,Place,false
+Promenade des Tulipes,fr,Promenade,false
+Rue des Œillets,fr,Rue,false
+Chemin des Œillets,fr,Chemin,false
+Avenue des Œillets,fr,Avenue,false
+Route des Œillets,fr,Route,false
+Impasse des Œillets,fr,Impasse,false
+Sentier des Œillets,fr,Sentier,false
+Allée des Œillets,fr,Allée,false
+Place des Œillets,fr,Place,false
+Promenade des Œillets,fr,Promenade,false
+Rue des Violettes,fr,Rue,false
+Chemin des Violettes,fr,Chemin,false
+Avenue des Violettes,fr,Avenue,false
+Route des Violettes,fr,Route,false
+Impasse des Violettes,fr,Impasse,false
+Sentier des Violettes,fr,Sentier,false
+Allée des Violettes,fr,Allée,false
+Place des Violettes,fr,Place,false
+Promenade des Violettes,fr,Promenade,false
+Rue des Gentianes,fr,Rue,false
+Chemin des Gentianes,fr,Chemin,false
+Avenue des Gentianes,fr,Avenue,false
+Route des Gentianes,fr,Route,false
+Impasse des Gentianes,fr,Impasse,false
+Sentier des Gentianes,fr,Sentier,false
+Allée des Gentianes,fr,Allée,false
+Place des Gentianes,fr,Place,false
+Promenade des Gentianes,fr,Promenade,false
+Rue des Prés,fr,Rue,false
+Chemin des Prés,fr,Chemin,false
+Avenue des Prés,fr,Avenue,false
+Route des Prés,fr,Route,false
+Impasse des Prés,fr,Impasse,false
+Sentier des Prés,fr,Sentier,false
+Allée des Prés,fr,Allée,false
+Place des Prés,fr,Place,false
+Promenade des Prés,fr,Promenade,false
+Rue des Champs,fr,Rue,false
+Chemin des Champs,fr,Chemin,false
+Avenue des Champs,fr,Avenue,false
+Route des Champs,fr,Route,false
+Impasse des Champs,fr,Impasse,false
+Sentier des Champs,fr,Sentier,false
+Allée des Champs,fr,Allée,false
+Place des Champs,fr,Place,false
+Promenade des Champs,fr,Promenade,false
+Rue des Jardins,fr,Rue,false
+Chemin des Jardins,fr,Chemin,false
+Avenue des Jardins,fr,Avenue,false
+Route des Jardins,fr,Route,false
+Impasse des Jardins,fr,Impasse,false
+Sentier des Jardins,fr,Sentier,false
+Allée des Jardins,fr,Allée,false
+Place des Jardins,fr,Place,false
+Promenade des Jardins,fr,Promenade,false
+Rue des Moulins,fr,Rue,false
+Chemin des Moulins,fr,Chemin,false
+Avenue des Moulins,fr,Avenue,false
+Route des Moulins,fr,Route,false
+Impasse des Moulins,fr,Impasse,false
+Sentier des Moulins,fr,Sentier,false
+Allée des Moulins,fr,Allée,false
+Place des Moulins,fr,Place,false
+Promenade des Moulins,fr,Promenade,false
+Rue des Fontaines,fr,Rue,false
+Chemin des Fontaines,fr,Chemin,false
+Avenue des Fontaines,fr,Avenue,false
+Route des Fontaines,fr,Route,false
+Impasse des Fontaines,fr,Impasse,false
+Sentier des Fontaines,fr,Sentier,false
+Allée des Fontaines,fr,Allée,false
+Place des Fontaines,fr,Place,false
+Promenade des Fontaines,fr,Promenade,false
+Rue des Sources,fr,Rue,false
+Chemin des Sources,fr,Chemin,false
+Avenue des Sources,fr,Avenue,false
+Route des Sources,fr,Route,false
+Impasse des Sources,fr,Impasse,false
+Sentier des Sources,fr,Sentier,false
+Allée des Sources,fr,Allée,false
+Place des Sources,fr,Place,false
+Promenade des Sources,fr,Promenade,false
+Rue des Ruisseaux,fr,Rue,false
+Chemin des Ruisseaux,fr,Chemin,false
+Avenue des Ruisseaux,fr,Avenue,false
+Route des Ruisseaux,fr,Route,false
+Impasse des Ruisseaux,fr,Impasse,false
+Sentier des Ruisseaux,fr,Sentier,false
+Allée des Ruisseaux,fr,Allée,false
+Place des Ruisseaux,fr,Place,false
+Promenade des Ruisseaux,fr,Promenade,false
+Rue des Rives,fr,Rue,false
+Chemin des Rives,fr,Chemin,false
+Avenue des Rives,fr,Avenue,false
+Route des Rives,fr,Route,false
+Impasse des Rives,fr,Impasse,false
+Sentier des Rives,fr,Sentier,false
+Allée des Rives,fr,Allée,false
+Place des Rives,fr,Place,false
+Promenade des Rives,fr,Promenade,false
+Rue des Étangs,fr,Rue,false
+Chemin des Étangs,fr,Chemin,false
+Avenue des Étangs,fr,Avenue,false
+Route des Étangs,fr,Route,false
+Impasse des Étangs,fr,Impasse,false
+Sentier des Étangs,fr,Sentier,false
+Allée des Étangs,fr,Allée,false
+Place des Étangs,fr,Place,false
+Promenade des Étangs,fr,Promenade,false
+Rue des Lacs,fr,Rue,false
+Chemin des Lacs,fr,Chemin,false
+Avenue des Lacs,fr,Avenue,false
+Route des Lacs,fr,Route,false
+Impasse des Lacs,fr,Impasse,false
+Sentier des Lacs,fr,Sentier,false
+Allée des Lacs,fr,Allée,false
+Place des Lacs,fr,Place,false
+Promenade des Lacs,fr,Promenade,false
+Rue des Îles,fr,Rue,false
+Chemin des Îles,fr,Chemin,false
+Avenue des Îles,fr,Avenue,false
+Route des Îles,fr,Route,false
+Impasse des Îles,fr,Impasse,false
+Sentier des Îles,fr,Sentier,false
+Allée des Îles,fr,Allée,false
+Place des Îles,fr,Place,false
+Promenade des Îles,fr,Promenade,false
+Rue des Ponts,fr,Rue,false
+Chemin des Ponts,fr,Chemin,false
+Avenue des Ponts,fr,Avenue,false
+Route des Ponts,fr,Route,false
+Impasse des Ponts,fr,Impasse,false
+Sentier des Ponts,fr,Sentier,false
+Allée des Ponts,fr,Allée,false
+Place des Ponts,fr,Place,false
+Promenade des Ponts,fr,Promenade,false
+Rue des Collines,fr,Rue,false
+Chemin des Collines,fr,Chemin,false
+Avenue des Collines,fr,Avenue,false
+Route des Collines,fr,Route,false
+Impasse des Collines,fr,Impasse,false
+Sentier des Collines,fr,Sentier,false
+Allée des Collines,fr,Allée,false
+Place des Collines,fr,Place,false
+Promenade des Collines,fr,Promenade,false
+Rue des Vallons,fr,Rue,false
+Chemin des Vallons,fr,Chemin,false
+Avenue des Vallons,fr,Avenue,false
+Route des Vallons,fr,Route,false
+Impasse des Vallons,fr,Impasse,false
+Sentier des Vallons,fr,Sentier,false
+Allée des Vallons,fr,Allée,false
+Place des Vallons,fr,Place,false
+Promenade des Vallons,fr,Promenade,false
+Rue des Coteaux,fr,Rue,false
+Chemin des Coteaux,fr,Chemin,false
+Avenue des Coteaux,fr,Avenue,false
+Route des Coteaux,fr,Route,false
+Impasse des Coteaux,fr,Impasse,false
+Sentier des Coteaux,fr,Sentier,false
+Allée des Coteaux,fr,Allée,false
+Place des Coteaux,fr,Place,false
+Promenade des Coteaux,fr,Promenade,false
+Rue des Rochers,fr,Rue,false
+Chemin des Rochers,fr,Chemin,false
+Avenue des Rochers,fr,Avenue,false
+Route des Rochers,fr,Route,false
+Impasse des Rochers,fr,Impasse,false
+Sentier des Rochers,fr,Sentier,false
+Allée des Rochers,fr,Allée,false
+Place des Rochers,fr,Place,false
+Promenade des Rochers,fr,Promenade,false
+Rue des Pierres,fr,Rue,false
+Chemin des Pierres,fr,Chemin,false
+Avenue des Pierres,fr,Avenue,false
+Route des Pierres,fr,Route,false
+Impasse des Pierres,fr,Impasse,false
+Sentier des Pierres,fr,Sentier,false
+Allée des Pierres,fr,Allée,false
+Place des Pierres,fr,Place,false
+Promenade des Pierres,fr,Promenade,false
+Rue des Sables,fr,Rue,false
+Chemin des Sables,fr,Chemin,false
+Avenue des Sables,fr,Avenue,false
+Route des Sables,fr,Route,false
+Impasse des Sables,fr,Impasse,false
+Sentier des Sables,fr,Sentier,false
+Allée des Sables,fr,Allée,false
+Place des Sables,fr,Place,false
+Promenade des Sables,fr,Promenade,false
+Rue des Soleils,fr,Rue,false
+Chemin des Soleils,fr,Chemin,false
+Avenue des Soleils,fr,Avenue,false
+Route des Soleils,fr,Route,false
+Impasse des Soleils,fr,Impasse,false
+Sentier des Soleils,fr,Sentier,false
+Allée des Soleils,fr,Allée,false
+Place des Soleils,fr,Place,false
+Promenade des Soleils,fr,Promenade,false
+Rue des Étoiles,fr,Rue,false
+Chemin des Étoiles,fr,Chemin,false
+Avenue des Étoiles,fr,Avenue,false
+Route des Étoiles,fr,Route,false
+Impasse des Étoiles,fr,Impasse,false
+Sentier des Étoiles,fr,Sentier,false
+Allée des Étoiles,fr,Allée,false
+Place des Étoiles,fr,Place,false
+Promenade des Étoiles,fr,Promenade,false
+Rue des Aurores,fr,Rue,false
+Chemin des Aurores,fr,Chemin,false
+Avenue des Aurores,fr,Avenue,false
+Route des Aurores,fr,Route,false
+Impasse des Aurores,fr,Impasse,false
+Sentier des Aurores,fr,Sentier,false
+Allée des Aurores,fr,Allée,false
+Place des Aurores,fr,Place,false
+Promenade des Aurores,fr,Promenade,false
+Rue des Crépuscules,fr,Rue,false
+Chemin des Crépuscules,fr,Chemin,false
+Avenue des Crépuscules,fr,Avenue,false
+Route des Crépuscules,fr,Route,false
+Impasse des Crépuscules,fr,Impasse,false
+Sentier des Crépuscules,fr,Sentier,false
+Allée des Crépuscules,fr,Allée,false
+Place des Crépuscules,fr,Place,false
+Promenade des Crépuscules,fr,Promenade,false
+Rue des Hivers,fr,Rue,false
+Chemin des Hivers,fr,Chemin,false
+Avenue des Hivers,fr,Avenue,false
+Route des Hivers,fr,Route,false
+Impasse des Hivers,fr,Impasse,false
+Sentier des Hivers,fr,Sentier,false
+Allée des Hivers,fr,Allée,false
+Place des Hivers,fr,Place,false
+Promenade des Hivers,fr,Promenade,false
+Rue des Printemps,fr,Rue,false
+Chemin des Printemps,fr,Chemin,false
+Avenue des Printemps,fr,Avenue,false
+Route des Printemps,fr,Route,false
+Impasse des Printemps,fr,Impasse,false
+Sentier des Printemps,fr,Sentier,false
+Allée des Printemps,fr,Allée,false
+Place des Printemps,fr,Place,false
+Promenade des Printemps,fr,Promenade,false
+Rue des Automnes,fr,Rue,false
+Chemin des Automnes,fr,Chemin,false
+Avenue des Automnes,fr,Avenue,false
+Route des Automnes,fr,Route,false
+Impasse des Automnes,fr,Impasse,false
+Sentier des Automnes,fr,Sentier,false
+Allée des Automnes,fr,Allée,false
+Place des Automnes,fr,Place,false
+Promenade des Automnes,fr,Promenade,false
+Rue des Chapelles,fr,Rue,false
+Chemin des Chapelles,fr,Chemin,false
+Avenue des Chapelles,fr,Avenue,false
+Route des Chapelles,fr,Route,false
+Impasse des Chapelles,fr,Impasse,false
+Sentier des Chapelles,fr,Sentier,false
+Allée des Chapelles,fr,Allée,false
+Place des Chapelles,fr,Place,false
+Promenade des Chapelles,fr,Promenade,false
+Rue des Clochers,fr,Rue,false
+Chemin des Clochers,fr,Chemin,false
+Avenue des Clochers,fr,Avenue,false
+Route des Clochers,fr,Route,false
+Impasse des Clochers,fr,Impasse,false
+Sentier des Clochers,fr,Sentier,false
+Allée des Clochers,fr,Allée,false
+Place des Clochers,fr,Place,false
+Promenade des Clochers,fr,Promenade,false
+Rue des Écoles,fr,Rue,false
+Chemin des Écoles,fr,Chemin,false
+Avenue des Écoles,fr,Avenue,false
+Route des Écoles,fr,Route,false
+Impasse des Écoles,fr,Impasse,false
+Sentier des Écoles,fr,Sentier,false
+Allée des Écoles,fr,Allée,false
+Place des Écoles,fr,Place,false
+Promenade des Écoles,fr,Promenade,false
+Rue des Gares,fr,Rue,false
+Chemin des Gares,fr,Chemin,false
+Avenue des Gares,fr,Avenue,false
+Route des Gares,fr,Route,false
+Impasse des Gares,fr,Impasse,false
+Sentier des Gares,fr,Sentier,false
+Allée des Gares,fr,Allée,false
+Place des Gares,fr,Place,false
+Promenade des Gares,fr,Promenade,false
+Rue des Marchés,fr,Rue,false
+Chemin des Marchés,fr,Chemin,false
+Avenue des Marchés,fr,Avenue,false
+Route des Marchés,fr,Route,false
+Impasse des Marchés,fr,Impasse,false
+Sentier des Marchés,fr,Sentier,false
+Allée des Marchés,fr,Allée,false
+Place des Marchés,fr,Place,false
+Promenade des Marchés,fr,Promenade,false
+Rue des Forgerons,fr,Rue,false
+Chemin des Forgerons,fr,Chemin,false
+Avenue des Forgerons,fr,Avenue,false
+Route des Forgerons,fr,Route,false
+Impasse des Forgerons,fr,Impasse,false
+Sentier des Forgerons,fr,Sentier,false
+Allée des Forgerons,fr,Allée,false
+Place des Forgerons,fr,Place,false
+Promenade des Forgerons,fr,Promenade,false
+Rue des Tisserands,fr,Rue,false
+Chemin des Tisserands,fr,Chemin,false
+Avenue des Tisserands,fr,Avenue,false
+Route des Tisserands,fr,Route,false
+Impasse des Tisserands,fr,Impasse,false
+Sentier des Tisserands,fr,Sentier,false
+Allée des Tisserands,fr,Allée,false
+Place des Tisserands,fr,Place,false
+Promenade des Tisserands,fr,Promenade,false
+Rue des Meuniers,fr,Rue,false
+Chemin des Meuniers,fr,Chemin,false
+Avenue des Meuniers,fr,Avenue,false
+Route des Meuniers,fr,Route,false
+Impasse des Meuniers,fr,Impasse,false
+Sentier des Meuniers,fr,Sentier,false
+Allée des Meuniers,fr,Allée,false
+Place des Meuniers,fr,Place,false
+Promenade des Meuniers,fr,Promenade,false
+Rue des Tanneurs,fr,Rue,false
+Chemin des Tanneurs,fr,Chemin,false
+Avenue des Tanneurs,fr,Avenue,false
+Route des Tanneurs,fr,Route,false
+Impasse des Tanneurs,fr,Impasse,false
+Sentier des Tanneurs,fr,Sentier,false
+Allée des Tanneurs,fr,Allée,false
+Place des Tanneurs,fr,Place,false
+Promenade des Tanneurs,fr,Promenade,false
+Rue des Boulangers,fr,Rue,false
+Chemin des Boulangers,fr,Chemin,false
+Avenue des Boulangers,fr,Avenue,false
+Route des Boulangers,fr,Route,false
+Impasse des Boulangers,fr,Impasse,false
+Sentier des Boulangers,fr,Sentier,false
+Allée des Boulangers,fr,Allée,false
+Place des Boulangers,fr,Place,false
+Promenade des Boulangers,fr,Promenade,false
+Rue des Bouchers,fr,Rue,false
+Chemin des Bouchers,fr,Chemin,false
+Avenue des Bouchers,fr,Avenue,false
+Route des Bouchers,fr,Route,false
+Impasse des Bouchers,fr,Impasse,false
+Sentier des Bouchers,fr,Sentier,false
+Allée des Bouchers,fr,Allée,false
+Place des Bouchers,fr,Place,false
+Promenade des Bouchers,fr,Promenade,false
+Rue des Vignerons,fr,Rue,false
+Chemin des Vignerons,fr,Chemin,false
+Avenue des Vignerons,fr,Avenue,false
+Route des Vignerons,fr,Route,false
+Impasse des Vignerons,fr,Impasse,false
+Sentier des Vignerons,fr,Sentier,false
+Allée des Vignerons,fr,Allée,false
+Place des Vignerons,fr,Place,false
+Promenade des Vignerons,fr,Promenade,false
+Rue des Bergers,fr,Rue,false
+Chemin des Bergers,fr,Chemin,false
+Avenue des Bergers,fr,Avenue,false
+Route des Bergers,fr,Route,false
+Impasse des Bergers,fr,Impasse,false
+Sentier des Bergers,fr,Sentier,false
+Allée des Bergers,fr,Allée,false
+Place des Bergers,fr,Place,false
+Promenade des Bergers,fr,Promenade,false
+Rue des Cerfs,fr,Rue,false
+Chemin des Cerfs,fr,Chemin,false
+Avenue des Cerfs,fr,Avenue,false
+Route des Cerfs,fr,Route,false
+Impasse des Cerfs,fr,Impasse,false
+Sentier des Cerfs,fr,Sentier,false
+Allée des Cerfs,fr,Allée,false
+Place des Cerfs,fr,Place,false
+Promenade des Cerfs,fr,Promenade,false
+Rue des Chevreuils,fr,Rue,false
+Chemin des Chevreuils,fr,Chemin,false
+Avenue des Chevreuils,fr,Avenue,false
+Route des Chevreuils,fr,Route,false
+Impasse des Chevreuils,fr,Impasse,false
+Sentier des Chevreuils,fr,Sentier,false
+Allée des Chevreuils,fr,Allée,false
+Place des Chevreuils,fr,Place,false
+Promenade des Chevreuils,fr,Promenade,false
+Rue des Renards,fr,Rue,false
+Chemin des Renards,fr,Chemin,false
+Avenue des Renards,fr,Avenue,false
+Route des Renards,fr,Route,false
+Impasse des Renards,fr,Impasse,false
+Sentier des Renards,fr,Sentier,false
+Allée des Renards,fr,Allée,false
+Place des Renards,fr,Place,false
+Promenade des Renards,fr,Promenade,false
+Rue des Lièvres,fr,Rue,false
+Chemin des Lièvres,fr,Chemin,false
+Avenue des Lièvres,fr,Avenue,false
+Route des Lièvres,fr,Route,false
+Impasse des Lièvres,fr,Impasse,false
+Sentier des Lièvres,fr,Sentier,false
+Allée des Lièvres,fr,Allée,false
+Place des Lièvres,fr,Place,false
+Promenade des Lièvres,fr,Promenade,false
+Rue des Aigles,fr,Rue,false
+Chemin des Aigles,fr,Chemin,false
+Avenue des Aigles,fr,Avenue,false
+Route des Aigles,fr,Route,false
+Impasse des Aigles,fr,Impasse,false
+Sentier des Aigles,fr,Sentier,false
+Allée des Aigles,fr,Allée,false
+Place des Aigles,fr,Place,false
+Promenade des Aigles,fr,Promenade,false
+Rue des Faucons,fr,Rue,false
+Chemin des Faucons,fr,Chemin,false
+Avenue des Faucons,fr,Avenue,false
+Route des Faucons,fr,Route,false
+Impasse des Faucons,fr,Impasse,false
+Sentier des Faucons,fr,Sentier,false
+Allée des Faucons,fr,Allée,false
+Place des Faucons,fr,Place,false
+Promenade des Faucons,fr,Promenade,false
+Rue des Alouettes,fr,Rue,false
+Chemin des Alouettes,fr,Chemin,false
+Avenue des Alouettes,fr,Avenue,false
+Route des Alouettes,fr,Route,false
+Impasse des Alouettes,fr,Impasse,false
+Sentier des Alouettes,fr,Sentier,false
+Allée des Alouettes,fr,Allée,false
+Place des Alouettes,fr,Place,false
+Promenade des Alouettes,fr,Promenade,false
+Rue des Merles,fr,Rue,false
+Chemin des Merles,fr,Chemin,false
+Avenue des Merles,fr,Avenue,false
+Route des Merles,fr,Route,false
+Impasse des Merles,fr,Impasse,false
+Sentier des Merles,fr,Sentier,false
+Allée des Merles,fr,Allée,false
+Place des Merles,fr,Place,false
+Promenade des Merles,fr,Promenade,false
+Rue des Grives,fr,Rue,false
+Chemin des Grives,fr,Chemin,false
+Avenue des Grives,fr,Avenue,false
+Route des Grives,fr,Route,false
+Impasse des Grives,fr,Impasse,false
+Sentier des Grives,fr,Sentier,false
+Allée des Grives,fr,Allée,false
+Place des Grives,fr,Place,false
+Promenade des Grives,fr,Promenade,false
+Rue des Pinsons,fr,Rue,false
+Chemin des Pinsons,fr,Chemin,false
+Avenue des Pinsons,fr,Avenue,false
+Route des Pinsons,fr,Route,false
+Impasse des Pinsons,fr,Impasse,false
+Sentier des Pinsons,fr,Sentier,false
+Allée des Pinsons,fr,Allée,false
+Place des Pinsons,fr,Place,false
+Promenade des Pinsons,fr,Promenade,false
+Rue des Mésanges,fr,Rue,false
+Chemin des Mésanges,fr,Chemin,false
+Avenue des Mésanges,fr,Avenue,false
+Route des Mésanges,fr,Route,false
+Impasse des Mésanges,fr,Impasse,false
+Sentier des Mésanges,fr,Sentier,false
+Allée des Mésanges,fr,Allée,false
+Place des Mésanges,fr,Place,false
+Promenade des Mésanges,fr,Promenade,false
+Rue des Hirondelles,fr,Rue,false
+Chemin des Hirondelles,fr,Chemin,false
+Avenue des Hirondelles,fr,Avenue,false
+Route des Hirondelles,fr,Route,false
+Impasse des Hirondelles,fr,Impasse,false
+Sentier des Hirondelles,fr,Sentier,false
+Allée des Hirondelles,fr,Allée,false
+Place des Hirondelles,fr,Place,false
+Promenade des Hirondelles,fr,Promenade,false
+Rue des Cigognes,fr,Rue,false
+Chemin des Cigognes,fr,Chemin,false
+Avenue des Cigognes,fr,Avenue,false
+Route des Cigognes,fr,Route,false
+Impasse des Cigognes,fr,Impasse,false
+Sentier des Cigognes,fr,Sentier,false
+Allée des Cigognes,fr,Allée,false
+Place des Cigognes,fr,Place,false
+Promenade des Cigognes,fr,Promenade,false
+Rue des Hérons,fr,Rue,false
+Chemin des Hérons,fr,Chemin,false
+Avenue des Hérons,fr,Avenue,false
+Route des Hérons,fr,Route,false
+Impasse des Hérons,fr,Impasse,false
+Sentier des Hérons,fr,Sentier,false
+Allée des Hérons,fr,Allée,false
+Place des Hérons,fr,Place,false
+Promenade des Hérons,fr,Promenade,false
+Rue des Cygnes,fr,Rue,false
+Chemin des Cygnes,fr,Chemin,false
+Avenue des Cygnes,fr,Avenue,false
+Route des Cygnes,fr,Route,false
+Impasse des Cygnes,fr,Impasse,false
+Sentier des Cygnes,fr,Sentier,false
+Allée des Cygnes,fr,Allée,false
+Place des Cygnes,fr,Place,false
+Promenade des Cygnes,fr,Promenade,false
+Rue des Truites,fr,Rue,false
+Chemin des Truites,fr,Chemin,false
+Avenue des Truites,fr,Avenue,false
+Route des Truites,fr,Route,false
+Impasse des Truites,fr,Impasse,false
+Sentier des Truites,fr,Sentier,false
+Allée des Truites,fr,Allée,false
+Place des Truites,fr,Place,false
+Promenade des Truites,fr,Promenade,false
+Rue des Abeilles,fr,Rue,false
+Chemin des Abeilles,fr,Chemin,false
+Avenue des Abeilles,fr,Avenue,false
+Route des Abeilles,fr,Route,false
+Impasse des Abeilles,fr,Impasse,false
+Sentier des Abeilles,fr,Sentier,false
+Allée des Abeilles,fr,Allée,false
+Place des Abeilles,fr,Place,false
+Promenade des Abeilles,fr,Promenade,false
+Rue des Papillons,fr,Rue,false
+Chemin des Papillons,fr,Chemin,false
+Avenue des Papillons,fr,Avenue,false
+Route des Papillons,fr,Route,false
+Impasse des Papillons,fr,Impasse,false
+Sentier des Papillons,fr,Sentier,false
+Allée des Papillons,fr,Allée,false
+Place des Papillons,fr,Place,false
+Promenade des Papillons,fr,Promenade,false
+Rue des Ormes,fr,Rue,false
+Chemin des Ormes,fr,Chemin,false
+Avenue des Ormes,fr,Avenue,false
+Route des Ormes,fr,Route,false
+Impasse des Ormes,fr,Impasse,false
+Sentier des Ormes,fr,Sentier,false
+Allée des Ormes,fr,Allée,false
+Place des Ormes,fr,Place,false
+Promenade des Ormes,fr,Promenade,false
+Rue des Frênes,fr,Rue,false
+Chemin des Frênes,fr,Chemin,false
+Avenue des Frênes,fr,Avenue,false
+Route des Frênes,fr,Route,false
+Impasse des Frênes,fr,Impasse,false
+Sentier des Frênes,fr,Sentier,false
+Allée des Frênes,fr,Allée,false
+Place des Frênes,fr,Place,false
+Promenade des Frênes,fr,Promenade,false
+Rue des Aulnes,fr,Rue,false
+Chemin des Aulnes,fr,Chemin,false
+Avenue des Aulnes,fr,Avenue,false
+Route des Aulnes,fr,Route,false
+Impasse des Aulnes,fr,Impasse,false
+Sentier des Aulnes,fr,Sentier,false
+Allée des Aulnes,fr,Allée,false
+Place des Aulnes,fr,Place,false
+Promenade des Aulnes,fr,Promenade,false
+Rue des Hêtres,fr,Rue,false
+Chemin des Hêtres,fr,Chemin,false
+Avenue des Hêtres,fr,Avenue,false
+Route des Hêtres,fr,Route,false
+Impasse des Hêtres,fr,Impasse,false
+Sentier des Hêtres,fr,Sentier,false
+Allée des Hêtres,fr,Allée,false
+Place des Hêtres,fr,Place,false
+Promenade des Hêtres,fr,Promenade,false
+Rue des Châtaigniers,fr,Rue,false
+Chemin des Châtaigniers,fr,Chemin,false
+Avenue des Châtaigniers,fr,Avenue,false
+Route des Châtaigniers,fr,Route,false
+Impasse des Châtaigniers,fr,Impasse,false
+Sentier des Châtaigniers,fr,Sentier,false
+Allée des Châtaigniers,fr,Allée,false
+Place des Châtaigniers,fr,Place,false
+Promenade des Châtaigniers,fr,Promenade,false
+Rue des Oliviers,fr,Rue,false
+Chemin des Oliviers,fr,Chemin,false
+Avenue des Oliviers,fr,Avenue,false
+Route des Oliviers,fr,Route,false
+Impasse des Oliviers,fr,Impasse,false
+Sentier des Oliviers,fr,Sentier,false
+Allée des Oliviers,fr,Allée,false
+Place des Oliviers,fr,Place,false
+Promenade des Oliviers,fr,Promenade,false
+Rue des Lauriers,fr,Rue,false
+Chemin des Lauriers,fr,Chemin,false
+Avenue des Lauriers,fr,Avenue,false
+Route des Lauriers,fr,Route,false
+Impasse des Lauriers,fr,Impasse,false
+Sentier des Lauriers,fr,Sentier,false
+Allée des Lauriers,fr,Allée,false
+Place des Lauriers,fr,Place,false
+Promenade des Lauriers,fr,Promenade,false
+Rue des Bruyères,fr,Rue,false
+Chemin des Bruyères,fr,Chemin,false
+Avenue des Bruyères,fr,Avenue,false
+Route des Bruyères,fr,Route,false
+Impasse des Bruyères,fr,Impasse,false
+Sentier des Bruyères,fr,Sentier,false
+Allée des Bruyères,fr,Allée,false
+Place des Bruyères,fr,Place,false
+Promenade des Bruyères,fr,Promenade,false
+Rue des Fougères,fr,Rue,false
+Chemin des Fougères,fr,Chemin,false
+Avenue des Fougères,fr,Avenue,false
+Route des Fougères,fr,Route,false
+Impasse des Fougères,fr,Impasse,false
+Sentier des Fougères,fr,Sentier,false
+Allée des Fougères,fr,Allée,false
+Place des Fougères,fr,Place,false
+Promenade des Fougères,fr,Promenade,false
+Rue des Mousses,fr,Rue,false
+Chemin des Mousses,fr,Chemin,false
+Avenue des Mousses,fr,Avenue,false
+Route des Mousses,fr,Route,false
+Impasse des Mousses,fr,Impasse,false
+Sentier des Mousses,fr,Sentier,false
+Allée des Mousses,fr,Allée,false
+Place des Mousses,fr,Place,false
+Promenade des Mousses,fr,Promenade,false
+Rue des Genêts,fr,Rue,false
+Chemin des Genêts,fr,Chemin,false
+Avenue des Genêts,fr,Avenue,false
+Route des Genêts,fr,Route,false
+Impasse des Genêts,fr,Impasse,false
+Sentier des Genêts,fr,Sentier,false
+Allée des Genêts,fr,Allée,false
+Place des Genêts,fr,Place,false
+Promenade des Genêts,fr,Promenade,false
+Rue des Cyclamens,fr,Rue,false
+Chemin des Cyclamens,fr,Chemin,false
+Avenue des Cyclamens,fr,Avenue,false
+Route des Cyclamens,fr,Route,false
+Impasse des Cyclamens,fr,Impasse,false
+Sentier des Cyclamens,fr,Sentier,false
+Allée des Cyclamens,fr,Allée,false
+Place des Cyclamens,fr,Place,false
+Promenade des Cyclamens,fr,Promenade,false
+Rue des Narcisses,fr,Rue,false
+Chemin des Narcisses,fr,Chemin,false
+Avenue des Narcisses,fr,Avenue,false
+Route des Narcisses,fr,Route,false
+Impasse des Narcisses,fr,Impasse,false
+Sentier des Narcisses,fr,Sentier,false
+Allée des Narcisses,fr,Allée,false
+Place des Narcisses,fr,Place,false
+Promenade des Narcisses,fr,Promenade,false
+Rue des Primevères,fr,Rue,false
+Chemin des Primevères,fr,Chemin,false
+Avenue des Primevères,fr,Avenue,false
+Route des Primevères,fr,Route,false
+Impasse des Primevères,fr,Impasse,false
+Sentier des Primevères,fr,Sentier,false
+Allée des Primevères,fr,Allée,false
+Place des Primevères,fr,Place,false
+Promenade des Primevères,fr,Promenade,false
+Rue des Marronniers,fr,Rue,false
+Chemin des Marronniers,fr,Chemin,false
+Avenue des Marronniers,fr,Avenue,false
+Route des Marronniers,fr,Route,false
+Impasse des Marronniers,fr,Impasse,false
+Sentier des Marronniers,fr,Sentier,false
+Allée des Marronniers,fr,Allée,false
+Place des Marronniers,fr,Place,false
+Promenade des Marronniers,fr,Promenade,false
+Rue des Platanes,fr,Rue,false
+Chemin des Platanes,fr,Chemin,false
+Avenue des Platanes,fr,Avenue,false
+Route des Platanes,fr,Route,false
+Impasse des Platanes,fr,Impasse,false
+Sentier des Platanes,fr,Sentier,false
+Allée des Platanes,fr,Allée,false
+Place des Platanes,fr,Place,false
+Promenade des Platanes,fr,Promenade,false
+Via dei Tigli,it,Via,false
+Via delle Tigli,it,Via,false
+Vicolo dei Tigli,it,Vicolo,false
+Viale dei Tigli,it,Viale,false
+Sentiero dei Tigli,it,Sentiero,false
+Piazza dei Tigli,it,Piazza,false
+Strada dei Tigli,it,Strada,false
+Passaggio dei Tigli,it,Passaggio,false
+Via dei Betulle,it,Via,false
+Via delle Betulle,it,Via,false
+Vicolo dei Betulle,it,Vicolo,false
+Viale dei Betulle,it,Viale,false
+Sentiero dei Betulle,it,Sentiero,false
+Piazza dei Betulle,it,Piazza,false
+Strada dei Betulle,it,Strada,false
+Passaggio dei Betulle,it,Passaggio,false
+Via dei Querce,it,Via,false
+Via delle Querce,it,Via,false
+Vicolo dei Querce,it,Vicolo,false
+Viale dei Querce,it,Viale,false
+Sentiero dei Querce,it,Sentiero,false
+Piazza dei Querce,it,Piazza,false
+Strada dei Querce,it,Strada,false
+Passaggio dei Querce,it,Passaggio,false
+Via dei Aceri,it,Via,false
+Via delle Aceri,it,Via,false
+Vicolo dei Aceri,it,Vicolo,false
+Viale dei Aceri,it,Viale,false
+Sentiero dei Aceri,it,Sentiero,false
+Piazza dei Aceri,it,Piazza,false
+Strada dei Aceri,it,Strada,false
+Passaggio dei Aceri,it,Passaggio,false
+Via dei Abeti,it,Via,false
+Via delle Abeti,it,Via,false
+Vicolo dei Abeti,it,Vicolo,false
+Viale dei Abeti,it,Viale,false
+Sentiero dei Abeti,it,Sentiero,false
+Piazza dei Abeti,it,Piazza,false
+Strada dei Abeti,it,Strada,false
+Passaggio dei Abeti,it,Passaggio,false
+Via dei Larici,it,Via,false
+Via delle Larici,it,Via,false
+Vicolo dei Larici,it,Vicolo,false
+Viale dei Larici,it,Viale,false
+Sentiero dei Larici,it,Sentiero,false
+Piazza dei Larici,it,Piazza,false
+Strada dei Larici,it,Strada,false
+Passaggio dei Larici,it,Passaggio,false
+Via dei Pioppi,it,Via,false
+Via delle Pioppi,it,Via,false
+Vicolo dei Pioppi,it,Vicolo,false
+Viale dei Pioppi,it,Viale,false
+Sentiero dei Pioppi,it,Sentiero,false
+Piazza dei Pioppi,it,Piazza,false
+Strada dei Pioppi,it,Strada,false
+Passaggio dei Pioppi,it,Passaggio,false
+Via dei Salici,it,Via,false
+Via delle Salici,it,Via,false
+Vicolo dei Salici,it,Vicolo,false
+Viale dei Salici,it,Viale,false
+Sentiero dei Salici,it,Sentiero,false
+Piazza dei Salici,it,Piazza,false
+Strada dei Salici,it,Strada,false
+Passaggio dei Salici,it,Passaggio,false
+Via dei Noci,it,Via,false
+Via delle Noci,it,Via,false
+Vicolo dei Noci,it,Vicolo,false
+Viale dei Noci,it,Viale,false
+Sentiero dei Noci,it,Sentiero,false
+Piazza dei Noci,it,Piazza,false
+Strada dei Noci,it,Strada,false
+Passaggio dei Noci,it,Passaggio,false
+Via dei Ciliegi,it,Via,false
+Via delle Ciliegi,it,Via,false
+Vicolo dei Ciliegi,it,Vicolo,false
+Viale dei Ciliegi,it,Viale,false
+Sentiero dei Ciliegi,it,Sentiero,false
+Piazza dei Ciliegi,it,Piazza,false
+Strada dei Ciliegi,it,Strada,false
+Passaggio dei Ciliegi,it,Passaggio,false
+Via dei Meli,it,Via,false
+Via delle Meli,it,Via,false
+Vicolo dei Meli,it,Vicolo,false
+Viale dei Meli,it,Viale,false
+Sentiero dei Meli,it,Sentiero,false
+Piazza dei Meli,it,Piazza,false
+Strada dei Meli,it,Strada,false
+Passaggio dei Meli,it,Passaggio,false
+Via dei Vigne,it,Via,false
+Via delle Vigne,it,Via,false
+Vicolo dei Vigne,it,Vicolo,false
+Viale dei Vigne,it,Viale,false
+Sentiero dei Vigne,it,Sentiero,false
+Piazza dei Vigne,it,Piazza,false
+Strada dei Vigne,it,Strada,false
+Passaggio dei Vigne,it,Passaggio,false
+Via dei Rose,it,Via,false
+Via delle Rose,it,Via,false
+Vicolo dei Rose,it,Vicolo,false
+Viale dei Rose,it,Viale,false
+Sentiero dei Rose,it,Sentiero,false
+Piazza dei Rose,it,Piazza,false
+Strada dei Rose,it,Strada,false
+Passaggio dei Rose,it,Passaggio,false
+Via dei Lillà,it,Via,false
+Via delle Lillà,it,Via,false
+Vicolo dei Lillà,it,Vicolo,false
+Viale dei Lillà,it,Viale,false
+Sentiero dei Lillà,it,Sentiero,false
+Piazza dei Lillà,it,Piazza,false
+Strada dei Lillà,it,Strada,false
+Passaggio dei Lillà,it,Passaggio,false
+Via dei Tulipani,it,Via,false
+Via delle Tulipani,it,Via,false
+Vicolo dei Tulipani,it,Vicolo,false
+Viale dei Tulipani,it,Viale,false
+Sentiero dei Tulipani,it,Sentiero,false
+Piazza dei Tulipani,it,Piazza,false
+Strada dei Tulipani,it,Strada,false
+Passaggio dei Tulipani,it,Passaggio,false
+Via dei Garofani,it,Via,false
+Via delle Garofani,it,Via,false
+Vicolo dei Garofani,it,Vicolo,false
+Viale dei Garofani,it,Viale,false
+Sentiero dei Garofani,it,Sentiero,false
+Piazza dei Garofani,it,Piazza,false
+Strada dei Garofani,it,Strada,false
+Passaggio dei Garofani,it,Passaggio,false
+Via dei Viole,it,Via,false
+Via delle Viole,it,Via,false
+Vicolo dei Viole,it,Vicolo,false
+Viale dei Viole,it,Viale,false
+Sentiero dei Viole,it,Sentiero,false
+Piazza dei Viole,it,Piazza,false
+Strada dei Viole,it,Strada,false
+Passaggio dei Viole,it,Passaggio,false
+Via dei Genziane,it,Via,false
+Via delle Genziane,it,Via,false
+Vicolo dei Genziane,it,Vicolo,false
+Viale dei Genziane,it,Viale,false
+Sentiero dei Genziane,it,Sentiero,false
+Piazza dei Genziane,it,Piazza,false
+Strada dei Genziane,it,Strada,false
+Passaggio dei Genziane,it,Passaggio,false
+Via dei Prati,it,Via,false
+Via delle Prati,it,Via,false
+Vicolo dei Prati,it,Vicolo,false
+Viale dei Prati,it,Viale,false
+Sentiero dei Prati,it,Sentiero,false
+Piazza dei Prati,it,Piazza,false
+Strada dei Prati,it,Strada,false
+Passaggio dei Prati,it,Passaggio,false
+Via dei Campi,it,Via,false
+Via delle Campi,it,Via,false
+Vicolo dei Campi,it,Vicolo,false
+Viale dei Campi,it,Viale,false
+Sentiero dei Campi,it,Sentiero,false
+Piazza dei Campi,it,Piazza,false
+Strada dei Campi,it,Strada,false
+Passaggio dei Campi,it,Passaggio,false
+Via dei Giardini,it,Via,false
+Via delle Giardini,it,Via,false
+Vicolo dei Giardini,it,Vicolo,false
+Viale dei Giardini,it,Viale,false
+Sentiero dei Giardini,it,Sentiero,false
+Piazza dei Giardini,it,Piazza,false
+Strada dei Giardini,it,Strada,false
+Passaggio dei Giardini,it,Passaggio,false
+Via dei Mulini,it,Via,false
+Via delle Mulini,it,Via,false
+Vicolo dei Mulini,it,Vicolo,false
+Viale dei Mulini,it,Viale,false
+Sentiero dei Mulini,it,Sentiero,false
+Piazza dei Mulini,it,Piazza,false
+Strada dei Mulini,it,Strada,false
+Passaggio dei Mulini,it,Passaggio,false
+Via dei Fontane,it,Via,false
+Via delle Fontane,it,Via,false
+Vicolo dei Fontane,it,Vicolo,false
+Viale dei Fontane,it,Viale,false
+Sentiero dei Fontane,it,Sentiero,false
+Piazza dei Fontane,it,Piazza,false
+Strada dei Fontane,it,Strada,false
+Passaggio dei Fontane,it,Passaggio,false
+Via dei Sorgenti,it,Via,false
+Via delle Sorgenti,it,Via,false
+Vicolo dei Sorgenti,it,Vicolo,false
+Viale dei Sorgenti,it,Viale,false
+Sentiero dei Sorgenti,it,Sentiero,false
+Piazza dei Sorgenti,it,Piazza,false
+Strada dei Sorgenti,it,Strada,false
+Passaggio dei Sorgenti,it,Passaggio,false
+Via dei Ruscelli,it,Via,false
+Via delle Ruscelli,it,Via,false
+Vicolo dei Ruscelli,it,Vicolo,false
+Viale dei Ruscelli,it,Viale,false
+Sentiero dei Ruscelli,it,Sentiero,false
+Piazza dei Ruscelli,it,Piazza,false
+Strada dei Ruscelli,it,Strada,false
+Passaggio dei Ruscelli,it,Passaggio,false
+Via dei Rive,it,Via,false
+Via delle Rive,it,Via,false
+Vicolo dei Rive,it,Vicolo,false
+Viale dei Rive,it,Viale,false
+Sentiero dei Rive,it,Sentiero,false
+Piazza dei Rive,it,Piazza,false
+Strada dei Rive,it,Strada,false
+Passaggio dei Rive,it,Passaggio,false
+Via dei Stagni,it,Via,false
+Via delle Stagni,it,Via,false
+Vicolo dei Stagni,it,Vicolo,false
+Viale dei Stagni,it,Viale,false
+Sentiero dei Stagni,it,Sentiero,false
+Piazza dei Stagni,it,Piazza,false
+Strada dei Stagni,it,Strada,false
+Passaggio dei Stagni,it,Passaggio,false
+Via dei Laghi,it,Via,false
+Via delle Laghi,it,Via,false
+Vicolo dei Laghi,it,Vicolo,false
+Viale dei Laghi,it,Viale,false
+Sentiero dei Laghi,it,Sentiero,false
+Piazza dei Laghi,it,Piazza,false
+Strada dei Laghi,it,Strada,false
+Passaggio dei Laghi,it,Passaggio,false
+Via dei Ponti,it,Via,false
+Via delle Ponti,it,Via,false
+Vicolo dei Ponti,it,Vicolo,false
+Viale dei Ponti,it,Viale,false
+Sentiero dei Ponti,it,Sentiero,false
+Piazza dei Ponti,it,Piazza,false
+Strada dei Ponti,it,Strada,false
+Passaggio dei Ponti,it,Passaggio,false
+Via dei Colline,it,Via,false
+Via delle Colline,it,Via,false
+Vicolo dei Colline,it,Vicolo,false
+Viale dei Colline,it,Viale,false
+Sentiero dei Colline,it,Sentiero,false
+Piazza dei Colline,it,Piazza,false
+Strada dei Colline,it,Strada,false
+Passaggio dei Colline,it,Passaggio,false
+Via dei Valli,it,Via,false
+Via delle Valli,it,Via,false
+Vicolo dei Valli,it,Vicolo,false
+Viale dei Valli,it,Viale,false
+Sentiero dei Valli,it,Sentiero,false
+Piazza dei Valli,it,Piazza,false
+Strada dei Valli,it,Strada,false
+Passaggio dei Valli,it,Passaggio,false
+Via dei Rocce,it,Via,false
+Via delle Rocce,it,Via,false
+Vicolo dei Rocce,it,Vicolo,false
+Viale dei Rocce,it,Viale,false
+Sentiero dei Rocce,it,Sentiero,false
+Piazza dei Rocce,it,Piazza,false
+Strada dei Rocce,it,Strada,false
+Passaggio dei Rocce,it,Passaggio,false
+Via dei Sassi,it,Via,false
+Via delle Sassi,it,Via,false
+Vicolo dei Sassi,it,Vicolo,false
+Viale dei Sassi,it,Viale,false
+Sentiero dei Sassi,it,Sentiero,false
+Piazza dei Sassi,it,Piazza,false
+Strada dei Sassi,it,Strada,false
+Passaggio dei Sassi,it,Passaggio,false
+Via dei Sabbie,it,Via,false
+Via delle Sabbie,it,Via,false
+Vicolo dei Sabbie,it,Vicolo,false
+Viale dei Sabbie,it,Viale,false
+Sentiero dei Sabbie,it,Sentiero,false
+Piazza dei Sabbie,it,Piazza,false
+Strada dei Sabbie,it,Strada,false
+Passaggio dei Sabbie,it,Passaggio,false
+Via dei Soli,it,Via,false
+Via delle Soli,it,Via,false
+Vicolo dei Soli,it,Vicolo,false
+Viale dei Soli,it,Viale,false
+Sentiero dei Soli,it,Sentiero,false
+Piazza dei Soli,it,Piazza,false
+Strada dei Soli,it,Strada,false
+Passaggio dei Soli,it,Passaggio,false
+Via dei Stelle,it,Via,false
+Via delle Stelle,it,Via,false
+Vicolo dei Stelle,it,Vicolo,false
+Viale dei Stelle,it,Viale,false
+Sentiero dei Stelle,it,Sentiero,false
+Piazza dei Stelle,it,Piazza,false
+Strada dei Stelle,it,Strada,false
+Passaggio dei Stelle,it,Passaggio,false
+Via dei Aurore,it,Via,false
+Via delle Aurore,it,Via,false
+Vicolo dei Aurore,it,Vicolo,false
+Viale dei Aurore,it,Viale,false
+Sentiero dei Aurore,it,Sentiero,false
+Piazza dei Aurore,it,Piazza,false
+Strada dei Aurore,it,Strada,false
+Passaggio dei Aurore,it,Passaggio,false
+Via dei Tramonti,it,Via,false
+Via delle Tramonti,it,Via,false
+Vicolo dei Tramonti,it,Vicolo,false
+Viale dei Tramonti,it,Viale,false
+Sentiero dei Tramonti,it,Sentiero,false
+Piazza dei Tramonti,it,Piazza,false
+Strada dei Tramonti,it,Strada,false
+Passaggio dei Tramonti,it,Passaggio,false
+Via dei Inverni,it,Via,false
+Via delle Inverni,it,Via,false
+Vicolo dei Inverni,it,Vicolo,false
+Viale dei Inverni,it,Viale,false
+Sentiero dei Inverni,it,Sentiero,false
+Piazza dei Inverni,it,Piazza,false
+Strada dei Inverni,it,Strada,false
+Passaggio dei Inverni,it,Passaggio,false
+Via dei Primavere,it,Via,false
+Via delle Primavere,it,Via,false
+Vicolo dei Primavere,it,Vicolo,false
+Viale dei Primavere,it,Viale,false
+Sentiero dei Primavere,it,Sentiero,false
+Piazza dei Primavere,it,Piazza,false
+Strada dei Primavere,it,Strada,false
+Passaggio dei Primavere,it,Passaggio,false
+Via dei Autunni,it,Via,false
+Via delle Autunni,it,Via,false
+Vicolo dei Autunni,it,Vicolo,false
+Viale dei Autunni,it,Viale,false
+Sentiero dei Autunni,it,Sentiero,false
+Piazza dei Autunni,it,Piazza,false
+Strada dei Autunni,it,Strada,false
+Passaggio dei Autunni,it,Passaggio,false
+Via dei Cappelle,it,Via,false
+Via delle Cappelle,it,Via,false
+Vicolo dei Cappelle,it,Vicolo,false
+Viale dei Cappelle,it,Viale,false
+Sentiero dei Cappelle,it,Sentiero,false
+Piazza dei Cappelle,it,Piazza,false
+Strada dei Cappelle,it,Strada,false
+Passaggio dei Cappelle,it,Passaggio,false
+Via dei Campanili,it,Via,false
+Via delle Campanili,it,Via,false
+Vicolo dei Campanili,it,Vicolo,false
+Viale dei Campanili,it,Viale,false
+Sentiero dei Campanili,it,Sentiero,false
+Piazza dei Campanili,it,Piazza,false
+Strada dei Campanili,it,Strada,false
+Passaggio dei Campanili,it,Passaggio,false
+Via dei Scuole,it,Via,false
+Via delle Scuole,it,Via,false
+Vicolo dei Scuole,it,Vicolo,false
+Viale dei Scuole,it,Viale,false
+Sentiero dei Scuole,it,Sentiero,false
+Piazza dei Scuole,it,Piazza,false
+Strada dei Scuole,it,Strada,false
+Passaggio dei Scuole,it,Passaggio,false
+Via dei Stazioni,it,Via,false
+Via delle Stazioni,it,Via,false
+Vicolo dei Stazioni,it,Vicolo,false
+Viale dei Stazioni,it,Viale,false
+Sentiero dei Stazioni,it,Sentiero,false
+Piazza dei Stazioni,it,Piazza,false
+Strada dei Stazioni,it,Strada,false
+Passaggio dei Stazioni,it,Passaggio,false
+Via dei Mercati,it,Via,false
+Via delle Mercati,it,Via,false
+Vicolo dei Mercati,it,Vicolo,false
+Viale dei Mercati,it,Viale,false
+Sentiero dei Mercati,it,Sentiero,false
+Piazza dei Mercati,it,Piazza,false
+Strada dei Mercati,it,Strada,false
+Passaggio dei Mercati,it,Passaggio,false
+Via dei Fabbri,it,Via,false
+Via delle Fabbri,it,Via,false
+Vicolo dei Fabbri,it,Vicolo,false
+Viale dei Fabbri,it,Viale,false
+Sentiero dei Fabbri,it,Sentiero,false
+Piazza dei Fabbri,it,Piazza,false
+Strada dei Fabbri,it,Strada,false
+Passaggio dei Fabbri,it,Passaggio,false
+Via dei Tessitori,it,Via,false
+Via delle Tessitori,it,Via,false
+Vicolo dei Tessitori,it,Vicolo,false
+Viale dei Tessitori,it,Viale,false
+Sentiero dei Tessitori,it,Sentiero,false
+Piazza dei Tessitori,it,Piazza,false
+Strada dei Tessitori,it,Strada,false
+Passaggio dei Tessitori,it,Passaggio,false
+Via dei Mugnai,it,Via,false
+Via delle Mugnai,it,Via,false
+Vicolo dei Mugnai,it,Vicolo,false
+Viale dei Mugnai,it,Viale,false
+Sentiero dei Mugnai,it,Sentiero,false
+Piazza dei Mugnai,it,Piazza,false
+Strada dei Mugnai,it,Strada,false
+Passaggio dei Mugnai,it,Passaggio,false
+Via dei Conciatori,it,Via,false
+Via delle Conciatori,it,Via,false
+Vicolo dei Conciatori,it,Vicolo,false
+Viale dei Conciatori,it,Viale,false
+Sentiero dei Conciatori,it,Sentiero,false
+Piazza dei Conciatori,it,Piazza,false
+Strada dei Conciatori,it,Strada,false
+Passaggio dei Conciatori,it,Passaggio,false
+Via dei Fornai,it,Via,false
+Via delle Fornai,it,Via,false
+Vicolo dei Fornai,it,Vicolo,false
+Viale dei Fornai,it,Viale,false
+Sentiero dei Fornai,it,Sentiero,false
+Piazza dei Fornai,it,Piazza,false
+Strada dei Fornai,it,Strada,false
+Passaggio dei Fornai,it,Passaggio,false
+Via dei Macellai,it,Via,false
+Via delle Macellai,it,Via,false
+Vicolo dei Macellai,it,Vicolo,false
+Viale dei Macellai,it,Viale,false
+Sentiero dei Macellai,it,Sentiero,false
+Piazza dei Macellai,it,Piazza,false
+Strada dei Macellai,it,Strada,false
+Passaggio dei Macellai,it,Passaggio,false
+Via dei Vignaioli,it,Via,false
+Via delle Vignaioli,it,Via,false
+Vicolo dei Vignaioli,it,Vicolo,false
+Viale dei Vignaioli,it,Viale,false
+Sentiero dei Vignaioli,it,Sentiero,false
+Piazza dei Vignaioli,it,Piazza,false
+Strada dei Vignaioli,it,Strada,false
+Passaggio dei Vignaioli,it,Passaggio,false
+Via dei Pastori,it,Via,false
+Via delle Pastori,it,Via,false
+Vicolo dei Pastori,it,Vicolo,false
+Viale dei Pastori,it,Viale,false
+Sentiero dei Pastori,it,Sentiero,false
+Piazza dei Pastori,it,Piazza,false
+Strada dei Pastori,it,Strada,false
+Passaggio dei Pastori,it,Passaggio,false
+Via dei Cervi,it,Via,false
+Via delle Cervi,it,Via,false
+Vicolo dei Cervi,it,Vicolo,false
+Viale dei Cervi,it,Viale,false
+Sentiero dei Cervi,it,Sentiero,false
+Piazza dei Cervi,it,Piazza,false
+Strada dei Cervi,it,Strada,false
+Passaggio dei Cervi,it,Passaggio,false
+Via dei Caprioli,it,Via,false
+Via delle Caprioli,it,Via,false
+Vicolo dei Caprioli,it,Vicolo,false
+Viale dei Caprioli,it,Viale,false
+Sentiero dei Caprioli,it,Sentiero,false
+Piazza dei Caprioli,it,Piazza,false
+Strada dei Caprioli,it,Strada,false
+Passaggio dei Caprioli,it,Passaggio,false
+Via dei Volpi,it,Via,false
+Via delle Volpi,it,Via,false
+Vicolo dei Volpi,it,Vicolo,false
+Viale dei Volpi,it,Viale,false
+Sentiero dei Volpi,it,Sentiero,false
+Piazza dei Volpi,it,Piazza,false
+Strada dei Volpi,it,Strada,false
+Passaggio dei Volpi,it,Passaggio,false
+Via dei Lepri,it,Via,false
+Via delle Lepri,it,Via,false
+Vicolo dei Lepri,it,Vicolo,false
+Viale dei Lepri,it,Viale,false
+Sentiero dei Lepri,it,Sentiero,false
+Piazza dei Lepri,it,Piazza,false
+Strada dei Lepri,it,Strada,false
+Passaggio dei Lepri,it,Passaggio,false
+Via dei Aquile,it,Via,false
+Via delle Aquile,it,Via,false
+Vicolo dei Aquile,it,Vicolo,false
+Viale dei Aquile,it,Viale,false
+Sentiero dei Aquile,it,Sentiero,false
+Piazza dei Aquile,it,Piazza,false
+Strada dei Aquile,it,Strada,false
+Passaggio dei Aquile,it,Passaggio,false
+Via dei Falchi,it,Via,false
+Via delle Falchi,it,Via,false
+Vicolo dei Falchi,it,Vicolo,false
+Viale dei Falchi,it,Viale,false
+Sentiero dei Falchi,it,Sentiero,false
+Piazza dei Falchi,it,Piazza,false
+Strada dei Falchi,it,Strada,false
+Passaggio dei Falchi,it,Passaggio,false
+Via dei Allodole,it,Via,false
+Via delle Allodole,it,Via,false
+Vicolo dei Allodole,it,Vicolo,false
+Viale dei Allodole,it,Viale,false
+Sentiero dei Allodole,it,Sentiero,false
+Piazza dei Allodole,it,Piazza,false
+Strada dei Allodole,it,Strada,false
+Passaggio dei Allodole,it,Passaggio,false
+Via dei Merli,it,Via,false
+Via delle Merli,it,Via,false
+Vicolo dei Merli,it,Vicolo,false
+Viale dei Merli,it,Viale,false
+Sentiero dei Merli,it,Sentiero,false
+Piazza dei Merli,it,Piazza,false
+Strada dei Merli,it,Strada,false
+Passaggio dei Merli,it,Passaggio,false
+Via dei Tordi,it,Via,false
+Via delle Tordi,it,Via,false
+Vicolo dei Tordi,it,Vicolo,false
+Viale dei Tordi,it,Viale,false
+Sentiero dei Tordi,it,Sentiero,false
+Piazza dei Tordi,it,Piazza,false
+Strada dei Tordi,it,Strada,false
+Passaggio dei Tordi,it,Passaggio,false
+Via dei Fringuelli,it,Via,false
+Via delle Fringuelli,it,Via,false
+Vicolo dei Fringuelli,it,Vicolo,false
+Viale dei Fringuelli,it,Viale,false
+Sentiero dei Fringuelli,it,Sentiero,false
+Piazza dei Fringuelli,it,Piazza,false
+Strada dei Fringuelli,it,Strada,false
+Passaggio dei Fringuelli,it,Passaggio,false
+Via dei Cince,it,Via,false
+Via delle Cince,it,Via,false
+Vicolo dei Cince,it,Vicolo,false
+Viale dei Cince,it,Viale,false
+Sentiero dei Cince,it,Sentiero,false
+Piazza dei Cince,it,Piazza,false
+Strada dei Cince,it,Strada,false
+Passaggio dei Cince,it,Passaggio,false
+Via dei Rondini,it,Via,false
+Via delle Rondini,it,Via,false
+Vicolo dei Rondini,it,Vicolo,false
+Viale dei Rondini,it,Viale,false
+Sentiero dei Rondini,it,Sentiero,false
+Piazza dei Rondini,it,Piazza,false
+Strada dei Rondini,it,Strada,false
+Passaggio dei Rondini,it,Passaggio,false
+Via dei Cicogne,it,Via,false
+Via delle Cicogne,it,Via,false
+Vicolo dei Cicogne,it,Vicolo,false
+Viale dei Cicogne,it,Viale,false
+Sentiero dei Cicogne,it,Sentiero,false
+Piazza dei Cicogne,it,Piazza,false
+Strada dei Cicogne,it,Strada,false
+Passaggio dei Cicogne,it,Passaggio,false
+Via dei Aironi,it,Via,false
+Via delle Aironi,it,Via,false
+Vicolo dei Aironi,it,Vicolo,false
+Viale dei Aironi,it,Viale,false
+Sentiero dei Aironi,it,Sentiero,false
+Piazza dei Aironi,it,Piazza,false
+Strada dei Aironi,it,Strada,false
+Passaggio dei Aironi,it,Passaggio,false
+Via dei Cigni,it,Via,false
+Via delle Cigni,it,Via,false
+Vicolo dei Cigni,it,Vicolo,false
+Viale dei Cigni,it,Viale,false
+Sentiero dei Cigni,it,Sentiero,false
+Piazza dei Cigni,it,Piazza,false
+Strada dei Cigni,it,Strada,false
+Passaggio dei Cigni,it,Passaggio,false
+Via dei Trote,it,Via,false
+Via delle Trote,it,Via,false
+Vicolo dei Trote,it,Vicolo,false
+Viale dei Trote,it,Viale,false
+Sentiero dei Trote,it,Sentiero,false
+Piazza dei Trote,it,Piazza,false
+Strada dei Trote,it,Strada,false
+Passaggio dei Trote,it,Passaggio,false
+Via dei Api,it,Via,false
+Via delle Api,it,Via,false
+Vicolo dei Api,it,Vicolo,false
+Viale dei Api,it,Viale,false
+Sentiero dei Api,it,Sentiero,false
+Piazza dei Api,it,Piazza,false
+Strada dei Api,it,Strada,false
+Passaggio dei Api,it,Passaggio,false
+Via dei Farfalle,it,Via,false
+Via delle Farfalle,it,Via,false
+Vicolo dei Farfalle,it,Vicolo,false
+Viale dei Farfalle,it,Viale,false
+Sentiero dei Farfalle,it,Sentiero,false
+Piazza dei Farfalle,it,Piazza,false
+Strada dei Farfalle,it,Strada,false
+Passaggio dei Farfalle,it,Passaggio,false
+Via dei Olmi,it,Via,false
+Via delle Olmi,it,Via,false
+Vicolo dei Olmi,it,Vicolo,false
+Viale dei Olmi,it,Viale,false
+Sentiero dei Olmi,it,Sentiero,false
+Piazza dei Olmi,it,Piazza,false
+Strada dei Olmi,it,Strada,false
+Passaggio dei Olmi,it,Passaggio,false
+Via dei Frassini,it,Via,false
+Via delle Frassini,it,Via,false
+Vicolo dei Frassini,it,Vicolo,false
+Viale dei Frassini,it,Viale,false
+Sentiero dei Frassini,it,Sentiero,false
+Piazza dei Frassini,it,Piazza,false
+Strada dei Frassini,it,Strada,false
+Passaggio dei Frassini,it,Passaggio,false
+Via dei Ontani,it,Via,false
+Via delle Ontani,it,Via,false
+Vicolo dei Ontani,it,Vicolo,false
+Viale dei Ontani,it,Viale,false
+Sentiero dei Ontani,it,Sentiero,false
+Piazza dei Ontani,it,Piazza,false
+Strada dei Ontani,it,Strada,false
+Passaggio dei Ontani,it,Passaggio,false
+Via dei Faggi,it,Via,false
+Via delle Faggi,it,Via,false
+Vicolo dei Faggi,it,Vicolo,false
+Viale dei Faggi,it,Viale,false
+Sentiero dei Faggi,it,Sentiero,false
+Piazza dei Faggi,it,Piazza,false
+Strada dei Faggi,it,Strada,false
+Passaggio dei Faggi,it,Passaggio,false
+Via dei Castagni,it,Via,false
+Via delle Castagni,it,Via,false
+Vicolo dei Castagni,it,Vicolo,false
+Viale dei Castagni,it,Viale,false
+Sentiero dei Castagni,it,Sentiero,false
+Piazza dei Castagni,it,Piazza,false
+Strada dei Castagni,it,Strada,false
+Passaggio dei Castagni,it,Passaggio,false
+Via dei Ulivi,it,Via,false
+Via delle Ulivi,it,Via,false
+Vicolo dei Ulivi,it,Vicolo,false
+Viale dei Ulivi,it,Viale,false
+Sentiero dei Ulivi,it,Sentiero,false
+Piazza dei Ulivi,it,Piazza,false
+Strada dei Ulivi,it,Strada,false
+Passaggio dei Ulivi,it,Passaggio,false
+Via dei Allori,it,Via,false
+Via delle Allori,it,Via,false
+Vicolo dei Allori,it,Vicolo,false
+Viale dei Allori,it,Viale,false
+Sentiero dei Allori,it,Sentiero,false
+Piazza dei Allori,it,Piazza,false
+Strada dei Allori,it,Strada,false
+Passaggio dei Allori,it,Passaggio,false
+Via dei Eriche,it,Via,false
+Via delle Eriche,it,Via,false
+Vicolo dei Eriche,it,Vicolo,false
+Viale dei Eriche,it,Viale,false
+Sentiero dei Eriche,it,Sentiero,false
+Piazza dei Eriche,it,Piazza,false
+Strada dei Eriche,it,Strada,false
+Passaggio dei Eriche,it,Passaggio,false
+Via dei Felci,it,Via,false
+Via delle Felci,it,Via,false
+Vicolo dei Felci,it,Vicolo,false
+Viale dei Felci,it,Viale,false
+Sentiero dei Felci,it,Sentiero,false
+Piazza dei Felci,it,Piazza,false
+Strada dei Felci,it,Strada,false
+Passaggio dei Felci,it,Passaggio,false
+Via dei Muschi,it,Via,false
+Via delle Muschi,it,Via,false
+Vicolo dei Muschi,it,Vicolo,false
+Viale dei Muschi,it,Viale,false
+Sentiero dei Muschi,it,Sentiero,false
+Piazza dei Muschi,it,Piazza,false
+Strada dei Muschi,it,Strada,false
+Passaggio dei Muschi,it,Passaggio,false
+Via dei Ginestre,it,Via,false
+Via delle Ginestre,it,Via,false
+Vicolo dei Ginestre,it,Vicolo,false
+Viale dei Ginestre,it,Viale,false
+Sentiero dei Ginestre,it,Sentiero,false
+Piazza dei Ginestre,it,Piazza,false
+Strada dei Ginestre,it,Strada,false
+Passaggio dei Ginestre,it,Passaggio,false
+Via dei Ciclamini,it,Via,false
+Via delle Ciclamini,it,Via,false
+Vicolo dei Ciclamini,it,Vicolo,false
+Viale dei Ciclamini,it,Viale,false
+Sentiero dei Ciclamini,it,Sentiero,false
+Piazza dei Ciclamini,it,Piazza,false
+Strada dei Ciclamini,it,Strada,false
+Passaggio dei Ciclamini,it,Passaggio,false
+Via dei Narcisi,it,Via,false
+Via delle Narcisi,it,Via,false
+Vicolo dei Narcisi,it,Vicolo,false
+Viale dei Narcisi,it,Viale,false
+Sentiero dei Narcisi,it,Sentiero,false
+Piazza dei Narcisi,it,Piazza,false
+Strada dei Narcisi,it,Strada,false
+Passaggio dei Narcisi,it,Passaggio,false
+Via dei Primule,it,Via,false
+Via delle Primule,it,Via,false
+Vicolo dei Primule,it,Vicolo,false
+Viale dei Primule,it,Viale,false
+Sentiero dei Primule,it,Sentiero,false
+Piazza dei Primule,it,Piazza,false
+Strada dei Primule,it,Strada,false
+Passaggio dei Primule,it,Passaggio,false
+Via dei Ippocastani,it,Via,false
+Via delle Ippocastani,it,Via,false
+Vicolo dei Ippocastani,it,Vicolo,false
+Viale dei Ippocastani,it,Viale,false
+Sentiero dei Ippocastani,it,Sentiero,false
+Piazza dei Ippocastani,it,Piazza,false
+Strada dei Ippocastani,it,Strada,false
+Passaggio dei Ippocastani,it,Passaggio,false
+Via dei Platani,it,Via,false
+Via delle Platani,it,Via,false
+Vicolo dei Platani,it,Vicolo,false
+Viale dei Platani,it,Viale,false
+Sentiero dei Platani,it,Sentiero,false
+Piazza dei Platani,it,Piazza,false
+Strada dei Platani,it,Strada,false
+Passaggio dei Platani,it,Passaggio,false
+Via dei Glicini,it,Via,false
+Via delle Glicini,it,Via,false
+Vicolo dei Glicini,it,Vicolo,false
+Viale dei Glicini,it,Viale,false
+Sentiero dei Glicini,it,Sentiero,false
+Piazza dei Glicini,it,Piazza,false
+Strada dei Glicini,it,Strada,false
+Passaggio dei Glicini,it,Passaggio,false

@@ -1,0 +1,19 @@
+From: Pfefferminzia <intern@pfefferminzia.example>
+To: <intern@pfefferminzia.example>
+Date: Wed, 16 Apr 2025 14:40:00 +0100
+Subject: Re: Eskalation Fall Pieper
+Message-ID: <INT-00000807@pfefferminzia.example>
+X-Thread-ID: TH-00000806
+X-Bezug: SCHADEN SCH-00000810
+Content-Type: text/plain; charset=utf-8
+
+Hi Aylin,
+
+ich habe es gefunden. Im Migrationsmapping HP-2025-Q2 wurde der HAPO-Bausteincode BST=01 (Tierhalter) nicht auf coverages gemappt, weil in HAPO die Rasse im Freitext ZUSATZ1 steht und der Parser das Feld als Bemerkung behandelt hat. Betroffen: 214 Vertraege mit BST=01 in der Migration, davon 11 mit Schaden seit Maerz, davon 11 automatisch abgelehnt (Regel 'Tierhalter ohne Baustein' = Ablehnung).
+
+Zur zweiten Frage: Die Regel war als 'Deckungspruefung negativ' konfiguriert und hat den Vier-Augen-Schritt nicht ausgeloest, weil sie als Konfigurationsregel und nicht als Modellentscheidung galt. Das habe ich im Review uebersehen. Heute Nachmittag: Regel deaktiviert, die 11 Faelle an dein Team, Nachmigration der 214 Vertraege bis Freitag.
+
+Jonas
+
+-- 
+Fiktives Lehrbeispiel. Alle Daten synthetisch. Keine Verbindung zu realen Personen, Unternehmen oder Marken.

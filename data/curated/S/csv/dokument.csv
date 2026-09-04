@@ -1,0 +1,415 @@
+﻿dokument_id,dokument_typ,richtung,format,ist_gerendert,ocr_qualitaet,seiten,titel,absender,empfaenger,partner_id,vertrag_id,schaden_id,antrag_id,interaktion_id,erstellt_am,quellsystem,datei_pfad,text_body,ist_persona_fall
+DOK-00000101,BERATUNGSPROTOKOLL,INTERN,MD,true,GUT,2,Beratungsdokumentation Risikoleben Ehepaar Niederberger,Generalagentur Luzern,Akte,PTR-00000001,VTR-00000102,,,,2018-05-14,DOKU,data/documents/S/personas/PTR-00000001/DOK-00000101_beratungsprotokoll.md,"Anlass: Geplante Hypothekaraufnahme fuer Eigenheim; Absicherung des Partnereinkommens bei Todesfall.
+
+Beduerfnisse: Beide Ehegatten erwerbstaetig (Simone 60 Prozent Physiotherapie, Reto 100 Prozent Projektleiter). Zwei Kinder (2014, 2017). Bestehende Vorsorge: Pensionskasse beide, keine private Todesfallabsicherung.
+
+Empfehlung: Je eine Risikolebensversicherung ueber CHF 300'000, Laufzeit 25 Jahre, konstante Summe, Bezugsrecht der Ehepartner. Ueber-Kreuz-Gestaltung nicht noetig (CH, Ehegatten erbschaftssteuerbefreit im Kanton Luzern).
+
+Entscheid der Kunden: Beide Antraege gezeichnet, Gesundheitsfragen ohne Angaben, Nichtraucher.
+
+Hinweis erteilt: Kundeninformation nach Art. 3 VVG, AVB PL-2017 ausgehaendigt.
+
+Beraterin: I. Roth-Fankhauser (in Vertretung Agenturleitung Luzern)",true
+DOK-00000102,BERATUNGSPROTOKOLL,INTERN,MD,true,GUT,2,Beratungsdokumentation nach Hauskauf Rebhaldenweg 7,Generalagentur Luzern,Akte,PTR-00000001,VTR-00000101,,,,2023-06-20,DOKU,data/documents/S/personas/PTR-00000001/DOK-00000102_beratungsprotokoll.md,"Anlass: Kauf Einfamilienhaus Rebhaldenweg 7, Luzern, per 01.06.2023.
+
+Besprochen: Erhoehung Risikoleben Reto von 300'000 auf 450'000 wegen hoeherer Hypothek; Baustein Gebaeudehaftpflicht in der Privathaftpflicht; Adressaenderung fuer alle Vertraege.
+
+Entscheid: Erhoehung Risikoleben Reto beantragt (Gesundheitspruefung folgt). Baustein Gebaeudehaftpflicht per 01.07.2023 eingeschlossen. Adressaenderung im System Leben erfasst; Haftpflicht wird nachgefuehrt.
+
+Bemerkung: Kundin wuenscht kuenftig Kommunikation per App, Agentur bleibt Ansprechpartnerin fuer Beratung.",true
+DOK-00000103,KOSTENVORANSCHLAG,EINGEHEND,MD,true,GUT,1,Kostenvoranschlag E-Bike Reparatur,"Velo Reuss GmbH, Luzern",Nachbar,PTR-00000001,,SCH-00000118,,,2025-05-18,MINT,data/documents/S/personas/PTR-00000001/DOK-00000103_kostenvoranschlag.md,"Velo Reuss GmbH, Reussweg 3, 6003 Luzern, UID CHE-999.111.222
+
+Kostenvoranschlag Nr. 2025-0517
+Fahrzeug: E-Bike Trekking, Rahmen-Nr. WXT-4471
+
+1. Display-Einheit ersetzen        CHF 890.00
+2. Rahmenkratzer ausbessern, Lack   CHF 620.00
+3. Halterung Display, Kabelbaum     CHF 380.00
+4. Arbeit 4.5 h a CHF 100          CHF 450.00
+
+Total inkl. MwSt. 8.1 Prozent    CHF 2'340.00
+
+Gueltig 30 Tage.",true
+DOK-00000104,SCHADENMELDUNG,EINGEHEND,MD,true,MITTEL,2,Schadenanzeige Privathaftpflicht Skikollision,Reto Niederberger via Agentur,Pfefferminz Versicherung AG,PTR-00000001,,SCH-00000110,,,2019-02-18,DOKU,data/documents/S/personas/PTR-00000001/DOK-00000104_schadenmeldung.md,"Schadenanzeige Privathaftpflicht (Formular PF-S01, ausgefuellt durch Agentur)
+
+Versicherungsnehmerin: Niederberger Simone, Police 40.233.910
+Verursacher: Niederberger Reto (mitversicherter Ehegatte)
+Schadendatum: 16.02.2019, ca. 11:30 Uhr
+Schadenort: Grindelwald-First, Piste Nr. 4 (blau)
+
+Hergang: Bei Nebel und schlechter Sicht fuhr Herr Niederberger auf eine vor ihm haltende Skifahrerin auf. Beide stuerzten. Die Geschaedigte klagte ueber Schmerzen in der rechten Schulter, ein Ski brach. Pistenrettung war vor Ort. Herr Niederberger blieb unverletzt.
+
+Geschaedigte: Frau B. S., Bern (Adresse in der Akte). Zeugen: Pistenrettung First.
+Verschulden aus Sicht des VN: eigenes Verschulden, zu schnell bei schlechter Sicht.
+Polizei: nein. Fotos: keine.
+
+Unterschrift VN: 18.02.2019",true
+DOK-00000201,ANTRAG,EINGEHEND,MD,true,GUT,3,Digitaler Antrag RisikoLeben (JSON-Export der App),Jana Ortlepp (App),Pfefferminzia Lebensversicherung Deutschland AG,PTR-00000002,VTR-00000202,,,,2025-09-09,MINT,data/documents/S/personas/PTR-00000002/DOK-00000201_antrag.md,"{
+  ""antrag"": ""ANT-00000202"",
+  ""produkt"": ""term_life"",
+  ""versicherungssumme"": 200000,
+  ""laufzeit_jahre"": 30,
+  ""summenverlauf"": ""KONSTANT"",
+  ""antragstellerin"": {""name"": ""Jana Ortlepp"", ""geburtsdatum"": ""1996-08-22"", ""beruf"": ""UX-Designerin"", ""raucherin"": false},
+  ""gesundheitsfragen"": [
+    {""id"": ""GF-2025-01"", ""frage"": ""Groesse / Gewicht"", ""antwort"": ""168 cm / 61 kg""},
+    {""id"": ""GF-2025-04"", ""frage"": ""Waren Sie in den letzten 5 Jahren wegen einer Erkrankung in aerztlicher Behandlung?"", ""antwort"": ""JA"", ""freitext"": ""vor 2 Jahren Physio wegen Rueckenschmerzen, seither nichts""},
+    {""id"": ""GF-2025-07"", ""frage"": ""Bestehen Erkrankungen des Herz-Kreislauf-Systems?"", ""antwort"": ""NEIN""},
+    {""id"": ""GF-2025-12"", ""frage"": ""Nehmen Sie regelmaessig Medikamente?"", ""antwort"": ""NEIN""}
+  ],
+  ""bezugsrecht"": ""gesetzliche Erben"",
+  ""e_signatur"": ""2025-09-09T20:44:12Z"",
+  ""uw_entscheid"": {""code"": ""N"", ""automatisiert"": true, ""engine"": ""MINT Underwriting-Engine v2""}
+}",true
+DOK-00000202,RECHNUNG,EINGEHEND,MD,true,GUT,1,Rechnung Ersatz Schliesszylinder,Hausverwaltung Leipzig-Sued GmbH,Jana Ortlepp,PTR-00000002,,SCH-00000210,,,2023-02-08,DOKU,data/documents/S/personas/PTR-00000002/DOK-00000202_rechnung.md,"Hausverwaltung Leipzig-Sued GmbH
+Rechnung 2023-0214 vom 08.02.2023
+
+Objekt: Holunderstieg 12, 04277 Leipzig, WE 3
+Anlass: Verlust Wohnungsschluessel mit Schliessanlagenfunktion am 07.02.2023
+
+Ersatz Schliesszylinder Wohnungstuer und Haustuer (Schliessanlage), 2 Stueck   EUR 540.00
+Montage Schluesseldienst                                                   EUR 240.00
+Gesamt                                                                     EUR 780.00
+
+Zahlbar innert 14 Tagen.",true
+DOK-00000301,GUTACHTEN,EINGEHEND,MD,true,GUT,14,Bauschadengutachten Wasserschaden Aarepark Lenzburg,"Baumann & Co Bauschadengutachten AG, Aarau","Pfefferminz Versicherung AG, Schaden CH",PTR-00000003,,SCH-00000318,,,2024-05-14,DOKU,data/documents/S/personas/PTR-00000003/DOK-00000301_gutachten.md,"1. Auftrag: Feststellung von Ursache und Umfang des Wasserschadens vom 11./12.03.2024 in der Ueberbauung Aarepark, Lenzburg, Wohnungen 4.2, 3.2 und 2.2.
+
+2. Besichtigung: 15.03.2024 und 09.04.2024 in Anwesenheit des Verwalters, des Kuechenbauers (M. Kaufmann) und des Sanierungsunternehmers.
+
+3. Ursache: Der flexible Anschlussschlauch der Kuechenarmatur (Fabrikat Aquaflex 3/8, Charge 23-11) war am Uebergang zum Eckventil undicht. Die Verschraubung war fachgerecht angezogen; der Dichtring zeigt eine Fertigungsunregelmaessigkeit (unvollstaendige Vulkanisation). Ein Montagefehler ist nicht nachweisbar. Eine Mitursache durch fehlende Dichtheitsprobe unter Druck ueber Nacht ist moeglich.
+
+4. Umfang:
+   Wohnung 4.2: Unterlagsboden und Parkett Kueche/Wohnen 62 m2, Sockelleisten, Kuechenunterschraenke        CHF 71'400
+   Wohnung 3.2: Decke Gips, Malerarbeiten, Parkett 38 m2, Mobiliar (Sofa, Teppich)                          CHF 54'200
+   Wohnung 2.2: Decke, Malerarbeiten, Trocknung                                                             CHF 21'900
+   Trocknung und Bautrockner 6 Wochen, Notdienst                                                            CHF 14'300
+   Mietausfall Wohnungen 3.2 und 2.2 (je 2 Monate)                                                          CHF 11'200
+   Nebenkosten, Bauleitung Sanierung                                                                        CHF 7'000
+   Total geschaetzt                                                                                        CHF 180'000
+
+5. Empfehlung: Regress gegen den Armaturenlieferanten pruefen (Produktfehler Dichtring). Beweissicherung: Schlauch und Dichtring sichergestellt, Fotos 1 bis 42 im Anhang.",true
+DOK-00000302,KORRESPONDENZ,AUSGEHEND,MD,true,GUT,2,Sanierung Betriebshaftpflicht Kaufmann + Soehne per 01.01.2025,"Pfefferminz Versicherung AG, Underwriting Haftpflicht CH",Broker Mittelland AG,PTR-00000003,VTR-00000301,,,,2024-11-18,DOKU,data/documents/S/personas/PTR-00000003/DOK-00000302_korrespondenz.md,"Sehr geehrte Damen und Herren
+
+Nach dem Grossschaden vom 12.03.2024 (Gesamtaufwand voraussichtlich CHF 172'400) haben wir den Vertrag 40.551.207-2 geprueft. Die Schadenquote der letzten drei Jahre liegt bei 810 Prozent. Wir fuehren den Vertrag weiter, passen ihn aber per Hauptfaelligkeit 01.01.2025 wie folgt an:
+
+- Jahrespraemie neu CHF 4'620.00 (bisher CHF 3'840.00), das entspricht einem Zuschlag von 20 Prozent gemaess Tarifhandbuch Kapitel 3 (Schadenquote ueber 80 Prozent).
+- Selbstbehalt fuer Bearbeitungs- und Obhutsschaeden neu CHF 2'000 je Ereignis (bisher CHF 500).
+- Auflage: Dichtheitspruefung unter Betriebsdruck fuer mindestens 12 Stunden nach jeder Wasseranschlussmontage, dokumentiert im Montageprotokoll.
+
+Die Aenderungen erfolgen unter der Kompetenzstufe U4. Sollte Ihre Kundin die Anpassung nicht akzeptieren, steht ihr das ordentliche Kuendigungsrecht zur Hauptfaelligkeit zu.
+
+Freundliche Gruesse
+Tobias Wenger, Senior Underwriter Betriebs- und Berufshaftpflicht CH",true
+DOK-00000303,VERGLEICH,EINGEHEND,MD,true,GUT,2,Vergleichsvereinbarung Regress Wasserschaden Aarepark,"Aquaflex Sanitaertechnik AG, Rechtsdienst","Pfefferminzia Versicherungen AG, Regress",PTR-00000003,,SCH-00000318,,,2025-07-08,MINT,data/documents/S/personas/PTR-00000003/DOK-00000303_vergleich.md,"Vergleichsvereinbarung
+
+zwischen Pfefferminzia Versicherung AG, Olten (Regressglaeubigerin) und Aquaflex Sanitaertechnik AG, Zuerich (Regressschuldnerin)
+
+1. Die Regressschuldnerin anerkennt ohne Praejudiz fuer weitere Faelle, dass der Anschlussschlauch Aquaflex 3/8 der Charge 23-11 eine Fertigungsunregelmaessigkeit aufwies.
+2. Die Regressschuldnerin bezahlt zur Abgeltung saemtlicher Regressansprueche aus dem Schadenereignis vom 12.03.2024 (Aarepark Lenzburg) den Betrag von CHF 40'000.00 bis 31.07.2025.
+3. Mit Zahlung sind alle gegenseitigen Ansprueche aus diesem Ereignis per Saldo aller Ansprueche erledigt.
+4. Die Parteien bewahren Stillschweigen ueber den Inhalt dieser Vereinbarung.
+
+Zuerich, 08.07.2025 / Olten, 10.07.2025",true
+DOK-00000304,AKTENNOTIZ,INTERN,MD,true,GUT,1,Bearbeitungsjournal SCH-00000318 (Auszug SILAS),Schaden CH,Akte,PTR-00000003,,SCH-00000318,,,2024-09-02,DOKU,data/documents/S/personas/PTR-00000003/DOK-00000304_aktennotiz.md,"13.03.24 TW  Meldung via Broker, Grossschaden, Res. 120k vorl. Gutachter Baumann beauftragt.
+15.03.24 TW  Besichtigung. Ursache vermutl. Armatur. Regress pruefen. VN sehr nervoes, Broker drueckt.
+20.03.24 TW  Res. 120'000 gebucht. GS-Meldung an Grossschadenkomitee (Schwelle 100k).
+14.05.24 TW  Gutachten: 180k, Produktfehler Dichtring wahrscheinlich. Res. auf 180k. Regress an REG weitergeleitet.
+11.06.24 TW  Broker droht mit Ombudsstelle. Hftg. dem Grunde nach bejaht, Deckung ok. Teilzahlung 95k vorbereitet.
+02.09.24 AD  Freigabe Teilzahlung 95'000 durch TL Schaden CH (ueber Kompetenz SB 25k). Zahlung ausgeloest.
+18.11.24 TW  Sanierung UW: +20 Prozent, SB 2'000, Auflage Dichtheitspruefung. Broker informiert.
+20.01.25 AD  Mobiliar/Mietausfall 48'600 bezahlt.
+10.03.25 AD  Schlussrechnung, Rest 22'000. Total 172'400 inkl. Gutachterkosten. Fall schliessen.
+08.07.25 REG Regressvergleich Aquaflex 40'000. Eingang 28.07.",true
+DOK-00000401,BETRIEBSBESCHREIBUNG,EINGEHEND,MD,true,GUT,5,Betriebsbeschreibung und Risikofragebogen Betriebshaftpflicht (Aktualisierung 2024),Elbtal Assekuranzmakler GmbH fuer Bergmann Gebaeudetechnik GmbH & Co. KG,"Pfefferminz Versicherung AG, Niederlassung Deutschland",PTR-00000004,VTR-00000401,,,,2024-11-28,DOKU,data/documents/S/personas/PTR-00000004/DOK-00000401_betriebsbeschreibung.md,"Betrieb: Bergmann Gebaeudetechnik GmbH & Co. KG, Kupferring 18, 01796 Pirna. Gruendung 1992. Geschaeftsfuehrerin Kerstin Bergmann, Prokurist Ralf Neubauer.
+
+Taetigkeiten (Anteil am Umsatz):
+- Sanitaer-, Heizungs- und Klimainstallation (WZ 43.22)           62 Prozent
+- Waermepumpen inkl. Erdsonden-Anschluss                          12 Prozent
+- Photovoltaik-Montage auf Daechern inkl. Unterkonstruktion (neu seit 03/2024, WZ 43.21) 21 Prozent
+- Wartung und Notdienst                                             5 Prozent
+
+Beschaeftigte: 42 (davon 31 gewerblich, 6 Auszubildende). Subunternehmer: Geruestbau und Elektroanschluss PV (Anteil ca. 15 Prozent).
+Umsatz 2023: EUR 5.9 Mio.; Plan 2024: EUR 6.8 Mio.
+
+Risikofragen:
+- Arbeiten auf Daechern: JA (seit 03/2024), Absturzsicherung nach DGUV, Schulung nachgewiesen.
+- Heissarbeiten (Loeten, Schweissen): JA, Heissarbeitenerlaubnis-Schein vorhanden.
+- Auslandsanteil: NEIN.
+- Asbest: nur zertifizierte Entsorgung durch Dritte.
+- Schaeden der letzten 5 Jahre: 2020 Wasserschaden EUR 38'200; 2024 Dachschaden PV EUR 27'500.
+
+Gewuenschte Deckung: Deckungssumme EUR 5 Mio., Taetigkeitsschaeden EUR 500'000 (Erhoehung auf 1 Mio. abgelehnt), Bausteine Umwelt-Basis, Schluesselverlust, Heissarbeiten neu.",true
+DOK-00000402,BERATUNGSPROTOKOLL,INTERN,MD,true,GUT,2,Beratungsdokumentation gemaess Paragraph 61 VVG,Elbtal Assekuranzmakler GmbH,Bergmann Gebaeudetechnik GmbH & Co. KG,PTR-00000004,VTR-00000401,,,,2024-11-28,DOKU,data/documents/S/personas/PTR-00000004/DOK-00000402_beratungsprotokoll.md,"Anlass: Nachtrag zur Betriebshaftpflicht nach Aufnahme der Photovoltaik-Montage; Aufforderung des Versicherers nach Schaden vom 17.09.2024.
+
+Wuensche und Beduerfnisse der Kundin: Vollstaendiger Versicherungsschutz fuer Dacharbeiten; Kosten begrenzen.
+
+Empfehlung des Maklers:
+1. Betriebsbeschreibung aktualisieren (erfolgt).
+2. Baustein Heissarbeiten einschliessen (Zuschlag 8 Prozent). Empfohlen, von der Kundin angenommen.
+3. Sublimit Taetigkeitsschaeden von EUR 500'000 auf EUR 1 Mio. erhoehen (Zuschlag ca. EUR 380 p. a.). Empfohlen, von der Kundin abgelehnt (Begruendung: Kosten; bisherige Schaeden unter 500'000).
+4. Objektbezogene Bauleistungsversicherung fuer PV-Projekte ueber EUR 100'000. Empfohlen, Entscheid vertagt.
+
+Hinweis erteilt: Bei Nichtanzeige weiterer Taetigkeitsaenderungen droht Leistungsfreiheit (Paragraphen 23 ff. VVG, vereinfacht dargestellt).
+
+Unterschriften: K. Bergmann, Makler J. K. (Elbtal Assekuranzmakler), 28.11.2024",true
+DOK-00000403,NACHTRAG,AUSGEHEND,MD,true,GUT,2,"Nachtrag Nr. 3 zum Versicherungsschein 40.612.384-1, wirksam 01.01.2025","Pfefferminz Versicherung AG, Niederlassung Deutschland",Bergmann Gebaeudetechnik GmbH & Co. KG,PTR-00000004,VTR-00000401,,,,2024-12-16,DOKU,data/documents/S/personas/PTR-00000004/DOK-00000403_nachtrag.md,"Aenderungsgrund: Aktualisierung Betriebsbeschreibung, Aufnahme Photovoltaik-Montage, Einschluss Heissarbeiten.
+
+                                  bisher                       neu
+Betriebsart                       Sanitaer/Heizung/Klima       zusaetzlich PV-Montage (Dacharbeiten)
+Risikoklasse                      4                            4
+Bemessungsgrundlage Umsatz        EUR 4'900'000                EUR 6'800'000
+Bausteine                         Umwelt-Basis, Schluessel     zusaetzlich Heissarbeiten
+Zuschlag Schadenquote 3 Jahre     0 Prozent                    10 Prozent
+Jahresbeitrag netto               EUR 4'184.87                 EUR 5'320.52
+Versicherungsteuer 19 Prozent     EUR 795.13                   EUR 1'010.90
+Jahresbeitrag brutto              EUR 4'980.00                 EUR 6'331.42
+
+Die uebrigen Bestimmungen bleiben unveraendert. Bedingungsgeneration HP-MODERN (AHB 2013, BBR 2015).",true
+DOK-00000404,UMSATZMELDUNG,EINGEHEND,MD,true,SCHLECHT,1,Umsatzmeldung 2018 (E-Mail mit Excel-Anhang),"Bergmann Gebaeudetechnik, R. Neubauer",Pfefferminz Versicherung AG,PTR-00000004,VTR-00000401,,,,2019-11-12,DOKU,data/documents/S/personas/PTR-00000004/DOK-00000404_umsatzmeldung.md,"Sehr geehrte Damen und Herren,
+
+anbei die Umsatzmeldung fuer das Jahr 2018.
+
+Umsatz gesamt lt. beiliegender Aufstellung: EUR 4.600.000
+(Anmerkung Sachbearbeiter, handschriftlich am Rand: Bilanz HR-Auszug weist EUR 4.900.000 aus. Differenz 300.000 = ? Rueckfrage 20.11.19 an Makler, keine Antwort. Praemie vorlaeufig belassen.)
+
+Mit freundlichen Gruessen
+Ralf Neubauer, Prokurist",true
+DOK-00000501,STANDMITTEILUNG,AUSGEHEND,MD,true,GUT,2,"Standmitteilung per 31.12.2015, Police L-0031187",Pfefferminz Leben AG,Elisabeth Vogt-Schnyder,PTR-00000005,VTR-00000501,,,,2016-03-08,DOKU,data/documents/S/personas/PTR-00000005/DOK-00000501_standmitteilung.md,"Gemischte Lebensversicherung, Tarif PK-95, Beginn 01.07.1995, Ablauf 09.06.2019
+Versicherungsnehmerin und versicherte Person: Elisabeth Vogt-Schnyder, geb. 09.06.1954
+Bezugsberechtigt im Todesfall: Walter Vogt, ersatzweise die Kinder zu gleichen Teilen
+
+Garantierte Erlebensfallsumme            CHF 120'000.00
+Todesfallsumme                           CHF 120'000.00
+Jahrespraemie                            CHF   4'236.00
+Technischer Zins                                3.50 Prozent
+
+Deckungskapital per 31.12.2015           CHF  96'412.00
+Angesammelte Ueberschussanteile          CHF  35'870.00
+Ueberschussanteil 2015 (laufend)              2.50 Prozent (Vorjahr 2.90 Prozent)
+Rueckkaufswert per 31.12.2015            CHF 128'340.00 (inkl. Ueberschuesse)
+
+Prognose Ablaufleistung (unverbindlich, bei gleichbleibendem Ueberschuss): CHF 166'000 bis 171'000",true
+DOK-00000502,ABLAUFABRECHNUNG,AUSGEHEND,MD,true,GUT,1,Ablaufabrechnung Police L-0031187,"Pfefferminz Leben AG, Leistungspruefung",Elisabeth Vogt-Schnyder,PTR-00000005,,SCH-00000501,,,2019-06-12,DOKU,data/documents/S/personas/PTR-00000005/DOK-00000502_ablaufabrechnung.md,"Ablauf per 09.06.2019 (Alter 65)
+
+Garantierte Erlebensfallsumme               CHF 120'000.00
+Angesammelte laufende Ueberschussanteile     CHF  41'300.00
+Schlussueberschuss                            CHF   7'120.00
+Ablaufleistung total                         CHF 168'420.00
+
+Bezugsrechtspruefung: Der im Todesfall bezugsberechtigte Ehemann Walter Vogt ist am 14.02.2019 verstorben. Da die versicherte Person den Ablauf erlebt, ist das Todesfall-Bezugsrecht gegenstandslos; die Erlebensfallleistung steht der Versicherungsnehmerin zu (AVB PK-95 Art. 9 Abs. 2).
+
+Steuern: Kapitalleistung aus Saeule 3b, Abschluss vor Alter 66, Laufzeit ueber 5 Jahre, Auszahlung nach Alter 60: einkommenssteuerfrei (vereinfachte Darstellung, kantonale Praxis vorbehalten).
+
+Auszahlung am 12.06.2019 auf Konto Oltener Kantonalbank, IBAN CH.. (in der Akte).
+
+Sachbearbeiterin: R. Amrein",true
+DOK-00000503,OFFERTE,AUSGEHEND,MD,true,GUT,3,Offerte Leibrente RentePlus mit Einmalpraemie CHF 150'000,"Pfefferminz Leben AG, Agentur Solothurn",Elisabeth Vogt-Schnyder,PTR-00000005,VTR-00000502,,,,2019-07-18,DOKU,data/documents/S/personas/PTR-00000005/DOK-00000503_offerte.md,"Sofort beginnende Leibrente, Tarif PL-2017, Rentenbeginn 01.09.2019
+Einmalpraemie                              CHF 150'000.00
+Stempelabgabe 2.5 Prozent (Saeule 3b)      CHF   3'750.00
+Gesamtbetrag                               CHF 153'750.00
+
+Garantierte Monatsrente lebenslang         CHF     512.50
+Ueberschussrente (nicht garantiert, 2019)  CHF      31.20
+Rentengarantiezeit 10 Jahre: Bei Tod vor dem 31.08.2029 wird die Rente bis dahin an die Erben weiterbezahlt.
+
+Hinweis zu Ihrer Frage vom 12.07.: Die Stempelabgabe von 2.5 Prozent faellt auf Einmalpraemien in der freien Vorsorge (Saeule 3b) an. Sie ist eine Bundesabgabe, nicht eine Gebuehr der Versicherung. Bei laufenden Praemien entfaellt sie.
+
+Steuern im Rentenbezug: Leibrenten aus Saeule 3b sind zu 40 Prozent als Einkommen steuerbar (vereinfachte Darstellung).
+
+Beraterin: Agentur Solothurn",true
+DOK-00000504,SCHADENMELDUNG,EINGEHEND,MD,true,HANDSCHRIFT,1,Schadenmeldung Hundebiss (handschriftlicher Brief),Elisabeth Vogt-Schnyder,Pfefferminz Versicherung AG,PTR-00000005,,SCH-00000510,,,2022-09-05,DOKU,data/documents/S/personas/PTR-00000005/DOK-00000504_schadenmeldung.md,"Solothurn, 5. September 2022
+
+Sehr geehrte Damen und Herren der Pfefferminz Versicherung
+
+Am 30. August hat mein Hund Rex (Mischling, 9 Jahre) unseren Nachbarn Herrn K. beim Gartenzaun in die rechte Hand gebissen. Herr K. wollte ihn streicheln, Rex hat sich erschrocken. Herr K. war auf der Notfallstation im Buergerspital, die Wunde wurde gereinigt und geklammert. Ich lege die Arztrechnung ueber Fr. 640.- bei (Beilage 1) und bitte Sie, den Betrag an Herrn K. zu ueberweisen. Seine Kontoangaben finden Sie auf Beilage 2.
+
+Rex ist bei Ihnen in meiner Haftpflichtversicherung Nr. 40.018.829-3 mitversichert, wie mir Frau A. von der Agentur bestaetigt hat.
+
+Mit freundlichen Gruessen
+E. Vogt-Schnyder",true
+DOK-00000601,ANTRAG,EINGEHEND,MD,true,GUT,6,Antrag RisikoLeben EUR 1.200.000 mit Gesundheitserklaerung,Isarwerk Finanzberatung GmbH fuer Dr. Farid Nazari,Pfefferminzia Lebensversicherung Deutschland AG,PTR-00000006,,,ANT-00000602,,2025-03-10,DOKU,data/documents/S/personas/PTR-00000006/DOK-00000601_antrag.md,"Antragsteller und versicherte Person: Dr. med. Farid Nazari, geb. 30.11.1973, Sternenallee 41, 81925 Muenchen. Beruf: Facharzt fuer Orthopaedie, selbstaendig (Gemeinschaftspraxis). Jahreseinkommen ca. EUR 240.000.
+
+Produkt: RisikoLeben, Versicherungssumme EUR 1.200.000 konstant, Laufzeit 18 Jahre, Zweck: Absicherung Praxisdarlehen EUR 900.000 und Familie. Bezugsberechtigt: Ehefrau Dr. Sabine Nazari.
+
+Gesundheitserklaerung (Fragebogen GF-2025):
+01 Groesse/Gewicht: 181 cm / 88 kg (BMI 26.9)
+02 Nikotin in den letzten 12 Monaten: NEIN
+05 Herz-Kreislauf-Erkrankungen: JA. Freitext: Bluthochdruck seit 2021, gut eingestellt mit Ramipril 5 mg, letzte Werte 135/85, Kontrolle beim Hausarzt halbjaehrlich.
+08 Erkrankungen des Bewegungsapparats: JA. Freitext: Bandscheibenvorfall L5/S1 2019, konservativ behandelt, seit 2020 beschwerdefrei, keine Einschraenkung.
+09 Stoffwechsel: NEIN
+10 Psychische Erkrankungen: NEIN
+12 Dauermedikation: JA, Ramipril 5 mg 1x taeglich
+14 Gefaehrliche Sportarten: Skitouren (Freizeit)
+15 Hausarzt: Dr. B. Steiner, Muenchen
+
+Einwilligung Schweigepflichtentbindung: erteilt. Hinweis nach Paragraph 19 Abs. 5 VVG erhalten.
+Unterschrift: 10.03.2025",true
+DOK-00000602,ARZTBERICHT,EINGEHEND,MD,true,MITTEL,3,Untersuchungsbericht Vertrauensarzt und Laborwerte,"Dr. med. R. Hofmann, Vertrauensarzt","Pfefferminzia Lebensversicherung Deutschland AG, Risikopruefung",PTR-00000006,,,ANT-00000602,,2025-05-06,DOKU,data/documents/S/personas/PTR-00000006/DOK-00000602_arztbericht.md,"Untersuchung am 05.05.2025, Proband Dr. F. Nazari, 51 Jahre.
+
+Anamnese: Arterielle Hypertonie seit 2021, medikamentoes mit ACE-Hemmer eingestellt. Bandscheibenvorfall L5/S1 2019 ohne Residuen. Keine kardiovaskulaeren Ereignisse. Familienanamnese: Vater Myokardinfarkt mit 68.
+
+Befund: Groesse 181 cm, Gewicht 87.5 kg, BMI 26.7. Blutdruck 134/84 mmHg (Mittel aus drei Messungen). Herz auskultatorisch unauffaellig, Ruhe-EKG Sinusrhythmus, keine Erregungsrueckbildungsstoerung. Belastungs-EKG bis 175 Watt ohne Ischaemiezeichen.
+
+Labor: Gesamtcholesterin 214 mg/dl, LDL 138 mg/dl, HDL 52 mg/dl, Triglyzeride 150 mg/dl, HbA1c 5.4 Prozent, Kreatinin 0.9 mg/dl, GGT 31 U/l, Cotinin negativ, HIV negativ.
+
+Beurteilung: Gut eingestellte Hypertonie ohne Endorganschaeden, leicht erhoehtes LDL, sonst unauffaellig. Aus vertrauensaerztlicher Sicht versicherbar mit maessigem Zuschlag.",true
+DOK-00000603,GEGENOFFERTE,AUSGEHEND,MD,true,GUT,2,Gegenofferte zum Antrag ANT-00000602,"Pfefferminzia Lebensversicherung Deutschland AG, Risikopruefung",Dr. Farid Nazari via Isarwerk Finanzberatung,PTR-00000006,,,ANT-00000602,,2025-05-28,MINT,data/documents/S/personas/PTR-00000006/DOK-00000603_gegenofferte.md,"Sehr geehrter Herr Dr. Nazari,
+
+wir freuen uns, Ihnen den beantragten Versicherungsschutz anbieten zu koennen, allerdings zu geaenderten Bedingungen:
+
+Versicherungssumme EUR 1.200.000, Laufzeit 18 Jahre, Nichtrauchertarif PZ-2025
+Tarifbeitrag jaehrlich                              EUR 4.127,40
+davon Zuschlag auf die Risikopraemie: 50 Prozent
+Zahlbeitrag nach Beitragsverrechnung Risikoueberschuss (30 Prozent) EUR 2.889,18 jaehrlich (EUR 240,77 monatlich)
+
+Die Gruende fuer den Zuschlag teilen wir Ihnen auf Wunsch mit; Ihr behandelnder Arzt erhaelt auf Anfrage eine aerztliche Auskunft. Eine Nachpruefung ist nach zwei Jahren moeglich.
+
+Die Gegenofferte ist bis 28.06.2025 gueltig. Mit Ihrer Annahme kommt der Vertrag zum 01.07.2025 zustande.
+
+Mit freundlichen Gruessen
+Risikopruefung Leben DE",true
+DOK-00000604,ERKLAERUNGSSCHREIBEN,AUSGEHEND,MD,true,GUT,4,Erlaeuterung der Annahmeentscheidung und Auskunft nach Art. 15 DSGVO,"Pfefferminzia Lebensversicherung Deutschland AG, Underwriting und Datenschutz",Dr. Farid Nazari,PTR-00000006,,,ANT-00000602,,2025-06-16,MINT,data/documents/S/personas/PTR-00000006/DOK-00000604_erklaerungsschreiben.md,"1. Entscheidungsweg
+Ihr Antrag vom 10.03.2025 wurde am 12.03.2025 durch unser Regelwerk (MINT Underwriting-Engine v2, Modellinventar MI-03) vorgeprueft. Ergebnis der Vorpruefung: Risikoklasse 3, Weiterleitung an manuelle Pruefung, weil die Versicherungssumme ueber der Automatikgrenze von EUR 400.000 liegt und ein Befund vorlag. Die Entscheidung trafen am 28.05.2025 Frau S. Lehmann (Senior-Risikopruefung) und Dr. med. K. Weber (Gesellschaftsarzt). Gemaess unserer Kompetenzordnung werden Zuschlaege, Ausschluesse und Ablehnungen nie automatisiert entschieden.
+
+2. Angewandte Regel
+Annahmerichtlinie ARL-2025, Kapitel 6 Herz-Kreislauf, Tabelle 6.1: Hypertonie, medikamentoes eingestellt, Werte unter 140/90, Behandlungsbeginn vor weniger als 5 Jahren, Summe ueber EUR 750.000: Zuschlag 25 bis 50 Prozent der Risikopraemie. Gewaehlt: 50 Prozent (Familienanamnese, LDL 138). Nicht beruecksichtigt: Bandscheibenvorfall (fuer Todesfallrisiko ohne Bedeutung), Skitouren (keine Erschwerung). Anlage: Auszug Tabelle 6.1.
+
+3. Verarbeitete Daten (Art. 15 DSGVO)
+Antragsangaben inkl. Gesundheitserklaerung, Hausarztzeugnis Dr. Steiner vom 24.04.2025, Untersuchungsbericht Vertrauensarzt vom 06.05.2025 mit Laborwerten. Empfaenger: keine ausserhalb der Gesellschaft; keine Rueckversicherung. Speicherdauer: Vertragslaufzeit zuzueglich gesetzlicher Fristen. Sie haben das Recht auf Berichtigung und auf Beschwerde bei der Aufsichtsbehoerde.
+
+4. Nachpruefung
+Auf Antrag nach dem 01.07.2027 bei Vorlage der Blutdruckwerte der letzten 24 Monate; bei stabiler Einstellung entfaellt der Zuschlag ab der naechsten Hauptfaelligkeit.
+
+Mit freundlichen Gruessen
+S. Lehmann, Risikopruefung Leben DE
+S. Lindqvist-Brandt, Datenschutzbeauftragter",true
+DOK-00000701,BERATUNGSPROTOKOLL,INTERN,MD,true,GUT,1,"Beratungsdokumentation Vorsorge 3a (freiwillig, CH)",Kundenservice Olten (D. Bianchi),Leon Waibel (App),PTR-00000007,,,ANT-00000702,,2025-01-22,DOKU,data/documents/S/personas/PTR-00000007/DOK-00000701_beratungsprotokoll.md,"Kunde: Leon Waibel, 17.04.2001, Student, Werkstudent 40 Prozent.
+Anlass: Anfrage ueber Chat-Assistent, Video-Beratung 22.01.2025, 18:00 bis 18:25.
+Beduerfnis: Steuerlich abzugsfaehig sparen, flexibel bleiben (Auslandsemester geplant), kleiner Beitrag.
+Besprochene Varianten: Bankloesung 3a (ohne Risikoschutz), Versicherungsloesung Vorsorge 3a (mit Praemienbefreiung bei Erwerbsunfaehigkeit).
+Hinweise: Gebundene Vorsorge, Bezug nur in gesetzlichen Faellen; Rueckkaufswert in den ersten Jahren tief (Abschlusskosten ueber 5 Jahre verteilt, Tarif PZ-2025); Beitragspause bis 6 Monate moeglich.
+Entscheid Kunde: Vorsorge 3a, CHF 150 monatlich, Ablauf 65, Praemienbefreiung eingeschlossen. Bezugsrecht gesetzliche Reihenfolge Art. 2 BVV 3.
+Dokumente: Kundeninformation Art. 3 VVG, AVB PZ-2025, in der App hinterlegt.",true
+DOK-00000702,KUENDIGUNGSBESTAETIGUNG,AUSGEHEND,MD,true,GUT,1,Bestaetigung Ihrer Kuendigung,Pfefferminzia Versicherungen AG (automatisch),Leon Waibel,PTR-00000007,VTR-00000701,,,,2025-11-25,MINT,data/documents/S/personas/PTR-00000007/DOK-00000702_kuendigungsbestaetigung.md,"Guten Tag Herr Waibel
+
+Wir bestaetigen die Kuendigung Ihrer Privathaftpflichtversicherung VTR-00000701 per 31.12.2025. Der Versicherungsschutz besteht bis zu diesem Datum um 24:00 Uhr. Eine Rueckerstattung faellt nicht an, da die Praemie bis zur Hauptfaelligkeit bezahlt ist.
+
+Ihre Vorsorge 3a (VTR-00000702) ist von der Kuendigung nicht betroffen.
+
+Schade, dass Sie gehen. Wenn Sie zurueckkommen moechten: In der App ist Ihr Vertrag mit einem Klick wieder aktiv.
+
+Pfefferminzia Versicherungen AG",true
+DOK-00000801,NACHTRAG,AUSGEHEND,MD,true,MITTEL,1,"Nachtrag Nr. 2 zum Versicherungsschein 40.288.506-4, wirksam 01.03.2019","Pfefferminz Versicherung AG, Niederlassung Deutschland",Hans-Georg Pieper,PTR-00000008,VTR-00000801,,,,2019-02-15,DOKU,data/documents/S/personas/PTR-00000008/DOK-00000801_nachtrag.md,"Aenderungsgrund: Einschluss Baustein Tierhalterhaftpflicht (Hund)
+
+                          bisher            neu
+Baustein Tierhalter       nicht versichert  eingeschlossen, 1 Hund (Schaeferhund-Mischling 'Rex', kein Listenhund)
+Deckungssumme Tierhalter  -                 innerhalb Deckungssumme EUR 5 Mio.
+Jahresbeitrag brutto      EUR 74,90         EUR 131,40 (Zuschlag Hund EUR 55,00 zzgl. Versicherungsteuer)
+
+Hinweis: In Sachsen besteht keine allgemeine Hundehalterhaftpflicht-Pflicht (vereinfachte Darstellung). Die uebrigen Bestimmungen bleiben unveraendert. Bedingungsgeneration HP-MODERN.
+
+Agentur Dresden, 15.02.2019",true
+DOK-00000802,BERATUNGSPROTOKOLL,INTERN,MD,true,HANDSCHRIFT,1,Beratungsdokumentation Paragraph 61 VVG: Hundehalterhaftpflicht,Agentur Dresden,Hans-Georg Pieper,PTR-00000008,VTR-00000801,,,,2019-02-12,DOKU,data/documents/S/personas/PTR-00000008/DOK-00000802_beratungsprotokoll.md,"Anlass: Kunde hat Hund aus dem Tierheim uebernommen (Schaeferhund-Mischling, ca. 3 Jahre).
+Wunsch: Absicherung fuer Schaeden durch den Hund.
+Empfehlung: Einschluss Tierhalterbaustein in bestehende Privathaftpflicht (guenstiger als Einzelpolice). Hinweis auf Listenhunde-Regelung: nicht betroffen.
+Entscheid: Einschluss ab 01.03.2019, Zuschlag EUR 55,00 zzgl. VersSt.
+Kunde wuenscht Post per Brief, keine E-Mail.
+Unterschrift Kunde / Vermittler 12.02.2019",true
+DOK-00000803,ARZTRECHNUNG,EINGEHEND,MD,true,MITTEL,1,Rechnung Notfallbehandlung Hundebiss,"Universitaetsklinikum Dresden, Notaufnahme",Radfahrer (Geschaedigter),PTR-00000008,,SCH-00000810,,,2025-03-25,DOKU,data/documents/S/personas/PTR-00000008/DOK-00000803_arztrechnung.md,"Patient: Herr M., Dresden. Behandlungsdatum 21.03.2025.
+Diagnose: Bissverletzung rechte Wade (S81.8), oberflaechlich, Wundreinigung, Tetanus-Auffrischung, Antibiotikaprophylaxe.
+
+Notfallpauschale                 EUR 210,00
+Wundversorgung                    EUR 145,00
+Impfung und Medikamente           EUR 85,00
+Gesamt                            EUR 440,00
+
+Zahlbar durch den Patienten; Weiterberechnung an den Tierhalter vorbehalten.",true
+DOK-00000804,MEMO,INTERN,MD,true,GUT,3,Root-Cause-Analyse Vorfall VF-2025-03: automatisierte Fehlablehnungen nach Migration Haftpflicht,"Compliance DE (M. Steinbrecher), Data & AI Office (J. Pfister)","Geschaeftsleitung, Modellrisiko-Komitee",PTR-00000008,,SCH-00000810,,,2025-05-06,DOKU,data/documents/S/personas/PTR-00000008/DOK-00000804_memo.md,"1. Sachverhalt
+Zwischen 24.03. und 15.04.2025 hat das Schadensystem MINT (Triage v3) elf Haftpflichtschaeden mit Tierbezug automatisch abgelehnt, weil der Tierhalterbaustein im migrierten Vertragsstand fehlte. Ausloeser der Aufdeckung: Beschwerde des Kunden Pieper (SCH-00000810) mit Eskalation an den Versicherungsombudsmann und Ankuendigung einer BaFin-Beschwerde.
+
+2. Ursachen
+a) Migrationsmapping HP-2025-Q2: Der HAPO-Bausteincode BST=01 wurde nicht auf das Zielfeld coverages abgebildet, weil das Quellfeld ZUSATZ1 (Freitext, enthaelt Hunderasse) als Bemerkung klassifiziert wurde. Betroffen: 214 Vertraege.
+b) Konfiguration Triage v3: Die Regel 'Tierhalterschaden ohne Baustein' war als Deckungsregel mit Ergebnis 'Ablehnung' konfiguriert und umging den Vier-Augen-Schritt, der fuer Modellentscheidungen gilt. Der Review hat die Regel als reine Konfiguration behandelt.
+c) Prozess: Das Ablehnungsschreiben wurde ohne Sichtkontrolle versandt; die Eingangsbestaetigung der Beschwerde erfolgte fristgerecht, die inhaltliche Bearbeitung erst nach der zweiten Beschwerde (Frist von 15 Arbeitstagen ueberschritten).
+
+3. Massnahmen
+- Regel deaktiviert (16.04.), Nachmigration der 214 Vertraege (18.04.), elf Faelle wiedereroeffnet und reguliert (bis 25.04.).
+- Kompetenzordnung R08 Version 2.1: Jede ablehnende Entscheidung, gleich ob Modell oder Regel, erfordert eine Freigabe durch eine natuerliche Person; technisch erzwungen (Freigabe-Workflow).
+- Modellinventar: Eintrag Triage v3 mit Vorfall VF-2025-03, Konfigurationsregeln werden wie Modellentscheidungen behandelt.
+- Beschwerdeprozess: Beschwerden ueber automatisierte Entscheidungen werden mit Prioritaet 1 an die Beschwerdestelle geroutet.
+
+4. Bewertung
+Kein Vermoegensschaden fuer Kunden nach Regulierung; Reputationsrisiko durch Ombudsmann- und Aufsichtskontakt; meldepflichtiger Vorfall im Sinne der KI-Governance-Richtlinie (Kategorie B). Bericht an das Technology & AI Committee erfolgt in der Sitzung vom 09.2025.",true
+DOK-00000805,AUFSICHTSKORRESPONDENZ,EINGEHEND,MD,true,GUT,2,"Beschwerde eines Versicherungsnehmers, Az. VA 25-K 1187, Bitte um Stellungnahme",Bundesanstalt fuer Finanzdienstleistungsaufsicht (fiktive Darstellung),"Pfefferminzia Versicherung AG, Niederlassung Deutschland, Hauptbevollmaechtigte",PTR-00000008,,SCH-00000810,,,2025-06-10,MINT,data/documents/S/personas/PTR-00000008/DOK-00000805_aufsichtskorrespondenz.md,"Sehr geehrte Damen und Herren,
+
+Herr Hans-Georg Pieper, Dresden, hat sich mit Schreiben vom 20.05.2025 an uns gewandt und beanstandet, dass ein Haftpflichtschaden durch ein automatisiertes Verfahren abgelehnt worden sei, obwohl Versicherungsschutz bestand. Wir bitten um Stellungnahme innerhalb von vier Wochen, insbesondere zu den organisatorischen Vorkehrungen, die eine Ueberpruefung automatisierter Entscheidungen durch natuerliche Personen sicherstellen, sowie zu Anzahl und Behandlung gleichartiger Faelle.
+
+Dieses Schreiben ist eine vereinfachte, fiktive Darstellung fuer Lehrzwecke.
+
+Mit freundlichen Gruessen
+Referat Verbraucherschutz Versicherungen",true
+DOK-00000901,RECHNUNG,EINGEHEND,MD,true,MITTEL,1,Rechnung Nr. 2022-0917 Fernseher,TV-Welt Wildau,Kunde (Wildau),PTR-00000009,,SCH-00000910,,,2022-09-06,DOKU,data/documents/S/personas/PTR-00000009/DOK-00000901_rechnung.md,"TV-Welt Wildau, Bahnhofstr. 11, 15745 Wildau
+Rechnung Nr. 2022-0917 vom 06.09.2022
+
+1x Fernseher 55 Zoll, Ersatz nach Transportschaden          EUR 890,00
+(inkl. 19 Prozent MwSt.)
+
+Zahlbar sofort. Keine USt-IdNr. angegeben.",true
+DOK-00000902,RECHNUNG,EINGEHEND,MD,true,MITTEL,1,Rechnung Nr. 2024-0918 Sideboard,Moebel Spreewald,Kunde (Luebbenau),PTR-00000009,,SCH-00000916,,,2024-04-08,DOKU,data/documents/S/personas/PTR-00000009/DOK-00000902_rechnung.md,"Moebel Spreewald, Hauptstr. 4, 03222 Luebbenau
+Rechnung Nr. 2024-0918 vom 08.04.2024
+
+1x Sideboard Eiche, Ersatz nach Transportschaden               EUR 2.300,00
+(inkl. 19 Prozent MwSt.)
+
+Zahlbar sofort. Telefon 0152 28817 309.
+
+(Anmerkung SIU: Layout, Schriftart und Nummernschema identisch mit Rechnung 2022-0917 TV-Welt Wildau; Telefonnummer = Mobilnummer des VN.)",true
+DOK-00000903,FOTO,EINGEHEND,MD,true,GUT,1,"Fotoanhang mit Metadaten (Platzhalter, 3 Bilder)",Marcel Grimm (Portal-Upload),Pfefferminzia Schaden DE,PTR-00000009,,SCH-00000918,,,2024-09-02,DOKU,data/documents/S/personas/PTR-00000009/DOK-00000903_foto.md,"Bild 1: IMG_4471.jpg, Laminat mit Wasserflecken, EXIF DateTimeOriginal 2024-08-12 16:42:11, Geraet Smartphone Modell X, GPS 52.30 N 13.63 E
+Bild 2: IMG_4472.jpg, Teppich nass, EXIF DateTimeOriginal 2024-08-12 16:43:05
+Bild 3: IMG_4480.jpg, Wasserkanister im Laderaum, EXIF DateTimeOriginal 2024-08-12 17:10:38
+
+Gemeldetes Schadendatum: 2024-08-29. Differenz 17 Tage.",true
+DOK-00000904,BETRUGSPRUEFUNGSBERICHT,INTERN,MD,true,GUT,6,"Ermittlungsbericht Serie Grimm (SCH-00000910, -912, -914, -916, -918)",Special Investigation Unit,"Schadenleitung DE, Legal",PTR-00000009,,SCH-00000918,,,2025-01-10,DOKU,data/documents/S/personas/PTR-00000009/DOK-00000904_betrugspruefungsbericht.md,"1. Anlass: Betrugsmodell v2 Score 0.87 fuer SCH-00000918 am 03.09.2024; Pruefung der gesamten Schadenhistorie des Kunden auf zwei Vertraegen.
+
+2. Feststellungen je Schaden
+- SCH-00000910 (2022, Fernseher, EUR 890): Rechnungssteller 'TV-Welt Wildau' nicht im Handelsregister, Adresse ist ein Kiosk. Geschaedigter nicht erreichbar. Bewertung: fingiert.
+- SCH-00000912 (2023, Garagentor, EUR 1'450): Kostenvoranschlag Metallbau Havelland GmbH echt (HRB gepreuft), Geschaedigter bestaetigt Schaden und Reparatur. Bewertung: echt.
+- SCH-00000914 (2023, Laptop, privat, EUR 1'180): Geschaedigter widerruft Bestaetigung ('sollte unterschreiben'), Kaufbeleg drei Tage vor Schaden, gleiche PLZ. Bewertung: Gefaelligkeitsschaden.
+- SCH-00000916 (2024, Sideboard, EUR 2'300): 'Moebel Spreewald' Briefkasten, Telefonnummer = Mobilnummer VN, Rechnungslayout identisch mit SCH-00000910. Bewertung: fingiert, Kollusion.
+- SCH-00000918 (2024, Wasserschaden, EUR 6'800): EXIF-Datum 17 Tage vor Schadendatum, Geschaedigter an Adresse unbekannt. Bewertung: fingiert.
+
+3. Muster: Serienmelder mit fingierten Dienstleistern (F7) und Gefaelligkeitsschaden (F1), Rueckdatierung (F2). Nutzung von Fast-Track-Schwelle (unter EUR 1'000) und automatischer Regulierung bei SCH-00000910 und SCH-00000914.
+
+4. Empfehlung: Ablehnung SCH-00000918, Rueckforderung SCH-00000910 und SCH-00000916 (EUR 3'190), Kuendigung beider Vertraege im Schadenfall, Strafanzeige. SCH-00000912 unberuehrt. Hinweis Modellrisiko: Merkmal PLZ-Cluster hat zum Score beigetragen; Fairness-Pruefung durch Modellvalidierung empfohlen, da der Fall auch ohne dieses Merkmal ueber der Schwelle laege (Score ohne PLZ: 0.79).",true
+DOK-00001001,FORMULAR_MITTELHERKUNFT,EINGEHEND,MD,true,GUT,2,Erklaerung zur Herkunft der Mittel (Einmalpraemie),Nadia Ferreira-Bucher via Rheinknie Vorsorgeberatung AG,Pfefferminzia Leben AG,PTR-00000010,,,ANT-00001001,,2025-04-14,DOKU,data/documents/S/personas/PTR-00000010/DOK-00001001_formular_mittelherkunft.md,"Vertragspartnerin und wirtschaftlich berechtigte Person: Nadia Ferreira-Bucher, 25.01.1979, Silberhalde 14, 4051 Basel, Staatsangehoerigkeit PT/CH.
+
+Einmalpraemie: CHF 450'000
+Herkunft: Verkauf der Eigentumswohnung Rua das Flores 12, Lissabon, Kaufvertrag vom 03.02.2025, Verkaufspreis EUR 520'000 (Kopie mit beglaubigter Uebersetzung beigelegt). Eingang auf Konto Oltener Kantonalbank am 28.02.2025.
+Eigenkapital beim Erwerb 2013: CHF 180'000 aus Erbschaft (Grossmutter, Basel, Erbschein vom 14.09.2012).
+
+Politisch exponierte Person: Nein. Familienmitglied einer PEP: Ja, Onkel muetterlicherseits, Abgeordneter eines Regionalparlaments in Portugal. Finanzielle Beziehung: keine.
+
+Unterschrift: 14.04.2025",true
+DOK-00001002,AKTENNOTIZ,INTERN,MD,true,GUT,2,AML-Pruefung mit erhoehter Sorgfalt: Entscheid,Geldwaescherei-Fachstelle (M. Jost),"Akte, Compliance",PTR-00000010,,,ANT-00001001,,2025-05-20,MINT,data/documents/S/personas/PTR-00000010/DOK-00001002_aktennotiz.md,"Ausloeser: Einmalpraemie CHF 450'000 (Schwelle 100'000); Screening-Treffer 'Familienmitglied PEP' (Onkel, Regionalparlament PT); Auslandsvermoegen (Rueckkehrerin).
+
+Gepruefte Unterlagen: Formular Mittelherkunft; Kaufvertrag Lissabon mit Uebersetzung; Kontoauszug Eingang EUR 520'000 vom 28.02.2025; Erbschein 2012 (CHF 180'000); Erklaerung zur Beziehung zum Onkel; Sanktionslisten (kein Treffer); Medienrecherche Onkel (kein Negativbefund).
+
+Beurteilung: Mittelherkunft plausibel und lueckenlos belegt (Erbschaft -> Wohnungskauf 2013 -> Verkauf 2025 -> Praemie). Kein finanzieller Bezug zur PEP. Risikoeinstufung: erhoeht wegen PEP-Familienbezug, nach Pruefung keine Verdachtsmomente.
+
+Entscheid: Freigabe. Vermerk 'erhoehte Sorgfalt, jaehrliche Ueberpruefung' im Kundenstamm. Kompetenz: Leiterin Fachstelle (bis CHF 1 Mio.).
+
+Hinweis: Zahlungseingang der Praemie ist von einem Konto der Oltener Kantonalbank zu erwarten; Abweichung waere zu pruefen.",true
+DOK-00001003,BERATUNGSPROTOKOLL,INTERN,MD,true,GUT,2,Beratungsdokumentation Anlage Verkaufserloes,Rheinknie Vorsorgeberatung AG,Nadia Ferreira-Bucher,PTR-00000010,,,ANT-00001001,,2025-03-27,DOKU,data/documents/S/personas/PTR-00000010/DOK-00001003_beratungsprotokoll.md,"Anlass: Rueckkehr in die Schweiz, Anlage eines Teils des Verkaufserloeses der Wohnung in Lissabon.
+Ziele der Kundin: Kapitalerhalt mit Garantie, steuerfreie Auszahlung, Todesfallschutz fuer den Ehemann, Verfuegbarkeit im Notfall.
+Empfehlung: Vorsorge 3b mit Einmalpraemie CHF 450'000, Tarif PZ-2025, Laufzeit 12 Jahre, garantierte Erlebensfallsumme CHF 480'000, Todesfallsumme CHF 480'000, Bezugsrecht Ehemann.
+Hinweise: Stempelabgabe 2.5 Prozent auf Einmalpraemie; Rueckkauf jederzeit moeglich, Stornoabzug 2 Prozent; Kapitalauszahlung steuerfrei bei Laufzeit ueber 10 Jahre und Abschluss vor Alter 66.
+(Anmerkung Compliance 11/2025: Voraussetzung Alter 60 bei Auszahlung nicht dokumentiert; Kundin bei Ablauf 58. Beratungsfehler des Maklers, Nachtrag Laufzeit 14 Jahre veranlasst.)
+Entscheid Kundin: Antrag gezeichnet 14.04.2025.",true
+DOK-00001004,RUECKKAUFSTABELLE,AUSGEHEND,MD,true,GUT,1,Rueckkaufswerte Vorsorge 3b VTR-00001001 (unverbindlich),"Pfefferminzia Leben AG, Kundenservice",Nadia Ferreira-Bucher,PTR-00000010,VTR-00001001,,,,2025-09-29,MINT,data/documents/S/personas/PTR-00000010/DOK-00001004_rueckkaufstabelle.md,"Einmalpraemie CHF 450'000, Tarif PZ-2025, technischer Zins 0.5 Prozent, Abschlusskosten ueber 5 Jahre verteilt, Stornoabzug 2 Prozent, Stueckkosten CHF 60.
+
+nach 1 Jahr   Deckungskapital CHF 443'200   Rueckkaufswert CHF 434'276
+nach 3 Jahren Deckungskapital CHF 452'900   Rueckkaufswert CHF 443'782
+nach 5 Jahren Deckungskapital CHF 462'300   Rueckkaufswert CHF 452'994
+Ablauf (Jahr 12) garantiert CHF 480'000 zuzueglich Ueberschuesse (nicht garantiert)
+
+Hinweis: Ein Rueckkauf innerhalb der ersten Jahre fuehrt zu einem Verlust gegenueber der Einmalpraemie; steuerliche Folgen sind von der Laufzeit abhaengig.",true

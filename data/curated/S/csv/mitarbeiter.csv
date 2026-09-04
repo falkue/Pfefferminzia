@@ -1,0 +1,61 @@
+﻿mitarbeiter_id,personalnummer,vorname,nachname,geschlecht,geburtsjahr,rolle,org_einheit_id,org_kuerzel,standort,land,herkunft,eintritt,austritt,sprache,ki_haltung,email,kompetenzstufe,ist_persona,mint_handle
+MIT-00001,10007,Beatrice,Hauenstein,W,1971,CEO und Vorsitzende der Geschäftsleitung,ORG-001,GL,Olten,CH,pfefferminz,2021-01-01,,de-CH,treibend,beatrice.hauenstein@pfefferminzia.example,4,true,beatrice.hauenstein
+MIT-00002,,Lena,Mbatha-Keller,W,1987,Chief Data & AI Officer (CDAO),ORG-060,DAO,Berlin,DE,minzia,2019-01-01,,de-DE,treibend,lena.mbatha-keller@pfefferminzia.example,4,true,lena.mbatha-keller
+MIT-00003,10021,Urs,Bächtold,M,1967,Chief Information Officer und Leiter Migration Office,ORG-070,IT,Olten,CH,pfefferminz,1997-01-01,,de-CH,skeptisch,urs.baechtold@pfefferminzia.example,4,true,urs.bächtold
+MIT-00004,,Konstantin,Reber,M,1978,Chief Risk Officer,ORG-020,RM,Olten,CH,extern,2024-01-01,,de-CH,neutral,konstantin.reber@pfefferminzia.example,4,true,konstantin.reber
+MIT-00005,10035,Martina,Jost,W,1974,General Counsel und Chief Compliance Officer,ORG-080,LEGAL,Olten,CH,pfefferminz,2008-01-01,,de-CH,neutral,martina.jost@pfefferminzia.example,4,true,martina.jost
+MIT-00006,10042,Sven,Lindqvist-Brandt,M,1981,Datenschutzbeauftragter Gruppe,ORG-085,DSB,Leipzig,DE,pfefferminz,2016-01-01,,de-DE,skeptisch,sven.lindqvist-brandt@pfefferminzia.example,2,true,sven.lindqvist-brandt
+MIT-00007,10049,Ruth,Amrein,W,1966,Leiterin Leistungsprüfung Leben CH,ORG-033,SL-LV-CH,Olten,CH,pfefferminz,1994-01-01,,de-CH,skeptisch,ruth.amrein@pfefferminzia.example,2,true,ruth.amrein
+MIT-00008,10056,Tobias,Wenger,M,1984,Senior Underwriter Betriebs- und Berufshaftpflicht CH,ORG-042,UW-HP-CH,Zürich,CH,pfefferminz,2010-01-01,,de-CH,neutral,tobias.wenger@pfefferminzia.example,2,true,tobias.wenger
+MIT-00009,10063,Aylin,Demirci,W,1989,Teamleiterin Schaden Haftpflicht DE,ORG-032,SL-HP-DE,Leipzig,DE,pfefferminz,2014-01-01,,de-DE,befuerwortend,aylin.demirci@pfefferminzia.example,2,true,aylin.demirci
+MIT-00010,,Jonas,Pfister,M,1994,ML Engineer und Lead MLOps,ORG-063,DAO-MLOPS,Berlin,DE,minzia,2020-01-01,,de-CH,befuerwortend,jonas.pfister@pfefferminzia.example,2,true,jonas.pfister
+MIT-00011,10077,Isabelle,Roth-Fankhauser,W,1976,Leiterin Agenturvertrieb CH,ORG-051,VT-AG-CH,Bern,CH,pfefferminz,2003-01-01,,de-CH,skeptisch,isabelle.roth-fankhauser@pfefferminzia.example,2,true,isabelle.roth-fankhauser
+MIT-00012,10084,Miriam,Steinbrecher,W,1992,Compliance Officer DE und AI Compliance Officer Gruppe,ORG-084,COMP-DE,Leipzig,DE,pfefferminz,2019-01-01,,de-DE,neutral,miriam.steinbrecher@pfefferminzia.example,2,true,miriam.steinbrecher
+MIT-00013,,Dario,Bianchi,M,1999,Kundenberater Contact Center Olten,ORG-037,KS-CH,Olten,CH,neu,2025-01-01,,de-CH,befuerwortend,dario.bianchi@pfefferminzia.example,2,true,dario.bianchi
+MIT-00014,,Hanna,Vollmer,W,1980,Chief People Officer und Leiterin Integrationsbüro,ORG-090,HR,Olten,CH,extern,2025-01-01,,de-DE,befuerwortend,hanna.vollmer@pfefferminzia.example,4,true,hanna.vollmer
+MIT-00015,10105,Jan,Bauer,M,1970,Teamleiter/in Schaden,ORG-034,SL-LV-DE,Leipzig,DE,pfefferminz,2019-07-01,,de-DE,befuerwortend,jan.bauer@pfefferminzia.example,2,false,jan.bauer
+MIT-00016,10112,Dimitrios,López,M,1960,Compliance-Spezialist/in,ORG-083,COMP-CH,Olten,CH,pfefferminz,1991-12-01,,de-CH,skeptisch,dimitrios.lopez@pfefferminzia.example,1,false,dimitrios.lópez
+MIT-00017,10119,Barbara,Furrer,W,1972,Produktmanager/in,ORG-045,PM,Olten,CH,pfefferminz,2015-04-01,,de-CH,skeptisch,barbara.furrer@pfefferminzia.example,1,false,barbara.furrer
+MIT-00018,,Stefanie,Neubauer,W,1969,Data Scientist,ORG-061,DAO-DS,Berlin,DE,minzia,2020-07-01,,de-DE,befuerwortend,stefanie.neubauer@pfefferminzia.example,1,false,stefanie.neubauer
+MIT-00019,10133,Franziska,Hofer,W,1965,Sachbearbeiter/in Bestand,ORG-039,BV,Olten,CH,pfefferminz,2024-09-01,,de-CH,neutral,franziska.hofer@pfefferminzia.example,1,false,franziska.hofer
+MIT-00020,10140,Finn,Schneider,M,1977,Systemspezialist/in,ORG-075,IT-DE,Leipzig,DE,pfefferminz,2019-04-01,,de-DE,befuerwortend,finn.schneider@pfefferminzia.example,1,false,finn.schneider
+MIT-00021,10147,Stefanie,Bösch,W,1998,Kundenberater/in,ORG-037,KS-CH,Olten,CH,pfefferminz,2018-06-01,,de-CH,neutral,stefanie.boesch@pfefferminzia.example,1,false,stefanie.bösch
+MIT-00022,10154,Pascal,Moser,M,1972,Controller/in,ORG-011,FIN-RL,Olten,CH,pfefferminz,1999-02-01,,de-CH,neutral,pascal.moser@pfefferminzia.example,1,false,pascal.moser
+MIT-00023,10161,Tim,Lange,M,1991,Systemspezialist/in,ORG-076,IT-SD,Leipzig,DE,pfefferminz,2020-06-01,,de-DE,befuerwortend,tim.lange@pfefferminzia.example,1,false,tim.lange
+MIT-00024,10168,Brigitte,Furrer,W,1985,Kundenberater/in,ORG-037,KS-CH,Olten,CH,pfefferminz,2015-10-01,,de-CH,skeptisch,brigitte.furrer@pfefferminzia.example,1,false,brigitte.furrer
+MIT-00025,10175,Maren,Lehmann,W,1976,Sachbearbeiter/in Schaden,ORG-034,SL-LV-DE,Leipzig,DE,pfefferminz,2004-04-01,,de-DE,skeptisch,maren.lehmann@pfefferminzia.example,1,false,maren.lehmann
+MIT-00026,,Roman,Stäheli,M,1980,Systemspezialist/in,ORG-074,IT-MIG,Olten,CH,minzia,2020-12-01,,de-CH,skeptisch,roman.staeheli@pfefferminzia.example,1,false,roman.stäheli
+MIT-00027,10189,Karin,Steiner,W,1970,Kundenberater/in,ORG-037,KS-CH,Olten,CH,pfefferminz,2010-10-01,,de-CH,neutral,karin.steiner@pfefferminzia.example,1,false,karin.steiner
+MIT-00028,,Jennifer,Hofmann,W,1983,Data Scientist,ORG-061,DAO-DS,Berlin,DE,minzia,2021-10-01,,de-DE,befuerwortend,jennifer.hofmann@pfefferminzia.example,1,false,jennifer.hofmann
+MIT-00029,,Maximilian,Mayer,M,1992,Data Scientist,ORG-062,DAO-ML,Berlin,DE,minzia,2019-04-01,,de-DE,befuerwortend,maximilian.mayer@pfefferminzia.example,1,false,maximilian.mayer
+MIT-00030,10210,Milica,Da Silva,W,2001,Systemspezialist/in,ORG-071,IT-ALT,Olten,CH,pfefferminz,2024-09-01,,de-CH,skeptisch,milica.da-silva@pfefferminzia.example,1,false,milica.da-silva
+MIT-00031,,Reto,Flückiger,M,1984,Applikationsverantwortliche/r,ORG-074,IT-MIG,Olten,CH,minzia,2019-06-01,,de-CH,befuerwortend,reto.flueckiger@pfefferminzia.example,1,false,reto.flückiger
+MIT-00032,10224,Markus,Hofer,M,1984,Systemspezialist/in,ORG-071,IT-ALT,Olten,CH,pfefferminz,2018-06-01,,de-CH,skeptisch,markus.hofer@pfefferminzia.example,1,false,markus.hofer
+MIT-00033,10231,Nicole,Bolliger,W,1986,Risk Manager/in,ORG-023,RM-KI,Zürich,CH,pfefferminz,2015-03-01,,de-CH,befuerwortend,nicole.bolliger@pfefferminzia.example,1,false,nicole.bolliger
+MIT-00034,10238,Silvia,Sommer,W,1976,Systemspezialist/in,ORG-071,IT-ALT,Olten,CH,pfefferminz,2001-10-01,,de-CH,skeptisch,silvia.sommer@pfefferminzia.example,1,false,silvia.sommer
+MIT-00035,10245,Yannis,Zieliński,M,1986,Vertriebsbetreuer/in,ORG-053,VT-MK,Zürich,CH,pfefferminz,2011-09-01,,de-CH,neutral,yannis.zielinski@pfefferminzia.example,1,false,yannis.zieliński
+MIT-00036,10252,Nikola,Jovanović,M,1981,Vertriebsbetreuer/in,ORG-052,VT-AG-DE,Leipzig,DE,pfefferminz,2016-01-01,,de-DE,befuerwortend,nikola.jovanovic@pfefferminzia.example,1,false,nikola.jovanović
+MIT-00037,,Carmen,Stalder,W,1973,Data Scientist,ORG-064,DAO-DG,Zürich,CH,neu,2025-07-01,,de-CH,neutral,carmen.stalder@pfefferminzia.example,1,false,carmen.stalder
+MIT-00038,,Sandra,Lienhard,W,1984,HR-Berater/in,ORG-093,HR-INT,Olten,CH,neu,2025-02-01,,de-CH,befuerwortend,sandra.lienhard@pfefferminzia.example,1,false,sandra.lienhard
+MIT-00039,10273,Nikola,Pereira,M,2002,Aktuar/in,ORG-044,AKT,Olten,CH,pfefferminz,2022-10-01,,de-CH,befuerwortend,nikola.pereira@pfefferminzia.example,1,false,nikola.pereira
+MIT-00040,10280,Manuela,Gfeller,W,1985,Controller/in,ORG-013,FIN-MW,Olten,CH,pfefferminz,2017-04-01,,de-CH,neutral,manuela.gfeller@pfefferminzia.example,1,false,manuela.gfeller
+MIT-00041,10287,Ali,Petrović,M,1997,Applikationsverantwortliche/r,ORG-076,IT-SD,Leipzig,DE,pfefferminz,2019-04-01,2025-09-01,de-DE,neutral,ali.petrovic@pfefferminzia.example,1,false,ali.petrović
+MIT-00042,10294,Piotr,Jovanović,M,1992,Systemspezialist/in,ORG-074,IT-MIG,Olten,CH,pfefferminz,2020-01-01,,de-CH,befuerwortend,piotr.jovanovic@pfefferminzia.example,1,false,piotr.jovanović
+MIT-00043,,Frank,Böhm,M,1985,Vertriebsbetreuer/in,ORG-054,VT-DIR,Berlin,DE,minzia,2023-01-01,,de-DE,befuerwortend,frank.boehm@pfefferminzia.example,1,false,frank.böhm
+MIT-00044,10308,Beatrice,Schmid,W,1968,Senior Underwriter/in,ORG-041,UW-LV,Olten,CH,pfefferminz,2019-01-01,2025-09-01,de-CH,neutral,beatrice.schmid@pfefferminzia.example,2,false,beatrice.schmid
+MIT-00045,,Goran,Doğan,M,1985,Vertriebsbetreuer/in,ORG-054,VT-DIR,Berlin,DE,minzia,2023-06-01,,de-DE,befuerwortend,goran.dogan@pfefferminzia.example,1,false,goran.doğan
+MIT-00046,10322,Tomasz,Khalil,M,1978,HR-Berater/in,ORG-091,HR-CH,Olten,CH,pfefferminz,2015-12-01,,de-CH,befuerwortend,tomasz.khalil@pfefferminzia.example,1,false,tomasz.khalil
+MIT-00047,,Jennifer,Schäfer,W,1960,Regionalleiter/in,ORG-054,VT-DIR,Berlin,DE,minzia,2019-01-01,,de-DE,neutral,jennifer.schaefer@pfefferminzia.example,1,false,jennifer.schäfer
+MIT-00048,10336,Lukas,Maier,M,1990,Sachbearbeiter/in Schaden,ORG-032,SL-HP-DE,Leipzig,DE,pfefferminz,2020-03-01,,de-DE,befuerwortend,lukas.maier@pfefferminzia.example,1,false,lukas.maier
+MIT-00049,,Maren,Becker,W,1994,Data Scientist,ORG-061,DAO-DS,Berlin,DE,minzia,2022-10-01,,de-DE,befuerwortend,maren.becker@pfefferminzia.example,1,false,maren.becker
+MIT-00050,,Sandra,Burkhalter,W,1968,Systemspezialist/in,ORG-074,IT-MIG,Olten,CH,minzia,2021-08-01,,de-CH,treibend,sandra.burkhalter@pfefferminzia.example,1,false,sandra.burkhalter
+MIT-00051,,Bruno,Kessler,M,1970,Data Scientist,ORG-064,DAO-DG,Zürich,CH,neu,2025-08-01,2025-11-01,de-CH,treibend,bruno.kessler@pfefferminzia.example,1,false,bruno.kessler
+MIT-00052,,Cyrill,Graf,M,1983,Kundenberater/in,ORG-037,KS-CH,Olten,CH,minzia,2019-10-01,,de-CH,befuerwortend,cyrill.graf@pfefferminzia.example,1,false,cyrill.graf
+MIT-00053,,Bettina,Roth,W,1960,Data Scientist,ORG-064,DAO-DG,Zürich,CH,neu,2025-10-01,,de-CH,neutral,bettina.roth@pfefferminzia.example,1,false,bettina.roth
+MIT-00054,10378,Adrian,Kälin,M,1981,Sachbearbeiter/in Schaden,ORG-031,SL-HP-CH,Olten,CH,pfefferminz,2010-01-01,,de-CH,neutral,adrian.kaelin@pfefferminzia.example,1,false,adrian.kälin
+MIT-00055,10385,Jasmin,Hess,W,1975,Aktuar/in,ORG-044,AKT,Olten,CH,pfefferminz,1995-06-01,,de-CH,befuerwortend,jasmin.hess@pfefferminzia.example,1,false,jasmin.hess
+MIT-00056,10392,Irene,Christen,W,1970,Controller/in,ORG-011,FIN-RL,Olten,CH,pfefferminz,2002-07-01,,de-CH,skeptisch,irene.christen@pfefferminzia.example,1,false,irene.christen
+MIT-00057,10399,Seraina,Grob,W,1987,Produktmanager/in,ORG-045,PM,Olten,CH,pfefferminz,2020-04-01,,de-CH,skeptisch,seraina.grob@pfefferminzia.example,1,false,seraina.grob
+MIT-00058,10406,Tim,Ullrich,M,2002,Teamleiter/in Schaden,ORG-032,SL-HP-DE,Leipzig,DE,pfefferminz,2024-03-01,,de-DE,befuerwortend,tim.ullrich@pfefferminzia.example,2,false,tim.ullrich
+MIT-00059,10413,Matthias,Rüegg,M,1971,Sachbearbeiter/in Schaden,ORG-031,SL-HP-CH,Olten,CH,pfefferminz,1991-12-01,,de-CH,treibend,matthias.rueegg@pfefferminzia.example,1,false,matthias.rüegg
+MIT-00060,10420,Laura,Jenni,W,1991,Sachbearbeiter/in Schaden,ORG-033,SL-LV-CH,Olten,CH,pfefferminz,2022-08-01,,de-CH,neutral,laura.jenni@pfefferminzia.example,1,false,laura.jenni
