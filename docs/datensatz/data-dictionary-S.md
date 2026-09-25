@@ -116,7 +116,7 @@ Deckungen je Vertrag: Hauptdeckung, Bausteine, Zusatzversicherungen
 | schaden_id | str | SCH-00000118 | 22 |
 | antrag_id | str | ANT-00000602 | 29 |
 | interaktion_id | object |  | 37 |
-| erstellt_am | object | 2018-05-14 | 0 |
+| erstellt_am | object | 2019-02-15 | 0 |
 | quellsystem | str | DOKU | 0 |
 | datei_pfad | str | data/documents/S/personas/PTR-00000001/D | 0 |
 | text_body | str | Anlass: Geplante Hypothekaraufnahme fuer | 0 |
@@ -212,8 +212,8 @@ Partner: natuerliche und juristische Personen (Kunden, Mitversicherte, Beguensti
 | geschlecht | str | W | 0 |
 | nationalitaet | str | CH | 0 |
 | zivilstand | str | VERHEIRATET | 0 |
-| beruf_code | str | B18 | 62 |
-| beruf_text | str | Physiotherapeutin | 62 |
+| beruf_code | str | B18 | 64 |
+| beruf_text | str | Physiotherapeutin | 64 |
 | beruf_selbstaendig | object | False | 62 |
 | sprache | str | de | 0 |
 | land_wohnsitz | str | CH | 0 |
@@ -431,8 +431,8 @@ Vertraege beider Sparten mit Status, Praemie, Kanal, Quellsystem, Migrationsdatu
 | sachbearbeiter_id | str | MIT-00008 | 0 |
 | antrag_id | str | ANT-00000101 | 0 |
 | beginn | object | 2016-03-01 | 0 |
-| ablauf | object | 2032-05-01 | 910 |
-| laufzeit_jahre | float64 | 13.0 | 910 |
+| ablauf | object | 2032-05-01 | 911 |
+| laufzeit_jahre | float64 | 13.0 | 911 |
 | hauptfaelligkeit | object | 2016-03-01 | 0 |
 | zahlungsweise | str | VIERTELJAEHRLICH | 0 |
 | zahlungsart | str | LASTSCHRIFT | 0 |

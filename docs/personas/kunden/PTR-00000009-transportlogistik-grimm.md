@@ -31,8 +31,8 @@ erzeugt_am: 2026-09-03
 | Branche | Güterbeförderung im Strassenverkehr, Kleintransporter bis 3.5 t (WZ 49.41, BK-028), 3 Fahrzeuge, 2 Aushilfsfahrer |
 | Umsatz | gemeldet EUR 310'000 (2024); Plausibilität fraglich |
 | Vertriebskanal | Direkt / Online (Betriebshaftpflicht über Portal), Privathaftpflicht über App |
-| Quellsysteme und Alt-IDs | MINT b7e3c9a1-4d2f-4b8e-a6c5-9f0e1d2c3b4a (Betrieb), MINT 1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d (privat, angelegt 2023 mit abweichender Schreibweise «Marcel Grim») |
-| Telefon | +49 152 28817 309 (mobil, beide Konten) |
+| Quellsysteme und Alt-IDs | Partner MINT 9e05fb26-041d-419c-9c2a-0fe8db010bf9 («Transportlogistik Grimm e.K.»); Inhaber Marcel Grimm privat als eigener Partner PTR-00000017 (HAPO 20000008, MINT 13d3e04b-b2c0-433d-9a6a-a74d1e8087af), Dublette zum Betrieb |
+| Telefon | +49 30 23125 170 |
 
 ## Vertragsübersicht
 

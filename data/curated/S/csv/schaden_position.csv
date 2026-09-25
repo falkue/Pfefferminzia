@@ -38,7 +38,7 @@ SCH-00000510-03,SCH-00000510,RESERVE,0.00,CHF,2022-09-27,,geschlossen
 SCH-00000810-01,SCH-00000810,RESERVE,1500.00,EUR,2025-03-21,,Erstreserve automatisch
 SCH-00000810-02,SCH-00000810,RESERVE,0.00,EUR,2025-03-24,,Reserve aufgeloest: automatische Ablehnung 'kein Tierhalterbaustein' (MINT Triage v3)
 SCH-00000810-03,SCH-00000810,RESERVE,1500.00,EUR,2025-04-17,,"Wiedereroeffnung nach Beschwerde, Baustein in HAPO nachgewiesen"
-SCH-00000810-04,SCH-00000810,ZAHLUNG,1240.00,EUR,2025-04-17,Radfahrer,"Arztkosten 440, Schmerzensgeld 700, Radhose 100; ohne Selbstbehalt"
+SCH-00000810-04,SCH-00000810,ZAHLUNG,1240.00,EUR,2025-04-17,Radfahrer,"Arztkosten 440, Schmerzensgeld 700, Radhose 100; ohne Selbstbehalt (Selbstbehalt EUR 150 der Hauptdeckung aus Kulanz erlassen)"
 SCH-00000810-05,SCH-00000810,ZAHLUNG,100.00,EUR,2025-04-17,Versicherungsnehmer,Kulanz fuer Aufwand und Verzoegerung
 SCH-00000810-06,SCH-00000810,RESERVE,0.00,EUR,2025-04-24,,geschlossen
 SCH-00000910-01,SCH-00000910,RESERVE,900.00,EUR,2022-09-06,,Erstreserve automatisch

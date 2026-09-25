@@ -296,6 +296,10 @@ class Legacy:
                 # Vorfall VF-2025-03 (Fall Pieper): Tierhalterbaustein in der Pilotwelle nicht uebernommen, am 18.04.2025 nachmigriert
                 erg = "WARN"
                 text = f"Bausteincode BST=01 (Tierhalter) nicht ins Zielschema uebernommen, Feld leer; nachmigriert {NACHMIGRATION_PILOT:%d.%m.%Y} (VF-2025-03)"
+                if z["_vid"] == "VTR-00000801":
+                    # Fall Pieper: Baustein vor der Nachmigration von Hand nachgetragen (Brief INT-00000808 vom 17.04.2025)
+                    text = ("Bausteincode BST=01 (Tierhalter) nicht ins Zielschema uebernommen, Feld leer; Baustein am 17.04.2025 manuell "
+                            f"nachgetragen, nachmigriert {NACHMIGRATION_PILOT:%d.%m.%Y} (VF-2025-03)")
             elif system == "HAPO" and z["_bausteine"] > 0 and rng.random() < 0.03:
                 erg, text = "WARN", "Bausteincode BST nicht im Zielschema, Feld leer uebernommen"
             elif z["STORNOGRD"] == "ZZ" and rng.random() < 0.005:

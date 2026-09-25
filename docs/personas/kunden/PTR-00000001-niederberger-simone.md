@@ -29,31 +29,32 @@ erzeugt_am: 2026-09-03
 | Sprache | de-CH |
 | Beruf | Physiotherapeutin, Teilzeit 60 % |
 | Familienstand | verheiratet mit Reto Niederberger (PTR-00000011, geb. 21.07.1982, Projektleiter Maschinenbau); Kinder Lina (2014) und Noah (2017) |
-| Vertriebskanal | Ausschliesslichkeitsagentur Luzern (AGT-0017) |
-| Quellsysteme und Alt-IDs | HAPO 40233910 (als «Niederberger-Suter, Simone», alte Adresse bis 2024); VERA 30118842 (als «Niederberger, Simone», aktuelle Adresse) |
-| Telefon | +41 44 000 61 01 |
+| Vertriebskanal | Generalagentur Luzern (AGT-0006, Vermittlerin Elena Dietiker VRM-00011; Säule 3a über Heidi Zollinger VRM-00031) |
+| Quellsysteme und Alt-IDs | Partner HAPO 20000001 («NIEDERBERGER SIMONE»); VERA 10000001 («NIEDERBERGER SIMONE», Geburtsdatum als Platzhalter 01.01.00); MINT a35f61f6-e9d7-4f8a-9f94-1de48c13986b («Simone Niederberger»); Vertragsnummern der Altsysteme in der Vertragsübersicht |
+| Telefon | +41 44 000 46 35 |
 | E-Mail | Kundendaten nur im Datensatz; Korrespondenz über App und Agentur |
 
 ## Vertragsübersicht
 
 | Vertrag | Produkt | Tarifgeneration | Beginn | Prämie | Währung | Alt-ID | Bemerkung |
 |---|---|---|---|---|---|---|---|
-| VTR-00000101 | PrivatPlus Familie (Privathaftpflicht CH, Deckung CHF 5 Mio.) | HP-MODERN | 01.04.2014 | 168.00 p. a., ab 01.07.2023 258.00 (Baustein Gebäudehaftpflicht) | CHF | HAPO 40.233.910-0 | VN Simone; migriert nach MINT Q2 2025 |
-| VTR-00000102 | RisikoLeben, versicherte Person Simone, CHF 500'000, 25 Jahre | PL-2017 | 01.06.2018 | 628.80 p. a. | CHF | VERA L-0181204 | Begünstigt: Ehemann |
-| VTR-00000103 | RisikoLeben, versicherte Person Reto, CHF 500'000, ab 09/2023 erhöht auf CHF 800'000 | PL-2017 | 01.06.2018 | 697.20 p. a., ab 01.10.2023 1'094.40 | CHF | VERA L-0181205 | VN Reto (PTR-00000011); Erhöhung mit erneuter Gesundheitsprüfung (Nachtrag) |
-| VTR-00000104 | Vorsorge Säule 3a (gemischte Lebensversicherung), Ablauf 2049 | PL-2012 | 01.01.2013 | 3'600.00 p. a. (300.00 monatlich) | CHF | VERA L-0143377 | VN Simone; Prämienbefreiung bei Erwerbsunfähigkeit eingeschlossen |
+| VTR-00000101 | PrivatPlus Familie (Privathaftpflicht CH, Deckung CHF 10 Mio., Selbstbehalt CHF 200) | HP-MODERN | 01.03.2016 | 168.00 p. a. (vierteljährlich) | CHF | HAPO 40.233.910-0 | VN Simone; migriert nach MINT am 15.05.2025 |
+| VTR-00000102 | RisikoLeben, versicherte Person Simone, CHF 974'000, 13 Jahre (bis 01.05.2032) | PL-2017 | 01.05.2019 | 486.00 p. a. | CHF | VERA L-0181204 | Begünstigt: Ehemann; migriert am 15.11.2025 |
+| VTR-00000103 | RisikoLeben, versicherte Person Reto, CHF 132'000, 19 Jahre (bis 01.05.2038) | PL-2017 | 01.05.2019 | 612.00 p. a. | CHF | VERA L-0181205 | VN Reto (PTR-00000011); Ergänzung zum Todesfallkapital seiner Pensionskasse |
+| VTR-00000104 | Vorsorge Säule 3a (gemischte Lebensversicherung), CHF 109'000, Ablauf 01.01.2050 | PL-2017 | 01.01.2020 | 3'600.00 p. a. (halbjährlich 1'800.00) | CHF | VERA L-0143377 | VN Simone; migriert am 15.11.2025 |
 
 ## Ereignisgeschichte (2016–2025)
 
 | Datum | Ereignis | Bezug |
 |---|---|---|
-| 2016-08 | Beratungsgespräch Agentur nach Geburt Noah (Kontrolle Deckungen); kein Abschluss | Beratungsprotokoll |
-| 2018-05 | Beratung und Abschluss RisikoLeben für beide Ehepartner (Hypothekarabsicherung geplant) | VTR-00000102/103, Beratungsprotokoll CH |
+| 2016-03 | Abschluss Privathaftpflicht PrivatPlus Familie über die Generalagentur Luzern | VTR-00000101 |
+| 2017-12 | Beratungsgespräch Agentur nach Geburt Noah (Kontrolle Deckungen); kein Abschluss | Beratungsgespräch ohne Protokoll |
+| 2019-02 | Beratung RisikoLeben für beide Ehepartner (Hypothekarabsicherung geplant); Reto zeichnet am 17.02., Simone im April; Beginn beider Verträge 01.05.2019 | VTR-00000102/103, Beratungsprotokoll CH |
+| 2019-11 | Abschluss Vorsorge Säule 3a, Beginn 01.01.2020 | VTR-00000104 |
 | 2019-02-16 | Skikollision Reto mit anderer Skifahrerin, Personenschaden leicht; reguliert CHF 4'180 | SCH-00000110, SILAS S2019/001873 |
 | 2021-04 | Telefonische Prämienfrage 3a (Anpassung an neuen Maximalbetrag); keine Änderung | Telefonnotiz |
-| 2023-05 | Hauskauf Rebhaldenweg 7; Adressänderung per Agentur; in VERA erfasst, in HAPO erst 2024-03 nachgeführt | Dublette / Adressabweichung |
-| 2023-06-20 | Beratungsgespräch Agentur: Erhöhung RisikoLeben Reto, Baustein Gebäudehaftpflicht | Beratungsprotokoll, Nachträge |
-| 2023-09 | Gesundheitsprüfung Reto für Erhöhung (Fragebogen, keine Erschwerung) | Antrag ANT-00000131 |
+| 2023-05 | Hauskauf Rebhaldenweg 7 (Einzug 01.06.2023); Adressänderung per Agentur für alle Verträge | Adresshistorie |
+| 2023-06-20 | Beratungsgespräch Agentur: Erhöhung RisikoLeben Reto und Baustein Gebäudehaftpflicht besprochen, beides nicht abgeschlossen | Beratungsprotokoll |
 | 2025-04 | Einladung zur Pfefferminzia App nach Migration Haftpflicht; Registrierung Simone | App-Interaktion |
 | 2025-05-17 | Noah (8) stösst beim Spielen das E-Bike des Nachbarn um; Display und Rahmen beschädigt | Schadenereignis |
 | 2025-05-18 | Schadenmeldung per App mit drei Fotos (EXIF: zwei Fotos vom 18.05., eines vom 17.05.) | SCH-00000118, INT-00000412 |
@@ -64,12 +65,12 @@ erzeugt_am: 2026-09-03
 
 ## Rolle im Datensatz
 
-- **UC-08 Dubletten:** zwei Partnersätze (HAPO mit Doppelname und alter Adresse, VERA mit aktueller Adresse), Geburtsdatum identisch, unterschiedliche Schreibweise des Namens. Lösung: eine Kundin, ein Haushalt mit Ehemann (PTR-00000011) und zwei Kindern.
+- **UC-08 Dubletten:** zwei Partnersätze (HAPO 20000001 und VERA 10000001) mit gleichem Namen und gleicher Adresse; VERA führt ein Platzhalter-Geburtsdatum (01.01.00), HAPO das echte (14.03.1984). Die Migrationsbrücke ordnet beide der Kundin zu. Lösung: eine Kundin, ein Haushalt mit Ehemann (PTR-00000011) und zwei Kindern.
 - **Schaden-Automatisierung:** Beispiel einer korrekten vollautomatischen Zahlung unter CHF 5'000 (Kompetenzordnung R08); Foto-EXIF mit harmlosem Datumsunterschied als Kontrast zu echten Betrugssignalen.
 - **UC-11 RAG:** Deckungsfrage «Sind Schäden durch Kinder gedeckt?» mit generationsabhängiger Antwort (HP-MODERN: Aufsichtspflicht-Klausel) und Gebäudehaftpflicht-Baustein.
 - **Vertriebskonflikt:** App-Schaden ohne Beteiligung der Agentur (Storyline Roth-Fankhauser, MIT-00011).
 - **UC-02 Storno:** stabile, loyale Kundin als Gegenbeispiel (kein Storno, hohe Produktdichte).
-- **Beratungsprotokoll CH:** zwei Protokolle (2018, 2023) als Dokumente.
+- **Beratungsprotokoll CH:** zwei Protokolle (2019, 2023) als Dokumente.
 
 ## Kommunikationsstil
 

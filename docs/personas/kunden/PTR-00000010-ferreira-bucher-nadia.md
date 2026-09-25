@@ -30,8 +30,8 @@ erzeugt_am: 2026-09-03
 | Beruf | selbständige Beraterin für Pharma-Zulassungen; vorher Managerin bei einem Pharmakonzern in Portugal |
 | Familienstand | verheiratet mit Rui Ferreira (PTR-00000018, portugiesischer Staatsangehöriger, Architekt); keine Kinder |
 | Vertriebskanal | Makler: Rheinknie Vorsorgeberatung AG, Basel (VRM-00061) |
-| Quellsysteme und Alt-IDs | MINT 6f7a8b9c-0d1e-4f2a-9b3c-4d5e6f7a8b9c; kein Altsatz (Neukundin 2025) |
-| Telefon | +41 44 000 65 10 |
+| Quellsysteme und Alt-IDs | Partner MINT 6fa41ce8-33e9-4efa-95f0-aa4490d55733 («Nadia Ferreira-Bucher») |
+| Telefon | +41 44 000 24 08 |
 | Besonderes | Onkel mütterlicherseits ist Abgeordneter eines Regionalparlaments in Portugal (fiktiv); Kundin selbst keine politisch exponierte Person, aber «Familienmitglied einer PEP» nach vereinfachter Definition |
 
 ## Vertragsübersicht

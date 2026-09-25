@@ -125,6 +125,9 @@ def _frontmatter(**k) -> str:
 def render(ctx: RunContext, dok: pd.DataFrame, inter: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     basis = ctx.pfade.documents / ctx.stufe / "personas"
     partner = ctx.tabellen.get("partner").set_index("partner_id")
+    kontakte = ctx.tabellen.get("partner_kontakt")
+    mails = kontakte[kontakte["kontakt_typ"] == "EMAIL"].sort_values("ist_primaer", ascending=False).drop_duplicates("partner_id")
+    mail_von = dict(zip(mails["partner_id"], mails["wert"], strict=True))
     pfade_dok, pfade_int = {}, {}
     for _, d in dok.iterrows():
         ordner = basis / d["partner_id"]
@@ -149,7 +152,8 @@ def render(ctx: RunContext, dok: pd.DataFrame, inter: pd.DataFrame) -> tuple[pd.
         if i["kanal"] == "EMAIL":
             pfad = ordner / f"{i['interaktion_id']}.eml"
             kunde = f"{p['vorname']} {p['nachname']}" if pd.notna(p["vorname"]) else str(p["firmenname"])
-            kunde_mail = f"{str(p['vorname'] or 'info').lower()}.{str(p['nachname'] or 'firma').lower()}@mail.example".replace(" ", "")
+            # E-Mail-Adresse aus der Kontakttabelle, damit Akte und Tabelle dieselbe Adresse zeigen
+            kunde_mail = mail_von.get(i["partner_id"]) or f"{str(p['vorname'] or 'info').lower()}.{str(p['nachname'] or 'firma').lower()}@mail.example".replace(" ", "")
             firma = "schaden-de@pfefferminzia.example" if i["richtung"] == "AUSGEHEND" and p["land_wohnsitz"] == "DE" else "service@pfefferminzia.example"
             von, an = (kunde_mail, firma) if i["richtung"] == "EINGEHEND" else ((firma, kunde_mail) if i["richtung"] == "AUSGEHEND" else ("intern@pfefferminzia.example", "intern@pfefferminzia.example"))
             inhalt = (f"From: {kunde if i['richtung'] == 'EINGEHEND' else 'Pfefferminzia'} <{von}>\nTo: <{an}>\n"

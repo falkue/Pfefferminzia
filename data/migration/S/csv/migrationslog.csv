@@ -578,7 +578,7 @@ HP-2025-Q2,VERTRAG,HAPO,40.233.910-0,VTR-00000101,2025-05-15,OK,Vertrag uebernom
 HP-2025-Q2,VERTRAG,HAPO,40.551.207-9,VTR-00000301,2025-05-15,OK,Vertrag uebernommen
 HP-2025-Q2,VERTRAG,HAPO,40.612.384-4,VTR-00000401,2025-05-15,OK,Vertrag uebernommen
 HP-2025-Q2,VERTRAG,HAPO,40.018.829-6,VTR-00000503,2025-05-15,OK,Vertrag uebernommen
-HP-2025-PILOT,VERTRAG,HAPO,40.288.506-6,VTR-00000801,2025-03-03,WARN,"Bausteincode BST=01 (Tierhalter) nicht ins Zielschema uebernommen, Feld leer; nachmigriert 18.04.2025 (VF-2025-03)"
+HP-2025-PILOT,VERTRAG,HAPO,40.288.506-6,VTR-00000801,2025-03-03,WARN,"Bausteincode BST=01 (Tierhalter) nicht ins Zielschema uebernommen, Feld leer; Baustein am 17.04.2025 manuell nachgetragen, nachmigriert 18.04.2025 (VF-2025-03)"
 HP-2025-PILOT,VERTRAG,HAPO,40.000.006-1,VTR-00000902,2025-03-03,OK,Vertrag uebernommen
 HP-2025-PILOT,VERTRAG,HAPO,40.000.007-6,VTR-00002003,2025-03-03,WARN,"Bausteincode BST=01 (Tierhalter) nicht ins Zielschema uebernommen, Feld leer; nachmigriert 18.04.2025 (VF-2025-03)"
 HP-2025-Q2,VERTRAG,HAPO,40.000.008-4,VTR-00002004,2025-05-15,OK,Vertrag uebernommen

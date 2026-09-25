@@ -31,8 +31,8 @@ erzeugt_am: 2026-09-03
 | Betrieb | 42 Mitarbeitende, Umsatz ca. EUR 6.8 Mio., davon ab 2025 rund EUR 1.4 Mio. Photovoltaik |
 | Geschäftsführung / Kontakt | Kerstin Bergmann (PTR-00000014, geb. 03.02.1977, Geschäftsführerin, 48); Prokurist Ralf Neubauer (kaufmännische Leitung) |
 | Vertriebskanal | Makler: Elbtal Assekuranzmakler GmbH, Dresden (VRM-00117) |
-| Quellsystem und Alt-IDs | HAPO 40612384 (als «Bergmann Gebäudetechnik GmbH & Co KG», ohne Punkt); Migration nach MINT Q2 2025 |
-| Telefon | +49 30 23125 604 |
+| Quellsysteme und Alt-IDs | Partner HAPO 20000003 («BERGMANN GEBAEUDETECHNIK GMBH KG»); MINT c32bde8c-0d33-4a40-9297-a248e197d79b («Bergmann Gebäudetechnik GmbH & Co. KG») |
+| Telefon | +49 30 23125 951 |
 
 ## Vertragsübersicht
 

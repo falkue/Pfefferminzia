@@ -29,9 +29,9 @@ erzeugt_am: 2026-09-03
 | Sprache | de-DE |
 | Beruf | Frühpensionär, ehemals Betriebsschlosser; Hundehalter (Schäferhund-Mischling «Rex», kein Listenhund) |
 | Familienstand | geschieden, lebt allein |
-| Vertriebskanal | Ausschliesslichkeitsagentur, in den Briefen «Agentur Dresden» (im Datensatz Vermittler VRM-00023, Agentur AGT-0005), seit 2025 Betreuung durch Contact Center Leipzig |
-| Quellsysteme und Alt-IDs | HAPO 40288506 (als «Pieper, Hans Georg», ohne Bindestrich); Migration nach MINT in der Pilotwelle Privathaftpflicht DE am 03.03.2025 (Welle HP-2025-PILOT) |
-| Telefon | +49 30 23125 808 (Festnetz) |
+| Vertriebskanal | Ausschliesslichkeitsagentur Dresden, in den Briefen «Agentur Dresden» (Generalagentur Elbland Petrov, AGT-0005, Vermittlerin Maria José Kim VRM-00023), seit 2025 Betreuung durch Contact Center Leipzig |
+| Quellsysteme und Alt-IDs | Partner HAPO 20000005 («PIEPER HANS-GEORG»); MINT 0860b995-c21a-4b5a-9d32-f5dd16da9d7f («Hans-Georg Pieper») |
+| Telefon | +49 30 23125 614 (Festnetz) |
 
 ## Vertragsübersicht
 

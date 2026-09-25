@@ -30,8 +30,8 @@ erzeugt_am: 2026-09-03
 | Beruf | UX-Designerin in einer Digitalagentur, seit 2021 Berufseinsteigerin |
 | Familienstand | ledig |
 | Vertriebskanal | Direkt / App (ehemals minzia.direct, seit 2025 Pfefferminzia App) |
-| Quellsystem und Alt-ID | MINT 7c1f3a2e-9b4d-4e6a-8f21-5d3c0a9b7e14 (Nutzerkonto seit 15.03.2021) |
-| Telefon | +49 152 28817 302 (mobil) |
+| Quellsysteme und Alt-IDs | Partner MINT 55a6f1d8-8ac8-42be-af92-e593619c1247 («Jana Ortlepp») |
+| Telefon | +49 152 28817 609 (mobil) |
 
 ## Vertragsübersicht
 

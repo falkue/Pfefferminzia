@@ -87,6 +87,11 @@ PERSONA_BAUSTEINE = {801: ["BS-TIER-HUND"]}
 PERSONA_BAUSTEIN_AB = {801: {"BS-TIER-HUND": date(2019, 3, 1)}}
 # Leben-Vertraege, deren Summe und Laufzeit die Fallakte festlegt (Nazari: EUR 1.2 Mio, 18 Jahre, Gegenofferte DOK-00000603)
 PERSONA_LV_VERTRAG = {602: {"summe": 1_200_000.0, "laufzeit": 18}}
+# Ablauf laut Persona-Geschichte (nach allen Zufallsziehungen gesetzt): Vogt-Schnyder Kapital PK-95 laeuft am 65. Geburtstag ab,
+# die Leibrente aus dem Ablaufkapital ist lebenslang (kein Ablauf, keine Laufzeit)
+PERSONA_ABLAUF = {501: date(2019, 6, 9), 502: None}
+# Vermittler laut Persona-Geschichte: Familie Niederberger alle Vertraege ueber die Generalagentur Luzern (AGT-0006)
+PERSONA_VERMITTLER = {102: "VRM-00011", 103: "VRM-00011"}
 # Antraege laut Fallakte (Nazari: Antrag 10.03.2025, Entscheid 28.05.2025, Zuschlag 50 Prozent, manuell, BMI 26.9 laut Gesundheitserklaerung)
 PERSONA_ANTRAG = {602: {"eingang": date(2025, 3, 10), "entscheid_am": date(2025, 5, 28),
                         "uw": {"entscheid_code": "Z", "zuschlag_pct": 50.0, "automatisiert": False, "bmi_angabe": 26.9, "raucher_angabe": False}}}
@@ -507,6 +512,11 @@ class VertragWelt:
             migriert = migrationsdatum(sparte, produkt, markt)
         vid = vertrag_id(n)
         vermittler = self.vermittler(rng, markt, kanal)
+        if persona and n in PERSONA_VERMITTLER and PERSONA_VERMITTLER[n] in set(self.k.vermittler["vermittler_id"]):
+            vermittler = PERSONA_VERMITTLER[n]
+        if persona and n in PERSONA_ABLAUF:
+            ablauf = PERSONA_ABLAUF[n]
+            laufzeit = None if ablauf is None else laufzeit
         sachbearbeiter = self.sachbearbeiter(rng, sparte, markt)
         antrag = self._antrag(rng, n, produkt, vn_id, markt, generation, beginn, uw, kanal, sparte, vertrag=vid)
         naechste_kuendigung = None

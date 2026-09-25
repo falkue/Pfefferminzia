@@ -26,6 +26,12 @@ AGENTUR_TYPEN = [  # typ, markt, anzahl-gewicht, kanal
     ("BANK", "CH", 1, "bank"), ("BANK", "DE", 1, "bank"),
     ("PORTAL", "DE", 2, "direkt"), ("DIREKT", "CH", 1, "direkt"), ("DIREKT", "DE", 1, "direkt"),
 ]
+# Persona-Geschichten: Pieper «Agentur Dresden», Niederberger Generalagentur Luzern, Nazari Makler Isarwerk in Muenchen
+AGENTUR_PERSONA = [
+    ("AGT-0005", "EXKLUSIVAGENTUR", "DE", {"name": "Generalagentur Elbland Petrov", "plz": "01067", "ort": "Dresden", "region": "SN"}),
+    ("AGT-0006", "EXKLUSIVAGENTUR", "CH", {"name": "Generalagentur Luzern Müller", "plz": "6003", "ort": "Luzern", "region": "LU"}),
+    ("AGT-0011", "MAKLER", "DE", {"name": "Isarwerk Finanzberatung GmbH", "plz": "80331", "ort": "München", "region": "BY"}),
+]
 AGENTUR_ZUSATZ = {"EXKLUSIVAGENTUR": "Generalagentur", "MAKLER": "Versicherungsmakler", "BANK": "Bank",
                   "PORTAL": "Vergleichsportal", "DIREKT": "Direktvertrieb"}
 
@@ -142,6 +148,11 @@ def agenturen_und_vermittler(ctx: RunContext) -> tuple[pd.DataFrame, pd.DataFram
         ag_zeilen.append(_agentur(ctx, n, typ, markt, kanal, ns, ad, bausteine))
         n += 1
     ag = pd.DataFrame(ag_zeilen)
+    # Agenturen der Kunden-Personas am Ort ihrer Geschichte (nach allen Zufallsziehungen, aendert keine Zuordnung)
+    for aid, typ, land, werte in AGENTUR_PERSONA:
+        treffer = (ag["agentur_id"] == aid) & (ag["typ"] == typ) & (ag["land"] == land)
+        for feld, wert in werte.items():
+            ag.loc[treffer, feld] = wert
     vm_zeilen: list[dict] = []
     m = 1
     # Long-Tail: grosse Agenturen erhalten mehr Vermittler

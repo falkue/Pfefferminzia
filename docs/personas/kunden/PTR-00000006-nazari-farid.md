@@ -29,9 +29,9 @@ erzeugt_am: 2026-09-03
 | Sprache | de-DE |
 | Beruf | selbständiger Facharzt für Orthopädie, Gemeinschaftspraxis, Jahreseinkommen ca. EUR 240'000 |
 | Familienstand | verheiratet mit Dr. Sabine Nazari (PTR-00000016), zwei Kinder (2008, 2011) |
-| Vertriebskanal | Makler: Isarwerk Finanzberatung GmbH, München (VRM-00203) |
-| Quellsysteme und Alt-IDs | MINT 9b2e7d41-6c3a-4f8e-b5d0-2a1c9e8f7d63 (Antrag 2025); VERA 30498120 (Rentenvertrag 2016, als «Nazari, Farid, Dr.») |
-| Telefon | +49 30 23125 706 (Praxis), +49 152 28817 306 (mobil) |
+| Vertriebskanal | Makler: Isarwerk Finanzberatung GmbH, München (Agentur AGT-0011; Vermittler Karl-Heinz Hoffmann VRM-00032 für den Risikoleben, Annika Berger VRM-00034 für die Rentenversicherung) |
+| Quellsysteme und Alt-IDs | Partner VERA 10000004 («NAZARI FARID»); MINT 0c495ffd-edef-41b4-8dd5-25e8f899c0cf («Farid Nazari») |
+| Telefon | +49 30 23125 927 (Praxis) |
 
 ## Vertragsübersicht
 

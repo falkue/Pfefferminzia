@@ -30,8 +30,8 @@ erzeugt_am: 2026-09-03
 | Beruf | Student Wirtschaftsinformatik, Teilzeit 40 Prozent als Werkstudent bei einem IT-Dienstleister |
 | Familienstand | ledig |
 | Vertriebskanal | Direkt / Pfefferminzia App (Haftpflicht); Säule 3a über die App mit Beratungs-Chat |
-| Quellsysteme und Alt-IDs | MINT 4d7c2b19-8e5f-4a3b-9c6d-1e2f3a4b5c6d (Konto seit 03.09.2024); Eltern: HAPO 40377215 (Familienvertrag, Leon bis 2024 mitversichert) |
-| Telefon | +41 44 000 64 07 (mobil hinterlegt als Festnetzformat, Datenqualität) |
+| Quellsysteme und Alt-IDs | Partner MINT 2e4dd589-63ca-4d84-9522-249f137ff4fe («Leon Waibel») |
+| Telefon | +41 44 000 99 73 (mobil hinterlegt als Festnetzformat, Datenqualität) |
 
 ## Vertragsübersicht
 

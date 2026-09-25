@@ -31,15 +31,15 @@ erzeugt_am: 2026-09-03
 | Betrieb | 14 Mitarbeitende, Lohnsumme ca. CHF 1.1 Mio., Umsatz ca. CHF 2.6 Mio. |
 | Inhaber / Kontakt | Bruno Kaufmann (PTR-00000012, geb. 05.10.1968, Geschäftsführer, 57); Söhne Marc (Betriebsleiter) und Simon (Projektleiter Küchen) |
 | Vertriebskanal | Makler: Broker Mittelland AG, Aarau (VRM-00042) |
-| Quellsysteme und Alt-IDs | HAPO 40551207 (als «Kaufmann + Söhne GmbH, Schreinerei»); VERA 30227761 (als «Schreinerei Kaufmann & Soehne GmbH») |
-| Telefon | +41 44 000 62 03 |
+| Quellsysteme und Alt-IDs | Partner HAPO 20000002 («SCHREINEREI KAUFMANN + SOEHNE GMBH»); VERA 10000002 («SCHREINEREI KAUFMANN + SOEHNE GMBH»); MINT ee767780-73bf-4ff0-916e-8e47b25985cf («Schreinerei Kaufmann + Söhne GmbH») |
+| Telefon | +41 44 000 68 87 |
 
 ## Vertragsübersicht
 
 | Vertrag | Produkt | Tarifgeneration | Beginn | Prämie | Währung | Alt-ID | Bemerkung |
 |---|---|---|---|---|---|---|---|
 | VTR-00000301 | BusinessProtect (Betriebshaftpflicht CH), Deckungssumme CHF 5 Mio., Bausteine Bearbeitungsschäden, Produkthaftpflicht | HP-MODERN | 01.01.2016 | 3'840.00 p. a.; ab 01.01.2025 4'620.00 mit Selbstbehalt CHF 2'000 (Sanierung) | CHF | HAPO 40.551.207-9 | Migriert nach MINT Q2 2025; Makleranfrage Erhöhung auf CHF 10 Mio. (02/2025) mit Sublimit Bearbeitungsschäden CHF 2 Mio. offeriert |
-| VTR-00000302 | RisikoLeben Kollektiv Kader (3 versicherte Personen, je CHF 300'000) | PL-2017 | 01.07.2019 | 2'160.00 p. a. | CHF | VERA L-0192466 | VN die GmbH, Begünstigte die Familien der Kader; Migration Leben Q4 2025 |
+| VTR-00000302 | RisikoLeben Kollektiv Kader (3 versicherte Personen, je CHF 300'000) | PL-2017 | 01.07.2019 | 2'268.00 p. a. | CHF | VERA L-0192466 | VN die GmbH, Begünstigte die Familien der Kader; Migration Leben Q4 2025 |
 
 ## Ereignisgeschichte (2016–2025)
 

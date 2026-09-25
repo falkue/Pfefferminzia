@@ -23,9 +23,9 @@ vertraulichkeit: vertraulich
 
 Anlass: Kauf Einfamilienhaus Rebhaldenweg 7, Luzern, per 01.06.2023.
 
-Besprochen: Erhoehung Risikoleben Reto von 300'000 auf 450'000 wegen hoeherer Hypothek; Baustein Gebaeudehaftpflicht in der Privathaftpflicht; Adressaenderung fuer alle Vertraege.
+Besprochen: Erhoehung Risikoleben Reto wegen hoeherer Hypothek; Baustein Gebaeudehaftpflicht in der Privathaftpflicht; Adressaenderung fuer alle Vertraege.
 
-Entscheid: Erhoehung Risikoleben Reto beantragt (Gesundheitspruefung folgt). Baustein Gebaeudehaftpflicht per 01.07.2023 eingeschlossen. Adressaenderung im System Leben erfasst; Haftpflicht wird nachgefuehrt.
+Entscheid: Keine Erhoehung Risikoleben; die Kunden pruefen zuerst die Absicherung ueber die Pensionskasse von Reto und melden sich. Baustein Gebaeudehaftpflicht nicht eingeschlossen (Einfamilienhaus selbst bewohnt, Risiko ueber die Privathaftpflicht gedeckt). Adressaenderung fuer alle Vertraege an die Agentur gemeldet.
 
 Bemerkung: Kundin wuenscht kuenftig Kommunikation per App, Agentur bleibt Ansprechpartnerin fuer Beratung.
 

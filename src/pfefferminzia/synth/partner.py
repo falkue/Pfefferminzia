@@ -269,14 +269,17 @@ class PartnerWelt:
             self.partner.append({
                 "partner_id": pid, "partner_typ": "NATUERLICH", "anrede": "Herr" if g == "M" else "Frau", "titel": None, "vorname": vn, "nachname": nn,
                 "firmenname": None, "rechtsform": None, "uid_hrb_nummer": None, "geburtsdatum": gebd, "geschlecht": g, "nationalitaet": "PT" if n == 18 else land,
-                "zivilstand": "VERHEIRATET" if rolle == "EHEPARTNER" else "LEDIG", "beruf_code": "B23" if n == 15 else ("B22" if rolle == "KIND" else "B01"),
-                "beruf_text": BERUFE[22][1] if n == 15 else (BERUFE[21][1] if rolle == "KIND" else BERUFE[0][1]), "beruf_selbstaendig": rolle == "INHABER",
+                "zivilstand": "VERHEIRATET" if rolle == "EHEPARTNER" else "LEDIG", "beruf_code": "B23" if n == 15 else (None if rolle == "KIND" else "B01"),
+                "beruf_text": BERUFE[22][1] if n == 15 else (None if rolle == "KIND" else BERUFE[0][1]), "beruf_selbstaendig": rolle == "INHABER",
                 "sprache": spr, "land_wohnsitz": land, "kundensegment": "PRIVAT", "kunde_seit": None, "status": "VERSTORBEN" if todd else "AKTIV",
                 "todesdatum": todd, "datenschutz_werbung_ok": False, "datenschutz_ki_ok": False, "herkunft": "pfefferminz", "quellsystem_primaer": None,
                 "haushalt_id": f"HH-{hh:06d}", "ist_persona": True, "erstellt_am": None, "geaendert_am": None,
             })
-            self.adressen.append(self._adr_zeile(pid, Adresse(strasse, hnr, plz, ort, land, "", spr, self._zone(plz, land)), date(2010, 1, 1), None, "WOHNSITZ", True))
-            self.beziehungen.append({"partner_id_von": pid, "partner_id_zu": partner_id(hh), "beziehung": rolle, "seit": date(2010, 1, 1)})
+            # Haushalt Niederberger wohnt seit dem Hauskauf 01.06.2023 am Rebhaldenweg (wie die Persona); Kinder ab Geburt
+            seit_adresse = date(2023, 6, 1) if hh == 1 else date(2010, 1, 1)
+            self.adressen.append(self._adr_zeile(pid, Adresse(strasse, hnr, plz, ort, land, "", spr, self._zone(plz, land)), seit_adresse, None, "WOHNSITZ", True))
+            self.beziehungen.append({"partner_id_von": pid, "partner_id_zu": partner_id(hh), "beziehung": rolle,
+                                     "seit": gebd if rolle == "KIND" else date(2010, 1, 1)})
             self.latent.append({"partner_id": pid, "kuendigungsneigung": 0.2, "betrugsneigung": 0.9 if n == 17 else 0.01, "preissensitivitaet": 0.5,
                                 "digitalaffinitaet": 0.5, "bmi": 24.0, "raucher": False, "gesundheit_score": 0.8, "todesdatum": todd, "hund": False})
         # Adress-Region fuer Bezugspersonen nachtragen
