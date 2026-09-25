@@ -2,21 +2,25 @@
 
 Willkommen bei Pfefferminzia, einem frei erfundenen Versicherer, an dem du Arbeiten mit KI-Unterstützung übst. Alles hier ist synthetisch: Personen, Firmen, Verträge, Schäden, Zahlen.
 
-## In drei Schritten startklar
+## In der Claude-App (so arbeiten wir im Kurs)
 
-1. **Repository holen**
+1. **Claude-App öffnen:** Claude Desktop, Reiter «Code», Modell Sonnet 5, Modus Auto.
+2. **Arbeitsstand holen:** einen leeren Ordner wählen und Claude bitten: «Lade den Arbeitsstand von github.com/falkue/Pfefferminzia, Zweig teilnehmer, in diesen Ordner.» Ein GitHub-Konto brauchst du nicht: Du lädst nur herunter und arbeitest danach lokal auf deinem Rechner; nichts wird hochgeladen. Ohne Claude geht es auch im Browser: auf GitHub den Zweig `teilnehmer` wählen, «Code» → «Download ZIP», entpacken.
+3. **Ordner öffnen:** den Ordner `Pfefferminzia` in der App als Projekt wählen. Claude liest die Datei `CLAUDE.md` und kennt damit den Datensatz.
+4. **Erste Frage stellen**, zum Beispiel: «Erkläre mir, was in diesem Datensatz steckt, und zeige mir die fünf grössten Tabellen.»
 
-   ```bash
-   git clone -b teilnehmer https://github.com/falkue/Pfefferminzia
-   cd Pfefferminzia
-   uv sync
-   ```
+Deine Ergebnisse legt Claude im Ordner `meine-ergebnisse/` ab (Cockpit, Berichte, Präsentation); Notizen zum Notizbuch kommen in `kurs/tag1/notizbuch/Vorbereitung/`.
 
-   Der Zweig `teilnehmer` enthält den Datensatz ohne Lösungen.
+## Im Terminal (optional)
 
-2. **Claude Code starten** im Ordner `Pfefferminzia` mit `claude`. Claude liest die Datei `CLAUDE.md` und kennt damit den Datensatz.
+```bash
+git clone -b teilnehmer https://github.com/falkue/Pfefferminzia
+cd Pfefferminzia
+uv sync      # nur nötig, wenn du selbst Python-Skripte startest
+claude
+```
 
-3. **Erste Frage stellen**, zum Beispiel: «Erkläre mir, was in diesem Datensatz steckt, und zeige mir die fünf grössten Tabellen.»
+Der Zweig `teilnehmer` enthält den Datensatz ohne Lösungen.
 
 ## Die Geschichte in einem Absatz
 
@@ -35,8 +39,10 @@ Die Pfefferminz Versicherung, 1924 in Olten gegründet, hat am 1. Januar 2025 da
 | `docs/regelwerke/` | Annahmerichtlinie Leben, Kompetenzordnung, Beschwerderichtlinie |
 | `data/documents/S/personas/` | Die Fallakten der Kunden-Personas: Briefe, E-Mails, Notizen, Berichte |
 | `data/documents/S/tarife/` | Tarifblätter je Tarifgeneration und Markt als Markdown und PDF |
+| `kurs/tag1/` | Material für Tag 1: Notizbuch einer Teamleiterin (Obsidian), Antragseingang Risikoprüfung Leben, Auftrag und Vorlage für die Präsentation |
+| `meine-ergebnisse/` | Deine eigenen Ergebnisse (legt Claude beim ersten Ergebnis an) |
 
-Der Ordner `data/truth/` enthält die Lösungen der Übungen. Er ist für die Dozenten gedacht; die Übungen funktionieren nur, wenn du ihn nicht benutzt.
+Lösungen der Übungen liegen nicht in diesem Zweig.
 
 ## Ein paar Fragen zum Warmwerden
 

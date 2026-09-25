@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pfefferminzia · Vorlage «Minze klar»</title>
+<!--
+  ANLEITUNG FÜR CLAUDE (Vorlage «Minze klar», reveal.js 5, 1280 × 720 px)
+  ==========================================================================
+  Regeln in Worten: VORLAGE.md in diesem Ordner. Kurzfassung:
+
+  1. Nicht diese Datei ändern, sondern sie nach meine-ergebnisse/praesentation.html kopieren
+     und dort arbeiten. Stil, Raster und Skripte unverändert lassen.
+  2. Jede Folie ist ein <section class="folie"> … </section> im Block <div class="slides">.
+     Neue Folie = passende <section> aus diesem Satz kopieren (ganz, vom öffnenden bis zum
+     schliessenden Tag), an die gewünschte Stelle setzen, Texte in [eckigen Klammern] ersetzen.
+     Nicht gebrauchte Bausteine löschen. Keine Folie leer oder mit [Platzhalter] stehen lassen.
+  3. Bausteine (data-baustein): titel · kennzahlen · diagramm · aussage · entscheidung.
+  4. Logo, Fusszeile und Foliennummer setzt das Skript unten auf jede Folie. Den Text der
+     Fusszeile nur einmal ändern: Attribut data-fuss am <div class="slides">.
+  5. Titel (h2) = eine Aussage als ganzer Satz, eine Zeile, höchstens rund 60 Zeichen.
+     Untertitel = die Zahl, die die Aussage belegt. Jede Zahl mit Quelle und Definition in
+     der Quellzeile (class="abs src"), Quellen in Worten, keine Dateipfade.
+  6. Schrift nie kleiner als 19 px (Fliesstext) und 15 px (Beschriftungen, Quelle, Achsen).
+     Farben nur aus den Variablen unter :root. Zahlen im Schweizer Format: 1'513'301, 11.1 %.
+  7. Positionen: alles liegt absolut im Raster (Rand links/rechts 64 px, Kopf y=40, Titel
+     y=104, Linie y=204, Inhaltsfläche y=232 bis 616, Quelle y=626, Fuss y=668).
+     Zu lange Texte markiert das Skript rot gestrichelt: dann kürzen, nicht die Schrift verkleinern.
+  8. Diagramm: genau eines pro Präsentation. Daten nur im Block «DIAGRAMM-DATEN» unten ersetzen,
+     mit Werten aus den eigenen Ergebnissen oder frisch aus den Tabellen gerechnet, nie geschätzt.
+     Danach das Element mit class="beispiel" (Hinweis «Beispieldaten») löschen.
+  9. Sprechernotizen: <aside class="notes"> in jeder Folie. Im Browser Taste S öffnet die
+     Sprecheransicht (Pop-ups erlauben).
+     Die Prüfung meldet auch Platzhalter und den Hinweis «Beispieldaten»: roter Kasten unten links
+     im Browser; ohne Browser: "<Pfad zu Chrome>" --headless --virtual-time-budget=5000 --dump-dom
+     "file:///<Ordner>/praesentation.html" und im Ergebnis das Attribut data-pruefung lesen
+     («ok» = alles in Ordnung).
+ 10. PDF (eine Folie je Seite, 1280 × 720):
+     a) Von Hand: Datei in Chrome öffnen, Drucken (Cmd/Strg+P) → Als PDF speichern,
+        Ränder: keine, Hintergrundgrafiken an.
+     b) Mit Sprechernotizen: in Chrome …/praesentation.html?print-pdf&showNotes=separate-page
+        öffnen, dann wie a).
+     c) Ohne Klicken, mit Chrome im Hintergrund (ohne ?print-pdf, das braucht den Dialog):
+          "<Pfad zu Chrome>" --headless --no-pdf-header-footer
+                 --print-to-pdf="<Ordner>/praesentation.pdf" "file:///<Ordner>/praesentation.html"
+        Pfad zu Chrome: Mac "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        Windows "C:\Program Files\Google\Chrome\Application\chrome.exe", Linux google-chrome.
+        Microsoft Edge (msedge.exe) versteht dieselben Schalter.
+     Danach das PDF öffnen und prüfen: fünf Seiten, Diagramm sichtbar, nichts abgeschnitten.
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reset.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+  /* ---------- Farben «Minze klar» (aus dem Logo) – nur diese verwenden ---------- */
+  :root {
+    --dg: #173d2c;        /* Dunkelgrün: Titel, Hauptlinie, Nummern */
+    --mint: #52b986;      /* Minze: Akzente, Balken, Linien (nicht für Text) */
+    --lm: #d9f1e1;        /* Hellminze: Titelband */
+    --mint-ink: #23774d;  /* Minze dunkel: Text und Linien in Minze auf Weiss */
+    --wash: #f3faf5;      /* Fläche hell: hervorgehobene Kachel, Seitenkasten */
+    --ink: #1c2a23;       /* Fliesstext */
+    --muted: #56665d;     /* Untertitel, Quellen, Beschriftungen */
+    --line: #d5e3da;      /* Trennlinien, Gitter */
+    --grau: #8a9a91;      /* dritte Reihe im Diagramm (nur Linie, Text in --muted) */
+    --paper: #ffffff;
+    --warn: #c0392b;      /* nur für die Layout-Prüfung, nie auf Folien */
+  }
+
+  /* ---------- reveal.js an das Raster anpassen ---------- */
+  .reveal-viewport { background: #e4e7e5; }
+  html.reveal-print, html.reveal-print body, html.reveal-print .reveal-viewport { background: #fff; }
+  .reveal { font-family: Inter, "Helvetica Neue", Arial, sans-serif; color: var(--ink); }
+  .reveal .slides { text-align: left; }
+  .reveal .slides section.folie {
+    width: 1280px; height: 720px; padding: 0; margin: 0; overflow: hidden;
+    background: var(--paper); color: var(--ink); box-sizing: border-box;
+    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  }
+  .reveal .folie * { box-sizing: border-box; }
+  .reveal .folie .abs { position: absolute; }
+  .reveal .folie .nb { white-space: nowrap; }
+  .reveal .folie b, .reveal .folie strong { font-weight: 700; }
+
+  /* ---------- Kopf: Rubrik y=40, Logo rechts ---------- */
+  .eyebrow { left: 64px; top: 40px; height: 36px; display: flex; align-items: center; gap: 12px;
+    font-size: 15px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--mint-ink); white-space: nowrap; }
+  .eyebrow::before { content: ""; width: 24px; height: 3px; background: var(--mint); border-radius: 2px; }
+  .logo { right: 64px; top: 40px; height: 36px; }
+  .logo svg { height: 36px; width: 190px; display: block; }
+
+  /* ---------- Titel y=104 (Aussage), Untertitel y=150 (Beleg), Linie y=204 ---------- */
+  .h2 { left: 64px; top: 104px; width: 1152px; margin: 0; font-size: 32px; line-height: 40px;
+    font-weight: 700; letter-spacing: -0.015em; color: var(--dg); white-space: nowrap; }
+  .sub { left: 64px; top: 150px; width: 1152px; margin: 0; font-size: 21px; line-height: 30px;
+    font-weight: 400; color: var(--muted); white-space: nowrap; }
+  .rule { left: 64px; top: 204px; width: 1152px; height: 1px; background: var(--line); }
+
+  /* ---------- Quelle y=626, Fuss y=668 (Fuss setzt das Skript) ---------- */
+  .src { left: 64px; top: 626px; width: 1152px; height: 38px; font-size: 15px; line-height: 19px; color: var(--muted); overflow: hidden; }
+  .foot { left: 64px; top: 668px; width: 1152px; height: 1px; background: var(--line); }
+  .foot-l { left: 64px; top: 676px; font-size: 15px; line-height: 18px; font-weight: 600; color: var(--dg); white-space: nowrap; }
+  .foot-r { left: 64px; top: 696px; font-size: 15px; line-height: 18px; color: var(--muted); white-space: nowrap; letter-spacing: -0.005em; }
+  .kpi .val, .kpi .val2, .row .e b, .chart, .side .big { font-feature-settings: "tnum" 1; }
+
+  /* ---------- Baustein «titel» ---------- */
+  .t-band { left: 848px; top: 0; width: 432px; height: 656px; background: var(--lm); }
+  .t-mark { left: 888px; top: 150px; width: 352px; height: 440px; }
+  .t-title { left: 64px; top: 232px; width: 740px; margin: 0; font-size: 64px; line-height: 72px;
+    font-weight: 750; letter-spacing: -0.03em; color: var(--dg); white-space: nowrap; }
+  .t-sub { left: 64px; top: 320px; width: 740px; margin: 0; font-size: 24px; line-height: 34px; color: var(--muted); }
+  .t-acc { left: 64px; top: 404px; width: 56px; height: 4px; background: var(--mint); border-radius: 2px; }
+  .t-meta { left: 64px; top: 440px; width: 740px; font-size: 20px; line-height: 30px; }
+  .t-meta b { display: block; font-weight: 700; color: var(--dg); }
+  .t-meta span { display: block; color: var(--muted); }
+  .t-stand { left: 64px; top: 576px; font-size: 16px; line-height: 22px; color: var(--muted); white-space: nowrap; }
+  .t-stand b { color: var(--mint-ink); font-weight: 600; }
+
+  /* ---------- Baustein «kennzahlen»: drei Kacheln à 368 × 384, Abstand 24 ---------- */
+  .kpi { top: 232px; width: 368px; height: 384px; padding: 28px 28px 24px; border-top: 4px solid var(--dg); background: #fff; overflow: hidden; }
+  .kpi.focus { background: var(--wash); border-top-color: var(--mint); }
+  .kpi .lab { font-size: 17px; line-height: 22px; font-weight: 600; color: var(--muted); letter-spacing: .01em; }
+  .kpi .val { margin-top: 18px; font-size: 64px; line-height: 68px; font-weight: 750; letter-spacing: -0.03em; color: var(--dg); white-space: nowrap; }
+  .kpi .val small { font-size: 30px; font-weight: 650; letter-spacing: -0.01em; margin-right: 6px; }
+  .kpi .val2 { display: flex; gap: 28px; margin-top: 18px; }
+  .kpi .val2 div { font-size: 52px; line-height: 60px; font-weight: 750; letter-spacing: -0.03em; white-space: nowrap; }
+  .kpi .val2 span { display: block; font-size: 16px; line-height: 20px; font-weight: 600; letter-spacing: 0; margin-top: 2px; }
+  .kpi .add { margin-top: 10px; font-size: 19px; line-height: 26px; color: var(--ink); font-weight: 500; }
+  .kpi .cmp { margin-top: 14px; font-size: 19px; line-height: 27px; color: var(--ink); }
+  .kpi .note { position: absolute; left: 28px; right: 28px; bottom: 24px; font-size: 15px; line-height: 20px; color: var(--muted); }
+  .split { position: absolute; left: 28px; right: 28px; bottom: 24px; }
+  .split .bar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: var(--line); }
+  .split .lbl { display: flex; justify-content: space-between; margin-top: 8px; font-size: 15px; line-height: 20px; color: var(--muted); }
+  .split .lbl b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Baustein «diagramm»: Diagramm 772 × 384 links, Seitenkasten 340 rechts ---------- */
+  .chart { left: 64px; top: 232px; width: 772px; height: 384px; overflow: visible; }
+  .chart text { font-family: Inter, "Helvetica Neue", Arial, sans-serif; }
+  .side { left: 876px; top: 232px; width: 340px; height: 384px; padding: 24px 24px 0; background: var(--wash); border-top: 4px solid var(--mint); overflow: hidden; }
+  .side h3 { margin: 0; font-size: 17px; line-height: 22px; font-weight: 600; color: var(--muted); }
+  .side .big { margin-top: 14px; font-size: 44px; line-height: 50px; font-weight: 750; letter-spacing: -0.02em; color: var(--mint-ink); white-space: nowrap; }
+  .side p { margin: 8px 0 0; font-size: 19px; line-height: 26px; }
+  .side hr { border: 0; border-top: 1px solid var(--line); margin: 18px 0 0; }
+  .beispiel { left: 128px; top: 492px; padding: 4px 10px; font-size: 15px; line-height: 20px; font-weight: 700;
+    color: #fff; background: var(--warn); border-radius: 3px; z-index: 5; }
+
+  /* ---------- Baustein «aussage»: bis drei Punkte links, Beleg rechts ---------- */
+  .punkte { left: 64px; top: 232px; width: 772px; height: 384px; }
+  .punkt { position: relative; padding: 0 0 0 36px; margin: 0 0 28px; }
+  .punkt::before { content: ""; position: absolute; left: 0; top: 11px; width: 16px; height: 4px; background: var(--mint); border-radius: 2px; }
+  .punkt b { display: block; font-size: 22px; line-height: 30px; color: var(--dg); }
+  .punkt span { display: block; margin-top: 4px; font-size: 19px; line-height: 27px; color: var(--ink); }
+
+  /* ---------- Baustein «entscheidung»: höchstens drei Zeilen à 128 px ---------- */
+  .row { left: 64px; width: 1152px; height: 128px; border-top: 1px solid var(--line); }
+  .row.last { border-bottom: 1px solid var(--line); }
+  .row .n { position: absolute; left: 0; top: 20px; width: 44px; height: 44px; border-radius: 22px; background: var(--dg);
+    color: #fff; font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .row .k { position: absolute; left: 68px; top: 18px; font-size: 15px; line-height: 20px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--mint-ink); }
+  .row .t { position: absolute; left: 68px; top: 42px; width: 800px; height: 81px; font-size: 20px; line-height: 27px; color: var(--ink); overflow: hidden; }
+  .row .e { position: absolute; left: 904px; top: 18px; width: 248px; height: 92px; padding: 12px 16px; background: var(--wash); border-left: 3px solid var(--mint); overflow: hidden; }
+  .row .e b { display: block; font-size: 28px; line-height: 32px; font-weight: 750; letter-spacing: -0.02em; color: var(--dg); white-space: nowrap; }
+  .row .e span { display: block; margin-top: 4px; font-size: 15px; line-height: 19px; color: var(--muted); }
+
+  /* ---------- Layout-Prüfung: zu langer Text wird rot gestrichelt markiert ---------- */
+  .reveal .folie .ueberlauf { outline: 3px dashed var(--warn); outline-offset: 2px; }
+
+  /* ---------- Drucken ohne ?print-pdf (Strg+P oder Chrome im Hintergrund): eine Folie je Seite ---------- */
+  @media print {
+    @page { size: 1280px 720px; margin: 0; }
+    html:not(.reveal-print), html:not(.reveal-print) body, html:not(.reveal-print) .reveal-viewport {
+      width: 1280px !important; height: auto !important; overflow: visible !important; background: #fff !important; }
+    html:not(.reveal-print) .reveal { position: static !important; width: 1280px !important; height: auto !important; overflow: visible !important; }
+    html:not(.reveal-print) .reveal .slides { position: static !important; zoom: 1 !important; transform: none !important;
+      width: 1280px !important; height: auto !important; left: 0 !important; top: 0 !important; margin: 0 !important; inset: auto !important; }
+    html:not(.reveal-print) .reveal .slides section.folie { display: block !important; position: relative !important; left: 0 !important; top: 0 !important;
+      transform: none !important; opacity: 1 !important; visibility: visible !important; break-after: page; }
+    html:not(.reveal-print) .reveal .slides section.folie:last-of-type { break-after: auto; }
+    html:not(.reveal-print) .reveal .controls, html:not(.reveal-print) .reveal .progress,
+    html:not(.reveal-print) .reveal .slide-number, html:not(.reveal-print) .reveal .backgrounds,
+    html:not(.reveal-print) .reveal .aria-status, html:not(.reveal-print) .reveal .pause-overlay { display: none !important; }
+  }
+
+  /* ---------- Hinweiskasten der Layout-Prüfung (nur am Bildschirm, nie im Druck) ---------- */
+  .pruefung { position: fixed; left: 8px; bottom: 8px; z-index: 50; max-width: 640px; padding: 6px 10px;
+    background: var(--warn); color: #fff; font: 600 14px/1.4 Inter, Arial, sans-serif; border-radius: 4px; }
+  .pruefung[hidden] { display: none !important; }
+  .pruefung summary { cursor: pointer; }
+  .pruefung ul { margin: 6px 0 0 18px; padding: 0; font-weight: 400; }
+  @media print { .pruefung { display: none !important; } }
+
+  /* ---------- Sprechernotizen im PDF (showNotes=separate-page) lesbar ---------- */
+  .reveal .speaker-notes { font-family: Inter, "Helvetica Neue", Arial, sans-serif; font-size: 20px; line-height: 1.45; }
+</style>
+</head>
+<body>
+
+<!-- Logo (von web/logo.svg aus Johannes' Repo), einmal definiert und per <use> auf jede Folie gesetzt -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="pf-logo" viewBox="0 0 338 64">
+    <title>Pfefferminzia</title>
+    <desc>Ein Schutzschild mit zwei Minzblättern, daneben der Name Pfefferminzia.</desc>
+    <rect width="64" height="64" rx="18" fill="#173d2c"/>
+    <path d="M14 18h36v22c0 7-8 11-18 17-10-6-18-10-18-17V18Z" fill="#d9f1e1"/>
+    <path d="M32 46V25M32 39c-7 0-12-5-12-12 7 0 12 5 12 12Zm0-7c0-7 5-12 12-12 0 7-5 12-12 12Z" fill="#52b986" stroke="#173d2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Schriftzug als Pfad (Inter 750), damit er im PDF-Druck nicht vom Laden der Webschrift abhängt -->
+    <path fill="#173d2c" d="M79.71 42.0V21.62H87.86Q90.16 21.62 91.81 22.51Q93.45 23.40 94.33 24.97Q95.21 26.53 95.21 28.58Q95.21 30.64 94.32 32.19Q93.43 33.75 91.75 34.62Q90.08 35.49 87.74 35.49H82.60V31.90H86.96Q88.17 31.90 88.97 31.48Q89.76 31.06 90.16 30.31Q90.55 29.57 90.55 28.58Q90.55 27.59 90.16 26.85Q89.76 26.11 88.96 25.71Q88.16 25.30 86.95 25.30H84.21V42.0ZM105.44 26.71V30.04H95.27V26.71ZM97.90 42.0V25.71Q97.90 24.02 98.55 22.90Q99.21 21.78 100.36 21.22Q101.50 20.67 102.98 20.67Q103.97 20.67 104.81 20.82Q105.66 20.98 106.06 21.09L105.30 24.39Q105.04 24.31 104.68 24.25Q104.32 24.19 103.93 24.19Q103.04 24.19 102.68 24.60Q102.32 25.02 102.32 25.76V42.0ZM113.77 42.29Q111.41 42.29 109.69 41.33Q107.98 40.38 107.06 38.62Q106.15 36.85 106.15 34.42Q106.15 32.06 107.06 30.28Q107.98 28.51 109.65 27.51Q111.32 26.52 113.58 26.52Q115.14 26.52 116.46 27.01Q117.79 27.50 118.77 28.48Q119.76 29.45 120.31 30.91Q120.86 32.36 120.86 34.29V35.47H107.83V32.79H118.72L116.65 33.47Q116.65 32.33 116.31 31.51Q115.96 30.69 115.29 30.24Q114.62 29.79 113.62 29.79Q112.62 29.79 111.93 30.24Q111.24 30.70 110.88 31.49Q110.52 32.29 110.52 33.33V35.23Q110.52 36.48 110.93 37.33Q111.35 38.17 112.10 38.59Q112.85 39.02 113.85 39.02Q114.53 39.02 115.09 38.82Q115.64 38.63 116.04 38.25Q116.44 37.88 116.65 37.33L120.63 38.02Q120.25 39.31 119.33 40.27Q118.40 41.23 117.00 41.76Q115.59 42.29 113.77 42.29ZM131.10 26.71V30.04H120.92V26.71ZM123.55 42.0V25.71Q123.55 24.02 124.21 22.90Q124.86 21.78 126.01 21.22Q127.16 20.67 128.63 20.67Q129.62 20.67 130.47 20.82Q131.31 20.98 131.71 21.09L130.96 24.39Q130.69 24.31 130.33 24.25Q129.97 24.19 129.58 24.19Q128.69 24.19 128.33 24.60Q127.97 25.02 127.97 25.76V42.0ZM141.21 26.71V30.04H131.03V26.71ZM133.66 42.0V25.71Q133.66 24.02 134.31 22.90Q134.97 21.78 136.12 21.22Q137.27 20.67 138.74 20.67Q139.73 20.67 140.57 20.82Q141.42 20.98 141.82 21.09L141.06 24.39Q140.80 24.31 140.44 24.25Q140.08 24.19 139.69 24.19Q138.80 24.19 138.44 24.60Q138.08 25.02 138.08 25.76V42.0ZM149.54 42.29Q147.17 42.29 145.46 41.33Q143.74 40.38 142.83 38.62Q141.91 36.85 141.91 34.42Q141.91 32.06 142.82 30.28Q143.74 28.51 145.41 27.51Q147.08 26.52 149.35 26.52Q150.90 26.52 152.23 27.01Q153.55 27.50 154.54 28.48Q155.52 29.45 156.07 30.91Q156.62 32.36 156.62 34.29V35.47H143.59V32.79H154.48L152.41 33.47Q152.41 32.33 152.07 31.51Q151.72 30.69 151.05 30.24Q150.38 29.79 149.38 29.79Q148.38 29.79 147.69 30.24Q147.00 30.70 146.64 31.49Q146.28 32.29 146.28 33.33V35.23Q146.28 36.48 146.70 37.33Q147.11 38.17 147.86 38.59Q148.62 39.02 149.61 39.02Q150.29 39.02 150.85 38.82Q151.40 38.63 151.80 38.25Q152.20 37.88 152.41 37.33L156.39 38.02Q156.02 39.31 155.09 40.27Q154.16 41.23 152.76 41.76Q151.36 42.29 149.54 42.29ZM158.07 42.0V26.71H162.37V29.43H162.53Q162.95 27.97 163.92 27.24Q164.89 26.51 166.16 26.51Q166.49 26.51 166.85 26.55Q167.21 26.59 167.50 26.67V30.57Q167.20 30.46 166.66 30.40Q166.12 30.35 165.67 30.35Q164.76 30.35 164.04 30.74Q163.32 31.14 162.91 31.84Q162.50 32.54 162.50 33.47V42.0ZM168.45 42.0V26.71H172.55L172.79 30.59H172.47Q172.82 29.14 173.52 28.24Q174.22 27.34 175.15 26.91Q176.09 26.49 177.12 26.49Q178.76 26.49 179.77 27.54Q180.78 28.59 181.29 30.88H180.79Q181.14 29.34 181.93 28.37Q182.71 27.40 183.77 26.95Q184.83 26.49 186.00 26.49Q187.41 26.49 188.51 27.11Q189.62 27.73 190.25 28.88Q190.88 30.04 190.88 31.69V42.0H186.45V32.62Q186.45 31.39 185.79 30.77Q185.14 30.15 184.16 30.15Q183.43 30.15 182.90 30.47Q182.37 30.79 182.09 31.36Q181.80 31.93 181.80 32.71V42.0H177.53V32.53Q177.53 31.44 176.90 30.80Q176.28 30.15 175.27 30.15Q174.59 30.15 174.05 30.47Q173.50 30.78 173.19 31.38Q172.88 31.97 172.88 32.83V42.0ZM193.01 42.0V26.71H197.44V42.0ZM195.22 24.82Q194.25 24.82 193.56 24.17Q192.86 23.53 192.86 22.62Q192.86 21.69 193.56 21.05Q194.25 20.41 195.22 20.41Q196.20 20.41 196.89 21.05Q197.58 21.69 197.58 22.62Q197.58 23.53 196.89 24.17Q196.20 24.82 195.22 24.82ZM204.01 33.21V42.0H199.57V26.71H203.75L203.83 30.55H203.60Q204.18 28.68 205.40 27.60Q206.61 26.52 208.58 26.52Q210.18 26.52 211.37 27.22Q212.55 27.92 213.20 29.21Q213.86 30.51 213.86 32.27V42.0H209.42V33.09Q209.42 31.73 208.73 30.96Q208.03 30.19 206.80 30.19Q205.98 30.19 205.35 30.55Q204.72 30.91 204.36 31.58Q204.01 32.25 204.01 33.21ZM215.94 42.0V39.38L223.27 30.33V30.23H216.18V26.71H228.60V29.58L221.74 38.37V38.48H228.85V42.0ZM230.93 42.0V26.71H235.36V42.0ZM233.14 24.82Q232.17 24.82 231.48 24.17Q230.79 23.53 230.79 22.62Q230.79 21.69 231.48 21.05Q232.17 20.41 233.14 20.41Q234.12 20.41 234.81 21.05Q235.51 21.69 235.51 22.62Q235.51 23.53 234.81 24.17Q234.12 24.82 233.14 24.82ZM241.77 42.28Q240.31 42.28 239.16 41.77Q238.01 41.27 237.36 40.26Q236.71 39.25 236.71 37.74Q236.71 36.46 237.17 35.59Q237.62 34.73 238.42 34.20Q239.23 33.66 240.26 33.38Q241.29 33.10 242.43 33.00Q243.75 32.87 244.55 32.75Q245.35 32.63 245.73 32.37Q246.10 32.12 246.10 31.64V31.57Q246.10 30.98 245.84 30.57Q245.58 30.16 245.08 29.94Q244.58 29.73 243.86 29.73Q243.14 29.73 242.59 29.94Q242.04 30.16 241.69 30.54Q241.34 30.91 241.19 31.40L237.15 30.81Q237.49 29.48 238.39 28.53Q239.29 27.57 240.69 27.04Q242.08 26.52 243.89 26.52Q245.21 26.52 246.41 26.83Q247.61 27.15 248.54 27.78Q249.47 28.42 250.00 29.38Q250.53 30.35 250.53 31.66V42.0H246.34V39.86H246.22Q245.82 40.61 245.20 41.15Q244.58 41.69 243.72 41.99Q242.87 42.28 241.77 42.28ZM243.07 39.26Q243.96 39.26 244.65 38.91Q245.34 38.55 245.74 37.94Q246.14 37.32 246.14 36.54V34.98Q245.94 35.10 245.60 35.20Q245.27 35.31 244.86 35.39Q244.45 35.47 244.04 35.53Q243.64 35.60 243.30 35.65Q242.57 35.75 242.04 35.99Q241.51 36.23 241.22 36.61Q240.93 37.00 240.93 37.57Q240.93 38.12 241.21 38.50Q241.49 38.87 241.97 39.07Q242.45 39.26 243.07 39.26Z"/>
+  </symbol>
+</svg>
+
+<div class="reveal">
+<!-- data-fuss: Text links in der Fusszeile jeder Folie; «· Folie n/N» hängt das Skript an. -->
+<div class="slides" data-fuss="Pfefferminzia · [Anlass, TT.MM.JJJJ]">
+
+<!-- ===================== Baustein «titel» · Titelfolie (immer die erste) ===================== -->
+<section class="folie" data-baustein="titel">
+  <div class="abs t-band"></div>
+  <!-- Bildmarke aus dem Logo, gross und ruhig; nicht ändern -->
+  <svg class="abs t-mark" viewBox="10 14 44 46" aria-hidden="true">
+    <path d="M14 18h36v22c0 7-8 11-18 17-10-6-18-10-18-17V18Z" fill="#ffffff" opacity=".55"/>
+    <path d="M32 46V25M32 39c-7 0-12-5-12-12 7 0 12 5 12 12Zm0-7c0-7 5-12 12-12 0 7-5 12-12 12Z" fill="#52b986" opacity=".35" stroke="#173d2c" stroke-opacity=".25" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <div class="abs eyebrow">[Gremium] · [Art, etwa Bericht]</div>
+
+  <h1 class="abs t-title">[Titel, kurz]</h1>
+  <p class="abs t-sub">[Untertitel: worum es geht, eine Zeile]</p>
+  <div class="abs t-acc"></div>
+  <div class="abs t-meta">
+    <b>[Gremium], [TT. Monat JJJJ]</b>
+    <span>[Name], [Funktion]</span>
+  </div>
+  <div class="abs t-stand">Datenstand <b>[TT.MM.JJJJ]</b> · [Datenbasis, etwa Datensatz Stufe S]</div>
+
+  <aside class="notes">
+    [Begrüssung in einem Satz.] [Worum es in den nächsten Minuten geht.]
+    [Die drei Fragen, die beantwortet werden.] [Was am Schluss zu entscheiden ist.]
+    Zeit: rund 1 Minute.
+  </aside>
+</section>
+
+<!-- ===================== Baustein «kennzahlen» · drei Kacheln, die dritte hervorgehoben ===================== -->
+<section class="folie" data-baustein="kennzahlen">
+  <div class="abs eyebrow">[Rubrik, zwei bis drei Wörter]</div>
+  <h2 class="abs h2">[Aussage als ganzer Satz, eine Zeile]</h2>
+  <p class="abs sub">[Beleg: die Zahl, die die Aussage trägt, mit Stichtag]</p>
+  <div class="abs rule"></div>
+
+  <!-- Kachel 1: grosse Zahl, Vergleich, optional Aufteilung als Balken (Breiten in % müssen zusammen 100 ergeben) -->
+  <div class="abs kpi" style="left:64px">
+    <div class="lab">[Kennzahl 1]</div>
+    <div class="val">[Wert]</div>
+    <div class="cmp">[Vergleich: Vorjahr, Veränderung, Anteil]</div>
+    <div class="split">
+      <div class="bar"><div style="width:50%; background:var(--dg)"></div><div style="width:50%; background:var(--mint)"></div></div>
+      <div class="lbl"><span>[Teil A] <b>[Wert]</b></span><span>[Teil B] <b>[Wert]</b></span></div>
+    </div>
+  </div>
+
+  <!-- Kachel 2: Betrag mit Währung (<small>CHF</small>), Zusatzzeile, Definition unten -->
+  <div class="abs kpi" style="left:456px">
+    <div class="lab">[Kennzahl 2]</div>
+    <div class="val"><small>[CHF]</small>[Wert]</div>
+    <div class="add">[Zusatz, etwa zweite Währung]</div>
+    <div class="cmp">[Vergleich]</div>
+    <div class="note">[Definition in einem Satz]</div>
+  </div>
+
+  <!-- Kachel 3 (hervorgehoben, class="focus"): zwei Werte nebeneinander, für die wichtigste Zahl -->
+  <div class="abs kpi focus" style="left:848px">
+    <div class="lab">[Kennzahl 3, die wichtigste]</div>
+    <div class="val2">
+      <div style="color:var(--mint-ink)">[Wert]<span>[Gruppe A]</span></div>
+      <div style="color:var(--dg)">[Wert]<span>[Gruppe B]</span></div>
+    </div>
+    <div class="cmp">[Zähler und Nenner: x von y]</div>
+    <div class="note">[Definition in einem Satz]</div>
+  </div>
+
+  <div class="abs src">Quelle: [Tabelle oder Ergebnis in Worten], Stichtag [TT.MM.JJJJ]; [Definition, falls nicht in der Kachel]</div>
+
+  <aside class="notes">
+    [Kernsatz der Folie, wie im Titel.]
+    [Zu jeder Kachel ein Satz: was die Zahl bedeutet und wie sie gezählt ist.]
+    [Worauf der Verwaltungsrat achten soll.] Überleitung: [ein Satz zur nächsten Folie].
+    Zeit: rund 3 Minuten.
+  </aside>
+</section>
+
+<!-- ===================== Baustein «diagramm» · ein D3-Diagramm links, Einordnung rechts ===================== -->
+<section class="folie" data-baustein="diagramm">
+  <div class="abs eyebrow">[Rubrik]</div>
+  <h2 class="abs h2">[Aussage, die das Diagramm zeigt, als ganzer Satz]</h2>
+  <p class="abs sub">[Beleg: Endwerte oder Abstand in Zahlen]</p>
+  <div class="abs rule"></div>
+
+  <!-- Das Diagramm zeichnet das Skript aus DIAGRAMM-DATEN (unten) in dieses SVG. -->
+  <svg class="abs chart" id="diagramm" width="772" height="384" role="img" aria-label="[Diagramm in Worten beschreiben]"></svg>
+  <!-- Hinweis löschen, sobald echte Daten eingesetzt sind -->
+  <div class="abs beispiel">Beispieldaten – durch echte Daten ersetzen</div>
+
+  <div class="abs side">
+    <h3>[Einordnung, zwei bis vier Wörter]</h3>
+    <div class="big">[Zahl]</div>
+    <p>[Was die Zahl heisst, ein Satz]</p>
+    <hr>
+    <p>[Zweiter Befund oder Einschränkung, etwa kleine Fallzahlen, ein Satz]</p>
+  </div>
+
+  <div class="abs src">Quelle: [in Worten], Stichtag [TT.MM.JJJJ]. [Definition der Kennzahl: Zähler / Nenner.]<br>
+    [Hinweis zu Lücken, etwa: Jahre mit weniger als 20 Verträgen im Nenner nicht gezeigt.]</div>
+
+  <aside class="notes">
+    [Kernsatz.] [Wie man das Diagramm liest: Achsen, Linien.]
+    [Die eine Zahl, die man sich merken soll.] [Einschränkung, bevor jemand fragt.]
+    Zeit: rund 4 Minuten.
+  </aside>
+</section>
+
+<!-- ===================== Baustein «aussage» · bis drei Punkte links, Beleg rechts ===================== -->
+<section class="folie" data-baustein="aussage">
+  <div class="abs eyebrow">[Rubrik]</div>
+  <h2 class="abs h2">[Aussage als ganzer Satz, eine Zeile]</h2>
+  <p class="abs sub">[Beleg in einer Zeile]</p>
+  <div class="abs rule"></div>
+
+  <!-- Höchstens drei Punkte; je Punkt fett ein kurzer Satz, darunter ein bis zwei Sätze Beleg. -->
+  <div class="abs punkte">
+    <div class="punkt"><b>[Punkt 1: kurzer Satz]</b><span>[Beleg mit Zahl, Datum oder Quelle]</span></div>
+    <div class="punkt"><b>[Punkt 2: kurzer Satz]</b><span>[Beleg]</span></div>
+    <div class="punkt"><b>[Punkt 3: kurzer Satz]</b><span>[Beleg]</span></div>
+  </div>
+
+  <div class="abs side">
+    <h3>[Beleg in einer Zahl]</h3>
+    <div class="big">[Zahl]</div>
+    <p>[Was die Zahl heisst]</p>
+    <hr>
+    <p>[Was noch offen ist oder was sich geändert hat]</p>
+  </div>
+
+  <div class="abs src">Quelle: [in Worten], Stand [TT.MM.JJJJ]</div>
+
+  <aside class="notes">
+    [Kernsatz.] [Die drei Punkte in eigenen Worten, je ein Satz.] [Was offen ist.]
+    Zeit: rund 3 Minuten.
+  </aside>
+</section>
+
+<!-- ===================== Baustein «entscheidung» · höchstens drei Beschlüsse (immer die letzte) ===================== -->
+<section class="folie" data-baustein="entscheidung">
+  <div class="abs eyebrow">Entscheidungsbedarf</div>
+  <h2 class="abs h2">[Der Verwaltungsrat soll heute … entscheiden]</h2>
+  <p class="abs sub">[Worauf die Anträge beruhen, eine Zeile]</p>
+  <div class="abs rule"></div>
+
+  <!-- Je Beschluss eine Zeile: Nummer, Stichwort, EIN Satz (höchstens drei Zeilen Text), Beleg rechts.
+       Zeilen bei top:232px, 360px, 488px; die letzte bekommt class="row last". -->
+  <div class="abs row" style="top:232px">
+    <div class="n">1</div>
+    <div class="k">[Stichwort]</div>
+    <div class="t">[Der Verwaltungsrat … – ein Satz, was beschlossen werden soll, mit Frist oder Bedingung.]</div>
+    <div class="e"><b>[Zahl]</b><span>[wofür die Zahl steht]</span></div>
+  </div>
+  <div class="abs row" style="top:360px">
+    <div class="n">2</div>
+    <div class="k">[Stichwort]</div>
+    <div class="t">[Beschluss 2 in einem Satz.]</div>
+    <div class="e"><b>[Zahl]</b><span>[wofür die Zahl steht]</span></div>
+  </div>
+  <div class="abs row last" style="top:488px">
+    <div class="n">3</div>
+    <div class="k">[Stichwort]</div>
+    <div class="t">[Beschluss 3 in einem Satz.]</div>
+    <div class="e"><b>[Zahl]</b><span>[wofür die Zahl steht]</span></div>
+  </div>
+
+  <div class="abs src">Quelle: [in Worten], Stichtag [TT.MM.JJJJ]</div>
+
+  <aside class="notes">
+    [Die drei Anträge in einem Satz je.] [Was passiert, wenn der VR nicht entscheidet.]
+    [Frage in die Runde, mit der die Diskussion beginnt.]
+    Zeit: rund 3 Minuten, danach Diskussion.
+  </aside>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/notes/notes.min.js"></script>
+
+<script>
+/* ==================== DIAGRAMM-DATEN (nur diesen Block ersetzen) ====================
+   Liniendiagramm: eine Reihe je Gruppe, ein Wert je Jahr.
+   - wert: Zahl in der Einheit der Achse (hier Prozent), null = Lücke (kein Bestand, zu kleine Basis).
+   - zaehler / nenner: optional; erscheinen beim Überfahren eines Punkts («42 von 219»).
+   - farbe: nur aus FARBEN (dg, mintInk, mint, grau). Wichtigste Reihe: dick: true.
+   - band: optional, hebt einen Zeitraum hinter den Linien hervor.
+   Werte immer aus eigenen Ergebnissen oder frisch aus den Tabellen, nie geschätzt oder gerundet übernommen. */
+const DIAGRAMM = {
+  einheit: "%",
+  achsentitel: "[Kennzahl] in %",
+  jahre: [2019, 2020, 2021, 2022, 2023, 2024, 2025],
+  band: { von: 2022, bis: 2025, text: "[Hervorhebung, etwa: seit 2022 …]" },
+  reihen: [
+    { name: "[Reihe A]", farbe: "mintInk", dick: true, werte: [
+      { jahr: 2019, wert: null }, { jahr: 2020, wert: null }, { jahr: 2021, wert: null },
+      { jahr: 2022, wert: 12.0, zaehler: 12, nenner: 100 }, { jahr: 2023, wert: 10.0, zaehler: 10, nenner: 100 },
+      { jahr: 2024, wert: 11.0, zaehler: 11, nenner: 100 }, { jahr: 2025, wert: 15.0, zaehler: 15, nenner: 100 } ] },
+    { name: "[Reihe B]", farbe: "dg", werte: [
+      { jahr: 2019, wert: 8.0 }, { jahr: 2020, wert: 6.0 }, { jahr: 2021, wert: 7.0 }, { jahr: 2022, wert: 6.0 },
+      { jahr: 2023, wert: 6.5 }, { jahr: 2024, wert: 8.0 }, { jahr: 2025, wert: 7.0 } ] },
+    { name: "[Gesamt]", farbe: "grau", gestrichelt: true, werte: [
+      { jahr: 2019, wert: 8.0 }, { jahr: 2020, wert: 6.0 }, { jahr: 2021, wert: 7.0 }, { jahr: 2022, wert: 7.0 },
+      { jahr: 2023, wert: 7.0 }, { jahr: 2024, wert: 9.0 }, { jahr: 2025, wert: 10.0 } ] }
+  ]
+};
+/* ==================== Ende DIAGRAMM-DATEN ==================== */
+</script>
+
+<script>
+/* ==================== Ab hier nichts ändern: Kopf, Fuss, Diagramm, Prüfung, Start ==================== */
+const FARBEN = { dg: "#173d2c", mintInk: "#23774d", mint: "#52b986", grau: "#8a9a91", muted: "#56665d", line: "#d5e3da", wash: "#f3faf5" };
+const HINWEIS = "Fiktives Lehrbeispiel. Alle Daten synthetisch. Keine Verbindung zu realen Personen, Unternehmen oder Marken.";
+
+/* Zahlen im Schweizer Format: 1'513'301 und 11.1 % */
+const CH = (window.d3 ? d3.formatLocale({ decimal: ".", thousands: "'", grouping: [3], currency: ["", ""] }) : null);
+function fmtZahl(v, stellen = 0) { return CH ? CH.format(",." + stellen + "f")(v) : String(v); }
+function fmtProzent(v, stellen = 1) { return fmtZahl(v, stellen) + " %"; }
+
+/* Logo und Fusszeile auf jede Folie setzen */
+function kopfUndFuss() {
+  const slides = document.querySelector(".reveal .slides");
+  const fuss = slides.getAttribute("data-fuss") || "Pfefferminzia";
+  const folien = Array.from(slides.querySelectorAll(":scope > section.folie"));
+  folien.forEach((s, i) => {
+    s.querySelectorAll(".logo, .foot, .foot-l, .foot-r").forEach(e => e.remove());
+    const add = (cls, html) => { const d = document.createElement("div"); d.className = "abs " + cls; d.innerHTML = html; s.appendChild(d); };
+    add("logo", '<svg viewBox="0 0 338 64" role="img" aria-label="Pfefferminzia"><use href="#pf-logo"/></svg>');
+    add("foot", "");
+    add("foot-l", fuss + " · Folie " + (i + 1) + "/" + folien.length);
+    add("foot-r", HINWEIS);
+  });
+}
+
+/* Liniendiagramm mit D3: Prozentachse in runden Schritten, Lücken für null, Endwerte direkt an den Linien */
+function linienDiagramm(sel, D) {
+  if (!window.d3) return;
+  const svg = d3.select(sel); if (svg.empty()) return;
+  svg.selectAll("*").remove();
+  const W = +svg.attr("width"), H = +svg.attr("height");
+  const m = { top: 34, right: 190, bottom: 40, left: 52 };
+  const alle = D.reihen.flatMap(r => r.werte.filter(w => w.wert !== null).map(w => w.wert));
+  const schritt = 5;
+  const yMax = Math.max(schritt, Math.ceil((d3.max(alle) || 0) / schritt) * schritt);
+  const x = d3.scaleLinear().domain(d3.extent(D.jahre)).range([m.left, W - m.right]);
+  const y = d3.scaleLinear().domain([0, yMax]).range([H - m.bottom, m.top]);
+  const ticks = d3.range(0, yMax + 0.001, yMax > 40 ? 10 : schritt);
+  const halo = s => s.attr("paint-order", "stroke").attr("stroke", "#fff").attr("stroke-width", 4).attr("stroke-linejoin", "round");
+
+  if (D.band) {
+    svg.append("rect").attr("x", x(D.band.von)).attr("y", m.top).attr("width", x(D.band.bis) - x(D.band.von))
+      .attr("height", H - m.bottom - m.top).attr("fill", FARBEN.wash);
+    /* Beschriftung unten im Band, damit sie die Endwerte oben nicht überdeckt */
+    svg.append("text").attr("x", x(D.band.von) + 10).attr("y", H - m.bottom - 12).attr("font-size", 15)
+      .attr("font-weight", 600).attr("fill", FARBEN.mintInk).text(D.band.text);
+  }
+  svg.append("g").selectAll("line").data(ticks).join("line")
+    .attr("x1", m.left).attr("x2", W - m.right).attr("y1", d => y(d)).attr("y2", d => y(d))
+    .attr("stroke", d => d === 0 ? "#9fb3a7" : FARBEN.line).attr("stroke-width", 1);
+  svg.append("g").selectAll("text").data(ticks).join("text")
+    .attr("x", m.left - 12).attr("y", d => y(d)).attr("dy", "0.35em").attr("text-anchor", "end")
+    .attr("font-size", 15).attr("fill", FARBEN.muted).text(d => fmtZahl(d));
+  svg.append("text").attr("x", 0).attr("y", 14).attr("font-size", 15).attr("font-weight", 600)
+    .attr("fill", FARBEN.muted).text(D.achsentitel || "");
+  svg.append("g").selectAll("text").data(D.jahre).join("text")
+    .attr("x", d => x(d)).attr("y", H - m.bottom + 26).attr("text-anchor", "middle")
+    .attr("font-size", 15).attr("fill", FARBEN.muted).text(d => d);
+
+  const linie = d3.line().defined(d => d.wert !== null).x(d => x(d.jahr)).y(d => y(d.wert));
+  const enden = [];
+  D.reihen.forEach(r => {
+    const farbe = FARBEN[r.farbe] || r.farbe || FARBEN.dg;
+    svg.append("path").datum(r.werte).attr("fill", "none").attr("stroke", farbe)
+      .attr("stroke-width", r.dick ? 4 : 3).attr("stroke-dasharray", r.gestrichelt ? "6 5" : null)
+      .attr("stroke-linejoin", "round").attr("stroke-linecap", "round").attr("d", linie);
+    const punkte = r.werte.filter(w => w.wert !== null);
+    svg.append("g").selectAll("circle").data(punkte).join("circle")
+      .attr("cx", d => x(d.jahr)).attr("cy", d => y(d.wert)).attr("r", 5)
+      .attr("fill", "#fff").attr("stroke", farbe).attr("stroke-width", 2.5)
+      .append("title").text(d => r.name + " " + d.jahr + ": " + fmtProzent(d.wert)
+        + (d.zaehler != null ? " (" + fmtZahl(d.zaehler) + " von " + fmtZahl(d.nenner) + ")" : ""));
+    const letzter = punkte[punkte.length - 1];
+    if (letzter) enden.push({ r, farbe, wert: letzter.wert, jahr: letzter.jahr, y: y(letzter.wert) });
+  });
+  /* Endwerte senkrecht auseinanderziehen, damit sich nichts überdeckt */
+  enden.sort((a, b) => a.y - b.y);
+  for (let i = 1; i < enden.length; i++) enden[i].y = Math.max(enden[i].y, enden[i - 1].y + 24);
+  const unten = H - m.bottom - 6;
+  for (let i = enden.length - 1; i >= 0; i--) {
+    const grenze = i === enden.length - 1 ? unten : enden[i + 1].y - 24;
+    enden[i].y = Math.min(enden[i].y, grenze);
+  }
+  enden.forEach(e => {
+    const t = svg.append("text").attr("x", x(e.jahr) + 16).attr("y", e.y).attr("dy", "0.35em");
+    const textFarbe = e.r.farbe === "grau" ? FARBEN.muted : e.farbe;
+    t.append("tspan").attr("font-size", 19).attr("font-weight", 750).attr("fill", textFarbe).text(fmtProzent(e.wert));
+    t.append("tspan").attr("dx", 8).attr("font-size", 16).attr("font-weight", 600).attr("fill", textFarbe).text(e.r.name);
+    halo(t);
+  });
+}
+
+/* Layout-Prüfung: Text, der über seinen Rahmen oder über die Folie hinausläuft, rot markieren */
+function pruefeLayout() {
+  const meldungen = [];
+  document.querySelectorAll(".reveal .slides section.folie").forEach((s, i) => {
+    const vorher = s.style.display;
+    s.style.display = "block";   /* verborgene Folien kurz einblenden, damit sie messbar sind */
+    /* einzeilige Texte: nur Breite prüfen; Kästen: nur Höhe prüfen */
+    const zeilen = ".h2, .sub, .t-title, .t-stand, .eyebrow, .kpi .val, .kpi .val2 div, .side .big, .row .e b";
+    const kaesten = ".kpi, .side, .row .t, .row .e, .src, .punkte";
+    s.querySelectorAll(zeilen + ", " + kaesten).forEach(el => {
+      const zuBreit = el.matches(zeilen) && el.scrollWidth > el.clientWidth + 1;
+      const zuHoch = el.matches(kaesten) && el.scrollHeight > el.clientHeight + 1;
+      el.classList.toggle("ueberlauf", zuBreit || zuHoch);
+      if (zuBreit || zuHoch) meldungen.push("Folie " + (i + 1) + ": zu lang – " + el.className + " – «" + el.textContent.trim().slice(0, 60) + "»");
+    });
+    s.style.display = vorher;
+    if (/\[[^\]]{2,}\]/.test(s.textContent)) meldungen.push("Folie " + (i + 1) + ": Platzhalter in eckigen Klammern stehen noch da (auch in den Notizen)");
+    if (s.querySelector(".beispiel")) meldungen.push("Folie " + (i + 1) + ": Hinweis «Beispieldaten» steht noch da");
+  });
+  let platzhalter = false;
+  JSON.stringify(DIAGRAMM, (k, v) => { if (typeof v === "string" && /\[[^\]]{2,}\]/.test(v)) platzhalter = true; return v; });
+  if (platzhalter) meldungen.push("Diagramm: Platzhalter in DIAGRAMM-DATEN");
+  meldungen.forEach(t => console.warn("[Vorlage] " + t));
+  window.VORLAGE_PRUEFUNG = meldungen;
+  document.body.setAttribute("data-pruefung", meldungen.length ? meldungen.join(" | ") : "ok");
+  let box = document.querySelector(".pruefung");
+  if (!box) { box = document.createElement("details"); box.className = "pruefung"; document.body.appendChild(box); }
+  box.hidden = meldungen.length === 0;
+  box.innerHTML = "<summary>Vorlage prüfen: " + meldungen.length + " Hinweis" + (meldungen.length === 1 ? "" : "e") + "</summary><ul>"
+    + meldungen.map(t => "<li>" + t.replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" })[c]) + "</li>").join("") + "</ul>";
+  return meldungen;
+}
+
+/* Schaltet die Papier-Druckansicht von reveal.js ab (sie zerlegt das Raster); beim Drucken ohne
+   ?print-pdf gilt stattdessen der Block «@media print» oben: eine Folie je Seite. */
+document.documentElement.classList.add("print-pdf");
+kopfUndFuss();
+linienDiagramm("#diagramm", DIAGRAMM);   /* vor dem Start zeichnen, damit auch ein sofortiger Druck das Diagramm enthält */
+Reveal.initialize({
+  width: 1280, height: 720, margin: 0, minScale: 0.2, maxScale: 2.0,
+  center: false, hash: true, controls: true, progress: true, slideNumber: false,
+  transition: "none", backgroundTransition: "none",
+  pdfMaxPagesPerSlide: 1, pdfSeparateFragments: false,
+  plugins: [RevealNotes]
+}).then(() => {
+  const fonts = document.fonts ? document.fonts.ready : Promise.resolve();
+  fonts.then(() => setTimeout(pruefeLayout, 50));
+});
+</script>
+</body>
+</html>
