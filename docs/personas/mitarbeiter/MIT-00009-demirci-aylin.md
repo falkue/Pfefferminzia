@@ -21,7 +21,7 @@ erzeugt_am: 2026-09-03
 
 | Merkmal | Wert |
 |---|---|
-| Mitarbeiter-ID | MIT-00009 (Personalnummer: 11133) |
+| Mitarbeiter-ID | MIT-00009 (Personalnummer: 10063) |
 | Name | Aylin Demirci |
 | Rolle | Teamleiterin Schaden Haftpflicht DE (Privat- und Betriebshaftpflicht), 2nd-Level-Beschwerden Schaden, Schnittstelle zur Special Investigation Unit |
 | Organisationseinheit | SL-HP-DE – Schaden Haftpflicht DE (Bereich Schaden/Leistung, COO) |
@@ -32,14 +32,14 @@ erzeugt_am: 2026-09-03
 | Sprache | de-DE |
 | E-Mail | aylin.demirci@pfefferminzia.example |
 | Telefon | +49 30 23125 409 |
-| Vorgesetzte | Schadenleiter Gruppe (nicht als Persona ausgearbeitet) |
+| Vorgesetzte | Schadenleiterin DE, Leitung der Einheit SL-HP-DE (nicht als Persona ausgearbeitet) |
 | Kompetenz | Zahlung und Ablehnung bis EUR 250'000 (Teamleitung); darüber Schadenleitung und Legal |
 
 ## Biografie
 
 Aylin Demirci wächst in Leipzig-Grünau auf, ihre Eltern führen ein Reinigungsunternehmen. Sie studiert Versicherungswirtschaft an einer Fachhochschule in Sachsen und tritt 2014 als Schadensachbearbeiterin in die deutsche Niederlassung von Pfefferminz ein. Sie bearbeitet Privathaftpflichtschäden, dann Betriebshaftpflicht, und übernimmt 2019 die Stellvertretung der Teamleitung. 2021 ist sie die erste Sachbearbeiterin, die den Minzia-Pilot zur Schaden-Triage im Alltag nutzt, und sie schreibt den internen Erfahrungsbericht, der die Beteiligung 2023 mit vorbereitet.
 
-Seit 2022 leitet sie das Team Schaden Haftpflicht DE mit 28 Mitarbeitenden. Mit der Migration Haftpflicht auf MINT im zweiten Quartal 2025 läuft die Triage vollständig über die Plattform: Bagatellschäden unter EUR 5'000 werden automatisch bezahlt, Betrugsverdacht wird gescort, Ablehnungen sollen an einen Menschen gehen. Dass im August 2025 die Ablehnung im Fall Pieper ohne menschliche Prüfung hinausging, weil eine Regel im Hundehalter-Baustein falsch konfiguriert war, hat ihr Team drei Monate gekostet und ihr eine Prüfung durch Compliance eingebracht. Gleichzeitig hat das Betrugsmodell die Serienschäden der Transportlogistik Grimm erkannt, was sie als Beleg dafür sieht, dass Automatisierung funktioniert.
+Seit 2022 leitet sie das Team Schaden Haftpflicht DE mit 28 Mitarbeitenden. Seit der Pilotwelle Privathaftpflicht DE (3. März 2025) und der Hauptwelle Haftpflicht (15. Mai 2025) läuft die Triage vollständig über MINT: Bagatellschäden unter EUR 5'000 werden automatisch bezahlt, Betrugsverdacht wird gescort, Ablehnungen sollen an einen Menschen gehen. Dass am 24. März 2025 die Ablehnung im Fall Pieper ohne menschliche Prüfung hinausging, weil der Hundehalter-Baustein bei der Pilotmigration verloren gegangen und die Ablehnungsregel falsch konfiguriert war, hat ihr Team drei Monate gekostet und ihr eine Prüfung durch Compliance eingebracht. Gleichzeitig hat das Betrugsmodell die Serienschäden der Transportlogistik Grimm erkannt, was sie als Beleg dafür sieht, dass Automatisierung funktioniert.
 
 Sie ist alleinerziehend, hat einen Sohn im Grundschulalter, spricht Deutsch und Türkisch und organisiert die Tischtennis-Runde im Minzhof.
 

@@ -7,20 +7,20 @@ tags: [projekt, pieper]
 
 # Beschwerdefall Pieper
 
-KU Hans-Georg Pieper, Dresden · VTR-00000801 (HAPO 40.288.506-4) · Baustein Hundehalter seit 01.03.2019 (Nachtrag 15.02.2019) · Schaden SCH-00000810
+KU Hans-Georg Pieper, Dresden · VTR-00000801 (HAPO 40.288.506-6, migriert in der Pilotwelle 03.03.2025) · Baustein Hundehalter seit 01.03.2019 (Nachtrag 15.02.2019) · Schaden SCH-00000810
 Beteiligt: [[Miriam Steinbrecher]] (Compliance), [[Jonas Pfister]] (Ursache), [[Nele Hartmann]] (Korrespondenz), CC Leipzig
 
 ## Chronologie
 | Datum | Was |
 |---|---|
-| 21.03.2025 | Hund «Rex» beißt Radfahrer, Schaden EUR 1.240, Meldung über CC Leipzig |
+| 21.03.2025 | Hund «Rex» beißt Radfahrer, Schaden EUR 1.240 (Arzt 440, Schmerzensgeld 700, Hose 100), Meldung über CC Leipzig |
 | 24.03.2025 | MINT Triage v3 lehnt automatisch ab («kein Tierhalterbaustein») – ohne menschliche Prüfung |
 | 28.03.2025 | 1. Beschwerdebrief, Frist 14 Tage, droht mit Presse |
 | 02.04.2025 | CC antwortet mit Standardtext (!) |
 | 15.04.2025 | 2. Brief: Ombudsmann + BaFin-Beschwerde angekündigt |
 | 16.04.2025 | Jonas findet Ursache: BST=01 nicht gemappt, Freitextfeld ZUSATZ1 → Regel deaktiviert |
 | 17.04.2025 | reguliert (ich): EUR 1.240 an Geschädigten, Entschuldigung, Kulanz EUR 100 |
-| 18.04.2025 | Nachmigration 214 Verträge; 11 Fehlablehnungen bis 25.04. wiedereröffnet + reguliert |
+| 18.04.2025 | Nachmigration 214 Verträge; 11 Fehlablehnungen (inkl. Pieper) bis 25.04. reguliert |
 | 24.04.2025 | Anfrage Versicherungsombudsmann, Az. O-2025-04-1187 |
 | 06.05.2025 | Root-Cause-Memo (Steinbrecher/Pfister), Vorfall VF-2025-03; Kompetenzordnung R08 Version 2.1 |
 | 08.05.2025 | Stellungnahme an Ombudsmann (Fr. Steinbrecher) |
@@ -30,7 +30,7 @@ Beteiligt: [[Miriam Steinbrecher]] (Compliance), [[Jonas Pfister]] (Ursache), [[
 | 14.07.2025 | meine Antwort: Ablehnungen nur durch Mitarbeitende, zweite Freigabe |
 
 ## Ursache kurz
-- Mappingfehler Bausteincode BST=01 (Mapping HP-2025-Q2) – Info stand nur im Freitext ZUSATZ1
+- Mappingfehler Bausteincode BST=01 (Pilotwelle HP-2025-PILOT, PHV DE seit 03.03. in MINT) – Info stand nur im Freitext ZUSATZ1; vor Hauptwelle 15.05. korrigiert
 - Regel hat abgelehnt, obwohl Ablehnungen an einen Menschen sollten
 - seit R08 v2.1: Ablehnung nur mit Freigabe durch eine natürliche Person
 

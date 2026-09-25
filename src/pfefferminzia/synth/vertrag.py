@@ -24,6 +24,27 @@ from pfefferminzia.synth.tarif import TarifHP, TarifLV
 
 PERSONA_VERTRAEGE_RESERVIERT = 2000
 MIGRATION = {"HP": date(2025, 5, 15), "LV": date(2025, 11, 15)}
+# Pilotwelle Haftpflicht: Privathaftpflicht DE aus HAPO wurde vorab migriert, damit das Team Schaden HP DE die
+# Schaden-Triage v3 in MINT produktiv nutzen konnte (Fall Pieper, Maerz 2025). Die Hauptwelle folgte am 15.05.2025.
+PILOTWELLE_HP = date(2025, 3, 3)
+
+
+def migrationsdatum(sparte: str, produkt: str, markt: str) -> date:
+    """Datum der Migration nach MINT fuer einen Altsystem-Vertrag (Pilotwelle HP-PRIV DE, sonst Hauptwelle der Sparte)."""
+    if produkt == "HP-PRIV" and markt == "DE":
+        return PILOTWELLE_HP
+    return MIGRATION[sparte]
+
+
+def migrationswelle(datum) -> str:
+    """Wellen-Kennung im Migrationslog und in MINT."""
+    if pd.isna(datum):
+        return ""
+    d = pd.Timestamp(datum).date()
+    if d == PILOTWELLE_HP:
+        return "HP-2025-PILOT"
+    return "HP-2025-Q2" if d == MIGRATION["HP"] else "LV-2025-Q4"
+
 SPARTE = {"HP-PRIV": "HP", "HP-BETR": "HP", "HP-BERUF": "HP", "LV-RISK": "LV", "LV-VORS": "LV", "LV-RENTE": "LV", "LV-EU": "LV"}
 KANALMIX = {  # (produkt, markt): agentur, makler, direkt, bank  (Kennzahlen-Masterdatei 2025)
     ("HP-PRIV", "CH"): (45, 10, 35, 10), ("HP-BETR", "CH"): (40, 55, 5, 0), ("HP-BERUF", "CH"): (25, 70, 5, 0),
@@ -53,11 +74,17 @@ PERSONA_VERTRAEGE = [
     (602, "LV-RISK", "PZ-2025", 6, 6, "DE", "2025-07-01", "2043-07-01", 2_889.18, 1_200_000, "AKTIV", None, None, "makler", "Zuschlag 50 Prozent"),
     (701, "HP-PRIV", "HP-MODERN", 7, 7, "CH", "2024-09-01", None, 129.20, 5_000_000, "GEKUENDIGT_VN", "2025-12-31", "K01", "direkt", "Wechsel Anbieter"),
     (702, "LV-VORS", "PZ-2025", 7, 7, "CH", "2025-02-01", "2066-04-17", 1_800.00, 60_000, "AKTIV", None, None, "direkt", "Saeule 3a, Beitragspause 2025"),
-    (801, "HP-PRIV", "HP-MODERN", 8, 8, "DE", "2013-01-01", None, 131.40, 5_000_000, "AKTIV", None, None, "agentur", "Hundebaustein seit 2019, Fall Pieper"),
+    (801, "HP-PRIV", "HP-MODERN", 8, 8, "DE", "2013-01-01", None, 131.40, 5_000_000, "AKTIV", None, None, "agentur", "Hundebaustein seit 2019, Fall Pieper; Pilotwelle Migration 03.03.2025"),
     (901, "HP-BETR", "HP-MODERN", 9, 9, "DE", "2022-02-01", None, 2_140.00, 3_000_000, "GEKUENDIGT_VU", "2025-01-15", "K10", "direkt", "Betrugsfall"),
     (902, "HP-PRIV", "MZ-DIRECT", 17, 17, "DE", "2023-05-15", None, 63.60, 10_000_000, "GEKUENDIGT_VU", "2025-01-15", "K10", "direkt", "Betrugsfall, Dublette"),
     (1001, "LV-VORS", "PZ-2025", 10, 10, "CH", "2025-07-01", "2039-07-01", 0.00, 480_000, "AKTIV", None, None, "makler", "Einmalpraemie 450000, AML-Pruefung"),
 ]
+
+# Zahlungsweise laut Persona-Steckbrief, wo sie fuer die Storyline zaehlt (Pieper: Jahresrechnung per Ueberweisung)
+PERSONA_ZAHLUNGSWEISE = {801: "JAEHRLICH"}
+# Bausteine laut Persona-Steckbrief und Fallakte (Pieper: nur Hundehalter, eingeschlossen per Nachtrag ab 01.03.2019)
+PERSONA_BAUSTEINE = {801: ["BS-TIER-HUND"]}
+PERSONA_BAUSTEIN_AB = {801: {"BS-TIER-HUND": date(2019, 3, 1)}}
 
 
 @dataclass
@@ -226,11 +253,17 @@ class VertragWelt:
 
     # -- Lebenszyklus -----------------------------------------------------------------
     def lebenszyklus(self, rng, produkt: str, markt: str, kanal: str, herkunft: str, beginn: date, ablauf: date | None,
-                     vn: pd.Series, lat: pd.Series) -> tuple[str, date | None, str | None, bool]:
-        """Liefert (status, ende, storno_grund, kuendigt_in_12m)."""
+                     vn: pd.Series, lat: pd.Series, n: int = 0) -> tuple[str, date | None, str | None, bool]:
+        """Liefert (status, ende, storno_grund, kuendigt_in_12m).
+
+        Simuliert jedes Kalenderjahr bis einschliesslich Stichtagsjahr. Das Stichtagsjahr (2025) zieht seinen Storno
+        aus einem eigenen Zufallsstrom, damit alle uebrigen Ziehungen des Vertrags (Vermittler, Antrag, Rollen)
+        unveraendert bleiben.
+        """
         tod = lat["todesdatum"] if pd.notna(lat["todesdatum"]) else None
         neigung = float(lat["kuendigungsneigung"])
         faktor = 0.5 + 1.6 * neigung
+        jung = produkt == "HP-PRIV" and (self.stichtag.year - vn["geburtsdatum"].year) < 30
         jahr = beginn.year
         while True:
             ende_jahr = date(jahr, 12, 31)
@@ -243,23 +276,38 @@ class VertragWelt:
             if jahr >= self.stichtag.year:
                 break
             if jahr > beginn.year:
-                h = self.storno_rate(produkt, markt, kanal, herkunft, jahr) * faktor
-                if produkt == "HP-PRIV" and (self.stichtag.year - vn["geburtsdatum"].year) < 30:
-                    h *= 1.4
+                h = self.storno_rate(produkt, markt, kanal, herkunft, jahr) * faktor * (1.4 if jung else 1.0)
                 if rng.random() < h:
-                    ende = date(jahr, int(rng.integers(1, 13)), 1) if produkt.startswith("HP") else date(jahr, int(rng.integers(1, 13)), int(rng.integers(1, 28)))
-                    ende = max(ende, beginn + timedelta(days=30))
-                    if produkt.startswith("LV"):
-                        grund = "K14" if rng.random() < 0.85 else "K12"
-                        return ("RUECKKAUF" if grund == "K14" else "STORNIERT"), ende, grund, False
-                    kand = [g for g in STORNO_GRUENDE if g[3] > 0]
-                    gw = np.array([g[3] for g in kand])
-                    g = kand[int(rng.choice(len(kand), p=gw / gw.sum()))]
-                    return g[2], ende, g[0], False
+                    return self._storno_ereignis(rng, produkt, jahr, beginn)
             jahr += 1
-        # aktiv am Stichtag: latente Kuendigung in den naechsten 12 Monaten
+        # aktiv bis ins Stichtagsjahr: latente Kuendigung in den naechsten 12 Monaten (Hauptstrom wie bisher)
         h = self.storno_rate(produkt, markt, kanal, herkunft, 2025) * faktor
-        return "AKTIV", None, None, bool(rng.random() < h)
+        k12 = bool(rng.random() < h)
+        # Storno im Stichtagsjahr bis zum Stichtag, gleiche Logik wie in den Vorjahren
+        if beginn.year < self.stichtag.year:
+            r2 = self.ctx.rng("vertrag.storno_stichtagsjahr", n)
+            h_j = self.storno_rate(produkt, markt, kanal, herkunft, self.stichtag.year) * faktor * (1.4 if jung else 1.0)
+            if r2.random() < h_j:
+                status, ende, grund, _ = self._storno_ereignis(r2, produkt, self.stichtag.year, beginn)
+                return status, min(ende, self.stichtag), grund, False
+        return "AKTIV", None, None, k12
+
+    def _storno_grund_kandidaten(self, produkt: str) -> list[tuple]:
+        """Kuendigungsgruende fuer einen zufaelligen Storno. Tod (K07) und Widerruf (K13) entstehen nur aus echten
+        Ereignissen (Todesdatum, Widerrufsfrist), Betriebsaufgabe (K08) nur bei Betriebs- und Berufshaftpflicht."""
+        return [g for g in STORNO_GRUENDE if g[3] > 0 and g[0] not in ("K07", "K13")
+                and (g[0] != "K08" or produkt in ("HP-BETR", "HP-BERUF"))]
+
+    def _storno_ereignis(self, rng, produkt: str, jahr: int, beginn: date) -> tuple[str, date, str, bool]:
+        ende = date(jahr, int(rng.integers(1, 13)), 1) if produkt.startswith("HP") else date(jahr, int(rng.integers(1, 13)), int(rng.integers(1, 28)))
+        ende = max(ende, beginn + timedelta(days=30))
+        if produkt.startswith("LV"):
+            grund = "K14" if rng.random() < 0.85 else "K12"
+            return ("RUECKKAUF" if grund == "K14" else "STORNIERT"), ende, grund, False
+        kand = self._storno_grund_kandidaten(produkt)
+        gw = np.array([g[3] for g in kand])
+        g = kand[int(rng.choice(len(kand), p=gw / gw.sum()))]
+        return g[2], ende, g[0], False
 
     # -- Underwriting Leben -----------------------------------------------------------
     def underwriting_lv(self, rng, generation: str, markt: str, beginn: date, vn: pd.Series, lat: pd.Series, zone: str) -> dict:
@@ -318,6 +366,8 @@ class VertragWelt:
         zahlungsweise = str(rng.choice(ZAHLUNGSWEISEN, p=[0.65, 0.15, 0.15, 0.05] if herkunft == "minzia" or beginn.year >= 2020 else [0.72, 0.16, 0.12, 0.0]))
         zahlungsart = str(rng.choice(["RECHNUNG", "LASTSCHRIFT", "EBILL", "KREDITKARTE"],
                                      p=[0.55, 0.3, 0.13, 0.02] if herkunft != "minzia" else [0.1, 0.55, 0.15, 0.2]))
+        if persona and persona.get("zahlungsweise"):
+            zahlungsweise = persona["zahlungsweise"]
         # -- Sparte Haftpflicht
         deckungen: list[dict] = []
         risiko: dict = {}
@@ -327,6 +377,8 @@ class VertragWelt:
             summe = self.deckungssumme(rng, produkt, markt, generation)
             sb_typ, sb = self.selbstbehalt(rng, produkt, markt, generation)
             bausteine = self._bausteine(rng, produkt, markt, generation, lat)
+            if persona and n in PERSONA_BAUSTEINE:
+                bausteine = list(PERSONA_BAUSTEINE[n])
             if produkt == "HP-PRIV":
                 hh = self.k.beziehungen[self.k.beziehungen["partner_id_zu"] == vn_id]
                 personenkreis = "einzel" if len(hh) == 0 else ("paar" if (len(hh) == 1 and markt == "DE") else "familie")
@@ -427,7 +479,7 @@ class VertragWelt:
         if persona:
             status, ende, grund, k12 = persona["status"], (date.fromisoformat(persona["storno"]) if persona["storno"] else None), persona["grund"], False
         else:
-            status, ende, grund, k12 = self.lebenszyklus(rng, produkt, markt, kanal, herkunft, beginn, ablauf, vn, lat)
+            status, ende, grund, k12 = self.lebenszyklus(rng, produkt, markt, kanal, herkunft, beginn, ablauf, vn, lat, n)
         # -- Quellsystem
         if herkunft == "minzia":
             quelle, migriert = "MINT", None
@@ -435,9 +487,8 @@ class VertragWelt:
             quelle, migriert = "MINT", None
         else:
             quelle = "HAPO" if sparte == "HP" else "VERA"
-            migriert = MIGRATION[sparte] if (ende is None or ende >= date(2025, 1, 1)) else None
-            if ende is not None and ende < date(2025, 1, 1):
-                migriert = MIGRATION[sparte]  # Altbestand wurde vollstaendig migriert, auch beendete Vertraege
+            # Altbestand wurde vollstaendig migriert, auch beendete Vertraege
+            migriert = migrationsdatum(sparte, produkt, markt)
         vid = vertrag_id(n)
         vermittler = self.vermittler(rng, markt, kanal)
         sachbearbeiter = self.sachbearbeiter(rng, sparte, markt)
@@ -459,7 +510,8 @@ class VertragWelt:
             "erstellt_am": beginn - timedelta(days=int(rng.integers(1, 40))), "bemerkung": persona["bemerkung"] if persona else None,
         })
         for i, d in enumerate(deckungen):
-            self.deckungen.append({"deckung_id": f"DEK-{n:08d}-{i + 1:02d}", "vertrag_id": vid, **d, "gueltig_von": beginn, "gueltig_bis": ende})
+            ab = PERSONA_BAUSTEIN_AB.get(n, {}).get(d["baustein"], beginn) if persona else beginn
+            self.deckungen.append({"deckung_id": f"DEK-{n:08d}-{i + 1:02d}", "vertrag_id": vid, **d, "gueltig_von": ab, "gueltig_bis": ende})
         self.risiko.append({"risiko_objekt_id": f"RIS-{n:08d}", "vertrag_id": vid, **{k: risiko.get(k) for k in
                             ("risiko_typ", "personen", "hund", "personenkreis", "branche_id", "nace_code", "risikoklasse", "umsatz", "mitarbeitende",
                              "bemessungsgrundlage", "berufsgruppe", "untergruppe", "versicherte_person_id", "eintrittsalter", "raucher_angabe", "bmi_angabe",
@@ -467,15 +519,15 @@ class VertragWelt:
         self._rollen(rng, vid, vn_id, produkt, persona)
         self.latent.append({
             "vertrag_id": vid, "praemie_tarif_brutto": brutto, "tarifabweichung_pct": round(abweichung * 100, 2),
-            "kuendigt_in_12m": k12, "kuendigungsgrund_latent": grund or (self._latenter_grund(rng) if k12 else None),
+            "kuendigt_in_12m": k12, "kuendigungsgrund_latent": grund or (self._latenter_grund(rng, produkt) if k12 else None),
             "uw_entscheid": uw["entscheid_code"], "uw_zuschlag_pct": uw["zuschlag_pct"], "uw_bias_angewendet": uw["bias_angewendet"],
             "uw_automatisiert": uw["automatisiert"], "bmi_wahr": float(lat["bmi"]) if pd.notna(lat["bmi"]) else None,
             "raucher_wahr": bool(lat["raucher"]) if pd.notna(lat["raucher"]) else None,
         })
         self.vertrag_pro_partner[vn_id] = self.vertrag_pro_partner.get(vn_id, 0) + 1
 
-    def _latenter_grund(self, rng) -> str:
-        kand = [g for g in STORNO_GRUENDE if g[3] > 0]
+    def _latenter_grund(self, rng, produkt: str) -> str:
+        kand = self._storno_grund_kandidaten(produkt)
         gw = np.array([g[3] for g in kand])
         return kand[int(rng.choice(len(kand), p=gw / gw.sum()))][0]
 
@@ -544,7 +596,8 @@ class VertragWelt:
             if vn_id not in self.p.index:
                 continue
             self.vertrag(vid, produkt, vn_id, persona={"generation": gen, "beginn": beginn, "kanal": kanal, "praemie": praemie, "status": status,
-                                                       "storno": storno, "grund": grund, "bemerkung": bem, "vp": f"PTR-{vp:08d}", "summe": summe, "ablauf": ablauf})
+                                                       "storno": storno, "grund": grund, "bemerkung": bem, "vp": f"PTR-{vp:08d}", "summe": summe, "ablauf": ablauf,
+                                                       "zahlungsweise": PERSONA_ZAHLUNGSWEISE.get(vid)})
         p = self.p
         nat = p[(p["partner_typ"] == "NATUERLICH") & (~p["ist_persona"])]
         volljaehrig = nat[nat["geburtsdatum"].map(lambda d: (self.stichtag - d).days >= 18 * 365.25 + 32)]

@@ -20,6 +20,7 @@ from pfefferminzia.legacy.dq import DqProtokoll
 from pfefferminzia.manifest import sha256_datei
 from pfefferminzia.pipeline import Stage, register
 from pfefferminzia.synth.referenz_intern import BERUF_FREITEXT, MINT_STATUS_V1, MINT_STATUS_V2, MINT_STATUS_V3
+from pfefferminzia.synth.vertrag import PILOTWELLE_HP, migrationswelle
 
 PRODUKT_MINT = {"HP-PRIV": "private_liability", "HP-BETR": "business_liability", "HP-BERUF": "professional_liability",
                 "LV-RISK": "term_life", "LV-VORS": "endowment_life", "LV-RENTE": "annuity", "LV-EU": "disability_rider"}
@@ -101,6 +102,7 @@ class Mint:
         v = self.vertrag
         mint_native = set(v[(v["quellsystem"] == "MINT")]["versicherungsnehmer_id"])
         migriert = set(v[v["migriert_am"].notna()]["versicherungsnehmer_id"])
+        pilot = set(v[v["migriert_am"].map(lambda d: pd.notna(d) and pd.Timestamp(d).date() == PILOTWELLE_HP)]["versicherungsnehmer_id"])
         ids = sorted(mint_native | migriert)
         akt = self.adr[self.adr["ist_aktuell"]].drop_duplicates("partner_id").set_index("partner_id")
         email = self.kontakt[self.kontakt["kontakt_typ"] == "EMAIL"].drop_duplicates("partner_id").set_index("partner_id")["wert"]
@@ -116,7 +118,7 @@ class Mint:
             ist_migriert = pid in migriert and pid not in mint_native
             erstellt = self.stichtag if ist_migriert else (z["kunde_seit"] if pd.notna(z["kunde_seit"]) else date(2021, 6, 1))
             if ist_migriert:
-                erstellt = min(d for d in (date(2025, 5, 15), date(2025, 11, 15)))
+                erstellt = PILOTWELLE_HP if pid in pilot else date(2025, 5, 15)
             version = "v3" if ist_migriert else schema_version(erstellt)
             a = akt.loc[pid] if pid in akt.index else None
             mail, _ = missing(rng, str(email.get(pid, "")) or None, self.rate("DQ-17", 0.10))
@@ -150,7 +152,7 @@ class Mint:
                 if ist_migriert:
                     legacy_attr = {"PARTNR_HAPO": legacy.get((pid, "HAPO")), "PARTNR_VERA": legacy.get((pid, "VERA")),
                                    "GESCHL": {"M": "1", "W": "2"}.get(str(z["geschlecht"]), "0"), "SPRACHE": str(z["sprache"])[:1].upper(),
-                                   "BEMERK": "MIGR " + ("HP-2025-Q2" if legacy.get((pid, "HAPO")) else "LV-2025-Q4")}
+                                   "BEMERK": "MIGR " + ("HP-2025-PILOT" if pid in pilot else ("HP-2025-Q2" if legacy.get((pid, "HAPO")) else "LV-2025-Q4"))}
                     if geb3 is None or rng.random() < 0.03:
                         geb3 = "1900-01-01"  # DQ-24 Dummy
                         self.dq.notiere("MINT", "customers", cid, "person.birthDate", "DQ-24", geb, geb3)
@@ -229,7 +231,7 @@ class Mint:
                 basis["lifecycle"] = {"state": status_map.get(str(r["status"]), "ACTIVE"), "since": r["status_seit"].isoformat(),
                                       "terminationReason": r["storno_grund_code"] if pd.notna(r["storno_grund_code"]) else None}
                 if migriert:
-                    basis["migration"] = {"source": r["quellsystem"], "migratedAt": r["migriert_am"].isoformat(), "wave": "HP-2025-Q2" if r["quellsystem"] == "HAPO" else "LV-2025-Q4"}
+                    basis["migration"] = {"source": r["quellsystem"], "migratedAt": r["migriert_am"].isoformat(), "wave": migrationswelle(r["migriert_am"])}
                     basis["legacyAttributes"] = {"VERTRNR": legacy_v.get((r["vertrag_id"], r["quellsystem"])), "SPARTE": {"HP-PRIV": "10", "HP-BETR": "20", "HP-BERUF": "30"}.get(str(r["produkt_id"]), "K1"),
                                                  "STATUS": "S", "STORNOGRD": "ZZ", "ZAHLWS": {"JAEHRLICH": "1", "HALBJAEHRLICH": "2", "VIERTELJAEHRLICH": "4", "MONATLICH": "12"}.get(str(r["zahlungsweise"]), "1")}
                     # Migrationsartefakt: Bausteincode verloren (Fall Pieper), gemaess Migrationslog

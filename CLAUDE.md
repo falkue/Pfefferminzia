@@ -4,7 +4,7 @@ Dieses Repository enthält einen **synthetischen Lehr-Datensatz** des fiktiven V
 
 ## Die Geschichte in drei Sätzen
 
-Die Pfefferminz Versicherung (gegründet 1924 in Olten, Host-Systeme HAPO für Haftpflicht und VERA für Leben) hat am 1. Januar 2025 das Berliner KI-Start-up Minzia (Cloud-Plattform MINT) übernommen. 2025 wurden die Bestände aus HAPO und VERA nach MINT migriert (Haftpflicht am 15. Mai, Leben am 15. November). Stichtag des Datensatzes ist der 31. Dezember 2025. Details: `docs/unternehmen/` (Profil, Geschichte, Zeitachse, Organisation, IT-Landschaft, Standorte).
+Die Pfefferminz Versicherung (gegründet 1924 in Olten, Host-Systeme HAPO für Haftpflicht und VERA für Leben) hat am 1. Januar 2025 das Berliner KI-Start-up Minzia (Cloud-Plattform MINT) übernommen. 2025 wurden die Bestände aus HAPO und VERA nach MINT migriert (Privathaftpflicht Deutschland vorab in einer Pilotwelle am 3. März, übrige Haftpflicht am 15. Mai, Leben am 15. November). Stichtag des Datensatzes ist der 31. Dezember 2025. Details: `docs/unternehmen/` (Profil, Geschichte, Zeitachse, Organisation, IT-Landschaft, Standorte).
 
 ## Landkarte: Welche Frage, welche Quelle
 
@@ -50,7 +50,11 @@ Zu jeder gibt es eine Geschichte in `docs/personas/kunden/` und eine Fallakte un
 - Herkunft eines Vertrags: `PFEFFERMINZ` oder `MINZIA`. Quellsystem: `HAPO`, `VERA`, `MINT`.
 - Währungen: CH-Verträge in CHF, DE-Verträge in EUR. Beträge in den Rohdaten der Altsysteme stehen in Rappen bzw. Cent.
 - Migrierte Verträge tragen im Altsystem-Extrakt Status `S` mit Stornogrund `ZZ`. Das ist kein Kundenstorno, sondern der Migrationsabschluss.
-- Stornoquote sinnvoll als: Verträge mit `storno_datum` im Jahr, geteilt durch die im Jahr aktiven Verträge. Nachfragen, wenn die Definition offen ist.
+- **Stornoquote** (verbindliche Definition, immer mitnennen): Verträge, die im Jahr vorzeitig beendet wurden, geteilt durch den Bestand am 1. Januar des Jahres.
+  - Zähler: `storno_datum` im Jahr und `storno_grund_code` **nicht** K07 (Tod des Versicherungsnehmers), K13 (Widerruf in der Frist), K15 (Ablauf/Erleben) oder K16 (Leistungsfall Tod). Es zählen also Kündigungen durch Kunde oder Versicherer (K01–K06, K08–K11, K17), Storno wegen Nichtzahlung (K12) und Rückkauf Leben (K14). Codes und Bedeutung: `data/reference/lv/status_codes.csv` (Spalte `zaehlt_als_churn`) und das Data Dictionary.
+  - Nenner: Verträge mit `beginn` vor dem 1. Januar des Jahres, die an diesem Tag noch liefen (`storno_datum` leer oder ab 1. Januar). Neugeschäft des Jahres zählt nicht zum Nenner.
+  - Der Migrationsstorno `ZZ` steht nur in den Rohdaten der Altsysteme und ist nie ein Storno.
+  - Alle Jahre gleich rechnen, 2025 ist ein volles Jahr bis zum Stichtag. Getrennt nach `herkunft` ausweisen, wenn Pfefferminz und Minzia verglichen werden.
 - Der Datensatz enthält bewusst Datenqualitätsprobleme (Dubletten, Transliteration, Platzhalterdaten, Schema-Drift). Sie sind gewollt und Teil der Übungen.
 
 ## Arbeiten mit den Daten

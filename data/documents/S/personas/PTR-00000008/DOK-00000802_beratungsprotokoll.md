@@ -24,7 +24,7 @@ vertraulichkeit: vertraulich
 Anlass: Kunde hat Hund aus dem Tierheim uebernommen (Schaeferhund-Mischling, ca. 3 Jahre).
 Wunsch: Absicherung fuer Schaeden durch den Hund.
 Empfehlung: Einschluss Tierhalterbaustein in bestehende Privathaftpflicht (guenstiger als Einzelpolice). Hinweis auf Listenhunde-Regelung: nicht betroffen.
-Entscheid: Einschluss ab 01.03.2019, Zuschlag EUR 55,00 zzgl. VersSt.
+Entscheid: Einschluss ab 01.03.2019, Zuschlag EUR 56,50 jaehrlich inkl. VersSt.
 Kunde wuenscht Post per Brief, keine E-Mail.
 Unterschrift Kunde / Vermittler 12.02.2019
 

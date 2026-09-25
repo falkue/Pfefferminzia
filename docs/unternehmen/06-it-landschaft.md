@@ -26,7 +26,7 @@ Pfefferminzia betreibt die Host-Welt von Pfefferminz und die Cloud-Welt von Minz
 | System | Herkunft | Funktion | Technologie | Seit | Status am Stichtag | Abschaltung |
 |---|---|---|---|---|---|---|
 | VERA | Pfefferminz | Bestand Leben CH und DE | Host, COBOL, nächtlicher Batch | 1994 | Migriert Q4 2025, Parallelbetrieb | 2027 |
-| HAPO | Pfefferminz | Bestand Haftpflicht CH und DE | Host, COBOL, eigener Partnerstamm | 1996 | Migriert Q2 2025, Parallelbetrieb | 2026 |
+| HAPO | Pfefferminz | Bestand Haftpflicht CH und DE | Host, COBOL, eigener Partnerstamm | 1996 | Migriert 2025 (Pilotwelle Privathaftpflicht DE März, Hauptwelle Mai), Parallelbetrieb | 2026 |
 | SILAS | Pfefferminz | Schaden und Leistung beider Sparten | Java Client/Server, Workflow-Engine | 2004 | Produktiv für Altfälle; neue Schäden seit Q3 2025 in MINT | 2027 |
 | DOKU | Pfefferminz | Dokumentenarchiv | Dokumentenmanagement, OCR unvollständig | 2008 | Produktiv | 2028 |
 | PfeffMakler | Pfefferminz | Broker- und Agenturportal | Web-Portal, Batch-Anbindung | 2011 | Produktiv, API zu MINT | 2027 |
@@ -74,10 +74,11 @@ flowchart LR
 
 | Welle | Zeitraum | Umfang | Bekannte Artefakte |
 |---|---|---|---|
-| Haftpflicht | Q2 2025 | Alle HAPO-Verträge nach MINT | 214 Verträge ohne übernommenen Bausteincode (Fall Pieper); Firmennamen mit HTML-Kodierung; Policennummern im Altformat in `legacyAttributes` |
+| Haftpflicht, Pilotwelle | 3. März 2025 | Privathaftpflicht DE aus HAPO (Welle HP-2025-PILOT), damit Schaden HP DE die Triage v3 in MINT nutzen kann | 214 Verträge ohne übernommenen Bausteincode BST=01 (Fall Pieper), am 18.04.2025 nachmigriert; Mapping vor der Hauptwelle korrigiert |
+| Haftpflicht, Hauptwelle | 15. Mai 2025 | Alle übrigen HAPO-Verträge nach MINT (Welle HP-2025-Q2) | Firmennamen mit HTML-Kodierung; Policennummern im Altformat in `legacyAttributes` |
 | Leben | Q4 2025 | Alle VERA-Verträge nach MINT | Geburtsdaten-Tippfehler im Testlauf, vor Produktivsetzung korrigiert; DM-Beträge mit Rundungsdifferenzen; Bezugsrechte als Freitext |
 
-Beide Wellen sind im simulierten Migrationslog und in der Feldmapping-Tabelle dokumentiert (Welle 1 des Datensatzes).
+Alle Wellen sind im simulierten Migrationslog und in der Feldmapping-Tabelle dokumentiert (Welle 1 des Datensatzes).
 
 ## Zwei Partnerstämme
 

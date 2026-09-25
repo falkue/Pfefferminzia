@@ -10,7 +10,7 @@ Schichten: `curated` (harmonisiert, fuer Teilnehmer), `truth` (latente Wahrheit 
 |---|---|---|---|
 | curated/agentur | 12 | 11 | Vertriebsorganisationen: Exklusivagenturen, Makler, Banken, Portale, Direkt |
 | curated/antrag | 1610 | 17 | Antraege inkl. abgelehnter und zurueckgezogener; Underwriting-Entscheid, Angaben zu BMI und Rauchen |
-| curated/deckung | 2208 | 9 | Deckungen je Vertrag: Hauptdeckung, Bausteine, Zusatzversicherungen |
+| curated/deckung | 2206 | 9 | Deckungen je Vertrag: Hauptdeckung, Bausteine, Zusatzversicherungen |
 | curated/dokument | 37 | 20 |  |
 | curated/interaktion | 62 | 18 |  |
 | curated/mitarbeiter | 60 | 20 | Mitarbeitende inkl. der 14 Personas; Herkunft Pfefferminz/Minzia/neu/extern |
@@ -89,11 +89,11 @@ Deckungen je Vertrag: Hauptdeckung, Bausteine, Zusatzversicherungen
 | vertrag_id | str | VTR-00000101 | 0 |
 | deckungsart | str | HAUPTDECKUNG | 0 |
 | baustein | str | BS-AUSFALL | 1481 |
-| summe | float64 | 10000000.0 | 611 |
-| selbstbehalt | float64 | 200.0 | 1298 |
-| selbstbehalt_typ | str | fix | 1298 |
+| summe | float64 | 10000000.0 | 609 |
+| selbstbehalt | float64 | 200.0 | 1296 |
+| selbstbehalt_typ | str | fix | 1296 |
 | gueltig_von | object | 2016-03-01 | 0 |
-| gueltig_bis | object | 2021-03-24 | 1545 |
+| gueltig_bis | object | 2021-03-24 | 1427 |
 
 ### curated/dokument
 
@@ -442,10 +442,10 @@ Vertraege beider Sparten mit Status, Praemie, Kanal, Quellsystem, Migrationsdatu
 | versicherungssumme | float64 | 10000000.0 | 0 |
 | status | str | AKTIV | 0 |
 | status_seit | object | 2016-03-01 | 0 |
-| storno_datum | object | 2021-03-24 | 1009 |
-| storno_grund_code | str | K13 | 1009 |
+| storno_datum | object | 2021-03-24 | 943 |
+| storno_grund_code | str | K13 | 943 |
 | kuendigungsfrist_monate | float64 | 3.0 | 571 |
-| naechste_kuendigungsmoeglichkeit | object | 2026-03-01 | 837 |
+| naechste_kuendigungsmoeglichkeit | object | 2026-03-01 | 890 |
 | risikoklasse_uw | str | NORMAL | 0 |
 | mahnstufe_aktuell | int64 | 0 | 0 |
 | herkunft | str | pfefferminz | 0 |
@@ -519,7 +519,7 @@ Kreuzreferenz Vertraege: curated-ID zu Quell-IDs
 |---|---|---|---|
 | curated_id | str | VTR-00000101 | 0 |
 | quellsystem | str | HAPO | 0 |
-| quell_id | str | 40.000.001-3 | 0 |
+| quell_id | str | 40.233.910-0 | 0 |
 | match_methode | str | MIGRATIONSLOG | 0 |
 | match_score | float64 | 1.0 | 0 |
 | gueltig_von | object | 2016-03-01 | 0 |
@@ -578,7 +578,7 @@ Latente Wahrheit je Vertrag: Tarifpraemie, Abweichung, Kuendigung in 12 Monaten,
 | praemie_tarif_brutto | float64 | 188.79 | 0 |
 | tarifabweichung_pct | float64 | -11.01 | 0 |
 | kuendigt_in_12m | bool | False | 0 |
-| kuendigungsgrund_latent | str | K13 | 891 |
+| kuendigungsgrund_latent | str | K13 | 839 |
 | uw_entscheid | str | N | 0 |
 | uw_zuschlag_pct | float64 | 0.0 | 0 |
 | uw_bias_angewendet | bool | False | 0 |
@@ -689,6 +689,62 @@ Latente Wahrheit je Vertrag: Tarifpraemie, Abweichung, Kuendigung in 12 Monaten,
 | data/documents/S/personas/PTR-00000010/INT-00001005.eml | ; JSON Lines, UTF-8 |
 | data/documents/S/personas/PTR-00000010/INT-00001010.eml | ; JSON Lines, UTF-8 |
 | data/documents/S/personas/PTR-00000010/INT-00001012.eml | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AHB-DE-2008.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AHB-DE-2008.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AHB-DE-2013.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AHB-DE-2013.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AHB-DE-2021.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AHB-DE-2021.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AHB-DE-2025.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AHB-DE-2025.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AVB-CH-2005.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AVB-CH-2005.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AVB-CH-2013.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AVB-CH-2013.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AVB-CH-2022.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AVB-CH-2022.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AVB-CH-2025.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-HP-AVB-CH-2025.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-1985.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-1985.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-1995.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-1995.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2000.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2000.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2004.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2004.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2007.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2007.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2012.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2012.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2015.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2015.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2017.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2017.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2025.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-2025.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-MZ-2020.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-CH-MZ-2020.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-1985.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-1985.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-1995.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-1995.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2000.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2000.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2004.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2004.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2008.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2008.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2012.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2012.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2015.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2015.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2017.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2017.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2025.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-2025.pdf | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-MZ-2020.md | ; JSON Lines, UTF-8 |
+| data/documents/S/tarife/RW-LV-AVB-DE-MZ-2020.pdf | ; JSON Lines, UTF-8 |
 | data/raw/S/mint/customers.jsonl | MINT-Kunden als JSON Lines (Schema v1 bis v3); JSON Lines, UTF-8 |
 | data/raw/S/mint/policies.jsonl | MINT-Policen als JSON Lines; JSON Lines, UTF-8 |
 | data/raw/S/pvs/HAPO_PARTNER.csv | Partnerstamm Haftpflicht-Altsystem HAPO; Semikolon-CSV, ISO-8859-1, Datum DD.MM.YY |

@@ -21,7 +21,7 @@ erzeugt_am: 2026-09-03
 
 | Merkmal | Wert |
 |---|---|
-| Mitarbeiter-ID | MIT-00005 (Personalnummer: 10655) |
+| Mitarbeiter-ID | MIT-00005 (Personalnummer: 10035) |
 | Name | Martina Jost, lic. iur., Rechtsanwältin |
 | Rolle | General Counsel & Chief Compliance Officer, Mitglied der Geschäftsleitung; Schlüsselfunktion Compliance; Leiterin Geldwäscherei-Fachstelle (fachlich) |
 | Organisationseinheit | LEGAL – Legal & Compliance |

@@ -21,7 +21,7 @@ erzeugt_am: 2026-09-03
 
 | Merkmal | Wert |
 |---|---|
-| Mitarbeiter-ID | MIT-00008 (Personalnummer: 10988) |
+| Mitarbeiter-ID | MIT-00008 (Personalnummer: 10056) |
 | Name | Tobias Wenger |
 | Rolle | Senior Underwriter Betriebs- und Berufshaftpflicht CH, Kompetenzstufe U4 (Deckungssummen bis CHF 10 Mio.) |
 | Organisationseinheit | UW-HP-CH – Underwriting Haftpflicht CH (Bereich Underwriting, CUO) |

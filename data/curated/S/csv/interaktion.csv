@@ -63,7 +63,7 @@ assistent: Du hast recht, ich habe die Produkte verwechselt. Beitraege zu einer 
 [Feedback-Button: Antwort falsch. Ticket an Data & AI Office, Fehlerprotokoll LLM-2025-1103-07]",true
 INT-00000318,EMAIL,EINGEHEND,2024-03-13T07:52:00Z,,PTR-00000003,MIT-00008,VRM-00017,SCHADEN,SCH-00000318,TH-00000318,"Schadenmeldung Kaufmann + Soehne, Wasserschaden Lenzburg, dringend",,de,negativ,data/documents/S/personas/PTR-00000003/INT-00000318.eml,"Sehr geehrte Damen und Herren
 
-Im Namen unserer Kundin Schreinerei Kaufmann + Soehne GmbH (Police 40.551.207-2) melden wir einen Wasserschaden in einer Neubauwohnung in Lenzburg (Aarepark, Wohnung 4.2). Nach der Kuechenmontage vom 11.03. ist ueber Nacht Wasser aus dem Anschluss der Spuele ausgetreten. Betroffen sind die Wohnung selbst sowie zwei darunterliegende Wohnungen (Decken, Boeden, Mobiliar). Die Stockwerkeigentuemer haben eine Sanierungsfirma beauftragt; erste Schaetzung liegt bei CHF 150'000 bis 200'000.
+Im Namen unserer Kundin Schreinerei Kaufmann + Soehne GmbH (Police 40.551.207-9) melden wir einen Wasserschaden in einer Neubauwohnung in Lenzburg (Aarepark, Wohnung 4.2). Nach der Kuechenmontage vom 11.03. ist ueber Nacht Wasser aus dem Anschluss der Spuele ausgetreten. Betroffen sind die Wohnung selbst sowie zwei darunterliegende Wohnungen (Decken, Boeden, Mobiliar). Die Stockwerkeigentuemer haben eine Sanierungsfirma beauftragt; erste Schaetzung liegt bei CHF 150'000 bis 200'000.
 
 Wir bitten um umgehende Besichtigung durch einen Gutachter und um Bestaetigung der Deckung bis Freitag. Der Bauherr droht bereits mit rechtlichen Schritten gegen unsere Kundin.
 
@@ -274,16 +274,16 @@ Ich reguliere heute. Aber: Wie viele Vertraege sind noch betroffen? Und warum ko
 Aylin",true
 INT-00000807,EMAIL,INTERN,2025-04-16T14:40:00Z,,PTR-00000008,MIT-00010,,SCHADEN,SCH-00000810,TH-00000806,Re: Eskalation Fall Pieper,,de,neutral,data/documents/S/personas/PTR-00000008/INT-00000807.eml,"Hi Aylin,
 
-ich habe es gefunden. Im Migrationsmapping HP-2025-Q2 wurde der HAPO-Bausteincode BST=01 (Tierhalter) nicht auf coverages gemappt, weil in HAPO die Rasse im Freitext ZUSATZ1 steht und der Parser das Feld als Bemerkung behandelt hat. Betroffen: 214 Vertraege mit BST=01 in der Migration, davon 11 mit Schaden seit Maerz, davon 11 automatisch abgelehnt (Regel 'Tierhalter ohne Baustein' = Ablehnung).
+ich habe es gefunden. Im Migrationsmapping der Pilotwelle HP-2025-PILOT (Privathaftpflicht DE, seit 03.03. in MINT) wurde der HAPO-Bausteincode BST=01 (Tierhalter) nicht auf coverages gemappt, weil in HAPO die Rasse im Freitext ZUSATZ1 steht und der Parser das Feld als Bemerkung behandelt hat. Betroffen: 214 Vertraege mit BST=01 in der Pilotwelle, davon 11 mit Schaden seit Maerz, alle 11 automatisch abgelehnt (Pieper eingeschlossen) (Regel 'Tierhalter ohne Baustein' = Ablehnung).
 
-Zur zweiten Frage: Die Regel war als 'Deckungspruefung negativ' konfiguriert und hat den Vier-Augen-Schritt nicht ausgeloest, weil sie als Konfigurationsregel und nicht als Modellentscheidung galt. Das habe ich im Review uebersehen. Heute Nachmittag: Regel deaktiviert, die 11 Faelle an dein Team, Nachmigration der 214 Vertraege bis Freitag.
+Zur zweiten Frage: Die Regel war als 'Deckungspruefung negativ' konfiguriert und hat den Vier-Augen-Schritt nicht ausgeloest, weil sie als Konfigurationsregel und nicht als Modellentscheidung galt. Das habe ich im Review uebersehen. Heute Nachmittag: Regel deaktiviert, die 11 Faelle an dein Team, Nachmigration der 214 Vertraege bis Freitag. Das Mapping fuer die Hauptwelle am 15.05. korrigiere ich gleich mit.
 
 Jonas",true
 INT-00000808,BRIEF,AUSGEHEND,2025-04-17T00:00:00Z,,PTR-00000008,MIT-00009,,SCHADEN,SCH-00000810,TH-00000810,Ihr Schaden SCH-00000810: Regulierung und Entschuldigung,,de,,data/documents/S/personas/PTR-00000008/INT-00000808_brief.md,"Sehr geehrter Herr Pieper,
 
 Sie haben recht, und wir haben einen Fehler gemacht. Ihr Vertrag enthaelt seit dem 01.03.2019 den Baustein Tierhalterhaftpflicht. Bei der Uebernahme Ihres Vertrages in unser neues System im Maerz 2025 ist dieser Baustein nicht uebertragen worden. Unser Schadensystem hat deshalb Ihre Meldung automatisch abgelehnt. Das haette nicht passieren duerfen: Eine Ablehnung muss bei uns immer von einem Menschen geprueft werden.
 
-Wir haben den Schaden heute reguliert: EUR 1.240,00 wurden an Herrn M. ueberwiesen (Arztkosten und Hose). Ein Selbstbehalt faellt nicht an. Fuer Ihren Aufwand und die Verzoegerung ueberweisen wir Ihnen zusaetzlich EUR 100,00 auf das uns bekannte Konto.
+Wir haben den Schaden heute reguliert: EUR 1.240,00 wurden an Herrn M. ueberwiesen (Arztkosten, Schmerzensgeld und Hose). Ein Selbstbehalt faellt nicht an. Fuer Ihren Aufwand und die Verzoegerung ueberweisen wir Ihnen zusaetzlich EUR 100,00 auf das uns bekannte Konto.
 
 Ihr Vertrag ist korrigiert; der Baustein ist wieder im System sichtbar. Ich bitte Sie um Entschuldigung. Fuer Rueckfragen erreichen Sie mich direkt unter der unten stehenden Nummer.
 
@@ -302,10 +302,10 @@ INT-00000811,BRIEF,AUSGEHEND,2025-05-08T00:00:00Z,,PTR-00000008,MIT-00012,,SCHAD
 
 zu Ihrer Anfrage vom 24.04.2025 nehmen wir wie folgt Stellung:
 
-1. Vertragsstand: Der Vertrag VTR-00000801 (vormals 40.288.506-4) enthielt zum Schadenzeitpunkt den Baustein Tierhalterhaftpflicht (Nachtrag Nr. 2 vom 15.02.2019, wirksam 01.03.2019). Die Deckung bestand.
-2. Zustandekommen der Ablehnung: Bei der Migration des Vertragsbestands in unser neues Bestandssystem am 15.05.2025 wurde der Bausteincode aus dem Altsystem nicht uebernommen. Das Schadensystem prueft Deckungen gegen das neue Bestandssystem und kam deshalb zu einem falschen Ergebnis. Es handelt sich um einen Datenfehler, nicht um eine Ermessensentscheidung.
-3. Automatisierung: Die Ablehnung erfolgte automatisiert durch eine Konfigurationsregel unseres Schadensystems, ohne Ueberpruefung durch eine natuerliche Person. Das widerspricht unserer internen Kompetenzordnung, nach der ablehnende Entscheidungen stets durch Mitarbeitende zu treffen sind. Ursache war eine Fehlkonfiguration der Regel, die den vorgesehenen Vier-Augen-Schritt nicht ausloeste. Wir haben die Regel am 16.04.2025 deaktiviert, die Kompetenzordnung in Version 2.1 technisch abgesichert (Ablehnungen nur noch mit Freigabe) und alle 214 von demselben Migrationsfehler betroffenen Vertraege korrigiert. Elf weitere Faelle mit gleicher Fehlablehnung wurden von Amts wegen wiedereroeffnet und reguliert.
-4. Regulierung: Der Schaden wurde am 17.04.2025 vollstaendig reguliert (EUR 1.240,00 an den Geschaedigten), dem Beschwerdefuehrer wurde eine Kulanzzahlung von EUR 100,00 geleistet und eine schriftliche Entschuldigung uebermittelt.
+1. Vertragsstand: Der Vertrag VTR-00000801 (vormals 40.288.506-6) enthielt zum Schadenzeitpunkt den Baustein Tierhalterhaftpflicht (Nachtrag Nr. 2 vom 15.02.2019, wirksam 01.03.2019). Die Deckung bestand.
+2. Zustandekommen der Ablehnung: Bei der vorgezogenen Migration der Privathaftpflichtvertraege in unser neues Bestandssystem (Pilotwelle am 03.03.2025) wurde der Bausteincode aus dem Altsystem nicht uebernommen. Das Schadensystem prueft Deckungen gegen das neue Bestandssystem und kam deshalb zu einem falschen Ergebnis. Es handelt sich um einen Datenfehler, nicht um eine Ermessensentscheidung.
+3. Automatisierung: Die Ablehnung erfolgte automatisiert durch eine Konfigurationsregel unseres Schadensystems, ohne Ueberpruefung durch eine natuerliche Person. Das widerspricht unserer internen Kompetenzordnung, nach der ablehnende Entscheidungen stets durch Mitarbeitende zu treffen sind. Ursache war eine Fehlkonfiguration der Regel, die den vorgesehenen Vier-Augen-Schritt nicht ausloeste. Wir haben die Regel am 16.04.2025 deaktiviert, die Kompetenzordnung in Version 2.1 technisch abgesichert (Ablehnungen nur noch mit Freigabe) und alle 214 von demselben Migrationsfehler betroffenen Vertraege korrigiert. Zehn weitere Faelle mit gleicher Fehlablehnung wurden von Amts wegen wiedereroeffnet und reguliert.
+4. Regulierung: Der Schaden wurde am 17.04.2025 vollstaendig reguliert (EUR 1.240,00 an den Geschaedigten fuer Arztkosten, Schmerzensgeld und Kleidung), dem Beschwerdefuehrer wurde eine Kulanzzahlung von EUR 100,00 geleistet und eine schriftliche Entschuldigung uebermittelt.
 
 Wir bedauern den Vorfall und betrachten die Beschwerde als berechtigt.
 

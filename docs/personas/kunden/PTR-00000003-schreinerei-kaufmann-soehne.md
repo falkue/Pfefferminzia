@@ -38,7 +38,7 @@ erzeugt_am: 2026-09-03
 
 | Vertrag | Produkt | Tarifgeneration | Beginn | Prämie | Währung | Alt-ID | Bemerkung |
 |---|---|---|---|---|---|---|---|
-| VTR-00000301 | BusinessProtect (Betriebshaftpflicht CH), Deckungssumme CHF 5 Mio., Bausteine Bearbeitungsschäden, Produkthaftpflicht | HP-MODERN | 01.01.2016 | 3'840.00 p. a.; ab 01.01.2025 4'620.00 mit Selbstbehalt CHF 2'000 (Sanierung) | CHF | HAPO 40.551.207-2 | Migriert nach MINT Q2 2025; Makleranfrage Erhöhung auf CHF 10 Mio. (02/2025) mit Sublimit Bearbeitungsschäden CHF 2 Mio. offeriert |
+| VTR-00000301 | BusinessProtect (Betriebshaftpflicht CH), Deckungssumme CHF 5 Mio., Bausteine Bearbeitungsschäden, Produkthaftpflicht | HP-MODERN | 01.01.2016 | 3'840.00 p. a.; ab 01.01.2025 4'620.00 mit Selbstbehalt CHF 2'000 (Sanierung) | CHF | HAPO 40.551.207-9 | Migriert nach MINT Q2 2025; Makleranfrage Erhöhung auf CHF 10 Mio. (02/2025) mit Sublimit Bearbeitungsschäden CHF 2 Mio. offeriert |
 | VTR-00000302 | RisikoLeben Kollektiv Kader (3 versicherte Personen, je CHF 300'000) | PL-2017 | 01.07.2019 | 2'160.00 p. a. | CHF | VERA L-0192466 | VN die GmbH, Begünstigte die Familien der Kader; Migration Leben Q4 2025 |
 
 ## Ereignisgeschichte (2016–2025)

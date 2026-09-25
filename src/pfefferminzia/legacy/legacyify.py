@@ -41,6 +41,7 @@ from pfefferminzia.synth.referenz_intern import (
     PVS_ZAHLWEISE,
     PVS_ZIVILSTAND,
 )
+from pfefferminzia.synth.vertrag import migrationswelle
 
 PARTNER_FELDER = [("PARTNR", 8), ("NAME1", 30), ("NAME2", 30), ("GEBDAT", 8), ("GESCHL", 1), ("ZIVST", 1), ("ADR1", 30), ("ADR2", 30),
                   ("ADR3", 30), ("LANDKZ", 3), ("SPRACHE", 1), ("TEL", 16), ("EMAIL", 40), ("BERUF", 20), ("KDSEIT", 8), ("AENDDAT", 8),
@@ -55,6 +56,14 @@ VERA_TARIFCODE = {"PK-85": "K85", "PK-95": "K95", "PK-2000": "K00", "PK-2004": "
 VERA_PRODUKT = {"LV-RISK": "R", "LV-VORS": "K", "LV-RENTE": "N", "LV-EU": "E"}
 HAPO_GEN = {"HP-KLASSIK": "PFM-K", "HP-MODERN": "PFM-M", "MZ-DIRECT": "MZD", "PM-2025": "PM25"}
 MIGRATION_DATUM = {"HAPO": date(2025, 5, 15), "VERA": date(2025, 11, 15)}
+# Altsystem-Vertragsnummern der Persona-Vertraege, wie sie in Steckbriefen und Fallakten stehen (docs/personas/kunden)
+PERSONA_ALTNUMMER = {
+    "HAPO": {"VTR-00000101": 40233910, "VTR-00000301": 40551207, "VTR-00000401": 40612384, "VTR-00000503": 40018829,
+             "VTR-00000801": 40288506},
+    "VERA": {"VTR-00000102": 181204, "VTR-00000103": 181205, "VTR-00000104": 143377, "VTR-00000302": 192466,
+             "VTR-00000402": 207731, "VTR-00000501": 31187, "VTR-00000502": 221904, "VTR-00000601": 188402},
+}
+NACHMIGRATION_PILOT = date(2025, 4, 18)  # Vorfall VF-2025-03: Bausteincode BST=01 nachmigriert
 
 
 class Legacy:
@@ -197,7 +206,11 @@ class Legacy:
         zeilen = []
         for k, (_, r) in enumerate(v.iterrows(), start=1):
             rng = self.ctx.rng(f"legacy.{system}.vertrag", r["vertrag_id"])
-            nr = hapo_vertragsnummer(40_000_000 + k) if system == "HAPO" else vera_vertragsnummer(k)
+            alt = PERSONA_ALTNUMMER[system].get(r["vertrag_id"])
+            if system == "HAPO":
+                nr = hapo_vertragsnummer(alt if alt is not None else 40_000_000 + k)
+            else:
+                nr = vera_vertragsnummer(alt if alt is not None else k)
             migriert = pd.notna(r["migriert_am"])
             status = PVS_STATUS.get(str(r["status"]), "A")
             stornogrd = PVS_STORNOGRUND.get(str(r["status"]), "  ") if status == "S" else "  "
@@ -206,7 +219,7 @@ class Legacy:
             if migriert and (status == "A" or (pd.notna(r["storno_datum"]) and r["storno_datum"] >= date(2025, 1, 1))):
                 # DQ-25 / DQ-08: Migrationsstorno ZZ; Ereignisse nach dem Snapshot fehlen im Extrakt
                 status, stornogrd = "S", "ZZ"
-                stornodat = datum_int(MIGRATION_DATUM[system])
+                stornodat = datum_int(r["migriert_am"])
                 aenddat = stornodat
             enddat = datum_int(r["ablauf"]) if pd.notna(r["ablauf"]) else "99991231"
             vermnr = self.vermittler.loc[r["vermittler_id"]]["vermittlernummer"] if pd.notna(r["vermittler_id"]) and r["vermittler_id"] in self.vermittler.index else "00000"
@@ -241,16 +254,27 @@ class Legacy:
                            "ZAHLWS": PVS_ZAHLWEISE.get(str(r["zahlungsweise"]), "1"), "STATUS": status, "STORNOGRD": stornogrd, "STORNODAT": stornodat,
                            "LANDKZ": PVS_LANDKZ.get(str(r["markt"]), "756"), "VERMNR": vermnr, "VERMNR_ALT": vermnr_alt or "",
                            "SUMME": rappen(r["versicherungssumme"]), "ZUSATZ1": zusatz1, "ZUSATZ2": zusatz2, "AENDDAT": aenddat, "BEMERK": bem,
-                           "_vid": r["vertrag_id"], "_migriert": migriert, "_bausteine": len(bausteine) if system == "HAPO" else 0})
+                           "_vid": r["vertrag_id"], "_migriert": migriert, "_bausteine": len(bausteine) if system == "HAPO" else 0,
+                           "_migriert_am": r["migriert_am"] if migriert else None, "_hund": system == "HAPO" and "BS-TIER-HUND" in bausteine})
             self.xref_vertrag.append({"curated_id": r["vertrag_id"], "quellsystem": system, "quell_id": nr, "match_methode": "MIGRATIONSLOG" if migriert else "DIREKT",
-                                      "match_score": 1.0, "gueltig_von": r["beginn"], "gueltig_bis": MIGRATION_DATUM[system] if migriert else r["storno_datum"],
+                                      "match_score": 1.0, "gueltig_von": r["beginn"], "gueltig_bis": r["migriert_am"] if migriert else r["storno_datum"],
                                       "bemerkung": "Migrationsstorno ZZ im Altsystem" if stornogrd == "ZZ" else ""})
         return zeilen
 
     # -- Migrationslog ---------------------------------------------------------------------
     def migrationslog(self, system: str, pz: list[dict], vz: list[dict]) -> None:
-        welle = "HP-2025-Q2" if system == "HAPO" else "LV-2025-Q4"
+        hauptwelle = "HP-2025-Q2" if system == "HAPO" else "LV-2025-Q4"
+        # Partner wandern mit ihrem fruehesten migrierten Vertrag (Pilotwelle HP-PRIV DE vor der Hauptwelle)
+        partner_datum: dict[str, date] = {}
+        vn_von = self.vertrag.set_index("vertrag_id")["versicherungsnehmer_id"]
+        for z in vz:
+            if z["_migriert"]:
+                pid = vn_von.get(z["_vid"])
+                d = pd.Timestamp(z["_migriert_am"]).date()
+                partner_datum[pid] = min(partner_datum.get(pid, d), d)
         for z in pz:
+            zeitpunkt = min(partner_datum.get(z["_pid"], MIGRATION_DATUM[system]), MIGRATION_DATUM[system])
+            welle = migrationswelle(zeitpunkt) or hauptwelle
             rng = self.ctx.rng(f"migration.{system}.partner", z["PARTNR"])
             erg, text = "OK", "Partner uebernommen"
             if z["GEBDAT"] in ("00000000", "19000101"):
@@ -260,20 +284,26 @@ class Legacy:
             elif rng.random() < 0.01:
                 erg, text = "ERROR", "Adresse nicht parsebar, Partner ohne Adresse angelegt"
             self.log.append({"welle": welle, "objekttyp": "PARTNER", "quellsystem": system, "quell_id": z["PARTNR"], "ziel_id": z["_pid"],
-                             "zeitpunkt": MIGRATION_DATUM[system], "ergebnis": erg, "meldung": text})
+                             "zeitpunkt": zeitpunkt, "ergebnis": erg, "meldung": text})
         for z in vz:
             if not z["_migriert"]:
                 continue
             rng = self.ctx.rng(f"migration.{system}.vertrag", z["VERTRNR"])
+            zeitpunkt = pd.Timestamp(z["_migriert_am"]).date()
+            welle = migrationswelle(zeitpunkt) or hauptwelle
             erg, text = "OK", "Vertrag uebernommen"
-            if system == "HAPO" and z["_bausteine"] > 0 and rng.random() < 0.03:
+            if welle == "HP-2025-PILOT" and z["_hund"]:
+                # Vorfall VF-2025-03 (Fall Pieper): Tierhalterbaustein in der Pilotwelle nicht uebernommen, am 18.04.2025 nachmigriert
+                erg = "WARN"
+                text = f"Bausteincode BST=01 (Tierhalter) nicht ins Zielschema uebernommen, Feld leer; nachmigriert {NACHMIGRATION_PILOT:%d.%m.%Y} (VF-2025-03)"
+            elif system == "HAPO" and z["_bausteine"] > 0 and rng.random() < 0.03:
                 erg, text = "WARN", "Bausteincode BST nicht im Zielschema, Feld leer uebernommen"
             elif z["STORNOGRD"] == "ZZ" and rng.random() < 0.005:
                 erg, text = "ERROR", "Migrationsstorno ohne Zielvertrag (manuelle Nacharbeit)"
             elif rng.random() < 0.02:
                 erg, text = "WARN", "Praemie mit Rundungsdifferenz (Rappen/Cent) uebernommen"
             self.log.append({"welle": welle, "objekttyp": "VERTRAG", "quellsystem": system, "quell_id": z["VERTRNR"], "ziel_id": z["_vid"],
-                             "zeitpunkt": MIGRATION_DATUM[system], "ergebnis": erg, "meldung": text})
+                             "zeitpunkt": zeitpunkt, "ergebnis": erg, "meldung": text})
 
     # -- Dateien -------------------------------------------------------------------------------
     def schreibe(self, system: str, art: str, felder: list[tuple[str, int]], zeilen: list[dict]) -> list:

@@ -21,7 +21,7 @@ erzeugt_am: 2026-09-03
 
 | Merkmal | Wert |
 |---|---|
-| Mitarbeiter-ID | MIT-00011 (Personalnummer: 10744) |
+| Mitarbeiter-ID | MIT-00011 (Personalnummer: 10077) |
 | Name | Isabelle Roth-Fankhauser |
 | Rolle | Leiterin Agenturvertrieb CH (96 Ausschliesslichkeitsagenturen), Mitglied der erweiterten Geschäftsleitung |
 | Organisationseinheit | VT-AG-CH – Agenturvertrieb CH (Bereich Vertrieb, CSO) |

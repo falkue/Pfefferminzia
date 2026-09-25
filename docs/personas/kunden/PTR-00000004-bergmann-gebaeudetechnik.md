@@ -38,7 +38,7 @@ erzeugt_am: 2026-09-03
 
 | Vertrag | Produkt | Tarifgeneration | Beginn | Prämie | Währung | Alt-ID | Bemerkung |
 |---|---|---|---|---|---|---|---|
-| VTR-00000401 | BusinessProtect (Betriebshaftpflicht DE), Deckungssumme EUR 5 Mio., Bausteine Umwelt-Basis, Tätigkeitsschäden EUR 500'000, Schlüsselverlust | HP-MODERN | 01.01.2014 | 4'980.00 p. a. (2014); 6'331.42 p. a. ab 01.01.2025 nach Nachtrag Photovoltaik | EUR | HAPO 40.612.384-1 | Beratungsprotokoll DE zum Nachtrag 2025 vorhanden; Umsatzmeldung jährlich |
+| VTR-00000401 | BusinessProtect (Betriebshaftpflicht DE), Deckungssumme EUR 5 Mio., Bausteine Umwelt-Basis, Tätigkeitsschäden EUR 500'000, Schlüsselverlust | HP-MODERN | 01.01.2014 | 4'980.00 p. a. (2014); 6'331.42 p. a. ab 01.01.2025 nach Nachtrag Photovoltaik | EUR | HAPO 40.612.384-4 | Beratungsprotokoll DE zum Nachtrag 2025 vorhanden; Umsatzmeldung jährlich |
 | VTR-00000402 | RentePlus DE, aufgeschobene Rente, Beitrag EUR 400 monatlich, Rentenbeginn 2042 | PL-2017 | 01.03.2018 | 4'800.00 p. a. | EUR | VERA L-0207731 | Privat auf Kerstin Bergmann (PTR-00000014), Beratung über denselben Makler; Migration Leben Q4 2025 |
 
 ## Ereignisgeschichte (2016–2025)

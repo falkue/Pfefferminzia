@@ -21,7 +21,7 @@ erzeugt_am: 2026-09-03
 
 | Merkmal | Wert |
 |---|---|
-| Mitarbeiter-ID | MIT-00012 (Personalnummer: 11688) |
+| Mitarbeiter-ID | MIT-00012 (Personalnummer: 10084) |
 | Name | Miriam Steinbrecher |
 | Rolle | Compliance Officer DE (Niederlassung und Leben-Tochter), seit 2025 zusätzlich AI Compliance Officer der Gruppe; Leiterin Beschwerdestelle DE |
 | Organisationseinheit | COMP-DE – Compliance DE (Bereich Legal & Compliance) |

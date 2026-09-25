@@ -21,7 +21,7 @@ erzeugt_am: 2026-09-03
 
 | Merkmal | Wert |
 |---|---|
-| Mitarbeiter-ID | MIT-00007 (Personalnummer: 10119) |
+| Mitarbeiter-ID | MIT-00007 (Personalnummer: 10049) |
 | Name | Ruth Amrein |
 | Rolle | Leiterin Leistungsprüfung Leben CH (Todesfall, Erwerbsunfähigkeit, Erlebensfall, Kulanz) |
 | Organisationseinheit | SL-LV-CH – Leistungsprüfung Leben CH (Bereich Schaden/Leistung, COO) |

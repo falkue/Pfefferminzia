@@ -1,6 +1,6 @@
 ---
 dokument_id: DOK-00000403
-titel: "Nachtrag Nr. 3 zum Versicherungsschein 40.612.384-1, wirksam 01.01.2025"
+titel: "Nachtrag Nr. 3 zum Versicherungsschein 40.612.384-4, wirksam 01.01.2025"
 typ: kunde
 dokument_typ: NACHTRAG
 sparte: GRUPPE
@@ -19,7 +19,7 @@ quelle_system: DOKU
 vertraulichkeit: vertraulich
 ---
 
-# Nachtrag Nr. 3 zum Versicherungsschein 40.612.384-1, wirksam 01.01.2025
+# Nachtrag Nr. 3 zum Versicherungsschein 40.612.384-4, wirksam 01.01.2025
 
 Aenderungsgrund: Aktualisierung Betriebsbeschreibung, Aufnahme Photovoltaik-Montage, Einschluss Heissarbeiten.
 

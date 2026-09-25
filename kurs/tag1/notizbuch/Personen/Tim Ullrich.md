@@ -8,7 +8,7 @@ tags: [person, extern]
 # Tim Ullrich
 
 - **Rolle:** TL Schadeneingang Haftpflicht DE (Peer)
-- **seit:** 03/2024
+- **seit:** TL seit 03/2024 (im Haus seit 03/2018)
 - **Kontakt:** tim.ullrich@pfefferminzia.example
 
 ## Themen

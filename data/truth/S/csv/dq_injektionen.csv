@@ -889,7 +889,7 @@ VERA,PARTNER,10000420,PARTNR,DQ-02,10000298,10000420
 VERA,PARTNER,10000421,PARTNR,DQ-02,10000312,10000421
 VERA,PARTNER,10000422,PARTNR,DQ-02,10000320,10000422
 VERA,PARTNER,10000423,PARTNR,DQ-02,10000382,10000423
-VERA,VERTRAG,L-0000002,VERMNR,DQ-11,57109,52547
+VERA,VERTRAG,L-0181205,VERMNR,DQ-11,57109,52547
 VERA,VERTRAG,L-0000026,VERMNR,DQ-11,29923,10517
 VERA,VERTRAG,L-0000034,VERMNR,DQ-11,29923,10517
 VERA,VERTRAG,L-0000045,VERMNR,DQ-11,56739,33967
@@ -961,7 +961,7 @@ MINT,customers,94a55c23-83db-4643-b986-5f3527fc3871,createdAt,DQ-20,2025-05-15T1
 MINT,customers,a74f75bd-88e5-4a31-be38-6b1fe4c96e78,person.birthDate,DQ-24,2001-04-02,1900-01-01
 MINT,customers,b1b9374a-300d-4f9d-bd6a-5964b5967dc0,occupation,DQ-21,Verkäuferin / Verkäufer,Verkäuferin
 MINT,customers,08920f0b-7575-4687-813b-bc11d4039ab9,createdAt,DQ-20,2025-05-15T10:25:21Z,2025-05-15T10:25:21
-MINT,customers,140292bf-f9c7-46c7-9bd5-db5892733edc,createdAt,DQ-20,2025-05-15T15:29:44Z,2025-05-15T15:29:44
+MINT,customers,140292bf-f9c7-46c7-9bd5-db5892733edc,createdAt,DQ-20,2025-03-03T15:29:44Z,2025-03-03T15:29:44
 MINT,customers,2bf9b4ef-4835-4b80-83d1-800a30e8af7e,occupation,DQ-21,Verkäuferin / Verkäufer,Verkäuferin
 MINT,customers,aabdb5b9-fe43-4a6f-80b8-ae1ec48a3655,occupation,DQ-21,Studentin / Student,Studentin ETH
 MINT,customers,fcef0706-3ba0-4a07-bbcb-a557bb63b75f,occupation,DQ-21,Kaufmännische Angestellte / Kaufmännischer Angestellter,KV
@@ -971,16 +971,16 @@ MINT,customers,82c2ace5-c014-4f43-ad17-ae51ecae4b21,occupation,DQ-21,Kaufmännis
 MINT,customers,09af0701-cc7d-4b8b-ad01-b0ecfba186f4,person.birthDate,DQ-24,1980-04-28,1900-01-01
 MINT,customers,2b7dcdbe-6935-46de-8c54-c46371e6af68,createdAt,DQ-20,2022-01-01T09:36:36Z,2022-01-01T09:36:36
 MINT,customers,68107a5f-8151-41d8-8c12-a3e1381cce34,address.city,DQ-13,Schaffhausen,Shaffhausen
-MINT,customers,bb057253-5820-4e8d-a90e-88669ab8b90c,createdAt,DQ-20,2025-05-15T17:27:16Z,2025-05-15T17:27:16
+MINT,customers,bb057253-5820-4e8d-a90e-88669ab8b90c,createdAt,DQ-20,2025-03-03T17:27:16Z,2025-03-03T17:27:16
 MINT,customers,3f954697-ca20-4ba2-be59-5f244515aa30,person.birthDate,DQ-24,1988-01-16,1900-01-01
 MINT,customers,72cd9506-5bae-4154-afef-99f163269b69,occupation,DQ-21,Rentnerin / Rentner,pensioniert
 MINT,customers,72cd9506-5bae-4154-afef-99f163269b69,createdAt,DQ-20,2022-07-01T15:57:59Z,2022-07-01T15:57:59
-MINT,customers,49d53845-d663-4adc-afc4-ac2e52b0636e,createdAt,DQ-20,2025-05-15T07:26:05Z,2025-05-15T07:26:05
+MINT,customers,49d53845-d663-4adc-afc4-ac2e52b0636e,createdAt,DQ-20,2025-03-03T07:26:05Z,2025-03-03T07:26:05
 MINT,customers,93332343-4ca8-4680-a926-d13381add703,occupation,DQ-21,Kaufmännische Angestellte / Kaufmännischer Angestellter,Sachbearbeiterin
 MINT,customers,4426b5b7-11f0-4097-9a0d-f40dcbeccb2f,occupation,DQ-21,Ingenieurin / Ingenieur,Ing.
 MINT,customers,ba75b395-cec1-4f21-bd9a-240d4fc9edb1,occupation,DQ-21,Lehrerin / Lehrer,Lehrerin Primar
 MINT,customers,00947de3-d6b7-4d19-965f-97e68277f3bf,createdAt,DQ-20,2025-05-15T09:54:34Z,2025-05-15T09:54:34
-MINT,customers,a66c5e88-d903-47aa-9908-440e4079a3c4,createdAt,DQ-20,2025-05-15T14:10:20Z,2025-05-15T14:10:20
+MINT,customers,a66c5e88-d903-47aa-9908-440e4079a3c4,createdAt,DQ-20,2025-03-03T14:10:20Z,2025-03-03T14:10:20
 MINT,customers,0e535a89-b180-4f89-b881-cc36e7068251,createdAt,DQ-20,2025-02-01T07:45:52Z,2025-02-01T07:45:52
 MINT,customers,ed9b7722-46f7-4687-8037-0b4171e61549,occupation,DQ-21,Rentnerin / Rentner,AHV
 MINT,customers,30139a80-e85d-41ac-9d18-81ea9e34c1f5,occupation,DQ-21,Ingenieurin / Ingenieur,Engineer
@@ -1004,7 +1004,7 @@ MINT,customers,02e9b772-8911-4189-94c3-7b63673c3237,email,DQ-18,,kunde.2@post.ex
 MINT,customers,db32d2c4-f4c3-454e-b9db-425e4f006e32,createdAt,DQ-20,2025-05-15T14:34:22Z,2025-05-15T14:34:22
 MINT,customers,1678fbb8-3591-4b33-842e-cd90647e56fb,occupation,DQ-21,Informatikerin / Informatiker,🧑‍💻
 MINT,customers,e84d8420-76cf-4a19-8888-9dfa10642f42,createdAt,DQ-20,2025-05-15T08:40:44Z,2025-05-15T08:40:44
-MINT,customers,bf68859e-8755-41d1-a8ab-786b79f5f713,createdAt,DQ-20,2025-05-15T14:04:36Z,2025-05-15T14:04:36
+MINT,customers,bf68859e-8755-41d1-a8ab-786b79f5f713,createdAt,DQ-20,2025-03-03T14:04:36Z,2025-03-03T14:04:36
 MINT,customers,98b035b0-9e81-48f0-a083-380bc8c82732,occupation,DQ-21,Studentin / Student,Studi
 MINT,customers,16a149c2-a085-4302-bc58-62c3caf7c6aa,createdAt,DQ-20,2025-04-01T12:40:52Z,2025-04-01T12:40:52
 MINT,customers,cee8970f-74e0-4512-8d37-de9d559cb82e,occupation,DQ-21,Rentnerin / Rentner,Ruhestand
@@ -1067,7 +1067,7 @@ MINT,customers,fa881f6e-e90c-4ae6-8d8b-b0a0dbc57f7c,createdAt,DQ-20,2025-05-15T1
 MINT,customers,940ae6e8-58f4-4356-a5a6-b0e5b8a1486f,createdAt,DQ-20,2025-05-15T19:17:54Z,2025-05-15T19:17:54
 MINT,customers,16007ede-1583-473b-ab46-e87ebd9428d7,occupation,DQ-21,Studentin / Student,Student
 MINT,customers,779039c8-748a-486c-952c-cd5324c2ee6b,occupation,DQ-21,Studentin / Student,studiere noch
-MINT,customers,96cbc4ed-436b-414d-adbf-0b643312b736,createdAt,DQ-20,2025-05-15T08:33:54Z,2025-05-15T08:33:54
+MINT,customers,96cbc4ed-436b-414d-adbf-0b643312b736,createdAt,DQ-20,2025-03-03T08:33:54Z,2025-03-03T08:33:54
 MINT,customers,ae1cf2d5-9489-48ec-9c4a-17d4d65810f5,person.birthDate,DQ-24,2005-07-21,1900-01-01
 MINT,customers,a6592640-18b8-4f20-90ef-6a4aabfa949a,occupation,DQ-21,Rentnerin / Rentner,Ruhestand
 MINT,customers,a28836d5-63d5-4f39-bb6e-6a3e3d9f897b,occupation,DQ-21,Lehrerin / Lehrer,Lehrer
@@ -1109,7 +1109,7 @@ MINT,customers,65ce2899-e267-4ebf-93c2-ef0e02d360ff,occupation,DQ-21,Studentin /
 MINT,customers,d23f0582-f968-4932-af0c-0140cc3a66bd,createdAt,DQ-20,2005-11-01T07:14:52Z,2005-11-01T07:14:52
 MINT,customers,c1473713-248c-4fa3-9783-4ba4e596c178,occupation,DQ-21,Rentnerin / Rentner,pensioniert
 MINT,customers,d1fa8429-56c3-4763-86c4-3281fd1e27ae,createdAt,DQ-20,2025-05-15T19:16:51Z,2025-05-15T19:16:51
-MINT,customers,5377aa2f-144c-4942-b9c1-4a9e05c31d47,createdAt,DQ-20,2025-05-15T12:59:07Z,2025-05-15T12:59:07
+MINT,customers,5377aa2f-144c-4942-b9c1-4a9e05c31d47,createdAt,DQ-20,2025-03-03T12:59:07Z,2025-03-03T12:59:07
 MINT,customers,82443875-9e73-4167-9963-685f4460af09,occupation,DQ-21,Kaufmännische Angestellte / Kaufmännischer Angestellter,KV
 MINT,customers,7fdc1180-c147-48d6-a1d6-6828cf67ea52,createdAt,DQ-20,2025-05-15T18:22:21Z,2025-05-15T18:22:21
 MINT,customers,a0ce72a4-23c9-4547-be30-26a909691d13,createdAt,DQ-20,2025-01-01T19:28:38Z,2025-01-01T19:28:38

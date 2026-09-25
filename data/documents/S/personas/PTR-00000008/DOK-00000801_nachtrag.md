@@ -1,6 +1,6 @@
 ---
 dokument_id: DOK-00000801
-titel: "Nachtrag Nr. 2 zum Versicherungsschein 40.288.506-4, wirksam 01.03.2019"
+titel: "Nachtrag Nr. 2 zum Versicherungsschein 40.288.506-6, wirksam 01.03.2019"
 typ: kunde
 dokument_typ: NACHTRAG
 sparte: GRUPPE
@@ -19,14 +19,14 @@ quelle_system: DOKU
 vertraulichkeit: vertraulich
 ---
 
-# Nachtrag Nr. 2 zum Versicherungsschein 40.288.506-4, wirksam 01.03.2019
+# Nachtrag Nr. 2 zum Versicherungsschein 40.288.506-6, wirksam 01.03.2019
 
 Aenderungsgrund: Einschluss Baustein Tierhalterhaftpflicht (Hund)
 
                           bisher            neu
 Baustein Tierhalter       nicht versichert  eingeschlossen, 1 Hund (Schaeferhund-Mischling 'Rex', kein Listenhund)
 Deckungssumme Tierhalter  -                 innerhalb Deckungssumme EUR 5 Mio.
-Jahresbeitrag brutto      EUR 74,90         EUR 131,40 (Zuschlag Hund EUR 55,00 zzgl. Versicherungsteuer)
+Jahresbeitrag brutto      EUR 74,90         EUR 131,40 (Zuschlag Hund EUR 56,50 inkl. Versicherungsteuer)
 
 Hinweis: In Sachsen besteht keine allgemeine Hundehalterhaftpflicht-Pflicht (vereinfachte Darstellung). Die uebrigen Bestimmungen bleiben unveraendert. Bedingungsgeneration HP-MODERN.
 

@@ -21,7 +21,7 @@ erzeugt_am: 2026-09-03
 
 | Merkmal | Wert |
 |---|---|
-| Mitarbeiter-ID | MIT-00006 (Personalnummer: 11274) |
+| Mitarbeiter-ID | MIT-00006 (Personalnummer: 10042) |
 | Name | Sven Lindqvist-Brandt |
 | Rolle | Datenschutzbeauftragter Gruppe (Art. 37 DSGVO für die DE-Gesellschaften, Datenschutzberater nach Art. 10 DSG für die CH-Gesellschaften) |
 | Organisationseinheit | DSB – Datenschutz |

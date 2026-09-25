@@ -40,7 +40,7 @@ erzeugt_am: 2026-09-03
 |---|---|---|---|---|---|---|---|
 | VTR-00000501 | Pfefferminz Kapital (gemischte Lebensversicherung 3b), Erlebensfallsumme CHF 120'000, Ablauf 09.06.2019 (Alter 65), Bezugsrecht Todesfall: Ehemann, ersatzweise Kinder | PK-95 | 01.07.1995 | 4'236.00 p. a. bis Ablauf | CHF | VERA L-0031187 | **Ablauf 2019: Auszahlung CHF 168'420 inkl. Überschüssen**; Ehemann verstarb vier Monate vor Ablauf; Bezugsrechtsprüfung (Stolperstein S01) |
 | VTR-00000502 | RentePlus CH, Leibrente aus Einmalprämie CHF 150'000, Rentengarantie 10 Jahre, Rentenbeginn 01.09.2019 | PL-2017 | 01.09.2019 | Einmalprämie 150'000.00, Stempelabgabe 2.5 Prozent = 3'750.00 | CHF | VERA L-0221904 | Monatliche Rente CHF 512.50 (garantiert) plus Überschussrente; Umwandlung aus Ablaufkapital |
-| VTR-00000503 | PrivatPlus Familie, Deckungssumme CHF 5 Mio., Baustein Tierhalter (Hund) | HP-KLASSIK | 01.01.2001 | 118.65 p. a. (eingefrorene Altprämie) | CHF | HAPO 40.018.829-3 | Vertrag lautet weiterhin auf beide Ehegatten (nie bereinigt); Prämie weicht vom Tarif ab (Bestandsschutz) |
+| VTR-00000503 | PrivatPlus Familie, Deckungssumme CHF 5 Mio., Baustein Tierhalter (Hund) | HP-KLASSIK | 01.01.2001 | 118.65 p. a. (eingefrorene Altprämie) | CHF | HAPO 40.018.829-6 | Vertrag lautet weiterhin auf beide Ehegatten (nie bereinigt); Prämie weicht vom Tarif ab (Bestandsschutz) |
 
 ## Ereignisgeschichte (2016–2025)
 

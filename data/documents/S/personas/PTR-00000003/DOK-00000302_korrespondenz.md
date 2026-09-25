@@ -23,7 +23,7 @@ vertraulichkeit: vertraulich
 
 Sehr geehrte Damen und Herren
 
-Nach dem Grossschaden vom 12.03.2024 (Gesamtaufwand voraussichtlich CHF 172'400) haben wir den Vertrag 40.551.207-2 geprueft. Die Schadenquote der letzten drei Jahre liegt bei 810 Prozent. Wir fuehren den Vertrag weiter, passen ihn aber per Hauptfaelligkeit 01.01.2025 wie folgt an:
+Nach dem Grossschaden vom 12.03.2024 (Gesamtaufwand voraussichtlich CHF 172'400) haben wir den Vertrag 40.551.207-9 geprueft. Die Schadenquote der letzten drei Jahre liegt bei 810 Prozent. Wir fuehren den Vertrag weiter, passen ihn aber per Hauptfaelligkeit 01.01.2025 wie folgt an:
 
 - Jahrespraemie neu CHF 4'620.00 (bisher CHF 3'840.00), das entspricht einem Zuschlag von 20 Prozent gemaess Tarifhandbuch Kapitel 3 (Schadenquote ueber 80 Prozent).
 - Selbstbehalt fuer Bearbeitungs- und Obhutsschaeden neu CHF 2'000 je Ereignis (bisher CHF 500).

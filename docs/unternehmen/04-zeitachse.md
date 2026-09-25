@@ -53,8 +53,8 @@ Diese Tabelle ist für alle Dokumente, Daten und Storylines verbindlich (Entsche
 | 2024 | Konstantin Reber wird CRO | Personas |
 | 31. Dezember 2024 | Snapshot der Altsysteme für die Migration | Daten |
 | **1. Januar 2025** | **Closing, Legal Day 1, neue Marke Pfefferminzia**; CDAO tritt in die Geschäftsleitung ein; Technology & AI Committee im Verwaltungsrat; Bedingungsgeneration PM-2025 und Tarifgeneration PZ-2025 mit Annahmerichtlinie ARL-2025 | Merger, Produkte |
-| Q1 2025 | Fall Pieper: automatisierte Fehlablehnung nach Migrationsartefakt (März) | Storyline |
-| Q2 2025 | Migrationswelle Haftpflicht von HAPO nach MINT; Root-Cause-Analyse Pieper, Kompetenzordnung Version 2.1 | IT, Governance |
+| Q1 2025 | Pilotwelle Migration: Privathaftpflicht DE von HAPO nach MINT (3. März); Fall Pieper: automatisierte Fehlablehnung nach Migrationsartefakt (24. März) | IT, Storyline |
+| Q2 2025 | Hauptwelle Migration Haftpflicht von HAPO nach MINT (15. Mai); Root-Cause-Analyse Pieper, Kompetenzordnung Version 2.1 | IT, Governance |
 | Juni 2025 | Testdaten-Vorfall im Data & AI Office; Datenschutzbeauftragter trennt Produktivdaten für drei Wochen | Storyline |
 | Q3 2025 | Neue Schäden werden in MINT erfasst; FINMA-Rückfrage zur KI-Governance; Kulturumfrage | Governance |
 | Q4 2025 | Migrationswelle Leben von VERA nach MINT; Fairness-Prüfung Betrugsmodell; Strategie 2030 verabschiedet | IT, Governance |

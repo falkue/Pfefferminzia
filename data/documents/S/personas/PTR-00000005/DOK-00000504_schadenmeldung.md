@@ -27,7 +27,7 @@ Sehr geehrte Damen und Herren der Pfefferminz Versicherung
 
 Am 30. August hat mein Hund Rex (Mischling, 9 Jahre) unseren Nachbarn Herrn K. beim Gartenzaun in die rechte Hand gebissen. Herr K. wollte ihn streicheln, Rex hat sich erschrocken. Herr K. war auf der Notfallstation im Buergerspital, die Wunde wurde gereinigt und geklammert. Ich lege die Arztrechnung ueber Fr. 640.- bei (Beilage 1) und bitte Sie, den Betrag an Herrn K. zu ueberweisen. Seine Kontoangaben finden Sie auf Beilage 2.
 
-Rex ist bei Ihnen in meiner Haftpflichtversicherung Nr. 40.018.829-3 mitversichert, wie mir Frau A. von der Agentur bestaetigt hat.
+Rex ist bei Ihnen in meiner Haftpflichtversicherung Nr. 40.018.829-6 mitversichert, wie mir Frau A. von der Agentur bestaetigt hat.
 
 Mit freundlichen Gruessen
 E. Vogt-Schnyder

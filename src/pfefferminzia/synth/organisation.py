@@ -95,6 +95,12 @@ def mitarbeiter(ctx: RunContext, orgs: pd.DataFrame) -> pd.DataFrame:
         person = ns.person(rng, geschlecht, land, geburtsjahr, "de")
         praefix = next((k for k in rollen if str(einheit["kuerzel"]).startswith(k)), None)
         rolle = rollen.get(praefix, ("Sachbearbeiter/in", "Fachspezialist/in"))[0 if rng.random() < 0.8 else 1]
+        if any(t in rolle for t in ("Teamleiter", "Regionalleiter", "Senior")):
+            # Fuehrungs- und Senior-Rollen: nicht juenger als 30, im Stammhaus mit einigen Jahren Erfahrung
+            if geburtsjahr > 1995:
+                geburtsjahr -= 10
+            if herk == "pfefferminz" and eintritt_jahr > 2021:
+                eintritt_jahr = max(eintritt_jahr - 6, geburtsjahr + 20)
         austritt = None
         if rng.random() < 0.06:  # Abgaenge nach dem Merger
             austritt = date(2025, int(rng.integers(2, 13)), 1)

@@ -8,14 +8,15 @@ tags: [projekt, migration]
 # Migration Haftpflicht MINT
 
 ## Eckdaten
-- Stichtag **15.05.2025**: Haftpflicht HAPO → MINT (Bestand + Triage)
+- Pilotwelle **03.03.2025**: Privathaftpflicht DE (unsere Gruppe Privat) vorab HAPO → MINT (Bestand + Triage)
+- Hauptwelle **15.05.2025**: übrige Haftpflicht HAPO → MINT
 - Altfälle vor Migration bleiben in SILAS bis Abschluss
 - HAPO-Abschaltung 2026 geplant → Ziel [[Katrin Seidel]]: alle SILAS-Altfälle mit HAPO-Bezug bis **31.03.2026** in MINT
 - Team seit Merger ca. +20 % Fälle, 28 Köpfe
 
 ## Nacharbeit (Migrationslog WARN)
 - Bausteine + Deckungssummen – laufend, Tickets über IT-DE
-- Mappingfehler Bausteincode BST=01 (Mapping HP-2025-Q2) → s. [[Beschwerdefall Pieper]]
+- Mappingfehler Bausteincode BST=01 (Pilotwelle HP-2025-PILOT) → s. [[Beschwerdefall Pieper]]
 - «&»-Firmennamen in Briefen («&amp;»), Betriebs-KU, Name mit & – Gruppe Betrieb, Sabine (Sept.)
 - Nachmigration: 3 Ausreißer ([[Lukas Maier]]) – erledigt 22.09. ✔
 - zwei befristete Aushilfen Migrationsnacharbeit bis 31.12.25 → [[Budget 2026]]
