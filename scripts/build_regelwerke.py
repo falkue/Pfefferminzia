@@ -85,11 +85,20 @@ def arl_2025() -> str:
     z = []
     for _, d in dx.sort_values(["icd10_kapitel", "diagnose_code"]).iterrows():
         tod = d["uw_wirkung_tod"] + (f" +{int(d['zuschlag_tod_pct'])} %" if pd.notna(d["zuschlag_tod_pct"]) and d["zuschlag_tod_pct"] > 0 else "")
+        if d["icd10_gruppe"] == "I10":
+            tod += " (Summe über 750'000: Tabelle 6.1)"
         eu = d["uw_wirkung_eu_bu"] + (f" +{int(d['zuschlag_eu_bu_pct'])} %" if pd.notna(d["zuschlag_eu_bu_pct"]) and d["zuschlag_eu_bu_pct"] > 0 else "")
         z.append([d["icd10_gruppe"], d["bezeichnung_de"], tod, eu, int(d["zurueckstellung_monate"]) if pd.notna(d["zurueckstellung_monate"]) and d["zurueckstellung_monate"] > 0 else "",
                   d["nachweis"]])
     t.append("## § 6 Vorerkrankungen\n\nBewertung auf Ebene der ICD-10-Gruppen. Zuschläge in Prozent der Risikoprämie, Zurückstellung in Monaten ab Therapieende. "
-             "Bei mehreren Diagnosen werden Prozentzuschläge addiert (§ 8).\n\n" + tabelle(z, ["ICD-10", "Diagnose", "Todesfall", "EU/BU", "Zurückstellung", "Nachweis"]) + "\n")
+             "Bei mehreren Diagnosen werden Prozentzuschläge addiert (§ 8).\n\n" + tabelle(z, ["ICD-10", "Diagnose", "Todesfall", "EU/BU", "Zurückstellung", "Nachweis"]) +
+             "\n\n### Tabelle 6.1 Herz-Kreislauf: Hypertonie (I10) nach Summe und Behandlungsdauer\n\nGilt für den Todesfall und geht der Zeile I10 oben vor; "
+             "EU/BU nach der Tabelle oben. Innerhalb einer Spanne entscheidet die Risikoprüfung nach Blutdruckwerten, Blutfetten und Familienanamnese und "
+             "begründet die Wahl in der Entscheidungsvorlage.\n\n" +
+             tabelle([["medikamentös eingestellt, RR < 140/90, Behandlungsbeginn vor 5 Jahren oder länger", "NORMAL", "ZUSCHLAG +25 %"],
+                      ["medikamentös eingestellt, RR < 140/90, Behandlungsbeginn vor weniger als 5 Jahren", "NORMAL", "ZUSCHLAG +25 % bis +50 %"],
+                      ["unbehandelt oder RR ab 160/100", "ZUSCHLAG +50 % bis +100 %", "ZUSCHLAG +50 % bis +100 %"]],
+                     ["Befund", "Todesfallsumme bis 750'000", "Todesfallsumme über 750'000"]) + "\n")
     z = [[f["risiko"].replace("_", " "), f["tod"], str(f["eu_bu"]).replace("_", " ")] for f in a["freizeitrisiken"]]
     t.append("## § 7 Freizeitrisiken\n\nZuschlag in Promille der Versicherungssumme je Jahr auf den Todesfall, oder Ausschluss.\n\n" + tabelle(z, ["Risiko", "Todesfall ‰", "EU/BU"]) + "\n")
     k = a["kombination"]

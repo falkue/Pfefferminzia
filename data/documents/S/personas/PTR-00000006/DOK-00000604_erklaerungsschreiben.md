@@ -22,10 +22,10 @@ vertraulichkeit: vertraulich
 # Erlaeuterung der Annahmeentscheidung und Auskunft nach Art. 15 DSGVO
 
 1. Entscheidungsweg
-Ihr Antrag vom 10.03.2025 wurde am 12.03.2025 durch unser Regelwerk (MINT Underwriting-Engine v2, Modellinventar MI-03) vorgeprueft. Ergebnis der Vorpruefung: Risikoklasse 3, Weiterleitung an manuelle Pruefung, weil die Versicherungssumme ueber der Automatikgrenze von EUR 400.000 liegt und ein Befund vorlag. Die Entscheidung trafen am 28.05.2025 Frau S. Lehmann (Senior-Risikopruefung) und Dr. med. K. Weber (Gesellschaftsarzt). Gemaess unserer Kompetenzordnung werden Zuschlaege, Ausschluesse und Ablehnungen nie automatisiert entschieden.
+Ihr Antrag vom 10.03.2025 wurde am 12.03.2025 durch unser Regelwerk (MINT Underwriting-Engine v2, Modellinventar MI-03) vorgeprueft. Ergebnis der Vorpruefung: Risikoklasse 2, Weiterleitung an manuelle Pruefung, weil die Versicherungssumme ueber der Automatikgrenze von EUR 400.000 liegt und ein Befund vorlag. Die Entscheidung trafen am 28.05.2025 Frau S. Lehmann (Senior-Risikopruefung) und Dr. med. K. Weber (Gesellschaftsarzt). Gemaess unserer Kompetenzordnung werden Zuschlaege, Ausschluesse und Ablehnungen nie automatisiert entschieden.
 
 2. Angewandte Regel
-Annahmerichtlinie ARL-2025, Kapitel 6 Herz-Kreislauf, Tabelle 6.1: Hypertonie, medikamentoes eingestellt, Werte unter 140/90, Behandlungsbeginn vor weniger als 5 Jahren, Summe ueber EUR 750.000: Zuschlag 25 bis 50 Prozent der Risikopraemie. Gewaehlt: 50 Prozent (Familienanamnese, LDL 138). Nicht beruecksichtigt: Bandscheibenvorfall (fuer Todesfallrisiko ohne Bedeutung), Skitouren (keine Erschwerung). Anlage: Auszug Tabelle 6.1.
+Annahmerichtlinie ARL-2025, § 6 Vorerkrankungen, Tabelle 6.1 (Herz-Kreislauf): Hypertonie, medikamentoes eingestellt, Werte unter 140/90, Behandlungsbeginn vor weniger als 5 Jahren, Summe ueber EUR 750.000: Zuschlag 25 bis 50 Prozent der Risikopraemie. Gewaehlt: 50 Prozent (Familienanamnese, LDL 138). Nicht beruecksichtigt: Bandscheibenvorfall (fuer Todesfallrisiko ohne Bedeutung), Skitouren (keine Erschwerung). Anlage: Auszug Tabelle 6.1.
 
 3. Verarbeitete Daten (Art. 15 DSGVO)
 Antragsangaben inkl. Gesundheitserklaerung, Hausarztzeugnis Dr. Steiner vom 24.04.2025, Untersuchungsbericht Vertrauensarzt vom 06.05.2025 mit Laborwerten. Empfaenger: keine ausserhalb der Gesellschaft; keine Rueckversicherung. Speicherdauer: Vertragslaufzeit zuzueglich gesetzlicher Fristen. Sie haben das Recht auf Berichtigung und auf Beschwerde bei der Aufsichtsbehoerde.

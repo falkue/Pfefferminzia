@@ -12,7 +12,7 @@ Die Pfefferminz Versicherung (gegründet 1924 in Olten, Host-Systeme HAPO für H
 |---|---|
 | Kunden, Firmen, Adressen, Kontakte, Haushalte | `data/curated/S/csv/partner.csv`, `partner_adresse.csv`, `partner_kontakt.csv`, `partner_firma.csv`, `partner_beziehung.csv` |
 | Verträge, Prämien, Status, Storno, Kanal, Herkunft | `vertrag.csv` (Schlüssel `vertrag_id`, Kunde über `versicherungsnehmer_id`), Mitversicherte in `vertrag_partner_rolle.csv`, Deckungen in `deckung.csv`, Risikoobjekte in `risiko_objekt.csv` |
-| Anträge, Risikoprüfung, Zuschläge, BMI, Raucher | `antrag.csv` (`uw_entscheid_code` A angenommen, Z Zuschlag, X abgelehnt, R Rückstellung; `uw_automatisiert`) |
+| Anträge, Risikoprüfung, Zuschläge, BMI, Raucher | `antrag.csv` (`uw_entscheid_code` N normale Annahme, Z Annahme mit Zuschlag, A Annahme mit Ausschluss, R Zurückstellung, X Ablehnung, RV Rückversicherung fakultativ; Codes in `data/reference/lv/underwriting_entscheidungen.csv`; `uw_automatisiert`) |
 | Schäden und Leistungsfälle | `schaden.csv`, `schaden_position.csv`; nur die zehn Kunden-Personas haben Schäden |
 | Kontakte mit Kunden (Anrufe, Mails, Briefe) | `interaktion.csv` (Volltext in `text_body` oder Datei in `datei_pfad`) |
 | Dokumente (Briefe, Policen, Gutachten) | `dokument.csv` und die Dateien unter `data/documents/S/personas/<PTR>/` (Markdown mit Frontmatter, E-Mails als `.eml`) |
@@ -47,7 +47,8 @@ Zu jeder gibt es eine Geschichte in `docs/personas/kunden/` und eine Fallakte un
 ## Wichtige Fakten
 
 - Stichtag 31. Dezember 2025. Closing der Fusion 1. Januar 2025. Snapshot der Altsysteme 31. Dezember 2024.
-- Herkunft eines Vertrags: `PFEFFERMINZ` oder `MINZIA`. Quellsystem: `HAPO`, `VERA`, `MINT`.
+- Herkunft eines Vertrags oder Partners (Spalte `herkunft`): `pfefferminz` oder `minzia` (klein geschrieben). Quellsystem: `HAPO`, `VERA`, `MINT`.
+- Stufe S ist ein Ausschnitt des Gesamtbestands (rund 1'000 Kunden, 1'500 Verträge; Schäden nur für die zehn Kunden-Personas). Zahlen in Dokumenten, Notizen und Personas (etwa 214 nachmigrierte Verträge und 11 Fehlablehnungen im Fall Pieper, Teamgrössen, offene Altfälle) beziehen sich auf das ganze Unternehmen und lassen sich in Stufe S nicht nachzählen. Kennzahlen aus den Tabellen deshalb als «Datensatz Stufe S» bezeichnen; Quoten und Anteile sind aussagekräftiger als absolute Zahlen.
 - Währungen: CH-Verträge in CHF, DE-Verträge in EUR. Beträge in den Rohdaten der Altsysteme stehen in Rappen bzw. Cent.
 - Migrierte Verträge tragen im Altsystem-Extrakt Status `S` mit Stornogrund `ZZ`. Das ist kein Kundenstorno, sondern der Migrationsabschluss.
 - **Stornoquote** (verbindliche Definition, immer mitnennen): Verträge, die im Jahr vorzeitig beendet wurden, geteilt durch den Bestand am 1. Januar des Jahres.

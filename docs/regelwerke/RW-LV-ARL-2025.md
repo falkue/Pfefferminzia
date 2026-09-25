@@ -129,7 +129,7 @@ Bewertung auf Ebene der ICD-10-Gruppen. Zuschläge in Prozent der Risikoprämie,
 | E11 | Diabetes mellitus Typ 2, ohne Komplikationen, HbA1c < 7 | ZUSCHLAG +75 % | ZUSCHLAG +125 % |  | LABOR |
 | E66 | Adipositas (BMI >= 30) | ZUSCHLAG +25 % | ZUSCHLAG +50 % |  | FRAGEBOGEN |
 | E78 | Hypercholesterinämie / Fettstoffwechselstörung | NORMAL | NORMAL |  | FRAGEBOGEN |
-| I10 | Essentielle Hypertonie, medikamentös eingestellt, RR < 140/90 | NORMAL | ZUSCHLAG +25 % |  | FRAGEBOGEN |
+| I10 | Essentielle Hypertonie, medikamentös eingestellt, RR < 140/90 | NORMAL (Summe über 750'000: Tabelle 6.1) | ZUSCHLAG +25 % |  | FRAGEBOGEN |
 | I21 | Akuter Myokardinfarkt vor > 2 Jahren, EF > 50 % | ZUSCHLAG +150 % | ABLEHNUNG | 12 | FACHARZT |
 | I25 | Chronische ischämische Herzkrankheit (KHK) | ZUSCHLAG +100 % | ABLEHNUNG |  | FACHARZT |
 | I26 | Lungenembolie, abgeheilt | ZUSCHLAG +50 % | ZUSCHLAG +50 % | 12 | FACHARZT |
@@ -213,6 +213,16 @@ Bewertung auf Ebene der ICD-10-Gruppen. Zuschläge in Prozent der Risikoprämie,
 | Q21 | Angeborener Herzseptumdefekt, operativ verschlossen | NORMAL | NORMAL |  | FACHARZT |
 | Z73 | Burnout (Ausgebranntsein), ohne Depressionsdiagnose | NORMAL | ZUSCHLAG +50 % |  | FRAGEBOGEN |
 | Z95 | Herzschrittmacher-Träger | ZUSCHLAG +50 % | ZUSCHLAG +50 % |  | FACHARZT |
+
+### Tabelle 6.1 Herz-Kreislauf: Hypertonie (I10) nach Summe und Behandlungsdauer
+
+Gilt für den Todesfall und geht der Zeile I10 oben vor; EU/BU nach der Tabelle oben. Innerhalb einer Spanne entscheidet die Risikoprüfung nach Blutdruckwerten, Blutfetten und Familienanamnese und begründet die Wahl in der Entscheidungsvorlage.
+
+| Befund | Todesfallsumme bis 750'000 | Todesfallsumme über 750'000 |
+|---|---|---|
+| medikamentös eingestellt, RR < 140/90, Behandlungsbeginn vor 5 Jahren oder länger | NORMAL | ZUSCHLAG +25 % |
+| medikamentös eingestellt, RR < 140/90, Behandlungsbeginn vor weniger als 5 Jahren | NORMAL | ZUSCHLAG +25 % bis +50 % |
+| unbehandelt oder RR ab 160/100 | ZUSCHLAG +50 % bis +100 % | ZUSCHLAG +50 % bis +100 % |
 
 ## § 7 Freizeitrisiken
 

@@ -85,6 +85,11 @@ PERSONA_ZAHLUNGSWEISE = {801: "JAEHRLICH"}
 # Bausteine laut Persona-Steckbrief und Fallakte (Pieper: nur Hundehalter, eingeschlossen per Nachtrag ab 01.03.2019)
 PERSONA_BAUSTEINE = {801: ["BS-TIER-HUND"]}
 PERSONA_BAUSTEIN_AB = {801: {"BS-TIER-HUND": date(2019, 3, 1)}}
+# Leben-Vertraege, deren Summe und Laufzeit die Fallakte festlegt (Nazari: EUR 1.2 Mio, 18 Jahre, Gegenofferte DOK-00000603)
+PERSONA_LV_VERTRAG = {602: {"summe": 1_200_000.0, "laufzeit": 18}}
+# Antraege laut Fallakte (Nazari: Antrag 10.03.2025, Entscheid 28.05.2025, Zuschlag 50 Prozent, manuell, BMI 26.9 laut Gesundheitserklaerung)
+PERSONA_ANTRAG = {602: {"eingang": date(2025, 3, 10), "entscheid_am": date(2025, 5, 28),
+                        "uw": {"entscheid_code": "Z", "zuschlag_pct": 50.0, "automatisiert": False, "bmi_angabe": 26.9, "raucher_angabe": False}}}
 
 
 @dataclass
@@ -430,6 +435,17 @@ class VertragWelt:
                 laufzeit = max(5, min(laufzeit, endalter - alter_beginn))
             ablauf = date(beginn.year + laufzeit, beginn.month, beginn.day)
             uw = self.underwriting_lv(rng, generation, markt, beginn, vn, lat, zone)
+            if persona:
+                # Zufallsziehungen oben bleiben unveraendert; die Persona-Werte ueberschreiben nur das Ergebnis
+                if n in PERSONA_LV_VERTRAG:
+                    summe = PERSONA_LV_VERTRAG[n]["summe"]
+                    laufzeit = PERSONA_LV_VERTRAG[n]["laufzeit"]
+                    ablauf = date(beginn.year + laufzeit, beginn.month, beginn.day)
+                if n in PERSONA_ANTRAG:
+                    uw = {**uw, **PERSONA_ANTRAG[n]["uw"]}
+                elif uw["entscheid_code"] in ("X", "A", "R"):
+                    # Persona-Vertraege bestehen: der Antrag wurde angenommen (keine Ablehnung neben einem laufenden Vertrag)
+                    uw = {**uw, "entscheid_code": "N", "zuschlag_pct": 0.0}
             eu = produkt in ("LV-RISK", "LV-VORS") and rng.random() < 0.25
             eu_rente = float(rng.choice([1000, 1500, 2000, 2500, 3000])) * 12 if eu else 0.0
             beruf = next((b for b in BERUFE if b[0] == vn["beruf_code"]), BERUFE[0])
@@ -556,6 +572,8 @@ class VertragWelt:
         aid = antrag_id(n)
         eingang = beginn - timedelta(days=int(rng.integers(3, 75)))
         entscheid = eingang + timedelta(days=int(rng.integers(0, max((beginn - eingang).days, 1))))
+        if n in PERSONA_ANTRAG and n < PERSONA_VERTRAEGE_RESERVIERT:
+            eingang, entscheid = PERSONA_ANTRAG[n]["eingang"], PERSONA_ANTRAG[n]["entscheid_am"]
         status = {"N": "ANGENOMMEN", "Z": "ANGENOMMEN_ZUSCHLAG", "A": "ANGENOMMEN_ZUSCHLAG", "R": "RUECKFRAGE", "X": "ABGELEHNT"}.get(uw["entscheid_code"], "ANGENOMMEN")
         if vertrag is None and status not in ("ABGELEHNT",):
             status = "ABGELEHNT" if uw["entscheid_code"] in ("X",) else "ZURUECKGEZOGEN"

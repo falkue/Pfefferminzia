@@ -4,7 +4,7 @@
   "schema_version": "0.1.0",
   "scale": "S",
   "stichtag": "2025-12-31",
-  "generated_at": "2026-09-25T09:06:16Z",
+  "generated_at": "2026-09-25T09:17:58Z",
   "generator": {
     "repo": "Pfefferminzia",
     "package": "pfefferminzia",
@@ -38,8 +38,8 @@
         "parquet": "data/curated/S/parquet/antrag.parquet"
       },
       "sha256": {
-        "csv": "20c9cc479de7c8c8e7d67c606e9b6b8fd002ff09c32a27cb68586ff9d377eac8",
-        "parquet": "34b06c36be1095c81a5485a9f6cc11e85781b21e86d9c6a48a9727b88ca5ab53"
+        "csv": "e7cad80f451bca8af0b7aceb1205bbdd9cffaaeabb89288f40006391eafe89dd",
+        "parquet": "3fb7f251d76dbe2a01acf91ccc0639087a4c0e0ace5be1e7277c906a015d9667"
       }
     },
     {
@@ -52,8 +52,8 @@
         "parquet": "data/curated/S/parquet/deckung.parquet"
       },
       "sha256": {
-        "csv": "d86ea6e50c53b12aea22fb3c9ea73829556c59c447b44b0ed2cbacfd8641971f",
-        "parquet": "be99d1e13d3df139af4aa5746c4b69965f394d9f9cc46b795aef2f175ccd2780"
+        "csv": "c5f6f67e243f773f6a705d91c9715a8bf92c5c45a2f67f857cc26af3bbc40586",
+        "parquet": "78e7cf3fa5fe918b632a188f68e94c20a6ee5ac950409db5f18f89320a373718"
       }
     },
     {
@@ -66,8 +66,8 @@
         "parquet": "data/curated/S/parquet/dokument.parquet"
       },
       "sha256": {
-        "csv": "d432f3bb33940de3d1c25e3e72a467f7ca77ba44ab45d6bf1dfedb04357b4678",
-        "parquet": "231addce3e6c1523169ae86b743697e32d5ac98e031249bb7f6a7c96dfbbb170"
+        "csv": "981a366d16d1c97f5a199865a743b8b783d9ba3bf61003beec9255656300b1ba",
+        "parquet": "c194e29381f48c4df9235c9287dc5449bbef904ea115f85593b1bb81b5cf4bb8"
       }
     },
     {
@@ -80,8 +80,8 @@
         "parquet": "data/curated/S/parquet/interaktion.parquet"
       },
       "sha256": {
-        "csv": "8425cd385dcd690be44994cb32300be6c832d65e2ccd3eb48884d7c71d0d4d28",
-        "parquet": "734e982b2c7da8d61b679a2f90b20c1fefe482e3cb215d635f1f325a8504c2d6"
+        "csv": "bc119b08629b55e66e1a5eeb771c66e11165d41f7b82361146505da4936a580e",
+        "parquet": "53b91989f01d01236839de05aa58d59bc89137b9901aa784129df3a779d31ac9"
       }
     },
     {
@@ -206,8 +206,8 @@
         "parquet": "data/curated/S/parquet/risiko_objekt.parquet"
       },
       "sha256": {
-        "csv": "abaf65b3cf0a3447ce23fc63d5c8353d9047e50b43a74f28be686149519c6517",
-        "parquet": "66b1322d73723b5a2b4d237360f599ab4971a956c8713a50f7e8b1ea4010f184"
+        "csv": "b33f5692c350b4841922bf8ac7de27e8f54c1ce93f63c663e922bfd740bc5ead",
+        "parquet": "952c0ba1fc0d463c4d28c791a1270001326ecb36a529d1f6e4dd35f9cb2bc453"
       }
     },
     {
@@ -276,8 +276,8 @@
         "parquet": "data/curated/S/parquet/vertrag.parquet"
       },
       "sha256": {
-        "csv": "37f581378f0c35fa2d6bda653b089f930360aab0d931f1df2abe39902e5624a7",
-        "parquet": "9f33147bf991632a95b0e086ca05585bba0ceeaa62dbd75fcecf0cf0d2085b02"
+        "csv": "2e317d400b534a26b4f4b0bf3b3253da282a88b1617454e7e701f5ffb5388b20",
+        "parquet": "99f49a4cc4eabd286b00c6187a8a3d1d7772c81be086d3509e9ea1b58fccd67a"
       }
     },
     {
@@ -402,8 +402,8 @@
         "parquet": "data/truth/S/parquet/vertrag_latent.parquet"
       },
       "sha256": {
-        "csv": "b7f6df8235887876e34a2ea7ebb50878d20d7dcbb2e38cc2f74948126d7d18f3",
-        "parquet": "bda41c30a16aa07dd72af7faef5ea8af44c9d1b9b19e62de0f229abc96ff38d8"
+        "csv": "6df439c8c42c32784068d0bd3a84d730dae5663fceddfa9949cd6d684d7ef63f",
+        "parquet": "cc2796ae64bf4f9f6d85b49f2b7ddc225b15032ca68cc3285444e3a9a2057fde"
       }
     }
   ],
@@ -455,9 +455,9 @@
     "data/documents/S/personas/PTR-00000006/DOK-00000601_antrag.md": "68bb8fba645cbb104484676a971e73b34bfb0e055feaf660a2056cb4772e6aa6",
     "data/documents/S/personas/PTR-00000006/DOK-00000602_arztbericht.md": "7d4709618b99e57bc6e88df1cc6419c1348faad23fa83ee0fb022bf9c53bb5ea",
     "data/documents/S/personas/PTR-00000006/DOK-00000603_gegenofferte.md": "beca906edd85eabda890b77566b22e9019e765e4d54d645f6be377a9f353a7d7",
-    "data/documents/S/personas/PTR-00000006/DOK-00000604_erklaerungsschreiben.md": "e11dd0d037e6cd4c38c00898d28abadffbcf4066440b7a496a61c384577f213b",
+    "data/documents/S/personas/PTR-00000006/DOK-00000604_erklaerungsschreiben.md": "1360b41262e51b2196c94c81b3c00aafb6dce450617e3c070ecdf623bb14a835",
     "data/documents/S/personas/PTR-00000006/INT-00000631.eml": "2a8e0d3d3ee1a03fa4ece4385d5c9e78855d3fbf3198b340e6791abe5e0a8507",
-    "data/documents/S/personas/PTR-00000006/INT-00000632.eml": "a636b893747d192abdf9a92ab776efbc5a3b4a6ac10fae2f947d5489b1757d8c",
+    "data/documents/S/personas/PTR-00000006/INT-00000632.eml": "7bceb813cf74d39d6d3c3af2d4048a0c4f74707bc1a9e7b2484adf8a7db935d5",
     "data/documents/S/personas/PTR-00000006/INT-00000633.eml": "b1800a366f09b679c2b53b2238db99e91de1325cbcae153a9c9f8b3afb8089c3",
     "data/documents/S/personas/PTR-00000006/INT-00000640.eml": "0f378a8289ff8bada3e355d706136973244ea49d49d7c87f06d17ab6064911f4",
     "data/documents/S/personas/PTR-00000006/INT-00000641.eml": "86bcad1d4e6c7abc2a7dfdb9d158dd81a3b142b023a686b01e85fcbb5ad3a475",
@@ -564,7 +564,7 @@
     "data/documents/S/tarife/RW-LV-AVB-DE-MZ-2020.md": "4233bfe62749cc8be8e1b4064a171116ada362d620c881bf46d91c92c35ba319",
     "data/documents/S/tarife/RW-LV-AVB-DE-MZ-2020.pdf": "4013854224decb8122efb3dedb9950b14b49a47eca50e0610a8e6a46481d9031",
     "data/raw/S/mint/customers.jsonl": "67a1cd57698b5104f5a98c1b7aea5d433fec71ec48a83e526d85d515025f5946",
-    "data/raw/S/mint/policies.jsonl": "6b34dc7bcb72f705eeee1840ace54d31b979b75b775fdfdf82bd22c739edbdb8",
+    "data/raw/S/mint/policies.jsonl": "c1d4e100423b7c4426f7f5d93beff90364b1af73dafc616986d06a2d3f978a1a",
     "data/raw/S/pvs/HAPO_PARTNER.csv": "d7fc0ccc7c10ac777085ad1499dd38dec1fcc04d3043015376d29795bf01d23e",
     "data/raw/S/pvs/HAPO_PARTNER.txt": "5bf7b33a680ad5265d62b08436b51ef6cd6a74421a29063915d562c70a79c173",
     "data/raw/S/pvs/HAPO_PARTNER_SATZART.txt": "71b7c3256182774a1799c2457b9037895f8f71c1fc90b47b0e2155c6d161d884",
