@@ -18,7 +18,7 @@ erzeugt_am: 2026-09-04
 
 # Vollmachts- und Kompetenzordnung R08
 
-Version 2.1, in Kraft seit 16. April 2025. Version 2.1 ersetzt Version 2.0 vom 1. Januar 2025; geändert wurde § 5 nach dem Vorfall VF-2025-03 (automatisierte Fehlablehnungen nach der Migration Haftpflicht).
+Version 2.1, in Kraft seit 16. April 2025. Version 2.1 ersetzt Version 2.0 vom 1. Januar 2025; geändert wurde § 5 nach dem Vorfall VF-2025-03 (automatisierte Fehlablehnungen nach der Migration Haftpflicht). Der Grundsatz in § 5 Nr. 2 (jede Ablehnung trifft eine natürliche Person) galt schon in Version 2.0; neu in Version 2.1 sind die technische Erzwingung (Nr. 2, zweiter Satz) und die Gleichstellung von Konfigurationsregeln mit Modellentscheidungen (Nr. 3).
 
 ## § 1 Geltungsbereich
 
@@ -40,7 +40,7 @@ Rechtsverbindliche Unterschriften erfolgen kollektiv zu zweien (Schweiz) beziehu
 
 ## § 4 Underwriting Leben
 
-Automatische Annahme nur bis Risikoklasse 2 und Todesfallsumme 400'000; Sachbearbeitung bis 750'000; Gesellschaftsarzt bis 1'500'000; darüber Rückversicherung. Einzelheiten in der Annahmerichtlinie RW-LV-ARL-2025, § 9.
+Automatische Annahme nur bis Risikoklasse 2 und Todesfallsumme 400'000; Sachbearbeitung bis 750'000; Gesellschaftsarzt bis 1'500'000; darüber Rückversicherung. Ablehnungen und Zurückstellungen entscheidet der Gesellschaftsarzt, über 1'500'000 zusätzlich mit der Rückversicherung; sie werden nie automatisiert entschieden. Einzelheiten in der Annahmerichtlinie RW-LV-ARL-2025, § 9.
 
 ## § 5 Schaden und Leistung
 

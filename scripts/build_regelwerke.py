@@ -4,8 +4,7 @@ Aufruf: ``uv run python scripts/build_regelwerke.py``
 
 Erzeugt: RW-LV-ARL-2025 (Annahmerichtlinie Leben, aus data/reference/lv/annahmerichtlinie_tabellen.yaml und
 diagnose_bibliothek.csv), RW-GRUPPE-R08 (Kompetenzordnung, aus hp/vollmachtsstufen.csv und ARL-Kompetenzen).
-Die Beschwerderichtlinie R05 ist handgeschrieben (docs/regelwerke/RW-GRUPPE-R05-2025.md) und wird hier nicht
-ueberschrieben.
+und die Beschwerderichtlinie R05 (Text im Skript; reale Stellen ohne Postanschrift).
 """
 
 from __future__ import annotations
@@ -63,7 +62,7 @@ def arl_2025() -> str:
              )
     st = a["pruefumfang"]["stufen"]
     z = [[f"bis {num(s['bis_summe'])}" if s["bis_summe"] else "über 1'500'000", ", ".join(s["pruefung"])] for s in st]
-    t.append("## § 2 Prüfumfang nach Versicherungssumme\n\nTodesfallsumme in CHF bzw. EUR (nominal gleich behandelt), Alter unter 50; ab Alter 50 gilt die "
+    t.append("## § 2 Prüfumfang nach Versicherungssumme\n\nTodesfallsumme in CHF bzw. EUR (nominal gleich behandelt), Alter unter 55; ab Alter 55 gilt die "
              "nächst strengere Stufe.\n\n" + tabelle(z, ["Versicherungssumme", "Prüfung"]) +
              f"\n\nEU/BU-Rente über 2'500 je Monat: zusätzlich {', '.join(a['pruefumfang']['eu_bu_rente_monat_ab_2500'])}. "
              f"Laborumfang: {', '.join(a['pruefumfang']['labor_umfang'])}.\n")
@@ -100,11 +99,15 @@ def arl_2025() -> str:
                       ["unbehandelt oder RR ab 160/100", "ZUSCHLAG +50 % bis +100 %", "ZUSCHLAG +50 % bis +100 %"]],
                      ["Befund", "Todesfallsumme bis 750'000", "Todesfallsumme über 750'000"]) + "\n")
     z = [[f["risiko"].replace("_", " "), f["tod"], str(f["eu_bu"]).replace("_", " ")] for f in a["freizeitrisiken"]]
-    t.append("## § 7 Freizeitrisiken\n\nZuschlag in Promille der Versicherungssumme je Jahr auf den Todesfall, oder Ausschluss.\n\n" + tabelle(z, ["Risiko", "Todesfall ‰", "EU/BU"]) + "\n")
+    t.append("## § 7 Freizeitrisiken\n\nZuschlag in Promille der Versicherungssumme je Jahr auf den Todesfall, oder Ausschluss.\n\n" + tabelle(z, ["Risiko", "Todesfall ‰", "EU/BU"]) +
+             "\n\nNicht aufgeführte Freizeitaktivitäten ohne besondere Gefahr gelten als normal.\n")
     k = a["kombination"]
     z = [[c["klasse"], c["bezeichnung"].replace("_", " "), c["zuschlag_pct_von"], c["zuschlag_pct_bis"] if c["zuschlag_pct_bis"] is not None else "offen"] for c in k["risikoklassen"]]
     t.append(f"## § 8 Kombination und Risikoklassen\n\nMethode: {k['methode'].replace('_', ' ')}. Annehmbar bis {k['max_zuschlag_pct_annehmbar']} Prozent Gesamtzuschlag, "
-             f"Referat ab {k['ab_zuschlag_pct_referat']} Prozent, Ablehnung ab {k['ab_zuschlag_pct_ablehnung']} Prozent.\n\n" +
+             f"Referat ab {k['ab_zuschlag_pct_referat']} Prozent, Ablehnung ab {k['ab_zuschlag_pct_ablehnung']} Prozent. "
+             "Addiert werden die Prozentzuschläge der §§ 3, 4 (nur der Zuschlag über 20 Zigaretten), 5 und 6. Der Rauchertarif ist ein eigener Tarif "
+             "und kein Zuschlag. Übergewicht wird nur nach § 3 bewertet; E66 wird daneben nicht angesetzt. Promillezuschläge nach § 7 werden getrennt "
+             "erhoben.\n\n" +
              tabelle(z, ["Risikoklasse", "Bezeichnung", "Zuschlag von %", "Zuschlag bis %"]) + "\n")
     ko = a["kompetenzen"]
     t.append("## § 9 Entscheidungskompetenzen und Automatisierung\n\n"
@@ -114,7 +117,10 @@ def arl_2025() -> str:
              f"{ko['automat']['stichprobe_manuell_pct']} Prozent.\n"
              f"2. Sachbearbeitung: bis Risikoklasse {ko['sachbearbeiter']['bis_risikoklasse']}, Summe bis {num(ko['sachbearbeiter']['bis_summe_tod'])}.\n"
              f"3. Gesellschaftsarzt: bis Risikoklasse {ko['gesellschaftsarzt']['bis_risikoklasse']}, Summe bis {num(ko['gesellschaftsarzt']['bis_summe_tod'])}.\n"
-             f"4. Rückversicherung: ab Summe {num(ko['rueckversicherer']['ab_summe_tod'])} oder ab Risikoklasse {ko['rueckversicherer']['ab_risikoklasse']}.\n"
+             f"3a. Ablehnungen (Risikoklasse 5 und Gründe nach § 10) und Zurückstellungen entscheidet der Gesellschaftsarzt; über "
+             f"{num(ko['gesellschaftsarzt']['bis_summe_tod'])} zusätzlich mit der Rückversicherung. Sie werden nie automatisiert entschieden.\n"
+             f"4. Rückversicherung: ab Summe {num(ko['rueckversicherer']['ab_summe_tod'])}, oder zusätzlich bei einer Annahme in Risikoklasse "
+             f"{ko['rueckversicherer']['ab_risikoklasse']}. Für Ablehnungen gilt Nr. 3a.\n"
              "5. Kommunikation: Kundenschreiben nennen Entscheid, Zuschlag und Nachprüfungsmöglichkeit, aber keine Diagnosen. Ärztliche Auskunft auf Wunsch an den "
              "behandelnden Arzt. Auf Verlangen wird der Entscheidungsweg einschliesslich der Rolle des Regelwerks erläutert.\n")
     z = [[g["code"], g["text"], g.get("kundentext", "")] for g in a["ablehnungsgruende"]["liste"]]
@@ -131,7 +137,9 @@ def r08() -> str:
     t = [frontmatter("RW-GRUPPE-R08-2025", "Vollmachts- und Kompetenzordnung (R08), Version 2.1", "GRUPPE", "GRUPPE", "2.1", "2025-04-16",
                      "Pfefferminzia Holding AG, Geschäftsleitung", "intern")]
     t.append("# Vollmachts- und Kompetenzordnung R08\n\nVersion 2.1, in Kraft seit 16. April 2025. Version 2.1 ersetzt Version 2.0 vom 1. Januar 2025; "
-             "geändert wurde § 5 nach dem Vorfall VF-2025-03 (automatisierte Fehlablehnungen nach der Migration Haftpflicht).\n")
+             "geändert wurde § 5 nach dem Vorfall VF-2025-03 (automatisierte Fehlablehnungen nach der Migration Haftpflicht). Der Grundsatz in § 5 Nr. 2 "
+             "(jede Ablehnung trifft eine natürliche Person) galt schon in Version 2.0; neu in Version 2.1 sind die technische Erzwingung (Nr. 2, "
+             "zweiter Satz) und die Gleichstellung von Konfigurationsregeln mit Modellentscheidungen (Nr. 3).\n")
     t.append("## § 1 Geltungsbereich\n\nDiese Ordnung regelt, wer in der Pfefferminzia-Gruppe welche Entscheidungen treffen darf: Zeichnung von Risiken, "
              "Regulierung von Schäden und Leistungsfällen, Kulanz, Finanzen, Verträge mit Vermittlern. Sie gilt für Mitarbeitende, Systeme und "
              "Modelle gleichermassen.\n")
@@ -141,7 +149,9 @@ def r08() -> str:
     t.append("## § 3 Underwriting Haftpflicht\n\n" + tabelle(z, ["Stufe", "Rolle", "Kompetenz", "Tarifabweichung max. %", "Risikoklasse max.", "Zeichnungsstatus max."]) + "\n")
     t.append(f"## § 4 Underwriting Leben\n\nAutomatische Annahme nur bis Risikoklasse {a['automat']['bis_risikoklasse']} und Todesfallsumme "
              f"{num(a['automat']['bis_summe_tod']['ARL-2025'])}; Sachbearbeitung bis {num(a['sachbearbeiter']['bis_summe_tod'])}; Gesellschaftsarzt bis "
-             f"{num(a['gesellschaftsarzt']['bis_summe_tod'])}; darüber Rückversicherung. Einzelheiten in der Annahmerichtlinie RW-LV-ARL-2025, § 9.\n")
+             f"{num(a['gesellschaftsarzt']['bis_summe_tod'])}; darüber Rückversicherung. Ablehnungen und Zurückstellungen entscheidet der Gesellschaftsarzt, "
+             f"über {num(a['gesellschaftsarzt']['bis_summe_tod'])} zusätzlich mit der Rückversicherung; sie werden nie automatisiert entschieden. "
+             "Einzelheiten in der Annahmerichtlinie RW-LV-ARL-2025, § 9.\n")
     z = [[r["stufe"], r["rolle"], r["zahlung_max"], r["reserve_max"], r["vergleich_max"], r["kulanz_max"], r["vier_augen_ab"] if pd.notna(r["vier_augen_ab"]) else "",
           r["deckungsablehnung"]] for _, r in v.iterrows()]
     t.append("## § 5 Schaden und Leistung\n\nBeträge in CHF beziehungsweise EUR (nominal gleich).\n\n" +
@@ -189,7 +199,7 @@ def r05() -> str:
     t.append("## Anhang A Textbausteine\n\n**Eingangsbestätigung (de-DE):** «Vielen Dank für Ihr Schreiben vom …. Ihr Anliegen wird geprüft. Wir melden uns innerhalb "
              "von 15 Arbeitstagen bei Ihnen.»\n\n**Eingangsbestätigung (de-CH):** «Besten Dank für Ihr Schreiben vom …. Wir prüfen Ihr Anliegen und melden uns innert "
              "15 Arbeitstagen.»\n\n**Anerkennung:** «Sie haben recht, und wir haben einen Fehler gemacht. …»\n\n**Hinweis Ombudsstelle (DE):** «Sollten Sie mit unserer "
-             "Entscheidung nicht einverstanden sein, können Sie sich an den Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin, wenden.» "
+             "Entscheidung nicht einverstanden sein, können Sie sich an den Versicherungsombudsmann e. V. wenden.» "
              "**(CH):** «… an die Ombudsstelle der Privatversicherung und der SUVA, Zürich.»\n")
     t.append(f"\n---\n\n{DISCLAIMER}\n")
     return "\n".join(t)

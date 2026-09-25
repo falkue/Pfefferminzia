@@ -57,7 +57,7 @@ Die Beschwerdestelle erstellt quartalsweise eine Statistik nach Kategorie, Markt
 
 **Anerkennung:** «Sie haben recht, und wir haben einen Fehler gemacht. …»
 
-**Hinweis Ombudsstelle (DE):** «Sollten Sie mit unserer Entscheidung nicht einverstanden sein, können Sie sich an den Versicherungsombudsmann e. V., Postfach 08 06 32, 10006 Berlin, wenden.» **(CH):** «… an die Ombudsstelle der Privatversicherung und der SUVA, Zürich.»
+**Hinweis Ombudsstelle (DE):** «Sollten Sie mit unserer Entscheidung nicht einverstanden sein, können Sie sich an den Versicherungsombudsmann e. V. wenden.» **(CH):** «… an die Ombudsstelle der Privatversicherung und der SUVA, Zürich.»
 
 
 ---

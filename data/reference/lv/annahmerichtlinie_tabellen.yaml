@@ -12,7 +12,7 @@ versionen:
   ARL-2025: {gueltig_ab: 2025-01-01, gueltig_bis: null, generationen: [PZ-2025], herkunft: pfefferminzia}
 
 # ------------------------------------------------------------------------------------------
-# 1. Pruefumfang nach Versicherungssumme (Todesfall, Alter unter 50; ab 50 eine Stufe strenger)
+# 1. Pruefumfang nach Versicherungssumme (Todesfall, Alter unter 55; ab 55 eine Stufe strenger)
 # ------------------------------------------------------------------------------------------
 pruefumfang:
   waehrung_nominal_gleich: true          # CHF und EUR nominal gleich behandelt
@@ -93,7 +93,8 @@ freizeitrisiken:
   - {risiko: fallschirm_gleitschirm, tod: 1.5, eu_bu: ausschluss_ab_2008_zuschlag_davor}
   - {risiko: reiten_freizeit, tod: 0, eu_bu: normal}
   - {risiko: kampfsport_wettkampf, tod: 0.5, eu_bu: zuschlag_25_pct}
-  - {risiko: skitouren_freeride, tod: 0.5, eu_bu: normal}
+  - {risiko: skitouren_auf_markierten_routen, tod: 0, eu_bu: normal}
+  - {risiko: freeride_abseits_gesicherter_pisten, tod: 0.5, eu_bu: normal}
 
 # ------------------------------------------------------------------------------------------
 # 6. Regionale und herkunftsbezogene Faktoren (historisch, groesstenteils gestrichen)

@@ -29,7 +29,7 @@ Interne Richtlinie für die Risikoprüfung der Produkte RisikoLeben, Vorsorge, R
 
 ## § 2 Prüfumfang nach Versicherungssumme
 
-Todesfallsumme in CHF bzw. EUR (nominal gleich behandelt), Alter unter 50; ab Alter 50 gilt die nächst strengere Stufe.
+Todesfallsumme in CHF bzw. EUR (nominal gleich behandelt), Alter unter 55; ab Alter 55 gilt die nächst strengere Stufe.
 
 | Versicherungssumme | Prüfung |
 |---|---|
@@ -238,11 +238,14 @@ Zuschlag in Promille der Versicherungssumme je Jahr auf den Todesfall, oder Auss
 | fallschirm gleitschirm | 1.5 | ausschluss ab 2008 zuschlag davor |
 | reiten freizeit | 0 | normal |
 | kampfsport wettkampf | 0.5 | zuschlag 25 pct |
-| skitouren freeride | 0.5 | normal |
+| skitouren auf markierten routen | 0 | normal |
+| freeride abseits gesicherter pisten | 0.5 | normal |
+
+Nicht aufgeführte Freizeitaktivitäten ohne besondere Gefahr gelten als normal.
 
 ## § 8 Kombination und Risikoklassen
 
-Methode: additiv prozent. Annehmbar bis 250 Prozent Gesamtzuschlag, Referat ab 150 Prozent, Ablehnung ab 251 Prozent.
+Methode: additiv prozent. Annehmbar bis 250 Prozent Gesamtzuschlag, Referat ab 150 Prozent, Ablehnung ab 251 Prozent. Addiert werden die Prozentzuschläge der §§ 3, 4 (nur der Zuschlag über 20 Zigaretten), 5 und 6. Der Rauchertarif ist ein eigener Tarif und kein Zuschlag. Übergewicht wird nur nach § 3 bewertet; E66 wird daneben nicht angesetzt. Promillezuschläge nach § 7 werden getrennt erhoben.
 
 | Risikoklasse | Bezeichnung | Zuschlag von % | Zuschlag bis % |
 |---|---|---|---|
@@ -257,7 +260,8 @@ Methode: additiv prozent. Annehmbar bis 250 Prozent Gesamtzuschlag, Referat ab 1
 1. Automatische Annahme (MINT Underwriting-Engine v2, Modellinventar MI-03): nur Risikoklasse bis 2, Todesfallsumme bis 400'000, EU/BU-Rente bis 2'000 je Monat. Ausschliesslich positive Entscheide. Zuschläge, Ausschlüsse, Zurückstellungen und Ablehnungen werden nie automatisiert entschieden. Vollständige Protokollierung, manuelle Stichprobe 10 Prozent.
 2. Sachbearbeitung: bis Risikoklasse 3, Summe bis 750'000.
 3. Gesellschaftsarzt: bis Risikoklasse 4, Summe bis 1'500'000.
-4. Rückversicherung: ab Summe 1'500'001 oder ab Risikoklasse 4.
+3a. Ablehnungen (Risikoklasse 5 und Gründe nach § 10) und Zurückstellungen entscheidet der Gesellschaftsarzt; über 1'500'000 zusätzlich mit der Rückversicherung. Sie werden nie automatisiert entschieden.
+4. Rückversicherung: ab Summe 1'500'001, oder zusätzlich bei einer Annahme in Risikoklasse 4. Für Ablehnungen gilt Nr. 3a.
 5. Kommunikation: Kundenschreiben nennen Entscheid, Zuschlag und Nachprüfungsmöglichkeit, aber keine Diagnosen. Ärztliche Auskunft auf Wunsch an den behandelnden Arzt. Auf Verlangen wird der Entscheidungsweg einschliesslich der Rolle des Regelwerks erläutert.
 
 ## § 10 Ablehnungsgründe
