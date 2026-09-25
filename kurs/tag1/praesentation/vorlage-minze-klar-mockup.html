@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<title>Pfefferminzia · Variante 1 «minze-klar»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+  /* Mockup-Variante 1 «minze-klar» – Farben aus Johannes' Logo (web/logo.svg) */
+  :root {
+    --dg: #173d2c;        /* Dunkelgrün, Logo-Kachel */
+    --mint: #52b986;      /* Minze, Blätter */
+    --lm: #d9f1e1;        /* Hellminze, Schild */
+    --mint-ink: #23774d;  /* Minze abgedunkelt für Text und Linien auf Weiss */
+    --wash: #f3faf5;      /* Hellminze, stark aufgehellt, für Flächen */
+    --ink: #1c2a23;
+    --muted: #56665d;
+    --line: #d5e3da;
+    --paper: #ffffff;
+  }
+  html, body { margin: 0; }
+  body { background: #e4e7e5; padding: 40px 0 0; font-family: Inter, "Helvetica Neue", Arial, sans-serif; }
+
+  .slide {
+    position: relative; width: 1280px; height: 720px; overflow: hidden;
+    margin: 0 auto 40px; background: var(--paper); color: var(--ink);
+    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  }
+  .slide * { box-sizing: border-box; }
+  .abs { position: absolute; }
+
+  /* Kopfzeile y=40 */
+  .eyebrow { left: 64px; top: 40px; height: 36px; display: flex; align-items: center; gap: 12px;
+    font-size: 15px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--mint-ink); }
+  .eyebrow::before { content: ""; width: 24px; height: 3px; background: var(--mint); border-radius: 2px; }
+  .logo { right: 64px; top: 40px; height: 36px; }
+  .logo svg { height: 36px; width: auto; display: block; }
+
+  /* Titel y=104, Untertitel direkt darunter */
+  .h2 { left: 64px; top: 104px; width: 1152px; margin: 0; font-size: 32px; line-height: 40px;
+    font-weight: 700; letter-spacing: -0.015em; color: var(--dg); white-space: nowrap; }
+  .sub { left: 64px; top: 150px; width: 1152px; margin: 0; font-size: 21px; line-height: 30px;
+    font-weight: 400; color: var(--muted); white-space: nowrap; }
+  .rule { left: 64px; top: 204px; width: 1152px; height: 1px; background: var(--line); }
+
+  /* Quelle y=626 */
+  .src { left: 64px; top: 626px; width: 1152px; font-size: 15px; line-height: 19px; color: var(--muted); }
+
+  /* Fusszeile y=684 */
+  .foot { left: 64px; top: 668px; width: 1152px; height: 1px; background: var(--line); }
+  .foot-l { left: 64px; top: 676px; font-size: 15px; line-height: 18px; font-weight: 600; color: var(--dg); white-space: nowrap; }
+  .foot-r { left: 64px; top: 696px; font-size: 15px; line-height: 18px; color: var(--muted); white-space: nowrap; letter-spacing: -0.005em; }
+
+  .nb { white-space: nowrap; }
+  .kpi .val, .kpi .val2, .row .e b, .chart, #chart-gruende { font-feature-settings: "tnum" 1; }
+
+  /* ---------- Folie 1: Titel ---------- */
+  .t-band { left: 848px; top: 0; width: 432px; height: 656px; background: var(--lm); }
+  .t-mark { left: 888px; top: 150px; width: 352px; height: 440px; }
+  .t-title { left: 64px; top: 232px; width: 740px; margin: 0; font-size: 64px; line-height: 72px;
+    font-weight: 750; letter-spacing: -0.03em; color: var(--dg); }
+  .t-sub { left: 64px; top: 320px; width: 740px; margin: 0; font-size: 24px; line-height: 34px; color: var(--muted); }
+  .t-acc { left: 64px; top: 404px; width: 56px; height: 4px; background: var(--mint); border-radius: 2px; }
+  .t-meta { left: 64px; top: 440px; width: 740px; font-size: 20px; line-height: 30px; }
+  .t-meta b { display: block; font-weight: 700; color: var(--dg); }
+  .t-meta span { display: block; color: var(--muted); }
+  .t-stand { left: 64px; top: 576px; font-size: 16px; line-height: 22px; color: var(--muted); }
+  .t-stand b { color: var(--mint-ink); font-weight: 600; }
+
+  /* ---------- Folie 2: Kennzahlen ---------- */
+  .kpi { top: 232px; width: 368px; height: 384px; padding: 28px 28px 24px; border-top: 4px solid var(--dg); background: #fff; }
+  .kpi.focus { background: var(--wash); border-top-color: var(--mint); }
+  .kpi .lab { font-size: 17px; line-height: 22px; font-weight: 600; color: var(--muted); letter-spacing: .01em; }
+  .kpi .val { margin-top: 18px; font-size: 64px; line-height: 68px; font-weight: 750; letter-spacing: -0.03em; color: var(--dg); white-space: nowrap; }
+  .kpi .val small { font-size: 30px; font-weight: 650; letter-spacing: -0.01em; margin-right: 6px; }
+  .kpi .val2 { display: flex; gap: 28px; margin-top: 18px; }
+  .kpi .val2 div { font-size: 52px; line-height: 60px; font-weight: 750; letter-spacing: -0.03em; white-space: nowrap; }
+  .kpi .val2 span { display: block; font-size: 16px; line-height: 20px; font-weight: 600; letter-spacing: 0; margin-top: 2px; }
+  .kpi .add { margin-top: 10px; font-size: 19px; line-height: 26px; color: var(--ink); font-weight: 500; }
+  .kpi .cmp { margin-top: 14px; font-size: 19px; line-height: 27px; color: var(--ink); }
+  .kpi .note { position: absolute; left: 28px; right: 28px; bottom: 24px; font-size: 15px; line-height: 20px; color: var(--muted); }
+  .split { position: absolute; left: 28px; right: 28px; bottom: 24px; }
+  .split .bar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; }
+  .split .lbl { display: flex; justify-content: space-between; margin-top: 8px; font-size: 15px; line-height: 20px; color: var(--muted); }
+  .split .lbl b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Folie 3: Diagramm ---------- */
+  .chart { left: 64px; top: 232px; width: 772px; height: 384px; }
+  .side { left: 876px; top: 232px; width: 340px; height: 384px; padding: 24px 24px 0; background: var(--wash); border-top: 4px solid var(--mint); }
+  .side h3 { margin: 0; font-size: 17px; line-height: 22px; font-weight: 600; color: var(--muted); }
+  .side p { margin: 10px 0 0; font-size: 19px; line-height: 26px; }
+  .chart text, .side text { font-family: Inter, "Helvetica Neue", Arial, sans-serif; }
+
+  /* ---------- Folie 4: Beschlüsse ---------- */
+  .row { left: 64px; width: 1152px; height: 128px; border-top: 1px solid var(--line); }
+  .row.last { border-bottom: 1px solid var(--line); }
+  .row .n { position: absolute; left: 0; top: 20px; width: 44px; height: 44px; border-radius: 22px; background: var(--dg);
+    color: #fff; font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .row .k { position: absolute; left: 68px; top: 18px; font-size: 15px; line-height: 20px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--mint-ink); }
+  .row .t { position: absolute; left: 68px; top: 42px; width: 800px; font-size: 20px; line-height: 27px; color: var(--ink); }
+  .row .e { position: absolute; left: 904px; top: 18px; width: 248px; height: 92px; padding: 12px 16px; background: var(--wash); border-left: 3px solid var(--mint); }
+  .row .e b { display: block; font-size: 28px; line-height: 32px; font-weight: 750; letter-spacing: -0.02em; color: var(--dg); white-space: nowrap; }
+  .row .e span { display: block; margin-top: 4px; font-size: 15px; line-height: 19px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- ===================== Folie 1 · Titel ===================== -->
+<section class="slide titel" data-id="PfTitel">
+  <div class="abs t-band"></div>
+  <!-- Bildmarke aus dem Logo (Schild und Blätter), gross und ruhig -->
+  <svg class="abs t-mark" viewBox="10 14 44 46" aria-hidden="true">
+    <path d="M14 18h36v22c0 7-8 11-18 17-10-6-18-10-18-17V18Z" fill="#ffffff" opacity=".55"/>
+    <path d="M32 46V25M32 39c-7 0-12-5-12-12 7 0 12 5 12 12Zm0-7c0-7 5-12 12-12 0 7-5 12-12 12Z" fill="#52b986" opacity=".35" stroke="#173d2c" stroke-opacity=".25" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <div class="abs eyebrow">Verwaltungsrat · Bericht</div>
+  <div class="abs logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 338 64" role="img" aria-label="Pfefferminzia">
+      <rect width="64" height="64" rx="18" fill="#173d2c"/>
+      <path d="M14 18h36v22c0 7-8 11-18 17-10-6-18-10-18-17V18Z" fill="#d9f1e1"/>
+      <path d="M32 46V25M32 39c-7 0-12-5-12-12 7 0 12 5 12 12Zm0-7c0-7 5-12 12-12 0 7-5 12-12 12Z" fill="#52b986" stroke="#173d2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="78" y="42" fill="#173d2c" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="750" letter-spacing="-1.2">Pfefferminzia</text>
+    </svg>
+  </div>
+
+  <h1 class="abs t-title">Ein Jahr nach der Fusion</h1>
+  <p class="abs t-sub">Bestand, Kundenverluste und Migration der Pfefferminzia 2025</p>
+  <div class="abs t-acc"></div>
+  <div class="abs t-meta">
+    <b>Verwaltungsrat, 22.&nbsp;Januar 2026</b>
+    <span>Dr. Lena Mbatha-Keller, Chief Data &amp; AI Officer</span>
+  </div>
+  <div class="abs t-stand">Datenstand <b>31.12.2025</b> · Stufe S (Stichprobe; absolute Zahlen klein)</div>
+
+  <div class="abs foot"></div>
+  <div class="abs foot-l">Pfefferminzia · Verwaltungsrat 22.01.2026 · Folie 1/4</div>
+  <div class="abs foot-r">Fiktives Lehrbeispiel. Alle Daten synthetisch. Keine Verbindung zu realen Personen, Unternehmen oder Marken.</div>
+</section>
+
+<!-- ===================== Folie 2 · Kennzahlen ===================== -->
+<section class="slide" data-id="PfKennzahlen">
+  <div class="abs eyebrow">Überblick 2025</div>
+  <div class="abs logo"><svg viewBox="0 0 338 64" role="img" aria-label="Pfefferminzia"><rect width="64" height="64" rx="18" fill="#173d2c"/><path d="M14 18h36v22c0 7-8 11-18 17-10-6-18-10-18-17V18Z" fill="#d9f1e1"/><path d="M32 46V25M32 39c-7 0-12-5-12-12 7 0 12 5 12 12Zm0-7c0-7 5-12 12-12 0 7-5 12-12 12Z" fill="#52b986" stroke="#173d2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="78" y="42" fill="#173d2c" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="750" letter-spacing="-1.2">Pfefferminzia</text></svg></div>
+
+  <h2 class="abs h2">Der Bestand wächst – die Stornoquote steigt mit</h2>
+  <p class="abs sub">Drei Kennzahlen zum Stichtag 31.12.2025, Stufe S (Stichprobe; absolute Zahlen klein)</p>
+  <div class="abs rule"></div>
+
+  <div class="abs kpi" style="left:64px">
+    <div class="lab">Aktive Verträge</div>
+    <div class="val">1'009</div>
+    <div class="cmp"><b class="nb">+385</b> gegenüber 31.12.2024 (624), davon <span class="nb">395 Neuverträge</span> 2025</div>
+    <div class="split">
+      <div class="bar"><div style="width:68.2%; background:var(--dg)"></div><div style="width:31.8%; background:var(--mint)"></div></div>
+      <div class="lbl"><span>Pfefferminz <b>688</b></span><span>Minzia <b>321</b></span></div>
+    </div>
+  </div>
+
+  <div class="abs kpi" style="left:456px">
+    <div class="lab">Bruttojahresprämie aktiver Bestand</div>
+    <div class="val"><small>CHF</small>1.02&nbsp;Mio.</div>
+    <div class="add">zusätzlich <span class="nb">EUR 0.55 Mio.</span> (Deutschland)</div>
+    <div class="cmp">Vorjahr <span class="nb">CHF 0.79 Mio.</span> / <span class="nb">EUR 0.31 Mio.</span> <span class="nb">(+28&nbsp;% / +78&nbsp;%)</span></div>
+    <div class="note">Je Währung, nicht umgerechnet; ohne Einmalprämien</div>
+  </div>
+
+  <div class="abs kpi focus" style="left:848px">
+    <div class="lab">Stornoquote 2024 nach Herkunft</div>
+    <div class="val2">
+      <div style="color:var(--mint-ink)">8.4&nbsp;%<span>Minzia</span></div>
+      <div style="color:var(--dg)">7.7&nbsp;%<span>Pfefferminz</span></div>
+    </div>
+    <div class="cmp">Minzia 20 von 239, Pfefferminz 34 von 444 im Jahr aktiven Verträgen; 2023: <span class="nb">6.4&nbsp;% / 5.8&nbsp;%</span></div>
+    <div class="note">2024 ist das letzte vollständige Jahr; Storno-Daten 2025 unvollständig</div>
+  </div>
+
+  <div class="abs src">Quelle: Pfefferminzia, vertrag.csv (curated S), Stichtag 31.12.2025; eigene Berechnung</div>
+  <div class="abs foot"></div>
+  <div class="abs foot-l">Pfefferminzia · Verwaltungsrat 22.01.2026 · Folie 2/4</div>
+  <div class="abs foot-r">Fiktives Lehrbeispiel. Alle Daten synthetisch. Keine Verbindung zu realen Personen, Unternehmen oder Marken.</div>
+</section>
+
+<!-- ===================== Folie 3 · Diagramm ===================== -->
+<section class="slide" data-id="PfDiagramm">
+  <div class="abs eyebrow">Storno nach Herkunft</div>
+  <div class="abs logo"><svg viewBox="0 0 338 64" role="img" aria-label="Pfefferminzia"><rect width="64" height="64" rx="18" fill="#173d2c"/><path d="M14 18h36v22c0 7-8 11-18 17-10-6-18-10-18-17V18Z" fill="#d9f1e1"/><path d="M32 46V25M32 39c-7 0-12-5-12-12 7 0 12 5 12 12Zm0-7c0-7 5-12 12-12 0 7-5 12-12 12Z" fill="#52b986" stroke="#173d2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="78" y="42" fill="#173d2c" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="750" letter-spacing="-1.2">Pfefferminzia</text></svg></div>
+
+  <h2 class="abs h2">Minzia-Kunden kündigen seit 2022 häufiger als Pfefferminz-Kunden</h2>
+  <p class="abs sub">2024 <span class="nb">8.4&nbsp;%</span> gegenüber <span class="nb">7.7&nbsp;%</span> – und bei Minzia ist jede zweite Kündigung preisgetrieben</p>
+  <div class="abs rule"></div>
+
+  <svg class="abs chart" id="chart-storno" width="772" height="384" role="img" aria-label="Stornoquote je Jahr nach Herkunft, 2019 bis 2024"></svg>
+
+  <div class="abs side">
+    <h3>Stornogründe 2022–2024</h3>
+    <p>Anteil preisgetriebener Kündigungen (Preis/Wechsel K01 und Prämienerhöhung K02)</p>
+    <svg id="chart-gruende" width="292" height="210" style="display:block; margin-top:14px" role="img" aria-label="Anteil preisgetriebener Kündigungen nach Herkunft"></svg>
+  </div>
+
+  <div class="abs src">Quelle: Pfefferminzia, vertrag.csv (curated S), Stichtag 31.12.2025; eigene Berechnung.<br>
+    Minzia vor 2021 ohne aussagekräftigen Bestand (2019: 0, 2020: 12 Verträge). 2025 nicht dargestellt (Storno-Daten unvollständig).</div>
+  <div class="abs foot"></div>
+  <div class="abs foot-l">Pfefferminzia · Verwaltungsrat 22.01.2026 · Folie 3/4</div>
+  <div class="abs foot-r">Fiktives Lehrbeispiel. Alle Daten synthetisch. Keine Verbindung zu realen Personen, Unternehmen oder Marken.</div>
+</section>
+
+<!-- ===================== Folie 4 · Entscheidungsbedarf ===================== -->
+<section class="slide" data-id="PfBeschluss">
+  <div class="abs eyebrow">Entscheidungsbedarf</div>
+  <div class="abs logo"><svg viewBox="0 0 338 64" role="img" aria-label="Pfefferminzia"><rect width="64" height="64" rx="18" fill="#173d2c"/><path d="M14 18h36v22c0 7-8 11-18 17-10-6-18-10-18-17V18Z" fill="#d9f1e1"/><path d="M32 46V25M32 39c-7 0-12-5-12-12 7 0 12 5 12 12Zm0-7c0-7 5-12 12-12 0 7-5 12-12 12Z" fill="#52b986" stroke="#173d2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="78" y="42" fill="#173d2c" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="750" letter-spacing="-1.2">Pfefferminzia</text></svg></div>
+
+  <h2 class="abs h2">Der Verwaltungsrat soll heute drei Beschlüsse fassen</h2>
+  <p class="abs sub">Anträge auf Basis der Auswertung zum Stichtag 31.12.2025</p>
+  <div class="abs rule"></div>
+
+  <div class="abs row" style="top:232px">
+    <div class="n">1</div>
+    <div class="k">Storno</div>
+    <div class="t">Der Verwaltungsrat beauftragt die Geschäftsleitung, die Storno-Frühwarnung (heute nur Leben) bis Q2&nbsp;2026 auf den Direktbestand auszuweiten und die Preisstrategie des Direktkanals zu überprüfen.</div>
+    <div class="e"><b>50&nbsp;%</b><span>der Minzia-Kündigungen 2022–2024 preisgetrieben</span></div>
+  </div>
+  <div class="abs row" style="top:360px">
+    <div class="n">2</div>
+    <div class="k">Migration</div>
+    <div class="t">Der Verwaltungsrat genehmigt die Abschaltung von HAPO 2026 unter der Bedingung, dass die 15&nbsp;Migrationsfehler und 111&nbsp;Warnungen aus dem Migrationslog vorher nachgearbeitet sind.</div>
+    <div class="e"><b>93.1&nbsp;%</b><span>von 1'821 Objekten ohne Befund migriert</span></div>
+  </div>
+  <div class="abs row last" style="top:488px">
+    <div class="n">3</div>
+    <div class="k">Freigabe</div>
+    <div class="t">Der Verwaltungsrat verlangt, dass keine ablehnende Entscheidung mehr ohne menschliche Freigabe versandt wird, und lässt sich die Umsetzung der Kompetenzordnung 2.1 quartalsweise berichten.</div>
+    <div class="e"><b>Quartalsweise</b><span>Bericht an den Verwaltungsrat</span></div>
+  </div>
+
+  <div class="abs src">Quelle: Pfefferminzia, vertrag.csv (curated S) und migrationslog.csv, Stichtag 31.12.2025; eigene Berechnung</div>
+  <div class="abs foot"></div>
+  <div class="abs foot-l">Pfefferminzia · Verwaltungsrat 22.01.2026 · Folie 4/4</div>
+  <div class="abs foot-r">Fiktives Lehrbeispiel. Alle Daten synthetisch. Keine Verbindung zu realen Personen, Unternehmen oder Marken.</div>
+</section>
+
+<script>
+(function () {
+  if (!window.d3) return;
+  const C = { dg: "#173d2c", mint: "#52b986", mintInk: "#23774d", lm: "#d9f1e1", muted: "#56665d", line: "#d5e3da", ink: "#1c2a23" };
+
+  /* Daten exakt aus praesentation-inhalt.json (chart.serien) */
+  const serien = [
+    { name: "Pfefferminz", farbe: C.dg, werte: [
+      { jahr: 2019, quote: 7.03 }, { jahr: 2020, quote: 5.04 }, { jahr: 2021, quote: 6.25 },
+      { jahr: 2022, quote: 5.26 }, { jahr: 2023, quote: 5.82 }, { jahr: 2024, quote: 7.66 } ] },
+    { name: "Minzia", farbe: C.mintInk, werte: [
+      { jahr: 2019, quote: null }, { jahr: 2020, quote: null }, { jahr: 2021, quote: 1.32 },
+      { jahr: 2022, quote: 7.30 }, { jahr: 2023, quote: 6.38 }, { jahr: 2024, quote: 8.37 } ] }
+  ];
+  const fmt = v => d3.format(".1f")(v) + " %";
+
+  /* ---------- Liniendiagramm ---------- */
+  const svg = d3.select("#chart-storno");
+  const W = 772, H = 384, m = { top: 34, right: 178, bottom: 40, left: 52 };
+  const x = d3.scaleLinear().domain([2019, 2024]).range([m.left, W - m.right]);
+  const y = d3.scaleLinear().domain([0, 10]).range([H - m.bottom, m.top]);
+
+  // Band «seit 2022»
+  svg.append("rect").attr("x", x(2022)).attr("y", m.top).attr("width", x(2024) - x(2022))
+    .attr("height", H - m.bottom - m.top).attr("fill", "#f3faf5");
+  svg.append("text").attr("x", x(2022) + 10).attr("y", m.top + 22).attr("font-size", 15)
+    .attr("font-weight", 600).attr("fill", C.mintInk).text("seit 2022 liegt Minzia darüber");
+
+  // Gitter und y-Achse
+  const yt = [0, 2, 4, 6, 8, 10];
+  svg.append("g").selectAll("line").data(yt).join("line")
+    .attr("x1", m.left).attr("x2", W - m.right).attr("y1", d => y(d)).attr("y2", d => y(d))
+    .attr("stroke", d => d === 0 ? "#9fb3a7" : C.line).attr("stroke-width", 1);
+  svg.append("g").selectAll("text").data(yt).join("text")
+    .attr("x", m.left - 12).attr("y", d => y(d)).attr("dy", "0.35em").attr("text-anchor", "end")
+    .attr("font-size", 15).attr("fill", C.muted).text(d => d);
+  svg.append("text").attr("x", 0).attr("y", 14).attr("font-size", 15).attr("font-weight", 600)
+    .attr("fill", C.muted).text("Stornoquote in %");
+
+  // x-Achse
+  svg.append("g").selectAll("text").data(d3.range(2019, 2025)).join("text")
+    .attr("x", d => x(d)).attr("y", H - m.bottom + 26).attr("text-anchor", "middle")
+    .attr("font-size", 15).attr("fill", C.muted).text(d => d);
+  svg.append("text").attr("x", W - m.right + 36).attr("y", H - m.bottom + 26)
+    .attr("font-size", 15).attr("fill", C.muted).text("Jahr");
+
+  // Linien
+  const line = d3.line().defined(d => d.quote !== null).x(d => x(d.jahr)).y(d => y(d.quote));
+  serien.forEach(s => {
+    svg.append("path").datum(s.werte).attr("fill", "none").attr("stroke", s.farbe)
+      .attr("stroke-width", s.name === "Minzia" ? 4 : 3).attr("stroke-linejoin", "round").attr("stroke-linecap", "round")
+      .attr("d", line);
+    svg.append("g").selectAll("circle").data(s.werte.filter(d => d.quote !== null)).join("circle")
+      .attr("cx", d => x(d.jahr)).attr("cy", d => y(d.quote)).attr("r", 5)
+      .attr("fill", "#fff").attr("stroke", s.farbe).attr("stroke-width", 2.5);
+  });
+
+  // Direkte Beschriftung am Linienende (leicht auseinandergezogen)
+  const last = serien.map(s => ({ s, v: s.werte[s.werte.length - 1].quote }));
+  const yM = y(8.37) - 12, yP = y(7.66) + 14;
+  [[last[1], yM], [last[0], yP]].forEach(([o, yy]) => {
+    const g = svg.append("text").attr("x", x(2024) + 16).attr("y", yy).attr("dy", "0.35em");
+    g.append("tspan").attr("font-size", 19).attr("font-weight", 750).attr("fill", o.s.farbe).text(fmt(o.v));
+    g.append("tspan").attr("dx", 8).attr("font-size", 16).attr("font-weight", 600).attr("fill", o.s.farbe).text(o.s.name);
+  });
+  // Minzia-Startpunkt 2021 kommentieren
+  svg.append("text").attr("x", x(2021) + 12).attr("y", y(1.32) + 4).attr("font-size", 15)
+    .attr("fill", C.muted).text("Minzia 2021: 1 von 76 Verträgen");
+
+  /* ---------- Stornogründe: Anteil preisgetrieben ---------- */
+  const g2 = d3.select("#chart-gruende");
+  const gr = [
+    { name: "Minzia", preis: 16 + 5, total: 42, farbe: C.mintInk },
+    { name: "Pfefferminz", preis: 18 + 9, total: 86, farbe: C.dg }
+  ];
+  const bx = d3.scaleLinear().domain([0, 1]).range([0, 292]);
+  gr.forEach((d, i) => {
+    const top = i * 104;
+    const q = d.preis / d.total;
+    g2.append("text").attr("x", 0).attr("y", top + 30).attr("font-size", 30).attr("font-weight", 750)
+      .attr("fill", d.farbe).text(d3.format(".0f")(q * 100) + " %");
+    g2.append("text").attr("x", 292).attr("y", top + 30).attr("text-anchor", "end").attr("font-size", 17)
+      .attr("font-weight", 600).attr("fill", d.farbe).text(d.name);
+    g2.append("rect").attr("x", 0).attr("y", top + 44).attr("width", 292).attr("height", 12).attr("rx", 6).attr("fill", "#fff");
+    g2.append("rect").attr("x", 0).attr("y", top + 44).attr("width", bx(q)).attr("height", 12).attr("rx", 6).attr("fill", d.farbe);
+    g2.append("text").attr("x", 0).attr("y", top + 80).attr("font-size", 15).attr("fill", C.muted)
+      .text(d.preis + " von " + d.total + " Kündigungen");
+  });
+})();
+</script>
+</body>
+</html>
