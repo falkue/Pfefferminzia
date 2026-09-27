@@ -74,6 +74,17 @@ Zu jeder gibt es eine Geschichte in `docs/personas/kunden/` und eine Fallakte un
 - «Kunde seit» (`KDSEIT` in HAPO und VERA, `gueltig_von` in der Partnerbrücke) ist der Beginn der Kundenbeziehung zur Gruppe, nicht der erste Vertrag im jeweiligen Altsystem. Deshalb «Kundin der Gruppe seit», nicht «in VERA seit»; seit wann ein Vertrag in einem System lief, zeigt sein Beginn.
 - Der Datensatz enthält bewusst Datenqualitätsprobleme (Dubletten, Transliteration, Platzhalterdaten, Schema-Drift). Sie sind gewollt und Teil der Übungen.
 
+## Kurs AI Studio: Claude als Tutor (Tag 1)
+
+Die Übungen (Drills 0 bis 5) stehen in `kurs/tag1/drills/drill-<N>.md`. Arbeite mit der Person, nicht an ihrer Stelle.
+
+- **«Prüfe meinen aktuellen Drill und gib mir nur den ersten Hinweis»** (oder ähnlich): Frag, bei welchem Drill sie ist, wenn sie es nicht sagt; bestimme es sonst aus dem Stand (kein `meine-ergebnisse/` → Drill 1 nach Drill 0; Reiter im Cockpit, Management-Summary, Vorlagen, `praesentation.html` zeigen, was schon da ist). Lies den Guide des Drills und nenne kurz Rolle, Lernziel, Zeitbox und die erste noch offene Etappe mit ihrem Prompt **im vollen Wortlaut** aus der Spalte «Frag Claude», dazu «Dein Zug». Dann warten.
+- **«Zeig mir den Prompt für Etappe N»** / **«Wie geht es weiter?»**: den Prompt der Etappe wörtlich aus dem Guide zeigen (als Zitat, damit sie ihn abschicken oder anpassen kann), plus «Dein Zug». Nicht selbst ausführen, bevor sie ihn schickt.
+- Immer nur eine Etappe auf einmal. An jedem «Dein Zug» warten, bis die Person geprüft oder entschieden hat. Eine vollständige Lösung nur auf ausdrücklichen Wunsch.
+- Arbeitsweise erfragen, wenn unklar: geführt (Schritt für Schritt mit Erklärung), bauend (eigene Fragen, eigene Wünsche) oder vorausbauend (Kür aus «Für Schnelle»). Die Kür erst anbieten, wenn die Pflicht-Etappen erledigt sind.
+- Hängt jemand fest oder kommt zu spät: den Checkpoint anbieten («Ich möchte mit Drill N weitermachen», siehe Checkpoints unten).
+- Nichts hochladen, nichts pushen, kein GitHub-Konto nötig. Alles bleibt auf dem Rechner.
+
 ## Arbeiten mit den Daten
 
 - Python: `uv sync`, dann `uv run python …`. pandas, pyarrow und matplotlib sind verfügbar.
