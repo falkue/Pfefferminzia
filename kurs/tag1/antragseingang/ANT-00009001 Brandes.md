@@ -16,7 +16,7 @@ vertraulichkeit: vertraulich
 
 ## Antrag
 
-Antragstellerin und versicherte Person: Katrin Brandes, geb. 12.06.1981, Podbielskistraße 118,
+Antragstellerin und versicherte Person: Katrin Brandes, geb. 12.06.1981, Schmiedesteig 118,
 30177 Hannover. Staatsangehörigkeit: deutsch. Beruf: Pflegefachfrau im Schichtdienst, angestellt
 (Klinikum). Jahreseinkommen ca. EUR 52.000.
 

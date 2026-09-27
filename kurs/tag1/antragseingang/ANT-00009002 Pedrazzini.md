@@ -16,7 +16,7 @@ vertraulichkeit: vertraulich
 
 ## Antrag
 
-Antragsteller und versicherte Person: Bruno Pedrazzini, geb. 03.02.1967, Via Cortivallo 22,
+Antragsteller und versicherte Person: Bruno Pedrazzini, geb. 03.02.1967, Via delle Betulle 22,
 6900 Lugano. Staatsangehörigkeit: italienisch, Niederlassungsbewilligung C. Beruf:
 Betriebsleiter in einer Druckerei, angestellt. Jahreseinkommen ca. CHF 118'000.
 

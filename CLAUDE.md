@@ -114,4 +114,4 @@ Zu jeder gibt es eine Geschichte in `docs/personas/kunden/` und eine Fallakte un
 
 - Keine realen Personen, Firmen oder Adressen erfinden oder einfügen; Domains nur `.example`.
 - Der Ordner `data/truth/` ist die Lösung (nur im Dozentenzweig `main`, im Zweig `teilnehmer` fehlt er). Für Übungen nicht verwenden, wenn die Aufgabe es nicht ausdrücklich erlaubt.
-- Den Datensatz neu erzeugen: `uv run pfefferminzia generate --stufe S` (deterministisch, Master-Seed 20250101). Datenschau: `uv run python scripts/build_dashboard.py S`.
+- Den Datensatz neu erzeugen und die Datenschau bauen geht nur im Dozentenzweig `main` (`uv run pfefferminzia generate --stufe S`, deterministisch, Master-Seed 20250101; `uv run python scripts/build_dashboard.py S`). Im Zweig `teilnehmer` liegt der fertige Datensatz; nicht neu erzeugen.

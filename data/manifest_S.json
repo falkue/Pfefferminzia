@@ -4,7 +4,7 @@
   "schema_version": "0.1.0",
   "scale": "S",
   "stichtag": "2025-12-31",
-  "generated_at": "2026-09-25T17:28:38Z",
+  "generated_at": "2026-09-27T09:58:41Z",
   "generator": {
     "repo": "Pfefferminzia",
     "package": "pfefferminzia",
@@ -66,8 +66,8 @@
         "parquet": "data/curated/S/parquet/dokument.parquet"
       },
       "sha256": {
-        "csv": "78bacd5fe02d66bc0211e6134879f7afff27108e4c503801279587f15258b17f",
-        "parquet": "2b6845c19d03df607d8ee8d48d695e484aa1f1970d2418dc6205fbc6b4ac6315"
+        "csv": "ad5e6c49760dcbd7a16073b6820ce193987ee47a74755f7ea95d21d22ef4230a",
+        "parquet": "bcad668224d0b9c44fc5b036ebb6ddc0022edd6ec06eb2e7bf0b151d9e9fce6c"
       }
     },
     {
@@ -488,8 +488,8 @@
     "data/documents/S/personas/PTR-00000008/INT-00000811_brief.md": "26264dc35cd88644ae14b86039c31f14a0b1c31e2e0374a31445bd8495b6676d",
     "data/documents/S/personas/PTR-00000008/INT-00000823_brief.md": "392d2daf51168fb94c5786abca6d58ff645db9705c7da96f9a87a69df5267ca8",
     "data/documents/S/personas/PTR-00000008/INT-00000824_brief.md": "d6da959224621dfb494306ffc298f1dec46f4e63eb7c6d49973f01931c8bd303",
-    "data/documents/S/personas/PTR-00000009/DOK-00000901_rechnung.md": "09f9777a7bd25b131cef36d23fc9636761dec17e6d485fc08db80ade847f40c7",
-    "data/documents/S/personas/PTR-00000009/DOK-00000902_rechnung.md": "55e0358411d8974be0bad9cafa18f8ed7cec4f396a0ea3a97ee5375ab0f0d38d",
+    "data/documents/S/personas/PTR-00000009/DOK-00000901_rechnung.md": "3774e8baf367143a726e09c0658db882c3e5c257916ba3d8ffbe8c1ed3b19e42",
+    "data/documents/S/personas/PTR-00000009/DOK-00000902_rechnung.md": "46aa43e6f58c73459e61abeb3d1c8a34152ca000c05b093cfa4c1d6eccb5c708",
     "data/documents/S/personas/PTR-00000009/DOK-00000903_foto.md": "d9b7db49ab3f8ab687ef77e721fce8824610869b170e8d4aa4cd2882e9dfe0b1",
     "data/documents/S/personas/PTR-00000009/DOK-00000904_betrugspruefungsbericht.md": "b6363bbda49d3f4ddcb7edf6f918c29968e6fed2f9e57bfbc5eb4fce4c84f8c3",
     "data/documents/S/personas/PTR-00000009/INT-00000918_portal.md": "6d92b7fb9ca7fb3056ac0795c7a404b628cbba559081d8e9977ec2744663a618",

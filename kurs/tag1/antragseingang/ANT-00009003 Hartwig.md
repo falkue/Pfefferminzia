@@ -16,7 +16,7 @@ vertraulichkeit: vertraulich
 
 ## Antrag
 
-Antragstellerin und versicherte Person: Lea Hartwig, geb. 22.05.1991, Klybeckstrasse 64, 4057 Basel.
+Antragstellerin und versicherte Person: Lea Hartwig, geb. 22.05.1991, Rebstockhalde 64, 4057 Basel.
 Staatsangehörigkeit: schweizerisch. Beruf: Primarlehrerin, angestellt. Jahreseinkommen ca. CHF 96'000.
 
 Produkt: RisikoLeben, Versicherungssumme CHF 250'000 konstant, Laufzeit 25 Jahre, gewünschter Beginn

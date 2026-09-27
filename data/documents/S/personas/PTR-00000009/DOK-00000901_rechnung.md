@@ -21,7 +21,7 @@ vertraulichkeit: vertraulich
 
 # Rechnung Nr. 2022-0917 Fernseher
 
-TV-Welt Wildau, Bahnhofstr. 11, 15745 Wildau
+TV-Welt Wildau, Foehrendamm 11, 15745 Wildau
 Rechnung Nr. 2022-0917 vom 06.09.2022
 
 1x Fernseher 55 Zoll, Ersatz nach Transportschaden          EUR 890,00

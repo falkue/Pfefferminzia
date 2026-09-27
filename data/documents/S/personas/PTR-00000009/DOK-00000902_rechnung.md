@@ -21,7 +21,7 @@ vertraulichkeit: vertraulich
 
 # Rechnung Nr. 2024-0918 Sideboard
 
-Moebel Spreewald, Hauptstr. 4, 03222 Luebbenau
+Moebel Spreewald, Rebstockring 4, 03222 Luebbenau
 Rechnung Nr. 2024-0918 vom 08.04.2024
 
 1x Sideboard Eiche, Ersatz nach Transportschaden               EUR 2.300,00
