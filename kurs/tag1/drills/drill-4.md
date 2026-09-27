@@ -1,6 +1,6 @@
 # Drill 4 · Das Notizbuch des Managers
 
-Tag 1 «AI Augmentation», Montag 28. September 2026. Zeitbox 70 Minuten: 15 Input · 45 Übung · 10 Debrief.
+Tag 1 «AI Augmentation», Montag 28. September 2026. Zeitbox 70 Minuten: 15 Einführung · 45 Übung · 10 Auswertung.
 
 ## Deine Rolle
 
@@ -21,21 +21,21 @@ Notizen in dein Notizbuch; was davon ins Gespräch geht, entscheidest du.
 
 Öffne das Notizbuch in Obsidian. Lass dir von Claude den Jour fixe vorbereiten und deine offenen
 Zusagen auflisten. Frag dann: «Was übersehe ich?» Am Ende liegen drei neue Notizen in deinem
-Notizbuch, und du weisst, welche Zusage du heute als Erstes einlöst. Ein 1:1 vorbereiten ist Kür.
+Notizbuch, und du weisst, welche Zusage du heute als Erstes einlöst. Ein Einzelgespräch (1:1) vorzubereiten ist eine Zusatzaufgabe.
 
 ## Zeitbox
 
 | Teil | Dauer | Was passiert |
 |---|---|---|
-| Input | 15 Min. | Was ist ein Notizbuch in Obsidian? Wer ist Aylin? Obsidian installieren (alle machen mit), Vorführung Etappe 1 |
+| Einführung | 15 Min. | Was ist ein Notizbuch in Obsidian? Wer ist Aylin? Obsidian installieren (alle machen mit), Vorführung Etappe 1 |
 | Übung | 45 Min. | Etappen 1 bis 4, allein oder mit deinem Peer (etwa 6 · 15 · 10 · 14 Min.); Claude denkt bei Etappe 2 und 3 jeweils drei bis fünf Minuten, lies in der Zeit in Obsidian |
-| Debrief | 10 Min. | Was hat Claude gefunden, was du übersehen hättest? Wo hat es geurteilt? Was gilt bei echten 1:1-Notizen? |
+| Auswertung | 10 Min. | Was hat Claude gefunden, was du übersehen hättest? Wo hat es geurteilt? Was gilt bei echten 1:1-Notizen? |
 
 ## Vorher kurz einstellen
 
 Claude-App, Reiter **Code**, Ordner **Pfefferminzia**, Modell **Sonnet 5**, Modus **Auto**. Eine
 **neue Sitzung** beginnen, damit Claude nicht noch mit Bestandszahlen aus Drill 1 bis 3 beschäftigt ist.
-Obsidian installierst du im Input mit: **obsidian.md**, herunterladen, installieren (kostenlos, kein
+Obsidian installierst du in der Einführung mit: **obsidian.md**, herunterladen, installieren (kostenlos, kein
 Konto nötig). Klappt das nicht, geht es ohne weiter (Hinweis 3).
 
 Claudes Antworten sind lang. Lies zuerst, was fett ist, und prüf dann eine Stelle genau.
@@ -81,11 +81,11 @@ Nimm den nächsten Hinweis erst, wenn du ihn brauchst.
 
 ## Für Schnelle
 
-Wähle **eines**, am besten «1:1 vorbereiten».
+Wähle **eines**, am besten «Einzelgespräch (1:1) vorbereiten».
 
 - **Zusagen der anderen:** «Ergänze die Übersicht der offenen Zusagen um das, was die Personen selbst übernommen haben, mit denselben Regeln, und sag mir in einem Satz, wie viele der überfälligen Punkte bei mir selbst liegen.» Dann eine überfällige Zeile anklicken und nachlesen, bei wem sie laut Notiz liegt.
 
-- **1:1 vorbereiten:** Eine Person wählen (Vorschlag: Lukas Maier). «Bereite mein erstes 1:1 mit
+- **Einzelgespräch (1:1) vorbereiten:** Eine Person wählen (Vorschlag: Lukas Maier). «Bereite mein erstes 1:1 mit
   Lukas Maier nach seiner Rückkehr vor. Nimm alle Notizen, in denen er vorkommt, auch die Jour fixes.
   Wie haben sich Ton, Länge und Inhalt unserer Gespräche seit September verändert? Womit beginne ich
   das Gespräch, was sollte ich ansprechen, mit welchen Fundstellen, und welche offenen Fragen stelle
@@ -100,7 +100,9 @@ Wähle **eines**, am besten «1:1 vorbereiten».
 - **Vorausbauen (Drill 5):** «Im letzten Jour fixe kam der Auftrag für einen Beitrag zum
   Verwaltungsrats-Bericht ‹Ein Jahr nach der Fusion›. Stell mir aus dem Notizbuch zusammen, was ich
   zu ‹Stand Pieper› und ‹Lehren aus der Migration› beitragen kann, mit Fundstelle und Stichtag, und
-  sag mir ehrlich, welche Lehre bisher nicht umgesetzt ist. Leg es als neue Notiz ab.» Die
+  sag mir ehrlich, welche Lehre bisher nicht umgesetzt ist. Leg es als neue Notiz ‹2026-01-09
+  Beitrag VR-Bericht› ab, mit ‹An: Lena Mbatha-Keller› unter dem Titel und ohne Persönliches aus
+  1:1-Gesprächen.» Die
   Präsentation selbst baust du in Drill 5.
 
 ## Drei Arbeitsweisen
