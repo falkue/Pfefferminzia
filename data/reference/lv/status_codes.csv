@@ -1,0 +1,35 @@
+status_typ,status_code,bezeichnung_de,vera_code,vera_stornogrund,mint_code_v1,mint_code_v2,silas_code,endstatus,zaehlt_als_churn,beschreibung
+ANTRAG,EINGEGANGEN,Antrag eingegangen,A0,,applied,APPLIED,,NEIN,NEIN,"Antrag erfasst, Unterlagen noch nicht geprueft"
+ANTRAG,IN_PRUEFUNG,In Risikopruefung,A1,,underwriting,UNDERWRITING,,NEIN,NEIN,Risikopruefung laeuft (Automat oder Sachbearbeiter)
+ANTRAG,RUECKFRAGE,Rueckfrage / Unterlagen angefordert,A2,,pending_docs,PENDING_DOCS,,NEIN,NEIN,"Arztzeugnis, Labor oder Kundenrueckfrage offen"
+ANTRAG,ANGENOMMEN,Angenommen zu Tarifbedingungen,A3,,accepted,ACCEPTED,,JA,NEIN,Fuehrt zu Vertrag Status AKTIV
+ANTRAG,ANGENOMMEN_ZUSCHLAG,Angenommen mit Zuschlag/Ausschluss,A4,,accepted_loading,ACCEPTED_LOADING,,JA,NEIN,Gegenofferte muss vom Kunden angenommen werden
+ANTRAG,ZURUECKGESTELLT,Zurueckgestellt,A5,,postponed,POSTPONED,,JA,NEIN,Wiedervorlage nach 6-24 Monaten
+ANTRAG,ABGELEHNT,Abgelehnt,A6,,declined,DECLINED,,JA,NEIN,Ablehnungsschreiben ohne medizinische Details
+ANTRAG,ZURUECKGEZOGEN,Vom Kunden zurueckgezogen,A7,,withdrawn,WITHDRAWN,,JA,NEIN,Inkl. Nichtannahme der Gegenofferte
+VERTRAG,ANTRAG,Antrag (noch nicht policiert),00,,applied,APPLIED,,NEIN,NEIN,Vorstufe; in VERA nur als Vormerkung
+VERTRAG,AKTIV,In Kraft,01,,active,ACTIVE,,NEIN,NEIN,"Praemienzahlend, Deckung besteht"
+VERTRAG,GEMAHNT,"In Kraft, gemahnt",02,,active,ACTIVE,,NEIN,NEIN,VERA fuehrt Mahnstufe separat (MAHNST 1-3); MINT: Substatus dunning.level
+VERTRAG,RUHEND,Ruhend (Leistungspflicht ruht nach Mahnfrist),03,,suspended,SUSPENDED,,NEIN,NEIN,CH Art. 20 VVG / DE § 38 VVG; Wiederinkraftsetzung mit Gesundheitserklaerung
+VERTRAG,BEITRAGSFREI,Beitragsfrei gestellt,04,,paid_up,PAID_UP,,NEIN,NEIN,"Beitragsfreie Summe; DE § 165 VVG, CH Art. 90 VVG Umwandlung"
+VERTRAG,REDUZIERT,Summe reduziert / Teilrueckkauf,05,,reduced,REDUCED,,NEIN,NEIN,Nur kapitalbildende Produkte
+VERTRAG,ZURUECKGEKAUFT,Zurueckgekauft (Kuendigung VN),06,01,surrendered,SURRENDERED,,JA,JA,Rueckkaufswert ausbezahlt; Churn-Ereignis
+VERTRAG,STORNIERT,Storniert (Nichtzahlung / Ruecktritt / Widerruf),07,05,lapsed,LAPSED,,JA,JA,"VERA Stornogrund 05 Nichtzahlung, 02 Kuendigung VU, 03 Ruecktritt Anzeigepflicht, 04 Widerruf; Migrationsstorno ZZ zaehlt NICHT als Churn"
+VERTRAG,ABGELAUFEN,Abgelaufen (Erleben),08,,matured,MATURED,,JA,NEIN,Ablaufleistung ausbezahlt oder in Rente umgewandelt
+VERTRAG,LEISTUNGSFALL,Leistungsfall (Tod / EU / BU) offen oder reguliert,09,,claim,CLAIM,,JA,NEIN,Tod beendet Vertrag; EU/BU laufende Leistung mit Praemienbefreiung
+VERTRAG,RENTENBEZUG,Rentenbezug,10,,annuity,ANNUITY_PAYOUT,,NEIN,NEIN,Jaehrliche Lebensbescheinigung
+VERTRAG,ABGELEHNT,Abgelehnt (kein Vertrag),11,,declined,DECLINED,,JA,NEIN,Nur in VERA als Vertragsstatus gefuehrt; MINT haelt Ablehnung beim Antrag
+VERTRAG,WIDERRUFEN,Widerrufen innerhalb Widerrufsfrist,12,04,revoked,REVOKED,,JA,NEIN,"DE 30 Tage § 152 VVG, CH 14 Tage Art. 2a VVG"
+LEISTUNGSFALL,GEMELDET,Gemeldet,,,reported,REPORTED,M,NEIN,NEIN,Eingang der Meldung; Praemienstopp; Sperre Bezugsrechtsaenderung
+LEISTUNGSFALL,UNTERLAGEN_OFFEN,Unterlagen angefordert,,,docs_pending,DOCS_PENDING,U,NEIN,NEIN,"Sterbeurkunde, Police, Ausweis, Arztberichte"
+LEISTUNGSFALL,PRUEFUNG,In formeller / materieller Pruefung,,,review,IN_REVIEW,P,NEIN,NEIN,Inkl. Anzeigepflicht-Nachpruefung und Bezugsrechtspruefung
+LEISTUNGSFALL,BETRUGSPRUEFUNG,Special Investigation,,,siu,SIU_REVIEW,B,NEIN,NEIN,Paralleler Aufgabenstrang; Label nur in Ground Truth vollstaendig
+LEISTUNGSFALL,ENTSCHEID,"Entschieden, Auszahlung vorbereitet",,,decided,DECIDED,E,NEIN,NEIN,Leistungsabrechnung erstellt
+LEISTUNGSFALL,AUSGEZAHLT,Ausgezahlt / anerkannt,,,paid,PAID,Z,JA,NEIN,Bei EU/BU: laufende Rente anerkannt
+LEISTUNGSFALL,TEILWEISE,Teilweise anerkannt,,,partial,PARTIALLY_PAID,T,JA,NEIN,"Teilgrad EU, Vertragsanpassung ex tunc, Rueckkaufswert statt Summe"
+LEISTUNGSFALL,ABGELEHNT,Abgelehnt,,,denied,DENIED,A,JA,NEIN,"Anzeigepflicht, Suizidfrist, Verzug, Verjaehrung, kein Bezugsrecht, Betrug"
+LEISTUNGSFALL,KULANZ,Kulanzleistung,,,goodwill,GOODWILL,K,JA,NEIN,Kulanzstufen K1-K4 gemaess LPR
+LEISTUNGSFALL,VERGLEICH,Vergleich (Einmalzahlung),,,settlement,SETTLEMENT,V,JA,NEIN,Vor allem EU/BU
+LEISTUNGSFALL,RECHTSSTREIT,Rechtsstreit / Ombudsstelle,,,litigation,LITIGATION,R,NEIN,NEIN,Ombudsman Privatversicherung CH / Versicherungsombudsmann DE oder Gericht
+LEISTUNGSFALL,NACHPRUEFUNG,Nachpruefung laufende EU/BU-Leistung,,,reassessment,REASSESSMENT,N,NEIN,NEIN,Jaehrlich/zweijaehrlich; kann zur Einstellung fuehren
+LEISTUNGSFALL,GESCHLOSSEN,Geschlossen,,,closed,CLOSED,G,JA,NEIN,Akte geschlossen; Wiedereroeffnung moeglich

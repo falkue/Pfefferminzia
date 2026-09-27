@@ -1,0 +1,24 @@
+produkt,markt,selbstbehalt_typ,betrag,waehrung,prozent,minimum,standard,generationen,anteil_bestand_pct,gilt_fuer,bemerkung
+HP-PRIV,CH,fix,0.00,CHF,,,nein,HP-KLASSIK;HP-MODERN;MZ-DIRECT;PM-2025,10.0,alle Schadenarten,
+HP-PRIV,CH,fix,100.00,CHF,,,nein,HP-KLASSIK;HP-MODERN,8.0,alle Schadenarten,"Altvariante, nicht mehr im Neugeschäft"
+HP-PRIV,CH,fix,200.00,CHF,,,ja,HP-KLASSIK;HP-MODERN;MZ-DIRECT;PM-2025,72.0,alle Schadenarten,Standard CH
+HP-PRIV,CH,fix,500.00,CHF,,,nein,HP-MODERN;MZ-DIRECT;PM-2025,10.0,alle Schadenarten,
+HP-PRIV,DE,fix,0.00,EUR,,,ja,HP-KLASSIK;HP-MODERN;MZ-DIRECT;PM-2025,75.0,alle Schadenarten,Standard DE; MZ-DIRECT immer 0
+HP-PRIV,DE,fix,150.00,EUR,,,nein,HP-KLASSIK;HP-MODERN;PM-2025,20.0,alle Schadenarten,ca. 15 % Rabatt
+HP-PRIV,DE,fix,250.00,EUR,,,nein,PM-2025,5.0,alle Schadenarten,Option Komfort/Premium
+HP-BETR,CH,fix,500.00,CHF,,,ja,HP-KLASSIK;HP-MODERN;PM-2025,55.0,Sach- und Vermögensschäden,Standard; Personenschäden ohne SB
+HP-BETR,CH,fix,1000.00,CHF,,,nein,HP-KLASSIK;HP-MODERN;PM-2025,25.0,Sach- und Vermögensschäden,
+HP-BETR,CH,fix,2000.00,CHF,,,nein,HP-MODERN;PM-2025,12.0,Sach- und Vermögensschäden,
+HP-BETR,CH,fix,5000.00,CHF,,,nein,HP-MODERN;PM-2025,8.0,Sach- und Vermögensschäden,
+HP-BETR,CH,prozent_min,,CHF,10.0,1000.00,ja,HP-MODERN;PM-2025,100.0,Bearbeitungs-/Obhutsschäden,gilt zusätzlich zum fixen SB für Schadenart SA-BEARB
+HP-BETR,DE,fix,250.00,EUR,,,nein,HP-KLASSIK;HP-MODERN;PM-2025,25.0,Sachschäden,
+HP-BETR,DE,fix,500.00,EUR,,,ja,HP-KLASSIK;HP-MODERN;PM-2025,55.0,Sachschäden,Standard; Personenschäden ohne SB
+HP-BETR,DE,fix,1000.00,EUR,,,nein,HP-MODERN;PM-2025,20.0,Sachschäden,
+HP-BETR,DE,prozent_min,,EUR,10.0,1000.00,ja,HP-MODERN;PM-2025,100.0,Tätigkeitsschäden,gilt zusätzlich zum fixen SB für Schadenart SA-BEARB
+HP-BERUF,CH,fix,1000.00,CHF,,,nein,HP-KLASSIK;HP-MODERN;PM-2025,25.0,Vermögensschäden,
+HP-BERUF,CH,fix,2000.00,CHF,,,ja,HP-KLASSIK;HP-MODERN;PM-2025,55.0,Vermögensschäden,Standard
+HP-BERUF,CH,fix,5000.00,CHF,,,nein,HP-MODERN;PM-2025,20.0,Vermögensschäden,
+HP-BERUF,CH,prozent_min,,CHF,10.0,2500.00,ja,HP-MODERN;PM-2025,100.0,Vermögensschäden Berufsgruppe BG-IT,ersetzt den fixen SB bei BG-IT
+HP-BERUF,DE,fix,1000.00,EUR,,,nein,HP-KLASSIK;HP-MODERN;PM-2025,35.0,Vermögensschäden,häufig bei Steuerberatern
+HP-BERUF,DE,fix,2500.00,EUR,,,ja,HP-KLASSIK;HP-MODERN;PM-2025,45.0,Vermögensschäden,Standard
+HP-BERUF,DE,fix,5000.00,EUR,,,nein,HP-MODERN;PM-2025,20.0,Vermögensschäden,

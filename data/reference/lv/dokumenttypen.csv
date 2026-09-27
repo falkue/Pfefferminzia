@@ -1,0 +1,43 @@
+dokumenttyp_code,name,phase,formate,umfang_seiten_min,umfang_seiten_max,anzahl_pro_1000_vertraege,anzahl_pro_1000_leistungsfaelle,sprache_varianten,quellsystem,gesundheitsdaten,layout_generationen,bemerkung
+D01,Offerte / Angebot,A,PDF-T,2,6,1100,0,de-CH;de-DE;fr-CH(5%);it-CH(2%),VERA;MINT,NEIN,5 Layouts (1985/1995/2008/2020/2025),Beispielrechnung garantiert / Ueberschuss-Szenarien
+D02,Beratungsprotokoll / Beratungsdokumentation,A,PDF-S;HS,2,4,450,0,de-DE (§ 61/62 VVG);de-CH (Art. 3 VVG Info),DOKU;MINT,NEIN,"ab 2008 DE, ab 2012 CH",Verzichtserklaerungen haeufig
+D03,Antragsformular Leben,B,PDF-S;PDF-T;JSON,4,8,1000,0,de-CH;de-DE,DOKU;MINT,JA,4 Formulargenerationen F1985/F1995/F2008/F2020 (+F2025),JSON nur Minzia-Strecke; 40 % Altbestand schlechte Scanqualitaet (S21)
+D04,Gesundheitsfragebogen,B,PDF-S;HS;JSON;PDF-T,2,4,800,0,de-CH;de-DE,DOKU;MINT,JA,5 Fragenkataloge GF-1985 bis GF-2025,Stolperstein S04 Fragebogen-Generationen; siehe gesundheitsfragen.csv
+D05,"Einwilligungen (Datenschutz, Schweigepflichtentbindung, versicherte Person, GwG)",B,PDF-S,1,2,1000,0,de-DE (§ 213 VVG);de-CH (DSG),DOKU;MINT,NEIN,"3 Fassungen (vor 2008, 2008-2018, DSGVO ab 2018)",
+D06,Aerztliches Zeugnis / Attest (Hausarzt),C;I,PDF-S;HS,2,4,250,1500,de-CH;de-DE;fr-CH(3%),DOKU;SILAS,JA,"Arztjargon, Abkuerzungen (RR, BZ, HbA1c, Z. n.)",Praxisnamen fiktiv; 10 % uebervollstaendige Berichte (S23)
+D07,Grosser Untersuchungsbericht (Vertrauensarzt),C,PDF-S,4,8,60,0,de-CH;de-DE,DOKU,JA,summenabhaengig ab 750001,Gewicht weicht in 12 % vom Antrag ab (S03)
+D08,Laborbefund,C;I,PDF-T;PDF-S,1,3,90,400,de-CH (mmol/l);de-DE (mg/dl),DOKU;SILAS,JA,Einheiten CH vs. DE,"Cotinin, HbA1c, Lipide, HIV"
+D09,Facharztbericht / Klinikentlassungsbericht,C;I,PDF-S,2,10,80,900,de-CH;de-DE;fr-CH(3%);it-CH(1%),DOKU;SILAS,JA,,Erstdiagnosedatum nur hier sichtbar (S03)
+D10,Underwriting-Votum (intern),C,PDF-T;DOCX,1,2,1000,0,de-CH;de-DE,VERA;MINT,JA,Stichworte; MINT als JSON-Regel-Log,Nennt Richtlinie/Tabelle (ARL-Version) und Zuschlag
+D11,Gegenofferte / Annahmeerklaerung mit Zuschlag,C;D,PDF-T,1,2,120,0,de-CH;de-DE,VERA;MINT,NEIN,,Keine Diagnose im Kundenschreiben
+D12,Ablehnungsschreiben,C,PDF-T,1,1,35,0,de-CH;de-DE,VERA;MINT,NEIN,,Hinweis auf Arztauskunft
+D13,Police / Versicherungsschein,D,PDF-S;PDF-T,2,5,1000,0,de-CH;de-DE,DOKU;VERA;MINT,NEIN,"5 Layout-Generationen, Altbestand mit Logo Pfefferminz",DE mit Widerrufsbelehrung
+D14,Nachtrag zur Police,D;E;F,PDF-T;PDF-S,1,2,600,0,de-CH;de-DE,DOKU;VERA;MINT,NEIN,,"Zuschlag, Ausschluss, Bezugsrecht, Summe, Beitragsfreistellung, Dynamik"
+D15,Allgemeine Versicherungsbedingungen (AVB),D,PDF-T,8,40,1000,0,de-CH;de-DE,DOKU;MINT,NEIN,je Tarifgeneration und Land (RW-LV-AVB-*),"PK-85/95 12-16 S., PL-2012/2017 25-35 S., MZ-2020 8-10 S., PZ-2025 30-40 S."
+D16,Tarifbestimmungen / Besondere Bedingungen,D,PDF-T,4,15,1000,0,de-CH;de-DE,DOKU;MINT,NEIN,je Produkt und Generation,"Inkl. Besondere Bedingungen EU/BU, Fonds, 3a"
+D17,Produktinformationsblatt / Basisinformationsblatt / Kundeninformation,D,PDF-T,2,4,700,0,"de-DE (PIB ab 2008, BIB ab 2018);de-CH (Kundeninformation)",DOKU;MINT,NEIN,,
+D18,Jaehrliche Standmitteilung / Vorsorgeausweis-Brief,E,PDF-T;PDF-S,2,4,2500,0,de-DE (§ 155 VVG);de-CH,VERA;DOKU,NEIN,Layout je Generation; PDF-S vor 2008,Nur 3-5 Stichjahre je Vertrag generieren
+D19,Ueberschussmitteilung / Deklaration,E,PDF-T,1,2,1500,0,de-CH;de-DE,VERA,NEIN,,Basis: ueberschuss_parameter.csv
+D20,Dynamik-Ankuendigung / Erhoehungsnachtrag,E,PDF-T,1,2,900,0,de-CH;de-DE,VERA;MINT,NEIN,,Stolperstein S17 Dynamik-Kette
+D21,"Mahnung (1. Mahnung, qualifizierte Mahnung, Ruhen/Kuendigung)",E,PDF-T,1,1,350,0,de-DE (§ 38 VVG);de-CH (Art. 20 VVG),VERA;MINT,NEIN,,Churn-Fruehindikator
+D22,Bezugsrechtsaenderung (Kundenschreiben + Bestaetigung),E,HS;E-Mail;PDF-T,1,2,180,0,de-CH;de-DE,DOKU;MINT,NEIN,,Stolperstein S01: oft unklar formuliert
+D23,Abtretungs-/Verpfaendungsanzeige (Bank),E,PDF-S,1,2,60,0,de-CH;de-DE,DOKU,NEIN,,Stolperstein S18: Verpfaendung nie geloescht
+D24,Beitragsfreistellungs-/Aenderungsantrag und Berechnung,F,PDF-T;HS,1,3,90,0,de-CH;de-DE,VERA;DOKU,NEIN,,Kurz-Gesundheitserklaerung bei Wiederinkraftsetzung
+D25,Kuendigungsschreiben und Rueckkaufsberechnung,G,E-Mail;HS;PDF-T,1,3,150,0,de-CH;de-DE,VERA;DOKU;MINT,NEIN,,Basis: rueckkauf_parameter.yaml
+D26,"Steuerbescheinigung (KapESt DE, 3a-Bescheinigung CH, Rentenbezugsmitteilung)",G;H;J,PDF-T,1,1,300,400,de-CH;de-DE,VERA,NEIN,,
+D27,Ablaufankuendigung / Optionsschreiben / Ablaufabrechnung,H,PDF-T,1,3,150,300,de-CH;de-DE,VERA,NEIN,,6 Monate vor Ablauf
+D28,Leistungsantrag Todesfall,I,PDF-S;HS,2,4,0,600,de-CH;de-DE;fr-CH(5%),SILAS;DOKU,JA,,Todesursache im Freitext
+D29,Sterbeurkunde / Todesschein,I,PDF-S,1,1,0,600,"de-DE (Standesamt);de-CH (Zivilstandsamt, kantonale Layouts);fr-CH;it-CH;Ausland (EN/TR mit Uebersetzung/Apostille)",DOKU,NEIN,kantonale Layouts,Stolperstein S13: Datum/Name weicht von D30 ab
+D30,Aerztliche Todesbescheinigung (Todesursache),I,PDF-S;HS,1,2,0,500,de-DE (vertraulicher Teil);de-CH,DOKU,JA,,ICD-10 Grundleiden und unmittelbare Ursache
+D31,Erbschein (DE) / Erbbescheinigung (CH),I,PDF-S,1,2,0,120,de-DE;de-CH;fr-CH,DOKU,NEIN,,Nachlassgericht / kantonale Behoerde
+D32,Leistungsantrag EU/BU,I,PDF-S;HS,10,20,0,250,de-CH;de-DE,SILAS;DOKU,JA,,Taetigkeitsbeschreibung in % (S16 Berufsbild-Freitext)
+D33,Gutachten (medizinisch),I,PDF-T;PDF-S,8,25,0,120,de-CH;de-DE,DOKU,JA,,"Grad EU/BU, Prognose"
+D34,IV-Verfuegung (CH) / Rentenbescheid DRV (DE),I,PDF-S,3,8,0,150,de-CH;fr-CH;de-DE,DOKU,JA,,Stolperstein S15 EU/BU/IV-Koordination
+D35,Leistungsentscheid (Anerkennung / Ablehnung / Teil / Vergleich),I,PDF-T,2,4,0,1000,de-CH;de-DE,SILAS;MINT,JA,,Verweist auf AVB-Paragraph der Generation (S25)
+D36,Korrespondenz mit Hinterbliebenen / Anspruchstellern,I,E-Mail;HS;PDF-T,1,2,0,3500,de-CH;de-DE;fr-CH(5%);it-CH(2%),SILAS;DOKU;MINT,JA,Threads 2-10 Schreiben,Emotional gefaerbt; Sentiment-Use-Case
+D37,Beschwerdebrief / Ombudsstellen-Eingabe,E;G;I,HS;E-Mail;PDF-T,1,4,50,80,de-CH;de-DE,SILAS;DOKU;MINT,NEIN,,Stolperstein S19 Beschwerde mit Halbwissen
+D38,Vermittlerkorrespondenz / Maklerschreiben,B-I,E-Mail,1,2,400,100,de-CH;de-DE,DOKU;MINT,NEIN,,Betrugsmuster BM-06
+D39,Interne Aktennotiz / Telefonnotiz,alle,Freitext (System),1,1,2500,4000,de-CH;de-DE,VERA;SILAS;MINT,JA,"Stichworte, Abkuerzungen",Umfang 0.3-1 Seite
+D40,Rueckversicherer-Korrespondenz (fakultativ),C;I,PDF-T;E-Mail,1,2,20,30,de;en,DOKU;SILAS,JA,,Summe > 1 Mio; Entscheidung E11: nur Referenz
+D41,Lebensbescheinigung (Rentenbezug),J,PDF-S,1,1,200,0,de-CH;de-DE;fr-CH,DOKU;VERA,NEIN,jaehrlich,
+D42,Migrationsprotokoll / Datenblatt VERA-Auszug,E,Text (fixed width),1,3,550,0,"de (Grossbuchstaben, AE/OE/UE)",VERA,NEIN,Host-Ausdruck mit Feldkuerzeln,Stolperstein S05; nur Altbestand

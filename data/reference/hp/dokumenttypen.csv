@@ -1,0 +1,50 @@
+code,name,bereich,phase,format,laenge_seiten_typisch,anzahl_pro_1000,sprache,quellsystem,ground_truth_json
+V01,Offerte / Angebot,vertrag,angebot,pdf,2-4,1300,de-CH;de-DE;fr;it,HAPO;MINT,true
+V02,Antrag / Antragsformular,vertrag,antrag,pdf;scan;json,2-10,1000,de-CH;de-DE;fr;it,DOKU;MINT,true
+V03,Betriebsbeschreibung / Risikofragebogen,vertrag,antrag,pdf;docx;eml,3-8,250,de-CH;de-DE,DOKU;MINT,true
+V04,Beratungsprotokoll (nur DE),vertrag,antrag,pdf;scan,1-3,480,de-DE,DOKU;MINT,false
+V05,Produktinformationsblatt / IPID / Kundeninformation,vertrag,antrag,pdf,2-5,1000,de-CH;de-DE;fr,DOKU;MINT,false
+V06,Police / Versicherungsschein,vertrag,policierung,pdf;scan,2-8,1000,de-CH;de-DE;fr;it,HAPO;MINT,true
+V07,Allgemeine Versicherungsbedingungen (AVB CH / AHB DE),vertrag,policierung,pdf,12-30,1000,de-CH;de-DE;fr,DOKU;MINT,false
+V08,Besondere Bedingungen / Klauseln,vertrag,policierung,pdf,1-6,600,de-CH;de-DE,DOKU;MINT,false
+V09,Nachtrag / Nachtragspolice,vertrag,bestand,pdf,1-3,450,de-CH;de-DE;fr,HAPO;MINT,true
+V10,Deckungsbestätigung / Versicherungsnachweis,vertrag,bestand,pdf,1,150,de-CH;de-DE,HAPO;MINT,false
+V11,Prämienrechnung / Beitragsrechnung,vertrag,inkasso,pdf,1-2,2500,de-CH;de-DE;fr;it,HAPO;MINT,true
+V12,Zahlungserinnerung / Mahnung (Stufe 1-3),vertrag,inkasso,pdf,1,100,de-CH;de-DE;fr,HAPO;MINT,true
+V13,Mitteilung Deckungsunterbruch / Leistungsfreiheit,vertrag,inkasso,pdf,1,15,de-CH;de-DE,HAPO,false
+V14,Kündigungsschreiben Versicherungsnehmer,vertrag,beendigung,scan;eml;json,0.5-1,95,de-CH;de-DE;fr;it,DOKU;MINT,true
+V15,Kündigungsbestätigung / Kündigungsablehnung,vertrag,beendigung,pdf,1,95,de-CH;de-DE;fr,HAPO;MINT,false
+V16,Kündigung durch Versicherer,vertrag,beendigung,pdf,1-2,8,de-CH;de-DE,HAPO;MINT,true
+V17,Aufhebungsvereinbarung / Storno-Mitteilung,vertrag,beendigung,pdf,1,20,de-CH;de-DE,HAPO;MINT,false
+V18,Vollmacht / Maklermandat,vertrag,antrag,pdf;scan,1-2,220,de-CH;de-DE,DOKU;MINT,false
+V19,Umsatz- / Lohnsummenmeldung,vertrag,bestand,pdf;eml;xlsx,1-2,900,de-CH;de-DE,DOKU;MINT,true
+V20,Korrespondenz allgemein (Vertrag),vertrag,bestand,eml;scan,0.5-2,400,de-CH;de-DE;fr;it;en,DOKU;MINT,false
+V21,Vorversicherer-Auskunft / Schadenfreiheitsbescheinigung,vertrag,antrag,pdf,1,180,de-CH;de-DE,DOKU,true
+V22,Bonitäts- / Sanktionsprüfung (intern),vertrag,antrag,pdf,1-3,120,de-CH;de-DE,MINT,false
+S01,Schadenmeldung Versicherungsnehmer (Formular / Portal / App),schaden,meldung,pdf;scan;json,2-3,750,de-CH;de-DE;fr;it,SILAS;DOKU;MINT,true
+S02,Schadenmeldung per E-Mail / Telefonnotiz,schaden,meldung,eml;txt,0.3-1,250,de-CH;de-DE;fr;it,SILAS;MINT,true
+S03,Anspruchsschreiben Geschädigter,schaden,meldung,scan;eml,1-2,700,de-CH;de-DE;fr;it,DOKU;MINT,true
+S04,Anwaltsschreiben Geschädigtenvertreter,schaden,haftungspruefung,pdf,2-6,250,de-CH;de-DE;fr,DOKU;MINT,true
+S05,Stellungnahme Versicherungsnehmer,schaden,erfassung,eml;scan,0.5-2,500,de-CH;de-DE;fr;it,DOKU;MINT,true
+S06,Fotos (Platzhalter mit EXIF),schaden,erfassung,jpg,1-10,2500,,DOKU;MINT,true
+S07,Kostenvoranschlag / Reparaturofferte,schaden,regulierung,pdf;scan;jpg,1-2,700,de-CH;de-DE;fr;it,DOKU;MINT,true
+S08,Rechnung / Quittung / Kaufbeleg,schaden,regulierung,pdf;scan;jpg,1,700,de-CH;de-DE;fr;it,DOKU;MINT,true
+S09,Gutachten Sachverständiger (Sach),schaden,regulierung,pdf,5-20,60,de-CH;de-DE,DOKU;MINT,true
+S10,Arztbericht / Arztzeugnis / medizinisches Gutachten,schaden,regulierung,pdf;scan,1-40,140,de-CH;de-DE;fr,DOKU;MINT,true
+S11,Polizeirapport / Unfallprotokoll,schaden,haftungspruefung,pdf;scan,2-6,50,de-CH;de-DE;fr;it,DOKU,true
+S12,Zeugenaussage / Bestätigung Dritter,schaden,haftungspruefung,eml;scan,0.5-1,120,de-CH;de-DE;fr;it,DOKU;MINT,false
+S13,Deckungszusage / Deckungsvorbehalt / Deckungsablehnung,schaden,deckungspruefung,pdf,1-2,1000,de-CH;de-DE;fr;it,SILAS;MINT,true
+S14,Schreiben an Geschädigten (Haftung),schaden,haftungspruefung,pdf,1-2,900,de-CH;de-DE;fr;it,SILAS;MINT,true
+S15,Vergleichsvereinbarung / Abfindungserklärung,schaden,regulierung,pdf;scan,1-3,80,de-CH;de-DE;fr,DOKU;MINT,true
+S16,Zahlungsavis / Zahlungsmitteilung,schaden,regulierung,pdf,1,800,de-CH;de-DE;fr;it,SILAS;MINT,true
+S17,Regressforderung eingehend (Sozialversicherer),schaden,regress,pdf,2-5,60,de-CH;de-DE;fr,DOKU;MINT,true
+S18,Regressschreiben ausgehend,schaden,regress,pdf,1-2,30,de-CH;de-DE,SILAS;MINT,false
+S19,Interne Schadennotiz / Bearbeitungsjournal,schaden,erfassung,txt,0.2-3,1000,de-CH;de-DE,SILAS;MINT,true
+S20,Interne Haftungs- / Deckungsbeurteilung (Memo),schaden,haftungspruefung,docx;pdf,1-4,40,de-CH;de-DE,DOKU;MINT,true
+S21,Reserveprotokoll / Grossschadenmeldung,schaden,regulierung,pdf,1-3,12,de-CH;de-DE,SILAS;MINT,false
+S22,Klageschrift / Klageantwort / Urteil,schaden,abwehr,pdf,10-40,5,de-CH;de-DE,DOKU,false
+S23,Anwaltsrechnung / Gutachterrechnung,schaden,regulierung,pdf,1-2,180,de-CH;de-DE;fr,DOKU;MINT,true
+S24,Betrugsprüfungsbericht (intern),schaden,betrugspruefung,pdf;docx,2-6,15,de-CH;de-DE,DOKU;MINT,true
+S25,Beschwerde / Anfrage Ombudsstelle,schaden,beschwerde,scan;eml,1-3,25,de-CH;de-DE;fr;it,DOKU;MINT,true
+S26,Abschlussschreiben,schaden,abschluss,pdf,1,850,de-CH;de-DE;fr;it,SILAS;MINT,false
+S27,Schadenmeldung an Rückversicherer,schaden,regulierung,pdf,1-2,3,de-CH;de-DE,SILAS,false

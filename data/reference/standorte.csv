@@ -1,0 +1,9 @@
+standort_id,name,funktion,strasse,hausnummer,plz,ort,kanton_bundesland,land,fte,seit_jahr,herkunft,kultur_marker
+STO-01,Haus Aarequai,"Konzernsitz: Geschäftsleitung, Aktuariat, Underwriting Leben, Schaden CH, Compliance, Risk, IT-Betrieb Altsysteme, Contact Center CH",Uferweg,12,4600,Olten,SO,CH,1050,1924,pfefferminz,"Hierarchisch, Präsenzkultur, Sitzungen zur Olten-Zeit"
+STO-02,Minzhof,"Deutschland-Hub: Niederlassung Haftpflicht, Leben-Tochter, Kundenservice DE, Vertriebsleitung, Datenschutz",Ziegelplatz,7,04103,Leipzig,SN,DE,620,2006,pfefferminz,"Vermittelnd, sieht sich als Brücke zwischen Olten und Berlin"
+STO-03,Werkstatt,"Tech-Hub: Data & AI Office, MINT-Plattform, Direktvertrieb und Online, digitales Produktdesign",Mühlendamm,300,12157,Berlin,BE,DE,260,2019,minzia,"Remote-first, Chat statt E-Mail, Englisch und Deutsch gemischt, kein Dresscode"
+STO-04,Regionaldirektion Zürich,"Regionaldirektion, Makler-Desk, Underwriting Haftpflicht CH, Data Governance und KI-Validierung",Sihlacker,45,8005,Zürich,ZH,CH,190,1961,gemischt,"Erster Ort, an dem beide Kulturen physisch zusammenarbeiten"
+STO-05,Regionaldirektion Bern,"Regionaldirektion, Agenturvertrieb CH",Lindenhof,3,3012,Bern,BE,CH,80,1948,pfefferminz,Vertriebsnah
+STO-06,Regionaldirektion St. Gallen,"Regionaldirektion, Agenturbetreuung Ostschweiz",Rosenring,18,9000,St. Gallen,SG,CH,80,1972,pfefferminz,Vertriebsnah
+STO-07,Direction régionale Lausanne,"Regionaldirektion Romandie (im Datensatz nur erwähnt)",Chemin des Tilleuls,9,1003,Lausanne,VD,CH,60,1988,pfefferminz,Mehrsprachigkeit
+STO-08,Remote,"Ortsunabhängig arbeitende Mitarbeitende (überwiegend Data & AI Office)",,,,,,,70,2020,gemischt,Remote-first

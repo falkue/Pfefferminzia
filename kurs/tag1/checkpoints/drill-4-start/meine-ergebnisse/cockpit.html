@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<title>Pfefferminzia – Cockpit</title>
+<style>
+  :root {
+    --surface-1: #fcfcfb;
+    --page: #f9f9f7;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #898781;
+    --grid: #e1e0d9;
+    --baseline: #c3c2b7;
+    --border: rgba(11,11,11,0.10);
+    --pfefferminz: #2a78d6;
+    --minzia: #eb6834;
+    --hp: #1baf7a;
+    --lv: #eda100;
+    --ch: #e87ba4;
+    --de: #008300;
+    --kanal-direkt: #4a3aa7;
+    --kanal-agentur: #e34948;
+    --kanal-makler: #1baf7a;
+    --kanal-bank: #eda100;
+    --gesamtlinie: #0b0b0b;
+    --status-gruen: #0ca30c;
+    --status-gelb: #fab219;
+    --status-rot: #d03b3b;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--page);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 14px;
+  }
+  header {
+    background: var(--surface-1);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 24px 0 24px;
+  }
+  .kopfzeile {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .kopfzeile h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .kopfzeile .stichtag {
+    color: var(--text-secondary);
+    font-size: 13px;
+  }
+  nav.reiterleiste {
+    margin-top: 8px;
+    display: flex;
+    gap: 4px;
+  }
+  nav.reiterleiste button {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+  nav.reiterleiste button.aktiv {
+    color: var(--text-primary);
+    font-weight: 600;
+    border-bottom-color: var(--pfefferminz);
+  }
+  main {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 16px 24px 40px 24px;
+  }
+  section.filterleiste {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+  }
+  .filtergruppe {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .filtergruppe .filterlabel {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-right: 4px;
+  }
+  .chip {
+    border: 1px solid var(--baseline);
+    background: var(--surface-1);
+    color: var(--text-secondary);
+    border-radius: 14px;
+    padding: 3px 11px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .chip.aktiv {
+    background: var(--text-primary);
+    border-color: var(--text-primary);
+    color: #fff;
+    font-weight: 600;
+  }
+  .chip .punkt {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .filter-zuruecksetzen {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: inherit;
+  }
+  section.kacheln {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+  .kachel {
+    flex: 1;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    min-width: 0;
+  }
+  .kachel .titel {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+  .kachel .wert {
+    font-size: 21px;
+    font-weight: 700;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .kachel .wert-neben {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    margin-top: 1px;
+  }
+  .kachel .definition {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    line-height: 1.35;
+  }
+  h2.reitertitel {
+    font-size: 15px;
+    margin: 28px 0 10px 0;
+  }
+  section.aufschluesselung {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .aufschluesselung .gruppe {
+    flex: 1;
+    min-width: 320px;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .aufschluesselung .gruppe h3 {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+  }
+  table.aufschluesselungstabelle {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+  table.aufschluesselungstabelle th {
+    text-align: right;
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 3px 4px;
+    border-bottom: 1px solid var(--grid);
+  }
+  table.aufschluesselungstabelle th:first-child { text-align: left; }
+  table.aufschluesselungstabelle td {
+    padding: 5px 4px;
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  table.aufschluesselungstabelle td.gruppenname {
+    text-align: left;
+    white-space: normal;
+    font-variant-numeric: normal;
+  }
+  .balkenzelle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .balkenzelle .balkenspur {
+    flex: 1;
+    background: var(--grid);
+    border-radius: 3px;
+    height: 8px;
+    min-width: 60px;
+  }
+  .balkenzelle .balkenfuellung {
+    display: block;
+    height: 8px;
+    border-radius: 3px;
+  }
+  .punktname {
+    display: inline-block;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+
+  /* --- Stornoquote-Diagramm --- */
+  section.quotenchart {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 30px;
+  }
+  .quotenchart-kopf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  .quotenchart-kopf h3 {
+    font-size: 13px;
+    margin: 0;
+  }
+  .umschalter-gruppe {
+    display: flex;
+    gap: 4px;
+  }
+  .umschalter-gruppe .chip {
+    padding: 3px 12px;
+  }
+  .quotenchart-legende {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 4px 0 8px 2px;
+  }
+  .quotenchart-legende .eintrag {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .quotenchart-legende .punkt {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .quotenchart-svg-wrapper {
+    position: relative;
+  }
+  .quotenchart-svg-wrapper svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .quoten-endlabel {
+    font-size: 11px;
+    font-weight: 600;
+    fill: var(--text-primary);
+    stroke: var(--surface-1);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+    paint-order: stroke;
+  }
+  .quoten-gesamtlabel {
+    font-size: 10.5px;
+    font-weight: 700;
+    fill: var(--text-primary);
+    stroke: var(--surface-1);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+    paint-order: stroke;
+  }
+  .quoten-achse {
+    font-size: 10.5px;
+    fill: var(--text-muted);
+  }
+  .quoten-gitter {
+    stroke: var(--grid);
+    stroke-width: 1;
+  }
+  .quoten-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--text-primary);
+    color: #fff;
+    font-size: 11.5px;
+    border-radius: 6px;
+    padding: 7px 10px;
+    line-height: 1.5;
+    box-shadow: 0 4px 12px rgba(11,11,11,0.25);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.08s;
+    z-index: 5;
+  }
+  .quoten-tooltip .zeile-tt { display: flex; align-items: center; gap: 6px; }
+  .quoten-tooltip .punkt-tt { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+
+  /* --- Tarifgenerationen-Ampel --- */
+  section.ampel {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  section.ampel .regel {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  section.ampel .ampel-hinweis {
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 18px 4px;
+  }
+  table.ampeltabelle {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+  table.ampeltabelle th {
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 2px solid var(--baseline);
+    color: var(--text-secondary);
+    white-space: nowrap;
+  }
+  table.ampeltabelle th.zahl, table.ampeltabelle td.zahl {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  table.ampeltabelle td {
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--grid);
+    white-space: nowrap;
+  }
+  .ampel-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .ampel-badge .kreis {
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .ampel-badge.rot .kreis { background: var(--status-rot); }
+  .ampel-badge.rot { color: var(--status-rot); }
+  .ampel-badge.gelb .kreis { background: var(--status-gelb); }
+  .ampel-badge.gelb { color: #8a6400; }
+  .ampel-badge.gruen .kreis { background: var(--status-gruen); }
+  .ampel-badge.gruen { color: var(--status-gruen); }
+  section.katalog {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px 6px 14px;
+  }
+  section.katalog .hinweis {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .katalog-umschalter {
+    display: inline-block;
+    margin-left: 6px;
+    border: 1px solid var(--baseline);
+    background: var(--surface-1);
+    color: var(--text-secondary);
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 11.5px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .katalog-umschalter.aktiv {
+    background: var(--text-primary);
+    border-color: var(--text-primary);
+    color: #fff;
+    font-weight: 600;
+  }
+  table.katalogtabelle {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+  table.katalogtabelle th {
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 2px solid var(--baseline);
+    cursor: pointer;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    user-select: none;
+  }
+  table.katalogtabelle th.zahl, table.katalogtabelle td.zahl {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  table.katalogtabelle th .pfeil {
+    color: var(--text-muted);
+    font-size: 10px;
+  }
+  table.katalogtabelle td {
+    padding: 5px 8px;
+    border-bottom: 1px solid var(--grid);
+    vertical-align: top;
+  }
+  table.katalogtabelle tr:hover td {
+    background: var(--page);
+  }
+  td.kategoriezelle {
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  footer {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 0 24px 30px 24px;
+    color: var(--text-muted);
+    font-size: 11.5px;
+  }
+
+  /* --- Reiter «Akte» --- */
+  .reiter-inhalt { display: none; }
+  .reiter-inhalt.aktiv { display: block; }
+  section.akte-kopf {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    font-size: 12.5px;
+  }
+  section.akte-kopf .feld .titel {
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+  section.akte-kopf .feld .wert {
+    font-weight: 600;
+  }
+  section.akte-kacheln {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  section.akte-kacheln .kachel { padding: 10px 12px; }
+  section.akte-kacheln .kachel .wert { font-size: 18px; }
+  .akte-gruppenleiste {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .akte-gruppenleiste .chip .punkt { background: var(--text-muted); }
+  .akte-gruppenleiste .chip.aktiv .punkt { background: #fff; }
+  section.akte-hauptbereich {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 16px;
+    align-items: start;
+  }
+  @media (max-width: 760px) {
+    section.akte-hauptbereich { grid-template-columns: 1fr; }
+  }
+  .akte-zeitstrahl {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    max-height: 560px;
+    overflow-y: auto;
+  }
+  .akte-zeitstrahl .jahresgruppe { margin-bottom: 6px; }
+  .akte-zeitstrahl .gruppenkopf {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 8px 0 4px 0;
+    border-bottom: 1px solid var(--grid);
+    margin-bottom: 4px;
+  }
+  .akte-ereignis {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 6px 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .akte-ereignis:hover { background: var(--page); }
+  .akte-ereignis.gewaehlt {
+    background: var(--page);
+    border-color: var(--baseline);
+  }
+  .akte-ereignis .punkte {
+    display: flex;
+    gap: 2px;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+  .akte-ereignis .punkte .punkt {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .akte-ereignis .inhalt { min-width: 0; }
+  .akte-ereignis .datumzeile {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .akte-ereignis .titelzeile {
+    font-size: 12.5px;
+    line-height: 1.35;
+  }
+  .akte-wendepunkt-badge {
+    display: inline-block;
+    background: var(--minzia);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 1px 7px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .akte-panel {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    max-height: 560px;
+    overflow-y: auto;
+  }
+  .akte-panel .panel-kopf {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--grid);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+  .akte-panel .panel-kopf b { color: var(--text-primary); }
+  .akte-panel .panel-titel {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .akte-panel .panel-text {
+    font-size: 13px;
+    line-height: 1.55;
+    white-space: pre-line;
+  }
+  .akte-panel .panel-leer {
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  section.akte-faktencheck {
+    margin-top: 30px;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  table.ampeltabelle td.aussagezelle { white-space: normal; max-width: 420px; }
+  table.ampeltabelle td.quellezelle { white-space: normal; color: var(--text-secondary); font-size: 11.5px; }
+  section.akte-briefe {
+    margin-top: 26px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .brief-blatt {
+    flex: 1;
+    min-width: 320px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(11,11,11,0.08);
+    padding: 28px 30px;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #111;
+  }
+  .brief-blatt .briefkennzeichnung {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+  .brief-blatt p { margin: 0 0 10px 0; }
+  .brief-blatt p.adresse, .brief-blatt p.signatur { white-space: pre-line; }
+
+  /* --- Reiter «Underwriting» --- */
+  section.uw-hauptbereich {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr);
+    gap: 16px;
+    align-items: start;
+  }
+  @media (max-width: 760px) {
+    section.uw-hauptbereich { grid-template-columns: 1fr; }
+  }
+  .uw-liste {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .uw-antrag {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--grid);
+    padding: 12px 14px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .uw-antrag:last-child { border-bottom: none; }
+  .uw-antrag:hover { background: var(--page); }
+  .uw-antrag.gewaehlt { background: var(--page); box-shadow: inset 3px 0 0 var(--pfefferminz); }
+  .uw-antrag .uw-name { font-size: 13.5px; font-weight: 700; margin-bottom: 4px; }
+  .uw-antrag .uw-zeile { font-size: 12px; color: var(--text-secondary); display: flex; justify-content: space-between; gap: 8px; margin-top: 2px; }
+  .uw-antrag .uw-zeile b { color: var(--text-primary); font-variant-numeric: tabular-nums; }
+  .uw-antrag .uw-empfehlung { font-size: 12px; color: var(--text-secondary); margin-top: 6px; line-height: 1.4; }
+  .uw-panel {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .uw-panel h3 { font-size: 13px; margin: 0 0 10px 0; }
+  .uw-regelpfad { list-style: none; margin: 0 0 4px 0; padding: 0; counter-reset: uwschritt; }
+  .uw-schritt {
+    counter-increment: uwschritt;
+    display: flex;
+    gap: 10px;
+    padding: 8px 4px;
+    border-bottom: 1px solid var(--grid);
+    font-size: 12.5px;
+  }
+  .uw-schritt:last-child { border-bottom: none; }
+  .uw-schritt .uw-nummer {
+    flex-shrink: 0;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--grid);
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .uw-schritt.uw-mensch { background: rgba(208,59,59,0.06); border-radius: 6px; }
+  .uw-schritt.uw-mensch .uw-nummer { background: var(--status-rot); color: #fff; }
+  .uw-schritt .uw-inhalt { min-width: 0; }
+  .uw-schritt .uw-schritttitel { font-weight: 700; }
+  .uw-schritt .uw-paragraf { color: var(--text-muted); font-size: 11.5px; margin-left: 6px; }
+  .uw-schritt .uw-ergebnis { margin-top: 2px; line-height: 1.45; }
+  .uw-mensch-marke {
+    display: inline-block;
+    background: var(--status-rot);
+    color: #fff;
+    font-size: 10.5px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 1px 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .uw-vorlage {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--grid);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .uw-vorlage .uw-v-titel { font-size: 15px; font-weight: 700; margin: 0 0 4px 0; }
+  .uw-vorlage .uw-v-abschnitt { font-size: 13px; font-weight: 700; margin: 16px 0 6px 0; }
+  .uw-vorlage .uw-v-unterabschnitt { font-size: 12.5px; font-weight: 700; margin: 10px 0 4px 0; color: var(--text-secondary); }
+  .uw-vorlage p { margin: 0 0 8px 0; }
+  .uw-vorlage ul { margin: 0 0 8px 0; padding-left: 20px; }
+  .uw-vorlage li { margin-bottom: 4px; }
+  .uw-vorlage del, .uw-schritt del { color: var(--text-muted); text-decoration: line-through; }
+  .uw-vorlage strong, .uw-schritt strong { background: rgba(12,163,12,0.12); border-radius: 3px; padding: 0 2px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="kopfzeile">
+    <h1>Pfefferminzia</h1>
+    <span class="stichtag">Stichtag 31.12.2025 · Datensatz Stufe S</span>
+  </div>
+  <nav class="reiterleiste">
+    <button class="aktiv" data-reiter="bestand">Bestand</button>
+    <button data-reiter="akte">Akte</button>
+    <button data-reiter="underwriting">Underwriting</button>
+  </nav>
+</header>
+<main>
+
+<div id="reiter-bestand" class="reiter-inhalt aktiv">
+
+  <section class="filterleiste" id="filterleiste">
+    <div class="filtergruppe" data-dimension="sparte">
+      <span class="filterlabel">Sparte</span>
+    </div>
+    <div class="filtergruppe" data-dimension="markt">
+      <span class="filterlabel">Markt</span>
+    </div>
+    <div class="filtergruppe" data-dimension="herkunft">
+      <span class="filterlabel">Herkunft</span>
+    </div>
+    <button class="filter-zuruecksetzen" id="filterZuruecksetzen">Filter zurücksetzen</button>
+  </section>
+
+  <section class="kacheln" id="kacheln"></section>
+
+  <h2 class="reitertitel">Stornoquote 2019–2025</h2>
+  <section class="quotenchart">
+    <div class="quotenchart-kopf">
+      <h3>Gesamtbestand und Aufschlüsselung im Zeitverlauf</h3>
+      <div class="umschalter-gruppe" id="quotenUmschalter">
+        <button class="chip aktiv" data-ansicht="herkunft">Herkunft</button>
+        <button class="chip" data-ansicht="kanal">Kanal</button>
+      </div>
+    </div>
+    <div class="quotenchart-legende" id="quotenLegende"></div>
+    <div class="quotenchart-svg-wrapper" id="quotenSvgWrapper">
+      <div class="quoten-tooltip" id="quotenTooltip"></div>
+    </div>
+  </section>
+
+  <h2 class="reitertitel">Aktiver Bestand nach Sparte, Markt und Herkunft</h2>
+  <section class="aufschluesselung" id="aufschluesselung"></section>
+
+  <h2 class="reitertitel">Tarifgenerationen Leben: Garantiezins gegenüber Gesamtverzinsung 2025</h2>
+  <section class="ampel">
+    <div class="regel" id="ampelRegel"></div>
+    <div class="ampel-hinweis" id="ampelHinweis" style="display:none"></div>
+    <table class="ampeltabelle" id="ampeltabelle">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Tarifgeneration</th>
+          <th>Markt</th>
+          <th class="zahl">Garantiezins</th>
+          <th class="zahl">Gesamtverzinsung 2025</th>
+          <th class="zahl">Aktive Verträge</th>
+          <th class="zahl">Jahresprämie</th>
+        </tr>
+      </thead>
+      <tbody id="ampelKoerper"></tbody>
+    </table>
+  </section>
+
+  <h2 class="reitertitel">Datenkatalog</h2>
+  <section class="katalog">
+    <div class="hinweis">
+      Alle Datentabellen des Projekts: bereinigte Tabellen, Migrationsbrücken, Rohdaten der Altsysteme, Referenz- und Stammdaten. Unabhängig von der Filterleiste oben. Spaltenkopf anklicken zum Sortieren, gestartet nach Zeilenzahl absteigend.
+      <button class="katalog-umschalter" id="katalogReferenzUmschalten"></button>
+    </div>
+    <table class="katalogtabelle" id="katalogtabelle">
+      <thead>
+        <tr>
+          <th data-key="kategorie">Kategorie <span class="pfeil"></span></th>
+          <th data-key="name">Tabelle <span class="pfeil"></span></th>
+          <th class="zahl" data-key="zeilen">Zeilen <span class="pfeil"></span></th>
+          <th class="zahl" data-key="spalten">Spalten <span class="pfeil"></span></th>
+          <th data-key="zweck">Zweck <span class="pfeil"></span></th>
+        </tr>
+      </thead>
+      <tbody id="katalogkoerper"></tbody>
+    </table>
+  </section>
+
+</div>
+
+<div id="reiter-akte" class="reiter-inhalt">
+
+  <section class="akte-kopf" id="akteKopf"></section>
+
+  <section class="akte-kacheln kacheln" id="akteKacheln"></section>
+
+  <div class="akte-gruppenleiste" id="akteGruppenleiste"></div>
+
+  <section class="akte-hauptbereich">
+    <div class="akte-zeitstrahl" id="akteZeitstrahl"></div>
+    <div class="akte-panel" id="aktePanel"></div>
+  </section>
+
+  <h2 class="reitertitel">Faktencheck der beiden Schreiben</h2>
+  <section class="akte-faktencheck">
+    <div class="regel" id="akteFaktencheckRegel"></div>
+    <table class="ampeltabelle" id="akteFaktencheckTabelle">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Schreiben</th>
+          <th>Aussage</th>
+          <th>Quelle</th>
+        </tr>
+      </thead>
+      <tbody id="akteFaktencheckKoerper"></tbody>
+    </table>
+  </section>
+
+  <h2 class="reitertitel">Beide Schreiben, Vorschau</h2>
+  <section class="akte-briefe" id="akteBriefe"></section>
+
+</div>
+
+<div id="reiter-underwriting" class="reiter-inhalt">
+
+  <h2 class="reitertitel">Risikoprüfung Leben: drei Anträge im Regelpfad</h2>
+  <div class="regel" id="uwRegel" style="margin-bottom:10px;font-size:12px;color:var(--text-secondary)"></div>
+
+  <section class="uw-hauptbereich">
+    <div class="uw-liste" id="uwListe"></div>
+    <div class="uw-panel" id="uwPanel"></div>
+  </section>
+
+</div>
+
+</main>
+<footer>
+  Fiktiver Lehr-Datensatz der Pfefferminzia Versicherung. Alle Personen, Firmen und Verträge sind erfunden.
+  Kennzahlen aus dem Datensatz Stufe S, nicht mit dem Gesamtunternehmen zu verwechseln.
+</footer>
+
+<script src="cockpit-daten/bestand.js"></script>
+<script src="cockpit-daten/akte.js"></script>
+<script src="cockpit-daten/underwriting.js"></script>
+<script>
+(function () {
+  document.querySelectorAll('nav.reiterleiste button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('nav.reiterleiste button').forEach(b => b.classList.remove('aktiv'));
+      btn.classList.add('aktiv');
+      document.querySelectorAll('.reiter-inhalt').forEach(el => el.classList.remove('aktiv'));
+      document.getElementById('reiter-' + btn.dataset.reiter).classList.add('aktiv');
+    });
+  });
+})();
+(function () {
+  const D = BESTAND_DATEN;
+  const KURS = D.kursEurChf2025;
+  const NICHT_CHURN = new Set(D.nichtChurnCodes);
+
+  const FARBEN = {
+    herkunft: { pfefferminz: 'var(--pfefferminz)', minzia: 'var(--minzia)' },
+    sparte: { HP: 'var(--hp)', LV: 'var(--lv)' },
+    markt: { CH: 'var(--ch)', DE: 'var(--de)' },
+    kanal: { direkt: 'var(--kanal-direkt)', agentur: 'var(--kanal-agentur)', makler: 'var(--kanal-makler)', bank: 'var(--kanal-bank)' },
+  };
+  const NAMEN = {
+    herkunft: { pfefferminz: 'Pfefferminz', minzia: 'Minzia' },
+    sparte: { HP: 'Haftpflicht', LV: 'Leben' },
+    markt: { CH: 'Schweiz', DE: 'Deutschland' },
+    kanal: { direkt: 'Direkt', agentur: 'Agentur', makler: 'Makler', bank: 'Bank' },
+  };
+  const AMPEL_FARBE = { rot: 'var(--status-rot)', gelb: 'var(--status-gelb)', gruen: 'var(--status-gruen)' };
+  const AMPEL_WORT = { rot: 'rot', gelb: 'gelb', gruen: 'grün' };
+
+  function fmtInt(n) {
+    return n.toLocaleString('de-CH');
+  }
+  function fmtChf(n) {
+    return 'CHF ' + Math.round(n).toLocaleString('de-CH');
+  }
+  function fmtEur(n) {
+    return 'EUR ' + Math.round(n).toLocaleString('de-CH');
+  }
+  function fmtPct(n) {
+    return n.toLocaleString('de-CH', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+  }
+
+  // --- Filterzustand ---
+  const aktivFilter = { sparte: new Set(), markt: new Set(), herkunft: new Set() };
+
+  function baueFilterleiste() {
+    ['sparte', 'markt', 'herkunft'].forEach(dim => {
+      const gruppe = document.querySelector(`.filtergruppe[data-dimension="${dim}"]`);
+      Object.keys(NAMEN[dim]).forEach(wert => {
+        const chip = document.createElement('button');
+        chip.className = 'chip';
+        chip.dataset.dimension = dim;
+        chip.dataset.wert = wert;
+        chip.innerHTML = `<span class="punkt" style="background:${FARBEN[dim][wert]}"></span>${NAMEN[dim][wert]}`;
+        chip.addEventListener('click', () => {
+          if (aktivFilter[dim].has(wert)) aktivFilter[dim].delete(wert);
+          else aktivFilter[dim].add(wert);
+          chip.classList.toggle('aktiv');
+          render();
+        });
+        gruppe.appendChild(chip);
+      });
+    });
+    document.getElementById('filterZuruecksetzen').addEventListener('click', () => {
+      ['sparte', 'markt', 'herkunft'].forEach(dim => aktivFilter[dim].clear());
+      document.querySelectorAll('.chip.aktiv').forEach(c => c.classList.remove('aktiv'));
+      render();
+    });
+  }
+
+  function gefiltert() {
+    return D.vertraege.filter(v => {
+      if (aktivFilter.sparte.size && !aktivFilter.sparte.has(v.sparte)) return false;
+      if (aktivFilter.markt.size && !aktivFilter.markt.has(v.markt)) return false;
+      if (aktivFilter.herkunft.size && !aktivFilter.herkunft.has(v.herkunft)) return false;
+      return true;
+    });
+  }
+
+  function berechneKennzahlen(rows) {
+    const aktiv = rows.filter(v => v.status === 'AKTIV');
+    const kunden = new Set(aktiv.map(v => v.vn)).size;
+
+    let praemieChfNativ = 0, praemieEurNativ = 0;
+    aktiv.forEach(v => {
+      if (v.praemie == null) return;
+      if (v.waehrung === 'CHF') praemieChfNativ += v.praemie;
+      else if (v.waehrung === 'EUR') praemieEurNativ += v.praemie;
+    });
+    const praemieGesamtChf = praemieChfNativ + praemieEurNativ * KURS;
+
+    const nenner = rows.filter(v => v.beginn && v.beginn < D.jahresanfang && (!v.stornoDatum || v.stornoDatum >= D.jahresanfang));
+    const zaehler = nenner.filter(v => v.stornoDatum && v.stornoDatum <= D.jahresende && !NICHT_CHURN.has(v.stornoGrund));
+    const stornoquote = nenner.length ? (100 * zaehler.length / nenner.length) : null;
+
+    const migriert = aktiv.filter(v => v.migriertAufMint).length;
+    const migrationsquote = aktiv.length ? (100 * migriert / aktiv.length) : null;
+
+    return {
+      kunden, vertraege: aktiv.length,
+      praemieChfNativ, praemieEurNativ, praemieGesamtChf,
+      stornoquote, zaehlerN: zaehler.length, nennerN: nenner.length,
+      migrationsquote, migriertN: migriert, aktivN: aktiv.length,
+    };
+  }
+
+  function kachel(titel, wert, definition, volltitel, wertNeben) {
+    const div = document.createElement('div');
+    div.className = 'kachel';
+    div.title = volltitel || definition;
+    const nebenHtml = wertNeben ? `<div class="wert-neben">${wertNeben}</div>` : '';
+    div.innerHTML = `<div class="titel">${titel}</div><div class="wert">${wert}</div>${nebenHtml}<div class="definition">${definition}</div>`;
+    return div;
+  }
+
+  function renderKacheln(k) {
+    const el = document.getElementById('kacheln');
+    el.innerHTML = '';
+
+    el.appendChild(kachel(
+      'Kunden', fmtInt(k.kunden),
+      'Versicherungsnehmer mit aktivem Vertrag am Stichtag.',
+      `Eindeutige Versicherungsnehmer mit aktivem Vertrag am 31.12.2025 (${fmtInt(k.kunden)} von ${fmtInt(k.vertraege)} aktiven Verträgen, ein Kunde kann mehrere Verträge haben). Quelle: Vertragstabelle, Versicherungsnehmer und Status.`
+    ));
+
+    el.appendChild(kachel(
+      'Aktive Verträge', fmtInt(k.vertraege),
+      'Verträge mit Status aktiv am Stichtag.',
+      `Anzahl Verträge mit Status aktiv am 31.12.2025. Quelle: Vertragstabelle, Status.`
+    ));
+
+    const praemieDef = k.praemieEurNativ > 0
+      ? `CHF-Verträge ${fmtChf(k.praemieChfNativ)}, EUR-Verträge ${fmtEur(k.praemieEurNativ)} umgerechnet mit Kurs 0.94.`
+      : `Nur CHF-Verträge im gewählten Filter.`;
+    el.appendChild(kachel(
+      'Jahresprämienvolumen', fmtChf(k.praemieGesamtChf),
+      praemieDef,
+      `Summe der Jahresprämie brutto aller aktiven Verträge, Eurobetrag mit dem Konzernkurs 2025 (1 EUR = 0.94 CHF) in Franken umgerechnet; der ursprüngliche Eurobetrag daneben. ${praemieDef} Quelle: Vertragstabelle, Jahresprämie brutto und Währung.`,
+      `davon ${fmtEur(k.praemieEurNativ)}`
+    ));
+
+    const stornoText = k.nennerN
+      ? `Kündigungen und vorzeitige Beendigungen 2025 ohne Tod, Widerruf, Ablauf und Leistungsfall Tod, geteilt durch den Bestand am 01.01.2025 (${fmtInt(k.zaehlerN)} von ${fmtInt(k.nennerN)} Verträgen).`
+      : `Kein Vertrag im gewählten Filter war am 01.01.2025 im Bestand.`;
+    el.appendChild(kachel(
+      'Stornoquote 2025', k.stornoquote != null ? fmtPct(k.stornoquote) : '–',
+      stornoText,
+      `Verbindliche Definition: Verträge mit Storno im Jahr 2025 aus Kündigung, Nichtzahlung oder Rückkauf (nicht: Tod, Widerruf, Ablauf, Leistungsfall Tod), geteilt durch den Bestand am 01.01.2025. ${stornoText} Quelle: Vertragstabelle, Stornodatum und Stornogrund.`
+    ));
+
+    const migrationText = k.aktivN
+      ? `Aktive Verträge, die auf der Plattform MINT laufen (direkt abgeschlossen oder migriert): ${fmtInt(k.migriertN)} von ${fmtInt(k.aktivN)}.`
+      : `Kein aktiver Vertrag im gewählten Filter.`;
+    el.appendChild(kachel(
+      'Migrationsfortschritt', k.migrationsquote != null ? fmtPct(k.migrationsquote) : '–',
+      migrationText,
+      `Anteil der aktiven Verträge, die operativ bereits auf der neuen Plattform MINT laufen, ob direkt dort abgeschlossen oder aus einem Altsystem migriert. ${migrationText} Quelle: Vertragstabelle, Quellsystem und Migrationsdatum.`
+    ));
+  }
+
+  function gruppenAufschluesselung(rows, dimension) {
+    const aktiv = rows.filter(v => v.status === 'AKTIV');
+    const kategorien = Object.keys(NAMEN[dimension]).filter(k =>
+      !aktivFilter[dimension].size || aktivFilter[dimension].has(k)
+    );
+    const daten = kategorien.map(kat => {
+      const teilmenge = aktiv.filter(v => v[dimension] === kat);
+      let chf = 0;
+      teilmenge.forEach(v => {
+        if (v.praemie == null) return;
+        chf += v.waehrung === 'EUR' ? v.praemie * KURS : v.praemie;
+      });
+      return { kat, anzahl: teilmenge.length, chf };
+    });
+    const maxAnzahl = Math.max(1, ...daten.map(d => d.anzahl));
+    const maxChf = Math.max(1, ...daten.map(d => d.chf));
+    return { daten, maxAnzahl, maxChf };
+  }
+
+  function renderAufschluesselungsgruppe(titel, dimension, rows) {
+    const { daten, maxAnzahl, maxChf } = gruppenAufschluesselung(rows, dimension);
+    const div = document.createElement('div');
+    div.className = 'gruppe';
+    let zeilen = daten.map(d => `
+      <tr>
+        <td class="gruppenname"><span class="punktname" style="background:${FARBEN[dimension][d.kat]}"></span>${NAMEN[dimension][d.kat]}</td>
+        <td>
+          <div class="balkenzelle">
+            <span>${fmtInt(d.anzahl)}</span>
+            <span class="balkenspur"><span class="balkenfuellung" style="width:${100 * d.anzahl / maxAnzahl}%;background:${FARBEN[dimension][d.kat]}"></span></span>
+          </div>
+        </td>
+        <td>
+          <div class="balkenzelle">
+            <span>${fmtChf(d.chf)}</span>
+            <span class="balkenspur"><span class="balkenfuellung" style="width:${100 * d.chf / maxChf}%;background:${FARBEN[dimension][d.kat]}"></span></span>
+          </div>
+        </td>
+      </tr>`).join('');
+    if (!daten.length) {
+      zeilen = `<tr><td colspan="3" style="text-align:left;color:var(--text-muted)">Keine Gruppe im gewählten Filter.</td></tr>`;
+    }
+    div.innerHTML = `
+      <h3>${titel}</h3>
+      <table class="aufschluesselungstabelle">
+        <thead><tr><th>Gruppe</th><th>Verträge</th><th>Jahresprämie</th></tr></thead>
+        <tbody>${zeilen}</tbody>
+      </table>`;
+    return div;
+  }
+
+  function renderAufschluesselung(rows) {
+    const el = document.getElementById('aufschluesselung');
+    el.innerHTML = '';
+    el.appendChild(renderAufschluesselungsgruppe('Nach Sparte', 'sparte', rows));
+    el.appendChild(renderAufschluesselungsgruppe('Nach Markt', 'markt', rows));
+    el.appendChild(renderAufschluesselungsgruppe('Nach Herkunft', 'herkunft', rows));
+  }
+
+  // --- Stornoquote-Zeitreihe ---
+  function berechneJahresquote(rows, jahr) {
+    const ja = `${jahr}-01-01`, je = `${jahr}-12-31`;
+    const nenner = rows.filter(v => v.beginn && v.beginn < ja && (!v.stornoDatum || v.stornoDatum >= ja));
+    const zaehler = nenner.filter(v => v.stornoDatum && v.stornoDatum <= je && !NICHT_CHURN.has(v.stornoGrund));
+    return {
+      quote: nenner.length ? 100 * zaehler.length / nenner.length : null,
+      zaehler: zaehler.length,
+      nenner: nenner.length,
+    };
+  }
+
+  let quotenAnsicht = 'herkunft';
+
+  function renderQuotenchart(rows) {
+    const jahre = D.quotenJahre;
+    const dimension = quotenAnsicht;
+    const kategorien = Object.keys(NAMEN[dimension]);
+
+    const gesamtReihe = jahre.map(j => berechneJahresquote(rows, j));
+    const reihen = kategorien.map(kat => ({
+      kat,
+      farbe: FARBEN[dimension][kat],
+      name: NAMEN[dimension][kat],
+      werte: jahre.map(j => berechneJahresquote(rows.filter(v => v[dimension] === kat), j)),
+    }));
+
+    // Legende
+    const legende = document.getElementById('quotenLegende');
+    legende.innerHTML = `<div class="eintrag"><span class="punkt" style="background:var(--gesamtlinie)"></span>Gesamtbestand</div>` +
+      reihen.map(r => `<div class="eintrag"><span class="punkt" style="background:${r.farbe}"></span>${r.name}</div>`).join('');
+
+    // Masse
+    const W = 760, H = 230, ML = 34, MR = 66, MT = 12, MB = 24;
+    const plotW = W - ML - MR, plotH = H - MT - MB;
+    const n = jahre.length;
+    const xFor = i => ML + (n === 1 ? 0 : i * plotW / (n - 1));
+
+    const alleWerte = [...gesamtReihe, ...reihen.flatMap(r => r.werte)].map(w => w.quote).filter(w => w != null);
+    const maxWert = alleWerte.length ? Math.max(...alleWerte) : 0;
+    const achsenMax = Math.max(20, Math.ceil(maxWert / 5) * 5);
+    const yFor = q => MT + plotH * (1 - q / achsenMax);
+
+    // Gitter + Y-Achse
+    let svg = '';
+    for (let g = 0; g <= achsenMax; g += 5) {
+      const y = yFor(g);
+      svg += `<line class="quoten-gitter" x1="${ML}" x2="${W - MR}" y1="${y}" y2="${y}" />`;
+      svg += `<text class="quoten-achse" x="${ML - 6}" y="${y + 3}" text-anchor="end">${g} %</text>`;
+    }
+    // X-Achse
+    jahre.forEach((j, i) => {
+      svg += `<text class="quoten-achse" x="${xFor(i)}" y="${H - 4}" text-anchor="middle">${j}</text>`;
+    });
+
+    function pfad(werte) {
+      let d = '';
+      let offen = false;
+      werte.forEach((w, i) => {
+        if (w.quote == null) { offen = false; return; }
+        const x = xFor(i), y = yFor(w.quote);
+        d += (offen ? 'L' : 'M') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+        offen = true;
+      });
+      return d;
+    }
+
+    // Nicht-Gesamt-Linien zuerst (unten), Gesamtlinie zuletzt (oben)
+    reihen.forEach(r => {
+      svg += `<path d="${pfad(r.werte)}" fill="none" stroke="${r.farbe}" stroke-width="2" />`;
+      r.werte.forEach((w, i) => {
+        if (w.quote == null) return;
+        svg += `<circle class="quoten-punkt" cx="${xFor(i)}" cy="${yFor(w.quote)}" r="3" fill="${r.farbe}" data-serie="${r.kat}" data-jahr-index="${i}" />`;
+      });
+    });
+    svg += `<path d="${pfad(gesamtReihe)}" fill="none" stroke="var(--gesamtlinie)" stroke-width="2.5" />`;
+    gesamtReihe.forEach((w, i) => {
+      if (w.quote == null) return;
+      svg += `<circle class="quoten-punkt" cx="${xFor(i)}" cy="${yFor(w.quote)}" r="3.2" fill="var(--gesamtlinie)" data-serie="__gesamt" data-jahr-index="${i}" />`;
+    });
+
+    // Permanente Beschriftung: jeder Punkt der Gesamtlinie
+    gesamtReihe.forEach((w, i) => {
+      if (w.quote == null) return;
+      const x = xFor(i), y = yFor(w.quote) - 9;
+      const text = fmtPct(w.quote);
+      svg += `<text class="quoten-gesamtlabel" x="${x}" y="${y}" text-anchor="middle">${text}</text>`;
+    });
+
+    // Permanente Beschriftung: letzter Punkt jeder weiteren Linie, mit Kollisionsvermeidung
+    const endpunkte = reihen.map(r => {
+      let letzterIndex = -1;
+      r.werte.forEach((w, i) => { if (w.quote != null) letzterIndex = i; });
+      if (letzterIndex === -1) return null;
+      return { farbe: r.farbe, quote: r.werte[letzterIndex].quote, y: yFor(r.werte[letzterIndex].quote), x: xFor(letzterIndex) };
+    }).filter(Boolean);
+    // Gesamtlinie am letzten Jahr zaehlt bei der Kollisionsvermeidung mit
+    let letzterGesamtIndex = -1;
+    gesamtReihe.forEach((w, i) => { if (w.quote != null) letzterGesamtIndex = i; });
+    if (letzterGesamtIndex !== -1) {
+      endpunkte.push({ farbe: 'var(--gesamtlinie)', quote: gesamtReihe[letzterGesamtIndex].quote, y: yFor(gesamtReihe[letzterGesamtIndex].quote), x: xFor(letzterGesamtIndex), gesamt: true });
+    }
+    endpunkte.sort((a, b) => a.y - b.y);
+    const minAbstand = 13;
+    for (let i = 1; i < endpunkte.length; i++) {
+      if (endpunkte[i].y - endpunkte[i - 1].y < minAbstand) {
+        endpunkte[i].y = endpunkte[i - 1].y + minAbstand;
+      }
+    }
+    endpunkte.forEach(p => {
+      if (p.gesamt) return; // Gesamtlinie ist schon an jedem Punkt beschriftet
+      const text = fmtPct(p.quote);
+      const lx = p.x + 8;
+      svg += `<text class="quoten-endlabel" x="${lx}" y="${p.y + 3}">${text}</text>`;
+    });
+
+    // Unsichtbare Spalten fuer den Hover
+    for (let i = 0; i < n; i++) {
+      const spaltenBreite = n === 1 ? plotW : plotW / (n - 1);
+      const x0 = xFor(i) - spaltenBreite / 2;
+      svg += `<rect class="quoten-hover" x="${x0}" y="${MT}" width="${spaltenBreite}" height="${plotH}" fill="transparent" data-jahr-index="${i}" />`;
+    }
+
+    const wrapper = document.getElementById('quotenSvgWrapper');
+    const tooltip = document.getElementById('quotenTooltip');
+    wrapper.querySelectorAll('svg').forEach(s => s.remove());
+    const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgEl.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    svgEl.innerHTML = svg;
+    wrapper.insertBefore(svgEl, tooltip);
+
+    svgEl.querySelectorAll('.quoten-hover').forEach(rect => {
+      rect.addEventListener('mousemove', (ev) => {
+        const i = Number(rect.dataset.jahrIndex);
+        const jahr = jahre[i];
+        let html = `<div style="font-weight:700;margin-bottom:3px">${jahr}</div>`;
+        html += `<div class="zeile-tt"><span class="punkt-tt" style="background:var(--gesamtlinie)"></span>Gesamtbestand: ${gesamtReihe[i].quote != null ? fmtPct(gesamtReihe[i].quote) + ' (' + fmtInt(gesamtReihe[i].zaehler) + '/' + fmtInt(gesamtReihe[i].nenner) + ')' : 'kein Bestand'}</div>`;
+        reihen.forEach(r => {
+          const w = r.werte[i];
+          html += `<div class="zeile-tt"><span class="punkt-tt" style="background:${r.farbe}"></span>${r.name}: ${w.quote != null ? fmtPct(w.quote) + ' (' + fmtInt(w.zaehler) + '/' + fmtInt(w.nenner) + ')' : 'kein Bestand'}</div>`;
+        });
+        tooltip.innerHTML = html;
+        tooltip.style.opacity = '1';
+        const wrapperRect = wrapper.getBoundingClientRect();
+        let left = ev.clientX - wrapperRect.left + 14;
+        if (left + 190 > wrapperRect.width) left = ev.clientX - wrapperRect.left - 200;
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = (ev.clientY - wrapperRect.top - 40) + 'px';
+      });
+      rect.addEventListener('mouseleave', () => { tooltip.style.opacity = '0'; });
+    });
+  }
+
+  document.getElementById('quotenUmschalter').addEventListener('click', (ev) => {
+    const btn = ev.target.closest('button.chip');
+    if (!btn) return;
+    quotenAnsicht = btn.dataset.ansicht;
+    document.querySelectorAll('#quotenUmschalter .chip').forEach(c => c.classList.remove('aktiv'));
+    btn.classList.add('aktiv');
+    render();
+  });
+
+  // --- Tarifgenerationen-Ampel ---
+  function renderAmpelRegel() {
+    const el = document.getElementById('ampelRegel');
+    el.innerHTML = `Rot: Garantiezins liegt über der Gesamtverzinsung 2025. <strong>Gelb: Garantiezins liegt bis zu ${D.gelbPufferPp.toLocaleString('de-CH')} Prozentpunkte unter der Gesamtverzinsung 2025.</strong> Grün: mehr als ${D.gelbPufferPp.toLocaleString('de-CH')} Prozentpunkte darunter. Je Tarifgeneration und Markt eigene Zeile und eigene Farbe. Aktive Verträge und Jahresprämie im gewählten Filter.`;
+  }
+
+  function renderAmpel(rows) {
+    const tabelle = document.getElementById('ampeltabelle');
+    const hinweis = document.getElementById('ampelHinweis');
+
+    if (aktivFilter.sparte.size && !aktivFilter.sparte.has('LV')) {
+      tabelle.style.display = 'none';
+      hinweis.style.display = 'block';
+      hinweis.textContent = 'Nur Leben.';
+      return;
+    }
+    tabelle.style.display = '';
+    hinweis.style.display = 'none';
+
+    const koerper = document.getElementById('ampelKoerper');
+    const aktiv = rows.filter(v => v.status === 'AKTIV' && v.sparte === 'LV');
+    const sichtbar = D.tarifgenerationenLeben.filter(tg => !aktivFilter.markt.size || aktivFilter.markt.has(tg.markt));
+
+    koerper.innerHTML = sichtbar.map(tg => {
+      const teilmenge = aktiv.filter(v => v.tarifgeneration === tg.code && v.markt === tg.markt);
+      let chf = 0, eur = 0;
+      teilmenge.forEach(v => {
+        if (v.praemie == null) return;
+        if (v.waehrung === 'EUR') eur += v.praemie; else chf += v.praemie;
+      });
+      const gesamtChf = chf + eur * KURS;
+      const praemieText = eur > 0 ? `${fmtChf(gesamtChf)} (${fmtEur(eur)})` : fmtChf(gesamtChf);
+      return `
+        <tr>
+          <td><span class="ampel-badge ${tg.ampel}"><span class="kreis"></span>${AMPEL_WORT[tg.ampel]}</span></td>
+          <td>${tg.bezeichnung}</td>
+          <td><span class="punktname" style="background:${FARBEN.markt[tg.markt]}"></span>${NAMEN.markt[tg.markt]}</td>
+          <td class="zahl">${tg.garantiezins.toLocaleString('de-CH', {minimumFractionDigits:2})} %</td>
+          <td class="zahl">${tg.gesamtverzinsung.toLocaleString('de-CH', {minimumFractionDigits:2})} %</td>
+          <td class="zahl">${fmtInt(teilmenge.length)}</td>
+          <td class="zahl">${praemieText}</td>
+        </tr>`;
+    }).join('');
+  }
+
+  function render() {
+    const rows = gefiltert();
+    const k = berechneKennzahlen(rows);
+    renderKacheln(k);
+    renderQuotenchart(rows);
+    renderAufschluesselung(rows);
+    renderAmpel(rows);
+  }
+
+  // --- Datenkatalog: sortierbare Tabelle, unabhaengig vom Filter ---
+  const REFERENZ_KATEGORIE = 'Referenz- und Stammdaten';
+  let katalogSortSpalte = 'zeilen';
+  let katalogSortRichtung = -1;
+  let katalogZeigeReferenz = false;
+
+  function renderKatalog() {
+    const koerper = document.getElementById('katalogkoerper');
+    const anzahlReferenz = D.katalog.filter(e => e.kategorie === REFERENZ_KATEGORIE).length;
+    const sichtbar = katalogZeigeReferenz ? D.katalog : D.katalog.filter(e => e.kategorie !== REFERENZ_KATEGORIE);
+    const daten = [...sichtbar].sort((a, b) => {
+      const av = a[katalogSortSpalte], bv = b[katalogSortSpalte];
+      if (typeof av === 'number') return (av - bv) * katalogSortRichtung;
+      return String(av).localeCompare(String(bv), 'de-CH') * katalogSortRichtung;
+    });
+    koerper.innerHTML = daten.map(row => `
+      <tr>
+        <td class="kategoriezelle">${row.kategorie}</td>
+        <td>${row.name}</td>
+        <td class="zahl">${fmtInt(row.zeilen)}</td>
+        <td class="zahl">${fmtInt(row.spalten)}</td>
+        <td>${row.zweck}</td>
+      </tr>`).join('');
+    document.querySelectorAll('#katalogtabelle th .pfeil').forEach(p => p.textContent = '');
+    const th = document.querySelector(`#katalogtabelle th[data-key="${katalogSortSpalte}"] .pfeil`);
+    if (th) th.textContent = katalogSortRichtung === 1 ? '▲' : '▼';
+
+    const umschalter = document.getElementById('katalogReferenzUmschalten');
+    umschalter.textContent = katalogZeigeReferenz
+      ? `Referenz- und Stammdaten (${fmtInt(anzahlReferenz)}) ausblenden`
+      : `Referenz- und Stammdaten (${fmtInt(anzahlReferenz)}) einblenden`;
+    umschalter.classList.toggle('aktiv', katalogZeigeReferenz);
+  }
+
+  document.querySelectorAll('#katalogtabelle th').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      if (katalogSortSpalte === key) katalogSortRichtung *= -1;
+      else { katalogSortSpalte = key; katalogSortRichtung = key === 'zeilen' || key === 'spalten' ? -1 : 1; }
+      renderKatalog();
+    });
+  });
+
+  document.getElementById('katalogReferenzUmschalten').addEventListener('click', () => {
+    katalogZeigeReferenz = !katalogZeigeReferenz;
+    renderKatalog();
+  });
+
+  baueFilterleiste();
+  renderAmpelRegel();
+  render();
+  renderKatalog();
+})();
+
+(function () {
+  const A = AKTE_DATEN;
+  const AMPEL_FARBE = { rot: 'var(--status-rot)', gelb: 'var(--status-gelb)', gruen: 'var(--status-gruen)' };
+  const AMPEL_WORT = { rot: 'rot', gelb: 'gelb', gruen: 'grün' };
+  const MONATSNAMEN = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+
+  function escHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+  function formatText(s) {
+    if (!s) return '';
+    return escHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  }
+  function fmtDatumTT(iso) {
+    // iso: "JJJJ-MM-TT" oder "JJJJ-MM-TTTHH:MM"
+    const [datumTeil, zeitTeil] = iso.split('T');
+    const [j, m, t] = datumTeil.split('-');
+    return `${t}.${m}.${j}` + (zeitTeil ? ` ${zeitTeil}` : '');
+  }
+  function gruppierungsSchluessel(iso) {
+    const [j, m] = iso.split('-');
+    const jahr = parseInt(j, 10);
+    if (jahr < 2025) return 'vor 2025';
+    return `${MONATSNAMEN[parseInt(m, 10) - 1]} ${j}`;
+  }
+
+  // --- Kopf ---
+  const kopfEl = document.getElementById('akteKopf');
+  kopfEl.innerHTML = [
+    ['Kunde', A.kopf.kunde],
+    ['Vertrag', A.kopf.vertrag],
+    ['Versicherungsschein', A.kopf.versicherungsschein],
+    ['Schaden', A.kopf.schaden],
+  ].map(([titel, wert]) => `
+    <div class="feld">
+      <div class="titel">${escHtml(titel)}</div>
+      <div class="wert">${escHtml(wert)}</div>
+    </div>`).join('');
+
+  // --- Kacheln ---
+  const kachelnEl = document.getElementById('akteKacheln');
+  kachelnEl.innerHTML = A.kacheln.map(k => `
+    <div class="kachel" title="${escHtml(k.definition)}">
+      <div class="titel">${escHtml(k.label)}</div>
+      <div class="wert">${escHtml(k.wert)}</div>
+      <div class="definition">${escHtml(k.definition)}</div>
+    </div>`).join('');
+
+  // --- Gruppenfarben ---
+  const gruppenFarbe = {};
+  A.gruppen.forEach(g => { gruppenFarbe[g.id] = g.farbe; });
+
+  // --- Filterleiste (Gruppen) ---
+  let aktiveGruppe = null; // null = alle
+  const gruppenleisteEl = document.getElementById('akteGruppenleiste');
+  function baueGruppenleiste() {
+    const chips = [`<button class="chip${aktiveGruppe === null ? ' aktiv' : ''}" data-gruppe="">Alle</button>`]
+      .concat(A.gruppen.map(g => `
+        <button class="chip${aktiveGruppe === g.id ? ' aktiv' : ''}" data-gruppe="${g.id}">
+          <span class="punkt" style="background:${g.farbe}"></span>${escHtml(g.name)}
+        </button>`));
+    gruppenleisteEl.innerHTML = chips.join('');
+    gruppenleisteEl.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const g = chip.dataset.gruppe;
+        aktiveGruppe = (g === '' ? null : (aktiveGruppe === g ? null : g));
+        baueGruppenleiste();
+        renderZeitstrahl();
+      });
+    });
+  }
+
+  // --- Zeitstrahl ---
+  let gewaehltesEreignis = null;
+  const zeitstrahlEl = document.getElementById('akteZeitstrahl');
+
+  function ereignisSichtbar(e) {
+    return aktiveGruppe === null || e.gruppen.includes(aktiveGruppe);
+  }
+
+  function renderZeitstrahl() {
+    const sichtbar = A.ereignisse.filter(ereignisSichtbar);
+    const gruppen = [];
+    const nachSchluessel = new Map();
+    sichtbar.forEach(e => {
+      const schluessel = gruppierungsSchluessel(e.datum);
+      if (!nachSchluessel.has(schluessel)) { nachSchluessel.set(schluessel, []); gruppen.push(schluessel); }
+      nachSchluessel.get(schluessel).push(e);
+    });
+    zeitstrahlEl.innerHTML = gruppen.map(schluessel => `
+      <div class="jahresgruppe">
+        <div class="gruppenkopf">${escHtml(schluessel)}</div>
+        ${nachSchluessel.get(schluessel).map(e => `
+          <div class="akte-ereignis${gewaehltesEreignis === e.id ? ' gewaehlt' : ''}" data-id="${e.id}">
+            <div class="punkte">${e.gruppen.map(g => `<span class="punkt" style="background:${gruppenFarbe[g]}"></span>`).join('') || '<span class="punkt" style="background:var(--grid)"></span>'}</div>
+            <div class="inhalt">
+              <div class="datumzeile">${fmtDatumTT(e.datum)}</div>
+              <div class="titelzeile">${escHtml(e.titel)}${e.wendepunkt ? `<span class="akte-wendepunkt-badge">Wendepunkt</span>` : ''}</div>
+            </div>
+          </div>`).join('')}
+      </div>`).join('');
+    zeitstrahlEl.querySelectorAll('.akte-ereignis').forEach(el => {
+      el.addEventListener('click', () => { gewaehltesEreignis = el.dataset.id; renderZeitstrahl(); renderPanel(); });
+    });
+  }
+
+  // --- Dokument-Panel ---
+  const panelEl = document.getElementById('aktePanel');
+  function renderPanel() {
+    const e = A.ereignisse.find(ev => ev.id === gewaehltesEreignis);
+    if (!e) { panelEl.innerHTML = '<div class="panel-leer">Ereignis wählen, um den Volltext zu sehen.</div>'; return; }
+    const kopfzeilen = [];
+    kopfzeilen.push(`<span><b>Art:</b> ${escHtml(e.art)}</span>`);
+    kopfzeilen.push(`<span><b>Datum:</b> ${fmtDatumTT(e.datum)}</span>`);
+    if (e.von || e.an) kopfzeilen.push(`<span><b>Absender → Empfänger:</b> ${escHtml(e.von || '–')} → ${escHtml(e.an || '–')}</span>`);
+    kopfzeilen.push(`<span><b>Kennung:</b> ${escHtml(e.kennungText)}</span>`);
+    panelEl.innerHTML = `
+      <div class="panel-kopf">${kopfzeilen.join('')}</div>
+      <div class="panel-titel">${escHtml(e.titel)}</div>
+      <div class="panel-text">${e.volltext ? formatText(e.volltext) : '<span class="panel-leer">Kein Volltext hinterlegt, Ereignis stammt aus einer Tabelle.</span>'}</div>`;
+  }
+
+  // --- Faktencheck ---
+  const faktencheckRegelEl = document.getElementById('akteFaktencheckRegel');
+  const faktencheckKoerperEl = document.getElementById('akteFaktencheckKoerper');
+  faktencheckRegelEl.textContent = A.faktencheckRegel;
+  faktencheckKoerperEl.innerHTML = A.faktencheck.map(z => `
+    <tr>
+      <td><span class="ampel-badge ${z.status}"><span class="kreis" style="background:${AMPEL_FARBE[z.status]}"></span>${AMPEL_WORT[z.status]}</span></td>
+      <td>${escHtml(z.schreiben)}</td>
+      <td class="aussagezelle">${escHtml(z.aussage)}</td>
+      <td class="quellezelle">${escHtml(z.quelle)}</td>
+    </tr>`).join('');
+
+  // --- Briefe-Vorschau ---
+  function renderBrief(rohtext) {
+    const bloecke = rohtext.trim().split(/\n\s*\n/);
+    const kennzeichnung = bloecke[0];
+    const rest = bloecke.slice(1);
+    const absatzHtml = rest.map(block => {
+      const mehrzeilig = block.includes('\n');
+      return `<p class="${mehrzeilig ? 'adresse' : ''}">${formatText(block)}</p>`;
+    }).join('');
+    return `<div class="brief-blatt">
+      <div class="briefkennzeichnung">${escHtml(kennzeichnung)}</div>
+      ${absatzHtml}
+    </div>`;
+  }
+  document.getElementById('akteBriefe').innerHTML =
+    renderBrief(A.schreibenAntwortKunde) + renderBrief(A.schreibenStellungnahme);
+
+  // --- Start ---
+  baueGruppenleiste();
+  renderZeitstrahl();
+  const ersterWendepunkt = A.ereignisse.find(e => e.wendepunkt) || A.ereignisse[0];
+  gewaehltesEreignis = ersterWendepunkt.id;
+  renderZeitstrahl();
+  renderPanel();
+})();
+
+(function () {
+  const U = UNDERWRITING_DATEN;
+
+  function escHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+  function formatInline(s) {
+    return escHtml(s)
+      .replace(/~~(.+?)~~/g, '<del>$1</del>')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  }
+  function formatVorlage(md) {
+    const bloecke = md.trim().split(/\n\s*\n/);
+    return bloecke.map(block => {
+      const zeilen = block.split('\n').map(z => z.trim()).filter(Boolean);
+      if (!zeilen.length) return '';
+      if (zeilen.every(z => z.startsWith('- '))) {
+        return '<ul>' + zeilen.map(z => `<li>${formatInline(z.slice(2))}</li>`).join('') + '</ul>';
+      }
+      if (zeilen[0].startsWith('### ')) {
+        const rest = zeilen.slice(1);
+        return `<div class="uw-v-unterabschnitt">${formatInline(zeilen[0].slice(4))}</div>` +
+          (rest.length ? `<p>${rest.map(formatInline).join(' ')}</p>` : '');
+      }
+      if (zeilen[0].startsWith('## ')) {
+        return `<div class="uw-v-abschnitt">${formatInline(zeilen[0].slice(3))}</div>`;
+      }
+      if (zeilen[0].startsWith('# ')) {
+        return `<div class="uw-v-titel">${formatInline(zeilen[0].slice(2))}</div>`;
+      }
+      return `<p>${zeilen.map(formatInline).join(' ')}</p>`;
+    }).join('');
+  }
+
+  document.getElementById('uwRegel').textContent = U.regel;
+
+  let uwGewaehlt = U.antraege[0].id;
+
+  function renderUwListe() {
+    const el = document.getElementById('uwListe');
+    el.innerHTML = U.antraege.map(a => `
+      <button class="uw-antrag${a.id === uwGewaehlt ? ' gewaehlt' : ''}" data-id="${a.id}">
+        <div class="uw-name">${escHtml(a.antragsteller)} <span style="color:var(--text-muted);font-weight:400">(${escHtml(a.antragId)})</span></div>
+        <div class="uw-zeile"><span>Summe</span><b>${escHtml(a.summeText)}</b></div>
+        <div class="uw-zeile"><span>Risikoklasse</span><b>${escHtml(a.risikoklasseText)}</b></div>
+        <div class="uw-empfehlung">${escHtml(a.empfehlung)}</div>
+      </button>`).join('');
+    el.querySelectorAll('.uw-antrag').forEach(btn => {
+      btn.addEventListener('click', () => {
+        uwGewaehlt = btn.dataset.id;
+        renderUwListe();
+        renderUwPanel();
+      });
+    });
+  }
+
+  function renderUwPanel() {
+    const a = U.antraege.find(x => x.id === uwGewaehlt);
+    const panel = document.getElementById('uwPanel');
+    const schritte = a.regelpfad.map((s, i) => `
+      <li class="uw-schritt${s.mensch ? ' uw-mensch' : ''}">
+        <span class="uw-nummer">${i + 1}</span>
+        <div class="uw-inhalt">
+          <span class="uw-schritttitel">${escHtml(s.schritt)}</span><span class="uw-paragraf">${escHtml(s.paragraf)}</span>
+          ${s.mensch ? '<span class="uw-mensch-marke">Hier entscheidet ein Mensch</span>' : ''}
+          <div class="uw-ergebnis">${formatInline(s.ergebnis)}</div>
+        </div>
+      </li>`).join('');
+    panel.innerHTML = `
+      <h3>Regelpfad: ${escHtml(a.antragsteller)}, ${escHtml(a.antragId)}</h3>
+      <ul class="uw-regelpfad">${schritte}</ul>
+      <div class="uw-vorlage">${formatVorlage(a.vorlage)}</div>`;
+  }
+
+  renderUwListe();
+  renderUwPanel();
+})();
+</script>
+</body>
+</html>

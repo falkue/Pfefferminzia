@@ -1,0 +1,15 @@
+﻿tarifgeneration_id,sparte,bezeichnung,herkunft,gueltig_ab,gueltig_bis,produkte,maerkte,anteil_bestand_pct
+HP-KLASSIK,HP,Pfefferminz Klassik,pfefferminz,2001-01-01,2012-12-31,HP-PRIV;HP-BETR;HP-BERUF,CH;DE,8.0
+HP-MODERN,HP,Pfefferminz Modern,pfefferminz,2013-01-01,2020-12-31,HP-PRIV;HP-BETR;HP-BERUF,CH;DE,45.0
+MZ-DIRECT,HP,Minzia Direct,minzia,2021-01-01,2024-12-31,HP-PRIV,DE;CH,27.0
+PM-2025,HP,Pfefferminzia,pfefferminzia,2025-01-01,NaT,HP-PRIV;HP-BETR;HP-BERUF,CH;DE,20.0
+PK-85,LV,Pfefferminz Kapital 1985,pfefferminz,1985-01-01,1994-06-30,LV-VORS;LV-EU,CH;DE,4.0
+PK-95,LV,Pfefferminz Kapital / Risiko 1995,pfefferminz,1994-07-01,2000-06-30,LV-VORS;LV-RISK;LV-EU,CH;DE,10.0
+PK-2000,LV,Pfefferminz Kapital / Rente 2000,pfefferminz,2000-07-01,2003-12-31,LV-VORS;LV-RENTE;LV-RISK;LV-EU,CH;DE,9.0
+PK-2004,LV,Pfefferminz Kapital / Rente 2004,pfefferminz,2004-01-01,2006-12-31,LV-VORS;LV-RENTE;LV-RISK;LV-EU,CH;DE,11.0
+PK-2007,LV,Pfefferminz Kapital / Rente / Risiko 2007,pfefferminz,2007-01-01,2011-12-31,LV-VORS;LV-RENTE;LV-RISK;LV-EU,CH;DE,11.0
+PL-2012,LV,Pfefferminz Leben 2012,pfefferminz,2012-01-01,2014-12-31,LV-RENTE;LV-VORS;LV-RISK;LV-EU,CH;DE,10.0
+PL-2015,LV,Pfefferminz Leben 2015,pfefferminz,2015-01-01,2016-12-31,LV-RENTE;LV-VORS;LV-RISK;LV-EU,CH;DE,7.0
+PL-2017,LV,Pfefferminz Leben 2017,pfefferminz,2017-01-01,2024-12-31,LV-RENTE;LV-VORS;LV-RISK;LV-EU,CH;DE,18.0
+MZ-2020,LV,Minzia RisikoLeben digital,minzia,2020-03-01,2024-12-31,LV-RISK;LV-EU,CH;DE,12.0
+PZ-2025,LV,Pfefferminzia 2025,pfefferminzia,2025-01-01,NaT,LV-RISK;LV-VORS;LV-RENTE;LV-EU,CH;DE,8.0

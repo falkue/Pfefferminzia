@@ -1,0 +1,251 @@
+produkt,markt,kanal,herkunft,jahr,neugeschaeft_rate_pct,storno_rate_pct,nachtrag_rate,mahn_rate_pct,kuendigung_vu_rate_pct,bemerkung
+HP-PRIV,CH,agentur,alle,2016,10.0,5.1,0.15,6.75,0.2,
+HP-PRIV,CH,agentur,alle,2017,10.0,5.1,0.15,6.75,0.2,
+HP-PRIV,CH,agentur,alle,2018,10.0,5.2,0.15,6.75,0.2,
+HP-PRIV,CH,agentur,alle,2019,10.0,5.25,0.15,6.75,0.2,
+HP-PRIV,CH,agentur,alle,2020,9.0,4.69,0.15,7.76,0.2,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-PRIV,CH,agentur,pfefferminz,2021,10.0,5.35,0.15,6.75,0.2,
+HP-PRIV,CH,agentur,pfefferminz,2022,10.0,5.35,0.15,6.75,0.2,
+HP-PRIV,CH,agentur,pfefferminz,2023,10.0,5.3,0.15,7.76,0.2,
+HP-PRIV,CH,agentur,pfefferminz,2024,10.0,5.41,0.15,6.75,0.2,
+HP-PRIV,CH,agentur,pfefferminz,2025,10.0,7.29,0.15,6.75,0.2,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-PRIV,CH,makler,alle,2016,11.0,6.3,0.15,6.0,0.2,
+HP-PRIV,CH,makler,alle,2017,11.0,6.3,0.15,6.0,0.2,
+HP-PRIV,CH,makler,alle,2018,11.0,6.43,0.15,6.0,0.2,
+HP-PRIV,CH,makler,alle,2019,11.0,6.49,0.15,6.0,0.2,
+HP-PRIV,CH,makler,alle,2020,9.9,5.8,0.15,6.9,0.2,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-PRIV,CH,makler,pfefferminz,2021,11.0,6.62,0.15,6.0,0.2,
+HP-PRIV,CH,makler,pfefferminz,2022,11.0,6.62,0.15,6.0,0.2,
+HP-PRIV,CH,makler,pfefferminz,2023,11.0,6.55,0.15,6.9,0.2,
+HP-PRIV,CH,makler,pfefferminz,2024,11.0,6.68,0.15,6.0,0.2,
+HP-PRIV,CH,makler,pfefferminz,2025,11.0,9.01,0.15,6.0,0.2,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-PRIV,CH,direkt,alle,2016,13.0,8.1,0.15,9.38,0.2,
+HP-PRIV,CH,direkt,alle,2017,13.0,8.1,0.15,9.38,0.2,
+HP-PRIV,CH,direkt,alle,2018,13.0,8.26,0.15,9.38,0.2,
+HP-PRIV,CH,direkt,alle,2019,13.0,8.34,0.15,9.38,0.2,
+HP-PRIV,CH,direkt,alle,2020,11.7,7.45,0.15,10.78,0.2,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-PRIV,CH,direkt,pfefferminz,2021,13.0,8.51,0.15,9.38,0.2,
+HP-PRIV,CH,direkt,minzia,2021,20.8,10.63,0.15,9.38,0.2,
+HP-PRIV,CH,direkt,pfefferminz,2022,13.0,8.51,0.15,9.38,0.2,
+HP-PRIV,CH,direkt,minzia,2022,20.8,10.63,0.15,9.38,0.2,
+HP-PRIV,CH,direkt,pfefferminz,2023,13.0,8.42,0.15,10.78,0.2,
+HP-PRIV,CH,direkt,minzia,2023,20.8,10.53,0.15,10.78,0.2,
+HP-PRIV,CH,direkt,pfefferminz,2024,13.0,8.59,0.15,9.38,0.2,
+HP-PRIV,CH,direkt,minzia,2024,20.8,10.73,0.15,9.38,0.2,
+HP-PRIV,CH,direkt,pfefferminz,2025,13.0,11.58,0.15,9.38,0.2,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-PRIV,CH,direkt,minzia,2025,20.8,12.25,0.15,9.38,0.2,
+HP-PRIV,CH,bank,alle,2016,7.0,5.4,0.15,7.12,0.2,
+HP-PRIV,CH,bank,alle,2017,7.0,5.4,0.15,7.12,0.2,
+HP-PRIV,CH,bank,alle,2018,7.0,5.51,0.15,7.12,0.2,
+HP-PRIV,CH,bank,alle,2019,7.0,5.56,0.15,7.12,0.2,
+HP-PRIV,CH,bank,alle,2020,6.3,4.97,0.15,8.19,0.2,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-PRIV,CH,bank,pfefferminz,2021,7.0,5.67,0.15,7.12,0.2,
+HP-PRIV,CH,bank,pfefferminz,2022,7.0,5.67,0.15,7.12,0.2,
+HP-PRIV,CH,bank,pfefferminz,2023,7.0,5.62,0.15,8.19,0.2,
+HP-PRIV,CH,bank,pfefferminz,2024,7.0,5.72,0.15,7.12,0.2,
+HP-PRIV,CH,bank,pfefferminz,2025,7.0,7.72,0.15,7.12,0.2,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-PRIV,DE,agentur,alle,2016,10.0,9.35,0.15,6.75,0.2,
+HP-PRIV,DE,agentur,alle,2017,10.0,9.35,0.15,6.75,0.2,
+HP-PRIV,DE,agentur,alle,2018,10.0,9.54,0.15,6.75,0.2,
+HP-PRIV,DE,agentur,alle,2019,10.0,9.63,0.15,6.75,0.2,
+HP-PRIV,DE,agentur,alle,2020,9.0,8.6,0.15,7.76,0.2,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-PRIV,DE,agentur,pfefferminz,2021,10.0,9.82,0.15,6.75,0.2,
+HP-PRIV,DE,agentur,pfefferminz,2022,10.0,9.82,0.15,6.75,0.2,
+HP-PRIV,DE,agentur,pfefferminz,2023,10.0,9.72,0.15,7.76,0.2,
+HP-PRIV,DE,agentur,pfefferminz,2024,10.0,9.91,0.15,6.75,0.2,
+HP-PRIV,DE,agentur,pfefferminz,2025,10.0,13.37,0.15,6.75,0.2,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-PRIV,DE,makler,alle,2016,11.0,11.55,0.15,6.0,0.2,
+HP-PRIV,DE,makler,alle,2017,11.0,11.55,0.15,6.0,0.2,
+HP-PRIV,DE,makler,alle,2018,11.0,11.78,0.15,6.0,0.2,
+HP-PRIV,DE,makler,alle,2019,11.0,11.9,0.15,6.0,0.2,
+HP-PRIV,DE,makler,alle,2020,9.9,10.63,0.15,6.9,0.2,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-PRIV,DE,makler,pfefferminz,2021,11.0,12.13,0.15,6.0,0.2,
+HP-PRIV,DE,makler,pfefferminz,2022,11.0,12.13,0.15,6.0,0.2,
+HP-PRIV,DE,makler,pfefferminz,2023,11.0,12.01,0.15,6.9,0.2,
+HP-PRIV,DE,makler,pfefferminz,2024,11.0,12.24,0.15,6.0,0.2,
+HP-PRIV,DE,makler,pfefferminz,2025,11.0,16.52,0.15,6.0,0.2,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-PRIV,DE,direkt,alle,2016,13.0,14.85,0.15,9.38,0.2,
+HP-PRIV,DE,direkt,alle,2017,13.0,14.85,0.15,9.38,0.2,
+HP-PRIV,DE,direkt,alle,2018,13.0,15.15,0.15,9.38,0.2,
+HP-PRIV,DE,direkt,alle,2019,13.0,15.3,0.15,9.38,0.2,
+HP-PRIV,DE,direkt,alle,2020,11.7,13.66,0.15,10.78,0.2,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-PRIV,DE,direkt,pfefferminz,2021,13.0,15.59,0.15,9.38,0.2,
+HP-PRIV,DE,direkt,minzia,2021,20.8,19.49,0.15,9.38,0.2,
+HP-PRIV,DE,direkt,pfefferminz,2022,13.0,15.59,0.15,9.38,0.2,
+HP-PRIV,DE,direkt,minzia,2022,20.8,19.49,0.15,9.38,0.2,
+HP-PRIV,DE,direkt,pfefferminz,2023,13.0,15.44,0.15,10.78,0.2,
+HP-PRIV,DE,direkt,minzia,2023,20.8,19.31,0.15,10.78,0.2,
+HP-PRIV,DE,direkt,pfefferminz,2024,13.0,15.74,0.15,9.38,0.2,
+HP-PRIV,DE,direkt,minzia,2024,20.8,19.68,0.15,9.38,0.2,
+HP-PRIV,DE,direkt,pfefferminz,2025,13.0,21.24,0.15,9.38,0.2,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-PRIV,DE,direkt,minzia,2025,20.8,22.46,0.15,9.38,0.2,
+HP-PRIV,DE,bank,alle,2016,7.0,9.9,0.15,7.12,0.2,
+HP-PRIV,DE,bank,alle,2017,7.0,9.9,0.15,7.12,0.2,
+HP-PRIV,DE,bank,alle,2018,7.0,10.1,0.15,7.12,0.2,
+HP-PRIV,DE,bank,alle,2019,7.0,10.2,0.15,7.12,0.2,
+HP-PRIV,DE,bank,alle,2020,6.3,9.11,0.15,8.19,0.2,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-PRIV,DE,bank,pfefferminz,2021,7.0,10.4,0.15,7.12,0.2,
+HP-PRIV,DE,bank,pfefferminz,2022,7.0,10.4,0.15,7.12,0.2,
+HP-PRIV,DE,bank,pfefferminz,2023,7.0,10.3,0.15,8.19,0.2,
+HP-PRIV,DE,bank,pfefferminz,2024,7.0,10.49,0.15,7.12,0.2,
+HP-PRIV,DE,bank,pfefferminz,2025,7.0,14.16,0.15,7.12,0.2,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BETR,CH,agentur,alle,2016,12.5,8.5,0.6,9.0,0.5,
+HP-BETR,CH,agentur,alle,2017,12.5,8.5,0.6,9.0,0.5,
+HP-BETR,CH,agentur,alle,2018,12.5,8.67,0.6,9.0,0.5,
+HP-BETR,CH,agentur,alle,2019,12.5,8.76,0.6,9.0,0.5,
+HP-BETR,CH,agentur,alle,2020,11.25,7.82,0.6,10.35,0.5,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BETR,CH,agentur,pfefferminz,2021,12.5,8.93,0.6,9.0,0.5,
+HP-BETR,CH,agentur,pfefferminz,2022,12.5,8.93,0.6,9.0,0.5,
+HP-BETR,CH,agentur,pfefferminz,2023,12.5,8.84,0.6,10.35,0.5,
+HP-BETR,CH,agentur,pfefferminz,2024,12.5,9.01,0.6,9.0,0.5,
+HP-BETR,CH,agentur,pfefferminz,2025,12.5,12.16,0.6,9.0,0.5,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BETR,CH,makler,alle,2016,13.75,10.5,0.6,8.0,0.5,
+HP-BETR,CH,makler,alle,2017,13.75,10.5,0.6,8.0,0.5,
+HP-BETR,CH,makler,alle,2018,13.75,10.71,0.6,8.0,0.5,
+HP-BETR,CH,makler,alle,2019,13.75,10.81,0.6,8.0,0.5,
+HP-BETR,CH,makler,alle,2020,12.38,9.66,0.6,9.2,0.5,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BETR,CH,makler,pfefferminz,2021,13.75,11.03,0.6,8.0,0.5,
+HP-BETR,CH,makler,pfefferminz,2022,13.75,11.03,0.6,8.0,0.5,
+HP-BETR,CH,makler,pfefferminz,2023,13.75,10.92,0.6,9.2,0.5,
+HP-BETR,CH,makler,pfefferminz,2024,13.75,11.13,0.6,8.0,0.5,
+HP-BETR,CH,makler,pfefferminz,2025,13.75,15.02,0.6,8.0,0.5,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BETR,CH,direkt,alle,2016,16.25,13.5,0.6,12.5,0.5,
+HP-BETR,CH,direkt,alle,2017,16.25,13.5,0.6,12.5,0.5,
+HP-BETR,CH,direkt,alle,2018,16.25,13.77,0.6,12.5,0.5,
+HP-BETR,CH,direkt,alle,2019,16.25,13.91,0.6,12.5,0.5,
+HP-BETR,CH,direkt,alle,2020,14.62,12.42,0.6,14.37,0.5,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BETR,CH,direkt,pfefferminz,2021,16.25,14.18,0.6,12.5,0.5,
+HP-BETR,CH,direkt,pfefferminz,2022,16.25,14.18,0.6,12.5,0.5,
+HP-BETR,CH,direkt,pfefferminz,2023,16.25,14.04,0.6,14.37,0.5,
+HP-BETR,CH,direkt,pfefferminz,2024,16.25,14.31,0.6,12.5,0.5,
+HP-BETR,CH,direkt,pfefferminz,2025,16.25,19.31,0.6,12.5,0.5,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BETR,CH,bank,alle,2016,8.75,9.0,0.6,9.5,0.5,
+HP-BETR,CH,bank,alle,2017,8.75,9.0,0.6,9.5,0.5,
+HP-BETR,CH,bank,alle,2018,8.75,9.18,0.6,9.5,0.5,
+HP-BETR,CH,bank,alle,2019,8.75,9.27,0.6,9.5,0.5,
+HP-BETR,CH,bank,alle,2020,7.88,8.28,0.6,10.92,0.5,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BETR,CH,bank,pfefferminz,2021,8.75,9.45,0.6,9.5,0.5,
+HP-BETR,CH,bank,pfefferminz,2022,8.75,9.45,0.6,9.5,0.5,
+HP-BETR,CH,bank,pfefferminz,2023,8.75,9.36,0.6,10.92,0.5,
+HP-BETR,CH,bank,pfefferminz,2024,8.75,9.54,0.6,9.5,0.5,
+HP-BETR,CH,bank,pfefferminz,2025,8.75,12.87,0.6,9.5,0.5,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BETR,DE,agentur,alle,2016,12.5,8.5,0.6,9.0,0.5,
+HP-BETR,DE,agentur,alle,2017,12.5,8.5,0.6,9.0,0.5,
+HP-BETR,DE,agentur,alle,2018,12.5,8.67,0.6,9.0,0.5,
+HP-BETR,DE,agentur,alle,2019,12.5,8.76,0.6,9.0,0.5,
+HP-BETR,DE,agentur,alle,2020,11.25,7.82,0.6,10.35,0.5,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BETR,DE,agentur,pfefferminz,2021,12.5,8.93,0.6,9.0,0.5,
+HP-BETR,DE,agentur,pfefferminz,2022,12.5,8.93,0.6,9.0,0.5,
+HP-BETR,DE,agentur,pfefferminz,2023,12.5,8.84,0.6,10.35,0.5,
+HP-BETR,DE,agentur,pfefferminz,2024,12.5,9.01,0.6,9.0,0.5,
+HP-BETR,DE,agentur,pfefferminz,2025,12.5,12.16,0.6,9.0,0.5,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BETR,DE,makler,alle,2016,13.75,10.5,0.6,8.0,0.5,
+HP-BETR,DE,makler,alle,2017,13.75,10.5,0.6,8.0,0.5,
+HP-BETR,DE,makler,alle,2018,13.75,10.71,0.6,8.0,0.5,
+HP-BETR,DE,makler,alle,2019,13.75,10.81,0.6,8.0,0.5,
+HP-BETR,DE,makler,alle,2020,12.38,9.66,0.6,9.2,0.5,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BETR,DE,makler,pfefferminz,2021,13.75,11.03,0.6,8.0,0.5,
+HP-BETR,DE,makler,pfefferminz,2022,13.75,11.03,0.6,8.0,0.5,
+HP-BETR,DE,makler,pfefferminz,2023,13.75,10.92,0.6,9.2,0.5,
+HP-BETR,DE,makler,pfefferminz,2024,13.75,11.13,0.6,8.0,0.5,
+HP-BETR,DE,makler,pfefferminz,2025,13.75,15.02,0.6,8.0,0.5,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BETR,DE,direkt,alle,2016,16.25,13.5,0.6,12.5,0.5,
+HP-BETR,DE,direkt,alle,2017,16.25,13.5,0.6,12.5,0.5,
+HP-BETR,DE,direkt,alle,2018,16.25,13.77,0.6,12.5,0.5,
+HP-BETR,DE,direkt,alle,2019,16.25,13.91,0.6,12.5,0.5,
+HP-BETR,DE,direkt,alle,2020,14.62,12.42,0.6,14.37,0.5,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BETR,DE,direkt,pfefferminz,2021,16.25,14.18,0.6,12.5,0.5,
+HP-BETR,DE,direkt,pfefferminz,2022,16.25,14.18,0.6,12.5,0.5,
+HP-BETR,DE,direkt,pfefferminz,2023,16.25,14.04,0.6,14.37,0.5,
+HP-BETR,DE,direkt,pfefferminz,2024,16.25,14.31,0.6,12.5,0.5,
+HP-BETR,DE,direkt,pfefferminz,2025,16.25,19.31,0.6,12.5,0.5,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BETR,DE,bank,alle,2016,8.75,9.0,0.6,9.5,0.5,
+HP-BETR,DE,bank,alle,2017,8.75,9.0,0.6,9.5,0.5,
+HP-BETR,DE,bank,alle,2018,8.75,9.18,0.6,9.5,0.5,
+HP-BETR,DE,bank,alle,2019,8.75,9.27,0.6,9.5,0.5,
+HP-BETR,DE,bank,alle,2020,7.88,8.28,0.6,10.92,0.5,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BETR,DE,bank,pfefferminz,2021,8.75,9.45,0.6,9.5,0.5,
+HP-BETR,DE,bank,pfefferminz,2022,8.75,9.45,0.6,9.5,0.5,
+HP-BETR,DE,bank,pfefferminz,2023,8.75,9.36,0.6,10.92,0.5,
+HP-BETR,DE,bank,pfefferminz,2024,8.75,9.54,0.6,9.5,0.5,
+HP-BETR,DE,bank,pfefferminz,2025,8.75,12.87,0.6,9.5,0.5,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BERUF,CH,agentur,alle,2016,12.5,8.5,0.4,4.5,0.3,
+HP-BERUF,CH,agentur,alle,2017,12.5,8.5,0.4,4.5,0.3,
+HP-BERUF,CH,agentur,alle,2018,12.5,8.67,0.4,4.5,0.3,
+HP-BERUF,CH,agentur,alle,2019,12.5,8.76,0.4,4.5,0.3,
+HP-BERUF,CH,agentur,alle,2020,11.25,7.82,0.4,5.17,0.3,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BERUF,CH,agentur,pfefferminz,2021,12.5,8.93,0.4,4.5,0.3,
+HP-BERUF,CH,agentur,pfefferminz,2022,12.5,8.93,0.4,4.5,0.3,
+HP-BERUF,CH,agentur,pfefferminz,2023,12.5,8.84,0.4,5.17,0.3,
+HP-BERUF,CH,agentur,pfefferminz,2024,12.5,9.01,0.4,4.5,0.3,
+HP-BERUF,CH,agentur,pfefferminz,2025,12.5,12.16,0.4,4.5,0.3,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BERUF,CH,makler,alle,2016,13.75,10.5,0.4,4.0,0.3,
+HP-BERUF,CH,makler,alle,2017,13.75,10.5,0.4,4.0,0.3,
+HP-BERUF,CH,makler,alle,2018,13.75,10.71,0.4,4.0,0.3,
+HP-BERUF,CH,makler,alle,2019,13.75,10.81,0.4,4.0,0.3,
+HP-BERUF,CH,makler,alle,2020,12.38,9.66,0.4,4.6,0.3,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BERUF,CH,makler,pfefferminz,2021,13.75,11.03,0.4,4.0,0.3,
+HP-BERUF,CH,makler,pfefferminz,2022,13.75,11.03,0.4,4.0,0.3,
+HP-BERUF,CH,makler,pfefferminz,2023,13.75,10.92,0.4,4.6,0.3,
+HP-BERUF,CH,makler,pfefferminz,2024,13.75,11.13,0.4,4.0,0.3,
+HP-BERUF,CH,makler,pfefferminz,2025,13.75,15.02,0.4,4.0,0.3,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BERUF,CH,direkt,alle,2016,16.25,13.5,0.4,6.25,0.3,
+HP-BERUF,CH,direkt,alle,2017,16.25,13.5,0.4,6.25,0.3,
+HP-BERUF,CH,direkt,alle,2018,16.25,13.77,0.4,6.25,0.3,
+HP-BERUF,CH,direkt,alle,2019,16.25,13.91,0.4,6.25,0.3,
+HP-BERUF,CH,direkt,alle,2020,14.62,12.42,0.4,7.19,0.3,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BERUF,CH,direkt,pfefferminz,2021,16.25,14.18,0.4,6.25,0.3,
+HP-BERUF,CH,direkt,pfefferminz,2022,16.25,14.18,0.4,6.25,0.3,
+HP-BERUF,CH,direkt,pfefferminz,2023,16.25,14.04,0.4,7.19,0.3,
+HP-BERUF,CH,direkt,pfefferminz,2024,16.25,14.31,0.4,6.25,0.3,
+HP-BERUF,CH,direkt,pfefferminz,2025,16.25,19.31,0.4,6.25,0.3,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BERUF,CH,bank,alle,2016,8.75,9.0,0.4,4.75,0.3,
+HP-BERUF,CH,bank,alle,2017,8.75,9.0,0.4,4.75,0.3,
+HP-BERUF,CH,bank,alle,2018,8.75,9.18,0.4,4.75,0.3,
+HP-BERUF,CH,bank,alle,2019,8.75,9.27,0.4,4.75,0.3,
+HP-BERUF,CH,bank,alle,2020,7.88,8.28,0.4,5.46,0.3,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BERUF,CH,bank,pfefferminz,2021,8.75,9.45,0.4,4.75,0.3,
+HP-BERUF,CH,bank,pfefferminz,2022,8.75,9.45,0.4,4.75,0.3,
+HP-BERUF,CH,bank,pfefferminz,2023,8.75,9.36,0.4,5.46,0.3,
+HP-BERUF,CH,bank,pfefferminz,2024,8.75,9.54,0.4,4.75,0.3,
+HP-BERUF,CH,bank,pfefferminz,2025,8.75,12.87,0.4,4.75,0.3,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BERUF,DE,agentur,alle,2016,12.5,8.5,0.4,4.5,0.3,
+HP-BERUF,DE,agentur,alle,2017,12.5,8.5,0.4,4.5,0.3,
+HP-BERUF,DE,agentur,alle,2018,12.5,8.67,0.4,4.5,0.3,
+HP-BERUF,DE,agentur,alle,2019,12.5,8.76,0.4,4.5,0.3,
+HP-BERUF,DE,agentur,alle,2020,11.25,7.82,0.4,5.17,0.3,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BERUF,DE,agentur,pfefferminz,2021,12.5,8.93,0.4,4.5,0.3,
+HP-BERUF,DE,agentur,pfefferminz,2022,12.5,8.93,0.4,4.5,0.3,
+HP-BERUF,DE,agentur,pfefferminz,2023,12.5,8.84,0.4,5.17,0.3,
+HP-BERUF,DE,agentur,pfefferminz,2024,12.5,9.01,0.4,4.5,0.3,
+HP-BERUF,DE,agentur,pfefferminz,2025,12.5,12.16,0.4,4.5,0.3,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BERUF,DE,makler,alle,2016,13.75,10.5,0.4,4.0,0.3,
+HP-BERUF,DE,makler,alle,2017,13.75,10.5,0.4,4.0,0.3,
+HP-BERUF,DE,makler,alle,2018,13.75,10.71,0.4,4.0,0.3,
+HP-BERUF,DE,makler,alle,2019,13.75,10.81,0.4,4.0,0.3,
+HP-BERUF,DE,makler,alle,2020,12.38,9.66,0.4,4.6,0.3,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BERUF,DE,makler,pfefferminz,2021,13.75,11.03,0.4,4.0,0.3,
+HP-BERUF,DE,makler,pfefferminz,2022,13.75,11.03,0.4,4.0,0.3,
+HP-BERUF,DE,makler,pfefferminz,2023,13.75,10.92,0.4,4.6,0.3,
+HP-BERUF,DE,makler,pfefferminz,2024,13.75,11.13,0.4,4.0,0.3,
+HP-BERUF,DE,makler,pfefferminz,2025,13.75,15.02,0.4,4.0,0.3,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BERUF,DE,direkt,alle,2016,16.25,13.5,0.4,6.25,0.3,
+HP-BERUF,DE,direkt,alle,2017,16.25,13.5,0.4,6.25,0.3,
+HP-BERUF,DE,direkt,alle,2018,16.25,13.77,0.4,6.25,0.3,
+HP-BERUF,DE,direkt,alle,2019,16.25,13.91,0.4,6.25,0.3,
+HP-BERUF,DE,direkt,alle,2020,14.62,12.42,0.4,7.19,0.3,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BERUF,DE,direkt,pfefferminz,2021,16.25,14.18,0.4,6.25,0.3,
+HP-BERUF,DE,direkt,pfefferminz,2022,16.25,14.18,0.4,6.25,0.3,
+HP-BERUF,DE,direkt,pfefferminz,2023,16.25,14.04,0.4,7.19,0.3,
+HP-BERUF,DE,direkt,pfefferminz,2024,16.25,14.31,0.4,6.25,0.3,
+HP-BERUF,DE,direkt,pfefferminz,2025,16.25,19.31,0.4,6.25,0.3,Fusionseffekt: Praemienharmonisierung und Systemmigration
+HP-BERUF,DE,bank,alle,2016,8.75,9.0,0.4,4.75,0.3,
+HP-BERUF,DE,bank,alle,2017,8.75,9.0,0.4,4.75,0.3,
+HP-BERUF,DE,bank,alle,2018,8.75,9.18,0.4,4.75,0.3,
+HP-BERUF,DE,bank,alle,2019,8.75,9.27,0.4,4.75,0.3,
+HP-BERUF,DE,bank,alle,2020,7.88,8.28,0.4,5.46,0.3,"Pandemiejahr: weniger Neugeschaeft, mehr Mahnungen"
+HP-BERUF,DE,bank,pfefferminz,2021,8.75,9.45,0.4,4.75,0.3,
+HP-BERUF,DE,bank,pfefferminz,2022,8.75,9.45,0.4,4.75,0.3,
+HP-BERUF,DE,bank,pfefferminz,2023,8.75,9.36,0.4,5.46,0.3,
+HP-BERUF,DE,bank,pfefferminz,2024,8.75,9.54,0.4,4.75,0.3,
+HP-BERUF,DE,bank,pfefferminz,2025,8.75,12.87,0.4,4.75,0.3,Fusionseffekt: Praemienharmonisierung und Systemmigration

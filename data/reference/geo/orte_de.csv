@@ -1,0 +1,544 @@
+plz,ort,bundesland_kuerzel,bundesland,einwohner,gewicht,tarifzone,urbanitaet
+01067,Dresden,SN,Sachsen,150000,150,2,STADT
+01097,Dresden,SN,Sachsen,120000,120,2,STADT
+01159,Dresden,SN,Sachsen,100000,100,2,STADT
+01219,Dresden,SN,Sachsen,100000,100,2,STADT
+01309,Dresden,SN,Sachsen,90000,90,2,STADT
+01445,Radebeul,SN,Sachsen,34000,34,3,AGGLO
+01587,Riesa,SN,Sachsen,30000,30,3,AGGLO
+01662,Meißen,SN,Sachsen,28000,28,3,AGGLO
+01796,Pirna,SN,Sachsen,38000,38,3,AGGLO
+01855,Sebnitz,SN,Sachsen,9000,9,3,LAND
+01877,Bischofswerda,SN,Sachsen,11000,11,3,AGGLO
+01917,Kamenz,SN,Sachsen,15000,15,3,AGGLO
+01968,Senftenberg,BB,Brandenburg,24000,24,3,AGGLO
+02625,Bautzen,SN,Sachsen,38000,38,3,AGGLO
+02763,Zittau,SN,Sachsen,25000,25,3,AGGLO
+02826,Görlitz,SN,Sachsen,56000,56,3,AGGLO
+02977,Hoyerswerda,SN,Sachsen,32000,32,3,AGGLO
+03046,Cottbus,BB,Brandenburg,100000,100,2,STADT
+03172,Guben,BB,Brandenburg,17000,17,3,AGGLO
+03222,Lübbenau/Spreewald,BB,Brandenburg,16000,16,3,AGGLO
+03238,Finsterwalde,BB,Brandenburg,16000,16,3,AGGLO
+04103,Leipzig,SN,Sachsen,150000,150,2,STADT
+04155,Leipzig,SN,Sachsen,120000,120,2,STADT
+04229,Leipzig,SN,Sachsen,110000,110,2,STADT
+04275,Leipzig,SN,Sachsen,100000,100,2,STADT
+04277,Leipzig,SN,Sachsen,70000,70,2,STADT
+04315,Leipzig,SN,Sachsen,90000,90,2,STADT
+04357,Leipzig,SN,Sachsen,80000,80,2,STADT
+04416,Markkleeberg,SN,Sachsen,25000,25,3,AGGLO
+04509,Delitzsch,SN,Sachsen,25000,25,3,AGGLO
+04552,Borna,SN,Sachsen,19000,19,3,AGGLO
+04600,Altenburg,TH,Thüringen,31000,31,3,AGGLO
+04720,Döbeln,SN,Sachsen,24000,24,3,AGGLO
+04808,Wurzen,SN,Sachsen,16000,16,3,AGGLO
+04838,Eilenburg,SN,Sachsen,16000,16,3,AGGLO
+04910,Elsterwerda,BB,Brandenburg,8000,8,3,LAND
+06108,Halle (Saale),ST,Sachsen-Anhalt,130000,130,2,STADT
+06120,Halle (Saale),ST,Sachsen-Anhalt,100000,100,2,STADT
+06217,Merseburg,ST,Sachsen-Anhalt,33000,33,3,AGGLO
+06295,Lutherstadt Eisleben,ST,Sachsen-Anhalt,22000,22,3,AGGLO
+06366,Köthen (Anhalt),ST,Sachsen-Anhalt,25000,25,3,AGGLO
+06406,Bernburg (Saale),ST,Sachsen-Anhalt,32000,32,3,AGGLO
+06449,Aschersleben,ST,Sachsen-Anhalt,26000,26,3,AGGLO
+06484,Quedlinburg,ST,Sachsen-Anhalt,24000,24,3,AGGLO
+06526,Sangerhausen,ST,Sachsen-Anhalt,26000,26,3,AGGLO
+06618,Naumburg (Saale),ST,Sachsen-Anhalt,32000,32,3,AGGLO
+06712,Zeitz,ST,Sachsen-Anhalt,27000,27,3,AGGLO
+06766,Bitterfeld-Wolfen,ST,Sachsen-Anhalt,38000,38,3,AGGLO
+06844,Dessau-Roßlau,ST,Sachsen-Anhalt,79000,79,3,AGGLO
+06886,Lutherstadt Wittenberg,ST,Sachsen-Anhalt,45000,45,3,AGGLO
+07318,Saalfeld/Saale,TH,Thüringen,29000,29,3,AGGLO
+07356,Bad Lobenstein,TH,Thüringen,6000,6,3,LAND
+07407,Rudolstadt,TH,Thüringen,24000,24,3,AGGLO
+07545,Gera,TH,Thüringen,93000,93,3,AGGLO
+07607,Eisenberg,TH,Thüringen,11000,11,3,AGGLO
+07743,Jena,TH,Thüringen,110000,110,2,STADT
+07907,Schleiz,TH,Thüringen,8000,8,3,LAND
+07973,Greiz,TH,Thüringen,20000,20,3,AGGLO
+08056,Zwickau,SN,Sachsen,88000,88,3,AGGLO
+08209,Auerbach/Vogtland,SN,Sachsen,18000,18,3,AGGLO
+08280,Aue-Bad Schlema,SN,Sachsen,20000,20,3,AGGLO
+08371,Glauchau,SN,Sachsen,22000,22,3,AGGLO
+08523,Plauen,SN,Sachsen,64000,64,3,AGGLO
+09111,Chemnitz,SN,Sachsen,150000,150,2,STADT
+09112,Chemnitz,SN,Sachsen,90000,90,2,STADT
+09217,Burgstädt,SN,Sachsen,11000,11,3,AGGLO
+09306,Rochlitz,SN,Sachsen,6000,6,3,LAND
+09405,Zschopau,SN,Sachsen,9000,9,3,LAND
+09456,Annaberg-Buchholz,SN,Sachsen,20000,20,3,AGGLO
+09496,Marienberg,SN,Sachsen,17000,17,3,AGGLO
+09599,Freiberg,SN,Sachsen,40000,40,3,AGGLO
+09648,Mittweida,SN,Sachsen,14000,14,3,AGGLO
+10115,Berlin,BE,Berlin,90000,90,1,STADT
+10178,Berlin,BE,Berlin,80000,80,1,STADT
+10245,Berlin,BE,Berlin,120000,120,1,STADT
+10405,Berlin,BE,Berlin,110000,110,1,STADT
+10585,Berlin,BE,Berlin,100000,100,1,STADT
+10707,Berlin,BE,Berlin,90000,90,1,STADT
+10823,Berlin,BE,Berlin,100000,100,1,STADT
+10961,Berlin,BE,Berlin,110000,110,1,STADT
+10999,Berlin,BE,Berlin,90000,90,1,STADT
+12043,Berlin,BE,Berlin,130000,130,1,STADT
+12157,Berlin,BE,Berlin,90000,90,1,STADT
+12435,Berlin,BE,Berlin,80000,80,1,STADT
+12489,Berlin,BE,Berlin,60000,60,1,STADT
+12555,Berlin,BE,Berlin,70000,70,1,STADT
+13086,Berlin,BE,Berlin,70000,70,1,STADT
+13347,Berlin,BE,Berlin,100000,100,1,STADT
+13405,Berlin,BE,Berlin,80000,80,1,STADT
+13593,Berlin,BE,Berlin,90000,90,1,STADT
+14109,Berlin,BE,Berlin,40000,40,1,STADT
+14195,Berlin,BE,Berlin,50000,50,1,STADT
+14467,Potsdam,BB,Brandenburg,100000,100,2,STADT
+14469,Potsdam,BB,Brandenburg,80000,80,2,STADT
+14513,Teltow,BB,Brandenburg,28000,28,3,AGGLO
+14532,Kleinmachnow,BB,Brandenburg,20000,20,3,AGGLO
+14612,Falkensee,BB,Brandenburg,45000,45,3,AGGLO
+14641,Nauen,BB,Brandenburg,18000,18,3,AGGLO
+14770,Brandenburg an der Havel,BB,Brandenburg,72000,72,3,AGGLO
+14806,Bad Belzig,BB,Brandenburg,11000,11,3,AGGLO
+14943,Luckenwalde,BB,Brandenburg,21000,21,3,AGGLO
+15230,Frankfurt (Oder),BB,Brandenburg,57000,57,3,AGGLO
+15344,Strausberg,BB,Brandenburg,27000,27,3,AGGLO
+15517,Fürstenwalde/Spree,BB,Brandenburg,32000,32,3,AGGLO
+15711,Königs Wusterhausen,BB,Brandenburg,38000,38,3,AGGLO
+15745,Wildau,BB,Brandenburg,11000,11,3,AGGLO
+15806,Zossen,BB,Brandenburg,20000,20,3,AGGLO
+15831,Blankenfelde-Mahlow,BB,Brandenburg,29000,29,3,AGGLO
+15848,Beeskow,BB,Brandenburg,8000,8,3,LAND
+15890,Eisenhüttenstadt,BB,Brandenburg,24000,24,3,AGGLO
+16225,Eberswalde,BB,Brandenburg,40000,40,3,AGGLO
+16303,Schwedt/Oder,BB,Brandenburg,30000,30,3,AGGLO
+16321,Bernau bei Berlin,BB,Brandenburg,41000,41,3,AGGLO
+16515,Oranienburg,BB,Brandenburg,47000,47,3,AGGLO
+16761,Hennigsdorf,BB,Brandenburg,27000,27,3,AGGLO
+16816,Neuruppin,BB,Brandenburg,31000,31,3,AGGLO
+16909,Wittstock/Dosse,BB,Brandenburg,14000,14,3,AGGLO
+17033,Neubrandenburg,MV,Mecklenburg-Vorpommern,64000,64,3,AGGLO
+17109,Demmin,MV,Mecklenburg-Vorpommern,11000,11,3,AGGLO
+17192,Waren (Müritz),MV,Mecklenburg-Vorpommern,21000,21,3,AGGLO
+17235,Neustrelitz,MV,Mecklenburg-Vorpommern,20000,20,3,AGGLO
+17291,Prenzlau,BB,Brandenburg,19000,19,3,AGGLO
+17358,Torgelow,MV,Mecklenburg-Vorpommern,9000,9,3,LAND
+17389,Anklam,MV,Mecklenburg-Vorpommern,12000,12,3,AGGLO
+17489,Greifswald,MV,Mecklenburg-Vorpommern,59000,59,3,AGGLO
+18055,Rostock,MV,Mecklenburg-Vorpommern,150000,150,2,STADT
+18119,Rostock,MV,Mecklenburg-Vorpommern,60000,60,2,STADT
+18209,Bad Doberan,MV,Mecklenburg-Vorpommern,13000,13,3,AGGLO
+18273,Güstrow,MV,Mecklenburg-Vorpommern,29000,29,3,AGGLO
+18437,Stralsund,MV,Mecklenburg-Vorpommern,60000,60,3,AGGLO
+18528,Bergen auf Rügen,MV,Mecklenburg-Vorpommern,13000,13,3,AGGLO
+19053,Schwerin,MV,Mecklenburg-Vorpommern,97000,97,2,STADT
+19288,Ludwigslust,MV,Mecklenburg-Vorpommern,12000,12,3,AGGLO
+19348,Perleberg,BB,Brandenburg,12000,12,3,AGGLO
+19370,Parchim,MV,Mecklenburg-Vorpommern,18000,18,3,AGGLO
+20095,Hamburg,HH,Hamburg,90000,90,1,STADT
+20144,Hamburg,HH,Hamburg,80000,80,1,STADT
+20249,Hamburg,HH,Hamburg,70000,70,1,STADT
+20357,Hamburg,HH,Hamburg,80000,80,1,STADT
+20457,Hamburg,HH,Hamburg,50000,50,1,STADT
+20537,Hamburg,HH,Hamburg,60000,60,1,STADT
+21029,Hamburg,HH,Hamburg,60000,60,1,STADT
+21073,Hamburg,HH,Hamburg,70000,70,1,STADT
+21244,Buchholz in der Nordheide,NI,Niedersachsen,41000,41,3,AGGLO
+21335,Lüneburg,NI,Niedersachsen,77000,77,3,AGGLO
+21423,Winsen (Luhe),NI,Niedersachsen,36000,36,3,AGGLO
+21465,Reinbek,SH,Schleswig-Holstein,28000,28,3,AGGLO
+21502,Geesthacht,SH,Schleswig-Holstein,31000,31,3,AGGLO
+21614,Buxtehude,NI,Niedersachsen,41000,41,3,AGGLO
+21680,Stade,NI,Niedersachsen,48000,48,3,AGGLO
+22041,Hamburg,HH,Hamburg,70000,70,1,STADT
+22083,Hamburg,HH,Hamburg,60000,60,1,STADT
+22111,Hamburg,HH,Hamburg,70000,70,1,STADT
+22297,Hamburg,HH,Hamburg,50000,50,1,STADT
+22359,Hamburg,HH,Hamburg,40000,40,1,STADT
+22525,Hamburg,HH,Hamburg,50000,50,1,STADT
+22587,Hamburg,HH,Hamburg,30000,30,1,STADT
+22765,Hamburg,HH,Hamburg,70000,70,1,STADT
+22850,Norderstedt,SH,Schleswig-Holstein,80000,80,3,AGGLO
+22926,Ahrensburg,SH,Schleswig-Holstein,34000,34,3,AGGLO
+23552,Lübeck,SH,Schleswig-Holstein,220000,220,2,STADT
+23701,Eutin,SH,Schleswig-Holstein,17000,17,3,AGGLO
+23730,Neustadt in Holstein,SH,Schleswig-Holstein,16000,16,3,AGGLO
+23795,Bad Segeberg,SH,Schleswig-Holstein,18000,18,3,AGGLO
+23843,Bad Oldesloe,SH,Schleswig-Holstein,25000,25,3,AGGLO
+23909,Ratzeburg,SH,Schleswig-Holstein,15000,15,3,AGGLO
+23936,Grevesmühlen,MV,Mecklenburg-Vorpommern,10000,10,3,AGGLO
+23966,Wismar,MV,Mecklenburg-Vorpommern,43000,43,3,AGGLO
+24103,Kiel,SH,Schleswig-Holstein,150000,150,2,STADT
+24143,Kiel,SH,Schleswig-Holstein,90000,90,2,STADT
+24211,Preetz,SH,Schleswig-Holstein,16000,16,3,AGGLO
+24534,Neumünster,SH,Schleswig-Holstein,80000,80,3,AGGLO
+24768,Rendsburg,SH,Schleswig-Holstein,29000,29,3,AGGLO
+24837,Schleswig,SH,Schleswig-Holstein,25000,25,3,AGGLO
+24937,Flensburg,SH,Schleswig-Holstein,92000,92,3,AGGLO
+25336,Elmshorn,SH,Schleswig-Holstein,51000,51,3,AGGLO
+25348,Glückstadt,SH,Schleswig-Holstein,11000,11,3,AGGLO
+25421,Pinneberg,SH,Schleswig-Holstein,44000,44,3,AGGLO
+25541,Brunsbüttel,SH,Schleswig-Holstein,13000,13,3,AGGLO
+25746,Heide,SH,Schleswig-Holstein,22000,22,3,AGGLO
+25813,Husum,SH,Schleswig-Holstein,23000,23,3,AGGLO
+25980,Sylt,SH,Schleswig-Holstein,14000,14,3,AGGLO
+26121,Oldenburg,NI,Niedersachsen,170000,170,2,STADT
+26382,Wilhelmshaven,NI,Niedersachsen,76000,76,3,AGGLO
+26506,Norden,NI,Niedersachsen,25000,25,3,AGGLO
+26603,Aurich,NI,Niedersachsen,42000,42,3,AGGLO
+26721,Emden,NI,Niedersachsen,50000,50,3,AGGLO
+26789,Leer (Ostfriesland),NI,Niedersachsen,35000,35,3,AGGLO
+27283,Verden (Aller),NI,Niedersachsen,28000,28,3,AGGLO
+27356,Rotenburg (Wümme),NI,Niedersachsen,22000,22,3,AGGLO
+27472,Cuxhaven,NI,Niedersachsen,48000,48,3,AGGLO
+27568,Bremerhaven,HB,Bremen,60000,60,2,STADT
+27574,Bremerhaven,HB,Bremen,50000,50,2,STADT
+27749,Delmenhorst,NI,Niedersachsen,77000,77,3,AGGLO
+28195,Bremen,HB,Bremen,90000,90,2,STADT
+28213,Bremen,HB,Bremen,60000,60,2,STADT
+28359,Bremen,HB,Bremen,60000,60,2,STADT
+28717,Bremen,HB,Bremen,50000,50,2,STADT
+28779,Bremen,HB,Bremen,40000,40,2,STADT
+28816,Stuhr,NI,Niedersachsen,34000,34,3,AGGLO
+29221,Celle,NI,Niedersachsen,69000,69,3,AGGLO
+29410,Salzwedel,ST,Sachsen-Anhalt,23000,23,3,AGGLO
+29525,Uelzen,NI,Niedersachsen,33000,33,3,AGGLO
+29614,Soltau,NI,Niedersachsen,22000,22,3,AGGLO
+30159,Hannover,NI,Niedersachsen,150000,150,2,STADT
+30419,Hannover,NI,Niedersachsen,110000,110,2,STADT
+30625,Hannover,NI,Niedersachsen,100000,100,2,STADT
+30823,Garbsen,NI,Niedersachsen,61000,61,3,AGGLO
+30880,Laatzen,NI,Niedersachsen,43000,43,3,AGGLO
+30926,Seelze,NI,Niedersachsen,34000,34,3,AGGLO
+31134,Hildesheim,NI,Niedersachsen,101000,101,2,STADT
+31224,Peine,NI,Niedersachsen,50000,50,3,AGGLO
+31303,Burgdorf,NI,Niedersachsen,31000,31,3,AGGLO
+31515,Wunstorf,NI,Niedersachsen,42000,42,3,AGGLO
+31582,Nienburg (Weser),NI,Niedersachsen,32000,32,3,AGGLO
+31655,Stadthagen,NI,Niedersachsen,22000,22,3,AGGLO
+31785,Hameln,NI,Niedersachsen,57000,57,3,AGGLO
+32052,Herford,NW,Nordrhein-Westfalen,67000,67,3,AGGLO
+32423,Minden,NW,Nordrhein-Westfalen,84000,84,3,AGGLO
+32756,Detmold,NW,Nordrhein-Westfalen,75000,75,3,AGGLO
+33098,Paderborn,NW,Nordrhein-Westfalen,152000,152,2,STADT
+33330,Gütersloh,NW,Nordrhein-Westfalen,101000,101,2,STADT
+33602,Bielefeld,NW,Nordrhein-Westfalen,335000,335,2,STADT
+34117,Kassel,HE,Hessen,200000,200,2,STADT
+34212,Melsungen,HE,Hessen,14000,14,3,AGGLO
+35037,Marburg,HE,Hessen,78000,78,3,AGGLO
+35390,Gießen,HE,Hessen,92000,92,3,AGGLO
+35576,Wetzlar,HE,Hessen,54000,54,3,AGGLO
+35683,Dillenburg,HE,Hessen,23000,23,3,AGGLO
+36037,Fulda,HE,Hessen,69000,69,3,AGGLO
+36251,Bad Hersfeld,HE,Hessen,30000,30,3,AGGLO
+36304,Alsfeld,HE,Hessen,16000,16,3,AGGLO
+36433,Bad Salzungen,TH,Thüringen,15000,15,3,AGGLO
+37073,Göttingen,NI,Niedersachsen,119000,119,2,STADT
+37154,Northeim,NI,Niedersachsen,29000,29,3,AGGLO
+37308,Heilbad Heiligenstadt,TH,Thüringen,17000,17,3,AGGLO
+37339,Leinefelde-Worbis,TH,Thüringen,19000,19,3,AGGLO
+37574,Einbeck,NI,Niedersachsen,31000,31,3,AGGLO
+37603,Holzminden,NI,Niedersachsen,20000,20,3,AGGLO
+38100,Braunschweig,NI,Niedersachsen,250000,250,2,STADT
+38226,Salzgitter,NI,Niedersachsen,104000,104,2,STADT
+38300,Wolfenbüttel,NI,Niedersachsen,52000,52,3,AGGLO
+38440,Wolfsburg,NI,Niedersachsen,124000,124,2,STADT
+38518,Gifhorn,NI,Niedersachsen,42000,42,3,AGGLO
+38640,Goslar,NI,Niedersachsen,50000,50,3,AGGLO
+38820,Halberstadt,ST,Sachsen-Anhalt,40000,40,3,AGGLO
+38855,Wernigerode,ST,Sachsen-Anhalt,32000,32,3,AGGLO
+39104,Magdeburg,ST,Sachsen-Anhalt,150000,150,2,STADT
+39112,Magdeburg,ST,Sachsen-Anhalt,90000,90,2,STADT
+39218,Schönebeck (Elbe),ST,Sachsen-Anhalt,30000,30,3,AGGLO
+39288,Burg,ST,Sachsen-Anhalt,22000,22,3,AGGLO
+39340,Haldensleben,ST,Sachsen-Anhalt,19000,19,3,AGGLO
+39576,Stendal,ST,Sachsen-Anhalt,39000,39,3,AGGLO
+39638,Gardelegen,ST,Sachsen-Anhalt,22000,22,3,AGGLO
+40213,Düsseldorf,NW,Nordrhein-Westfalen,150000,150,1,STADT
+40476,Düsseldorf,NW,Nordrhein-Westfalen,120000,120,1,STADT
+40699,Erkrath,NW,Nordrhein-Westfalen,44000,44,3,AGGLO
+40721,Hilden,NW,Nordrhein-Westfalen,56000,56,3,AGGLO
+40764,Langenfeld (Rheinland),NW,Nordrhein-Westfalen,59000,59,3,AGGLO
+40822,Mettmann,NW,Nordrhein-Westfalen,39000,39,3,AGGLO
+40878,Ratingen,NW,Nordrhein-Westfalen,88000,88,3,AGGLO
+41061,Mönchengladbach,NW,Nordrhein-Westfalen,260000,260,2,STADT
+41460,Neuss,NW,Nordrhein-Westfalen,153000,153,2,STADT
+41515,Grevenbroich,NW,Nordrhein-Westfalen,63000,63,3,AGGLO
+41747,Viersen,NW,Nordrhein-Westfalen,77000,77,3,AGGLO
+41812,Erkelenz,NW,Nordrhein-Westfalen,44000,44,3,AGGLO
+42103,Wuppertal,NW,Nordrhein-Westfalen,355000,355,2,STADT
+42551,Velbert,NW,Nordrhein-Westfalen,82000,82,3,AGGLO
+42651,Solingen,NW,Nordrhein-Westfalen,160000,160,2,STADT
+42853,Remscheid,NW,Nordrhein-Westfalen,111000,111,2,STADT
+44135,Dortmund,NW,Nordrhein-Westfalen,590000,590,2,STADT
+44532,Lünen,NW,Nordrhein-Westfalen,86000,86,3,AGGLO
+44575,Castrop-Rauxel,NW,Nordrhein-Westfalen,73000,73,3,AGGLO
+44623,Herne,NW,Nordrhein-Westfalen,156000,156,2,STADT
+44787,Bochum,NW,Nordrhein-Westfalen,365000,365,2,STADT
+45127,Essen,NW,Nordrhein-Westfalen,580000,580,2,STADT
+45468,Mülheim an der Ruhr,NW,Nordrhein-Westfalen,170000,170,2,STADT
+45657,Recklinghausen,NW,Nordrhein-Westfalen,112000,112,2,STADT
+45879,Gelsenkirchen,NW,Nordrhein-Westfalen,260000,260,2,STADT
+45964,Gladbeck,NW,Nordrhein-Westfalen,76000,76,3,AGGLO
+46045,Oberhausen,NW,Nordrhein-Westfalen,210000,210,2,STADT
+46236,Bottrop,NW,Nordrhein-Westfalen,117000,117,2,STADT
+46395,Bocholt,NW,Nordrhein-Westfalen,71000,71,3,AGGLO
+46483,Wesel,NW,Nordrhein-Westfalen,60000,60,3,AGGLO
+47051,Duisburg,NW,Nordrhein-Westfalen,500000,500,2,STADT
+47441,Moers,NW,Nordrhein-Westfalen,104000,104,2,STADT
+47533,Kleve,NW,Nordrhein-Westfalen,52000,52,3,AGGLO
+47623,Kevelaer,NW,Nordrhein-Westfalen,28000,28,3,AGGLO
+47798,Krefeld,NW,Nordrhein-Westfalen,227000,227,2,STADT
+48143,Münster,NW,Nordrhein-Westfalen,316000,316,2,STADT
+48231,Warendorf,NW,Nordrhein-Westfalen,37000,37,3,AGGLO
+48431,Rheine,NW,Nordrhein-Westfalen,76000,76,3,AGGLO
+48527,Nordhorn,NI,Niedersachsen,54000,54,3,AGGLO
+48565,Steinfurt,NW,Nordrhein-Westfalen,34000,34,3,AGGLO
+48653,Coesfeld,NW,Nordrhein-Westfalen,36000,36,3,AGGLO
+49074,Osnabrück,NI,Niedersachsen,165000,165,2,STADT
+49377,Vechta,NI,Niedersachsen,33000,33,3,AGGLO
+49477,Ibbenbüren,NW,Nordrhein-Westfalen,52000,52,3,AGGLO
+49661,Cloppenburg,NI,Niedersachsen,36000,36,3,AGGLO
+49716,Meppen,NI,Niedersachsen,36000,36,3,AGGLO
+49808,Lingen (Ems),NI,Niedersachsen,58000,58,3,AGGLO
+50226,Frechen,NW,Nordrhein-Westfalen,52000,52,3,AGGLO
+50354,Hürth,NW,Nordrhein-Westfalen,61000,61,3,AGGLO
+50374,Erftstadt,NW,Nordrhein-Westfalen,50000,50,3,AGGLO
+50389,Wesseling,NW,Nordrhein-Westfalen,37000,37,3,AGGLO
+50667,Köln,NW,Nordrhein-Westfalen,200000,200,1,STADT
+50823,Köln,NW,Nordrhein-Westfalen,150000,150,1,STADT
+50858,Köln,NW,Nordrhein-Westfalen,100000,100,1,STADT
+51063,Köln,NW,Nordrhein-Westfalen,140000,140,1,STADT
+51371,Leverkusen,NW,Nordrhein-Westfalen,164000,164,2,STADT
+51427,Bergisch Gladbach,NW,Nordrhein-Westfalen,112000,112,2,STADT
+51643,Gummersbach,NW,Nordrhein-Westfalen,51000,51,3,AGGLO
+52062,Aachen,NW,Nordrhein-Westfalen,250000,250,2,STADT
+52146,Würselen,NW,Nordrhein-Westfalen,39000,39,3,AGGLO
+52349,Düren,NW,Nordrhein-Westfalen,92000,92,3,AGGLO
+52511,Geilenkirchen,NW,Nordrhein-Westfalen,28000,28,3,AGGLO
+53111,Bonn,NW,Nordrhein-Westfalen,330000,330,2,STADT
+53474,Bad Neuenahr-Ahrweiler,RP,Rheinland-Pfalz,28000,28,3,AGGLO
+53604,Bad Honnef,NW,Nordrhein-Westfalen,26000,26,3,AGGLO
+53721,Siegburg,NW,Nordrhein-Westfalen,42000,42,3,AGGLO
+53757,Sankt Augustin,NW,Nordrhein-Westfalen,56000,56,3,AGGLO
+53840,Troisdorf,NW,Nordrhein-Westfalen,76000,76,3,AGGLO
+53879,Euskirchen,NW,Nordrhein-Westfalen,59000,59,3,AGGLO
+54290,Trier,RP,Rheinland-Pfalz,111000,111,2,STADT
+54516,Wittlich,RP,Rheinland-Pfalz,19000,19,3,AGGLO
+54634,Bitburg,RP,Rheinland-Pfalz,15000,15,3,AGGLO
+55116,Mainz,RP,Rheinland-Pfalz,220000,220,2,STADT
+55218,Ingelheim am Rhein,RP,Rheinland-Pfalz,36000,36,3,AGGLO
+55232,Alzey,RP,Rheinland-Pfalz,19000,19,3,AGGLO
+55411,Bingen am Rhein,RP,Rheinland-Pfalz,25000,25,3,AGGLO
+55543,Bad Kreuznach,RP,Rheinland-Pfalz,51000,51,3,AGGLO
+55743,Idar-Oberstein,RP,Rheinland-Pfalz,29000,29,3,AGGLO
+56068,Koblenz,RP,Rheinland-Pfalz,114000,114,2,STADT
+56130,Bad Ems,RP,Rheinland-Pfalz,10000,10,3,AGGLO
+56410,Montabaur,RP,Rheinland-Pfalz,14000,14,3,AGGLO
+56564,Neuwied,RP,Rheinland-Pfalz,65000,65,3,AGGLO
+56727,Mayen,RP,Rheinland-Pfalz,19000,19,3,AGGLO
+56812,Cochem,RP,Rheinland-Pfalz,5000,5,3,LAND
+57072,Siegen,NW,Nordrhein-Westfalen,102000,102,2,STADT
+57462,Olpe,NW,Nordrhein-Westfalen,25000,25,3,AGGLO
+57610,Altenkirchen (Westerwald),RP,Rheinland-Pfalz,6000,6,3,LAND
+58095,Hagen,NW,Nordrhein-Westfalen,190000,190,2,STADT
+58239,Schwerte,NW,Nordrhein-Westfalen,47000,47,3,AGGLO
+58452,Witten,NW,Nordrhein-Westfalen,97000,97,3,AGGLO
+58507,Lüdenscheid,NW,Nordrhein-Westfalen,73000,73,3,AGGLO
+58636,Iserlohn,NW,Nordrhein-Westfalen,93000,93,3,AGGLO
+59065,Hamm,NW,Nordrhein-Westfalen,180000,180,2,STADT
+59174,Kamen,NW,Nordrhein-Westfalen,44000,44,3,AGGLO
+59269,Beckum,NW,Nordrhein-Westfalen,37000,37,3,AGGLO
+59423,Unna,NW,Nordrhein-Westfalen,59000,59,3,AGGLO
+59494,Soest,NW,Nordrhein-Westfalen,48000,48,3,AGGLO
+59555,Lippstadt,NW,Nordrhein-Westfalen,68000,68,3,AGGLO
+59821,Arnsberg,NW,Nordrhein-Westfalen,74000,74,3,AGGLO
+59872,Meschede,NW,Nordrhein-Westfalen,30000,30,3,AGGLO
+60311,Frankfurt am Main,HE,Hessen,150000,150,1,STADT
+60320,Frankfurt am Main,HE,Hessen,90000,90,1,STADT
+60486,Frankfurt am Main,HE,Hessen,110000,110,1,STADT
+60598,Frankfurt am Main,HE,Hessen,100000,100,1,STADT
+61118,Bad Vilbel,HE,Hessen,35000,35,3,AGGLO
+61169,Friedberg (Hessen),HE,Hessen,30000,30,3,AGGLO
+61231,Bad Nauheim,HE,Hessen,33000,33,3,AGGLO
+61348,Bad Homburg vor der Höhe,HE,Hessen,54000,54,3,AGGLO
+61440,Oberursel (Taunus),HE,Hessen,47000,47,3,AGGLO
+63065,Offenbach am Main,HE,Hessen,132000,132,2,STADT
+63225,Langen (Hessen),HE,Hessen,39000,39,3,AGGLO
+63450,Hanau,HE,Hessen,100000,100,2,STADT
+63571,Gelnhausen,HE,Hessen,23000,23,3,AGGLO
+63739,Aschaffenburg,BY,Bayern,72000,72,3,AGGLO
+64283,Darmstadt,HE,Hessen,162000,162,2,STADT
+64521,Groß-Gerau,HE,Hessen,26000,26,3,AGGLO
+64625,Bensheim,HE,Hessen,41000,41,3,AGGLO
+64646,Heppenheim,HE,Hessen,26000,26,3,AGGLO
+64720,Michelstadt,HE,Hessen,16000,16,3,AGGLO
+65183,Wiesbaden,HE,Hessen,280000,280,2,STADT
+65343,Eltville am Rhein,HE,Hessen,17000,17,3,AGGLO
+65428,Rüsselsheim am Main,HE,Hessen,66000,66,3,AGGLO
+65510,Idstein,HE,Hessen,25000,25,3,AGGLO
+65549,Limburg an der Lahn,HE,Hessen,36000,36,3,AGGLO
+65582,Diez,RP,Rheinland-Pfalz,11000,11,3,AGGLO
+65719,Hofheim am Taunus,HE,Hessen,40000,40,3,AGGLO
+65760,Eschborn,HE,Hessen,22000,22,3,AGGLO
+65812,Bad Soden am Taunus,HE,Hessen,23000,23,3,AGGLO
+65929,Frankfurt am Main,HE,Hessen,80000,80,1,STADT
+66111,Saarbrücken,SL,Saarland,180000,180,2,STADT
+66280,Sulzbach/Saar,SL,Saarland,16000,16,3,AGGLO
+66333,Völklingen,SL,Saarland,39000,39,3,AGGLO
+66386,St. Ingbert,SL,Saarland,36000,36,3,AGGLO
+66424,Homburg,SL,Saarland,42000,42,3,AGGLO
+66482,Zweibrücken,RP,Rheinland-Pfalz,34000,34,3,AGGLO
+66538,Neunkirchen,SL,Saarland,46000,46,3,AGGLO
+66606,St. Wendel,SL,Saarland,26000,26,3,AGGLO
+66663,Merzig,SL,Saarland,30000,30,3,AGGLO
+66740,Saarlouis,SL,Saarland,35000,35,3,AGGLO
+66822,Lebach,SL,Saarland,19000,19,3,AGGLO
+66953,Pirmasens,RP,Rheinland-Pfalz,40000,40,3,AGGLO
+67059,Ludwigshafen am Rhein,RP,Rheinland-Pfalz,172000,172,2,STADT
+67098,Bad Dürkheim,RP,Rheinland-Pfalz,19000,19,3,AGGLO
+67227,Frankenthal (Pfalz),RP,Rheinland-Pfalz,49000,49,3,AGGLO
+67346,Speyer,RP,Rheinland-Pfalz,51000,51,3,AGGLO
+67433,Neustadt an der Weinstraße,RP,Rheinland-Pfalz,53000,53,3,AGGLO
+67547,Worms,RP,Rheinland-Pfalz,84000,84,3,AGGLO
+67655,Kaiserslautern,RP,Rheinland-Pfalz,100000,100,2,STADT
+68159,Mannheim,BW,Baden-Württemberg,315000,315,2,STADT
+68519,Viernheim,HE,Hessen,34000,34,3,AGGLO
+69115,Heidelberg,BW,Baden-Württemberg,160000,160,2,STADT
+69469,Weinheim,BW,Baden-Württemberg,45000,45,3,AGGLO
+70173,Stuttgart,BW,Baden-Württemberg,150000,150,1,STADT
+70199,Stuttgart,BW,Baden-Württemberg,100000,100,1,STADT
+70435,Stuttgart,BW,Baden-Württemberg,90000,90,1,STADT
+70565,Stuttgart,BW,Baden-Württemberg,90000,90,1,STADT
+70619,Stuttgart,BW,Baden-Württemberg,70000,70,1,STADT
+70806,Kornwestheim,BW,Baden-Württemberg,34000,34,3,AGGLO
+71032,Böblingen,BW,Baden-Württemberg,50000,50,3,AGGLO
+71063,Sindelfingen,BW,Baden-Württemberg,65000,65,3,AGGLO
+71083,Herrenberg,BW,Baden-Württemberg,32000,32,3,AGGLO
+71229,Leonberg,BW,Baden-Württemberg,49000,49,3,AGGLO
+71332,Waiblingen,BW,Baden-Württemberg,56000,56,3,AGGLO
+71364,Winnenden,BW,Baden-Württemberg,29000,29,3,AGGLO
+71634,Ludwigsburg,BW,Baden-Württemberg,93000,93,3,AGGLO
+71665,Vaihingen an der Enz,BW,Baden-Württemberg,30000,30,3,AGGLO
+72070,Tübingen,BW,Baden-Württemberg,92000,92,3,AGGLO
+72250,Freudenstadt,BW,Baden-Württemberg,24000,24,3,AGGLO
+72336,Balingen,BW,Baden-Württemberg,35000,35,3,AGGLO
+72379,Hechingen,BW,Baden-Württemberg,20000,20,3,AGGLO
+72458,Albstadt,BW,Baden-Württemberg,45000,45,3,AGGLO
+72488,Sigmaringen,BW,Baden-Württemberg,17000,17,3,AGGLO
+72555,Metzingen,BW,Baden-Württemberg,23000,23,3,AGGLO
+72622,Nürtingen,BW,Baden-Württemberg,42000,42,3,AGGLO
+72764,Reutlingen,BW,Baden-Württemberg,117000,117,2,STADT
+73033,Göppingen,BW,Baden-Württemberg,58000,58,3,AGGLO
+73230,Kirchheim unter Teck,BW,Baden-Württemberg,41000,41,3,AGGLO
+73312,Geislingen an der Steige,BW,Baden-Württemberg,28000,28,3,AGGLO
+73430,Aalen,BW,Baden-Württemberg,68000,68,3,AGGLO
+73525,Schwäbisch Gmünd,BW,Baden-Württemberg,61000,61,3,AGGLO
+73728,Esslingen am Neckar,BW,Baden-Württemberg,93000,93,3,AGGLO
+74072,Heilbronn,BW,Baden-Württemberg,127000,127,2,STADT
+74172,Neckarsulm,BW,Baden-Württemberg,27000,27,3,AGGLO
+74321,Bietigheim-Bissingen,BW,Baden-Württemberg,43000,43,3,AGGLO
+74523,Schwäbisch Hall,BW,Baden-Württemberg,42000,42,3,AGGLO
+74564,Crailsheim,BW,Baden-Württemberg,35000,35,3,AGGLO
+74653,Künzelsau,BW,Baden-Württemberg,15000,15,3,AGGLO
+74821,Mosbach,BW,Baden-Württemberg,23000,23,3,AGGLO
+74889,Sinsheim,BW,Baden-Württemberg,36000,36,3,AGGLO
+75015,Bretten,BW,Baden-Württemberg,30000,30,3,AGGLO
+75172,Pforzheim,BW,Baden-Württemberg,126000,126,2,STADT
+75365,Calw,BW,Baden-Württemberg,24000,24,3,AGGLO
+76133,Karlsruhe,BW,Baden-Württemberg,310000,310,2,STADT
+76275,Ettlingen,BW,Baden-Württemberg,39000,39,3,AGGLO
+76437,Rastatt,BW,Baden-Württemberg,50000,50,3,AGGLO
+76530,Baden-Baden,BW,Baden-Württemberg,56000,56,3,AGGLO
+76646,Bruchsal,BW,Baden-Württemberg,46000,46,3,AGGLO
+76829,Landau in der Pfalz,RP,Rheinland-Pfalz,47000,47,3,AGGLO
+77652,Offenburg,BW,Baden-Württemberg,61000,61,3,AGGLO
+77694,Kehl,BW,Baden-Württemberg,37000,37,3,AGGLO
+77855,Achern,BW,Baden-Württemberg,26000,26,3,AGGLO
+77933,Lahr,BW,Baden-Württemberg,48000,48,3,AGGLO
+78050,Villingen-Schwenningen,BW,Baden-Württemberg,86000,86,3,AGGLO
+78224,Singen,BW,Baden-Württemberg,48000,48,3,AGGLO
+78462,Konstanz,BW,Baden-Württemberg,86000,86,3,AGGLO
+78532,Tuttlingen,BW,Baden-Württemberg,37000,37,3,AGGLO
+78628,Rottweil,BW,Baden-Württemberg,26000,26,3,AGGLO
+79098,Freiburg im Breisgau,BW,Baden-Württemberg,232000,232,2,STADT
+79539,Lörrach,BW,Baden-Württemberg,50000,50,3,AGGLO
+79618,Rheinfelden (Baden),BW,Baden-Württemberg,33000,33,3,AGGLO
+79713,Bad Säckingen,BW,Baden-Württemberg,18000,18,3,AGGLO
+79761,Waldshut-Tiengen,BW,Baden-Württemberg,25000,25,3,AGGLO
+80331,München,BY,Bayern,150000,150,1,STADT
+80636,München,BY,Bayern,120000,120,1,STADT
+80797,München,BY,Bayern,120000,120,1,STADT
+81241,München,BY,Bayern,100000,100,1,STADT
+81371,München,BY,Bayern,110000,110,1,STADT
+81541,München,BY,Bayern,100000,100,1,STADT
+81673,München,BY,Bayern,90000,90,1,STADT
+81925,München,BY,Bayern,80000,80,1,STADT
+82031,Grünwald,BY,Bayern,11000,11,3,AGGLO
+82152,Planegg,BY,Bayern,11000,11,3,AGGLO
+82256,Fürstenfeldbruck,BY,Bayern,38000,38,3,AGGLO
+82319,Starnberg,BY,Bayern,23000,23,3,AGGLO
+82362,Weilheim in Oberbayern,BY,Bayern,23000,23,3,AGGLO
+82467,Garmisch-Partenkirchen,BY,Bayern,27000,27,3,AGGLO
+83022,Rosenheim,BY,Bayern,64000,64,3,AGGLO
+83278,Traunstein,BY,Bayern,21000,21,3,AGGLO
+83395,Freilassing,BY,Bayern,17000,17,3,AGGLO
+83646,Bad Tölz,BY,Bayern,19000,19,3,AGGLO
+84028,Landshut,BY,Bayern,74000,74,3,AGGLO
+84453,Mühldorf am Inn,BY,Bayern,21000,21,3,AGGLO
+84503,Altötting,BY,Bayern,13000,13,3,AGGLO
+85049,Ingolstadt,BY,Bayern,139000,139,2,STADT
+85221,Dachau,BY,Bayern,48000,48,3,AGGLO
+85276,Pfaffenhofen an der Ilm,BY,Bayern,26000,26,3,AGGLO
+85356,Freising,BY,Bayern,49000,49,3,AGGLO
+85435,Erding,BY,Bayern,37000,37,3,AGGLO
+85521,Ottobrunn,BY,Bayern,22000,22,3,AGGLO
+85737,Ismaning,BY,Bayern,18000,18,3,AGGLO
+86150,Augsburg,BY,Bayern,300000,300,2,STADT
+86551,Aichach,BY,Bayern,21000,21,3,AGGLO
+86720,Nördlingen,BY,Bayern,21000,21,3,AGGLO
+86899,Landsberg am Lech,BY,Bayern,29000,29,3,AGGLO
+87435,Kempten (Allgäu),BY,Bayern,70000,70,3,AGGLO
+87600,Kaufbeuren,BY,Bayern,45000,45,3,AGGLO
+87700,Memmingen,BY,Bayern,44000,44,3,AGGLO
+88045,Friedrichshafen,BW,Baden-Württemberg,62000,62,3,AGGLO
+88131,Lindau (Bodensee),BY,Bayern,26000,26,3,AGGLO
+88212,Ravensburg,BW,Baden-Württemberg,51000,51,3,AGGLO
+88400,Biberach an der Riss,BW,Baden-Württemberg,34000,34,3,AGGLO
+88662,Überlingen,BW,Baden-Württemberg,23000,23,3,AGGLO
+89073,Ulm,BW,Baden-Württemberg,128000,128,2,STADT
+89231,Neu-Ulm,BY,Bayern,60000,60,3,AGGLO
+89518,Heidenheim,BW,Baden-Württemberg,50000,50,3,AGGLO
+90402,Nürnberg,BY,Bayern,520000,520,2,STADT
+90762,Fürth,BY,Bayern,130000,130,2,STADT
+91052,Erlangen,BY,Bayern,115000,115,2,STADT
+91126,Schwabach,BY,Bayern,41000,41,3,AGGLO
+91522,Ansbach,BY,Bayern,42000,42,3,AGGLO
+92224,Amberg,BY,Bayern,42000,42,3,AGGLO
+92637,Weiden in der Oberpfalz,BY,Bayern,43000,43,3,AGGLO
+93047,Regensburg,BY,Bayern,155000,155,2,STADT
+94032,Passau,BY,Bayern,53000,53,3,AGGLO
+94315,Straubing,BY,Bayern,48000,48,3,AGGLO
+94469,Deggendorf,BY,Bayern,34000,34,3,AGGLO
+95028,Hof,BY,Bayern,46000,46,3,AGGLO
+95444,Bayreuth,BY,Bayern,75000,75,3,AGGLO
+96047,Bamberg,BY,Bayern,78000,78,3,AGGLO
+96450,Coburg,BY,Bayern,41000,41,3,AGGLO
+96515,Sonneberg,TH,Thüringen,23000,23,3,AGGLO
+97070,Würzburg,BY,Bayern,128000,128,2,STADT
+97421,Schweinfurt,BY,Bayern,54000,54,3,AGGLO
+98527,Suhl,TH,Thüringen,36000,36,3,AGGLO
+98544,Zella-Mehlis,TH,Thüringen,12000,12,3,AGGLO
+98574,Schmalkalden,TH,Thüringen,20000,20,3,AGGLO
+98617,Meiningen,TH,Thüringen,25000,25,3,AGGLO
+98693,Ilmenau,TH,Thüringen,38000,38,3,AGGLO
+99084,Erfurt,TH,Thüringen,130000,130,2,STADT
+99089,Erfurt,TH,Thüringen,80000,80,2,STADT
+99310,Arnstadt,TH,Thüringen,27000,27,3,AGGLO
+99423,Weimar,TH,Thüringen,65000,65,3,AGGLO
+99510,Apolda,TH,Thüringen,22000,22,3,AGGLO
+99610,Sömmerda,TH,Thüringen,19000,19,3,AGGLO
+99706,Sondershausen,TH,Thüringen,21000,21,3,AGGLO
+99734,Nordhausen,TH,Thüringen,41000,41,3,AGGLO
+99817,Eisenach,TH,Thüringen,42000,42,3,AGGLO
+99867,Gotha,TH,Thüringen,45000,45,3,AGGLO
+99947,Bad Langensalza,TH,Thüringen,17000,17,3,AGGLO

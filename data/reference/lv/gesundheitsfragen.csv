@@ -1,0 +1,83 @@
+frage_id,fragebogen_version,generationen,reihenfolge,frage_text,antworttyp,freitext_bei_antwort,zeitraum_jahre,themenbereich,icd10_kapitel_bezug,aequivalent_gf_2025,hinweis
+GF-1985-01,GF-1985,PK-85,1,Groesse und Gewicht,ZAHL,,0,KOERPERMASSE,,GF-2025-01;GF-2025-02,Angabe in cm/kg handschriftlich; teils in Pfund bei DE-Altbestand vor 1990
+GF-1985-02,GF-1985,PK-85,2,Sind Sie zur Zeit gesund und voll arbeitsfaehig?,JA_NEIN,NEIN,0,ALLGEMEIN,,GF-2025-05,Negativ formuliert: NEIN ist auffaellig; Extraktionsfalle
+GF-1985-03,GF-1985,PK-85,3,Leiden Sie an einer Krankheit oder einem Gebrechen?,JA_NEIN,JA,0,ERKRANKUNG_ALLGEMEIN,ALLE,GF-2025-06,"Kein Zeitraum, keine Krankheitsliste; nach GF-2025 waere vieles anzeigepflichtig, hier nicht (S04)"
+GF-1985-04,GF-1985,PK-85,4,Waren Sie in den letzten 5 Jahren in aerztlicher Behandlung oder im Spital?,JA_NEIN,JA,5,BEHANDLUNG,ALLE,GF-2025-07;GF-2025-08,
+GF-1985-05,GF-1985,PK-85,5,"Rauchen Sie? Wenn ja, wieviel taeglich?",JA_NEIN,JA,0,NIKOTIN,F17,GF-2025-03,Kein Ex-Raucher-Begriff
+GF-1985-06,GF-1985,PK-85,6,Trinken Sie regelmaessig alkoholische Getraenke?,JA_NEIN,JA,0,ALKOHOL,F10,GF-2025-04,Keine Mengenangabe verlangt
+GF-1985-07,GF-1985,PK-85,7,"Sind Eltern oder Geschwister vor dem 60. Lebensjahr an Herz-, Kreislauf-, Krebs- oder Zuckerkrankheit gestorben?",JA_NEIN,JA,0,FAMILIENANAMNESE,,GF-2025-20,"Familienanamnese; in GF-2020 gestrichen, in GF-2025 wieder enthalten"
+GF-1985-08,GF-1985,PK-85,8,Name und Anschrift Ihres Hausarztes,FREITEXT,,0,ARZT,,GF-2025-23,
+GF-1995-01,GF-1995,PK-95;PK-2000;PK-2004,1,Groesse (cm),ZAHL,,0,KOERPERMASSE,,GF-2025-01,
+GF-1995-02,GF-1995,PK-95;PK-2000;PK-2004,2,Gewicht (kg),ZAHL,,0,KOERPERMASSE,,GF-2025-02,
+GF-1995-03,GF-1995,PK-95;PK-2000;PK-2004,3,Haben Sie in den letzten 12 Monaten geraucht? Anzahl Zigaretten pro Tag,JA_NEIN,JA,1,NIKOTIN,F17,GF-2025-03,12-Monats-Definition eingefuehrt
+GF-1995-04,GF-1995,PK-95;PK-2000;PK-2004,4,"Trinken Sie Alkohol? Wenn ja, wieviel pro Woche?",JA_NEIN,JA,0,ALKOHOL,F10,GF-2025-04,
+GF-1995-05,GF-1995,PK-95;PK-2000;PK-2004,5,"Waren Sie in den letzten 5 Jahren in aerztlicher Behandlung, Untersuchung oder Beratung?",JA_NEIN,JA,5,BEHANDLUNG,ALLE,GF-2025-07,Stolperstein S04: 5 Jahre statt 10 Jahre; ohne Krankheitsliste
+GF-1995-06,GF-1995,PK-95;PK-2000;PK-2004,6,"Bestehen oder bestanden Krankheiten des Herzens, des Kreislaufs, der Atmungsorgane, der Verdauungsorgane, der Nieren, des Nervensystems, der Psyche, Zucker- oder Krebskrankheiten?",JA_NEIN,JA,0,ERKRANKUNG_LISTE,I;J;K;N;G;F;E;C,GF-2025-09;GF-2025-10;GF-2025-11;GF-2025-12;GF-2025-13;GF-2025-14,Eine Sammelfrage fuer alle Organsysteme; Antwort JA ohne Zuordnung
+GF-1995-07,GF-1995,PK-95;PK-2000;PK-2004,7,"Waren Sie in den letzten 10 Jahren in einem Krankenhaus, Sanatorium oder einer Kur?",JA_NEIN,JA,10,KLINIK,ALLE,GF-2025-08,
+GF-1995-08,GF-1995,PK-95;PK-2000;PK-2004,8,Nehmen Sie regelmaessig Medikamente?,JA_NEIN,JA,0,MEDIKATION,,GF-2025-15,
+GF-1995-09,GF-1995,PK-95;PK-2000;PK-2004,9,Sind Sie innerhalb der letzten 5 Jahre laenger als 4 Wochen ununterbrochen arbeitsunfaehig gewesen?,JA_NEIN,JA,5,ARBEITSUNFAEHIGKEIT,,GF-2025-16,
+GF-1995-10,GF-1995,PK-95;PK-2000;PK-2004,10,Wurde bei Ihnen ein HIV-Test mit positivem Ergebnis durchgefuehrt?,JA_NEIN,JA,0,INFEKTION,B24,GF-2025-17,ARL-1985/2008: positives Ergebnis = Ablehnung (Stolperstein Altbestand)
+GF-1995-11,GF-1995,PK-95;PK-2000;PK-2004,11,"Bestehen oder wurden Lebens-, Unfall- oder Berufsunfaehigkeitsversicherungen beantragt oder abgelehnt?",JA_NEIN,JA,0,VORVERSICHERUNG,,GF-2025-21,Betrugsmuster BM-03 Mehrfachversicherung
+GF-1995-12,GF-1995,PK-95;PK-2000;PK-2004,12,Name und Anschrift des Hausarztes,FREITEXT,,0,ARZT,,GF-2025-23,
+GF-2008-01,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,1,Koerpergroesse in cm,ZAHL,,0,KOERPERMASSE,,GF-2025-01,
+GF-2008-02,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,2,Koerpergewicht in kg,ZAHL,,0,KOERPERMASSE,,GF-2025-02,
+GF-2008-03,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,3,"Haben Sie in den letzten 12 Monaten Nikotin konsumiert (Zigaretten, Zigarren, Pfeife, Kautabak)? Menge pro Tag",JA_NEIN,JA,1,NIKOTIN,F17,GF-2025-03,E-Zigaretten nicht genannt (bis 2017 Tarifbestimmung); Snus fehlt
+GF-2008-04,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,4,Wie viel Alkohol trinken Sie durchschnittlich pro Woche (Anzahl Glaeser)?,ZAHL,,0,ALKOHOL,F10,GF-2025-04,
+GF-2008-05,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,5,"Waren Sie in den letzten 5 Jahren wegen einer Erkrankung in aerztlicher Behandlung, Untersuchung oder Beratung (ausser Vorsorge, Zahnarzt, Erkaeltung)?",JA_NEIN,JA,5,BEHANDLUNG,ALLE,GF-2025-07,Ausnahmen eingefuehrt; weiterhin 5 Jahre
+GF-2008-06,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,6,"Bestehen oder bestanden in den letzten 10 Jahren Erkrankungen des Herzens oder Kreislaufs (z. B. Bluthochdruck, Herzinfarkt, Rhythmusstoerung)?",JA_NEIN,JA,10,HERZ_KREISLAUF,I,GF-2025-09,
+GF-2008-07,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,7,"Bestehen oder bestanden in den letzten 10 Jahren Stoffwechselerkrankungen (z. B. Diabetes, Schilddruese, erhoehte Blutfette)?",JA_NEIN,JA,10,STOFFWECHSEL,E,GF-2025-10,
+GF-2008-08,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,8,Bestehen oder bestanden in den letzten 10 Jahren Tumor- oder Krebserkrankungen?,JA_NEIN,JA,10,TUMOR,C;D,GF-2025-11,
+GF-2008-09,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,9,"Bestehen oder bestanden in den letzten 5 Jahren psychische Erkrankungen (z. B. Depression, Angststoerung, Burnout, Sucht)?",JA_NEIN,JA,5,PSYCHE,F,GF-2025-12,5 Jahre fuer Psyche vs. 10 Jahre in GF-2025 (S04)
+GF-2008-10,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,10,"Bestehen oder bestanden in den letzten 5 Jahren Erkrankungen der Wirbelsaeule, Gelenke oder Muskeln?",JA_NEIN,JA,5,BEWEGUNGSAPPARAT,M,GF-2025-13,
+GF-2008-11,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,11,"Bestehen oder bestanden in den letzten 10 Jahren Erkrankungen des Nervensystems, der Atemwege, der Verdauungsorgane, der Nieren oder Infektionskrankheiten (inkl. HIV, Hepatitis)?",JA_NEIN,JA,10,SONSTIGE_ORGANE,G;J;K;N;A;B,GF-2025-14;GF-2025-17,HIV in Sammelfrage
+GF-2008-12,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,12,Nehmen Sie regelmaessig Medikamente ein? Welche?,JA_NEIN,JA,0,MEDIKATION,,GF-2025-15,
+GF-2008-13,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,13,Waren Sie in den letzten 5 Jahren insgesamt laenger als 4 Wochen arbeitsunfaehig?,JA_NEIN,JA,5,ARBEITSUNFAEHIGKEIT,,GF-2025-16,
+GF-2008-14,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,14,"Sind Operationen, Klinikaufenthalte oder Untersuchungen geplant oder angeraten?",JA_NEIN,JA,0,GEPLANT,,GF-2025-18,
+GF-2008-15,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,15,"Ueben Sie gefaehrliche Sportarten aus (Tauchen, Klettern, Motorsport, Fallschirm, Flugsport)?",JA_NEIN,JA,0,SPORT,,GF-2025-19,
+GF-2008-16,GF-2008,PK-2007;PL-2012;PL-2015;PL-2017,16,"Wurden Antraege auf Lebens- oder Berufsunfaehigkeitsversicherung abgelehnt, zurueckgestellt oder mit Zuschlag angenommen?",JA_NEIN,JA,0,VORVERSICHERUNG,,GF-2025-21,
+GF-2020-01,GF-2020,MZ-2020,1,Wie gross sind Sie? (cm),ZAHL,,0,KOERPERMASSE,,GF-2025-01,JSON-Feld heightCm
+GF-2020-02,GF-2020,MZ-2020,2,Wie viel wiegen Sie? (kg),ZAHL,,0,KOERPERMASSE,,GF-2025-02,JSON-Feld weightKg
+GF-2020-03,GF-2020,MZ-2020,3,"Haben Sie in den letzten 12 Monaten geraucht oder Nikotinprodukte konsumiert (auch E-Zigarette, Snus, Nikotinpflaster)?",AUSWAHL,NIE;EX_GT_12M;EX_LT_12M;RAUCHER,1,NIKOTIN,F17,GF-2025-03,Auswahlfeld statt Ja/Nein; Ex-Raucher-Logik
+GF-2020-04,GF-2020,MZ-2020,4,Wie viele alkoholische Getraenke trinken Sie pro Woche?,AUSWAHL,0;1-7;8-14;15-21;>21,0,ALKOHOL,F10,GF-2025-04,
+GF-2020-05,GF-2020,MZ-2020,5,"Wurde bei Ihnen in den letzten 10 Jahren Bluthochdruck, eine Herz- oder Gefaesserkrankung festgestellt?",JA_NEIN,JA,10,HERZ_KREISLAUF,I,GF-2025-09,
+GF-2020-06,GF-2020,MZ-2020,6,"Wurde bei Ihnen in den letzten 10 Jahren Diabetes, eine Schilddruesenerkrankung oder erhoehte Blutfette festgestellt?",JA_NEIN,JA,10,STOFFWECHSEL,E,GF-2025-10,
+GF-2020-07,GF-2020,MZ-2020,7,"Wurde bei Ihnen jemals eine Krebserkrankung oder ein Tumor (auch gutartig, wenn behandelt) festgestellt?",JA_NEIN,JA,99,TUMOR,C;D,GF-2025-11,Zeitraum unbegrenzt (jemals)
+GF-2020-08,GF-2020,MZ-2020,8,"Wurden Sie in den letzten 10 Jahren wegen einer psychischen Erkrankung (Depression, Angst, Burnout, Essstoerung, Sucht, ADHS) behandelt oder beraten (auch Psychotherapie, Coaching)?",JA_NEIN,JA,10,PSYCHE,F,GF-2025-12,10 Jahre; deutlich weiter gefasst als GF-2008 (S04)
+GF-2020-09,GF-2020,MZ-2020,9,"Hatten Sie in den letzten 5 Jahren Beschwerden oder Behandlungen an Ruecken, Wirbelsaeule, Gelenken oder Muskeln (auch Physiotherapie)?",JA_NEIN,JA,5,BEWEGUNGSAPPARAT,M,GF-2025-13,Physiotherapie explizit; loest viele JA aus
+GF-2020-10,GF-2020,MZ-2020,10,"Wurde bei Ihnen in den letzten 10 Jahren eine Erkrankung des Nervensystems (Epilepsie, MS, Migraene mit Aura, Schlaganfall) festgestellt?",JA_NEIN,JA,10,NEUROLOGIE,G,GF-2025-14,
+GF-2020-11,GF-2020,MZ-2020,11,"Wurde bei Ihnen in den letzten 10 Jahren eine Erkrankung der Atemwege, Verdauungsorgane, Leber, Nieren oder Harnwege festgestellt?",JA_NEIN,JA,10,SONSTIGE_ORGANE,J;K;N,GF-2025-14,
+GF-2020-12,GF-2020,MZ-2020,12,"Wurde bei Ihnen eine HIV-Infektion, Hepatitis B/C oder eine andere chronische Infektionskrankheit festgestellt?",JA_NEIN,JA,99,INFEKTION,A;B,GF-2025-17,ARL-2020: HIV unter Therapie versicherbar mit Zuschlag
+GF-2020-13,GF-2020,MZ-2020,13,"Nehmen Sie regelmaessig Medikamente ein (auch Schmerzmittel, Antidepressiva, Blutdrucksenker)?",JA_NEIN,JA,0,MEDIKATION,,GF-2025-15,
+GF-2020-14,GF-2020,MZ-2020,14,Waren Sie in den letzten 5 Jahren insgesamt mehr als 3 Wochen krankgeschrieben oder arbeitsunfaehig?,JA_NEIN,JA,5,ARBEITSUNFAEHIGKEIT,,GF-2025-16,3 statt 4 Wochen
+GF-2020-15,GF-2020,MZ-2020,15,"Waren Sie in den letzten 5 Jahren stationaer in einem Spital, einer Klinik oder Reha?",JA_NEIN,JA,5,KLINIK,ALLE,GF-2025-08,
+GF-2020-16,GF-2020,MZ-2020,16,"Sind aktuell Untersuchungen, Operationen oder Behandlungen geplant, empfohlen oder noch nicht abgeschlossen?",JA_NEIN,JA,0,GEPLANT,,GF-2025-18,
+GF-2020-17,GF-2020,MZ-2020,17,"Betreiben Sie Risikosportarten (Tauchen > 30 m, Klettern ohne Sicherung, Motorsport mit Lizenz, Fallschirm, Base-Jump, Bergsteigen > 4000 m)?",JA_NEIN,JA,0,SPORT,,GF-2025-19,Konkrete Schwellen (S16-artig fuer Sport)
+GF-2020-18,GF-2020,MZ-2020,18,Was ist Ihr aktueller Beruf und Ihre hauptsaechliche Taetigkeit?,FREITEXT,,0,BERUF,,GF-2025-22,Freitext -> Berufsgruppe ueber Mapping (S16)
+GF-2020-19,GF-2020,MZ-2020,19,Planen Sie in den naechsten 12 Monaten einen Aufenthalt von mehr als 3 Monaten ausserhalb Europas?,JA_NEIN,JA,0,AUSLAND,,GF-2025-24,"Minzia fragt tatsaechlichen Aufenthalt, nicht Nationalitaet (Kontrast zur Bias-Falle)"
+GF-2020-20,GF-2020,MZ-2020,20,"Haben Sie in den letzten 5 Jahren eine Lebens-, Risiko- oder Berufsunfaehigkeitsversicherung beantragt, die abgelehnt, zurueckgestellt oder erschwert wurde?",JA_NEIN,JA,5,VORVERSICHERUNG,,GF-2025-21,
+GF-2020-21,GF-2020,MZ-2020,21,Bestehen weitere Lebens- oder Berufsunfaehigkeitsversicherungen? Gesamtsumme,ZAHL,,0,VORVERSICHERUNG,,GF-2025-21,Betrugsmuster BM-03
+GF-2020-22,GF-2020,MZ-2020,22,"Ich erlaube Minzia, bei Bedarf Auskuenfte bei meinen Aerzten einzuholen (Namen und Praxen)",FREITEXT,,0,ARZT,,GF-2025-23,Digitale Schweigepflichtentbindung als Fragebogenfeld
+GF-2025-01,GF-2025,PZ-2025,1,Koerpergroesse in cm,ZAHL,,0,KOERPERMASSE,,GF-2025-01,
+GF-2025-02,GF-2025,PZ-2025,2,Koerpergewicht in kg,ZAHL,,0,KOERPERMASSE,,GF-2025-02,
+GF-2025-03,GF-2025,PZ-2025,3,"Haben Sie in den letzten 12 Monaten Nikotin in irgendeiner Form konsumiert (Zigaretten, E-Zigarette, Snus, Kautabak, Nikotinersatz)?",AUSWAHL,NIE;EX_GT_12M;EX_LT_12M;RAUCHER,1,NIKOTIN,F17,GF-2025-03,
+GF-2025-04,GF-2025,PZ-2025,4,Wie viele Standardglaeser Alkohol trinken Sie durchschnittlich pro Woche?,AUSWAHL,0;1-7;8-14;15-21;>21,0,ALKOHOL,F10,GF-2025-04,
+GF-2025-05,GF-2025,PZ-2025,5,Sind Sie derzeit voll arbeitsfaehig und nicht krankgeschrieben?,JA_NEIN,NEIN,0,ALLGEMEIN,,GF-2025-05,Negativ-Logik wie GF-1985 bewusst beibehalten (Extraktionsfalle)
+GF-2025-06,GF-2025,PZ-2025,6,"Leiden Sie an einer chronischen Erkrankung, Behinderung oder Unfallfolge?",JA_NEIN,JA,0,ERKRANKUNG_ALLGEMEIN,ALLE,GF-2025-06,
+GF-2025-07,GF-2025,PZ-2025,7,"Waren Sie in den letzten 10 Jahren wegen einer Erkrankung in aerztlicher oder psychotherapeutischer Behandlung, Untersuchung oder Beratung (ausser Vorsorge, Zahnarzt, Erkaeltung, Schwangerschaft ohne Komplikationen)?",JA_NEIN,JA,10,BEHANDLUNG,ALLE,GF-2025-07,10 Jahre; zentrale Frage fuer S04
+GF-2025-08,GF-2025,PZ-2025,8,"Waren Sie in den letzten 10 Jahren stationaer in Spital, Klinik, Reha oder Kur?",JA_NEIN,JA,10,KLINIK,ALLE,GF-2025-08,
+GF-2025-09,GF-2025,PZ-2025,9,"Bestehen oder bestanden in den letzten 10 Jahren Erkrankungen des Herzens, des Kreislaufs oder der Gefaesse (z. B. Bluthochdruck, Herzinfarkt, Rhythmusstoerung, Thrombose, Schlaganfall)?",JA_NEIN,JA,10,HERZ_KREISLAUF,I,GF-2025-09,
+GF-2025-10,GF-2025,PZ-2025,10,"Bestehen oder bestanden in den letzten 10 Jahren Stoffwechsel- oder Hormonerkrankungen (z. B. Diabetes, Schilddruese, erhoehte Blutfette, Gicht)?",JA_NEIN,JA,10,STOFFWECHSEL,E;M10,GF-2025-10,
+GF-2025-11,GF-2025,PZ-2025,11,"Wurde bei Ihnen jemals eine boesartige Tumorerkrankung, Leukaemie oder ein Lymphom festgestellt?",JA_NEIN,JA,99,TUMOR,C;D,GF-2025-11,
+GF-2025-12,GF-2025,PZ-2025,12,"Bestehen oder bestanden in den letzten 10 Jahren psychische oder psychosomatische Erkrankungen (z. B. Depression, Angst, Burnout, Essstoerung, Sucht, ADHS) oder Behandlungen durch Psychiater, Psychologen oder Psychotherapeuten?",JA_NEIN,JA,10,PSYCHE,F,GF-2025-12,
+GF-2025-13,GF-2025,PZ-2025,13,"Bestehen oder bestanden in den letzten 5 Jahren Erkrankungen oder Beschwerden der Wirbelsaeule, der Gelenke, der Muskeln oder Knochen (auch Physiotherapie, Chiropraktik)?",JA_NEIN,JA,5,BEWEGUNGSAPPARAT,M,GF-2025-13,
+GF-2025-14,GF-2025,PZ-2025,14,"Bestehen oder bestanden in den letzten 10 Jahren Erkrankungen des Nervensystems, der Atemwege, der Verdauungsorgane, der Leber, der Nieren, der Harnwege, der Haut oder der Sinnesorgane?",JA_NEIN,JA,10,SONSTIGE_ORGANE,G;J;K;N;L;H,GF-2025-14,
+GF-2025-15,GF-2025,PZ-2025,15,"Nehmen Sie regelmaessig oder wiederholt Medikamente ein (auch rezeptfrei, auch Schmerz- und Schlafmittel)? Welche und wofuer?",JA_NEIN,JA,0,MEDIKATION,,GF-2025-15,
+GF-2025-16,GF-2025,PZ-2025,16,Waren Sie in den letzten 5 Jahren insgesamt mehr als 3 Wochen arbeitsunfaehig oder krankgeschrieben?,JA_NEIN,JA,5,ARBEITSUNFAEHIGKEIT,,GF-2025-16,
+GF-2025-17,GF-2025,PZ-2025,17,"Wurde bei Ihnen eine HIV-Infektion, Hepatitis B oder C oder eine andere chronische Infektionskrankheit festgestellt?",JA_NEIN,JA,99,INFEKTION,A;B,GF-2025-17,
+GF-2025-18,GF-2025,PZ-2025,18,"Sind Untersuchungen, Operationen oder Behandlungen geplant, empfohlen oder noch nicht abgeschlossen?",JA_NEIN,JA,0,GEPLANT,,GF-2025-18,
+GF-2025-19,GF-2025,PZ-2025,19,"Ueben Sie Risikosportarten oder gefaehrliche Freizeitaktivitaeten aus (Tauchen > 30 m, Klettern, Motorsport, Fallschirm, Base-Jump, Bergsteigen > 4000 m, Flugsport)?",JA_NEIN,JA,0,SPORT,,GF-2025-19,
+GF-2025-20,GF-2025,PZ-2025,20,"Sind Eltern oder Geschwister vor dem 60. Lebensjahr an Herz-Kreislauf-Erkrankungen, Krebs, Diabetes oder erblichen Erkrankungen erkrankt oder verstorben?",JA_NEIN,JA,0,FAMILIENANAMNESE,,GF-2025-20,Datenschutz-Falle S23: Angaben Dritter; Gentest-Ergebnisse duerfen nicht verlangt werden (GUMG/GenDG)
+GF-2025-21,GF-2025,PZ-2025,21,"Bestehen oder wurden in den letzten 5 Jahren Lebens-, Risiko- oder Berufs-/Erwerbsunfaehigkeitsversicherungen beantragt, abgelehnt, zurueckgestellt oder erschwert? Gesamtsumme bestehender Vertraege",JA_NEIN,JA,5,VORVERSICHERUNG,,GF-2025-21,
+GF-2025-22,GF-2025,PZ-2025,22,Beruf und hauptsaechliche Taetigkeit (Anteil Buero / koerperlich in %),FREITEXT,,0,BERUF,,GF-2025-22,
+GF-2025-23,GF-2025,PZ-2025,23,Name und Adresse der behandelnden Aerztinnen und Aerzte der letzten 5 Jahre,FREITEXT,,5,ARZT,,GF-2025-23,
+GF-2025-24,GF-2025,PZ-2025,24,"Planen Sie in den naechsten 12 Monaten einen Aufenthalt von mehr als 3 Monaten ausserhalb Europas, oder ueben Sie eine Taetigkeit mit regelmaessigen Auslandseinsaetzen aus?",JA_NEIN,JA,0,AUSLAND,,GF-2025-24,Aufenthalt statt Nationalitaet; PLZ-Zonen-Zuschlag seit 2020 abgeschafft

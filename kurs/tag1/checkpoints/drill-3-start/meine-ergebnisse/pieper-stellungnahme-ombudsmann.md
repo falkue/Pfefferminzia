@@ -1,0 +1,29 @@
+Entwurf, Stand 08.05.2025, zur Freigabe durch die Compliance-Abteilung Deutschland
+
+Stellungnahme zur Beschwerde Pieper ./. Pfefferminzia, Ihr Zeichen O-2025-04-1187, unser Zeichen SCH-00000810
+
+Sehr geehrte Damen und Herren,
+
+wir beantworten Ihre Anfrage vom 24. April 2025 (Az. O-2025-04-1187) zu den vier von Ihnen genannten Punkten; die von Ihnen gesetzte Frist von drei Wochen läuft am 15. Mai 2025 ab, wir antworten Ihnen damit sieben Tage vor Fristablauf.
+
+1. Vertragsstand zum Schadenzeitpunkt: Der Baustein Tierhalterhaftpflicht war zum Zeitpunkt des Schadens am 21. März 2025 durchgehender Bestandteil des Vertrags VTR-00000801: Er wurde am 12. Februar 2019 beraten und mit Nachtrag Nr. 2 vom 15. Februar 2019 zum 1. März 2019 in den Vertrag aufgenommen. Die Deckung ist zu keinem späteren Zeitpunkt entfallen oder gekündigt worden.
+
+2. Zustandekommen der Ablehnung: Ursache ist ein Fehler bei der Datenübernahme. Am 3. März 2025 wurde der Vertrag im Rahmen einer vorgezogenen Migrationswelle für Privathaftpflichtverträge in Deutschland in unser neues Bestandssystem überführt. Der Code für den Baustein Tierhalterhaftpflicht ging bei dieser Überführung verloren und wurde im neuen System nicht angelegt, sodass der Vertragsdatensatz ab diesem Zeitpunkt fälschlich ohne Tierhalterdeckung geführt wurde. Als die Schadenmeldung vom 21. März 2025 einging, stützte sich die automatisierte Deckungsprüfung auf genau diesen unvollständigen Datensatz und verneinte die Deckung zu Unrecht. Ursächlich war damit ein technischer Übertragungsfehler bei der Migration, keine bewusste Prüfung des Einzelfalls.
+
+3. Automatisierung und Überprüfung: Ja, die Ablehnung kam ohne jede menschliche Beteiligung zustande. Das zugrunde liegende Regelwerk unseres Schadensystems war zum damaligen Zeitpunkt so eingerichtet, dass ein negatives Deckungsergebnis unmittelbar zum Versand eines Ablehnungsschreibens führte, statt vorher eine Mitarbeiterin oder einen Mitarbeiter einzuschalten. Bereits zum Zeitpunkt der Ablehnung galt bei uns intern der Grundsatz, dass über eine Ablehnung immer ein Mensch entscheidet; dieser Grundsatz wurde in diesem Fall nicht beachtet, weil die zuständige Regel technisch nicht als prüfpflichtige Entscheidung eingestuft war. Wir sehen darin ein eigenes Versäumnis in der Ausgestaltung unserer Kontrollen, nicht nur einen Softwarefehler.
+
+4. Zwischenzeitliche Regulierung: Die Zahlung an den Geschädigten in Höhe von EUR 1.240,00 für Arztkosten, Schmerzensgeld und die beschädigte Kleidung ist am 17. April 2025 erfolgt, den vertraglich vorgesehenen Selbstbehalt von EUR 150,00 haben wir dabei nicht in Abzug gebracht. Am selben Tag haben wir Herrn Pieper EUR 100,00 als Kulanz für seinen Aufwand und die Wartezeit ausgezahlt und uns schriftlich bei ihm entschuldigt.
+
+Versäumnisse bei der ersten Beschwerde: Auch bei der Bearbeitung der ersten Beschwerde von Herrn Pieper vom 28. März 2025 sind uns Versäumnisse unterlaufen. Wir haben den Eingang fristgerecht am 2. April 2025 bestätigt; eine inhaltliche Prüfung und Korrektur erfolgten jedoch nicht innerhalb der von Herrn Pieper gesetzten Frist von 14 Tagen, die am 11. April 2025 ablief. Reguliert haben wir erst am 17. April 2025, sechs Tage nach Ablauf dieser Frist und erst nach einer zweiten, deutlich schärferen Beschwerde vom 15. April 2025. Innerhalb unserer eigenen internen Bearbeitungsfrist von 15 Arbeitstagen lag die Regulierung noch, am 14. Arbeitstag nach der ersten Beschwerde; das genügt aus unserer Sicht dennoch nicht, denn die inhaltliche Klärung hätte nicht erst durch eine zweite Beschwerde ausgelöst werden dürfen.
+
+Bereits umgesetzte Maßnahmen: Die betroffene Regel unseres Schadensystems wurde am 16. April 2025 deaktiviert. Der Baustein wurde im Vertrag von Herrn Pieper am 17. April 2025 manuell nachgetragen. Nach unserer internen Auswertung vom 6. Mai 2025 waren insgesamt elf Schadenfälle von dieser automatisierten Fehlablehnung betroffen, darunter der Fall von Herrn Pieper; die übrigen zehn hat unser Haus aus eigener Initiative aufgegriffen und bis zum 25. April 2025 abschließend bearbeitet. Nach derselben internen Auswertung vom 6. Mai 2025 waren zudem 214 Verträge dieser Migrationswelle von demselben Migrationsfehler betroffen; sie wurden am 18. April 2025 nachträglich korrekt übertragen, und das fehlerhafte Zuordnungsschema wurde noch vor der bevorstehenden Hauptwelle der Migration Haftpflicht am 15. Mai 2025 korrigiert. Seit dem 16. April 2025 gilt in unserer Kompetenzordnung (R08, Fassung 2.1) zusätzlich eine technische Absicherung: Jede ablehnende, kürzende oder einschränkende Entscheidung, gleich ob durch ein Modell oder eine Konfigurationsregel, erzeugt zunächst eine Freigabeaufgabe für eine Mitarbeiterin oder einen Mitarbeiter und keinen Brief; ein Anteil der automatisierten Entscheidungen wird zusätzlich stichprobenweise nachgeprüft. Seit dem 1. Mai 2025 gilt zudem eine überarbeitete Beschwerderichtlinie (R05, Fassung 2025.2): Beschwerden über automatisierte Entscheidungen erhalten Priorität 1 und werden innerhalb von zwei Arbeitstagen darauf geprüft, ob bereits eine Überprüfung durch eine natürliche Person stattgefunden hat.
+
+Veranlasste, noch nicht abgeschlossene Maßnahmen: Die Meldung dieses Vorfalls an das unternehmensinterne Gremium für Modellrisiken ist veranlasst; die Befassung ist für eine Sitzung im September 2025 vorgesehen und hat zum jetzigen Zeitpunkt noch nicht stattgefunden. Ob die Korrektur des Zuordnungsschemas auch in der Praxis wirkt, zeigt sich endgültig erst mit der Hauptwelle am 15. Mai 2025, die nach dem Datum dieser Stellungnahme liegt.
+
+Wir sind zu dem Ergebnis gekommen, dass die Beschwerde von Herrn Pieper zu Recht erhoben wurde, und haben uns dafür ausdrücklich bei ihm entschuldigt. Für Rückfragen stehen wir gerne zur Verfügung.
+
+Mit freundlichen Grüßen
+
+Miriam Steinbrecher
+Compliance Officer Deutschland und Leiterin Beschwerdestelle Deutschland
+[Telefon prüfen]

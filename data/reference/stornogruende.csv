@@ -1,0 +1,19 @@
+storno_grund_code,bezeichnung,vertragsstatus,vertragsstatus_de,zaehlt_als_storno
+K01,Wechsel zu anderem Versicherer (Preis),GEKUENDIGT_VN,vom Kunden gekündigt,JA
+K02,Kündigung nach Prämienerhöhung,GEKUENDIGT_VN,vom Kunden gekündigt,JA
+K03,Kündigung im Schadenfall durch VN,GEKUENDIGT_VN,vom Kunden gekündigt,JA
+K04,Kündigung nach Ablehnung eines Schadens,GEKUENDIGT_VN,vom Kunden gekündigt,JA
+K05,Wegzug ins Ausland,GEKUENDIGT_VN,vom Kunden gekündigt,JA
+K06,Doppelversicherung / Zusammenlegung Haushalt,GEKUENDIGT_VN,vom Kunden gekündigt,JA
+K07,Tod des Versicherungsnehmers,STORNIERT,storniert,NEIN
+K08,Betriebsaufgabe,GEKUENDIGT_VN,vom Kunden gekündigt,JA
+K09,Unzufriedenheit mit Service / Beschwerde,GEKUENDIGT_VN,vom Kunden gekündigt,JA
+K10,Kündigung durch Versicherer im Schadenfall,GEKUENDIGT_VU,vom Versicherer gekündigt,JA
+K11,Kündigung durch Versicherer wegen Anzeigepflichtverletzung,GEKUENDIGT_VU,vom Versicherer gekündigt,JA
+K12,Storno wegen Nichtzahlung,STORNIERT,storniert,JA
+K13,Widerruf innerhalb der Frist,STORNIERT,storniert,NEIN
+K14,Rückkauf (Leben),RUECKKAUF,zurückgekauft,JA
+K15,Ablauf / Erleben (Leben),ABGELAUFEN,abgelaufen,NEIN
+K16,Leistungsfall Tod (Leben),LEISTUNG_ERBRACHT,Leistung erbracht,NEIN
+K17,Kündigung ohne Angabe von Gründen,GEKUENDIGT_VN,vom Kunden gekündigt,JA
+ZZ,"Migrationsabschluss (nur Rohdaten HAPO/VERA, kein Storno)",,,NEIN
