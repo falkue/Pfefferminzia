@@ -239,7 +239,7 @@ Adressen mit Historie (Umzuege); genau eine aktuelle Adresse je Partner
 | adresse_id | str | ADR-00000001 | 0 |
 | partner_id | str | PTR-00000001 | 0 |
 | adresse_typ | str | WOHNSITZ | 0 |
-| strasse | str | Rebhaldenweg | 0 |
+| strasse | str | Holunderhalde | 0 |
 | hausnummer | str | 7 | 0 |
 | plz | str | 6004 | 0 |
 | ort | str | Luzern | 0 |

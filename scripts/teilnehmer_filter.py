@@ -5,9 +5,12 @@ Wird von ``scripts/build_teilnehmer_branch.sh`` im temporaeren Arbeitsbaum aufge
 verwaiste Zweig ``teilnehmer`` angelegt wurde. Aendert nur Dateien in diesem Arbeitsbaum, nie ``main``.
 
 Was entfernt wird:
-1. Ganze Pfade: ``data/truth``, Akten-Quelltexte, ``docs/stammdaten`` (Dozentenerlaeuterungen), ``docs/planung``
-   (Fallenkatalog, Loesungsheft, Stolpersteine mit Aufloesung), die Datenschau ``docs/datensatz/dashboard-S*.html``
-   (bettet die latente Wahrheit ein).
+1. Ganze Pfade: ``data/truth``, ``docs/stammdaten`` (Dozentenerlaeuterungen), ``docs/planung`` (Fallenkatalog,
+   Loesungsheft, Stolpersteine mit Aufloesung), die Datenschau ``docs/datensatz/dashboard-S*.html`` (bettet die latente
+   Wahrheit ein) und der ganze Generator (``src/``, ``tests/``, ``scripts/``, ``config/``): Mit Code und Master-Seed
+   liesse sich die latente Wahrheit (Kuendigungs- und Betrugsneigung je Partner) in wenigen Zeilen nachrechnen.
+   ``pyproject.toml`` wird dafuer zu einem reinen Abhaengigkeits-Projekt ohne Paket (``[tool.uv] package = false``);
+   ``uv.lock`` erneuert das Build-Skript.
 2. Markdown-Abschnitte ab einer passenden Ueberschrift bis zur naechsten gleich- oder hoeherrangigen Ueberschrift:
    in Persona-Steckbriefen «Rolle im Datensatz», ueberall Ueberschriften mit «Ground Truth», «Wahrheit», «Loesung»,
    «Dozent», «Trainer», «Fallenkatalog», «Stolperstein» sowie die ``truth/``-Tabellen im Data Dictionary.
@@ -34,8 +37,11 @@ ROOT = Path.cwd()
 
 PFADE_ENTFERNEN = [
     "data/truth",
-    "src/pfefferminzia/synth/akten_inhalte.py",
-    "src/pfefferminzia/synth/akten_inhalte_2.py",
+    "src",
+    "tests",
+    "scripts",
+    "config",
+    "data/cache",
     "docs/stammdaten",
     "docs/planung",
     "docs/datensatz/dashboard-S.html",
@@ -198,6 +204,64 @@ def filtere_referenzdaten() -> None:
             protokoll.append(f"{rel(p)}: Bias-Vermerk in {n} Zeilen der Spalte bemerkung geleert")
 
 
+PYPROJECT_TEILNEHMER = """[project]
+name = "pfefferminzia-arbeitsstand"
+version = "0.1.0"
+description = "Arbeitsstand Pfefferminzia fuer Kursteilnehmende: Python-Umgebung fuer Auswertungen des fertigen Datensatzes"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+{deps}
+]
+
+[tool.uv]
+package = false
+"""
+
+
+def filtere_projektdateien() -> None:
+    """pyproject ohne Paket und Generator-Befehl; CLAUDE.md, Referenz-READMEs und Datensatz-README anpassen."""
+    p = ROOT / "pyproject.toml"
+    text = p.read_text(encoding="utf-8")
+    m = re.search(r"^dependencies = \[\n(.*?)^\]", text, flags=re.MULTILINE | re.DOTALL)
+    if not m:
+        sys.exit("Abbruch: pyproject.toml ohne Abhaengigkeitsliste.")
+    p.write_text(PYPROJECT_TEILNEHMER.format(deps=m.group(1).rstrip("\n")), encoding="utf-8")
+    protokoll.append("pyproject.toml: ohne Paket, Skripte und Entwicklungswerkzeuge (package = false)")
+
+    ersetzungen = {
+        "CLAUDE.md": [
+            (r" samt dem Generator, der ihn erzeugt\.", "."),
+            (r"^- Der Ordner `data/truth/` ist die L(ö|oe)sung.*$",
+             "- Lösungen und Dozentenmaterial gehören nicht zu diesem Arbeitsstand. Nicht danach suchen, auch nicht in "
+             "anderen Zweigen, in der Git-Geschichte oder im Netz; jede Aussage aus den Daten und Dokumenten in diesem "
+             "Ordner herleiten."),
+            (r"^- Den Datensatz neu erzeugen.*$",
+             "- Der Datensatz ist fertig erzeugt; der Generator gehört nicht zu diesem Arbeitsstand. Nicht neu erzeugen und "
+             "keine Dateien des Datensatzes verändern."),
+        ],
+        "data/reference/hp/README.md": [(r" Fachliche Quelle: `docs/planung/[^`]*`\. Erl(ä|ae)uterung f(ü|ue)r Dozenten: `docs/stammdaten/[^`]*`\.", "")],
+        "data/reference/lv/README.md": [(r" Fachliche Quelle: `docs/planung/[^`]*`\. Erl(ä|ae)uterung f(ü|ue)r Dozenten: `docs/stammdaten/[^`]*`\.", "")],
+        "docs/datensatz/README.md": [
+            (r"^\| truth \|.*\n", ""),
+            (r"^Welche Abweichung wo eingebaut wurde, steht f(ü|ue)r Dozenten.*\n\n?", ""),
+            (r"^## Reproduzierbarkeit\n(?:(?!^## ).*\n?)*", ""),
+        ],
+        "LICENSE-DATA.md": [(r"^Der Generator-Code unter .*\n\n?", "")],
+    }
+    for datei, regeln in ersetzungen.items():
+        p = ROOT / datei
+        if not p.exists():
+            sys.exit(f"Abbruch: {datei} fehlt.")
+        text = p.read_text(encoding="utf-8")
+        neu = text
+        for muster, ersatz in regeln:
+            neu, n = re.subn(muster, ersatz, neu, flags=re.MULTILINE)
+            if n == 0:
+                sys.exit(f"Abbruch: In {datei} passt «{muster[:50]}» nicht mehr; Filter an main anpassen.")
+        p.write_text(neu, encoding="utf-8")
+        protokoll.append(f"{datei}: Hinweise auf Generator, Loesungen oder Dozentenmaterial angepasst")
+
+
 def entferne_pfade() -> None:
     for pfad in PFADE_ENTFERNEN:
         p = ROOT / pfad
@@ -217,8 +281,15 @@ def schlusspruefung() -> bool:
                 reste.append(f"{rel(p)}:{nr}: {z.strip()[:100]}")
             elif re.match(r"^#{1,6}\s+.*(Ground Truth|Rolle im Datensatz)", z):
                 reste.append(f"{rel(p)}:{nr}: {z.strip()[:100]}")
-    if (ROOT / "data/truth").exists():
-        reste.append("data/truth existiert noch")
+    for pfad in ("data/truth", "src", "config", "tests"):
+        if (ROOT / pfad).exists():
+            reste.append(f"{pfad} existiert noch")
+    for p in ROOT.rglob("*.py"):
+        if ".venv" not in p.parts and ".git" not in p.parts:
+            reste.append(f"Python-Quelltext im Zweig: {rel(p)}")
+    claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+    if "data/truth" in claude or "Dozentenzweig" in claude:
+        reste.append("CLAUDE.md verweist noch auf data/truth oder den Dozentenzweig")
     for r in reste:
         protokoll.append(f"PRUEFEN: {r}")
     return bool(reste)
@@ -229,6 +300,7 @@ def main() -> None:
     entferne_pfade()
     filtere_markdown()
     filtere_referenzdaten()
+    filtere_projektdateien()
     offen = schlusspruefung()
     for z in protokoll:
         print(z)

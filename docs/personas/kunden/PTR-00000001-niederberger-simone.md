@@ -24,7 +24,7 @@ erzeugt_am: 2026-09-03
 | Partner-ID | PTR-00000001 |
 | Name | Simone Niederberger (geb. Suter) |
 | Geburtsdatum | 14.03.1984 |
-| Adresse | Rebhaldenweg 7, 6004 Luzern (seit 06/2023; vorher Kreuzmattweg 22, 6003 Luzern) |
+| Adresse | Holunderhalde 7, 6004 Luzern (seit 06/2023; vorher Föhrenhalde 22, 6003 Luzern) |
 | Kanton / Land | LU / CH |
 | Sprache | de-CH |
 | Beruf | Physiotherapeutin, Teilzeit 60 % |
@@ -53,7 +53,7 @@ erzeugt_am: 2026-09-03
 | 2019-11 | Abschluss Vorsorge Säule 3a, Beginn 01.01.2020 | VTR-00000104 |
 | 2019-02-16 | Skikollision Reto mit anderer Skifahrerin, Personenschaden leicht; reguliert CHF 4'180 | SCH-00000110, SILAS S2019/001873 |
 | 2021-04 | Telefonische Prämienfrage 3a (Anpassung an neuen Maximalbetrag); keine Änderung | Telefonnotiz |
-| 2023-05 | Hauskauf Rebhaldenweg 7 (Einzug 01.06.2023); Adressänderung per Agentur für alle Verträge | Adresshistorie |
+| 2023-05 | Hauskauf Holunderhalde 7 (Einzug 01.06.2023); Adressänderung per Agentur für alle Verträge | Adresshistorie |
 | 2023-06-20 | Beratungsgespräch Agentur: Erhöhung RisikoLeben Reto und Baustein Gebäudehaftpflicht besprochen, beides nicht abgeschlossen | Beratungsprotokoll |
 | 2025-04 | Einladung zur Pfefferminzia App nach Migration Haftpflicht; Registrierung Simone | App-Interaktion |
 | 2025-05-17 | Noah (8) stösst beim Spielen das E-Bike des Nachbarn um; Display und Rahmen beschädigt | Schadenereignis |

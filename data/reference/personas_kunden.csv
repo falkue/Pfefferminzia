@@ -1,5 +1,5 @@
 partner_id,vorname,nachname,geschlecht,geburtsdatum,strasse,hausnummer,plz,ort,kanton_bundesland,land,sprache,kundentyp,beruf_branche,kanal,quellsystem,alt_id,rolle_im_datensatz
-PTR-00000001,Simone,Niederberger,W,1984-03-14,Rebhaldenweg,7,6004,Luzern,LU,CH,de-CH,privat,Physiotherapeutin,agentur,HAPO;VERA,20000001;10000001,Familie CH: Dubletten HAPO/VERA; korrekte automatische Kleinschadenzahlung
+PTR-00000001,Simone,Niederberger,W,1984-03-14,Holunderhalde,7,6004,Luzern,LU,CH,de-CH,privat,Physiotherapeutin,agentur,HAPO;VERA,20000001;10000001,Familie CH: Dubletten HAPO/VERA; korrekte automatische Kleinschadenzahlung
 PTR-00000002,Jana,Ortlepp,W,1996-08-22,Holunderstieg,12,04277,Leipzig,SN,DE,de-DE,privat,UX-Designerin,direkt,MINT,55a6f1d8-8ac8-42be-af92-e593619c1247,"Digitale Kundin DE: Widerruf, Chatbot mit Fehlantwort, Risikoleben-Antrag"
 PTR-00000003,,Schreinerei Kaufmann + Söhne GmbH,,1987-04-01,Sägereiweg,4,5600,Lenzburg,AG,CH,de-CH,gewerbe,Schreinerei (NOGA 43.32),makler,HAPO;VERA,20000002;10000002,"KMU CH: Grossschaden Wasser CHF 180'000, Regress, Sanierung"
 PTR-00000004,,Bergmann Gebäudetechnik GmbH & Co. KG,,1992-05-12,Kupferring,18,01796,Pirna,SN,DE,de-DE,gewerbe,Sanitär/Heizung/Photovoltaik (WZ 43.22),makler,HAPO,20000003,"KMU DE: unangezeigte Risikoerhöhung, Beratungsprotokoll, Tarif nachrechenbar"

@@ -4,7 +4,7 @@
   "schema_version": "0.1.0",
   "scale": "S",
   "stichtag": "2025-12-31",
-  "generated_at": "2026-09-27T09:58:41Z",
+  "generated_at": "2026-09-27T10:09:33Z",
   "generator": {
     "repo": "Pfefferminzia",
     "package": "pfefferminzia",
@@ -66,8 +66,8 @@
         "parquet": "data/curated/S/parquet/dokument.parquet"
       },
       "sha256": {
-        "csv": "ad5e6c49760dcbd7a16073b6820ce193987ee47a74755f7ea95d21d22ef4230a",
-        "parquet": "bcad668224d0b9c44fc5b036ebb6ddc0022edd6ec06eb2e7bf0b151d9e9fce6c"
+        "csv": "c496822fa365db88c9b2d3022d3a7cb12672457128493a316d77fa826a885113",
+        "parquet": "e61efe855ecc1e11e35a2601cbd70037a30e2d8a5a65d1314c13c81dfd5bb597"
       }
     },
     {
@@ -136,8 +136,8 @@
         "parquet": "data/curated/S/parquet/partner_adresse.parquet"
       },
       "sha256": {
-        "csv": "e78cb630c966a1fc878d08160da6e2ae0c5408d1135300cc9d0a48ae41c7b551",
-        "parquet": "ac00a74fa28b617ac92a0fe2094005ec4437be2e759f26b18839bf9f29e9d85f"
+        "csv": "5b5332c9cc35dfe8f42ffcdf043c26b09f0b9568f042596b92663a1e193b969b",
+        "parquet": "b274ea9c86a0ac23fcb3b2337fc454e1c43f08568d332a814b88088283c08fc7"
       }
     },
     {
@@ -409,7 +409,7 @@
   ],
   "files": {
     "data/documents/S/personas/PTR-00000001/DOK-00000101_beratungsprotokoll.md": "609359a52cd4b31b1127ea74dd0bf5aea0741f2f905178d4b9ebd036766392a4",
-    "data/documents/S/personas/PTR-00000001/DOK-00000102_beratungsprotokoll.md": "fa557661f79122be732fe68c56128c1d45a68159e23095be61067f0bb716ffd3",
+    "data/documents/S/personas/PTR-00000001/DOK-00000102_beratungsprotokoll.md": "2bebb9bcc8a0616b12fa5f6b2f6c1125c6e914a4787543ebfcbf449874347e80",
     "data/documents/S/personas/PTR-00000001/DOK-00000103_kostenvoranschlag.md": "06eb87e7b7bbf9c2006a80637892205d42a35f8f634fccf968e2347378d835f1",
     "data/documents/S/personas/PTR-00000001/DOK-00000104_schadenmeldung.md": "d948e0a02610f7b0f64629813dbfae10e93a33026277227c80aa7c2b8ce37bbe",
     "data/documents/S/personas/PTR-00000001/INT-00000412_app.md": "81c20d96515fd614e98037b59a93999612c297614865eb4de1e5c1510263cd35",
@@ -563,16 +563,16 @@
     "data/documents/S/tarife/RW-LV-AVB-DE-2025.pdf": "3e53fd0430e6476080b1b683fabcbd99a1987b29d2741e0a5986ac7ff95be105",
     "data/documents/S/tarife/RW-LV-AVB-DE-MZ-2020.md": "4233bfe62749cc8be8e1b4064a171116ada362d620c881bf46d91c92c35ba319",
     "data/documents/S/tarife/RW-LV-AVB-DE-MZ-2020.pdf": "4013854224decb8122efb3dedb9950b14b49a47eca50e0610a8e6a46481d9031",
-    "data/raw/S/mint/customers.jsonl": "bfc71b061db3b2e5e2550398e4d2b2575929725f4a114a2e6c9870839ef96987",
+    "data/raw/S/mint/customers.jsonl": "1757e314b48086a20d1c0f49420f9f2372326e2edc2d7ca981d4a9a65a8d6bf3",
     "data/raw/S/mint/policies.jsonl": "aa9957b729d7d7870672ddb3e76238fb8a0637203a16044283edbe7354084e2f",
-    "data/raw/S/pvs/HAPO_PARTNER.csv": "7b7eb588dc3d6eefa2526ac1e19574cdc8f077ea1a076a44dcd072e10bc7e9d6",
-    "data/raw/S/pvs/HAPO_PARTNER.txt": "2e7457e084e3db27b3f3ddff96dd464051e7d38c8f2bda7c6b1d50d5e0d2068b",
+    "data/raw/S/pvs/HAPO_PARTNER.csv": "4339f5fbcfbb141b0f9e74be660fd8ac7980381a2b60b0f2b76f9901ac905723",
+    "data/raw/S/pvs/HAPO_PARTNER.txt": "ff72e944db6cae55a1a2fa73009a474b01aef115268800cd24e8d2d18900fd0c",
     "data/raw/S/pvs/HAPO_PARTNER_SATZART.txt": "71b7c3256182774a1799c2457b9037895f8f71c1fc90b47b0e2155c6d161d884",
     "data/raw/S/pvs/HAPO_VERTRAG.csv": "8b6a6937d15a0e8aea923e246dfcb0eddd3fb88149fba7e5889dfe3e85de5037",
     "data/raw/S/pvs/HAPO_VERTRAG.txt": "1906bec33839b218ecc7748f38b9b7197e3580f9d2a02c71aef797b949e13bbc",
     "data/raw/S/pvs/HAPO_VERTRAG_SATZART.txt": "e0845ee400d64875a922e87759135ed32e12b6d3b6c58550d268cc92e8951696",
-    "data/raw/S/pvs/VERA_PARTNER.csv": "badd731aa9360900f220bb8e845f28209438f85e5b3ccb08f16ee4edc46fcc4f",
-    "data/raw/S/pvs/VERA_PARTNER.txt": "e83a04127e9af882356860d7df12bf53b5d0bbd446e85abaf8ef6da1a96aa39b",
+    "data/raw/S/pvs/VERA_PARTNER.csv": "d7de454c50efe49ff2a215d8dc3fbaf213de47d4aaf13b08ddd8fdb090d8ff4b",
+    "data/raw/S/pvs/VERA_PARTNER.txt": "ee931de2d9ce575e8ebd25ba9df23df97a1e6dd010fb04019d07e6b50a440202",
     "data/raw/S/pvs/VERA_PARTNER_SATZART.txt": "a27882be2734c56a088d9d5b7ebd152c1d69ed9f3f36e95f3c193834f48e5ac6",
     "data/raw/S/pvs/VERA_VERTRAG.csv": "10f4a86ccc9e2600b1803ed5c68369d564f1cc1d05b1df5fcc6000d71b6236bc",
     "data/raw/S/pvs/VERA_VERTRAG.txt": "de9d363376ae048fc3e4cf099b108c392a2cf9e0871a68dd8cc3a26c3daabde9",

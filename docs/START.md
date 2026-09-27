@@ -7,7 +7,7 @@ Willkommen bei Pfefferminzia, einem frei erfundenen Versicherer, an dem du Arbei
 Du arbeitest im Kurs nur in der Claude Desktop-App, im Reiter «Code». Ein Terminal brauchst du nicht, ein GitHub-Konto auch nicht.
 
 1. **App einstellen:** Claude Desktop öffnen, Reiter «Code», Modell Sonnet 5, Modus Auto.
-2. **Arbeitsstand holen:** einen leeren Ordner wählen und Claude bitten: «Lade den Arbeitsstand von github.com/falkue/Pfefferminzia, Zweig teilnehmer, in diesen Ordner.» Du lädst nur herunter und arbeitest danach lokal auf deinem Rechner; nichts wird hochgeladen. Ohne Claude geht es auch im Browser: auf GitHub den Zweig `teilnehmer` wählen, «Code» → «Download ZIP», entpacken.
+2. **Arbeitsstand holen:** einen leeren Ordner wählen und Claude bitten: «Lade den Arbeitsstand von github.com/falkue/Pfefferminzia in diesen Ordner, nur den Zweig teilnehmer (einzelner Zweig, --single-branch).» Du lädst nur herunter und arbeitest danach lokal auf deinem Rechner; nichts wird hochgeladen. Ohne Claude geht es auch im Browser: auf GitHub den Zweig `teilnehmer` wählen, «Code» → «Download ZIP», entpacken.
 3. **Ordner als Projekt öffnen:** im Reiter «Code» den Ordner mit dem Arbeitsstand wählen (meist `Pfefferminzia`). Claude liest die Datei `CLAUDE.md` und kennt damit den Datensatz. Braucht Claude für eine Auswertung Python, richtet es das im Projekt selbst ein; du musst dafür nichts installieren.
 4. **Erste Frage stellen**, zum Beispiel: «Erkläre mir, was in diesem Datensatz steckt, und zeige mir die fünf grössten Tabellen.»
 
@@ -49,7 +49,7 @@ Die Pfefferminz Versicherung, 1924 in Olten gegründet, hat am 1. Januar 2025 da
 Im Kurs nicht nötig. Wer lieber im Terminal arbeitet:
 
 ```bash
-git clone -b teilnehmer https://github.com/falkue/Pfefferminzia
+git clone -b teilnehmer --single-branch https://github.com/falkue/Pfefferminzia
 cd Pfefferminzia
 claude
 ```

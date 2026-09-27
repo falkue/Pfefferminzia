@@ -1,6 +1,6 @@
 ---
 dokument_id: DOK-00000102
-titel: "Beratungsdokumentation nach Hauskauf Rebhaldenweg 7"
+titel: "Beratungsdokumentation nach Hauskauf Holunderhalde 7"
 typ: intern
 dokument_typ: BERATUNGSPROTOKOLL
 sparte: GRUPPE
@@ -19,9 +19,9 @@ quelle_system: DOKU
 vertraulichkeit: vertraulich
 ---
 
-# Beratungsdokumentation nach Hauskauf Rebhaldenweg 7
+# Beratungsdokumentation nach Hauskauf Holunderhalde 7
 
-Anlass: Kauf Einfamilienhaus Rebhaldenweg 7, Luzern, per 01.06.2023.
+Anlass: Kauf Einfamilienhaus Holunderhalde 7, Luzern, per 01.06.2023.
 
 Besprochen: Erhoehung Risikoleben Reto wegen hoeherer Hypothek; Baustein Gebaeudehaftpflicht in der Privathaftpflicht; Adressaenderung fuer alle Vertraege.
 

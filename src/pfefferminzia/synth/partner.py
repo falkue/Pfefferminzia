@@ -29,7 +29,7 @@ PERSONA_RESERVIERT = 20
 # Bezugspersonen der Kunden-Personas (docs/personas/kunden): id, vorname, nachname, geschlecht, geburtsdatum,
 # haushalt der Persona, rolle, land, plz, ort, strasse, hausnummer, sprache, verstorben_am
 BEZUGSPERSONEN = [
-    (11, "Reto", "Niederberger", "M", "1982-07-21", 1, "EHEPARTNER", "CH", "6004", "Luzern", "Rebhaldenweg", "7", "de", None),
+    (11, "Reto", "Niederberger", "M", "1982-07-21", 1, "EHEPARTNER", "CH", "6004", "Luzern", "Holunderhalde", "7", "de", None),
     (12, "Bruno", "Kaufmann", "M", "1968-10-05", 3, "INHABER", "CH", "5600", "Lenzburg", "Sägereiweg", "4", "de", None),
     (13, "Marc", "Kaufmann", "M", "1994-03-18", 3, "KONTAKT", "CH", "5600", "Lenzburg", "Sägereiweg", "4", "de", None),
     (14, "Kerstin", "Bergmann", "W", "1977-02-03", 4, "GESCHAEFTSFUEHRUNG", "DE", "01796", "Pirna", "Kupferring", "18", "de", None),
@@ -37,8 +37,8 @@ BEZUGSPERSONEN = [
     (16, "Sabine", "Nazari", "W", "1976-05-12", 6, "EHEPARTNER", "DE", "81925", "München", "Sternenallee", "41", "de", None),
     (17, "Marcel", "Grimm", "M", "1986-07-11", 9, "INHABER", "DE", "15711", "Königs Wusterhausen", "Sandacker", "5", "de", None),
     (18, "Rui", "Ferreira", "M", "1977-09-02", 10, "EHEPARTNER", "CH", "4051", "Basel", "Silberhalde", "14", "de", None),
-    (19, "Lina", "Niederberger", "W", "2014-04-09", 1, "KIND", "CH", "6004", "Luzern", "Rebhaldenweg", "7", "de", None),
-    (20, "Noah", "Niederberger", "M", "2017-11-23", 1, "KIND", "CH", "6004", "Luzern", "Rebhaldenweg", "7", "de", None),
+    (19, "Lina", "Niederberger", "W", "2014-04-09", 1, "KIND", "CH", "6004", "Luzern", "Holunderhalde", "7", "de", None),
+    (20, "Noah", "Niederberger", "M", "2017-11-23", 1, "KIND", "CH", "6004", "Luzern", "Holunderhalde", "7", "de", None),
 ]
 
 ZIVILSTAND_P = {"LEDIG": 0.34, "VERHEIRATET": 0.44, "GESCHIEDEN": 0.10, "VERWITWET": 0.06, "PARTNERSCHAFT": 0.05,
@@ -247,7 +247,7 @@ class PartnerWelt:
                 self.adressen.append(self._adr_zeile(pid, adr, date(2021, 1, 1) if alter < 30 else date(2010, 1, 1), None, "WOHNSITZ", True))
                 if pid == "PTR-00000001":  # alte Adresse (HAPO), siehe Persona
                     self.adressen[-1]["gueltig_von"] = date(2023, 6, 1)
-                    self.adressen.append(self._adr_zeile(pid, Adresse("Kreuzmattweg", "22", "6003", "Luzern", "CH", "LU", "de", "2"),
+                    self.adressen.append(self._adr_zeile(pid, Adresse("Föhrenhalde", "22", "6003", "Luzern", "CH", "LU", "de", "2"),
                                                          date(2009, 4, 1), date(2023, 5, 31), "WOHNSITZ", False))
                 if pid == "PTR-00000002":
                     self.adressen[-1]["gueltig_von"] = date(2021, 9, 1)
@@ -275,7 +275,7 @@ class PartnerWelt:
                 "todesdatum": todd, "datenschutz_werbung_ok": False, "datenschutz_ki_ok": False, "herkunft": "pfefferminz", "quellsystem_primaer": None,
                 "haushalt_id": f"HH-{hh:06d}", "ist_persona": True, "erstellt_am": None, "geaendert_am": None,
             })
-            # Haushalt Niederberger wohnt seit dem Hauskauf 01.06.2023 am Rebhaldenweg (wie die Persona); Kinder ab Geburt
+            # Haushalt Niederberger wohnt seit dem Hauskauf 01.06.2023 am Holunderhalde (wie die Persona); Kinder ab Geburt
             seit_adresse = date(2023, 6, 1) if hh == 1 else date(2010, 1, 1)
             self.adressen.append(self._adr_zeile(pid, Adresse(strasse, hnr, plz, ort, land, "", spr, self._zone(plz, land)), seit_adresse, None, "WOHNSITZ", True))
             self.beziehungen.append({"partner_id_von": pid, "partner_id_zu": partner_id(hh), "beziehung": rolle,

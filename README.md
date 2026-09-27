@@ -33,7 +33,7 @@ Pfefferminzia ist ein Lehr-Datensatz für einen Executive-Kurs, in dem Führungs
   - `data/documents/S/personas/` – die Fallakten der zehn Kunden-Personas als Briefe, E-Mails, Notizen und Berichte (Markdown und EML)
   - `data/documents/S/tarife/` – 28 Tarifblätter aus den Referenztabellen für Haftpflicht und Leben (Markdown und PDF)
   - `data/truth/S/` – latente Wahrheit, Labels und Protokoll der Datenqualitäts-Injektionen (nur Dozenten, nicht Teil der Teilnehmer-Releases)
-- **Teilnehmer-Zweig:** Der Zweig `teilnehmer` enthält denselben Datensatz ohne Lösungen. Teilnehmende klonen mit `git clone -b teilnehmer https://github.com/falkue/Pfefferminzia`. Der Zweig wird mit `scripts/build_teilnehmer_branch.sh` aus `main` neu erzeugt.
+- **Teilnehmer-Zweig:** Der Zweig `teilnehmer` enthält denselben Datensatz ohne Lösungen. Teilnehmende klonen nur diesen Zweig mit `git clone -b teilnehmer --single-branch https://github.com/falkue/Pfefferminzia` (ohne `--single-branch` holt git auch `main` mit `data/truth` in den lokalen Klon). Der Zweig wird mit `scripts/build_teilnehmer_branch.sh` aus `main` neu erzeugt; er enthält keinen Generator (`src/`, `tests/`, `scripts/`, `config/`), weil sich mit Code und Seed die latente Wahrheit nachrechnen liesse.
 - Nächster Schritt ist Welle 2 (Bewegungsdaten: Rechnungen, Buchungen, Mahnungen, Interaktionen, Beschwerden, Churn-Labels) und danach Welle 3 (Underwriting-Akten Leben).
 
 Der Datensatz wird mit `uv run pfefferminzia generate --stufe S` reproduzierbar erzeugt (Master-Seed 20250101).
