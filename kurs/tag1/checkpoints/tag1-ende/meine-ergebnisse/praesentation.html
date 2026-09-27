@@ -31,7 +31,7 @@
      Danach das Element mit class="beispiel" (Hinweis «Beispieldaten») löschen.
   9. Sprechernotizen: <aside class="notes"> in jeder Folie. Im Browser Taste S öffnet die
      Sprecheransicht (Pop-ups erlauben).
-     Die Prüfung meldet auch Platzhalter und den Hinweis «Beispieldaten»: roter Kasten unten links
+     Die Prüfung meldet auch Platzhalter und den Hinweis «Beispieldaten»: roter Kasten oben links
      im Browser; ohne Browser: "<Pfad zu Chrome>" --headless --virtual-time-budget=5000 --dump-dom
      "file:///<Ordner>/praesentation.html" und im Ergebnis das Attribut data-pruefung lesen
      («ok» = alles in Ordnung).
@@ -87,7 +87,8 @@
 
   /* ---------- Kopf: Rubrik y=40, Logo rechts ---------- */
   .eyebrow { left: 64px; top: 40px; height: 36px; display: flex; align-items: center; gap: 12px;
-    font-size: 15px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--mint-ink); white-space: nowrap; }
+    font-size: 15px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--mint-ink); white-space: nowrap;
+    max-width: 938px; }   /* endet 24 px vor dem Logo; auf der Titelfolie vor dem Band (unten) */
   .eyebrow::before { content: ""; width: 24px; height: 3px; background: var(--mint); border-radius: 2px; }
   .logo { right: 64px; top: 40px; height: 36px; }
   .logo svg { height: 36px; width: 190px; display: block; }
@@ -102,30 +103,34 @@
   /* ---------- Quelle y=626, Fuss y=668 (Fuss setzt das Skript) ---------- */
   .src { left: 64px; top: 626px; width: 1152px; height: 38px; font-size: 15px; line-height: 19px; color: var(--muted); overflow: hidden; }
   .foot { left: 64px; top: 668px; width: 1152px; height: 1px; background: var(--line); }
-  .foot-l { left: 64px; top: 676px; font-size: 15px; line-height: 18px; font-weight: 600; color: var(--dg); white-space: nowrap; }
+  .foot-l { left: 64px; top: 676px; max-width: 1152px; font-size: 15px; line-height: 18px; font-weight: 600; color: var(--dg); white-space: nowrap; }
   .foot-r { left: 64px; top: 696px; font-size: 15px; line-height: 18px; color: var(--muted); white-space: nowrap; letter-spacing: -0.005em; }
   .kpi .val, .kpi .val2, .row .e b, .chart, .side .big { font-feature-settings: "tnum" 1; }
 
   /* ---------- Baustein «titel» ---------- */
   .t-band { left: 848px; top: 0; width: 432px; height: 656px; background: var(--lm); }
   .t-mark { left: 888px; top: 150px; width: 352px; height: 440px; }
-  .t-title { left: 64px; top: 232px; width: 740px; margin: 0; font-size: 64px; line-height: 72px;
-    font-weight: 750; letter-spacing: -0.03em; color: var(--dg); white-space: nowrap; }
+  /* Titel darf zwei Zeilen haben: unten verankert, eine Zeile steht bei y = 232, zwei beginnen bei y = 160 */
+  .t-title { left: 64px; bottom: 416px; width: 740px; margin: 0; font-size: 64px; line-height: 72px;
+    font-weight: 750; letter-spacing: -0.03em; color: var(--dg); text-wrap: balance; hyphens: manual; }
   .t-sub { left: 64px; top: 320px; width: 740px; margin: 0; font-size: 24px; line-height: 34px; color: var(--muted); }
   .t-acc { left: 64px; top: 404px; width: 56px; height: 4px; background: var(--mint); border-radius: 2px; }
   .t-meta { left: 64px; top: 440px; width: 740px; font-size: 20px; line-height: 30px; }
   .t-meta b { display: block; font-weight: 700; color: var(--dg); }
   .t-meta span { display: block; color: var(--muted); }
-  .t-stand { left: 64px; top: 576px; font-size: 16px; line-height: 22px; color: var(--muted); white-space: nowrap; }
+  .t-stand { left: 64px; top: 576px; max-width: 740px; font-size: 16px; line-height: 22px; color: var(--muted); white-space: nowrap; }
+  .reveal .folie[data-baustein="titel"] .eyebrow { max-width: 740px; }
+  /* Prüfung: .t-sub höchstens zwei Zeilen (bis y = 388), .t-meta höchstens vier Zeilen (bis y = 560), .t-stand eine Zeile */
   .t-stand b { color: var(--mint-ink); font-weight: 600; }
 
   /* ---------- Baustein «kennzahlen»: drei Kacheln à 368 × 384, Abstand 24 ---------- */
   .kpi { top: 232px; width: 368px; height: 384px; padding: 28px 28px 24px; border-top: 4px solid var(--dg); background: #fff; overflow: hidden; }
   .kpi.focus { background: var(--wash); border-top-color: var(--mint); }
   .kpi .lab { font-size: 17px; line-height: 22px; font-weight: 600; color: var(--muted); letter-spacing: .01em; }
+  .kpi .val, .kpi .val2 { margin-right: -20px; }   /* grosse Zahlen dürfen in den rechten Innenabstand laufen */
   .kpi .val { margin-top: 18px; font-size: 64px; line-height: 68px; font-weight: 750; letter-spacing: -0.03em; color: var(--dg); white-space: nowrap; }
   .kpi .val small { font-size: 30px; font-weight: 650; letter-spacing: -0.01em; margin-right: 6px; }
-  .kpi .val2 { display: flex; gap: 28px; margin-top: 18px; }
+  .kpi .val2 { display: flex; gap: 16px; margin-top: 18px; }
   .kpi .val2 div { font-size: 52px; line-height: 60px; font-weight: 750; letter-spacing: -0.03em; white-space: nowrap; }
   .kpi .val2 span { display: block; font-size: 16px; line-height: 20px; font-weight: 600; letter-spacing: 0; margin-top: 2px; }
   .kpi .add { margin-top: 10px; font-size: 19px; line-height: 26px; color: var(--ink); font-weight: 500; }
@@ -142,6 +147,7 @@
   .side { left: 876px; top: 232px; width: 340px; height: 384px; padding: 24px 24px 0; background: var(--wash); border-top: 4px solid var(--mint); overflow: hidden; }
   .side h3 { margin: 0; font-size: 17px; line-height: 22px; font-weight: 600; color: var(--muted); }
   .side .big { margin-top: 14px; font-size: 44px; line-height: 50px; font-weight: 750; letter-spacing: -0.02em; color: var(--mint-ink); white-space: nowrap; }
+  .side .big small { font-size: 24px; font-weight: 650; letter-spacing: -0.01em; margin-right: 6px; }   /* <small>CHF</small> wie in den Kacheln */
   .side p { margin: 8px 0 0; font-size: 19px; line-height: 26px; }
   .side hr { border: 0; border-top: 1px solid var(--line); margin: 18px 0 0; }
   .beispiel { left: 128px; top: 492px; padding: 4px 10px; font-size: 15px; line-height: 20px; font-weight: 700;
@@ -159,9 +165,9 @@
   .row.last { border-bottom: 1px solid var(--line); }
   .row .n { position: absolute; left: 0; top: 20px; width: 44px; height: 44px; border-radius: 22px; background: var(--dg);
     color: #fff; font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
-  .row .k { position: absolute; left: 68px; top: 18px; font-size: 15px; line-height: 20px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--mint-ink); }
+  .row .k { position: absolute; left: 68px; top: 18px; max-width: 800px; white-space: nowrap; font-size: 15px; line-height: 20px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--mint-ink); }
   .row .t { position: absolute; left: 68px; top: 42px; width: 800px; height: 81px; font-size: 20px; line-height: 27px; color: var(--ink); overflow: hidden; }
-  .row .e { position: absolute; left: 904px; top: 18px; width: 248px; height: 92px; padding: 12px 16px; background: var(--wash); border-left: 3px solid var(--mint); overflow: hidden; }
+  .row .e { position: absolute; left: 904px; top: 14px; width: 248px; height: 100px; padding: 12px 16px; background: var(--wash); border-left: 3px solid var(--mint); overflow: hidden; }
   .row .e b { display: block; font-size: 28px; line-height: 32px; font-weight: 750; letter-spacing: -0.02em; color: var(--dg); white-space: nowrap; }
   .row .e span { display: block; margin-top: 4px; font-size: 15px; line-height: 19px; color: var(--muted); }
 
@@ -185,7 +191,7 @@
   }
 
   /* ---------- Hinweiskasten der Layout-Prüfung (nur am Bildschirm, nie im Druck) ---------- */
-  .pruefung { position: fixed; left: 8px; bottom: 8px; z-index: 50; max-width: 640px; padding: 6px 10px;
+  .pruefung { position: fixed; left: 8px; top: 8px; z-index: 50; max-width: 640px; padding: 6px 10px;
     background: var(--warn); color: #fff; font: 600 14px/1.4 Inter, Arial, sans-serif; border-radius: 4px; }
   .pruefung[hidden] { display: none !important; }
   .pruefung summary { cursor: pointer; }
@@ -226,8 +232,8 @@
 
   <div class="abs eyebrow">Verwaltungsrat · Bericht</div>
 
-  <h1 class="abs t-title">Ein Jahr nach der Fusion: Kunden, Migration</h1>
-  <p class="abs t-sub">Bericht an den Verwaltungsrat</p>
+  <h1 class="abs t-title">Ein Jahr nach der Fusion</h1>
+  <p class="abs t-sub">Kundenverluste, Migration und der Beschwerdefall Pieper</p>
   <div class="abs t-acc"></div>
   <div class="abs t-meta">
     <b>Verwaltungsrat, 22. Januar 2026</b>
@@ -405,6 +411,8 @@
    Liniendiagramm: eine Reihe je Gruppe, ein Wert je Jahr.
    - wert: Zahl in der Einheit der Achse (hier Prozent), null = Lücke (kein Bestand, zu kleine Basis).
    - zaehler / nenner: optional; erscheinen beim Überfahren eines Punkts («42 von 219»).
+   - einheit: "%" zeigt Werte als 11.1 %; jede andere Einheit (etwa "Verträge") zeigt ganze Zahlen 1'842,
+     Nachkommastellen mit stellen: 1. Die Einheit gehört dann in den achsentitel.
    - farbe: nur aus FARBEN (dg, mintInk, mint, grau). Wichtigste Reihe: dick: true.
    - band: optional, hebt einen Zeitraum hinter den Linien hervor.
    Werte immer aus eigenen Ergebnissen oder frisch aus den Tabellen, nie geschätzt oder gerundet übernommen. */
@@ -466,18 +474,31 @@ function linienDiagramm(sel, D) {
   const W = +svg.attr("width"), H = +svg.attr("height");
   const m = { top: 34, right: 190, bottom: 40, left: 52 };
   const alle = D.reihen.flatMap(r => r.werte.filter(w => w.wert !== null).map(w => w.wert));
-  const schritt = 5;
-  const yMax = Math.max(schritt, Math.ceil((d3.max(alle) || 0) / schritt) * schritt);
+  const prozent = (D.einheit || "%") === "%";
+  const fmtWert = v => prozent ? fmtProzent(v, D.stellen ?? 1) : fmtZahl(v, D.stellen ?? 0);
+  const roh = d3.max(alle) || 0;
+  let yMax, ticks;
+  if (roh <= 100) {   /* Quoten: Schritte von 5, ab 40 von 10 */
+    const schritt = 5;
+    yMax = Math.max(schritt, Math.ceil(roh / schritt) * schritt);
+    ticks = d3.range(0, yMax + 0.001, yMax > 40 ? 10 : schritt);
+  } else {            /* grosse Zahlen: runde Schritte, etwa 0, 1'000, 2'000 … */
+    const s = d3.scaleLinear().domain([0, roh]).nice(5);
+    yMax = s.domain()[1]; ticks = s.ticks(5);
+  }
+  /* linker Rand so breit wie die längste Achsenzahl */
+  const probe = svg.append("text").attr("font-size", 15).text(fmtZahl(yMax));
+  m.left = Math.max(m.left, Math.ceil(probe.node().getComputedTextLength ? probe.node().getComputedTextLength() : 0) + 20);
+  probe.remove();
   const x = d3.scaleLinear().domain(d3.extent(D.jahre)).range([m.left, W - m.right]);
   const y = d3.scaleLinear().domain([0, yMax]).range([H - m.bottom, m.top]);
-  const ticks = d3.range(0, yMax + 0.001, yMax > 40 ? 10 : schritt);
   const halo = s => s.attr("paint-order", "stroke").attr("stroke", "#fff").attr("stroke-width", 4).attr("stroke-linejoin", "round");
 
   if (D.band) {
     svg.append("rect").attr("x", x(D.band.von)).attr("y", m.top).attr("width", x(D.band.bis) - x(D.band.von))
       .attr("height", H - m.bottom - m.top).attr("fill", FARBEN.wash);
     /* Beschriftung unten im Band, damit sie die Endwerte oben nicht überdeckt */
-    svg.append("text").attr("x", x(D.band.von) + 10).attr("y", H - m.bottom - 12).attr("font-size", 15)
+    svg.append("text").attr("class", "band-text").attr("x", x(D.band.von) + 10).attr("y", H - m.bottom - 12).attr("font-size", 15)
       .attr("font-weight", 600).attr("fill", FARBEN.mintInk).text(D.band.text);
   }
   svg.append("g").selectAll("line").data(ticks).join("line")
@@ -503,7 +524,7 @@ function linienDiagramm(sel, D) {
     svg.append("g").selectAll("circle").data(punkte).join("circle")
       .attr("cx", d => x(d.jahr)).attr("cy", d => y(d.wert)).attr("r", 5)
       .attr("fill", "#fff").attr("stroke", farbe).attr("stroke-width", 2.5)
-      .append("title").text(d => r.name + " " + d.jahr + ": " + fmtProzent(d.wert)
+      .append("title").text(d => r.name + " " + d.jahr + ": " + fmtWert(d.wert) + (prozent || !D.einheit ? "" : " " + D.einheit)
         + (d.zaehler != null ? " (" + fmtZahl(d.zaehler) + " von " + fmtZahl(d.nenner) + ")" : ""));
     const letzter = punkte[punkte.length - 1];
     if (letzter) enden.push({ r, farbe, wert: letzter.wert, jahr: letzter.jahr, y: y(letzter.wert) });
@@ -517,9 +538,9 @@ function linienDiagramm(sel, D) {
     enden[i].y = Math.min(enden[i].y, grenze);
   }
   enden.forEach(e => {
-    const t = svg.append("text").attr("x", x(e.jahr) + 16).attr("y", e.y).attr("dy", "0.35em");
+    const t = svg.append("text").attr("class", "endwert").attr("x", x(e.jahr) + 16).attr("y", e.y).attr("dy", "0.35em");
     const textFarbe = e.r.farbe === "grau" ? FARBEN.muted : e.farbe;
-    t.append("tspan").attr("font-size", 19).attr("font-weight", 750).attr("fill", textFarbe).text(fmtProzent(e.wert));
+    t.append("tspan").attr("font-size", 19).attr("font-weight", 750).attr("fill", textFarbe).text(fmtWert(e.wert));
     t.append("tspan").attr("dx", 8).attr("font-size", 16).attr("font-weight", 600).attr("fill", textFarbe).text(e.r.name);
     halo(t);
   });
@@ -532,13 +553,50 @@ function pruefeLayout() {
     const vorher = s.style.display;
     s.style.display = "block";   /* verborgene Folien kurz einblenden, damit sie messbar sind */
     /* einzeilige Texte: nur Breite prüfen; Kästen: nur Höhe prüfen */
-    const zeilen = ".h2, .sub, .t-title, .t-stand, .eyebrow, .kpi .val, .kpi .val2 div, .side .big, .row .e b";
+    const zeilen = ".h2, .sub, .t-stand, .eyebrow, .foot-l, .kpi .val, .kpi .val2, .kpi .val2 div, .side .big, .row .k, .row .e b";
     const kaesten = ".kpi, .side, .row .t, .row .e, .src, .punkte";
+    const melde = (el, text) => { el.classList.add("ueberlauf"); meldungen.push("Folie " + (i + 1) + ": " + text + " – «" + el.textContent.replace(/\s+/g, " ").trim().slice(0, 60) + "»"); };
+    /* Titel der Titelfolie: höchstens zwei Zeilen, kein Wort breiter als die Spalte */
+    s.querySelectorAll(".t-title").forEach(el => {
+      const zuLang = el.clientHeight > 2 * 72 + 1 || el.scrollWidth > el.clientWidth + 1;
+      el.classList.toggle("ueberlauf", zuLang);
+      if (zuLang) meldungen.push("Folie " + (i + 1) + ": Titel länger als zwei Zeilen – «" + el.textContent.trim().slice(0, 60) + "»");
+    });
     s.querySelectorAll(zeilen + ", " + kaesten).forEach(el => {
-      const zuBreit = el.matches(zeilen) && el.scrollWidth > el.clientWidth + 1;
+      /* Kästen auch in der Breite: ein langes Wort ragt sonst unbemerkt heraus */
+      const breit = e => e.scrollWidth > e.clientWidth + 1;
+      const zuBreit = breit(el) && !(el.matches(kaesten) && Array.from(el.querySelectorAll(zeilen)).some(breit));
       const zuHoch = el.matches(kaesten) && el.scrollHeight > el.clientHeight + 1;
       el.classList.toggle("ueberlauf", zuBreit || zuHoch);
-      if (zuBreit || zuHoch) meldungen.push("Folie " + (i + 1) + ": zu lang – " + el.className + " – «" + el.textContent.trim().slice(0, 60) + "»");
+      if (zuBreit || zuHoch) meldungen.push("Folie " + (i + 1) + ": zu lang – " + el.className + " – «" + el.textContent.replace(/\s+/g, " ").trim().slice(0, 60) + "»");
+    });
+    /* Titelfolie: Untertitel höchstens zwei Zeilen, Gremium/Name höchstens vier (sonst Überlappung) */
+    s.querySelectorAll(".t-sub").forEach(el => { if (el.offsetHeight > 2 * 34 + 1) melde(el, "Untertitel länger als zwei Zeilen"); });
+    s.querySelectorAll(".t-meta").forEach(el => { if (el.offsetHeight > 4 * 30 + 1) melde(el, "Gremium, Name und Funktion zusammen länger als vier Zeilen"); });
+    /* Kacheln: Text oben darf die Definition oder den Balken unten nicht berühren */
+    s.querySelectorAll(".kpi").forEach(k => {
+      const unten = Array.from(k.querySelectorAll(":scope > .note, :scope > .split"));
+      if (!unten.length) return;
+      const grenze = Math.min(...unten.map(u => u.offsetTop)) - 8;
+      const oben = Array.from(k.children).filter(c => !unten.includes(c));
+      const ende = Math.max(0, ...oben.map(c => c.offsetTop + c.offsetHeight));
+      if (ende > grenze) melde(k, "Kachel zu voll, Text läuft in die Definition oder den Balken unten");
+    });
+    /* Diagramm: Beschriftungen innerhalb des Diagramms (rechts bis 24 px vor den Seitenkasten), Band-Text frei */
+    s.querySelectorAll("svg.chart").forEach(svg => {
+      svg.classList.remove("ueberlauf");
+      const W = +svg.getAttribute("width") || svg.clientWidth;
+      const box = t => { try { return t.getBBox(); } catch (e) { return null; } };
+      const enden = Array.from(svg.querySelectorAll("text.endwert")).map(box).filter(Boolean);
+      svg.querySelectorAll("text").forEach(t => {
+        const b = box(t); if (!b || !b.width) return;
+        const schneidet = t.classList.contains("band-text") && enden.some(e =>
+          b.x < e.x + e.width && e.x < b.x + b.width && b.y < e.y + e.height && e.y < b.y + b.height);
+        if (b.x < -1 || b.x + b.width > W + 24 || schneidet) {
+          svg.classList.add("ueberlauf");
+          meldungen.push("Folie " + (i + 1) + ": Diagramm-Beschriftung zu lang – «" + t.textContent.trim().slice(0, 60) + "»");
+        }
+      });
     });
     s.style.display = vorher;
     if (/\[[^\]]{2,}\]/.test(s.textContent)) meldungen.push("Folie " + (i + 1) + ": Platzhalter in eckigen Klammern stehen noch da (auch in den Notizen)");
@@ -571,7 +629,8 @@ Reveal.initialize({
   plugins: [RevealNotes]
 }).then(() => {
   const fonts = document.fonts ? document.fonts.ready : Promise.resolve();
-  fonts.then(() => setTimeout(pruefeLayout, 50));
+  /* nach dem Laden der Schrift neu zeichnen (Achsenbreite) und dann prüfen */
+  fonts.then(() => { linienDiagramm("#diagramm", DIAGRAMM); setTimeout(pruefeLayout, 50); });
 });
 </script>
 </body>

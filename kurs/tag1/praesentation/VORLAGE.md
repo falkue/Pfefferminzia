@@ -8,7 +8,9 @@ Er enthält je einen Baustein jeder Folienart. Für eine Präsentation die Vorla
 
 1. **Eine Aussage pro Folie.** Der Titel ist diese Aussage als ganzer Satz mit Verb
    (Action Title): «Wir verlieren vor allem Kunden aus X», nicht «Stornoquote». Eine Zeile,
-   höchstens rund 60 Zeichen. Wer nur die Titel liest, kennt die Geschichte.
+   höchstens rund 60 Zeichen. Wer nur die Titel liest, kennt die Geschichte. Ausnahme Titelfolie:
+   Titel höchstens zwei Zeilen, Untertitel höchstens zwei Zeilen, Gremium und Name zusammen höchstens
+   vier Zeilen, Datenstand eine Zeile.
 2. **Der Untertitel belegt den Titel** mit der Zahl, die ihn trägt.
 3. **Jede Zahl mit Quelle und Definition** in der Quellzeile unten: Tabelle oder Unterlage in
    Worten, Stichtag, was gezählt wird (etwa «aktiv am 31.12.», «Storno ohne Tod, Widerruf,
@@ -17,11 +19,16 @@ Er enthält je einen Baustein jeder Folienart. Für eine Präsentation die Vorla
    Unternehmen, die sich im Datensatz nicht nachzählen lassen, als solche kennzeichnen.
 4. **Mindestschrift 19 px** für Fliesstext, **15 px** für Beschriftungen, Quellen, Achsen.
    Passt ein Text nicht, kürzen, nicht verkleinern. Zu lange Texte markiert die Vorlage rot
-   gestrichelt; der rote Kasten unten links listet alle Hinweise.
+   gestrichelt; der rote Kasten oben links listet alle Hinweise. Einzeilig bleiben Rubrik,
+   Untertitel, grosse Zahlen, Stichwort und Zahl der Entscheidungsfolie; die Erläuterung unter der
+   Zahl rechts darf zwei Zeilen haben. Grosse Beträge runden und Einheiten klein setzen:
+   `<small>CHF</small>12.3 <small>Mio.</small>`.
 5. **Zahlenformat** Schweiz: 1'513'301, 11.1 %, CHF 1'240.00, EUR getrennt oder mit Kurs
    umgerechnet; Datum TT.MM.JJJJ.
 6. **Genau ein Diagramm** pro Präsentation, das die wichtigste Aussage trägt. Werte an den
-   Linienenden, Lücken statt 0 bei fehlendem oder zu kleinem Bestand.
+   Linienenden, Lücken statt 0 bei fehlendem oder zu kleinem Bestand. Reihennamen kurz (rund
+   15 Zeichen), Band-Text kürzer als das Band. `einheit: "%"` für Quoten; für Anzahlen oder Beträge
+   eine andere Einheit (etwa `"Verträge"`), dann zeigt das Diagramm ganze Zahlen.
 7. **Höchstens drei Punkte** auf einer Folie, höchstens drei Beschlüsse auf der Entscheidungsfolie,
    je ein Satz.
 8. **Sprechernotizen** zu jeder Folie: Kernsatz, was man zur Zahl sagt, Überleitung, Zeit.
