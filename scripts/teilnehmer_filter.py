@@ -285,6 +285,9 @@ def schlusspruefung() -> bool:
         if (ROOT / pfad).exists():
             reste.append(f"{pfad} existiert noch")
     for p in ROOT.rglob("*.py"):
+        # Erlaubt: Skripte, die Teilnehmende selbst erzeugen und die als Checkpoint mitgeliefert werden
+        if "checkpoints" in p.parts and "meine-ergebnisse" in p.parts:
+            continue
         if ".venv" not in p.parts and ".git" not in p.parts:
             reste.append(f"Python-Quelltext im Zweig: {rel(p)}")
     claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
