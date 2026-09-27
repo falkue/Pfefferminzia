@@ -4,7 +4,7 @@ Tag 1 «AI Augmentation», Montag 28. September 2026. Zeitbox 60 Minuten: 10 Inp
 
 ## Deine Rolle
 
-Du bist weiterhin Chief AI & Data Officer der Pfefferminzia-Gruppe. Am 15. Dezember 2025 schreibt
+Du bist weiterhin Dr. Lena Mbatha-Keller, Chief Data & AI Officer der Pfefferminzia-Gruppe. Am 15. Dezember 2025 schreibt
 dir die CEO: Der Verwaltungsrat will am 22. Januar 2026 wissen, wo die Gruppe ein Jahr nach der
 Fusion steht. Du hast 15 Minuten und fünf Folien. Die Präsidentin kommt aus dem Pfefferminz-Umfeld,
 der Vizepräsident vertritt die Minzia-Investoren; beide schauen genau hin, ob eine Seite

@@ -4,7 +4,7 @@ Tag 1 «AI Augmentation», Montag 28. September 2026. Zeitbox 30 Minuten: 10 Inp
 
 ## Deine Rolle
 
-Du bist neu bei Pfefferminzia, einem Versicherer, der vor einem Jahr aus einer Fusion entstanden
+Du bist Tiago Almeida, Trainee Datenqualität im Data & AI Office und neu bei Pfefferminzia, einem Versicherer, der vor einem Jahr aus einer Fusion entstanden
 ist. Bevor du ab Drill 1 Verantwortung übernimmst, richtest du deinen Arbeitsplatz ein und lernst
 den Datenbestand in Grundzügen kennen.
 

@@ -4,7 +4,7 @@ Tag 1 «AI Augmentation», Montag 28. September 2026. Zeitbox 60 Minuten: 15 Inp
 
 ## Deine Rolle
 
-Du arbeitest in der Risikoprüfung Leben der Pfefferminzia. Auf deinem Tisch liegen drei Anträge auf
+Du bist Renato Bernasconi, Senior Underwriter in der Risikoprüfung Leben der Pfefferminzia in Olten. Auf deinem Tisch liegen drei Anträge auf
 Risikolebensversicherung. Einer ist schon entschieden, kommt aber zurück: Dr. Farid Nazari, Arzt in
 München, 1.2 Millionen Euro, hat einen Zuschlag bekommen und will wissen, ob «ein Algorithmus» über
 ihn entschieden hat. Zwei sind neu aus dem Dezember: Katrin Brandes aus Hannover und Bruno Pedrazzini

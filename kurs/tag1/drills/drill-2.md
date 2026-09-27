@@ -4,7 +4,7 @@ Tag 1 «AI Augmentation», Montag 28. September 2026. Zeitbox 60 Minuten: 10 Inp
 
 ## Deine Rolle
 
-Du bist Teamleiterin oder Teamleiter Schaden Haftpflicht Deutschland der Pfefferminzia. Im März 2025
+Du bist Aylin Demirci, Teamleiterin Schaden Haftpflicht Deutschland der Pfefferminzia in Leipzig. Im März 2025
 hat unser System den Haftpflichtschaden von Hans-Georg Pieper aus Dresden automatisch abgelehnt,
 obwohl sein Hund seit Jahren versichert war. Herr Pieper hat sich zweimal beschwert, den
 Versicherungsombudsmann eingeschaltet und die Aufsicht angerufen. Der Fall ist abgeschlossen, aber er
