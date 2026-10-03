@@ -1,5 +1,6 @@
 # Betriebssystem / Editor
 .DS_Store
+._*
 Thumbs.db
 *.swp
 *~
