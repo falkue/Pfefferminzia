@@ -1,0 +1,139 @@
+# Tarifparameter Haftpflicht Pfefferminzia
+# Quelle: Planung 01 §7.5 (Tarifhandbuch), konkretisiert. Formel siehe tarifformel.md.
+# Alle Faktoren multiplikativ, Beträge in Landeswährung (CH: CHF, DE: EUR).
+# Prämie in den erzeugten Daten = Tarif ± Rundung; bewusst 3–5 % der Verträge mit manueller Abweichung
+# (config/generator.yaml: fallen.tarifabweichung).
+
+meta:
+  version: "TH-2025"
+  gueltig_ab: 2025-01-01
+  rundung: 0.05        # CH auf 5 Rappen, DE auf 1 Cent (siehe markt)
+  waehrung: {CH: CHF, DE: EUR}
+  steuer:
+    CH: {name: Stempelabgabe, satz: 0.05, basis: nettopraemie}
+    DE: {name: Versicherungsteuer, satz: 0.19, basis: nettopraemie}
+  ratenzuschlag:        # Zuschlag auf Jahresprämie bei unterjähriger Zahlung
+    jaehrlich: 0.00
+    halbjaehrlich: 0.03
+    vierteljaehrlich: 0.05
+    monatlich: 0.05     # nur DE und MZ-DIRECT
+  mindestpraemie:
+    HP-PRIV: {CH: 80.00, DE: 45.00}
+    HP-BETR: {CH: 350.00, DE: 200.00}
+    HP-BERUF: {CH: 700.00, DE: 500.00}
+  vermittlervergütung_pct:   # nur informativ, nicht Teil der Prämie
+    agentur: 12
+    makler: 16
+    direkt: 0
+    bank: 10
+    portal_mz_direct: 8
+
+# Generationsfaktor: ältere Bedingungsgenerationen wurden nie vollständig auf den aktuellen Tarif gehoben.
+# Altverträge bleiben günstiger (Bestandsschutz), das ist eine der Ursachen für Storno nach Harmonisierung 2025.
+generationsfaktor:
+  HP-KLASSIK: 0.88
+  HP-MODERN: 0.95
+  MZ-DIRECT: 0.92
+  PM-2025: 1.00
+
+# ------------------------------------------------------------------------------------------
+HP-PRIV:
+  grundpraemie:              # Jahresnettoprämie vor Faktoren, Deckungssumme Standard, SB Standard
+    CH: {einzel: 110.00, paar: 145.00, familie: 165.00}
+    DE: {einzel: 52.00, paar: 68.00, familie: 78.00}
+  deckungssumme:             # Faktor je gewählter Deckungssumme
+    CH: {3000000: 0.94, 5000000: 1.00, 10000000: 1.15}
+    DE: {3000000: 0.96, 5000000: 1.00, 10000000: 1.05, 20000000: 1.10, 50000000: 1.18}
+  selbstbehalt:
+    CH: {0: 1.20, 100: 1.10, 200: 1.00, 500: 0.85}
+    DE: {0: 1.00, 150: 0.85, 250: 0.78}
+  tarifzone:                 # aus plz_zonen.csv (Ort -> Zone in geo/orte_*.csv)
+    CH: {"1": 1.05, "2": 1.00, "3": 0.98}
+    DE: {"1": 1.10, "2": 1.03, "3": 0.97}
+  alter_vn:                  # Alter Versicherungsnehmer bei Vertragsbeginn
+    bis_25: 1.10
+    26_bis_60: 1.00
+    ab_61: 0.95
+  vorschaeden_5_jahre: {0: 0.95, 1: 1.00, 2: 1.15, 3: 1.40}   # 3 = drei oder mehr
+  bausteine: bausteine.csv   # feste Jahreszuschläge je Baustein und Markt stehen ausschliesslich in bausteine.csv
+                             # (Spalten zusatzpraemie_ch / zusatzpraemie_de, Varianten z. B. Listenhund)
+  rabatte:                   # multiplikativ, kombinierbar
+    buendel_mit_leben: 0.90
+    mehrjahresvertrag_ch: {1: 1.00, 3: 0.95, 5: 0.90}
+    berufsgruppe_oeffentlicher_dienst_de: 0.90
+    kanal: {agentur: 1.00, makler: 1.00, direkt: 0.95, bank: 1.00}
+    papierlos: 0.98
+
+# ------------------------------------------------------------------------------------------
+HP-BETR:
+  bemessung:
+    CH: lohnsumme_jahr        # Prämiensatz auf Lohnsumme
+    DE: umsatz_jahr           # Prämiensatz auf Umsatz; Handwerk alternativ pro Kopf
+  praemiensatz_promille:      # je Risikoklasse aus branchenklassen.csv (grundpraemiensatz_promille dort ist DE-Umsatzbasis)
+    CH_lohnsumme: {1: 1.5, 2: 2.5, 3: 4.0, 4: 6.0, 5: 9.0}
+    DE_umsatz: {1: 0.6, 2: 1.0, 3: 1.8, 4: 3.0, 5: 4.5}
+  pro_kopf_de_handwerk:       # Alternative DE für Handwerk (Risikoklasse 3–5): EUR je Beschäftigten
+    3: 120.00
+    4: 190.00
+    5: 280.00
+  deckungssumme:
+    CH: {5000000: 1.00, 10000000: 1.12}
+    DE: {3000000: 0.92, 5000000: 1.00, 10000000: 1.10}
+  selbstbehalt:
+    CH: {500: 1.00, 1000: 0.94, 2000: 0.88, 5000: 0.80}
+    DE: {250: 1.05, 500: 1.00, 1000: 0.93}
+  tarifzone:
+    CH: {"1": 1.06, "2": 1.00, "3": 0.96}
+    DE: {"1": 1.08, "2": 1.02, "3": 0.96}
+  mitarbeiterstaffel:         # Faktor nach Beschäftigtenzahl (Kumulrisiko)
+    bis_5: 0.95
+    6_bis_20: 1.00
+    21_bis_50: 1.08
+  bausteine_pct:              # prozentualer Zuschlag auf die Grundprämie (Kürzel aus bausteine.csv)
+    BS-PRODUKT: 15
+    BS-UMWELT: 10
+    BS-RUECKRUF: 20
+    BS-IT-DATEN: 8
+    BS-GEBAEUDE: 5
+    BS-AUSFALL: 4
+    BS-SCHLUESSEL: 3
+  zuschlaege_pct:
+    export_usa_kanada: 25
+    subunternehmer_ueber_30_pct: 10
+    heissarbeiten: 8
+    schadenquote_3_jahre: {unter_40: 0, 40_bis_80: 10, ueber_80: 25}
+  rabatte:
+    zertifizierung_iso: 0.95
+    schadenfrei_3_jahre: 0.90
+    kanal: {agentur: 1.00, makler: 1.00, direkt: 1.00, bank: 1.00}
+
+# ------------------------------------------------------------------------------------------
+HP-BERUF:
+  bemessung: honorar_oder_umsatz_jahr
+  praemiensatz_promille:      # je Berufsgruppe, siehe berufsgruppen.csv (dort massgeblich, hier Zusammenfassung)
+    BG-ARCH: {architekt: 8.0, bauingenieur: 7.0}
+    BG-TREU: {treuhaender: 5.0, steuerberater_ch: 5.0, steuerberater_de: 4.0, revisor: 6.0}
+    BG-IT: {it_dienstleister: 5.0, softwareentwickler: 4.5}
+    BG-BER: {unternehmensberater: 4.0}
+  deckungssumme:
+    CH: {1000000: 1.00, 2000000: 1.18, 5000000: 1.40}
+    DE: {250000: 0.85, 500000: 1.00, 1000000: 1.20, 2000000: 1.40}
+  selbstbehalt:               # Typen aus selbstbehalte.csv, Faktor auf Prämie
+    prozent_min: 1.00         # 10 % des Schadens, Minimum je Markt gemäss selbstbehalte.csv
+    fix_1000: 1.08
+    fix_2000: 1.03
+    fix_2500: 1.02
+    fix_5000: 0.96
+  taetigkeitsfaktor:
+    bauleitung: 1.30
+    revision: 1.20
+    hosting: 1.25
+    beratung_mna: 1.15
+    iso27001: 0.95
+  vorschaeden_5_jahre: {0: 0.95, 1: 1.00, 2: 1.20, 3: 1.50}
+  tarifzone:
+    CH: {"1": 1.04, "2": 1.00, "3": 0.98}
+    DE: {"1": 1.05, "2": 1.02, "3": 0.98}
+  rabatte:
+    verbandsmitglied: 0.95
+    kanal: {agentur: 1.00, makler: 1.00, direkt: 1.00, bank: 1.00}

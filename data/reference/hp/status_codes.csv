@@ -1,0 +1,24 @@
+entitaet,code,hauptstatus,bezeichnung,beschreibung,folgestatus,curated_status_planung03,hapo_status,hapo_stornogrund,silas_stat,mint_v1,mint_v2,mint_v3_lifecycle_state,bemerkung
+vertrag,OFF,ja,Offerte,"Angebot erstellt, nicht angenommen",ANT;OFV,,O,,,quote,QUOTE,QUOTED,HAPO führt Offerten als Satzart OFFERTE ohne Vertragsnummer
+vertrag,OFV,nein,Offerte verfallen,Offerte nach 30 Tagen Gültigkeit nicht angenommen,,,O,99,,quote_expired,QUOTE_EXPIRED,QUOTE_EXPIRED,
+vertrag,ANT,ja,Antrag,"Antrag eingegangen, in Prüfung",AKT;ABG;RUE,ANTRAG,P,,,pending,PENDING,APPLIED,
+vertrag,RUE,nein,Rückfrage,Underwriting hat Rückfrage an Kunde/Vermittler gestellt,ANT;AKT;ABG,ANTRAG,P,,,pending_info,PENDING_INFO,APPLIED_ON_HOLD,Frist 5 Arbeitstage
+vertrag,ABG,nein,Antrag abgelehnt,Antrag nach Risikoprüfung abgelehnt,,,X,,,rejected,REJECTED,DECLINED,Ablehnung immer durch Menschen (Kompetenzordnung)
+vertrag,AKT,ja,Aktiv,Deckung besteht,SUS;GEK;STO;BEE,AKTIV,A,,,active,ACTIVE,ACTIVE,
+vertrag,SUS,ja,Suspendiert (Deckungsunterbruch),CH: Haftung ruht nach Mahnung (Art. 20 VVG); DE: Leistungsfreiheit (§ 38 VVG),AKT;GEK,RUHEND,A,,,suspended,SUSPENDED,DORMANT,"HAPO: STATUS bleibt A, Kennzeichen RUHT=J und MAHNST>=2"
+vertrag,GEK,ja,Gekündigt,"Kündigung liegt vor, Vertrag läuft bis Beendigungsdatum",BEE,AKTIV,K,01;02;03;04,,cancelling,CANCELLING,TERMINATION_PENDING,"HAPO-Stornogrund: 01 VN, 02 VU Schadenfall, 03 VU Prämienverzug, 04 VU Anzeigepflicht"
+vertrag,BEE,ja,Beendet,Vertrag abgelaufen oder beendet,NAC,GEKUENDIGT_VN;GEKUENDIGT_VU;ABGELAUFEN,E,01;02;03;04;06,,expired,EXPIRED,ENDED,"HAPO-Stornogrund 06 = einvernehmliche Aufhebung (Tod, Wegzug, Betriebsaufgabe, Doppelversicherung)"
+vertrag,STO,ja,Storniert,"Rückwirkend aufgehoben (Widerruf, Nichtzustandekommen, Rücktritt, Nichtzahlung Erstprämie)",,STORNIERT,S,05;07;08,,cancelled,CANCELLED,VOID,"HAPO-Stornogrund: 05 Nichtzahlung, 07 Widerruf, 08 Rücktritt/Nichtzustandekommen"
+vertrag,NAC,ja,Nachhaftung,Nur HP-BERUF: Meldung von Verstössen aus der Vertragszeit noch möglich (5 Jahre),BEE,ABGELAUFEN,N,,,,,RUN_OFF,MINT v1/v2 kennen keinen Nachhaftungsstatus (nur Privathaftpflicht)
+vertrag,MIG,ja,In Migration,Altsystem-Vertrag noch nicht vollständig in MINT,AKT,,S,ZZ,,,,MIGRATING,"HAPO: Migrationsstorno S+ZZ darf nicht als Churn zählen (DQ-08, DQ-25)"
+schaden,GEM,ja,Gemeldet,"Eingegangen, noch nicht erfasst",ERF,GEMELDET,,,1,reported,REPORTED,REPORTED,
+schaden,ERF,ja,Erfasst,"Schadennummer vergeben, Erstreserve gesetzt",DPR,ERFASST,,,2,registered,REGISTERED,REGISTERED,
+schaden,DPR,ja,In Deckungsprüfung,"Vertrag, Prämie, Risiko, Ausschluss, Obliegenheit, Sublimit/SB werden geprüft",DVB;HPR;ABG,DECKUNGSPRUEFUNG,,,3,coverage_review,COVERAGE_REVIEW,COVERAGE_REVIEW,
+schaden,DVB,ja,Deckung mit Vorbehalt,Bearbeitung läuft unter Vorbehalt (Reservation of Rights),HPR;ABG,DECKUNGSPRUEFUNG,,,3A,coverage_reserved,COVERAGE_RESERVED,RESERVATION_OF_RIGHTS,
+schaden,HPR,ja,In Haftungsprüfung,Haftung dem Grunde und der Höhe nach wird geprüft,REG;ABW;ABG,IN_REGULIERUNG,,,4,liability_review,LIABILITY_REVIEW,LIABILITY_REVIEW,
+schaden,REG,ja,In Regulierung,Zahlungen laufen,RGS;GES,IN_REGULIERUNG;RESERVIERT;TEILREGULIERT;REGULIERT,,,5,settling,SETTLING,SETTLING,SILAS-Substatus 5T = teilreguliert
+schaden,ABW,ja,In Abwehr,"Anspruch wird bestritten, ggf. Prozess",REG;GES,IN_REGULIERUNG,,,5A,defending,DEFENDING,DEFENDING,
+schaden,RGS,ja,Regress laufend,"Gegenüber Geschädigtem geschlossen, Regress offen",GES,REGULIERT,,,6,recovery,RECOVERY,RECOVERY_OPEN,
+schaden,ABG,ja,Abgelehnt,"Deckung oder Haftung verneint, Mitteilung versandt",GES;WIE,ABGELEHNT,,,8,declined,DECLINED,DECLINED,
+schaden,GES,ja,Geschlossen,Abgeschlossen,WIE,GESCHLOSSEN,,,9,closed,CLOSED,CLOSED,
+schaden,WIE,ja,Wiedereröffnet,Nach Schliessung erneut geöffnet,DPR;HPR;REG,WIEDERERÖFFNET,,,9W,reopened,REOPENED,REOPENED,Wiedereröffnungszähler wiedereroeffnung_anzahl

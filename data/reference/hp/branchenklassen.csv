@@ -1,0 +1,88 @@
+branche_id,bezeichnung_de,noga_code,wz_code,risikoklasse,grundpraemiensatz_promille,zeichnungsstatus,anteil_bestand_pct,bemerkung
+BK-001,Bau von Gebäuden (Hochbau),41.20,41.20,4,3.0,zuschlag,2.5,
+BK-002,Strassenbau,42.11,42.11,4,3.0,zuschlag,0.6,
+BK-003,"Erdbewegungsarbeiten, Aushub",43.12,43.12,4,3.0,zuschlag,0.8,
+BK-004,Elektroinstallation,43.21,43.21,3,1.8,annehmbar,5.5,Solar-/PV-Montage auf Dächern: Zuschlag wie Dachdecker
+BK-005,"Sanitär-, Heizungs- und Klimainstallation",43.22,43.22,4,3.0,zuschlag,6.0,Hauptschadentreiber Wasserschäden
+BK-006,"Sonstige Bauinstallation (Lift, Isolation)",43.29,43.29,3,1.8,annehmbar,0.7,
+BK-007,"Gipserei, Stuckateur",43.31,43.31,3,1.8,annehmbar,1.6,
+BK-008,"Bautischlerei, Fenster- und Türenmontage",43.32,43.32,3,1.8,annehmbar,2.0,
+BK-009,"Bodenleger, Plattenleger",43.33,43.33,3,1.8,annehmbar,1.8,
+BK-010,Malerei und Glaserei,43.34,43.34,3,1.8,annehmbar,4.5,Farbflecken auf Kundenmobiliar = Bearbeitungsschaden
+BK-011,"Sonstiger Ausbau, Innenausbau",43.39,43.39,3,1.8,annehmbar,1.2,
+BK-012,"Dachdeckerei, Spenglerei",43.91,43.91,5,4.5,referat,1.8,Absturz- und Brandrisiko (Heissarbeiten)
+BK-013,"Gerüstbau, Kranarbeiten, Abbruch",43.99,43.99,5,4.5,referat,0.7,Referat: Abbruch nur mit Nachweis
+BK-014,"Zimmerei, Holzbau",16.23,16.23,4,3.0,zuschlag,2.2,
+BK-015,"Schreinerei, Möbelherstellung",31.09,31.09,3,1.8,annehmbar,3.0,
+BK-016,"Metallbau, Schlosserei",25.11,25.11,3,1.8,annehmbar,1.8,Schweissarbeiten beim Kunden: Heissarbeiten-Klausel
+BK-017,"Mechanische Bearbeitung, Dreherei",25.62,25.62,2,1.0,annehmbar,0.9,
+BK-018,Maschinenbau (Sondermaschinen),28.29,28.29,3,1.8,annehmbar,0.6,Produkthaftpflicht-Baustein empfohlen
+BK-019,Reparatur und Wartung von Maschinen,33.12,33.12,3,1.8,annehmbar,0.8,
+BK-020,"Medizintechnik, Dentallabor",32.50,32.50,3,1.8,annehmbar,0.5,Produkthaftpflicht zwingend
+BK-021,Kunststoffverarbeitung,22.29,22.29,3,1.8,annehmbar,0.5,
+BK-022,Herstellung von Kunststoffen in Primärform,20.16,20.16,4,3.0,zuschlag,0.1,Umweltbaustein zwingend
+BK-023,Herstellung von Kosmetika,20.42,20.42,3,1.8,annehmbar,0.2,Produkthaftpflicht zwingend
+BK-024,Druckerei,18.12,18.12,2,1.0,annehmbar,0.6,
+BK-025,Handel mit Automobilen,45.11,45.11,2,1.0,annehmbar,0.9,Kfz-Haftpflicht separat (nicht Gegenstand)
+BK-026,"Reparatur von Kraftfahrzeugen, Garage, Carrosserie",45.20,45.20,3,1.8,annehmbar,2.8,Obhutsschäden an Kundenfahrzeugen
+BK-027,"Taxi, Personenbeförderung",49.32,49.32,3,1.8,annehmbar,0.5,"Nur Betriebs-HP, Fahrzeuge separat"
+BK-028,Güterbeförderung im Strassenverkehr,49.41,49.41,4,3.0,zuschlag,1.4,Be-/Entladeschäden
+BK-029,"Spedition, Logistikdienstleistung",52.29,52.29,2,1.0,annehmbar,0.7,
+BK-030,Kurier- und Expressdienste,53.20,53.20,2,1.0,annehmbar,0.6,
+BK-031,Vermietung von Kraftwagen,77.11,77.11,3,1.8,annehmbar,0.2,
+BK-032,"Grosshandel mit Holz, Baustoffen",46.73,46.73,2,1.0,annehmbar,0.7,
+BK-033,Grosshandel mit chemischen Erzeugnissen,46.75,46.75,4,3.0,zuschlag,0.2,Umweltbaustein zwingend
+BK-034,Grosshandel ohne Schwerpunkt,46.90,46.90,2,1.0,annehmbar,0.8,
+BK-035,"Einzelhandel mit Lebensmitteln (Supermarkt, Dorfladen)",47.11,47.11,2,1.0,annehmbar,2.5,
+BK-036,"Sonstiger Einzelhandel (Warenhaus, Kiosk)",47.19,47.19,1,0.6,annehmbar,1.5,
+BK-037,"Einzelhandel mit Eisenwaren, Baumarkt",47.52,47.52,2,1.0,annehmbar,0.8,
+BK-038,Einzelhandel mit Bekleidung,47.71,47.71,1,0.6,annehmbar,1.6,
+BK-039,Apotheken,47.73,47.73,2,1.0,annehmbar,0.9,Produkt-/Beratungsrisiko
+BK-040,"Einzelhandel Optik, Foto, Geschenke",47.78,47.78,1,0.6,annehmbar,1.0,
+BK-041,Versand- und Internet-Einzelhandel,47.91,47.91,1,0.6,annehmbar,1.2,
+BK-042,"Hotels, Gasthöfe, Pensionen",55.10,55.10,3,1.8,annehmbar,1.8,Gästeeffekten-Baustein
+BK-043,"Ferienunterkünfte, Bed and Breakfast",55.20,55.20,2,1.0,annehmbar,0.6,
+BK-044,"Restaurants, Cafés, Imbiss",56.10,56.10,3,1.8,annehmbar,5.0,Lebensmittelvergiftung als Kumulrisiko
+BK-045,"Event-Caterer, Partyservice",56.21,56.21,3,1.8,annehmbar,0.8,
+BK-046,"Bars, Clubs",56.30,56.30,3,1.8,annehmbar,0.7,Sicherheitsdienst-Abgrenzung
+BK-047,"Metzgerei, Fleischverarbeitung",10.13,10.13,3,1.8,annehmbar,0.9,Produkthaftpflicht inkludiert
+BK-048,"Käserei, Milchverarbeitung",10.51,10.51,3,1.8,annehmbar,0.5,Produkthaftpflicht inkludiert
+BK-049,"Bäckerei, Konditorei",10.71,10.71,2,1.0,annehmbar,1.6,
+BK-050,"Weinbau, Weinkellerei",11.02,11.02,2,1.0,annehmbar,0.6,
+BK-051,Gemüse- und Obstbau,01.13,01.13,2,1.0,annehmbar,0.5,
+BK-052,Gemischte Landwirtschaft,01.50,01.50,3,1.8,annehmbar,1.0,Tierhalter- und Gewässerrisiko (Gülle)
+BK-053,"Hauswartung, Facility Management",81.10,81.10,2,1.0,annehmbar,1.4,
+BK-054,Gebäudereinigung,81.21,81.21,2,1.0,annehmbar,2.4,"Obhutsschäden (Böden, Fenster)"
+BK-055,Garten- und Landschaftsbau,81.30,81.30,3,1.8,annehmbar,2.6,Baumfällarbeiten: Zuschlag
+BK-056,"Sicherheitsdienste, Bewachung",80.10,80.10,3,1.8,annehmbar,0.5,
+BK-057,"Coiffeur, Kosmetik",96.02,96.02,1,0.6,annehmbar,2.8,"Personenschäden (Verätzung, Allergie) mit kleinem Aufwand"
+BK-058,"Wellness, Massage, Solarium",96.04,96.04,2,1.0,annehmbar,0.6,
+BK-059,Fitnesscenter,93.13,93.13,2,1.0,annehmbar,0.7,
+BK-060,"Freizeitanlagen (Kletterhalle, Trampolinpark)",93.29,93.29,4,3.0,zuschlag,0.3,Personenschadenrisiko hoch
+BK-061,"Kindertagesstätte, Kinderkrippe",88.91,88.91,2,1.0,annehmbar,1.1,Aufsichtspflicht
+BK-062,Fahrschule,85.53,85.53,3,1.8,annehmbar,0.4,
+BK-063,Arztpraxis (Allgemeinmedizin),86.21,86.21,2,1.0,annehmbar,0.9,"Berufshaftpflicht Medizin nicht Gegenstand, nur Betriebsrisiko"
+BK-064,Zahnarztpraxis,86.23,86.23,2,1.0,annehmbar,0.7,wie 86.21
+BK-065,"Physiotherapie, Gesundheitswesen a. n. g.",86.90,86.90,2,1.0,annehmbar,1.2,
+BK-066,Alters- und Pflegeheim,87.30,87.30,3,1.8,annehmbar,0.6,
+BK-067,Tierarztpraxis,75.00,75.00,2,1.0,annehmbar,0.4,
+BK-068,"Hundesalon, Tierpension, sonstige Dienstleistungen",96.09,96.09,1,0.6,annehmbar,0.5,
+BK-069,Werbeagentur,73.11,73.11,1,0.6,annehmbar,1.0,Reine Vermögensschäden: Berufshaftpflicht
+BK-070,"Design, Grafik, Innenarchitektur",74.10,74.10,1,0.6,annehmbar,0.9,
+BK-071,Fotografie,74.20,74.20,1,0.6,annehmbar,0.6,
+BK-072,Verlag,58.11,58.11,1,0.6,annehmbar,0.3,
+BK-073,"Darstellende Kunst, Eventtechnik",90.01,90.01,3,1.8,annehmbar,0.5,"Traversen, Bühnenbau: Zuschlag"
+BK-074,Reparatur von Computern,95.11,95.11,1,0.6,annehmbar,0.5,
+BK-075,Softwareentwicklung (Betriebsrisiko),62.01,62.01,1,0.6,annehmbar,1.4,Vermögensschäden über Berufshaftpflicht BG-IT
+BK-076,Vermietung eigener Immobilien,68.20,68.20,2,1.0,annehmbar,1.5,Gebäudehaftpflicht-Baustein
+BK-077,"Immobilienverwaltung, Hauswartung",68.32,68.32,1,0.6,annehmbar,0.8,
+BK-078,Reisebüro,79.11,79.11,1,0.6,annehmbar,0.4,
+BK-079,"Abwasserentsorgung, Kanalreinigung",37.00,37.00,4,3.0,zuschlag,0.2,Umweltbaustein zwingend
+BK-080,Abfallsammlung,38.11,38.11,4,3.0,zuschlag,0.3,Umweltbaustein zwingend
+BK-081,"Abfallbehandlung, Deponie",38.21,38.21,5,4.5,referat,0.1,Referat: nur mit Umweltgutachten
+BK-082,Kohlenbergbau,05.10,05.10,5,4.5,abgelehnt,0.0,
+BK-083,Mineralölverarbeitung,19.20,19.20,5,4.5,abgelehnt,0.0,
+BK-084,"Herstellung von Sprengstoffen, Pyrotechnik",20.51,20.51,5,4.5,abgelehnt,0.0,
+BK-085,Luft- und Raumfahrzeugbau,30.30,30.30,5,4.5,abgelehnt,0.0,
+BK-086,Personenbeförderung in der Luftfahrt,51.10,51.10,5,4.5,abgelehnt,0.0,
+BK-087,"Spiel-, Wett- und Lotteriewesen",92.00,92.00,5,4.5,referat,0.1,Referat: Geldwäscherei-Abklärung

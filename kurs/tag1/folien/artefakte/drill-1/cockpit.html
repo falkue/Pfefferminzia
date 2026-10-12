@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pfefferminzia – Cockpit</title>
+<style>
+  :root {
+    --surface-1: #fcfcfb;
+    --page-plane: #f9f9f7;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #898781;
+    --gridline: #e1e0d9;
+    --baseline: #c3c2b7;
+    --border: rgba(11,11,11,0.10);
+    --pfefferminz: #2a78d6;
+    --minzia: #eb6834;
+    --good: #0ca30c;
+    --good-bg: #e6f6e6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--page-plane);
+    color: var(--text-primary);
+  }
+  header.kopf {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: var(--surface-1);
+    border-bottom: 1px solid var(--border);
+  }
+  header.kopf h1 { font-size: 18px; margin: 0; font-weight: 700; }
+  header.kopf .stichtag { font-size: 13px; color: var(--text-secondary); }
+  nav.reiterleiste {
+    display: flex;
+    gap: 4px;
+    padding: 0 20px;
+    background: var(--surface-1);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.reiterleiste button {
+    border: none;
+    background: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+  }
+  nav.reiterleiste button.aktiv {
+    color: var(--text-primary);
+    border-bottom-color: var(--pfefferminz);
+  }
+  main { padding: 16px 20px 40px; max-width: 1280px; margin: 0 auto; }
+  .filterleiste {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .filterleiste label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .filterleiste select {
+    font-size: 13px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--baseline);
+    background: white;
+    color: var(--text-primary);
+  }
+  .filterleiste button.zuruecksetzen {
+    align-self: flex-end;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--baseline);
+    background: white;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+  .filterleiste button.zuruecksetzen:hover { background: var(--gridline); }
+  .filterstatus { font-size: 12px; color: var(--text-muted); margin-left: auto; }
+
+  .kacheln-reihe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .kachel {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: default;
+    min-width: 0;
+  }
+  .kachel .titel {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .kachel .wert {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .kachel .wert.ampel-gut { color: var(--good); }
+  .kachel .ampel-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .kachel .ampel-badge.gruen { background: var(--good-bg); color: var(--good); }
+  .kachel .ampel-badge.rot { background: #fbe4e4; color: #d03b3b; }
+  .kachel .definition {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .kachel .regel {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  .abschnitt {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+  }
+  .abschnitt h2 {
+    font-size: 15px;
+    margin: 0 0 4px;
+  }
+  .abschnitt .hinweis {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  table.tabelle-katalog { font-size: 12.5px; }
+  th, td {
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--gridline);
+  }
+  th {
+    color: var(--text-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  th:hover { color: var(--text-primary); }
+  th .pfeil { font-size: 10px; margin-left: 3px; color: var(--text-muted); }
+  td.zahl, th.zahl { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.gesamt-zeile td { font-weight: 700; border-top: 2px solid var(--baseline); border-bottom: none; }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 1px 7px;
+    color: white;
+  }
+  .tag.pfefferminz { background: var(--pfefferminz); }
+  .tag.minzia { background: var(--minzia); }
+  .kategorie-tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 1px 7px;
+    background: var(--gridline);
+    color: var(--text-secondary);
+    white-space: nowrap;
+  }
+  .zweck-zelle { max-width: 420px; }
+
+  .abschnitt-kopf {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .umschalter {
+    display: flex;
+    gap: 2px;
+    background: var(--gridline);
+    border-radius: 6px;
+    padding: 2px;
+  }
+  .umschalter button {
+    border: none;
+    background: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+  .umschalter button.aktiv {
+    background: var(--surface-1);
+    color: var(--text-primary);
+    box-shadow: 0 1px 2px var(--border);
+  }
+  .diagramm-legende {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+  }
+  .diagramm-legende .punkt {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  svg.storno-diagramm text {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    paint-order: stroke;
+    stroke: var(--surface-1);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+  }
+  svg.storno-diagramm .gitterlinie { stroke: var(--gridline); stroke-width: 1; }
+  svg.storno-diagramm .achsen-label { fill: var(--text-muted); font-size: 10px; }
+  svg.storno-diagramm .linie { fill: none; stroke-width: 2; }
+  svg.storno-diagramm .punkt-marker { cursor: default; }
+  svg.storno-diagramm .wert-label { font-size: 11px; font-weight: 700; }
+  .diagramm-legende .legende-luecke {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .ampel-zelle {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 2px 9px;
+  }
+  .ampel-zelle.gruen { background: var(--good-bg); color: var(--good); }
+  .ampel-zelle.gelb { background: #fff3d6; color: #92660a; }
+  .ampel-zelle.rot { background: #fbe4e4; color: #d03b3b; }
+  .nur-hinweis {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    padding: 10px 0;
+  }
+  footer.fusszeile {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    padding: 16px;
+  }
+</style>
+</head>
+<body>
+
+<header class="kopf">
+  <h1>Pfefferminzia</h1>
+  <span class="stichtag">Stichtag 31.12.2025 · Datensatz Stufe S</span>
+</header>
+
+<nav class="reiterleiste">
+  <button class="reiter-knopf aktiv" data-reiter="bestand">Bestand</button>
+</nav>
+
+<main>
+  <section id="reiter-bestand" class="reiter-inhalt">
+
+    <div class="filterleiste">
+      <label>Sparte
+        <select id="filter-sparte">
+          <option value="alle">Alle</option>
+          <option value="HP">Haftpflicht</option>
+          <option value="LV">Leben</option>
+        </select>
+      </label>
+      <label>Markt
+        <select id="filter-markt">
+          <option value="alle">Alle</option>
+          <option value="CH">Schweiz</option>
+          <option value="DE">Deutschland</option>
+        </select>
+      </label>
+      <label>Herkunft
+        <select id="filter-herkunft">
+          <option value="alle">Alle</option>
+          <option value="pfefferminz">Pfefferminz</option>
+          <option value="minzia">Minzia</option>
+        </select>
+      </label>
+      <button class="zuruecksetzen" id="filter-reset">Filter zurücksetzen</button>
+      <span class="filterstatus" id="filterstatus"></span>
+    </div>
+
+    <div class="kacheln-reihe" id="kacheln"></div>
+
+    <div class="abschnitt">
+      <div class="abschnitt-kopf">
+        <h2>Stornoquote 2019–2025</h2>
+        <div class="umschalter" id="storno-umschalter">
+          <button class="aktiv" data-gruppierung="herkunft">Herkunft</button>
+          <button data-gruppierung="kanal">Kanal</button>
+        </div>
+      </div>
+      <div class="hinweis">Verträge, die im jeweiligen Jahr durch Kündigung oder Nichtzahlung vorzeitig endeten (Tod, Widerruf, Ablauf und Leistungsfall Tod zählen nicht), geteilt durch den Bestand am 1. Januar des Jahres. Dunkle Linie: Gesamtbestand unter den gewählten Filtern. Werte an jedem Punkt der Gesamtlinie und am letzten Punkt jeder weiteren Linie; alle übrigen Werte beim Überfahren.</div>
+      <div id="storno-diagramm-container"></div>
+      <div class="diagramm-legende" id="storno-legende"></div>
+    </div>
+
+    <div class="abschnitt">
+      <h2>Aktiver Bestand nach Sparte, Markt und Herkunft</h2>
+      <div class="hinweis">Verträge mit Status «aktiv» am Stichtag; Jahresprämie netto, Eurobeträge zusätzlich zum Konzernkurs 2025 (1 EUR = CHF <span id="kurs-hinweis"></span>) in Franken umgerechnet. Spalten anklicken zum Sortieren.</div>
+      <table id="tabelle-breakdown">
+        <thead>
+          <tr>
+            <th data-typ="text">Sparte<span class="pfeil"></span></th>
+            <th data-typ="text">Markt<span class="pfeil"></span></th>
+            <th data-typ="text">Herkunft<span class="pfeil"></span></th>
+            <th data-typ="zahl" class="zahl">Aktive Verträge<span class="pfeil"></span></th>
+            <th data-typ="zahl" class="zahl">Jahresprämie (Originalwährung)<span class="pfeil"></span></th>
+            <th data-typ="zahl" class="zahl">Jahresprämie (CHF, umgerechnet)<span class="pfeil"></span></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="abschnitt" id="ampel-abschnitt">
+      <h2>Tarifgenerationen Leben – Garantiezins gegen Gesamtverzinsung 2025</h2>
+      <div class="hinweis">Garantiezins gilt ab Vertragsbeginn für die ganze Laufzeit, je Markt verschieden; Gesamtverzinsung ist der deklarierte Satz 2025, kein erwirtschafteter Ertrag. Ampel: <strong>rot</strong> = Garantiezins ≥ Gesamtverzinsung 2025 (kein Zinsüberschuss); <strong>gelb</strong> = Gesamtverzinsung liegt bis 0.5 Prozentpunkte über dem Garantiezins (schmaler Puffer); <strong>grün</strong> = Puffer über 0.5 Prozentpunkte. Aktive Verträge und Jahresprämie unter den gewählten Filtern, Spalten anklicken zum Sortieren.</div>
+      <div id="ampel-nur-leben" class="nur-hinweis" style="display:none;">Nur Leben – bei Sparte Haftpflicht gibt es keinen Garantiezins.</div>
+      <table id="tabelle-ampel">
+        <thead>
+          <tr>
+            <th data-typ="text">Tarifgeneration<span class="pfeil"></span></th>
+            <th data-typ="text">Markt<span class="pfeil"></span></th>
+            <th data-typ="zahl" class="zahl">Garantiezins<span class="pfeil"></span></th>
+            <th data-typ="zahl" class="zahl">Gesamtverzinsung 2025<span class="pfeil"></span></th>
+            <th data-typ="text">Ampel<span class="pfeil"></span></th>
+            <th data-typ="zahl" class="zahl">Aktive Verträge<span class="pfeil"></span></th>
+            <th data-typ="zahl" class="zahl">Jahresprämie (Originalwährung)<span class="pfeil"></span></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="abschnitt">
+      <h2>Datentabellen im Datensatz Stufe S</h2>
+      <div class="hinweis">Bereinigte Tabellen, Migrationsbrücken und Rohdaten der Alt- und Zielsysteme. Diese Übersicht wird durch die Filterleiste oben nicht eingeschränkt, da sie die Datentabellen selbst beschreibt, nicht den Bestand. Spalten anklicken zum Sortieren.</div>
+      <table id="tabelle-katalog" class="tabelle-katalog">
+        <thead>
+          <tr>
+            <th data-typ="text">Kategorie<span class="pfeil"></span></th>
+            <th data-typ="text">Tabelle<span class="pfeil"></span></th>
+            <th data-typ="zahl" class="zahl">Zeilen<span class="pfeil"></span></th>
+            <th data-typ="zahl" class="zahl">Spalten<span class="pfeil"></span></th>
+            <th data-typ="text">Zweck</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </section>
+</main>
+
+<footer class="fusszeile">Fiktives Lehrbeispiel. Pfefferminzia, alle Personen, Firmen und Ereignisse sind erfunden.</footer>
+
+<script src="cockpit-daten/bestand.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  function formatZahl(n, nachkomma) {
+    if (n === null || n === undefined || isNaN(n)) return "–";
+    nachkomma = nachkomma === undefined ? 0 : nachkomma;
+    var fixed = Number(n).toFixed(nachkomma);
+    var negativ = fixed.charAt(0) === "-";
+    if (negativ) fixed = fixed.slice(1);
+    var teile = fixed.split(".");
+    var ganz = teile[0].replace(/\B(?=(\d{3})+(?!\d))/g, "'");
+    return (negativ ? "-" : "") + ganz + (teile[1] !== undefined ? "." + teile[1] : "");
+  }
+  function formatProzent(anteil, nachkomma) {
+    if (anteil === null || anteil === undefined || isNaN(anteil)) return "–";
+    return formatZahl(anteil * 100, nachkomma === undefined ? 1 : nachkomma) + " %";
+  }
+  function formatCHF(n) { return "CHF " + formatZahl(n, 0); }
+  function formatEUR(n) { return "EUR " + formatZahl(n, 0); }
+
+  var SPARTE_TEXT = { HP: "Haftpflicht", LV: "Leben" };
+  var MARKT_TEXT = { CH: "Schweiz", DE: "Deutschland" };
+  var HERKUNFT_TEXT = { pfefferminz: "Pfefferminz", minzia: "Minzia" };
+  var KANAL_TEXT = { direkt: "Direkt", agentur: "Agentur", makler: "Makler", bank: "Bank" };
+  var GRUPPEN_FARBE = {
+    pfefferminz: "#2a78d6", minzia: "#eb6834",
+    direkt: "#1baf7a", agentur: "#eda100", makler: "#e87ba4", bank: "#4a3aa7"
+  };
+  var GESAMT_FARBE = "#0b0b0b";
+
+  var filter = { sparte: "alle", markt: "alle", herkunft: "alle" };
+
+  function passtFilter(v) {
+    return (filter.sparte === "alle" || v.sparte === filter.sparte) &&
+           (filter.markt === "alle" || v.markt === filter.markt) &&
+           (filter.herkunft === "alle" || v.herkunft === filter.herkunft);
+  }
+
+  function gefiltert() {
+    return BESTAND_DATEN.vertraege.filter(passtFilter);
+  }
+
+  var JAHRESANFANG_2025 = "2025-01-01";
+  var JAHRESENDE_2025 = "2025-12-31";
+  var NICHT_STORNO = {};
+  BESTAND_DATEN.stornogruende_zaehlt_nicht.forEach(function (c) { NICHT_STORNO[c] = true; });
+  var KURS = BESTAND_DATEN.konzernkurs_eur_chf_2025;
+
+  function berechneKennzahlen() {
+    var alle = gefiltert();
+    var aktive = alle.filter(function (v) { return v.status === "AKTIV"; });
+
+    var pfeff = aktive.filter(function (v) { return v.herkunft === "pfefferminz"; }).length;
+    var minzia = aktive.filter(function (v) { return v.herkunft === "minzia"; }).length;
+
+    var legacyAlle = alle.filter(function (v) { return v.quellsystem === "HAPO" || v.quellsystem === "VERA"; });
+    var legacyMigriert = legacyAlle.filter(function (v) { return v.migriert_am; });
+
+    var zaehlerListe = alle.filter(function (v) {
+      return v.storno_datum && v.storno_datum >= JAHRESANFANG_2025 && v.storno_datum <= JAHRESENDE_2025 &&
+        !NICHT_STORNO[v.storno_grund_code];
+    });
+    var nennerListe = alle.filter(function (v) {
+      return v.beginn < JAHRESANFANG_2025 && (!v.storno_datum || v.storno_datum >= JAHRESANFANG_2025);
+    });
+
+    var chfSumme = 0, eurSumme = 0;
+    aktive.forEach(function (v) {
+      if (v.waehrung === "CHF") chfSumme += v.jahrespraemie_netto;
+      else if (v.waehrung === "EUR") eurSumme += v.jahrespraemie_netto;
+    });
+    var chfGesamt = chfSumme + eurSumme * KURS;
+
+    var kundenIds = {};
+    aktive.forEach(function (v) { kundenIds[v.versicherungsnehmer_id] = true; });
+    var kundenTyp = { NATUERLICH: 0, JURISTISCH: 0 };
+    Object.keys(kundenIds).forEach(function (pid) {
+      var typ = BESTAND_DATEN.partner_typ[pid];
+      if (typ === "NATUERLICH") kundenTyp.NATUERLICH++;
+      else if (typ === "JURISTISCH") kundenTyp.JURISTISCH++;
+    });
+
+    return {
+      alle: alle, aktive: aktive,
+      pfeff: pfeff, minzia: minzia,
+      legacyAlle: legacyAlle, legacyMigriert: legacyMigriert,
+      zaehlerListe: zaehlerListe, nennerListe: nennerListe,
+      chfSumme: chfSumme, eurSumme: eurSumme, chfGesamt: chfGesamt,
+      kundenAnzahl: Object.keys(kundenIds).length, kundenTyp: kundenTyp
+    };
+  }
+
+  var JAHRE_STORNO = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
+  var MIN_BASIS = 20;
+  var stornoGruppierung = "herkunft";
+
+  function stornoJahr(liste, jahr) {
+    var ja = jahr + "-01-01", je = jahr + "-12-31";
+    var z = 0, n = 0;
+    liste.forEach(function (v) {
+      if (v.storno_datum && v.storno_datum >= ja && v.storno_datum <= je && !NICHT_STORNO[v.storno_grund_code]) z++;
+      if (v.beginn < ja && (!v.storno_datum || v.storno_datum >= ja)) n++;
+    });
+    return { z: z, n: n };
+  }
+
+  function stornoPunkte(liste) {
+    return JAHRE_STORNO.map(function (jahr) {
+      var r = stornoJahr(liste, jahr);
+      return { jahr: jahr, z: r.z, n: r.n, quote: r.n >= MIN_BASIS ? r.z / r.n : null };
+    });
+  }
+
+  function berechneStornoZeitreihe(gruppierung) {
+    var basis = gefiltert();
+    var gruppenListe = gruppierung === "kanal" ? ["direkt", "agentur", "makler", "bank"] : ["pfefferminz", "minzia"];
+    var serien = gruppenListe.map(function (g) {
+      var sub = basis.filter(function (v) { return gruppierung === "kanal" ? v.kanal === g : v.herkunft === g; });
+      return { name: g, punkte: stornoPunkte(sub) };
+    }).filter(function (s) { return s.punkte.some(function (p) { return p.n > 0; }); });
+    return { gesamt: stornoPunkte(basis), serien: serien };
+  }
+
+  function svgEscape(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+  function renderStornoChart() {
+    var daten = berechneStornoZeitreihe(stornoGruppierung);
+    var alleQuoten = [];
+    daten.gesamt.forEach(function (p) { if (p.quote !== null) alleQuoten.push(p.quote); });
+    daten.serien.forEach(function (s) { s.punkte.forEach(function (p) { if (p.quote !== null) alleQuoten.push(p.quote); }); });
+    var maxQuotePct = alleQuoten.length ? Math.max.apply(null, alleQuoten) * 100 : 5;
+    var achsenMax = Math.max(20, Math.ceil(maxQuotePct / 5) * 5);
+
+    var breite = 880, hoehe = 280;
+    var randLinks = 34, randRechts = 100, randOben = 14, randUnten = 26;
+    var plotBreite = breite - randLinks - randRechts;
+    var plotHoehe = hoehe - randOben - randUnten;
+
+    function xPos(i) { return randLinks + i * (plotBreite / (JAHRE_STORNO.length - 1)); }
+    function yPos(anteilProzent) { return randOben + (1 - anteilProzent / achsenMax) * plotHoehe; }
+
+    var teile = [];
+
+    for (var g = 0; g <= achsenMax; g += 5) {
+      var gy = yPos(g);
+      teile.push('<line class="gitterlinie" x1="' + randLinks + '" x2="' + (breite - randRechts) + '" y1="' + gy + '" y2="' + gy + '"></line>');
+      teile.push('<text class="achsen-label" x="' + (randLinks - 6) + '" y="' + (gy + 3) + '" text-anchor="end">' + g + ' %</text>');
+    }
+    JAHRE_STORNO.forEach(function (jahr, i) {
+      teile.push('<text class="achsen-label" x="' + xPos(i) + '" y="' + (hoehe - 6) + '" text-anchor="middle">' + jahr + '</text>');
+    });
+
+    var alleMarker = [];
+    var hatLuecke = false;
+
+    function zeichneLinie(punkte, farbe, name) {
+      var pfadTeile = [];
+      var aktuellerPfad = null;
+      punkte.forEach(function (p, i) {
+        if (p.quote === null) {
+          aktuellerPfad = null;
+          if (p.n > 0) hatLuecke = true;
+          return;
+        }
+        var x = xPos(i), y = yPos(p.quote * 100);
+        if (aktuellerPfad === null) { aktuellerPfad = "M" + x + "," + y; pfadTeile.push(aktuellerPfad); }
+        else { pfadTeile[pfadTeile.length - 1] += " L" + x + "," + y; }
+      });
+      var html = pfadTeile.map(function (d) { return '<path class="linie" d="' + d + '" stroke="' + farbe + '"></path>'; }).join("");
+      punkte.forEach(function (p, i) {
+        if (p.quote === null) return;
+        var x = xPos(i), y = yPos(p.quote * 100);
+        var titel = svgEscape(name + ", " + p.jahr + ": " + (p.quote * 100).toFixed(1) + " % (" + p.z + " von " + p.n + " Verträgen)");
+        html += '<circle class="punkt-marker" cx="' + x + '" cy="' + y + '" r="3.5" fill="' + farbe + '"><title>' + titel + '</title></circle>';
+        alleMarker.push({ x: x, y: y });
+      });
+      return html;
+    }
+
+    teile.push(zeichneLinie(daten.gesamt, GESAMT_FARBE, "Gesamtbestand"));
+    daten.serien.forEach(function (s) {
+      teile.push(zeichneLinie(s.punkte, GRUPPEN_FARBE[s.name] || "#888", stornoGruppierung === "kanal" ? KANAL_TEXT[s.name] : HERKUNFT_TEXT[s.name]));
+    });
+
+    var labelPunkte = [];
+    daten.gesamt.forEach(function (p, i) {
+      if (p.quote !== null) {
+        var ay0 = yPos(p.quote * 100);
+        labelPunkte.push({ x: xPos(i), y: ay0 - 9, ankerX: xPos(i), ankerY: ay0, text: (p.quote * 100).toFixed(1) + " %", farbe: GESAMT_FARBE });
+      }
+    });
+    daten.serien.forEach(function (s) {
+      var letzter = -1;
+      for (var i = s.punkte.length - 1; i >= 0; i--) { if (s.punkte[i].quote !== null) { letzter = i; break; } }
+      if (letzter >= 0) {
+        var p = s.punkte[letzter];
+        var ay = yPos(p.quote * 100);
+        labelPunkte.push({ x: xPos(letzter) + 9, y: ay + 4, ankerX: xPos(letzter), ankerY: ay, text: (p.quote * 100).toFixed(1) + " %", farbe: GRUPPEN_FARBE[s.name] || "#888", rechts: true });
+      }
+    });
+
+    var MIN_ABSTAND_MARKER = 9, MIN_ABSTAND_LABEL = 13;
+    function nahesFremdesMarker(lp) {
+      for (var i = 0; i < alleMarker.length; i++) {
+        var m = alleMarker[i];
+        if (m.x === lp.ankerX && m.y === lp.ankerY) continue;
+        if (Math.abs(m.x - lp.x) < 12 && Math.abs(m.y - lp.y) < MIN_ABSTAND_MARKER) return m;
+      }
+      return null;
+    }
+    labelPunkte.forEach(function (lp) {
+      for (var versuch = 0; versuch < 6; versuch++) {
+        var kollision = nahesFremdesMarker(lp);
+        if (!kollision) break;
+        lp.y = lp.y < lp.ankerY ? kollision.y - MIN_ABSTAND_MARKER : kollision.y + MIN_ABSTAND_MARKER;
+      }
+    });
+    var nachX = {};
+    labelPunkte.forEach(function (lp) { var key = Math.round(lp.x / 4); (nachX[key] = nachX[key] || []).push(lp); });
+    Object.keys(nachX).forEach(function (key) {
+      var gruppe = nachX[key].sort(function (a, b) { return a.y - b.y; });
+      for (var i = 1; i < gruppe.length; i++) {
+        var minY = gruppe[i - 1].y + MIN_ABSTAND_LABEL;
+        if (gruppe[i].y < minY) gruppe[i].y = minY;
+      }
+    });
+    labelPunkte.forEach(function (lp) {
+      teile.push('<text class="wert-label" x="' + lp.x + '" y="' + lp.y + '" text-anchor="' + (lp.rechts ? "start" : "middle") + '" fill="' + lp.farbe + '">' + lp.text + '</text>');
+    });
+
+    var svg = '<svg class="storno-diagramm" viewBox="0 0 ' + breite + ' ' + hoehe + '" width="100%" height="' + hoehe + '">' + teile.join("") + '</svg>';
+    document.getElementById("storno-diagramm-container").innerHTML = svg;
+
+    var legende = ['<span><span class="punkt" style="background:' + GESAMT_FARBE + '"></span>Gesamtbestand</span>'];
+    daten.serien.forEach(function (s) {
+      var label = stornoGruppierung === "kanal" ? KANAL_TEXT[s.name] : HERKUNFT_TEXT[s.name];
+      legende.push('<span><span class="punkt" style="background:' + (GRUPPEN_FARBE[s.name] || "#888") + '"></span>' + label + '</span>');
+    });
+    if (hatLuecke) {
+      legende.push('<span class="legende-luecke">Lücke in einer Linie: Bestand unter 20 Verträgen in diesem Jahr, kein zuverlässiger Wert</span>');
+    }
+    document.getElementById("storno-legende").innerHTML = legende.join("");
+  }
+
+  function renderTarifAmpel() {
+    var inhalt = document.getElementById("tabelle-ampel");
+    var hinweis = document.getElementById("ampel-nur-leben");
+    if (filter.sparte === "HP") {
+      inhalt.style.display = "none";
+      hinweis.style.display = "block";
+      return;
+    }
+    inhalt.style.display = "";
+    hinweis.style.display = "none";
+
+    var aktiveLV = gefiltert().filter(function (v) { return v.sparte === "LV" && v.status === "AKTIV"; });
+    var zeilen = BESTAND_DATEN.lv_garantiezins_2025.filter(function (r) {
+      return filter.markt === "alle" || r.markt === filter.markt;
+    });
+
+    var html = zeilen.map(function (r) {
+      var puffer = r.gesamtverzinsung_2025 - r.garantiezins;
+      var ampel = puffer <= 0 ? "rot" : (puffer <= 0.5 ? "gelb" : "gruen");
+      var ampelWort = ampel === "gruen" ? "grün" : ampel;
+      var passende = aktiveLV.filter(function (v) { return v.tarifgeneration_id === r.generation_code && v.markt === r.markt; });
+      var chfSumme = 0, eurSumme = 0;
+      passende.forEach(function (v) { if (v.waehrung === "CHF") chfSumme += v.jahrespraemie_netto; else eurSumme += v.jahrespraemie_netto; });
+      var praemieText = r.markt === "DE" ? formatEUR(eurSumme) : formatCHF(chfSumme);
+      return "<tr>" +
+        "<td data-sort='" + r.bezeichnung + "'>" + r.bezeichnung + "</td>" +
+        "<td data-sort='" + r.markt + "'>" + MARKT_TEXT[r.markt] + "</td>" +
+        "<td class='zahl' data-sort='" + r.garantiezins + "'>" + formatZahl(r.garantiezins, 2) + " %</td>" +
+        "<td class='zahl' data-sort='" + r.gesamtverzinsung_2025 + "'>" + formatZahl(r.gesamtverzinsung_2025, 2) + " %</td>" +
+        "<td data-sort='" + ampel + "'><span class='ampel-zelle " + ampel + "'>" + ampelWort + "</span></td>" +
+        "<td class='zahl' data-sort='" + passende.length + "'>" + formatZahl(passende.length) + "</td>" +
+        "<td class='zahl' data-sort='" + (chfSumme + eurSumme) + "'>" + praemieText + "</td>" +
+        "</tr>";
+    }).join("");
+
+    document.querySelector("#tabelle-ampel tbody").innerHTML = zeilen.length
+      ? html
+      : "<tr><td colspan='7'>Keine Tarifgenerationen unter diesen Filtern.</td></tr>";
+  }
+
+  function kachelHtml(titel, wert, definition, volltext, regel, ampelFarbe) {
+    var badge = ampelFarbe ? '<span class="ampel-badge ' + ampelFarbe + '">' + ampelFarbe.replace("gruen", "grün") + '</span>' : "";
+    var regelHtml = regel ? '<div class="regel">' + regel + '</div>' : "";
+    return '<div class="kachel" title="' + volltext.replace(/"/g, "&quot;") + '">' +
+      '<div class="titel">' + titel + '</div>' +
+      '<div class="wert">' + wert + badge + '</div>' +
+      '<div class="definition">' + definition + '</div>' +
+      regelHtml +
+      '</div>';
+  }
+
+  function renderKacheln() {
+    var k = berechneKennzahlen();
+    var teile = [];
+
+    teile.push(kachelHtml(
+      "Aktiver Vertragsbestand",
+      formatZahl(k.aktive.length),
+      "Verträge mit Status «aktiv» am Stichtag.",
+      "Definition: Anzahl Verträge mit Status «aktiv» in der Vertragstabelle am 31.12.2025, nach den gewählten Filtern eingeschränkt."
+    ));
+
+    var summePfMi = k.pfeff + k.minzia;
+    var anteilPfeff = summePfMi ? k.pfeff / summePfMi : null;
+    var anteilMinzia = summePfMi ? k.minzia / summePfMi : null;
+    teile.push(kachelHtml(
+      "Herkunftsmix aktiver Bestand",
+      summePfMi ? formatProzent(anteilPfeff) + " / " + formatProzent(anteilMinzia) : "–",
+      "Anteil Pfefferminz / Minzia (" + formatZahl(k.pfeff) + " / " + formatZahl(k.minzia) + " Verträge).",
+      "Definition: Anteil der aktiven Verträge nach Herkunft (Pfefferminz/Minzia) am Stichtag, unter den gewählten Filtern."
+    ));
+
+    var migrationAnteil = k.legacyAlle.length ? k.legacyMigriert.length / k.legacyAlle.length : null;
+    if (k.legacyAlle.length === 0) {
+      teile.push(kachelHtml(
+        "Migrationsabschluss",
+        "nur Herkunft Pfefferminz",
+        "Minzia-Verträge liefen nie in einem Altsystem, es gibt hier keine Migration.",
+        "Definition: Anteil migrierter Verträge unter allen Verträgen mit Ursprung in einem Altsystem (HAPO/VERA). Bei der Filterauswahl Herkunft Minzia gibt es keine solchen Verträge."
+      ));
+    } else {
+      var vollstaendig = migrationAnteil === 1;
+      teile.push(kachelHtml(
+        "Migrationsabschluss",
+        formatProzent(migrationAnteil, 0),
+        "Von " + formatZahl(k.legacyAlle.length) + " Verträgen mit Ursprung in einem Altsystem migriert (alle Status).",
+        "Definition: Anteil Verträge mit gesetztem Migrationsdatum unter allen Verträgen mit Ursprung im Altsystem HAPO oder VERA, unabhängig vom heutigen Vertragsstatus.",
+        "Ampel: grün ab 100 % migriert, sonst rot.",
+        vollstaendig ? "gruen" : "rot"
+      ));
+    }
+
+    var quote = k.nennerListe.length ? k.zaehlerListe.length / k.nennerListe.length : null;
+    teile.push(kachelHtml(
+      "Stornoquote 2025",
+      k.nennerListe.length ? formatProzent(quote) : "–",
+      k.nennerListe.length ? formatZahl(k.zaehlerListe.length) + " von " + formatZahl(k.nennerListe.length) + " Verträgen (Bestand 01.01.2025)." : "Kein Bestand am 01.01.2025 unter diesen Filtern.",
+      "Definition: Verträge, die 2025 durch Kündigung oder Nichtzahlung vorzeitig endeten (Tod, Widerruf, Ablauf und Leistungsfall Tod zählen nicht), geteilt durch den Bestand am 01.01.2025, der an diesem Tag noch lief."
+    ));
+
+    teile.push(kachelHtml(
+      "Prämienvolumen aktiver Bestand",
+      formatCHF(k.chfGesamt) + " · " + formatEUR(k.eurSumme),
+      "CHF-Anteil " + formatCHF(k.chfSumme) + ", Euro-Anteil unverändert danebengestellt.",
+      "Definition: Summe der Jahresnettoprämien aller am Stichtag aktiven Verträge. CHF-Verträge und in Franken umgerechnete Euro-Verträge (Konzernkurs 2025: 1 EUR = CHF " + KURS + ") ergeben die Gesamtsumme; der ursprüngliche Eurobetrag steht unverändert daneben."
+    ));
+
+    var kundenDef = (k.kundenTyp.NATUERLICH || k.kundenTyp.JURISTISCH)
+      ? formatZahl(k.kundenTyp.NATUERLICH) + " natürliche Personen, " + formatZahl(k.kundenTyp.JURISTISCH) + " Firmen."
+      : "Keine Kundinnen und Kunden unter diesen Filtern.";
+    teile.push(kachelHtml(
+      "Kundenzahl",
+      formatZahl(k.kundenAnzahl),
+      kundenDef,
+      "Definition: Anzahl unterschiedlicher Versicherungsnehmer mit mindestens einem aktiven Vertrag am Stichtag, unter den gewählten Filtern. Eine andere Zählweise (alle Partner inklusive Mitversicherte und Begünstigte) ergibt eine andere, höhere Zahl."
+    ));
+
+    document.getElementById("kacheln").innerHTML = teile.join("");
+  }
+
+  function renderBreakdown() {
+    var k = berechneKennzahlen();
+    var gruppen = {};
+    k.aktive.forEach(function (v) {
+      var schluessel = v.sparte + "|" + v.markt + "|" + v.herkunft;
+      if (!gruppen[schluessel]) {
+        gruppen[schluessel] = { sparte: v.sparte, markt: v.markt, herkunft: v.herkunft, anzahl: 0, original: 0, chf: 0 };
+      }
+      var g = gruppen[schluessel];
+      g.anzahl += 1;
+      g.original += v.jahrespraemie_netto;
+      g.chf += v.waehrung === "EUR" ? v.jahrespraemie_netto * KURS : v.jahrespraemie_netto;
+    });
+
+    var zeilen = Object.keys(gruppen).map(function (s) { return gruppen[s]; });
+    zeilen.sort(function (a, b) {
+      return (a.sparte + a.markt + a.herkunft).localeCompare(b.sparte + b.markt + b.herkunft);
+    });
+
+    var gesamtAnzahl = 0, gesamtChf = 0;
+    var html = zeilen.map(function (g) {
+      gesamtAnzahl += g.anzahl;
+      gesamtChf += g.chf;
+      var waehrungLabel = g.markt === "DE" ? formatEUR(g.original) : formatCHF(g.original);
+      return "<tr>" +
+        "<td data-sort='" + g.sparte + "'>" + SPARTE_TEXT[g.sparte] + "</td>" +
+        "<td data-sort='" + g.markt + "'>" + MARKT_TEXT[g.markt] + "</td>" +
+        "<td data-sort='" + g.herkunft + "'><span class='tag " + g.herkunft + "'>" + HERKUNFT_TEXT[g.herkunft] + "</span></td>" +
+        "<td class='zahl' data-sort='" + g.anzahl + "'>" + formatZahl(g.anzahl) + "</td>" +
+        "<td class='zahl' data-sort='" + g.original + "'>" + waehrungLabel + "</td>" +
+        "<td class='zahl' data-sort='" + g.chf + "'>" + formatCHF(g.chf) + "</td>" +
+        "</tr>";
+    }).join("");
+
+    html += "<tr class='gesamt-zeile'>" +
+      "<td colspan='3'>Gesamt (unter gewählten Filtern)</td>" +
+      "<td class='zahl'>" + formatZahl(gesamtAnzahl) + "</td>" +
+      "<td class='zahl'>–</td>" +
+      "<td class='zahl'>" + formatCHF(gesamtChf) + "</td>" +
+      "</tr>";
+
+    document.querySelector("#tabelle-breakdown tbody").innerHTML = zeilen.length
+      ? html
+      : "<tr><td colspan='6'>Keine aktiven Verträge unter diesen Filtern.</td></tr>";
+  }
+
+  function renderKatalog() {
+    var tbody = document.querySelector("#tabelle-katalog tbody");
+    var html = BESTAND_DATEN.tabellenkatalog.map(function (t) {
+      return "<tr>" +
+        "<td data-sort='" + t.kategorie + "'><span class='kategorie-tag'>" + t.kategorie + "</span></td>" +
+        "<td data-sort='" + t.name + "'>" + t.name + "</td>" +
+        "<td class='zahl' data-sort='" + t.zeilen + "'>" + formatZahl(t.zeilen) + "</td>" +
+        "<td class='zahl' data-sort='" + t.spalten + "'>" + formatZahl(t.spalten) + "</td>" +
+        "<td class='zweck-zelle'>" + t.zweck + "</td>" +
+        "</tr>";
+    }).join("");
+    tbody.innerHTML = html;
+  }
+
+  function machSortierbar(tabelleId) {
+    var tabelle = document.getElementById(tabelleId);
+    var ths = tabelle.querySelectorAll("th");
+    ths.forEach(function (th, index) {
+      var richtung = 1;
+      th.addEventListener("click", function () {
+        var typ = th.getAttribute("data-typ");
+        var zeilen = Array.prototype.slice.call(tabelle.querySelectorAll("tbody tr")).filter(function (tr) {
+          return !tr.classList.contains("gesamt-zeile");
+        });
+        zeilen.sort(function (a, b) {
+          var za = a.children[index].getAttribute("data-sort") || a.children[index].textContent;
+          var zb = b.children[index].getAttribute("data-sort") || b.children[index].textContent;
+          if (typ === "zahl") { za = parseFloat(za); zb = parseFloat(zb); return (za - zb) * richtung; }
+          return za.localeCompare(zb) * richtung;
+        });
+        var tbody = tabelle.querySelector("tbody");
+        var gesamt = tbody.querySelector(".gesamt-zeile");
+        zeilen.forEach(function (tr) { tbody.appendChild(tr); });
+        if (gesamt) tbody.appendChild(gesamt);
+        richtung = richtung * -1;
+        ths.forEach(function (t) { var p = t.querySelector(".pfeil"); if (p) p.textContent = ""; });
+        var pfeil = th.querySelector(".pfeil");
+        if (pfeil) pfeil.textContent = richtung === -1 ? "▲" : "▼";
+      });
+    });
+  }
+
+  function renderFilterstatus() {
+    var teile = [];
+    if (filter.sparte !== "alle") teile.push(SPARTE_TEXT[filter.sparte]);
+    if (filter.markt !== "alle") teile.push(MARKT_TEXT[filter.markt]);
+    if (filter.herkunft !== "alle") teile.push(HERKUNFT_TEXT[filter.herkunft]);
+    document.getElementById("filterstatus").textContent = teile.length ? "Gefiltert: " + teile.join(" · ") : "Ungefiltert: gesamter Bestand";
+  }
+
+  function renderAlles() {
+    renderKacheln();
+    renderStornoChart();
+    renderBreakdown();
+    renderTarifAmpel();
+    renderFilterstatus();
+  }
+
+  document.getElementById("filter-sparte").addEventListener("change", function (e) { filter.sparte = e.target.value; renderAlles(); });
+  document.getElementById("filter-markt").addEventListener("change", function (e) { filter.markt = e.target.value; renderAlles(); });
+  document.getElementById("filter-herkunft").addEventListener("change", function (e) { filter.herkunft = e.target.value; renderAlles(); });
+  document.getElementById("filter-reset").addEventListener("click", function () {
+    filter = { sparte: "alle", markt: "alle", herkunft: "alle" };
+    document.getElementById("filter-sparte").value = "alle";
+    document.getElementById("filter-markt").value = "alle";
+    document.getElementById("filter-herkunft").value = "alle";
+    renderAlles();
+  });
+
+  document.querySelectorAll("#storno-umschalter button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll("#storno-umschalter button").forEach(function (b) { b.classList.remove("aktiv"); });
+      btn.classList.add("aktiv");
+      stornoGruppierung = btn.getAttribute("data-gruppierung");
+      renderStornoChart();
+    });
+  });
+
+  document.getElementById("kurs-hinweis").textContent = KURS.toString().replace(".", ".");
+
+  renderAlles();
+  renderKatalog();
+  machSortierbar("tabelle-breakdown");
+  machSortierbar("tabelle-ampel");
+  machSortierbar("tabelle-katalog");
+})();
+</script>
+<script>
+// Zoom-Deep-Link (Tag 1 Foliensatz): Reiter/Antrag per URL-Hash ansteuern, z. B. #reiter=akte oder #reiter=underwriting&antrag=ANT-00009003
+(function () {
+  function anwenden() {
+    var teil = (location.hash || "").replace(/^#/, "");
+    var p = new URLSearchParams(teil);
+    var reiter = p.get("reiter");
+    if (reiter) {
+      var btn = document.querySelector("nav.reiterleiste button[data-reiter=\"" + reiter + "\"]");
+      if (btn) btn.click();
+    }
+    var antrag = p.get("antrag");
+    if (antrag) {
+      setTimeout(function () {
+        var ab = document.querySelector(".uw-antrag[data-id=\"" + antrag + "\"]");
+        if (ab) ab.click();
+      }, 30);
+    }
+  }
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    setTimeout(anwenden, 0);
+  } else {
+    document.addEventListener("DOMContentLoaded", anwenden);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+produkt,markt,personenkreis,risikoklasse,berufsgruppe,frequenz_pct,zuschlag_hund_prozentpunkte,bemerkung
+HP-PRIV,CH,einzel,,,4.5,3.0,Planung 01 §4.4.2: 4-5 %
+HP-PRIV,CH,familie,,,8.5,3.0,7-10 %; Kinder erhöhen Frequenz
+HP-PRIV,DE,einzel,,,4.5,4.0,4-5 %
+HP-PRIV,DE,paar,,,6.0,4.0,Personenkreis paar nur DE; Interpolation
+HP-PRIV,DE,familie,,,9.5,4.0,8-11 %
+HP-BETR,CH,,1,,5.0,,Handel/Dienstleistung 6-10 % (Klasse 1 = unteres Ende)
+HP-BETR,CH,,2,,8.0,,Handel/Dienstleistung 6-10 %
+HP-BETR,CH,,3,,14.0,,Gastronomie 12-18 %
+HP-BETR,CH,,4,,22.0,,Handwerk 20-35 %; Bearbeitungsschäden treiben
+HP-BETR,CH,,5,,30.0,,Handwerk oberes Ende / Referat-Branchen
+HP-BETR,DE,,1,,5.0,,Handel/Dienstleistung 6-10 % (Klasse 1 = unteres Ende)
+HP-BETR,DE,,2,,8.0,,Handel/Dienstleistung 6-10 %
+HP-BETR,DE,,3,,14.0,,Gastronomie 12-18 %
+HP-BETR,DE,,4,,22.0,,Handwerk 20-35 %; Bearbeitungsschäden treiben
+HP-BETR,DE,,5,,30.0,,Handwerk oberes Ende / Referat-Branchen
+HP-BERUF,CH,,,BG-ARCH,10.0,,8-12 %; viele vorsorgliche Meldungen ohne Zahlung
+HP-BERUF,DE,,,BG-ARCH,10.0,,8-12 %
+HP-BERUF,CH,,,BG-TREU,6.5,,5-8 %
+HP-BERUF,DE,,,BG-TREU,7.5,,6-9 %
+HP-BERUF,CH,,,BG-IT,5.0,,4-6 %
+HP-BERUF,DE,,,BG-IT,5.0,,4-6 %
+HP-BERUF,CH,,,BG-BER,3.0,,2-4 %
+HP-BERUF,DE,,,BG-BER,3.0,,2-4 %

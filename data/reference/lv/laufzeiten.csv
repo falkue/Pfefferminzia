@@ -1,0 +1,37 @@
+produkt_code,markt,laufzeit_min_jahre,laufzeit_max_jahre,eintrittsalter_min,eintrittsalter_max,endalter_max,endalter_max_altbestand,klasse_von_jahre,klasse_bis_jahre,bestandsanteil_pct,bemerkung
+LV-RISK,CH,5,35,18,60,70,65,5,10,10,Laufzeit haeufig an Hypothekar-Amortisation gekoppelt
+LV-RISK,CH,5,35,18,60,70,65,11,15,18,Laufzeit haeufig an Hypothekar-Amortisation gekoppelt
+LV-RISK,CH,5,35,18,60,70,65,16,20,32,Laufzeit haeufig an Hypothekar-Amortisation gekoppelt
+LV-RISK,CH,5,35,18,60,70,65,21,25,22,Laufzeit haeufig an Hypothekar-Amortisation gekoppelt
+LV-RISK,CH,5,35,18,60,70,65,26,35,18,Laufzeit haeufig an Hypothekar-Amortisation gekoppelt
+LV-RISK,DE,5,40,18,65,75,70,5,10,8,Altbestand Endalter 65 (PK-95) bzw. 70 (PK-2007)
+LV-RISK,DE,5,40,18,65,75,70,11,15,15,Altbestand Endalter 65 (PK-95) bzw. 70 (PK-2007)
+LV-RISK,DE,5,40,18,65,75,70,16,20,30,Altbestand Endalter 65 (PK-95) bzw. 70 (PK-2007)
+LV-RISK,DE,5,40,18,65,75,70,21,25,24,Altbestand Endalter 65 (PK-95) bzw. 70 (PK-2007)
+LV-RISK,DE,5,40,18,65,75,70,26,30,15,Altbestand Endalter 65 (PK-95) bzw. 70 (PK-2007)
+LV-RISK,DE,5,40,18,65,75,70,31,40,8,Altbestand Endalter 65 (PK-95) bzw. 70 (PK-2007)
+LV-VORS,CH,5,45,18,60,65,65,5,10,6,3a: Ablauf zwischen Referenzalter 60 und 70; typischer Ablauf Alter 60-65
+LV-VORS,CH,5,45,18,60,65,65,11,15,10,3a: Ablauf zwischen Referenzalter 60 und 70; typischer Ablauf Alter 60-65
+LV-VORS,CH,5,45,18,60,65,65,16,20,18,3a: Ablauf zwischen Referenzalter 60 und 70; typischer Ablauf Alter 60-65
+LV-VORS,CH,5,45,18,60,65,65,21,25,20,3a: Ablauf zwischen Referenzalter 60 und 70; typischer Ablauf Alter 60-65
+LV-VORS,CH,5,45,18,60,65,65,26,30,22,3a: Ablauf zwischen Referenzalter 60 und 70; typischer Ablauf Alter 60-65
+LV-VORS,CH,5,45,18,60,65,65,31,45,24,3a: Ablauf zwischen Referenzalter 60 und 70; typischer Ablauf Alter 60-65
+LV-VORS,DE,12,40,18,60,65,65,12,15,14,Steuerprivileg vor 2005 erforderte >= 12 Jahre Laufzeit; Ablauf typisch Alter 60/65
+LV-VORS,DE,12,40,18,60,65,65,16,20,22,Steuerprivileg vor 2005 erforderte >= 12 Jahre Laufzeit; Ablauf typisch Alter 60/65
+LV-VORS,DE,12,40,18,60,65,65,21,25,24,Steuerprivileg vor 2005 erforderte >= 12 Jahre Laufzeit; Ablauf typisch Alter 60/65
+LV-VORS,DE,12,40,18,60,65,65,26,30,22,Steuerprivileg vor 2005 erforderte >= 12 Jahre Laufzeit; Ablauf typisch Alter 60/65
+LV-VORS,DE,12,40,18,60,65,65,31,40,18,Steuerprivileg vor 2005 erforderte >= 12 Jahre Laufzeit; Ablauf typisch Alter 60/65
+LV-RENTE,DE,10,40,25,65,67,65,10,15,15,"Aufschubdauer; Rentenbeginn 62-67, Verschiebung bis 75; Einmalbeitrag mit Aufschub 0-5 Jahre separat"
+LV-RENTE,DE,10,40,25,65,67,65,16,20,20,"Aufschubdauer; Rentenbeginn 62-67, Verschiebung bis 75; Einmalbeitrag mit Aufschub 0-5 Jahre separat"
+LV-RENTE,DE,10,40,25,65,67,65,21,25,22,"Aufschubdauer; Rentenbeginn 62-67, Verschiebung bis 75; Einmalbeitrag mit Aufschub 0-5 Jahre separat"
+LV-RENTE,DE,10,40,25,65,67,65,26,30,23,"Aufschubdauer; Rentenbeginn 62-67, Verschiebung bis 75; Einmalbeitrag mit Aufschub 0-5 Jahre separat"
+LV-RENTE,DE,10,40,25,65,67,65,31,40,20,"Aufschubdauer; Rentenbeginn 62-67, Verschiebung bis 75; Einmalbeitrag mit Aufschub 0-5 Jahre separat"
+LV-RENTE,CH,0,0,60,70,70,70,0,0,100,Sofort beginnende Leibrente ab Umwandlung; Rentengarantiezeit 5/10/15 Jahre
+LV-EU,CH,5,42,18,55,65,60,5,10,10,Leistungsdauer bis Endalter 60/65; Wartefrist 3/6/12/24 Monate
+LV-EU,CH,5,42,18,55,65,60,11,20,30,Leistungsdauer bis Endalter 60/65; Wartefrist 3/6/12/24 Monate
+LV-EU,CH,5,42,18,55,65,60,21,30,35,Leistungsdauer bis Endalter 60/65; Wartefrist 3/6/12/24 Monate
+LV-EU,CH,5,42,18,55,65,60,31,42,25,Leistungsdauer bis Endalter 60/65; Wartefrist 3/6/12/24 Monate
+LV-EU,DE,5,49,18,55,67,65,5,10,8,"Leistungsdauer bis Endalter 60/63/65/67; keine Wartefrist, 6-Monats-Prognose"
+LV-EU,DE,5,49,18,55,67,65,11,20,27,"Leistungsdauer bis Endalter 60/63/65/67; keine Wartefrist, 6-Monats-Prognose"
+LV-EU,DE,5,49,18,55,67,65,21,30,35,"Leistungsdauer bis Endalter 60/63/65/67; keine Wartefrist, 6-Monats-Prognose"
+LV-EU,DE,5,49,18,55,67,65,31,49,30,"Leistungsdauer bis Endalter 60/63/65/67; keine Wartefrist, 6-Monats-Prognose"

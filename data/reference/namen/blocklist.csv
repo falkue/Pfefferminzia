@@ -1,0 +1,153 @@
+typ,vorname,nachname,name,kategorie
+person,Roger,Federer,,prominenz
+person,Stan,Wawrinka,,prominenz
+person,Martina,Hingis,,prominenz
+person,Belinda,Bencic,,prominenz
+person,Lara,Gut,,prominenz
+person,Beat,Feuz,,prominenz
+person,Marco,Odermatt,,prominenz
+person,Simon,Ammann,,prominenz
+person,Fabian,Cancellara,,prominenz
+person,Nino,Schurter,,prominenz
+person,Ursula,Andress,,prominenz
+person,Bruno,Ganz,,prominenz
+person,Emil,Steinberger,,prominenz
+person,Beat,Schlatter,,prominenz
+person,Roger,Köppel,,prominenz
+person,Alain,Berset,,prominenz
+person,Karin,Keller-Sutter,,prominenz
+person,Viola,Amherd,,prominenz
+person,Guy,Parmelin,,prominenz
+person,Ignazio,Cassis,,prominenz
+person,Elisabeth,Baume-Schneider,,prominenz
+person,Albert,Rösti,,prominenz
+person,Beat,Jans,,prominenz
+person,Simonetta,Sommaruga,,prominenz
+person,Ueli,Maurer,,prominenz
+person,Doris,Leuthard,,prominenz
+person,Christoph,Blocher,,prominenz
+person,Magdalena,Martullo-Blocher,,prominenz
+person,Angela,Merkel,,prominenz
+person,Olaf,Scholz,,prominenz
+person,Friedrich,Merz,,prominenz
+person,Robert,Habeck,,prominenz
+person,Annalena,Baerbock,,prominenz
+person,Christian,Lindner,,prominenz
+person,Markus,Söder,,prominenz
+person,Frank-Walter,Steinmeier,,prominenz
+person,Gerhard,Schröder,,prominenz
+person,Helmut,Kohl,,prominenz
+person,Helmut,Schmidt,,prominenz
+person,Boris,Becker,,prominenz
+person,Steffi,Graf,,prominenz
+person,Michael,Schumacher,,prominenz
+person,Sebastian,Vettel,,prominenz
+person,Manuel,Neuer,,prominenz
+person,Thomas,Müller,,prominenz
+person,Toni,Kroos,,prominenz
+person,Philipp,Lahm,,prominenz
+person,Bastian,Schweinsteiger,,prominenz
+person,Lukas,Podolski,,prominenz
+person,Jürgen,Klopp,,prominenz
+person,Franz,Beckenbauer,,prominenz
+person,Dirk,Nowitzki,,prominenz
+person,Til,Schweiger,,prominenz
+person,Heidi,Klum,,prominenz
+person,Helene,Fischer,,prominenz
+person,Herbert,Grönemeyer,,prominenz
+person,Udo,Lindenberg,,prominenz
+person,Nina,Hagen,,prominenz
+person,Günther,Jauch,,prominenz
+person,Thomas,Gottschalk,,prominenz
+person,Stefan,Raab,,prominenz
+person,Anke,Engelke,,prominenz
+person,Hape,Kerkeling,,prominenz
+person,Dieter,Bohlen,,prominenz
+person,Carolin,Kebekus,,prominenz
+person,Jan,Böhmermann,,prominenz
+person,Oliver,Bäte,,versicherung
+person,Christian,Mumenthaler,,versicherung
+person,Andreas,Berger,,versicherung
+person,Mario,Greco,,versicherung
+person,Patrick,Frost,,versicherung
+person,Philomena,Colatrella,,versicherung
+person,Michael,Müller,,versicherung
+person,Thomas,Buberl,,versicherung
+person,Joachim,Wenning,,versicherung
+person,Markus,Rieß,,versicherung
+person,Torsten,Leue,,versicherung
+person,Thomas,Brahm,,versicherung
+person,Ulrich,Leitermann,,versicherung
+person,Norbert,Rollinger,,versicherung
+person,Fabian,Rupprecht,,versicherung
+person,Juan,Beer,,versicherung
+person,Peter,Zutter,,versicherung
+person,Michael,Hengartner,,versicherung
+person,Minzia,Kolberg,,medium
+firma,,,Pfefferminzia Medien,medium
+firma,,,Pfefferminzia Beteiligungs,medium
+firma,,,Allianz,versicherer
+firma,,,AXA,versicherer
+firma,,,Zurich Insurance,versicherer
+firma,,,Zürich Versicherung,versicherer
+firma,,,Swiss Re,versicherer
+firma,,,Munich Re,versicherer
+firma,,,Münchener Rück,versicherer
+firma,,,Helvetia,versicherer
+firma,,,Mobiliar,versicherer
+firma,,,Baloise,versicherer
+firma,,,Bâloise,versicherer
+firma,,,Generali,versicherer
+firma,,,ERGO,versicherer
+firma,,,HDI,versicherer
+firma,,,Talanx,versicherer
+firma,,,Debeka,versicherer
+firma,,,Signal Iduna,versicherer
+firma,,,R+V,versicherer
+firma,,,Swiss Life,versicherer
+firma,,,Vaudoise,versicherer
+firma,,,Sympany,versicherer
+firma,,,Groupe Mutuel,versicherer
+firma,,,CSS Versicherung,versicherer
+firma,,,Visana,versicherer
+firma,,,Concordia,versicherer
+firma,,,Sanitas,versicherer
+firma,,,Helsana,versicherer
+firma,,,Assura,versicherer
+firma,,,Smile Direct,versicherer
+firma,,,Simpego,versicherer
+firma,,,Emmental Versicherung,versicherer
+firma,,,GVB,versicherer
+firma,,,Basler Versicherung,versicherer
+firma,,,National Versicherung,versicherer
+firma,,,Winterthur Versicherung,versicherer
+firma,,,Huk-Coburg,versicherer
+firma,,,Württembergische,versicherer
+firma,,,Wüstenrot,versicherer
+firma,,,Gothaer,versicherer
+firma,,,Nürnberger Versicherung,versicherer
+firma,,,Alte Leipziger,versicherer
+firma,,,Hannover Rück,versicherer
+firma,,,Provinzial,versicherer
+firma,,,LVM,versicherer
+firma,,,VHV,versicherer
+firma,,,Barmenia,versicherer
+firma,,,Continentale,versicherer
+firma,,,Hallesche,versicherer
+firma,,,Bayerische Versicherungskammer,versicherer
+firma,,,Versicherungskammer Bayern,versicherer
+firma,,,DEVK,versicherer
+firma,,,ADAC Versicherung,versicherer
+firma,,,Cosmos Direkt,versicherer
+firma,,,Europa Versicherung,versicherer
+firma,,,Ottonova,versicherer
+firma,,,Getsafe,versicherer
+firma,,,Wefox,versicherer
+firma,,,Clark,versicherer
+firma,,,Lemonade,versicherer
+firma,,,Ping An,versicherer
+firma,,,Prudential,versicherer
+firma,,,MetLife,versicherer
+firma,,,Aviva,versicherer
+firma,,,Chubb,versicherer
+firma,,,AIG,versicherer

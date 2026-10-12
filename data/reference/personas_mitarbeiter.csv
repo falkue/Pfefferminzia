@@ -1,0 +1,15 @@
+mitarbeiter_id,vorname,nachname,geschlecht,geburtsjahr,rolle,org_kuerzel,standort,land,herkunft,eintrittsjahr,sprache,ki_haltung,email
+MIT-00001,Beatrice,Hauenstein,W,1971,CEO und Vorsitzende der Geschäftsleitung,GL,Olten,CH,pfefferminz,2021,de-CH,treibend,beatrice.hauenstein@pfefferminzia.example
+MIT-00002,Lena,Mbatha-Keller,W,1987,Chief Data & AI Officer (CDAO),DAO,Berlin,DE,minzia,2019,de-DE,treibend,lena.mbatha-keller@pfefferminzia.example
+MIT-00003,Urs,Bächtold,M,1967,Chief Information Officer und Leiter Migration Office,IT,Olten,CH,pfefferminz,1997,de-CH,skeptisch,urs.baechtold@pfefferminzia.example
+MIT-00004,Konstantin,Reber,M,1978,Chief Risk Officer,RM,Olten,CH,extern,2024,de-CH,neutral,konstantin.reber@pfefferminzia.example
+MIT-00005,Martina,Jost,W,1974,General Counsel und Chief Compliance Officer,LEGAL,Olten,CH,pfefferminz,2008,de-CH,neutral,martina.jost@pfefferminzia.example
+MIT-00006,Sven,Lindqvist-Brandt,M,1981,Datenschutzbeauftragter Gruppe,DSB,Leipzig,DE,pfefferminz,2016,de-DE,skeptisch,sven.lindqvist-brandt@pfefferminzia.example
+MIT-00007,Ruth,Amrein,W,1966,Leiterin Leistungsprüfung Leben CH,SL-LV-CH,Olten,CH,pfefferminz,1994,de-CH,skeptisch,ruth.amrein@pfefferminzia.example
+MIT-00008,Tobias,Wenger,M,1984,Senior Underwriter Betriebs- und Berufshaftpflicht CH,UW-HP-CH,Zürich,CH,pfefferminz,2010,de-CH,neutral,tobias.wenger@pfefferminzia.example
+MIT-00009,Aylin,Demirci,W,1989,Teamleiterin Schaden Haftpflicht DE,SL-HP-DE,Leipzig,DE,pfefferminz,2014,de-DE,befuerwortend,aylin.demirci@pfefferminzia.example
+MIT-00010,Jonas,Pfister,M,1994,ML Engineer und Lead MLOps,DAO-MLOPS,Berlin,DE,minzia,2020,de-CH,befuerwortend,jonas.pfister@pfefferminzia.example
+MIT-00011,Isabelle,Roth-Fankhauser,W,1976,Leiterin Agenturvertrieb CH,VT-AG-CH,Bern,CH,pfefferminz,2003,de-CH,skeptisch,isabelle.roth-fankhauser@pfefferminzia.example
+MIT-00012,Miriam,Steinbrecher,W,1992,Compliance Officer DE und AI Compliance Officer Gruppe,COMP-DE,Leipzig,DE,pfefferminz,2019,de-DE,neutral,miriam.steinbrecher@pfefferminzia.example
+MIT-00013,Dario,Bianchi,M,1999,Kundenberater Contact Center Olten,KS-CH,Olten,CH,neu,2025,de-CH,befuerwortend,dario.bianchi@pfefferminzia.example
+MIT-00014,Hanna,Vollmer,W,1980,Chief People Officer und Leiterin Integrationsbüro,HR,Olten,CH,extern,2025,de-DE,befuerwortend,hanna.vollmer@pfefferminzia.example

@@ -1,0 +1,7 @@
+markt,tarifzone,bezeichnung,faktor_hp_priv,faktor_hp_betr,faktor_hp_beruf,begruendung
+CH,1,"Grossstadt und teure Agglomeration (Zürich, Genf, Basel, Lausanne, Bern, Zug …)",1.05,1.06,1.04,"Höhere Sachwerte, dichtere Bebauung, mehr Mietsach- und Wasserschäden"
+CH,2,Mittelland und Agglomerationen,1.0,1.0,1.0,Referenzzone
+CH,3,"Ländlich und alpin (GR, VS, JU, Innerschweiz, AR/AI, GL)",0.98,0.96,0.98,"Weniger Schäden je Vertrag, aber Wintersport-Kollisionen in Tourismusorten"
+DE,1,"Metropolen (Berlin, Hamburg, München, Köln, Frankfurt, Stuttgart, Düsseldorf)",1.1,1.08,1.05,"Hohe Mietsachwerte, Schlüsselverlust-Häufung, höhere Anwaltsquote"
+DE,2,Übrige Grossstädte ab ca. 100'000 Einwohner,1.03,1.02,1.02,
+DE,3,"Klein- und Mittelstädte, ländlicher Raum",0.97,0.96,0.98,Referenzzone für Landkreise

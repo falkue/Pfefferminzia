@@ -1,0 +1,70 @@
+﻿org_einheit_id,kuerzel,name,uebergeordnet_id,ebene,standort,land,fte,herkunft,leitung_rolle
+ORG-000,VR,Verwaltungsrat Pfefferminzia Holding AG,,0,Olten,CH,0,gemischt,Präsidentin des Verwaltungsrats
+ORG-001,GL,Geschäftsleitung (Group Executive Board),ORG-000,1,Olten,CH,10,gemischt,CEO
+ORG-010,CFO,Finanzen,ORG-001,2,Olten,CH,148,pfefferminz,Chief Financial Officer
+ORG-011,FIN-RL,Rechnungslegung und Controlling,ORG-010,3,Olten,CH,62,pfefferminz,Leiter Rechnungslegung
+ORG-012,FIN-KA,Kapitalanlagen,ORG-010,3,Olten,CH,24,pfefferminz,Leiterin Kapitalanlagen
+ORG-013,FIN-MW,Meldewesen und Solvenz-Reporting,ORG-010,3,Olten,CH,18,pfefferminz,Leiter Meldewesen
+ORG-014,FIN-DE,Finanzen Deutschland,ORG-010,3,Leipzig,DE,44,pfefferminz,Leiterin Finanzen DE
+ORG-020,RM,Risikomanagement,ORG-001,2,Olten,CH,38,gemischt,Chief Risk Officer
+ORG-021,RM-CTRL,Risk Controlling und ORSA/SST,ORG-020,3,Olten,CH,16,pfefferminz,Head Risk Controlling
+ORG-022,RM-MV,Modellvalidierung,ORG-020,3,Olten,CH,9,pfefferminz,Leiter Modellvalidierung
+ORG-023,RM-KI,Modellrisiko und KI-Validierung,ORG-020,3,Zürich,CH,7,gemischt,Leiterin KI-Validierung
+ORG-024,RM-DE,Risikomanagement DE (Solvency II),ORG-020,3,Leipzig,DE,6,pfefferminz,Risikomanager DE
+ORG-030,COO,"Betrieb Schaden, Leistung und Service",ORG-001,2,Olten,CH,742,pfefferminz,Chief Operating Officer
+ORG-031,SL-HP-CH,Schaden Haftpflicht CH,ORG-030,3,Olten,CH,118,pfefferminz,Schadenleiter CH
+ORG-032,SL-HP-DE,Schaden Haftpflicht DE,ORG-030,3,Leipzig,DE,96,pfefferminz,Schadenleiterin DE
+ORG-033,SL-LV-CH,Leistungsprüfung Leben CH,ORG-030,3,Olten,CH,54,pfefferminz,Leiterin Leistungsprüfung Leben CH
+ORG-034,SL-LV-DE,Leistungsprüfung Leben DE,ORG-030,3,Leipzig,DE,31,pfefferminz,Leiter Leistungsprüfung Leben DE
+ORG-035,SIU,Special Investigation Unit (Betrugsabwehr),ORG-030,3,Leipzig,DE,14,gemischt,Leiter Betrugsabwehr
+ORG-036,REG,Regress,ORG-030,3,Olten,CH,12,pfefferminz,Leiterin Regress
+ORG-037,KS-CH,Kundenservice und Contact Center Olten,ORG-030,3,Olten,CH,142,gemischt,Leiterin Kundenservice CH
+ORG-038,KS-DE,Kundenservice und Contact Center Leipzig,ORG-030,3,Leipzig,DE,128,pfefferminz,Leiter Kundenservice DE
+ORG-039,BV,Bestandsverwaltung,ORG-030,3,Olten,CH,112,pfefferminz,Leiter Bestandsverwaltung
+ORG-03A,PROZ,Prozessmanagement und Prozesshandbuch,ORG-030,3,Olten,CH,35,pfefferminz,Leiterin Prozessmanagement
+ORG-040,CUO,Underwriting und Aktuariat,ORG-001,2,Olten,CH,196,pfefferminz,Chief Underwriting Officer
+ORG-041,UW-LV,Risikoprüfung Leben (medizinisch),ORG-040,3,Olten,CH,48,pfefferminz,Leiterin Risikoprüfung Leben
+ORG-042,UW-HP-CH,Underwriting Haftpflicht CH,ORG-040,3,Zürich,CH,34,pfefferminz,Leiter Underwriting Haftpflicht CH
+ORG-043,UW-HP-DE,Underwriting Haftpflicht DE,ORG-040,3,Leipzig,DE,27,pfefferminz,Leiterin Underwriting Haftpflicht DE
+ORG-044,AKT,Aktuariat (Tarifierung und Reservierung),ORG-040,3,Olten,CH,52,pfefferminz,Chefaktuarin
+ORG-045,PM,Produktmanagement,ORG-040,3,Olten,CH,35,gemischt,Leiter Produktmanagement
+ORG-050,CSO,Vertrieb,ORG-001,2,Leipzig,DE,318,pfefferminz,Chief Sales Officer
+ORG-051,VT-AG-CH,Agenturvertrieb CH,ORG-050,3,Bern,CH,96,pfefferminz,Leiterin Agenturvertrieb CH
+ORG-052,VT-AG-DE,Agenturvertrieb DE,ORG-050,3,Leipzig,DE,42,pfefferminz,Leiter Agenturvertrieb DE
+ORG-053,VT-MK,Maklerservice CH und DE,ORG-050,3,Zürich,CH,68,pfefferminz,Leiter Maklerservice
+ORG-054,VT-DIR,Direkt und Online,ORG-050,3,Berlin,DE,74,minzia,Leiterin Direktvertrieb
+ORG-055,VT-BANK,Bancassurance,ORG-050,3,Olten,CH,22,pfefferminz,Leiter Bancassurance
+ORG-056,VT-FK,Firmenkunden-Desk,ORG-050,3,Zürich,CH,16,pfefferminz,Leiterin Firmenkunden
+ORG-060,DAO,Data & AI Office,ORG-001,2,Berlin,DE,214,minzia,Chief Data & AI Officer
+ORG-061,DAO-DS,Data Science,ORG-060,3,Berlin,DE,46,minzia,Head of Data Science
+ORG-062,DAO-ML,ML Engineering,ORG-060,3,Berlin,DE,38,minzia,ML Lead
+ORG-063,DAO-MLOPS,MLOps und Plattform,ORG-060,3,Berlin,DE,29,minzia,Lead MLOps
+ORG-064,DAO-DG,Data Governance und Datenqualität,ORG-060,3,Zürich,CH,31,gemischt,Head of Data Governance
+ORG-065,DAO-AIG,AI Governance und Ethics,ORG-060,3,Berlin,DE,9,gemischt,Head of AI Governance
+ORG-066,DAO-DPO,Data Product Owner je Sparte,ORG-060,3,Berlin,DE,18,gemischt,Lead Data Products
+ORG-067,DAO-LLM,LLM Engineering und Assistenten,ORG-060,3,Berlin,DE,22,minzia,Lead LLM Engineering
+ORG-068,CAIDO,Chief AI & Data Officer Gruppe (vakant),ORG-001,2,Olten,CH,0,neu,vakant
+ORG-070,IT,Informatik und Betrieb,ORG-001,2,Olten,CH,286,pfefferminz,Chief Information Officer
+ORG-071,IT-ALT,"Betrieb Altsysteme (VERA, HAPO, SILAS, DOKU)",ORG-070,3,Olten,CH,88,pfefferminz,Leiter Bestandsführung IT
+ORG-072,IT-INFRA,Infrastruktur und Cloud,ORG-070,3,Olten,CH,64,gemischt,Leiterin Infrastruktur
+ORG-073,IT-SEC,Informationssicherheit (CISO),ORG-070,3,Olten,CH,19,pfefferminz,Chief Information Security Officer
+ORG-074,IT-MIG,Migration Office,ORG-070,3,Olten,CH,41,gemischt,Leiter Migration Office
+ORG-075,IT-DE,IT-Betrieb Deutschland,ORG-070,3,Leipzig,DE,48,pfefferminz,Leiter IT DE
+ORG-076,IT-SD,Service Desk,ORG-070,3,Leipzig,DE,26,pfefferminz,Leiterin Service Desk
+ORG-080,LEGAL,Legal und Compliance,ORG-001,2,Olten,CH,64,pfefferminz,General Counsel und Chief Compliance Officer
+ORG-081,LEG-VR,Vertragsrecht und Vermittlerverträge,ORG-080,3,Olten,CH,14,pfefferminz,Leiter Vertragsrecht
+ORG-082,LEG-LIT,Litigation und Ombudsfälle,ORG-080,3,Olten,CH,11,pfefferminz,Leiterin Litigation
+ORG-083,COMP-CH,Compliance CH und Geldwäscherei-Fachstelle,ORG-080,3,Olten,CH,16,pfefferminz,Compliance Officer CH
+ORG-084,COMP-DE,"Compliance DE, Beschwerdestelle DE und AI Compliance",ORG-080,3,Leipzig,DE,12,pfefferminz,Compliance Officer DE
+ORG-085,DSB,Datenschutz (unabhängig),ORG-001,2,Leipzig,DE,6,pfefferminz,Datenschutzbeauftragter Gruppe
+ORG-086,IR,Interne Revision,ORG-000,2,Olten,CH,11,pfefferminz,Leiterin Interne Revision
+ORG-090,HR,HR und Kultur,ORG-001,2,Olten,CH,72,gemischt,Chief People Officer
+ORG-091,HR-CH,HR Schweiz,ORG-090,3,Olten,CH,28,pfefferminz,Leiterin HR CH
+ORG-092,HR-DE,HR Deutschland,ORG-090,3,Leipzig,DE,19,pfefferminz,Leiter HR DE
+ORG-093,HR-INT,Integrationsbüro,ORG-090,3,Olten,CH,9,gemischt,Integration Lead
+ORG-094,HR-LE,Lernen und Entwicklung (inkl. AI Literacy),ORG-090,3,Olten,CH,16,gemischt,Leiterin Lernen und Entwicklung
+ORG-100,KOM,Kommunikation und Marketing,ORG-001,2,Olten,CH,34,gemischt,Leiterin Kommunikation
+ORG-110,MTG,Minzia Technologies GmbH (Gesellschaft),ORG-001,2,Berlin,DE,0,minzia,Geschäftsführung Minzia Technologies
+ORG-120,PSAG,Pfefferminzia Service AG (Shared Services),ORG-001,2,Olten,CH,0,pfefferminz,Geschäftsführung Service AG
+ORG-130,HB-DE,Hauptbevollmächtigte Niederlassung Deutschland,ORG-001,2,Leipzig,DE,3,pfefferminz,Hauptbevollmächtigte
+ORG-140,AR-DE,Aufsichtsrat Pfefferminzia Lebensversicherung Deutschland AG,ORG-000,1,Leipzig,DE,0,gemischt,Aufsichtsratsvorsitzender
